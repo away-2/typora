@@ -1,13 +1,13 @@
 ###### dom节点相关：
 
 创建：
-```
+```javascript
 document.createElement("ul")    // 创建一个ul标签
 document.createDocumentFragment("li")  // 创建一个虚拟dom片段，不会引起回流，可节省性能
 ```
 
 获取：
-```
+```javascript
 documnet.getElementById("box")  // 获取id名为box的元素
 document.getElementsByTagName("li")  // 获取所有li标签元素
 document.getElementByClassName("box")   // 获取类名为box的元素
@@ -21,13 +21,14 @@ document.querySelectorAll("li")     // 获取所有li标签元素集合
 ```
 
 获取特殊元素(body,html)
-```
+```javascript
 document.body   // 返回body元素对象
 document.documentElement   // 返回html元素对象
 ```
 
 获取元素节点
 `页面中所有的内容都为节点，节点使用 `node`来表示`
+
 - DOM树可以把节点划分为不同的层级关系，常见的是父子兄层级关系
 - 元素节点 nodeType 为 1
 - 属性节点 nodeType 为 2
@@ -35,9 +36,9 @@ document.documentElement   // 返回html元素对象
 - 实际开发中节点操作一般都是操作元素节点
 
 **父级节点**
-node.parentNode  // node表示某个节点,可以返回node节点的父节点，如果没有父节点则返回null
+node.parentNode  // node表示某个节点，返回指定节点在DOM树中的父节点。
 
-```
+```javascript
 <div class="demo"> 
 	<div class="box"> 
 		<span class="erweima">×</span> 
@@ -47,11 +48,27 @@ node.parentNode  // node表示某个节点,可以返回node节点的父节点，
 // 1. 父节点 parentNode 
 let erweima = document.querySelector('.erweima'); 
 let box = document.querySelector('.box'); 
-// 得到的是离元素最近的父级节点(亲爸爸) 如果找不到父节点就返回为 null console.log(erweima.parentNode); 
+// 得到的是离元素最近的父级节点(亲爸爸) 如果找不到父节点就返回为 null 
+console.log(erweima.parentNode); 
 </script>
 ```
 
+**父级元素**
+
+node.parentElement 	// 返回当前节点的父级元素，如果该元素没有父节点，或父节点不是一个DOM元素，则返回null
+
+```javascript
+// parentNode与parentElement的主要区别在元素是html时才表现出来
+html元素的 parentNode   是 document
+html元素的 parentElement 是 null
+document.documentElement.parentElement  // null
+document.documentElement.parentNode === document  	// true
+```
+
+
+
 **子元素节点**
+
 - parentNode.children (各个浏览器都支持) （不包含 元素节点，文本节点等）
 - parentNode.firstElementChild (获取第一个元素节点) 具有兼容问题 ie9才支持
 - parentNode.lastElementChild (获取最后一个子元素节点) 具有兼容问题 ie9才支持
@@ -63,12 +80,12 @@ let box = document.querySelector('.box');
 - 两种方法都有兼容性的问题，IE9以上支持
 
 添加：
-```
+```javascript
 ul.appendChild(li)    // 在ul标签中添加li标签
 ```
 
 删除：
-```
+```javascript
 ul.removeChild(ul.children[0]);  // 删除ul标签中第一个元素，并返回该元素
 ```
 
@@ -81,7 +98,7 @@ ul.removeChild(ul.children[0]);  // 删除ul标签中第一个元素，并返回
 - 获取属性值
 Element.属性 （内置属性可以通过. 直接获取）
 Element.getAttribute("属性")（一般用于自定义属性）
-```
+```javascript
 <div id="box" data="boxData"></div>
 <script>
 	let box = document.getElementById("box");
@@ -93,7 +110,7 @@ Element.getAttribute("属性")（一般用于自定义属性）
 - 设置属性值
 Element.属性 = “值”（内置属性可以 直接设置）
 Element.setAttribute("属性", "值")（一般用于自定义属性）
-```
+```javascript
 <div id="box"></div>
 <script>
 	let box = document.getElementById("box");
@@ -107,14 +124,14 @@ Element.setAttribute("属性", "值")（一般用于自定义属性）
 ![Pasted image 20240117135746](D:\workSoftware\typora\workspace\图片\Pasted image 20240117135746.png)
 - 移除属性值
 Element.removeAttribute("属性")
-```
+```javascript
 Element.removeAttribute("index")
 ```
 ![Pasted image 20240117141022](D:\workSoftware\typora\workspace\图片\Pasted image 20240117141022.png)
 
 **获取h5自定义属性**
 Element.dataset.属性或者Element.dataset["属性"]，  获得的是一个以 data- 开头的自定义属性集合
-```
+```javascript
 <div id="box" data-index="1" data-list-data="data"></div>
 <script>
 	let box = element.getElementById("box");
@@ -172,3 +189,16 @@ rect.left：元素左边到视窗左边的距离;
 rect.width：是元素自身的宽	
 rect.height: 是元素自身的高
 ```
+
+## 事件操作
+
+| 鼠标事件    | 触发条件         |
+| ----------- | ---------------- |
+| onclick     | 鼠标点击左键触发 |
+| onmouseover | 鼠标经过触发     |
+| onmouseout  | 鼠标离开触发     |
+| onfocus     | 获得鼠标焦点触发 |
+| onblur      | 失去鼠标焦点触发 |
+| onmousemove | 鼠标移动触发     |
+| onmouseup   | 鼠标弹起触发     |
+| onmousedown | 鼠标按下触发     |
