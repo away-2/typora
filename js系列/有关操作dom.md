@@ -75,7 +75,7 @@ document.documentElement.parentNode === document  	// true
 - parentNode.children[0] (没有兼容性问题，并且返回第一个子元素)
 
 **兄弟节点**
-- node.nexElementSibling //返回当前元素下一个兄弟元素节点，找不到则返回null
+- node.nextElementSibling //返回当前元素下一个兄弟元素节点，找不到则返回null
 - node.previousElementSibling // 返回当前元素上一个兄弟节点，找不到则返回null
 - 两种方法都有兼容性的问题，IE9以上支持
 
@@ -144,7 +144,7 @@ Element.dataset.属性或者Element.dataset["属性"]，  获得的是一个以 
 **设置h5自定义属性**
 H5中规定 自定义属性要 以 data-开头做为属性名并且赋值。
 Element.setAttribute("属性名",  "值");
-```
+```javascript
 <div id="box"></div>
 <script>
 	let box = element.getElementById("box");
@@ -155,7 +155,7 @@ Element.setAttribute("属性名",  "值");
 
 ###### 事件对象event相关
 事件对象是事件一系列相关数据的集合
-```
+```javascript
 <div id="box">
 	<div class="box1">这是box1</div>
     <div class="box2">这是box2</div>
@@ -179,7 +179,7 @@ box.onclick = (e) => {
 获取元素位置，这个方法没有参数，用于获得页面中某个元素的左，上，右和下分别相对浏览器视窗的位置。
 <img src="D:\workSoftware\typora\workspace\图片\Pasted image 20240117155623.png" alt="Pasted image 20240117155623" style="zoom:67%;" />
 
-```
+```javascript
 let box = document.getElementById("box");
 let rect = box.getBoundingClientRect();
 rect.top：元素上边到视窗上边的距离;	
@@ -189,6 +189,34 @@ rect.left：元素左边到视窗左边的距离;
 rect.width：是元素自身的宽	
 rect.height: 是元素自身的高
 ```
+
+###### window.getComputedStyle()
+
+ 是一个可以获取当前元素所有最终使用的CSS属性值。返回的是一个CSS样式声明对象([object CSSStyleDeclaration])，只读。
+
+```javascript
+语法：var style = window.getComputedStyle("元素", "伪类");  //第二个参数选填  如果不查询伪类的话可以不填或填null
+```
+###### window.getComputedStyle()和element.style的区别
+
+**相同点：**
+
+```javascript
+window.getComputedStyle() 和 element.styl 的相同点就是二者返回的都是 CSSStyleDeclaration 对象，取相应属性值得时候都是采用的 CSS 驼峰式写法，均需要注意 float 属性。
+```
+
+**不同点：**
+
+ ```javascript
+ a.element.style 读取的只是元素的“内联样式”，即 写在元素的 style 属性上的样式；而 getComputedStyle 读取的样式是最终样式，包括了“内联样式”、“嵌入样式”和“外部样式”。 
+ 
+ b.element.style 既支持读也支持写，我们通过 element.style 即可改写元素的样式。而 getComputedStyle 仅支持读并不支持写入。
+ 
+ c.我们可以通过使用 getComputedStyle 读取样式，通过 element.style 修改样式。
+ 
+ ```
+
+
 
 ## 事件操作
 
