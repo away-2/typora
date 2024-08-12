@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background: #fdfcf5;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .chair_buying_guide-container .chair_buying_guide-top {
+            display: flex;
+            padding: 23px 370px;
+            justify-content: center;
+            align-items: center;
+            background: #f6f4f1;
+            column-gap: 80px;
+        }
+
+        .chair_buying_guide-container .chair_buying_guide-top .chair_buying_guide-item {
+            display: flex;
+            width: 340px;
+            height: 199px;
+            padding: 15.019px 30px 47.981px 30px;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+            background: #f6f4f1;
+        }
+        .chair_buying_guide-container .chair_buying_guide-top .chair_buying_guide-top-item .chair_buying_guide-top-item-img{
+            background: #f6f4f1;
+
+        }
+        .chair_buying_guide-container .chair_buying_guide-top .chair_buying_guide-top-item .chair_buying_guide-top-item-img img {
+            width: 134.551px;
+            height: 43.354px;
+            flex-shrink: 0;
+            background: #f6f4f1;
+
+        }
+
+        .chair_buying_guide-container .chair_buying_guide-top .chair_buying_guide-top-item .chair_buying_guide-top-item-content {
+            color: #26333a;
+            text-align: center;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-feature-settings: "ss04" on, "liga" off;
+            font-family: Moderat, Roboto, helvetica, sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            /* 150% */
+            background: #f6f4f1;
+        }
+
+        /* FAQ */
+        .chair_buying_guide-container .chair_buying_guide-qs .chair_buying_guide-info {
+            background: #fdfcf5;
+        }
+
+        .chair_buying_guide-container .chair_buying_guide-qs .chair_buying_guide-info .chair_buying_guide-title {
+            width: 100%;
+            color: #26333a;
+            text-align: center;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-feature-settings: "ss01" on, "ss04" on, "ss18" on, "liga" off;
+            font-family: SupremeLL, Roboto, helvetica, sans-serif;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 120%;
+            padding-top: 50px;
+            /* 48px */
+        }
+
+        .chair_buying_guide-container .chair_buying_guide-qs .chair_buying_guide-info .chair_buying_guide-item {
+            height: 56px;
+            margin: 32px 0;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .chair_buying_guide-container .chair_buying_guide-qs .chair_buying_guide-info .chair_buying_guide-item .chair_buying_guide-question {
+            color: #26333a;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-feature-settings: "ss02" on;
+            font-family: Moderat, Roboto, helvetica, sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            /* 133.333% */
+        }
+
+        .chair_buying_guide-container .chair_buying_guide-qs .chair_buying_guide-info .chair_buying_guide-content-hidden {
+            display: none;
+            color: #26333a;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-feature-settings: "ss02" on;
+            font-family: Moderat, Roboto, helvetica, sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            /* 133.333% */
+            padding: 0 268.5px;
+        }
+
+        .chair_buying_guide-container .chair_buying_guide-qs .chair_buying_guide-info .chair_buying_guide-content-hidden .content-item {
+            display: flex;
+            column-gap: 20px;
+        }
+
+        .chair_buying_guide-container .chair_buying_guide-qs .chair_buying_guide-info .chair_buying_guide-content-hidden .content-item .content-left p {
+            color: rgba(38, 51, 58, 0.8);
+            font-variant-numeric: lining-nums proportional-nums;
+            font-feature-settings: "ss02" on;
+            font-family: Moderat;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            /* 16.8px */
+            margin: 20px 0;
+        }
+
+        .chair_buying_guide-container .chair_buying_guide-qs .chair_buying_guide-info .chair_buying_guide-content-hidden .content-item .content-left span {
+            color: #004df2;
+        }
+
+        .chair_buying_guide-container .chair_buying_guide-qs .chair_buying_guide-info .chair_buying_guide-content-hidden .content-item .content-right img {
+            border-radius: 8px;
+            width: 520px;
+            height: 340px;
+            flex-shrink: 0;
+        }
+
+        .chair_buying_guide-container .chair_buying_guide-qs .chair_buying_guide-info .chair_buying_guide-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 268.5px;
+        }
+
+        .chair_buying_guide-container .chair_buying_guide-qs .chair_buying_guide-info .chair_buying_guide-item .chair_buying_guide-qs-show_more-icon {
+            margin-left: 11px;
+            width: 24px;
+            height: 24px;
+            background: url("https://s3.springbeetle.com/prod-us-bucket/trantor/attachments/CA/Vector_down.png") no-repeat center;
+        }
+
+        @supports not (overflow: clip) {
+
+            html,
+            body {
+                overflow-x: hidden;
+            }
+        }
+
+        @media screen and (max-width: 1440px) {}
+
+        @media screen and (max-width: 1024px) {}
+
+        @media screen and (max-width: 768px) {}
+
+        @media screen and (max-width: 360px) {}
+    </style>
+</head>
+
+<body>
+    <div class="chair_buying_guide-container">
+        <div class="chair_buying_guide-top">
+            <div class="chair_buying_guide-top-item">
+                <div class="chair_buying_guide-top-item-img">
+                    <img class="lazyloaded"
+                        src="https://mcusercontent.com/e8da5d39ceac7b7f0b296a4d2/images/23e11ee9-6f07-9ebf-0593-8d18af518e2a.png"
+                        alt="" />
+                </div>
+                <div class="chair_buying_guide-top-item-content">
+                    A very adjustable chair that can fit basically anyone - BS12 Pro
+                </div>
+            </div>
+            <div class="chair_buying_guide-top-item">
+                <div class="chair_buying_guide-top-item-img">
+                    <img class="lazyloaded"
+                        src="https://mcusercontent.com/e8da5d39ceac7b7f0b296a4d2/images/ccd23f7e-e187-9d4c-b88c-84bd5d31529d.png"
+                        alt="" />
+                </div>
+                <div class="chair_buying_guide-top-item-content">
+                    It’s like sitting on a cloud - BS12 Pro
+                </div>
+            </div>
+            <div class="chair_buying_guide-top-item">
+                <div class="chair_buying_guide-top-item-img">
+                    <img class="lazyloaded"
+                        src="https://mcusercontent.com/e8da5d39ceac7b7f0b296a4d2/images/48a4fd3d-5a45-be99-4e36-189e366cc3f4.png"
+                        alt="" />
+                </div>
+                <div class="chair_buying_guide-top-item-content">
+                    The ultimate in adjustable comfort - C7
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ-module  -->
+        <div class="chair_buying_guide-qs">
+            <div class="chair_buying_guide-info">
+                <div class="chair_buying_guide-title">FAQs.</div>
+                <div class="chair_buying_guide-item">
+                    <div class="chair_buying_guide-question">
+                        Does the office chair suit VARIOUS BODY TYPES?
+                    </div>
+                    <div class="chair_buying_guide-qs-show_more-icon"></div>
+                </div>
+                <div class="chair_buying_guide-content-hidden">
+                    <div class="content-item">
+                        <div class="content-left">
+                            <p>
+                                According to our research, we have found that different office
+                                chairs are suitable for different body types, so you need to
+                                take some measurements before buying.
+                            </p>
+                            <p>
+                                <span>A. Seat Height Measurement:</span> Measure the height
+                                from your knee to your feet, ensuring your feet are flat on
+                                the ground when seated. Your thighs should be parallel to the
+                                floor.
+                            </p>
+                            <p>
+                                <span>B. Seat Depth Measurement: </span>
+                                Measure the distance from your thigh to your knee. The seat
+                                depth should be such that 3 or 4 fingers(Greater than or equal
+                                to 50mm) can pass between the front edge of the seat and the
+                                lower leg.
+                            </p>
+                            <p>
+                                In addition to this, the lumbar support of the office chair
+                                should match the natural lumbar curvature of the user’s back.
+                                The arm height should be such that the forearm can easily
+                                reach them but not be in the way when using a keyboard or
+                                mouse.
+                            </p>
+                            <p>
+                                We provide detailed product data on the product page for you.
+                                Based on the measurement results, you can compare with the
+                                product parameters. You can choose the office chair that best
+                                suits you.
+                            </p>
+                        </div>
+                        <div class="content-right">
+                            <img class="lazyloaded"
+                                src="https://mcusercontent.com/e8da5d39ceac7b7f0b296a4d2/images/c5c05361-fc78-55b5-61d6-8fa8d0ed963b.png"
+                                alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="chair_buying_guide-item">
+                    <div class="chair_buying_guide-question">
+                        How to choose office chairs according to MY BUDGET?
+                    </div>
+                    <div class="chair_buying_guide-qs-show_more-icon"></div>
+                </div>
+                <div class="chair_buying_guide-content-hidden">
+                    <div class="content-item">
+                        <div class="content-left">
+                            <p>
+                                The price range of office chairs varies widely, from less than
+                                €100 to €2000, making it crucial to select one that best fits
+                                your budget. Chair prices are influenced by factors such as
+                                materials and adjustability, so we recommend choosing an
+                                ergonomic chair that offers high quality and
+                                cost-effectiveness. The FlexiSpot office chair is
+                                ergonomically designed with fully adjustable components that
+                                promote a healthy sitting posture. It is also
+                                quality-certified to ensure long-term stable use. And we offer
+                                a 60-day no-risk return policy, during which you can try the
+                                chair for free to help you find the ergonomic chair that best
+                                suits your needs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chair_buying_guide-item">
+                    <div class="chair_buying_guide-question">
+                        What adjustment points are included in FlexiSpot's office chair？
+                    </div>
+                    <div class="chair_buying_guide-qs-show_more-icon"></div>
+                </div>
+                <div class="chair_buying_guide-content-hidden">
+                    <div class="content-item">
+                        <div class="content-left">
+                            <p class="gray">We have 10 adjustment points:</p>
+                            <p>
+                                <span class="bold">1.Seat Height Adjustability: </span> The
+                                seat height ought to allow users to sit with their feet flat
+                                on the ground and a minimal amount of weight placed on the
+                                backs of the legs. , thighs horizontal, and arms even at the
+                                height of the desk.
+                            </p>
+                            <p>
+                                <span class="bold">2.Seat Depth and Width Adjustability:</span>
+                                The seat’s depth can be moved forward or backward, depending
+                                on the needs of the user. It should be adjusted so that the
+                                back of the chair does not press against the calves.
+                            </p>
+                            <p>
+                                <span class="bold">3.Seat Tilt: </span>
+                                Seat Tilt: The angle of the seat should be such that you feel
+                                most comfortable in an upright posture. The seat tilt can be
+                                adjusted to provide an angle that counterbalances good
+                                posture: feet flat, back comfortably resting on the chair’s
+                                back. Adjust as needed to create a seating surface that gently
+                                pulls you back to the chair as you sit in a strong, upright
+                                posture.
+                            </p>
+                            <p>
+                                <span class="bold">4.Seat Tilt: </span>
+                                The armrests should be adjustable in height and width,
+                                allowing the user’s arms to rest comfortably and shoulders to
+                                remain relaxed.
+                            </p>
+                            <p>
+                                <span class="bold">5.Headrest Adjustability: </span>
+                                The headrest can be angled to the user’s ideal position, it
+                                should be adjustable to accommodate different heights and neck
+                                lengths.
+                            </p>
+                            <p>
+                                <span class="bold">6.Lumbar Support Adjustability:</span>
+                                The ability of lumbar support is a critical feature designed
+                                to provide the correct support for the natural curve of your
+                                spine, particularly the lower back, or lumbar region. Good
+                                lumbar support can help to prevent back strain and muscle
+                                fatigue, allowing you to sit for longer periods while
+                                maintaining good posture.
+                            </p>
+                            <p>
+                                <span class="bold">6.Lumbar Support Adjustability:</span>
+                                Back Recline: This feature allows you to adjust your sitting
+                                angle. Most ergo chairs will allow for between 90 and 120
+                                degrees of tilt, though some will let you recline all the way
+                                back. With a good back recline feature, you should be able to
+                                sit in a position that is comfortable for you and supports the
+                                natural curvature of the spine. A back recline function is
+                                especially important for people who work at the desk for
+                                extended periods of time as it helps to reduce the pressure on
+                                your spine and lower back.
+                            </p>
+                            <p>
+                                <span class="bold">7. Back Recline: </span>
+                                This feature allows you to adjust your sitting angle. Most
+                                ergo chairs will allow for between 90 and 120 degrees of tilt,
+                                though some will let you recline all the way back. With a good
+                                back recline feature, you should be able to sit in a position
+                                that is comfortable for you and supports the natural curvature
+                                of the spine. A back recline function is especially important
+                                for people who work at the desk for extended periods of time
+                                as it helps to reduce the pressure on your spine and lower
+                                back.
+                            </p>
+                            <p>
+                                <span class="bold">8. Tilt Tension:</span>
+                                Tilt tension control determines the amount of resistance
+                                you’ll feel when leaning back in your chair. By adjusting the
+                                tilt tension, you can control the ease or difficulty of
+                                reclining in your chair, allowing for comfortable and
+                                controlled reclining. The perfect tilt tension will give you a
+                                sense of weightlessness and allow you to move easily in the
+                                chair.
+                            </p>
+                            <p>
+                                <span class="bold">9. Syncro Tilt: </span>
+                                A more advanced feature found in some chairs, this enables the
+                                seat and backrest to tilt simultaneously while maintaining the
+                                same angle. This can be beneficial for maintaining postural
+                                alignment and distributing weight evenly.
+                            </p>
+                            <p>
+                                <span class="bold">10.Swivel: </span>
+                                The chair should be able to swivel freely to allow for easy
+                                access to various areas of the workstation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chair_buying_guide-item">
+                    <div class="chair_buying_guide-question">
+                        Which office chair is your BEST SELLER?
+                    </div>
+                    <div class="chair_buying_guide-qs-show_more-icon"></div>
+                </div>
+                <div class="chair_buying_guide-content-hidden">
+                    <div class="content-item">
+                        <div class="content-left">
+                            <p>
+                                FlexiSpot office chairs are designed with ergonomics as the
+                                benchmark, integrating functionality and style into
+                                high-quality products. Our best-selling ergonomic chair is the
+                                BS12 Pro, featuring a sleek and minimalist design, breathable
+                                mesh fabric that resists deformation, and a convenient
+                                three-button adjustment function suitable for all user groups.
+                                In addition, the BS12 Pro features 9 adjustable points with
+                                dynamic backrest, 3D armrests, adjustable headrest, and
+                                additional tension adjustment to ensure a customized and
+                                comfortable seating experience.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chair_buying_guide-item">
+                    <div class="chair_buying_guide-question">
+                        Can I feel comfortable sitting in an ergonomic chair FOR EXTENDED
+                        PERIODS OF TIME?
+                    </div>
+                    <div class="chair_buying_guide-qs-show_more-icon"></div>
+                </div>
+                <div class="chair_buying_guide-content-hidden">
+                    <div class="content-item">
+                        <div class="content-left">
+                            <p>
+                                Yes, you can feel comfortable sitting in an ergonomic chair
+                                for extended periods of time.
+                            </p>
+                            <p>
+                                FlexiSpot ergonomic chairs are designed to support the natural
+                                curve of the spine with multiple adjustable points to meet
+                                dynamic needs and promote proper posture formation. In
+                                addition, quality materials such as breathable mesh fabric and
+                                resilient foam are used to enhance comfort during use. Using
+                                our ergonomic chairs helps to evenly distribute body weight,
+                                promote blood circulation, relieve muscle stiffness, and
+                                reduce discomfort and fatigue associated with prolonged
+                                sitting.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chair_buying_guide-item">
+                    <div class="chair_buying_guide-question">
+                        What is the LIFESPAN of an office chair?
+                    </div>
+                    <div class="chair_buying_guide-qs-show_more-icon"></div>
+                </div>
+                <div class="chair_buying_guide-content-hidden">
+                    <div class="content-item">
+                        <div class="content-left">
+                            <p>
+                                Our office chairs undergo multiple tests before leaving the
+                                factory to ensure they have a long lifespan. They meet SGS,
+                                BIFMA, and other certifications. In addition, we offer
+                                different warranty durations from 2 to 5 years for our office
+                                chairs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chair_buying_guide-item">
+                    <div class="chair_buying_guide-question">
+                        How to assemble an office chair? Is it easy?
+                    </div>
+                    <div class="chair_buying_guide-qs-show_more-icon"></div>
+                </div>
+                <div class="chair_buying_guide-content-hidden">
+                    <div class="content-item">
+                        <div class="content-left">
+                            <p>
+                                The FlexiSpot office chair is designed with the user in mind
+                                and is easy to assemble. We provide clear assembly guides on
+                                our product website and YouTube channel. And the office chair
+                                comes with built-in installation tools, so just follow the
+                                steps carefully.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chair_buying_guide-item">
+                    <div class="chair_buying_guide-question">
+                        How can I determine if I need an ergonomic chair with a headrest?
+                    </div>
+                    <div class="chair_buying_guide-qs-show_more-icon"></div>
+                </div>
+                <div class="chair_buying_guide-content-hidden">
+                    <div class="content-item">
+                        <div class="content-left">
+                            <p>
+                                <span class="bold"> Without Headrest: </span>
+                                Encourages users to maintain proper posture
+                                using their own body strength, facilitating frequent posture
+                                changes to alleviate stiffness and discomfort.
+                            </p>
+                            <p>
+                                <span class="bold"> Without Headrest: </span>
+                                Recommended for users who spend extended periods sitting,
+                                ergonomic chairs with headrests promote correct alignment of
+                                the head and neck, thereby significantly enhancing the sitting
+                                experience.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function loadScript(url, callback) {
+        document.getElementById("") && document.getElementById("").remove()
+        var script = document.createElement("script")
+        script.type = "text/javascript"
+        script.async = "async"
+        script.src = url
+        script.id = ""
+        var head = document.head || document.getElementsByTagName("head")[0]
+        head.appendChild(script)
+        if (script.readyState) {
+            script.onreadystatechange = function () {
+                if (
+                    script.readyState == "complete" ||
+                    script.readyState == "loaded"
+                ) {
+                    script.onreadystatechange = null
+                    callback()
+                }
+            }
+        } else {
+            script.onload = function () {
+                callback()
+            }
+        }
+    }
+
+    loadScript(
+        "https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/swiper@8.4.7_swiper-bundle.min.js",
+        function () {
+            // show more qs
+            const show_more = document.querySelector(
+                ".chair_buying_guide-qs-show_more-icon"
+            )
+            const more_text = document.querySelector(
+                ".chair_buying_guide-content-hidden"
+            )
+
+            let is_show = false
+            show_more.addEventListener("click", function () {
+                if (!is_show) {
+                    more_text.style.display = "block"
+                    show_more.style.transform = "rotate(180deg)"
+                } else {
+                    more_text.style.display = "none"
+                    show_more.style.transform = "rotate(0deg)"
+                }
+                is_show = !is_show
+            })
+        }
+    )
+</script>
+
+</html>
