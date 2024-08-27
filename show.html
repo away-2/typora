@@ -5,57 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-      * {
+      .chair_buying_guide-container * {
         margin: 0;
         padding: 0;
-        background: #fdfcf5;
       }
-
-      p {
-        margin: 0;
+      .chair_buying_guide-container img {
+        max-width: 100%;
+        height: auto;
       }
       /* banner-module */
       .chair_buying_guide-container .chair_buying_guide-top {
-        display: flex;
-        padding: 23px 370px;
-        justify-content: center;
-        align-items: center;
+        width: 100%;
         background: #f6f4f1;
+      }
+      .chair_buying_guide-container .chair_buying_guide-top .chair_buying_guide-top-list {
+        display: flex;
+        max-width: 1180px;
+        justify-content: center;
         column-gap: 80px;
+        margin: 0 auto;
+        padding: 23px 0;
+      }
+      .chair_buying_guide-container .chair_buying_guide-top .chair_buying_guide-top-list .chair_buying_guide-top-item {
+        max-width: 280px;
+        height: 199px;
+        padding-top: 15px;
       }
 
       .chair_buying_guide-container
         .chair_buying_guide-top
+        .chair_buying_guide-top-list
         .chair_buying_guide-top-item
         .chair_buying_guide-top-item-img {
         display: flex;
-        padding: 18.323px 2.725px;
         justify-content: center;
         align-items: center;
-        flex-shrink: 0;
-        background: #f6f4f1;
-      }
-      .chair_buying_guide-container
-        .chair_buying_guide-top
-        .chair_buying_guide-top-item
-        .chair_buying_guide-top-item-img
-        img {
-        width: 134.551px;
-        height: 43.354px;
-        flex-shrink: 0;
-        background: #f6f4f1;
       }
 
       .chair_buying_guide-container
         .chair_buying_guide-top
+        .chair_buying_guide-top-list
         .chair_buying_guide-top-item
         .chair_buying_guide-top-item-content {
-        width: 280px;
+        margin-top: 8px;
         color: #26333a;
         text-align: center;
         font-variant-numeric: lining-nums tabular-nums;
         font-feature-settings: "ss04" on, "liga" off;
-        font-family: Moderat;
+        font-family: "Moderat-Regular";
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -67,37 +64,30 @@
       .chair_buying_guide-container .chair_buying_guide-qs {
         width: 100%;
       }
-      .chair_buying_guide-container
-        .chair_buying_guide-qs
-        .chair_buying_guide-info {
-        background: #fdfcf5;
-        padding: 100px 268px;
+      .chair_buying_guide-container .chair_buying_guide-qs .chair_buying_guide-info {
+        max-width: 1384px;
+        margin: 0 auto;
+        padding: 100px 0;
       }
 
-      .chair_buying_guide-container
-        .chair_buying_guide-qs
-        .chair_buying_guide-info
-        .chair_buying_guide-title {
+      .chair_buying_guide-container .chair_buying_guide-qs .chair_buying_guide-info .chair_buying_guide-title {
         width: 100%;
         color: #26333a;
         text-align: center;
         font-variant-numeric: lining-nums proportional-nums;
         font-feature-settings: "ss01" on, "ss04" on, "ss18" on, "liga" off;
-        font-family: SupremeLL;
+        font-family: "SupremeLLSub-Black";
         font-size: 40px;
         font-style: normal;
         font-weight: 900;
         line-height: 120%;
       }
 
-      .chair_buying_guide-container
-        .chair_buying_guide-qs
-        .chair_buying_guide-info
-        .chair_buying_guide-question-item {
-        height: 56px;
+      .chair_buying_guide-container .chair_buying_guide-qs .chair_buying_guide-info .chair_buying_guide-question-item {
         border-bottom: 1px solid #f1f1f1;
         padding: 32px 66.5px;
         box-sizing: border-box;
+        cursor: pointer;
       }
 
       .chair_buying_guide-container
@@ -108,22 +98,19 @@
         color: #26333a;
         font-variant-numeric: lining-nums proportional-nums;
         font-feature-settings: "ss02" on;
-        font-family: Moderat;
+        font-family: "Moderat-Bold";
         font-size: 18px;
         font-style: normal;
         font-weight: 700;
         line-height: 24px;
       }
 
-      .chair_buying_guide-container
-        .chair_buying_guide-qs
-        .chair_buying_guide-info
-        .chair_buying_guide-content-hidden {
+      .chair_buying_guide-container .chair_buying_guide-qs .chair_buying_guide-info .chair_buying_guide-content-hidden {
         display: none;
         color: #26333a;
         font-variant-numeric: lining-nums proportional-nums;
         font-feature-settings: "ss02" on;
-        font-family: Moderat;
+        font-family: "Moderat-Bold";
         font-size: 18px;
         font-style: normal;
         font-weight: 700;
@@ -136,6 +123,8 @@
         .chair_buying_guide-content-hidden
         .content-item {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
         column-gap: 20px;
       }
       .chair_buying_guide-container
@@ -151,8 +140,8 @@
         .chair_buying_guide-info
         .chair_buying_guide-content-hidden
         .content-item
-        .content-left {
-        flex: 1;
+        .content-left2 {
+        max-width: 600px;
       }
       .chair_buying_guide-container
         .chair_buying_guide-qs
@@ -160,16 +149,26 @@
         .chair_buying_guide-content-hidden
         .content-item
         .content-left
-        p {
+        > div {
+        display: flex;
         color: rgba(38, 51, 58, 0.8);
         font-variant-numeric: lining-nums proportional-nums;
         font-feature-settings: "ss02" on;
-        font-family: Moderat;
+        font-family: "Moderat-Regular";
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: 120%;
         margin-bottom: 14px;
+      }
+      .chair_buying_guide-container
+        .chair_buying_guide-qs
+        .chair_buying_guide-info
+        .chair_buying_guide-content-hidden
+        .content-item
+        .content-left
+        div:last-child {
+        margin-bottom: 0;
       }
 
       .chair_buying_guide-container
@@ -182,7 +181,7 @@
         color: #004df2;
         font-variant-numeric: lining-nums proportional-nums;
         font-feature-settings: "ss02" on;
-        font-family: Moderat;
+        font-family: "Moderat-Bold";
         font-size: 14px;
         font-style: normal;
         font-weight: 700;
@@ -198,7 +197,7 @@
         color: rgba(38, 51, 58, 0.8);
         font-variant-numeric: lining-nums proportional-nums;
         font-feature-settings: "ss02" on;
-        font-family: Moderat;
+        font-family: "Moderat-Bold";
         font-size: 14px;
         font-style: normal;
         font-weight: 700;
@@ -213,7 +212,6 @@
         display: flex;
         align-items: center;
       }
-
       .chair_buying_guide-container
         .chair_buying_guide-qs
         .chair_buying_guide-info
@@ -222,15 +220,9 @@
         .content-right
         img {
         border-radius: 8px;
-        width: 520px;
-        height: 340px;
-        flex-shrink: 0;
       }
 
-      .chair_buying_guide-container
-        .chair_buying_guide-qs
-        .chair_buying_guide-info
-        .chair_buying_guide-question-item {
+      .chair_buying_guide-container .chair_buying_guide-qs .chair_buying_guide-info .chair_buying_guide-question-item {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -243,27 +235,22 @@
         .chair_buying_guide-qs-show_more-icon {
         width: 24px;
         height: 24px;
-        background: url("https://s3.springbeetle.com/prod-us-bucket/trantor/attachments/CA/Vector_down.png")
-          no-repeat center;
+        transform: rotate(180deg);
       }
 
       @media screen and (max-width: 1440px) {
         /* banner-module */
-        .chair_buying_guide-container .chair_buying_guide-top {
-          padding: 54.5px 220px;
+        .chair_buying_guide-container .chair_buying_guide-top .chair_buying_guide-top-list {
+          max-width: 1000px;
         }
 
         /* FAQ */
-        .chair_buying_guide-container
-          .chair_buying_guide-qs
-          .chair_buying_guide-info {
-          padding: 80px 220px;
+        .chair_buying_guide-container .chair_buying_guide-qs .chair_buying_guide-info {
+          max-width: 1000px;
+          padding: 80px 0;
         }
 
-        .chair_buying_guide-container
-          .chair_buying_guide-qs
-          .chair_buying_guide-info
-          .chair_buying_guide-title {
+        .chair_buying_guide-container .chair_buying_guide-qs .chair_buying_guide-info .chair_buying_guide-title {
           font-size: 34px;
         }
 
@@ -290,58 +277,43 @@
           .content-item {
           display: flex;
           column-gap: 48px;
-        }
-        .chair_buying_guide-container
-          .chair_buying_guide-qs
-          .chair_buying_guide-info
-          .chair_buying_guide-content-hidden
-          .content-item {
           padding: 32px 24.5px;
         }
-
         .chair_buying_guide-container
           .chair_buying_guide-qs
           .chair_buying_guide-info
           .chair_buying_guide-content-hidden
           .content-item
           .content-left
-          p {
+          > div {
           margin-bottom: 12px;
         }
-
         .chair_buying_guide-container
           .chair_buying_guide-qs
           .chair_buying_guide-info
           .chair_buying_guide-content-hidden
           .content-item
-          .content-right
-          img {
-          width: 423px;
-          height: 276px;
-          flex-shrink: 0;
-        }
-
-        .chair_buying_guide-container
-          .chair_buying_guide-qs
-          .chair_buying_guide-info
-          .chair_buying_guide-question-item
-          .chair_buying_guide-qs-show_more-icon {
-          width: 24px;
-          height: 24px;
-          background: url("https://s3.springbeetle.com/prod-us-bucket/trantor/attachments/CA/Vector_down.png")
-            no-repeat center;
+          .content-left2 {
+          max-width: 480px;
         }
       }
 
       @media screen and (max-width: 1024px) {
         /* banner-module */
-        .chair_buying_guide-container .chair_buying_guide-top {
-          padding: 35.5px 129px 36.5px 129px;
+        .chair_buying_guide-container .chair_buying_guide-top .chair_buying_guide-top-list {
+          max-width: 768px;
           column-gap: 53px;
+          padding: 0;
         }
-
         .chair_buying_guide-container
           .chair_buying_guide-top
+          .chair_buying_guide-top-list
+          .chair_buying_guide-top-item {
+          padding: 36px 0;
+        }
+        .chair_buying_guide-container
+          .chair_buying_guide-top
+          .chair_buying_guide-top-list
           .chair_buying_guide-top-item
           .chair_buying_guide-top-item-content {
           width: 220px;
@@ -351,16 +323,13 @@
         }
 
         /* FAQ */
-        .chair_buying_guide-container
-          .chair_buying_guide-qs
-          .chair_buying_guide-info {
-          padding: 60px 128px;
+        .chair_buying_guide-container .chair_buying_guide-qs .chair_buying_guide-info {
+          max-width: 768px;
+          padding: 60px 0;
         }
 
-        .chair_buying_guide-container
-          .chair_buying_guide-qs
-          .chair_buying_guide-info
-          .chair_buying_guide-title {
+        .chair_buying_guide-container .chair_buying_guide-qs .chair_buying_guide-info .chair_buying_guide-title {
+          margin-bottom: 8px;
           font-size: 26px;
         }
 
@@ -368,7 +337,7 @@
           .chair_buying_guide-qs
           .chair_buying_guide-info
           .chair_buying_guide-question-item {
-          padding: 32px 23.5px;
+          padding: 20px 23.5px;
         }
 
         .chair_buying_guide-container
@@ -398,7 +367,7 @@
           .chair_buying_guide-info
           .chair_buying_guide-content-hidden
           .content-item {
-          padding: 12px 23.5px;
+          padding: 20px 23.5px;
         }
         .chair_buying_guide-container
           .chair_buying_guide-qs
@@ -406,9 +375,17 @@
           .chair_buying_guide-content-hidden
           .content-item
           .content-left
-          p {
+          > div {
           font-size: 12px;
           margin-bottom: 12px;
+        }
+        .chair_buying_guide-container
+          .chair_buying_guide-qs
+          .chair_buying_guide-info
+          .chair_buying_guide-content-hidden
+          .content-item
+          .content-left2 {
+          max-width: 350px;
         }
 
         .chair_buying_guide-container
@@ -429,43 +406,33 @@
           .bold {
           font-size: 12px;
         }
-
-        .chair_buying_guide-container
-          .chair_buying_guide-qs
-          .chair_buying_guide-info
-          .chair_buying_guide-content-hidden
-          .content-item
-          .content-right
-          img {
-          width: 335px;
-          height: 220px;
-        }
       }
 
       @media screen and (max-width: 768px) {
         /* banner-module */
-        .chair_buying_guide-container .chair_buying_guide-top {
-          padding: 18.5px 19.5px;
+        .chair_buying_guide-container .chair_buying_guide-top .chair_buying_guide-top-list {
+          max-width: 336px;
           column-gap: 24px;
         }
+        .chair_buying_guide-container
+          .chair_buying_guide-top
+          .chair_buying_guide-top-list
+          .chair_buying_guide-top-item {
+          height: auto;
+          padding: 18.5px 0;
+        }
 
         .chair_buying_guide-container
           .chair_buying_guide-top
+          .chair_buying_guide-top-list
           .chair_buying_guide-top-item
           .chair_buying_guide-top-item-img {
-          padding: 12.656px 2.036px;
-        }
-        .chair_buying_guide-container
-          .chair_buying_guide-top
-          .chair_buying_guide-top-item
-          .chair_buying_guide-top-item-img
-          img {
-          width: 85.927px;
-          height: 27.687px;
+          max-width: 90px;
         }
 
         .chair_buying_guide-container
           .chair_buying_guide-top
+          .chair_buying_guide-top-list
           .chair_buying_guide-top-item
           .chair_buying_guide-top-item-content {
           width: 96px;
@@ -479,17 +446,8 @@
         }
 
         /* FAQ */
-        .chair_buying_guide-container
-          .chair_buying_guide-qs
-          .chair_buying_guide-info {
+        .chair_buying_guide-container .chair_buying_guide-qs .chair_buying_guide-info {
           padding: 60px 20px;
-        }
-
-        .chair_buying_guide-container
-          .chair_buying_guide-qs
-          .chair_buying_guide-info
-          .chair_buying_guide-title {
-          font-size: 26px;
         }
 
         .chair_buying_guide-container
@@ -524,7 +482,7 @@
           .chair_buying_guide-info
           .chair_buying_guide-content-hidden
           .content-item {
-          padding: 12px 0px;
+          padding: 24px 0px;
         }
       }
     </style>
@@ -534,40 +492,47 @@
     <div class="chair_buying_guide-container">
       <!-- banner-module -->
       <div class="chair_buying_guide-top">
-        <div class="chair_buying_guide-top-item">
-          <div class="chair_buying_guide-top-item-img">
-            <img
-              class="lazyloaded"
-              src="https://mcusercontent.com/e8da5d39ceac7b7f0b296a4d2/images/23e11ee9-6f07-9ebf-0593-8d18af518e2a.png"
-              alt=""
-            />
+        <div class="chair_buying_guide-top-list">
+          <div class="chair_buying_guide-top-item">
+            <div class="chair_buying_guide-top-item-img">
+              <img
+                class="lazyload"
+                src="https://s3.springbeetle.eu/prod-de2-s3/trantor/attachments/DE/chair-bottom-20240815-img2.png"
+                data-src="https://s3.springbeetle.eu/prod-de2-s3/trantor/attachments/DE/chair-bottom-20240815-img2.png"
+                width="141"
+                height="81"
+                alt=""
+              />
+            </div>
+            <div class="chair_buying_guide-top-item-content">
+              A very adjustable chair that can fit basically anyone - BS12 Pro
+            </div>
           </div>
-          <div class="chair_buying_guide-top-item-content">
-            A very adjustable chair that can fit basically anyone - BS12 Pro
+          <div class="chair_buying_guide-top-item">
+            <div class="chair_buying_guide-top-item-img">
+              <img
+                class="lazyload"
+                src="https://s3.springbeetle.eu/prod-de2-s3/trantor/attachments/DE/chair-bottom-20240815-img3.png"
+                data-src="https://s3.springbeetle.eu/prod-de2-s3/trantor/attachments/DE/chair-bottom-20240815-img3.png"
+                width="141"
+                height="81"
+                alt=""
+              />
+            </div>
+            <div class="chair_buying_guide-top-item-content">It’s like sitting on a cloud - BS12 Pro</div>
           </div>
-        </div>
-        <div class="chair_buying_guide-top-item">
-          <div class="chair_buying_guide-top-item-img">
-            <img
-              class="lazyloaded"
-              src="https://mcusercontent.com/e8da5d39ceac7b7f0b296a4d2/images/48a4fd3d-5a45-be99-4e36-189e366cc3f4.png"
-              alt=""
-            />
-          </div>
-          <div class="chair_buying_guide-top-item-content">
-            It’s like sitting on a cloud - BS12 Pro
-          </div>
-        </div>
-        <div class="chair_buying_guide-top-item">
-          <div class="chair_buying_guide-top-item-img">
-            <img
-              class="lazyloaded"
-              src="https://mcusercontent.com/e8da5d39ceac7b7f0b296a4d2/images/ccd23f7e-e187-9d4c-b88c-84bd5d31529d.png"
-              alt=""
-            />
-          </div>
-          <div class="chair_buying_guide-top-item-content">
-            The ultimate in adjustable comfort - C7
+          <div class="chair_buying_guide-top-item">
+            <div class="chair_buying_guide-top-item-img">
+              <img
+                class="lazyload"
+                src="https://s3.springbeetle.eu/prod-de2-s3/trantor/attachments/DE/chair-bottom-20240815-img4.png"
+                data-src="https://s3.springbeetle.eu/prod-de2-s3/trantor/attachments/DE/chair-bottom-20240815-img4.png"
+                width="141"
+                height="81"
+                alt=""
+              />
+            </div>
+            <div class="chair_buying_guide-top-item-content">The ultimate in adjustable comfort - C7</div>
           </div>
         </div>
       </div>
@@ -578,50 +543,51 @@
           <div class="chair_buying_guide-title">FAQs.</div>
           <div class="chair_buying_guide-item">
             <div class="chair_buying_guide-question-item">
-              <div class="chair_buying_guide-question">
-                Does the office chair suit VARIOUS BODY TYPES?
+              <div class="chair_buying_guide-question">Does the office chair suit VARIOUS BODY TYPES?</div>
+              <div class="chair_buying_guide-qs-show_more-icon">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19 16.7188L12.1647 9.88341L5.3308 16.7188" stroke="#26333A" stroke-width="1.5" />
+                </svg>
               </div>
-              <div class="chair_buying_guide-qs-show_more-icon"></div>
             </div>
             <div class="chair_buying_guide-content-hidden">
               <div class="content-item">
-                <div class="content-left">
-                  <p>
-                    According to our research, we have found that different
-                    office chairs are suitable for different body types, so you
-                    need to take some measurements before buying.
-                  </p>
-                  <p>
-                    <span>A. Seat Height Measurement:</span> Measure the height
-                    from your knee to your feet, ensuring your feet are flat on
-                    the ground when seated. Your thighs should be parallel to
-                    the floor.
-                  </p>
-                  <p>
-                    <span>B. Seat Depth Measurement: </span>
-                    Measure the distance from your thigh to your knee. The seat
-                    depth should be such that 3 or 4 fingers(Greater than or
-                    equal to 50mm) can pass between the front edge of the seat
-                    and the lower leg.
-                  </p>
-                  <p>
-                    In addition to this, the lumbar support of the office chair
-                    should match the natural lumbar curvature of the user’s
-                    back. The arm height should be such that the forearm can
-                    easily reach them but not be in the way when using a
-                    keyboard or mouse.
-                  </p>
-                  <p>
-                    We provide detailed product data on the product page for
-                    you. Based on the measurement results, you can compare with
-                    the product parameters. You can choose the office chair that
-                    best suits you.
-                  </p>
+                <div class="content-left content-left2">
+                  <div>
+                    According to our research, we have found that different office chairs are suitable for different
+                    body types, so you need to take some measurements before buying.
+                  </div>
+                  <div>
+                    <div>
+                      <span>A. Seat Height Measurement:</span> Measure the height from your knee to your feet, ensuring
+                      your feet are flat on the ground when seated. Your thighs should be parallel to the floor.
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <span>B. Seat Depth Measurement: </span>
+                      Measure the distance from your thigh to your knee. The seat depth should be such that 3 or 4
+                      fingers(Greater than or equal to 50mm) can pass between the front edge of the seat and the lower
+                      leg.
+                    </div>
+                  </div>
+                  <div>
+                    In addition to this, the lumbar support of the office chair should match the natural lumbar
+                    curvature of the user’s back. The arm height should be such that the forearm can easily reach them
+                    but not be in the way when using a keyboard or mouse.
+                  </div>
+                  <div>
+                    We provide detailed product data on the product page for you. Based on the measurement results, you
+                    can compare with the product parameters. You can choose the office chair that best suits you.
+                  </div>
                 </div>
                 <div class="content-right">
                   <img
-                    class="lazyloaded"
-                    src="https://mcusercontent.com/e8da5d39ceac7b7f0b296a4d2/images/c5c05361-fc78-55b5-61d6-8fa8d0ed963b.png"
+                    class="lazyload"
+                    data-src="https://s3.springbeetle.eu/prod-de2-s3/trantor/attachments/DE/PIC_6.6-2_UK.png"
+                    src="https://s3.springbeetle.eu/prod-de2-s3/trantor/attachments/DE/PIC_6.6-2_UK.png"
+                    width="520"
+                    height="340"
                     alt=""
                   />
                 </div>
@@ -630,28 +596,25 @@
           </div>
           <div class="chair_buying_guide-item">
             <div class="chair_buying_guide-question-item">
-              <div class="chair_buying_guide-question">
-                How to choose office chairs according to MY BUDGET?
+              <div class="chair_buying_guide-question">How to choose office chairs according to MY BUDGET?</div>
+              <div class="chair_buying_guide-qs-show_more-icon">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19 16.7188L12.1647 9.88341L5.3308 16.7188" stroke="#26333A" stroke-width="1.5" />
+                </svg>
               </div>
-              <div class="chair_buying_guide-qs-show_more-icon"></div>
             </div>
             <div class="chair_buying_guide-content-hidden">
               <div class="content-item">
                 <div class="content-left">
-                  <p>
-                    The price range of office chairs varies widely, from less
-                    than €100 to €2000, making it crucial to select one that
-                    best fits your budget. Chair prices are influenced by
-                    factors such as materials and adjustability, so we recommend
-                    choosing an ergonomic chair that offers high quality and
-                    cost-effectiveness. The FlexiSpot office chair is
-                    ergonomically designed with fully adjustable components that
-                    promote a healthy sitting posture. It is also
-                    quality-certified to ensure long-term stable use. And we
-                    offer a 60-day no-risk return policy, during which you can
-                    try the chair for free to help you find the ergonomic chair
-                    that best suits your needs.
-                  </p>
+                  <div>
+                    The price range of office chairs varies widely, from less than €100 to €2000, making it crucial to
+                    select one that best fits your budget. Chair prices are influenced by factors such as materials and
+                    adjustability, so we recommend choosing an ergonomic chair that offers high quality and
+                    cost-effectiveness. The FlexiSpot office chair is ergonomically designed with fully adjustable
+                    components that promote a healthy sitting posture. It is also quality-certified to ensure long-term
+                    stable use. And we offer a 60-day no-risk return policy, during which you can try the chair for free
+                    to help you find the ergonomic chair that best suits your needs.
+                  </div>
                 </div>
               </div>
             </div>
@@ -659,96 +622,127 @@
           <div class="chair_buying_guide-item">
             <div class="chair_buying_guide-question-item">
               <div class="chair_buying_guide-question">
-                What adjustment points are included in FlexiSpot's office
-                chair？
+                What adjustment points are included in FlexiSpot's office chair？
               </div>
-              <div class="chair_buying_guide-qs-show_more-icon"></div>
+              <div class="chair_buying_guide-qs-show_more-icon">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19 16.7188L12.1647 9.88341L5.3308 16.7188" stroke="#26333A" stroke-width="1.5" />
+                </svg>
+              </div>
             </div>
             <div class="chair_buying_guide-content-hidden">
               <div class="content-item">
                 <div class="content-left">
-                  <p class="gray">We have 10 adjustment points:</p>
-                  <p>
-                    <span class="bold">1. Seat Height Adjustability: </span> The
-                    seat height ought to allow users to sit with their feet flat
-                    on the ground and a minimal amount of weight placed on the
-                    backs of the legs. , thighs horizontal, and arms even at the
-                    height of the desk.
-                  </p>
-                  <p>
-                    <span class="bold"
-                      >2. Seat Depth and Width Adjustability:</span
-                    >
-                    The seat’s depth can be moved forward or backward, depending
-                    on the needs of the user. It should be adjusted so that the
-                    back of the chair does not press against the calves.
-                  </p>
-                  <p>
-                    <span class="bold">3. Seat Tilt: </span>
-                    Seat Tilt: The angle of the seat should be such that you
-                    feel most comfortable in an upright posture. The seat tilt
-                    can be adjusted to provide an angle that counterbalances
-                    good posture: feet flat, back comfortably resting on the
-                    chair’s back. Adjust as needed to create a seating surface
-                    that gently pulls you back to the chair as you sit in a
-                    strong, upright posture.
-                  </p>
-                  <p>
-                    <span class="bold">4. Seat Tilt: </span>
-                    The armrests should be adjustable in height and width,
-                    allowing the user’s arms to rest comfortably and shoulders
-                    to remain relaxed.
-                  </p>
-                  <p>
-                    <span class="bold">5. Headrest Adjustability: </span>
-                    The headrest can be angled to the user’s ideal position, it
-                    should be adjustable to accommodate different heights and
-                    neck lengths.
-                  </p>
-                  <p>
-                    <span class="bold">6. Lumbar Support Adjustability:</span>
-                    The ability of lumbar support is a critical feature designed
-                    to provide the correct support for the natural curve of your
-                    spine, particularly the lower back, or lumbar region. Good
-                    lumbar support can help to prevent back strain and muscle
-                    fatigue, allowing you to sit for longer periods while
-                    maintaining good posture.
-                  </p>
-                  <p>
-                    <span class="bold">7. Back Recline: </span>
-                    This feature allows you to adjust your sitting angle. Most
-                    ergo chairs will allow for between 90 and 120 degrees of
-                    tilt, though some will let you recline all the way back.
-                    With a good back recline feature, you should be able to sit
-                    in a position that is comfortable for you and supports the
-                    natural curvature of the spine. A back recline function is
-                    especially important for people who work at the desk for
-                    extended periods of time as it helps to reduce the pressure
-                    on your spine and lower back.
-                  </p>
-                  <p>
-                    <span class="bold">8. Tilt Tension:</span>
-                    Tilt tension control determines the amount of resistance
-                    you’ll feel when leaning back in your chair. By adjusting
-                    the tilt tension, you can control the ease or difficulty of
-                    reclining in your chair, allowing for comfortable and
-                    controlled reclining. The perfect tilt tension will give you
-                    a sense of weightlessness and allow you to move easily in
-                    the chair.
-                  </p>
-                  <p>
-                    <span class="bold">9. Syncro Tilt: </span>
-                    A more advanced feature found in some chairs, this enables
-                    the seat and backrest to tilt simultaneously while
-                    maintaining the same angle. This can be beneficial for
-                    maintaining postural alignment and distributing weight
-                    evenly.
-                  </p>
-                  <p>
-                    <span class="bold">10. Swivel: </span>
-                    The chair should be able to swivel freely to allow for easy
-                    access to various areas of the workstation.
-                  </p>
+                  <div class="gray">We have 10 adjustment points:</div>
+                  <div>
+                    <div><span class="bold">1.&nbsp;</span></div>
+                    <div>
+                      <span class="bold">Seat Height Adjustability:</span> The seat height ought to allow users to sit
+                      with their feet flat on the ground and a minimal amount of weight placed on the backs of the legs.
+                      , thighs horizontal, and arms even at the height of the desk.
+                    </div>
+                  </div>
+                  <div>
+                    <div><span class="bold">2.&nbsp;</span></div>
+                    <div>
+                      <span class="bold">Seat Depth and Width Adjustability:</span> The seat’s depth can be moved
+                      forward or backward, depending on the needs of the user. It should be adjusted so that the back of
+                      the chair does not press against the calves.
+                    </div>
+                  </div>
+                  <div>
+                    <div><span class="bold">3.&nbsp;</span></div>
+                    <div>
+                      <span class="bold">Seat Tilt:</span> Seat Tilt: The angle of the seat should be such that you feel
+                      most comfortable in an upright posture. The seat tilt can be adjusted to provide an angle that
+                      counterbalances good posture: feet flat, back comfortably resting on the chair’s back. Adjust as
+                      needed to create a seating surface that gently pulls you back to the chair as you sit in a strong,
+                      upright posture.
+                    </div>
+                  </div>
+                  <div>
+                    <div><span class="bold">4.&nbsp;</span></div>
+                    <div>
+                      <span class="bold">Seat Tilt:</span> The armrests should be adjustable in height and width,
+                      allowing the user’s arms to rest comfortably and shoulders to remain relaxed.
+                    </div>
+                  </div>
+                  <div>
+                    <div><span class="bold">5.&nbsp;</span></div>
+                    <div>
+                      <span class="bold">Headrest Adjustability:</span> The headrest can be angled to the user’s ideal
+                      position, it should be adjustable to accommodate different heights and neck lengths.
+                    </div>
+                  </div>
+                  <div>
+                    <div><span class="bold">6.&nbsp;</span></div>
+                    <div>
+                      <span class="bold">Lumbar Support Adjustability:</span> The ability of lumbar support is a
+                      critical feature designed to provide the correct support for the natural curve of your spine,
+                      particularly the lower back, or lumbar region. Good lumbar support can help to prevent back strain
+                      and muscle fatigue, allowing you to sit for longer periods while maintaining good posture.
+                    </div>
+                  </div>
+                  <div>
+                    <div><span class="bold">7.&nbsp;</span></div>
+                    <div>
+                      <span class="bold">Back Recline:</span> This feature allows you to adjust your sitting angle. Most
+                      ergo chairs will allow for between 90 and 120 degrees of tilt, though some will let you recline
+                      all the way back. With a good back recline feature, you should be able to sit in a position that
+                      is comfortable for you and supports the natural curvature of the spine. A back recline function is
+                      especially important for people who work at the desk for extended periods of time as it helps to
+                      reduce the pressure on your spine and lower back.
+                    </div>
+                  </div>
+                  <div>
+                    <div><span class="bold">8.&nbsp;</span></div>
+                    <div>
+                      <span class="bold">Tilt Tension:</span> Tilt tension control determines the amount of resistance
+                      you’ll feel when leaning back in your chair. By adjusting the tilt tension, you can control the
+                      ease or difficulty of reclining in your chair, allowing for comfortable and controlled reclining.
+                      The perfect tilt tension will give you a sense of weightlessness and allow you to move easily in
+                      the chair.
+                    </div>
+                  </div>
+                  <div>
+                    <div><span class="bold">9.&nbsp;</span></div>
+                    <div>
+                      <span class="bold">Syncro Tilt:</span> A more advanced feature found in some chairs, this enables
+                      the seat and backrest to tilt simultaneously while maintaining the same angle. This can be
+                      beneficial for maintaining postural alignment and distributing weight evenly.
+                    </div>
+                  </div>
+                  <div>
+                    <div><span class="bold">10.&nbsp;</span></div>
+                    <div>
+                      <span class="bold">Swivel:</span> The chair should be able to swivel freely to allow for easy
+                      access to various areas of the workstation.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chair_buying_guide-item">
+            <div class="chair_buying_guide-question-item">
+              <div class="chair_buying_guide-question">Which office chair is your BEST SELLER?</div>
+              <div class="chair_buying_guide-qs-show_more-icon">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19 16.7188L12.1647 9.88341L5.3308 16.7188" stroke="#26333A" stroke-width="1.5" />
+                </svg>
+              </div>
+            </div>
+            <div class="chair_buying_guide-content-hidden">
+              <div class="content-item">
+                <div class="content-left">
+                  <div>
+                    FlexiSpot office chairs are designed with ergonomics as the benchmark, integrating functionality and
+                    style into high-quality products. Our best-selling ergonomic chair is the BS12 Pro, featuring a
+                    sleek and minimalist design, breathable mesh fabric that resists deformation, and a convenient
+                    three-button adjustment function suitable for all user groups. In addition, the BS12 Pro features 9
+                    adjustable points with dynamic backrest, 3D armrests, adjustable headrest, and additional tension
+                    adjustment to ensure a customized and comfortable seating experience.
+                  </div>
                 </div>
               </div>
             </div>
@@ -756,25 +750,67 @@
           <div class="chair_buying_guide-item">
             <div class="chair_buying_guide-question-item">
               <div class="chair_buying_guide-question">
-                Which office chair is your BEST SELLER?
+                Can I feel comfortable sitting in an ergonomic chair FOR EXTENDED PERIODS OF TIME?
               </div>
-              <div class="chair_buying_guide-qs-show_more-icon"></div>
+              <div class="chair_buying_guide-qs-show_more-icon">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19 16.7188L12.1647 9.88341L5.3308 16.7188" stroke="#26333A" stroke-width="1.5" />
+                </svg>
+              </div>
             </div>
             <div class="chair_buying_guide-content-hidden">
               <div class="content-item">
                 <div class="content-left">
-                  <p>
-                    FlexiSpot office chairs are designed with ergonomics as the
-                    benchmark, integrating functionality and style into
-                    high-quality products. Our best-selling ergonomic chair is
-                    the BS12 Pro, featuring a sleek and minimalist design,
-                    breathable mesh fabric that resists deformation, and a
-                    convenient three-button adjustment function suitable for all
-                    user groups. In addition, the BS12 Pro features 9 adjustable
-                    points with dynamic backrest, 3D armrests, adjustable
-                    headrest, and additional tension adjustment to ensure a
-                    customized and comfortable seating experience.
-                  </p>
+                  <div>Yes, you can feel comfortable sitting in an ergonomic chair for extended periods of time.</div>
+                  <div>
+                    FlexiSpot ergonomic chairs are designed to support the natural curve of the spine with multiple
+                    adjustable points to meet dynamic needs and promote proper posture formation. In addition, quality
+                    materials such as breathable mesh fabric and resilient foam are used to enhance comfort during use.
+                    Using our ergonomic chairs helps to evenly distribute body weight, promote blood circulation,
+                    relieve muscle stiffness, and reduce discomfort and fatigue associated with prolonged sitting.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chair_buying_guide-item">
+            <div class="chair_buying_guide-question-item">
+              <div class="chair_buying_guide-question">What is the LIFESPAN of an office chair?</div>
+              <div class="chair_buying_guide-qs-show_more-icon">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19 16.7188L12.1647 9.88341L5.3308 16.7188" stroke="#26333A" stroke-width="1.5" />
+                </svg>
+              </div>
+            </div>
+            <div class="chair_buying_guide-content-hidden">
+              <div class="content-item">
+                <div class="content-left">
+                  <div>
+                    Our office chairs undergo multiple tests before leaving the factory to ensure they have a long
+                    lifespan. They meet SGS, BIFMA, and other certifications. In addition, we offer different warranty
+                    durations from 2 to 5 years for our office chairs.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chair_buying_guide-item">
+            <div class="chair_buying_guide-question-item">
+              <div class="chair_buying_guide-question">How to assemble an office chair? Is it easy?</div>
+              <div class="chair_buying_guide-qs-show_more-icon">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19 16.7188L12.1647 9.88341L5.3308 16.7188" stroke="#26333A" stroke-width="1.5" />
+                </svg>
+              </div>
+            </div>
+            <div class="chair_buying_guide-content-hidden">
+              <div class="content-item">
+                <div class="content-left">
+                  <div>
+                    The FlexiSpot office chair is designed with the user in mind and is easy to assemble. We provide
+                    clear assembly guides on our product website and YouTube channel. And the office chair comes with
+                    built-in installation tools, so just follow the steps carefully.
+                  </div>
                 </div>
               </div>
             </div>
@@ -782,99 +818,31 @@
           <div class="chair_buying_guide-item">
             <div class="chair_buying_guide-question-item">
               <div class="chair_buying_guide-question">
-                Can I feel comfortable sitting in an ergonomic chair FOR
-                EXTENDED PERIODS OF TIME?
+                How can I determine if I need an ergonomic chair with a headrest?
               </div>
-              <div class="chair_buying_guide-qs-show_more-icon"></div>
+              <div class="chair_buying_guide-qs-show_more-icon">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19 16.7188L12.1647 9.88341L5.3308 16.7188" stroke="#26333A" stroke-width="1.5" />
+                </svg>
+              </div>
             </div>
             <div class="chair_buying_guide-content-hidden">
               <div class="content-item">
                 <div class="content-left">
-                  <p>
-                    Yes, you can feel comfortable sitting in an ergonomic chair
-                    for extended periods of time.
-                  </p>
-                  <p>
-                    FlexiSpot ergonomic chairs are designed to support the
-                    natural curve of the spine with multiple adjustable points
-                    to meet dynamic needs and promote proper posture formation.
-                    In addition, quality materials such as breathable mesh
-                    fabric and resilient foam are used to enhance comfort during
-                    use. Using our ergonomic chairs helps to evenly distribute
-                    body weight, promote blood circulation, relieve muscle
-                    stiffness, and reduce discomfort and fatigue associated with
-                    prolonged sitting.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="chair_buying_guide-item">
-            <div class="chair_buying_guide-question-item">
-              <div class="chair_buying_guide-question">
-                What is the LIFESPAN of an office chair?
-              </div>
-              <div class="chair_buying_guide-qs-show_more-icon"></div>
-            </div>
-            <div class="chair_buying_guide-content-hidden">
-              <div class="content-item">
-                <div class="content-left">
-                  <p>
-                    Our office chairs undergo multiple tests before leaving the
-                    factory to ensure they have a long lifespan. They meet SGS,
-                    BIFMA, and other certifications. In addition, we offer
-                    different warranty durations from 2 to 5 years for our
-                    office chairs.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="chair_buying_guide-item">
-            <div class="chair_buying_guide-question-item">
-              <div class="chair_buying_guide-question">
-                How to assemble an office chair? Is it easy?
-              </div>
-              <div class="chair_buying_guide-qs-show_more-icon"></div>
-            </div>
-            <div class="chair_buying_guide-content-hidden">
-              <div class="content-item">
-                <div class="content-left">
-                  <p>
-                    The FlexiSpot office chair is designed with the user in mind
-                    and is easy to assemble. We provide clear assembly guides on
-                    our product website and YouTube channel. And the office
-                    chair comes with built-in installation tools, so just follow
-                    the steps carefully.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="chair_buying_guide-item">
-            <div class="chair_buying_guide-question-item">
-              <div class="chair_buying_guide-question">
-                How can I determine if I need an ergonomic chair with a
-                headrest?
-              </div>
-              <div class="chair_buying_guide-qs-show_more-icon"></div>
-            </div>
-            <div class="chair_buying_guide-content-hidden">
-              <div class="content-item">
-                <div class="content-left">
-                  <p>
-                    <span class="bold"> Without Headrest: </span>
-                    Encourages users to maintain proper posture using their own
-                    body strength, facilitating frequent posture changes to
-                    alleviate stiffness and discomfort.
-                  </p>
-                  <p>
-                    <span class="bold"> Without Headrest: </span>
-                    Recommended for users who spend extended periods sitting,
-                    ergonomic chairs with headrests promote correct alignment of
-                    the head and neck, thereby significantly enhancing the
-                    sitting experience.
-                  </p>
+                  <div>
+                    <div>
+                      <span class="bold"> Without Headrest: </span>
+                      Encourages users to maintain proper posture using their own body strength, facilitating frequent
+                      posture changes to alleviate stiffness and discomfort.
+                    </div>
+                  </div>
+                  <div>
+                    <div>
+                      <span class="bold"> Without Headrest: </span>
+                      Recommended for users who spend extended periods sitting, ergonomic chairs with headrests promote
+                      correct alignment of the head and neck, thereby significantly enhancing the sitting experience.
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -885,57 +853,23 @@
   </body>
 
   <script>
-    function loadScript(url, callback) {
-      document.getElementById("") && document.getElementById("").remove();
-      var script = document.createElement("script");
-      script.type = "text/javascript";
-      script.async = "async";
-      script.src = url;
-      script.id = "";
-      var head = document.head || document.getElementsByTagName("head")[0];
-      head.appendChild(script);
-      if (script.readyState) {
-        script.onreadystatechange = function () {
-          if (
-            script.readyState == "complete" ||
-            script.readyState == "loaded"
-          ) {
-            script.onreadystatechange = null;
-            callback();
-          }
-        };
-      } else {
-        script.onload = function () {
-          callback();
-        };
-      }
-    }
-
-    loadScript(
-      "https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/swiper@8.4.7_swiper-bundle.min.js",
-      function () {
-        // show more qs
-        const questions = document.querySelectorAll(".chair_buying_guide-item");
-        questions.forEach((question, index) => {
-          const show_more = question.querySelector(
-            ".chair_buying_guide-qs-show_more-icon"
-          );
-          const more_text = question.querySelector(
-            ".chair_buying_guide-content-hidden"
-          );
-          let is_show = false;
-          show_more.addEventListener("click", function () {
-            if (!is_show) {
-              more_text.style.display = "block";
-              show_more.style.transform = "rotate(180deg)";
-            } else {
-              more_text.style.display = "none";
-              show_more.style.transform = "rotate(0deg)";
-            }
-            is_show = !is_show;
-          });
-        });
-      }
-    );
+    // show more qs
+    const questions = document.querySelectorAll(".chair_buying_guide-item")
+    questions.forEach((question, index) => {
+      const show_more = question.querySelector(".chair_buying_guide-question-item")
+      const show_more_icon = question.querySelector(".chair_buying_guide-qs-show_more-icon")
+      const more_text = question.querySelector(".chair_buying_guide-content-hidden")
+      let is_show = false
+      show_more.addEventListener("click", function () {
+        if (!is_show) {
+          more_text.style.display = "block"
+          show_more_icon.style.transform = "rotate(0)"
+        } else {
+          more_text.style.display = "none"
+          show_more_icon.style.transform = "rotate(180deg)"
+        }
+        is_show = !is_show
+      })
+    })
   </script>
 </html>
