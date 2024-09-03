@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>modal</title>
+    <style scoped>
+      .chair_buying_guide-product .chair_buying_guide-product-table {
+        position: relative;
+        overflow-x: auto;
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 100%;
+        margin: 50px 0;
+      }
+      .chair_buying_guide-product{
+        position: relative;
+        width: 100%;
+      }
+
+      .chair_buying_guide-product .chair_buying_guide-product-title {
+        position: relative;
+        width: 100%;
+      }
+      .chair_buying_guide-product .chair_buying_guide-product-title span{
+        font-size: 20px;
+        font-weight: 800;
+        font-family: "Zen-Kaku-Gothic-New-Medium";
+        line-height: 120%;
+        color: #26333a;
+        text-align: center;
+        position: sticky;
+        top: -50px;
+        left: 280px;
+        transform: translateX(-50%);
+      }
+
+      .chair_buying_guide-product
+        .chair_buying_guide-product-table
+        tr
+        td:first-child {
+        width: 140px !important;
+        position: sticky;
+        left: -50px;
+        z-index: 1;
+      }
+
+      .chair_buying_guide-product
+        .chair_buying_guide-product-table
+        tr:nth-child(2n) {
+        background-color: #f4f4f4;
+      }
+
+      .chair_buying_guide-product
+        .chair_buying_guide-product-table
+        tr:nth-child(2n-1) {
+        background-color: #fff;
+      }
+
+      .chair_buying_guide-product
+        .chair_buying_guide-product-table
+        tr:nth-child(2n)
+        td:first-child {
+        background-color: #f4f4f4;
+      }
+
+      .chair_buying_guide-product
+        .chair_buying_guide-product-table
+        tr:nth-child(2n-1)
+        td:first-child {
+        background-color: #fff;
+      }
+
+      .chair_buying_guide-product .chair_buying_guide-product-table tr td {
+        padding: 5px;
+        text-align: center;
+        font-size: 14px;
+        font-family: "NotoSansJP-Regular";
+        font-weight: 400;
+        width: 160px;
+      }
+
+      .chair_buying_guide-product
+        .chair_buying_guide-product-table
+        .chair_buying_guide-product-table-header {
+        width: 100%;
+      }
+      .chair_buying_guide-product
+        .chair_buying_guide-product-table
+        .chair_buying_guide-product-table-header
+        .chair_buying_guide-product-table-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+      }
+      .chair_buying_guide-product
+        .chair_buying_guide-product-table
+        .chair_buying_guide-product-table-header
+        .chair_buying_guide-product-table-content
+        .chair_buying_guide-product-table-img {
+        position: relative;
+        padding: 10px;
+        width: 150px;
+      }
+
+      .chair_buying_guide-product
+        .chair_buying_guide-product-table
+        .chair_buying_guide-product-table-header
+        .chair_buying_guide-product-table-content
+        .chair_buying_guide-product-table-img
+        img {
+        width: 150px;
+        height: 150px;
+        border-radius: 8px;
+        background: #f6f4f1;
+      }
+
+      .chair_buying_guide-product
+        .chair_buying_guide-product-table
+        .chair_buying_guide-product-table-header
+        .chair_buying_guide-product-table-content
+        .chair_buying_guide-product-table-img.isHot {
+        position: relative;
+      }
+
+      .chair_buying_guide-product
+        .chair_buying_guide-product-table
+        .chair_buying_guide-product-table-header
+        .chair_buying_guide-product-table-content
+        .chair_buying_guide-product-table-img.isHot::after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        right: 0px;
+        width: 60px;
+        height: 60px;
+        background: url("https://s3.springbeetle.asia/asia/trantor/attachments/JP/nice-icon-20240822.png")
+          no-repeat;
+        background-size: cover;
+        /* z-index: 1; */
+      }
+      .chair_buying_guide-product
+        .chair_buying_guide-product-table
+        .chair_buying_guide-product-table-header
+        .chair_buying_guide-product-table-content
+        .table-product-title{
+          font-family: Zen-Kaku-Gothic-New-Medium;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: normal;
+        }
+        @media screen and (max-width: 1440px) {
+          .chair_buying_guide-product .chair_buying_guide-product-title span{
+            left: 50%;
+          }
+        }
+
+      @media screen and (max-width: 1024px) {
+        .chair_buying_guide-product
+        .chair_buying_guide-product-table
+        .chair_buying_guide-product-table-header
+        .chair_buying_guide-product-table-content
+        .chair_buying_guide-product-table-img{
+          width: 100px;
+        }
+        .chair_buying_guide-product
+        .chair_buying_guide-product-table
+        .chair_buying_guide-product-table-header
+        .chair_buying_guide-product-table-content
+        .chair_buying_guide-product-table-img img{
+          width: 100px;
+          height: 100px;
+        }
+
+        .chair_buying_guide-product
+        .chair_buying_guide-product-table
+        .chair_buying_guide-product-table-header
+        .chair_buying_guide-product-table-content
+        .chair_buying_guide-product-table-img.isHot::after {
+          width: 30px;
+          height: 30px;
+        }
+
+        .chair_buying_guide-product .chair_buying_guide-product-table tr td {
+          font-size: 12px;
+          width: 120px;
+        }
+
+        @media screen and (max-width: 768px) {
+          .chair_buying_guide-product .chair_buying_guide-product-table tr td {
+            font-size: 12px;
+            width: 120px;
+          }
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .chair_buying_guide-product .chair_buying_guide-product-title span{
+            left: 130px;
+          }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="chair_buying_guide-container">
+      <!-- chair-module1 -->
+      <div class="chair_buying_guide-product" id="tableC7">
+        <div>
+          <div class="chair_buying_guide-product-title">
+           <span> C Series</span></div>
+          <table class="chair_buying_guide-product-table">
+            <tr>
+              <td></td>
+              <td>
+                <div class="chair_buying_guide-product-table-header">
+                  <div class="chair_buying_guide-product-table-content">
+                    <div class="chair_buying_guide-product-table-img isHot">
+                      <img
+                        class="lazyload"
+                        src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/cbg-jp-20240926-C2.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="table-product-title">C2</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="chair_buying_guide-product-table-header">
+                  <div class="chair_buying_guide-product-table-content">
+                    <div class="chair_buying_guide-product-table-img isHot">
+                      <img
+                        class="lazyload"
+                        src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/cbg-jp-C7Pro.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="table-product-title">C7 Pro</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="chair_buying_guide-product-table-header">
+                  <div class="chair_buying_guide-product-table-content">
+                    <div class="chair_buying_guide-product-table-img">
+                      <img
+                        class="lazyload"
+                        src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/cbg-jp-C7Air.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="table-product-title">C7 Air</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="chair_buying_guide-product-table-header">
+                  <div class="chair_buying_guide-product-table-content">
+                    <div class="chair_buying_guide-product-table-img">
+                      <img
+                        class="lazyload"
+                        src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/cbg-jp-C7.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="table-product-title">C7</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="chair_buying_guide-product-table-header">
+                  <div class="chair_buying_guide-product-table-content">
+                    <div class="chair_buying_guide-product-table-img">
+                      <img
+                        class="lazyload"
+                        src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/cbg-jp-20240926-C5.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="table-product-title">C5</div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>カラー</td>
+              <td>ブラック</td>
+              <td>ブラック・グレー</td>
+              <td>ブラック・グレー</td>
+              <td>ブラック</td>
+              <td>ブラック・グレー</td>
+            </tr>
+            <tr>
+              <td>ヘッドレスト</td>
+              <td>
+                2D<br />
+                （上下・角度）
+              </td>
+              <td>
+                2D<br />
+                （上下・角度）
+              </td>
+              <td>
+                2D<br />
+                （上下・角度）
+              </td>
+              <td>
+                2D<br />
+                （上下・角度）
+              </td>
+              <td>
+                2D<br />
+                （上下・角度）
+              </td>
+            </tr>
+            <tr>
+              <td>アームレスト</td>
+              <td>
+                4D<br />
+                （上下・左右・前<br />後・角度）
+              </td>
+              <td>
+                3D<br />
+                （上下・前後・<br />360度水平回転）
+              </td>
+              <td>
+                4D<br />
+                （上下・左右・前<br />後・角度）
+              </td>
+              <td>
+                4D<br />
+                （上下・左右・前<br />後・角度）
+              </td>
+              <td>
+                3D<br />
+                （上下・左右・前<br />後・角度）
+              </td>
+            </tr>
+            <tr>
+              <td>オットマン</td>
+              <td>×</td>
+              <td>〇</td>
+              <td>×</td>
+              <td>×</td>
+              <td>×</td>
+            </tr>
+            <tr>
+              <td>座面奥行調節</td>
+              <td>〇</td>
+              <td>〇</td>
+              <td>〇</td>
+              <td>〇</td>
+              <td>×</td>
+            </tr>
+            <tr>
+              <td>座面前傾角度調節</td>
+              <td>×</td>
+              <td>〇</td>
+              <td>〇</td>
+              <td>〇</td>
+              <td>×</td>
+            </tr>
+            <tr>
+              <td>ランバーサポート</td>
+              <td>前後</td>
+              <td>前後</td>
+              <td>前後</td>
+              <td>前後</td>
+              <td>上下・前後</td>
+            </tr>
+            <tr>
+              <td>リクライニング角度</td>
+              <td>90°-130°</td>
+              <td>90°-128°</td>
+              <td>90°-128°</td>
+              <td>90°-128°</td>
+              <td>90°-116°</td>
+            </tr>
+            <tr>
+              <td>座面素材</td>
+              <td>モールドウレタン</td>
+              <td>メッシュ</td>
+              <td>メッシュ</td>
+              <td>フォーム(6cm)</td>
+              <td>ウレタンフォーム</td>
+            </tr>
+            <tr>
+              <td>座面高さ</td>
+              <td>42~50.5cm</td>
+              <td>47.5~56cm</td>
+              <td>47.5~56cm</td>
+              <td>47.5~56cm</td>
+              <td>43.5~53.5cm</td>
+            </tr>
+            <tr>
+              <td>本体寸法</td>
+              <td>
+                幅64×奥行9.5<br />
+                x高さ<br />
+                112.5~126cm
+              </td>
+              <td>
+                幅66×奥行66<br />
+                x高さ<br />
+                19.5~134.5cm
+              </td>
+              <td>
+                幅66×奥行66<br />
+                x高さ<br />
+                119.5~134.5cm
+              </td>
+              <td>
+                幅66×奥行66<br />
+                x高さ<br />
+                119.5~134.5cm
+              </td>
+              <td>
+                幅72.5×奥行67.5<br />
+                x高さ<br />
+                114.5~129.5cm
+              </td>
+            </tr>
+            <tr>
+              <td>重量</td>
+              <td>17.5kg</td>
+              <td>24kg</td>
+              <td>21.6kg</td>
+              <td>21.6kg</td>
+              <td>16.1kg</td>
+            </tr>
+            <tr>
+              <td>耐荷重</td>
+              <td>136kg</td>
+              <td>130kg</td>
+              <td>130kg</td>
+              <td>130kg</td>
+              <td>125kg</td>
+            </tr>
+            <tr>
+              <td>保証年数</td>
+              <td>5年</td>
+              <td>3年</td>
+              <td>3年</td>
+              <td>3年</td>
+              <td>3年</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <!-- chair-module2 -->
+      <div class="chair_buying_guide-product" id="tableOC">
+        <div>
+          <div class="chair_buying_guide-product-title"><span> OC Series</span></div>
+          <table class="chair_buying_guide-product-table">
+            <tr>
+              <td></td>
+              <td>
+                <div class="chair_buying_guide-product-table-header">
+                  <div class="chair_buying_guide-product-table-content">
+                    <div class="chair_buying_guide-product-table-img">
+                      <img
+                        class="lazyload"
+                        src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/cbg-jp-20240926-OC3-F.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="table-product-title">OC3-Foam</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="chair_buying_guide-product-table-header">
+                  <div class="chair_buying_guide-product-table-content">
+                    <div class="chair_buying_guide-product-table-img isHot">
+                      <img
+                        class="lazyload"
+                        src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/cbg-jp-OC3.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="table-product-title">OC3-Mesh</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="chair_buying_guide-product-table-header">
+                  <div class="chair_buying_guide-product-table-content">
+                    <div class="chair_buying_guide-product-table-img">
+                      <img
+                        class="lazyload"
+                        src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/cbg-jp-20240926-OC5.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="table-product-title">OC5</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="chair_buying_guide-product-table-header">
+                  <div class="chair_buying_guide-product-table-content">
+                    <div class="chair_buying_guide-product-table-img">
+                      <img
+                        class="lazyload"
+                        src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/cbg-jp-OC15.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="table-product-title">OC15</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="chair_buying_guide-product-table-header">
+                  <div class="chair_buying_guide-product-table-content">
+                    <div class="chair_buying_guide-product-table-img">
+                      <img
+                        class="table-img"
+                        src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/cbg-jp-OC16.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="table-product-title">OC16</div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>カラー</td>
+              <td>ブラック・グレー</td>
+              <td>ブラック・グレー</td>
+              <td>ブラック・グレー</td>
+              <td>グレー・ダークレッド</td>
+              <td>ブラック</td>
+            </tr>
+            <tr>
+              <td>ヘッドレスト</td>
+              <td>
+                2D<br />
+                （上下・角度）
+              </td>
+              <td>
+                2D<br />
+                （上下・角度）
+              </td>
+              <td>×</td>
+              <td>×</td>
+              <td>×</td>
+            </tr>
+            <tr>
+              <td>アームレスト</td>
+              <td>
+                1D<br />
+                （上下）
+              </td>
+              <td>
+                1D<br />
+                （上下）
+              </td>
+              <td>跳ね上げ式</td>
+              <td>固定式</td>
+              <td>固定式</td>
+            </tr>
+            <tr>
+              <td>オットマン</td>
+              <td>×</td>
+              <td>×</td>
+              <td>×</td>
+              <td>×</td>
+              <td>×</td>
+            </tr>
+            <tr>
+              <td>座面奥行調節</td>
+              <td>×</td>
+              <td>×</td>
+              <td>×</td>
+              <td>×</td>
+              <td>×</td>
+            </tr>
+            <tr>
+              <td>座面前傾角度調節</td>
+              <td>×</td>
+              <td>×</td>
+              <td>×</td>
+              <td>×</td>
+              <td>×</td>
+            </tr>
+            <tr>
+              <td>ランバーサポート</td>
+              <td>上下</td>
+              <td>上下</td>
+              <td>一体式</td>
+              <td>一体式</td>
+              <td>前後（固定不可）</td>
+            </tr>
+            <tr>
+              <td>リクライニング角度</td>
+              <td>90°-125°</td>
+              <td>90°-125°</td>
+              <td>90°-130°</td>
+              <td>90°-125°</td>
+              <td>90°-120°</td>
+            </tr>
+            <tr>
+              <td>座面素材</td>
+              <td>ウレタンフォーム</td>
+              <td>メッシュ</td>
+              <td>ウレタンフォーム</td>
+              <td>高密度スポンジ<br />(5cm)</td>
+              <td>ウレタンフォーム</td>
+            </tr>
+            <tr>
+              <td>座面高さ</td>
+              <td>45~55cm</td>
+              <td>47~57cm</td>
+              <td>42~52cm</td>
+              <td>44～50.5cm</td>
+              <td>44~52.5cm</td>
+            </tr>
+            <tr>
+              <td>本体寸法</td>
+              <td>
+                幅63.5×奥行51<br />
+                x高さ<br />
+                112~122cm
+              </td>
+              <td>
+                幅66×奥行54<br />
+                x高さ<br />
+                117~133cm
+              </td>
+              <td>
+                幅64×奥行44<br />
+                x高さ<br />
+                87～97cm
+              </td>
+              <td>
+                幅59.5×奥行57.5<br />
+                x高さ<br />
+                93～99.5cm
+              </td>
+              <td>
+                幅61×奥行70.5<br />
+                x高さ<br />
+                114.5~123cm
+              </td>
+            </tr>
+            <tr>
+              <td>重量</td>
+              <td>14.6kg</td>
+              <td>14.2kg</td>
+              <td>10.5kg</td>
+              <td>12kg</td>
+              <td>13.8kg</td>
+            </tr>
+            <tr>
+              <td>耐荷重</td>
+              <td>136kg</td>
+              <td>136kg</td>
+              <td>136kg</td>
+              <td>125kg</td>
+              <td>200kg</td>
+            </tr>
+            <tr>
+              <td>保証年数</td>
+              <td>3年</td>
+              <td>3年</td>
+              <td>1年</td>
+              <td>3年</td>
+              <td>3年</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <!-- chair-module3 -->
+      <div class="chair_buying_guide-product" id="tableBS">
+        <div>
+          <div class="chair_buying_guide-product-title"><span>BS Series</span> </div>
+          <table class="chair_buying_guide-product-table">
+            <tr>
+              <td></td>
+              <td>
+                <div class="chair_buying_guide-product-table-header">
+                  <div class="chair_buying_guide-product-table-content">
+                    <div class="chair_buying_guide-product-table-img isHot">
+                      <img
+                        class="lazyload"
+                        src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/cbg-jp-20240926-BS12.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="table-product-title">BS12</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="chair_buying_guide-product-table-header">
+                  <div class="chair_buying_guide-product-table-content">
+                    <div class="chair_buying_guide-product-table-img">
+                      <img
+                        class="lazyload"
+                        src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/cbg-jp-20240926-BS13.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="table-product-title">BS13</div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>カラー</td>
+              <td>ブラック・グレー</td>
+              <td>コーラルレッド</td>
+            </tr>
+            <tr>
+              <td>ヘッドレスト</td>
+              <td>
+                1D<br />
+                （上下・角度）
+              </td>
+              <td>×</td>
+            </tr>
+            <tr>
+              <td>アームレスト</td>
+              <td>
+                3D<br />
+                （上下・左右・前<br />後・角度）
+              </td>
+              <td>
+                1D<br />
+                （上下）
+              </td>
+            </tr>
+            <tr>
+              <td>オットマン</td>
+              <td>×</td>
+              <td>×</td>
+            </tr>
+            <tr>
+              <td>座面奥行調節</td>
+              <td>〇</td>
+              <td>〇</td>
+            </tr>
+            <tr>
+              <td>座面前傾角度調節</td>
+              <td>×</td>
+              <td>×</td>
+            </tr>
+            <tr>
+              <td>ランバーサポート</td>
+              <td>上下</td>
+              <td>上下</td>
+            </tr>
+            <tr>
+              <td>リクライニング角度</td>
+              <td>90°-124°</td>
+              <td>90°-125°</td>
+            </tr>
+            <tr>
+              <td>座面素材</td>
+              <td>
+                メッシュ、<br />
+                モールドウレタン
+              </td>
+              <td>ウレタンフォーム</td>
+            </tr>
+            <tr>
+              <td>座面高さ</td>
+              <td>45~53.5cm</td>
+              <td>45~51cm</td>
+            </tr>
+            <tr>
+              <td>本体寸法</td>
+              <td>
+                幅66×奥行65<br />
+                x高さ<br />
+                114~128cm
+              </td>
+              <td>
+                幅64×奥行52<br />
+                x高さ<br />
+                96~104.5cm
+              </td>
+            </tr>
+            <tr>
+              <td>重量</td>
+              <td>18.5kg</td>
+              <td>20.7kg</td>
+            </tr>
+            <tr>
+              <td>耐荷重</td>
+              <td>136kg</td>
+              <td>150kg</td>
+            </tr>
+            <tr>
+              <td>保証年数</td>
+              <td>3年</td>
+              <td>5年</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <!-- chair-module4 -->
+      <div class="chair_buying_guide-product" id="tableHC">
+        <div>
+          <div class="chair_buying_guide-product-title"><span> HC Series</span></div>
+          <table class="chair_buying_guide-product-table">
+            <tr>
+              <td></td>
+              <td>
+                <div class="chair_buying_guide-product-table-header">
+                  <div class="chair_buying_guide-product-table-content">
+                    <div class="chair_buying_guide-product-table-img isHot">
+                      <img
+                        class="lazyload"
+                        src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/cbg-jp-20240926-HC2.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="table-product-title">HC2</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="chair_buying_guide-product-table-header">
+                  <div class="chair_buying_guide-product-table-content">
+                    <div class="chair_buying_guide-product-table-img">
+                      <img
+                        class="lazyload"
+                        src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/cbg-jp-20240926-HC1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="table-product-title">HC1</div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>カラー</td>
+              <td>ブラック</td>
+              <td>ブラック・ホワイト</td>
+            </tr>
+            <tr>
+              <td>ヘッドレスト</td>
+              <td>×</td>
+              <td>×</td>
+            </tr>
+            <tr>
+              <td>アームレスト</td>
+              <td>固定式</td>
+              <td>×</td>
+            </tr>
+            <tr>
+              <td>オットマン</td>
+              <td>×</td>
+              <td>×</td>
+            </tr>
+            <tr>
+              <td>座面奥行調節</td>
+              <td>×</td>
+              <td>×</td>
+            </tr>
+            <tr>
+              <td>座面前傾角度調節</td>
+              <td>×</td>
+              <td>×</td>
+            </tr>
+            <tr>
+              <td>ランバーサポート</td>
+              <td>×</td>
+              <td>×</td>
+            </tr>
+            <tr>
+              <td>リクライニング角度</td>
+              <td>90°-105°</td>
+              <td>90°-108°</td>
+            </tr>
+            <tr>
+              <td>座面素材</td>
+              <td>
+                PUレザー、<br />
+                ウレタンフォーム
+              </td>
+              <td>
+                PUレザー、<br />
+                ウレタンフォーム
+              </td>
+            </tr>
+            <tr>
+              <td>座面高さ</td>
+              <td>43~52.5cm</td>
+              <td>45~55cm</td>
+            </tr>
+            <tr>
+              <td>本体寸法</td>
+              <td>
+                幅63.5×奥行64<br />
+                x高さ<br />
+                82~91.5cm
+              </td>
+              <td>
+                幅65×奥行55<br />
+                x高さ<br />
+                81~91cm
+              </td>
+            </tr>
+            <tr>
+              <td>重量</td>
+              <td>12kg</td>
+              <td>12.3kg</td>
+            </tr>
+            <tr>
+              <td>耐荷重</td>
+              <td>125kg</td>
+              <td>109kg</td>
+            </tr>
+            <tr>
+              <td>保証年数</td>
+              <td>1年</td>
+              <td>1年</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
