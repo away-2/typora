@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>modal</title>
-    <style scoped>
+    <style>
       .chair_buying_guide-product .chair_buying_guide-product-table {
         position: relative;
-        overflow-x: auto;
+        /* overflow-x: scroll; */
         border-collapse: collapse;
         table-layout: fixed;
         width: 100%;
-        margin: 50px 0;
+        margin: 20px 0;
       }
-      .chair_buying_guide-product{
+      .chair_buying_guide-product {
         position: relative;
         width: 100%;
       }
@@ -21,8 +21,11 @@
       .chair_buying_guide-product .chair_buying_guide-product-title {
         position: relative;
         width: 100%;
+        /* 隐藏默认的滚动条样式 */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
       }
-      .chair_buying_guide-product .chair_buying_guide-product-title span{
+      .chair_buying_guide-product .chair_buying_guide-product-title span {
         font-size: 20px;
         font-weight: 800;
         font-family: "Zen-Kaku-Gothic-New-Medium";
@@ -30,9 +33,8 @@
         color: #26333a;
         text-align: center;
         position: sticky;
-        top: -50px;
-        left: 280px;
-        transform: translateX(-50%);
+        left: 50%;
+        z-index: 2;
       }
 
       .chair_buying_guide-product
@@ -41,7 +43,7 @@
         td:first-child {
         width: 140px !important;
         position: sticky;
-        left: -50px;
+        left: 0px;
         z-index: 1;
       }
 
@@ -92,7 +94,6 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 20px;
         justify-content: center;
         align-items: center;
       }
@@ -103,7 +104,7 @@
         .chair_buying_guide-product-table-img {
         position: relative;
         padding: 10px;
-        width: 150px;
+        width: 100px;
       }
 
       .chair_buying_guide-product
@@ -112,8 +113,8 @@
         .chair_buying_guide-product-table-content
         .chair_buying_guide-product-table-img
         img {
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
         border-radius: 8px;
         background: #f6f4f1;
       }
@@ -133,73 +134,142 @@
         .chair_buying_guide-product-table-img.isHot::after {
         content: "";
         position: absolute;
-        top: 20px;
-        right: 0px;
-        width: 60px;
-        height: 60px;
+        top: 13px;
+        right: -7px;
+        width: 30px;
+        height: 30px;
         background: url("https://s3.springbeetle.asia/asia/trantor/attachments/JP/nice-icon-20240822.png")
           no-repeat;
         background-size: cover;
-        /* z-index: 1; */
       }
       .chair_buying_guide-product
         .chair_buying_guide-product-table
         .chair_buying_guide-product-table-header
         .chair_buying_guide-product-table-content
-        .table-product-title{
-          font-family: Zen-Kaku-Gothic-New-Medium;
-          font-size: 16px;
-          font-weight: 700;
-          line-height: normal;
-        }
-        @media screen and (max-width: 1440px) {
-          .chair_buying_guide-product .chair_buying_guide-product-title span{
-            left: 50%;
-          }
-        }
-
-      @media screen and (max-width: 1024px) {
+        .table-product-title {
+        font-family: Zen-Kaku-Gothic-New-Medium;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: normal;
+      }
+      /* antd-modal-style */
+      .c-article-modal .ant-modal .ant-modal-body {
+        padding: 0;
+      }
+      @media screen and (max-width: 1440px) {
         .chair_buying_guide-product
-        .chair_buying_guide-product-table
-        .chair_buying_guide-product-table-header
-        .chair_buying_guide-product-table-content
-        .chair_buying_guide-product-table-img{
+          .chair_buying_guide-product-table
+          .chair_buying_guide-product-table-header
+          .chair_buying_guide-product-table-content
+          .chair_buying_guide-product-table-img {
           width: 100px;
         }
         .chair_buying_guide-product
-        .chair_buying_guide-product-table
-        .chair_buying_guide-product-table-header
-        .chair_buying_guide-product-table-content
-        .chair_buying_guide-product-table-img img{
+          .chair_buying_guide-product-table
+          .chair_buying_guide-product-table-header
+          .chair_buying_guide-product-table-content
+          .chair_buying_guide-product-table-img
+          img {
           width: 100px;
           height: 100px;
         }
 
         .chair_buying_guide-product
-        .chair_buying_guide-product-table
-        .chair_buying_guide-product-table-header
-        .chair_buying_guide-product-table-content
-        .chair_buying_guide-product-table-img.isHot::after {
+          .chair_buying_guide-product-table
+          .chair_buying_guide-product-table-header
+          .chair_buying_guide-product-table-content
+          .chair_buying_guide-product-table-img.isHot::after {
           width: 30px;
           height: 30px;
+          top: 13px;
+          right: -7px;
         }
 
         .chair_buying_guide-product .chair_buying_guide-product-table tr td {
           font-size: 12px;
           width: 120px;
         }
+      }
 
-        @media screen and (max-width: 768px) {
-          .chair_buying_guide-product .chair_buying_guide-product-table tr td {
-            font-size: 12px;
-            width: 120px;
-          }
+      @media screen and (max-width: 1024px) {
+        .chair_buying_guide-product
+          .chair_buying_guide-product-table
+          .chair_buying_guide-product-table-header
+          .chair_buying_guide-product-table-content
+          .chair_buying_guide-product-table-img {
+          width: 80px;
+        }
+        .chair_buying_guide-product
+          .chair_buying_guide-product-table
+          .chair_buying_guide-product-table-header
+          .chair_buying_guide-product-table-content
+          .chair_buying_guide-product-table-img
+          img {
+          width: 80px;
+          height: 80px;
+        }
+
+        .chair_buying_guide-product
+          .chair_buying_guide-product-table
+          .chair_buying_guide-product-table-header
+          .chair_buying_guide-product-table-content
+          .chair_buying_guide-product-table-img.isHot::after {
+          width: 25px;
+          height: 25px;
+          top: 13px;
+          right: -7px;
+        }
+
+        .chair_buying_guide-product .chair_buying_guide-product-table tr td {
+          font-size: 12px;
+          width: 120px;
         }
       }
       @media screen and (max-width: 768px) {
-        .chair_buying_guide-product .chair_buying_guide-product-title span{
-            left: 130px;
-          }
+        body {
+          overflow-x: hidden;
+        }
+        .chair_buying_guide-product > div {
+          /* 隐藏默认的滚动条样式 */
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+          overflow-x: auto;
+        }
+        .chair_buying_guide-product .chair_buying_guide-product-title span {
+          left: 50%;
+        }
+        .chair_buying_guide-product
+          .chair_buying_guide-product-table
+          .chair_buying_guide-product-table-header
+          .chair_buying_guide-product-table-content
+          .chair_buying_guide-product-table-img {
+          width: 80px;
+        }
+        .chair_buying_guide-product
+          .chair_buying_guide-product-table
+          .chair_buying_guide-product-table-header
+          .chair_buying_guide-product-table-content
+          .chair_buying_guide-product-table-img
+          img {
+          width: 80px;
+          height: 80px;
+        }
+
+        .chair_buying_guide-product
+          .chair_buying_guide-product-table
+          .chair_buying_guide-product-table-header
+          .chair_buying_guide-product-table-content
+          .chair_buying_guide-product-table-img.isHot::after {
+          width: 25px;
+          height: 25px;
+          top: 12px;
+          right: -7px;
+        }
+
+        .chair_buying_guide-product .chair_buying_guide-product-table tr td {
+          font-size: 12px;
+          width: 120px;
+        }
       }
     </style>
   </head>
@@ -208,9 +278,10 @@
     <div class="chair_buying_guide-container">
       <!-- chair-module1 -->
       <div class="chair_buying_guide-product" id="tableC7">
+        <div class="chair_buying_guide-product-title">
+          <span> C Series</span>
+        </div>
         <div>
-          <div class="chair_buying_guide-product-title">
-           <span> C Series</span></div>
           <table class="chair_buying_guide-product-table">
             <tr>
               <td></td>
@@ -248,7 +319,7 @@
                     <div class="chair_buying_guide-product-table-img">
                       <img
                         class="lazyload"
-                        src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/cbg-jp-C7Air.png"
+                        src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/20240905-135928.jpg"
                         alt=""
                       />
                     </div>
@@ -262,7 +333,7 @@
                     <div class="chair_buying_guide-product-table-img">
                       <img
                         class="lazyload"
-                        src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/cbg-jp-C7.png"
+                        src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/20240905-140207.jpg"
                         alt=""
                       />
                     </div>
@@ -452,8 +523,10 @@
       </div>
       <!-- chair-module2 -->
       <div class="chair_buying_guide-product" id="tableOC">
+        <div class="chair_buying_guide-product-title">
+          <span> OC Series</span>
+        </div>
         <div>
-          <div class="chair_buying_guide-product-title"><span> OC Series</span></div>
           <table class="chair_buying_guide-product-table">
             <tr>
               <td></td>
@@ -677,8 +750,10 @@
       </div>
       <!-- chair-module3 -->
       <div class="chair_buying_guide-product" id="tableBS">
+        <div class="chair_buying_guide-product-title">
+          <span>BS Series</span>
+        </div>
         <div>
-          <div class="chair_buying_guide-product-title"><span>BS Series</span> </div>
           <table class="chair_buying_guide-product-table">
             <tr>
               <td></td>
@@ -806,8 +881,10 @@
       </div>
       <!-- chair-module4 -->
       <div class="chair_buying_guide-product" id="tableHC">
+        <div class="chair_buying_guide-product-title">
+          <span> HC Series</span>
+        </div>
         <div>
-          <div class="chair_buying_guide-product-title"><span> HC Series</span></div>
           <table class="chair_buying_guide-product-table">
             <tr>
               <td></td>
