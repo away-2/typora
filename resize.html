@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        user-select: none;
+    }
+
+    .div {
+        border: 1px solid lightgray;
+        width: 400px;
+        height: 200px;
+        margin: 10px;
+        float: left;
+        position: relative;
+    }
+
+    .img1 {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 50%;
+    }
+
+    .img2 {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        right: 0;
+    }
+
+    .img1,
+    .img2 {
+        background-position: center center;
+        background-size: 400px 200px;
+        background-repeat: no-repeat;
+    }
+
+    .img1 {
+        background-position-x: 0;
+    }
+
+    .img2 {
+        background-position-x: 100%;
+    }
+
+    .bar {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -4px;
+        width: 8px;
+        background-color: #037FFF;
+        cursor: ew-resize;
+    }
+
+    .stop {
+        pointer-events: none;
+    }
+</style>
+
+<body>
+    <div class="div">
+        <div class="img1" style="background-image: url(./1.jpg);">
+            <div class="bar" data-flag="0"></div>
+        </div>
+        <div class="img2" style="background-image: url(./2.jpg);"></div>
+    </div>
+</body>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // 在这里放置代码，确保DOM加载完成后执行
+        document.querySelectorAll('.bar').forEach(function (element) {
+            element.addEventListener('mousedown', function () {
+                element.parentElement.classList.add('stop');
+                element.parentElement.nextElementSibling.classList.add('stop');
+                element.setAttribute('data-flag', '1');
+            });
+        });
+
+        document.querySelector('.div').addEventListener('mousemove', function (e) {
+            const temp = this.querySelector('.bar').getAttribute('data-flag');
+            if (temp === '1') {
+                const w = this.offsetWidth;
+                const x = e.offsetX;
+                const p = parseFloat((x / w).toFixed(2)) * 100;
+                this.querySelector('.img1').style.width = p + '%';
+                this.querySelector('.img2').style.left = p + '%';
+            }
+        });
+
+        document.addEventListener('mouseup', function () {
+            document.querySelectorAll('.img1, .img2').forEach(function (element) {
+                element.classList.remove('stop');
+            });
+            document.querySelectorAll('.bar').forEach(function (element) {
+                element.setAttribute('data-flag', '0');
+            });
+        });
+    });
+</script>
+
+</html>
