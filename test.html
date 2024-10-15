@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ip-sale {
+            position: relative;
+            max-width: 1384px;
+            margin: 48px auto 68px;
+        }
+
+        .ip-sale .ip-sale-box .ip-sale-box-item .ip-sale-box-item-code-box .ip-code-copy-success {
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all 0.3s;
+            width: max-content;
+            padding: 10px 16px;
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+                0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .ip-sale .ip-sale-title {
+            color: #26333a;
+            text-align: center;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-feature-settings: "ss01" on, "ss04" on, "ss18" on, "liga" off;
+            font-family: "SupremeLLSub-Black";
+            font-size: 52px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 120%;
+            /* 62.4px */
+            margin-bottom: 20px;
+        }
+
+        .ip-sale .ip-sale-subtitle {
+            color: rgba(38, 51, 58, 0.8);
+            text-align: center;
+            font-family: "Moderat-Medium";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%;
+            /* 24px */
+            margin-bottom: 40px;
+        }
+
+        .ip-sale .ip-sale-box {
+            position: relative;
+            display: flex;
+            max-width: 100%;
+            align-items: center;
+            justify-content: center;
+            gap: 70px;
+        }
+
+        .ip-sale .ip-sale-box .ip-sale-box-item {
+            background: url("https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7-family-20241015-bg.png") no-repeat;
+            background-size: 357px 154px;
+            width: 357px;
+        }
+
+        .ip-sale .ip-sale-box .ip-sale-box-item .ip-sale-box-item-off {
+            margin-top: 20px;
+            color: #043e1b;
+            text-align: center;
+            font-family: "Moderat-Bold";
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%;
+            /* 48px */
+            text-align: center;
+        }
+
+        .ip-sale .ip-sale-box .ip-sale-box-item .ip-sale-box-item-pcs {
+            color: #043e1b;
+            font-family: "Moderat-Medium";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%;
+            /* 21.6px */
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .ip-sale .ip-sale-box .ip-sale-box-item .ip-sale-box-item-code-box {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            margin-bottom: 15px;
+            height: 24px;
+        }
+
+        .ip-sale .ip-sale-box .ip-sale-box-item .ip-sale-box-item-code-box .ip-sale-box-item-code {
+            color: #26333a;
+            text-align: center;
+            font-family: "Moderat-Medium";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%;
+            /* 19.2px */
+        }
+
+        .ip-sale .ip-sale-box .ip-sale-box-item .ip-sale-box-item-code-box .ip-sale-box-item-icon {
+            width: 24px;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 1440px) {}
+
+        @media screen and (max-width: 1024px) {}
+
+        @media screen and (max-width: 768px) {}
+    </style>
+</head>
+
+<body>
+    <div class="ip-sale">
+        <div class="ip-sale-title">Buy More,Save More</div>
+        <div class="ip-sale-subtitle">Apply for C7 family</div>
+        <div class="ip-sale-box">
+            <div class="ip-sale-box-item">
+                <div class="ip-sale-box-item-off">3% Off</div>
+                <div class="ip-sale-box-item-pcs">3-5 Pcs</div>
+                <div class="ip-sale-box-item-code-box">
+                    <div class="ip-sale-box-item-code">Code: <span>C7F3OFF</span></div>
+                    <div class="ip-sale-box-item-icon" onclick="copyCode(this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M5.92719 5.41113H15.7614C16.0375 5.41113 16.2614 5.63499 16.2614 5.91113V6.0708H17.7614V5.91113C17.7614 4.80656 16.866 3.91113 15.7614 3.91113H5.92719C4.82262 3.91113 3.92719 4.80656 3.92719 5.91113V15.8228C3.92719 16.9273 4.82262 17.8228 5.92719 17.8228H7.08047V16.3228H5.92719C5.65104 16.3228 5.42719 16.0989 5.42719 15.8228V5.91113C5.42719 5.63499 5.65104 5.41113 5.92719 5.41113ZM19.7273 8.55664H9.89313C9.61698 8.55664 9.39313 8.7805 9.39313 9.05664V18.9683C9.39313 19.2444 9.61699 19.4683 9.89313 19.4683H19.7273C20.0035 19.4683 20.2273 19.2444 20.2273 18.9683V9.05664C20.2273 8.7805 20.0035 8.55664 19.7273 8.55664ZM9.89313 7.05664C8.78856 7.05664 7.89313 7.95207 7.89313 9.05664V18.9683C7.89313 20.0728 8.78856 20.9683 9.89313 20.9683H19.7273C20.8319 20.9683 21.7273 20.0728 21.7273 18.9683V9.05664C21.7273 7.95207 20.8319 7.05664 19.7273 7.05664H9.89313ZM14.8102 10.3403C15.2245 10.3403 15.5602 10.6761 15.5602 11.0903V13.2622H17.7326C18.1468 13.2622 18.4826 13.598 18.4826 14.0122C18.4826 14.4264 18.1468 14.7622 17.7326 14.7622H15.5602V16.9352C15.5602 17.3494 15.2245 17.6852 14.8102 17.6852C14.396 17.6852 14.0602 17.3494 14.0602 16.9352V14.7622H11.8878C11.4736 14.7622 11.1378 14.4264 11.1378 14.0122C11.1378 13.598 11.4736 13.2622 11.8878 13.2622H14.0602V11.0903C14.0602 10.6761 14.396 10.3403 14.8102 10.3403Z"
+                                fill="#26333A" />
+                        </svg>
+                    </div>
+                    <div class="ip-code-copy-success" style="display: none">
+                        Copy successfully!
+                    </div>
+                </div>
+            </div>
+            <div class="ip-sale-box-item">
+                <div class="ip-sale-box-item-off">5% Off</div>
+                <div class="ip-sale-box-item-pcs">6-10 Pcs</div>
+                <div class="ip-sale-box-item-code-box">
+                    <div class="ip-sale-box-item-code">Code: <span>C7F5OFF</span></div>
+                    <div class="ip-sale-box-item-icon" onclick="copyCode(this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M5.92719 5.41113H15.7614C16.0375 5.41113 16.2614 5.63499 16.2614 5.91113V6.0708H17.7614V5.91113C17.7614 4.80656 16.866 3.91113 15.7614 3.91113H5.92719C4.82262 3.91113 3.92719 4.80656 3.92719 5.91113V15.8228C3.92719 16.9273 4.82262 17.8228 5.92719 17.8228H7.08047V16.3228H5.92719C5.65104 16.3228 5.42719 16.0989 5.42719 15.8228V5.91113C5.42719 5.63499 5.65104 5.41113 5.92719 5.41113ZM19.7273 8.55664H9.89313C9.61698 8.55664 9.39313 8.7805 9.39313 9.05664V18.9683C9.39313 19.2444 9.61699 19.4683 9.89313 19.4683H19.7273C20.0035 19.4683 20.2273 19.2444 20.2273 18.9683V9.05664C20.2273 8.7805 20.0035 8.55664 19.7273 8.55664ZM9.89313 7.05664C8.78856 7.05664 7.89313 7.95207 7.89313 9.05664V18.9683C7.89313 20.0728 8.78856 20.9683 9.89313 20.9683H19.7273C20.8319 20.9683 21.7273 20.0728 21.7273 18.9683V9.05664C21.7273 7.95207 20.8319 7.05664 19.7273 7.05664H9.89313ZM14.8102 10.3403C15.2245 10.3403 15.5602 10.6761 15.5602 11.0903V13.2622H17.7326C18.1468 13.2622 18.4826 13.598 18.4826 14.0122C18.4826 14.4264 18.1468 14.7622 17.7326 14.7622H15.5602V16.9352C15.5602 17.3494 15.2245 17.6852 14.8102 17.6852C14.396 17.6852 14.0602 17.3494 14.0602 16.9352V14.7622H11.8878C11.4736 14.7622 11.1378 14.4264 11.1378 14.0122C11.1378 13.598 11.4736 13.2622 11.8878 13.2622H14.0602V11.0903C14.0602 10.6761 14.396 10.3403 14.8102 10.3403Z"
+                                fill="#26333A" />
+                        </svg>
+                    </div>
+                    <div class="ip-code-copy-success" style="display: none">
+                        Copy successfully!
+                    </div>
+                </div>
+            </div>
+            <div class="ip-sale-box-item">
+                <div class="ip-sale-box-item-off">10% Off</div>
+                <div class="ip-sale-box-item-pcs">11+ Pcs</div>
+                <div class="ip-sale-box-item-code-box">
+                    <div class="ip-sale-box-item-code">Code: <span>C7F10OFF</span></div>
+                    <div class="ip-sale-box-item-icon" onclick="copyCode(this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M5.92719 5.41113H15.7614C16.0375 5.41113 16.2614 5.63499 16.2614 5.91113V6.0708H17.7614V5.91113C17.7614 4.80656 16.866 3.91113 15.7614 3.91113H5.92719C4.82262 3.91113 3.92719 4.80656 3.92719 5.91113V15.8228C3.92719 16.9273 4.82262 17.8228 5.92719 17.8228H7.08047V16.3228H5.92719C5.65104 16.3228 5.42719 16.0989 5.42719 15.8228V5.91113C5.42719 5.63499 5.65104 5.41113 5.92719 5.41113ZM19.7273 8.55664H9.89313C9.61698 8.55664 9.39313 8.7805 9.39313 9.05664V18.9683C9.39313 19.2444 9.61699 19.4683 9.89313 19.4683H19.7273C20.0035 19.4683 20.2273 19.2444 20.2273 18.9683V9.05664C20.2273 8.7805 20.0035 8.55664 19.7273 8.55664ZM9.89313 7.05664C8.78856 7.05664 7.89313 7.95207 7.89313 9.05664V18.9683C7.89313 20.0728 8.78856 20.9683 9.89313 20.9683H19.7273C20.8319 20.9683 21.7273 20.0728 21.7273 18.9683V9.05664C21.7273 7.95207 20.8319 7.05664 19.7273 7.05664H9.89313ZM14.8102 10.3403C15.2245 10.3403 15.5602 10.6761 15.5602 11.0903V13.2622H17.7326C18.1468 13.2622 18.4826 13.598 18.4826 14.0122C18.4826 14.4264 18.1468 14.7622 17.7326 14.7622H15.5602V16.9352C15.5602 17.3494 15.2245 17.6852 14.8102 17.6852C14.396 17.6852 14.0602 17.3494 14.0602 16.9352V14.7622H11.8878C11.4736 14.7622 11.1378 14.4264 11.1378 14.0122C11.1378 13.598 11.4736 13.2622 11.8878 13.2622H14.0602V11.0903C14.0602 10.6761 14.396 10.3403 14.8102 10.3403Z"
+                                fill="#26333A" />
+                        </svg>
+                    </div>
+                    <div class="ip-code-copy-success" style="display: none">
+                        Copy successfully!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function copyCode(element) {
+        // 获取当前点击的svg所在的父级容器中的span内容
+        var code = element.parentElement.querySelector('span').textContent;
+
+        // 创建临时文本输入框
+        var tempInput = document.createElement('input');
+        tempInput.value = code;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+
+        // 显示复制成功的提示
+        var successMessage = element.parentElement.querySelector('.ip-code-copy-success');
+        successMessage.style.display = 'block';
+
+        // 1秒后隐藏提示信息
+        setTimeout(function () {
+            successMessage.style.display = 'none';
+        }, 1000);
+    }
+</script>
+
+</html>
