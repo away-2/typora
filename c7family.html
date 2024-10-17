@@ -1,0 +1,2911 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/swiper@8.4.7-min-us.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        box-sizing: border-box;
+      }
+
+      .ip-top {
+        max-width: 100%;
+      }
+
+      .ip-top .banner-pc {
+        display: block;
+        max-width: 100%;
+      }
+
+      .ip-top .banner-pc img {
+        width: 100% !important;
+      }
+
+      .ip-top .banner-mobile {
+        display: none;
+        max-width: 100%;
+      }
+
+      .ip-top .banner-mobile img {
+        width: 100% !important;
+      }
+
+      .ip-vfm {
+        padding: 64px 0;
+        background: #f6f4f1;
+      }
+
+      .ip-title {
+        color: #333;
+        text-align: center;
+        font-feature-settings: "clig" off, "liga" off;
+        font-family: "SupremeLLSub-Black";
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        text-transform: capitalize;
+      }
+
+      .ip-vfm .ip-vfm-contain-all {
+        padding: 0 60px;
+      }
+
+      .ip-vfm .ip-vfm-contain {
+        position: relative;
+        max-width: 1384px;
+        margin: 96px auto 16px;
+      }
+
+      .ip-vfm .ip-vfm-contain .ip-vfm-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 408px;
+        height: 260px;
+        margin-bottom: 80px;
+      }
+
+      .ip-vfm .ip-vfm-contain .ip-vfm-card > div {
+        position: relative;
+      }
+
+      .ip-vfm .ip-vfm-contain .ip-vfm-card > div .ip-vfm-card-text-show {
+        display: none;
+        color: #fff;
+        padding: 8px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 18;
+        min-height: 200px;
+        max-height: 300px;
+        background-color: rgba(37, 39, 42, 0.85);
+        word-break: break-word;
+        font-family: Moderat-Regular;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px;
+        overflow-y: auto;
+      }
+
+      .ip-vfm
+        .ip-vfm-contain
+        .ip-vfm-card
+        > div
+        .ip-vfm-card-text-show::-webkit-scrollbar {
+        display: none;
+      }
+
+      .ip-vfm .ip-vfm-contain .ip-vfm-card > div:hover .ip-vfm-card-text-show {
+        display: block;
+      }
+
+      .ip-vfm .ip-vfm-contain .ip-vfm-card .ip-vfm-card-logo {
+        display: flex;
+        align-items: center;
+        height: 80px;
+      }
+
+      .ip-vfm .ip-vfm-contain .ip-vfm-card .ip-vfm-card-text {
+        margin-top: 12px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: #999;
+        font-family: Moderat-Regular;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .ip-vfm .ip-vfm-contain .ip-vfm-card .ip-vfm-card-text .vfm-text-blue,
+      .ip-vfm
+        .ip-vfm-contain
+        .ip-vfm-card
+        .ip-vfm-card-text-show
+        .vfm-text-blue {
+        color: #017acb;
+      }
+
+      .ip-vfm .ip-vfm-contain .ip-vfm-card .ip-vfm-card-more {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 139px;
+        height: 36px;
+        color: #999;
+        font-family: Moderat-Regular;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border-radius: 40px;
+        border: 1px solid #999;
+      }
+
+      .ip-vfm .ip-vfm-contain .ip-vfm-card .ip-vfm-card-more:hover {
+        background: #26333a;
+        color: #fff;
+      }
+
+      .ip-vfm .ip-vfm-contain #ip-vfm-contain-swiper .swiper-slide {
+        display: flex;
+        justify-content: center;
+        height: auto;
+      }
+
+      .ip-vfm .ip-vfm-contain .swiper-button-box {
+        visibility: hidden;
+      }
+
+      .ip-vfm .ip-vfm-contain-all:hover .swiper-button-box {
+        visibility: visible;
+      }
+
+      .ip-vfm .ip-vfm-contain .swiper-button-next,
+      .ip-vfm .ip-vfm-contain .swiper-button-prev {
+        top: 45%;
+        transform: translateY(-50%);
+        width: 52px;
+        height: 52px;
+        border-radius: 40px;
+        border: 1px solid rgba(38, 51, 58, 0.1);
+        background: #000;
+      }
+
+      .ip-vfm .ip-vfm-contain .swiper-button-next svg {
+        transform: rotate(-180deg);
+      }
+
+      .ip-vfm .ip-vfm-contain .swiper-button-next:hover,
+      .ip-vfm .ip-vfm-contain .swiper-button-prev:hover {
+        background-color: #004df2;
+      }
+
+      .ip-vfm .ip-vfm-contain .swiper-button-next::after,
+      .ip-vfm .ip-vfm-contain .swiper-button-prev::after {
+        content: "";
+      }
+
+      .ip-vfm .ip-vfm-contain .swiper-button-next,
+      .ip-vfm .ip-vfm-contain .swiper-rtl .swiper-button-prev {
+        right: -68px;
+      }
+
+      .ip-vfm .ip-vfm-contain .swiper-button-prev,
+      .ip-vfm .ip-vfm-contain .swiper-rtl .swiper-button-next {
+        left: -68px;
+      }
+
+      .ip-vfm .ip-vfm-contain .swiper-pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: max-content;
+        height: 36px;
+        padding: 0 16px;
+        bottom: -52px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 40px;
+        background: #fff;
+      }
+
+      .ip-vfm .ip-vfm-contain .swiper-pagination-bullet {
+        background-color: transparent;
+        border: 1px solid #0d3147;
+        opacity: 1;
+      }
+
+      .ip-vfm .ip-vfm-contain .swiper-pagination-bullet-active {
+        background-color: #0d3147;
+      }
+
+      .ip-kols {
+        padding: 64px 0;
+      }
+
+      @keyframes animate {
+        0% {
+          transform: translateX(100%);
+        }
+
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      @keyframes animate2 {
+        0% {
+          transform: translateX(0);
+        }
+
+        100% {
+          transform: translateX(-200%);
+        }
+      }
+
+      .ip-scroll {
+        display: flex;
+        width: 100%;
+        margin-top: 64px;
+        overflow: hidden;
+      }
+
+      .ip-scroll .swiper-kols-slide {
+        display: flex;
+        animation: animate var(--db-scroll-timeout) linear infinite;
+        animation-delay: calc(var(--db-scroll-timeout) * -1);
+      }
+
+      .ip-scroll .swiper-kols-slide .swiper-kols-slide-contain {
+        margin-right: 38px;
+      }
+
+      .ip-scroll .swiper-kols-slide .swiper-kols-slide-contain iframe {
+        width: 769px;
+        height: 476px;
+      }
+      .ip-scroll .swiper-kols-slide .swiper-kols-slide-contain img {
+        width: 769px;
+        height: 476px;
+      }
+
+      .ip-scroll .swiper-kols-slide:nth-child(2) {
+        animation: animate2 var(--db-scroll-timeout) linear infinite;
+        animation-delay: calc(var(--db-scroll-timeout) / -2);
+      }
+
+      .ip-scroll:hover .swiper-kols-slide {
+        animation-play-state: paused;
+      }
+
+      .ip-scroll
+        .swiper-kols-slide
+        .swiper-kols-slide-contain
+        .swiper-kols-slide-contain-name {
+        margin: 20px 0;
+        color: #333;
+        font-family: Moderat-Bold;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 22px;
+      }
+
+      .ip-scroll
+        .swiper-kols-slide
+        .swiper-kols-slide-contain
+        .swiper-kols-slide-contain-name
+        span:last-child {
+        margin-left: 26px;
+        color: #999;
+        font-family: Moderat-Regular;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+      }
+
+      .ip-scroll
+        .swiper-kols-slide
+        .swiper-kols-slide-contain
+        .swiper-kols-slide-contain-text {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: #666;
+        font-family: Moderat-Regular;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+      }
+
+      @media screen and (max-width: 1440px) {
+        .ip-title {
+          font-size: 48px;
+        }
+
+        .ip-vfm .ip-vfm-contain {
+          max-width: 1000px;
+        }
+
+        .ip-vfm .ip-vfm-contain .ip-vfm-card {
+          width: 313px;
+        }
+
+        .ip-vfm .ip-vfm-contain .ip-vfm-card .ip-vfm-card-logo img {
+          max-width: 220px;
+        }
+
+        .ip-kols {
+          padding: 48px 0;
+        }
+
+        .ip-scroll {
+          margin-top: 48px;
+        }
+
+        .ip-scroll .swiper-kols-slide .swiper-kols-slide-contain {
+          margin-right: 34px;
+        }
+
+        .ip-scroll .swiper-kols-slide .swiper-kols-slide-contain iframe {
+          width: 586px;
+          height: 350px;
+        }
+        .ip-scroll .swiper-kols-slide .swiper-kols-slide-contain img {
+          width: 586px;
+          height: 350px;
+        }
+
+        .ip-vfm .ip-vfm-contain .ip-vfm-card .ip-vfm-card-text {
+          -webkit-line-clamp: 5;
+          margin-top: 9px;
+        }
+
+        .ip-vfm .ip-vfm-contain .ip-vfm-card > div .ip-vfm-card-text-show {
+          max-height: 260px;
+        }
+
+        .ip-vfm .ip-vfm-contain .ip-vfm-card .ip-vfm-card-more {
+          width: 130px;
+        }
+
+        .ip-vfm .ip-vfm-contain .swiper-button-next,
+        .ip-vfm .ip-vfm-contain .swiper-rtl .swiper-button-prev {
+          right: -52px;
+        }
+
+        .ip-vfm .ip-vfm-contain .swiper-button-prev,
+        .ip-vfm .ip-vfm-contain .swiper-rtl .swiper-button-next {
+          left: -52px;
+        }
+
+        .ip-vfm .ip-vfm-contain .swiper-pagination {
+          bottom: 0;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        .ip-title {
+          font-size: 40px;
+        }
+
+        .ip-vfm .ip-vfm-contain {
+          max-width: 768px;
+        }
+
+        .ip-vfm .ip-vfm-contain-all {
+          padding: 0;
+        }
+
+        .ip-vfm .ip-vfm-contain .ip-vfm-card .ip-vfm-card-text {
+          margin-top: 12px;
+          font-size: 14px;
+          -webkit-line-clamp: 4;
+        }
+
+        .ip-vfm .ip-vfm-contain .ip-vfm-card .ip-vfm-card-more {
+          width: 153px;
+        }
+
+        .ip-vfm .ip-vfm-contain .swiper-pagination {
+          bottom: -36px;
+        }
+
+        .ip-kols {
+          padding: 32px 0;
+        }
+
+        .ip-scroll {
+          margin-top: 32px;
+        }
+
+        .ip-scroll .swiper-kols-slide .swiper-kols-slide-contain {
+          margin-right: 24px;
+        }
+
+        .ip-scroll .swiper-kols-slide .swiper-kols-slide-contain iframe {
+          width: 404px;
+          height: 242px;
+        }
+        .ip-scroll .swiper-kols-slide .swiper-kols-slide-contain img {
+          width: 404px;
+          height: 242px;
+        }
+
+        .ip-vfm .ip-vfm-contain .swiper-button-box {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .ip-top .banner-pc {
+          display: none;
+        }
+
+        .ip-top .banner-mobile {
+          display: block;
+        }
+
+        .ip-vfm {
+          padding: 39px 20px;
+        }
+
+        .ip-title {
+          font-size: 24px;
+        }
+
+        .ip-vfm .ip-vfm-contain {
+          max-width: 100%;
+          margin: 48px 0 36px;
+        }
+
+        .ip-vfm .ip-vfm-contain .ip-vfm-card .ip-vfm-card-logo {
+          height: 70px;
+          justify-content: center;
+        }
+
+        .ip-vfm .ip-vfm-contain .ip-vfm-card .ip-vfm-card-text {
+          margin: 24px 0;
+          text-align: center;
+        }
+
+        .ip-vfm .ip-vfm-contain .ip-vfm-card {
+          width: 100%;
+          height: 248px;
+          padding: 0 20px 14px;
+          margin-bottom: 48px;
+          align-items: center;
+        }
+
+        .ip-vfm .ip-vfm-contain .swiper-pagination {
+          background-color: transparent;
+        }
+
+        .ip-scroll .swiper-kols-slide .swiper-kols-slide-contain iframe {
+          width: 245px;
+          height: 146px;
+        }
+
+        .ip-scroll .swiper-kols-slide .swiper-kols-slide-contain img {
+          width: 245px;
+          height: 146px;
+        }
+
+        .ip-vfm .ip-vfm-contain-all:hover .swiper-button-box {
+          display: none !important;
+        }
+
+        .ip-scroll
+          .swiper-kols-slide
+          .swiper-kols-slide-contain
+          .swiper-kols-slide-contain-name {
+          margin: 8px 0;
+          font-size: 14px;
+        }
+
+        .ip-scroll
+          .swiper-kols-slide
+          .swiper-kols-slide-contain
+          .swiper-kols-slide-contain-name
+          span:last-child {
+          margin-left: 16px;
+          font-size: 12px;
+        }
+
+        .ip-scroll
+          .swiper-kols-slide
+          .swiper-kols-slide-contain
+          .swiper-kols-slide-contain-text {
+          font-size: 14px;
+        }
+      }
+    </style>
+    <!-- ip-sale module -->
+    <style>
+      .ip-sale {
+        position: relative;
+        max-width: 1384px;
+        margin: 48px auto 68px;
+      }
+
+      .ip-sale
+        .ip-sale-box
+        .ip-sale-box-item
+        .ip-sale-box-item-code-box
+        .ip-code-copy-success {
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all 0.3s;
+        width: max-content;
+        padding: 10px 16px;
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+          0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .ip-sale .ip-sale-title {
+        color: #26333a;
+        text-align: center;
+        font-variant-numeric: lining-nums proportional-nums;
+        font-feature-settings: "ss01" on, "ss04" on, "ss18" on, "liga" off;
+        font-family: "SupremeLLSub-Black";
+        font-size: 52px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 120%;
+        /* 62.4px */
+        margin-bottom: 20px;
+      }
+
+      .ip-sale .ip-sale-subtitle {
+        color: rgba(38, 51, 58, 0.8);
+        text-align: center;
+        font-family: "Moderat-Medium";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        /* 24px */
+        margin-bottom: 40px;
+      }
+
+      .ip-sale .ip-sale-box {
+        position: relative;
+        display: flex;
+        max-width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 70px;
+      }
+
+      .ip-sale .ip-sale-box .ip-sale-box-item {
+        background: url("https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7-family-20241015-bg.png")
+          no-repeat;
+        background-size: 357px 154px;
+        width: 357px;
+      }
+
+      .ip-sale .ip-sale-box .ip-sale-box-item .ip-sale-box-item-off {
+        margin-top: 20px;
+        color: #043e1b;
+        text-align: center;
+        font-family: "Moderat-Bold";
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+        /* 48px */
+        text-align: center;
+      }
+
+      .ip-sale .ip-sale-box .ip-sale-box-item .ip-sale-box-item-pcs {
+        color: #043e1b;
+        font-family: "Moderat-Medium";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        /* 21.6px */
+        margin-bottom: 25px;
+        text-align: center;
+      }
+
+      .ip-sale .ip-sale-box .ip-sale-box-item .ip-sale-box-item-code-box {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        margin-bottom: 15px;
+      }
+
+      .ip-sale
+        .ip-sale-box
+        .ip-sale-box-item
+        .ip-sale-box-item-code-box
+        .ip-sale-box-item-code {
+        color: #26333a;
+        text-align: center;
+        font-family: "Moderat-Medium";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        /* 19.2px */
+      }
+
+      .ip-sale
+        .ip-sale-box
+        .ip-sale-box-item
+        .ip-sale-box-item-code-box
+        .ip-sale-box-item-icon {
+        width: 24px;
+        cursor: pointer;
+      }
+
+      @media screen and (max-width: 1440px) {
+        .ip-sale .ip-sale-title {
+          font-size: 42px;
+        }
+
+        .ip-sale .ip-sale-subtitle {
+          font-size: 18px;
+          margin-bottom: 40px;
+        }
+
+        .ip-sale .ip-sale-box {
+          gap: 47px;
+        }
+
+        .ip-sale .ip-sale-box .ip-sale-box-item {
+          background: url("https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7-family-20241015-bg.png")
+            no-repeat;
+          background-size: 302px 132px;
+          width: 302px;
+        }
+
+        .ip-sale .ip-sale-box .ip-sale-box-item .ip-sale-box-item-off {
+          margin-top: 16px;
+          font-size: 34px;
+        }
+
+        .ip-sale .ip-sale-box .ip-sale-box-item .ip-sale-box-item-pcs {
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+
+        .ip-sale .ip-sale-box .ip-sale-box-item .ip-sale-box-item-code-box {
+          margin-bottom: 15px;
+        }
+
+        .ip-sale
+          .ip-sale-box
+          .ip-sale-box-item
+          .ip-sale-box-item-code-box
+          .ip-sale-box-item-code {
+          font-size: 14px;
+        }
+
+        .ip-sale
+          .ip-sale-box
+          .ip-sale-box-item
+          .ip-sale-box-item-code-box
+          .ip-sale-box-item-icon {
+          width: 20px;
+          cursor: pointer;
+        }
+
+        .ip-sale
+          .ip-sale-box
+          .ip-sale-box-item
+          .ip-sale-box-item-code-box
+          .ip-sale-box-item-icon
+          svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        .ip-sale .ip-sale-title {
+          font-size: 32px;
+        }
+
+        .ip-sale .ip-sale-subtitle {
+          font-size: 16px;
+          margin-bottom: 28px;
+        }
+
+        .ip-sale .ip-sale-box {
+          gap: 24px;
+        }
+
+        .ip-sale .ip-sale-box .ip-sale-box-item {
+          background: url("https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7-family-20241015-bg.png")
+            no-repeat;
+          background-size: 240px 105px;
+          width: 240px;
+        }
+
+        .ip-sale .ip-sale-box .ip-sale-box-item .ip-sale-box-item-off {
+          margin-top: 10px;
+          font-size: 28px;
+        }
+
+        .ip-sale .ip-sale-box .ip-sale-box-item .ip-sale-box-item-pcs {
+          font-size: 16px;
+          margin-bottom: 15px;
+        }
+
+        .ip-sale .ip-sale-box .ip-sale-box-item .ip-sale-box-item-code-box {
+          margin-bottom: 15px;
+        }
+
+        .ip-sale
+          .ip-sale-box
+          .ip-sale-box-item
+          .ip-sale-box-item-code-box
+          .ip-sale-box-item-code {
+          font-size: 12px;
+        }
+
+        .ip-sale
+          .ip-sale-box
+          .ip-sale-box-item
+          .ip-sale-box-item-code-box
+          .ip-sale-box-item-icon {
+          width: 16px;
+        }
+
+        .ip-sale
+          .ip-sale-box
+          .ip-sale-box-item
+          .ip-sale-box-item-code-box
+          .ip-sale-box-item-icon
+          svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .ip-sale .ip-sale-title {
+          font-size: 28px;
+        }
+
+        .ip-sale .ip-sale-subtitle {
+          font-size: 16px;
+          margin-bottom: 20px;
+        }
+
+        .ip-sale .ip-sale-box {
+          gap: 14px;
+          flex-direction: column;
+        }
+
+        .ip-sale .ip-sale-box .ip-sale-box-item {
+          background: url("https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7-family-20241015-bg.png")
+            no-repeat;
+          background-size: 302px 132px;
+          width: 302px;
+        }
+
+        .ip-sale .ip-sale-box .ip-sale-box-item .ip-sale-box-item-off {
+          margin-top: 15px;
+          font-size: 34px;
+        }
+
+        .ip-sale .ip-sale-box .ip-sale-box-item .ip-sale-box-item-pcs {
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+
+        .ip-sale .ip-sale-box .ip-sale-box-item .ip-sale-box-item-code-box {
+          margin-bottom: 15px;
+        }
+
+        .ip-sale
+          .ip-sale-box
+          .ip-sale-box-item
+          .ip-sale-box-item-code-box
+          .ip-sale-box-item-code {
+          font-size: 14px;
+        }
+
+        .ip-sale
+          .ip-sale-box
+          .ip-sale-box-item
+          .ip-sale-box-item-code-box
+          .ip-sale-box-item-icon {
+          width: 20px;
+        }
+
+        .ip-sale
+          .ip-sale-box
+          .ip-sale-box-item
+          .ip-sale-box-item-code-box
+          .ip-sale-box-item-icon
+          svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    </style>
+    <!-- desk_container module  -->
+    <style>
+      .desk_container * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+        text-decoration: none;
+      }
+
+      .desk_container img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+      }
+
+      .desk_container p {
+        margin: 0;
+      }
+
+      .desk_container {
+        max-width: 1384px;
+        margin: 48px auto 68px;
+      }
+
+      .desk_container .desk_product .desk_product-title {
+        color: #26333a;
+        text-align: center;
+        font-variant-numeric: lining-nums proportional-nums;
+        font-feature-settings: "ss18" on, "ss04" on, "ss01" on, "liga" off;
+        font-family: "SupremeLLSub-Black";
+        font-size: 52px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 120%;
+        margin-bottom: 40px;
+      }
+
+      .desk_container .desk_product .desk_product-text {
+        margin: 16px auto 40px;
+        color: #26333a;
+        text-align: center;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-feature-settings: "ss04" on, "liga" off;
+        font-family: Moderat-Medium;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list {
+        display: flex;
+        position: relative;
+        width: 100%;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .desk_product-table-title {
+        width: 20%;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .desk_product-table-title
+        > div {
+        display: flex;
+        align-items: center;
+        height: 96px;
+        border-bottom: 1px solid rgba(38, 51, 58, 0.1);
+        gap: 12px;
+      }
+
+      .table-first-column-img {
+        width: 40px !important;
+        height: 40px !important;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .desk_product-table-title
+        > div
+        p {
+        display: flex;
+        align-items: center;
+        padding: 5px 0;
+        color: rgba(38, 51, 58, 0.8);
+        font-variant-numeric: lining-nums tabular-nums;
+        font-feature-settings: "ss03" on, "ss04" on, "liga" off;
+        font-family: Moderat-Bold;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .desk_product-table-title
+        .height-zw {
+        height: 420px;
+        border: none;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 104px;
+        background: #fdfcf5;
+        border-bottom: 1px solid rgba(38, 51, 58, 0.1);
+        z-index: 3;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide {
+        position: relative;
+        width: 80%;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        #swiperTable {
+        height: 100%;
+        overflow: clip;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul
+        .desk_ul-li {
+        width: 100%;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul-topLi {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 104px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: space-between; */
+        gap: 15px;
+        height: 420px;
+        background: #fdfcf5;
+        border-bottom: 1px solid rgba(38, 51, 58, 0.1);
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul-topLi
+        .desk_ul-topLi-img {
+        width: 240px;
+        height: 240px;
+        position: relative;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul-topLi
+        .desk_ul-topLi-img.isHot {
+        position: relative;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul-topLi
+        .desk_ul-topLi-img.isHot::after {
+        content: "HOT";
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        display: flex;
+        padding: 1px 4px;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 16px;
+        color: #fff;
+        font-family: Moderat-Bold;
+        font-size: 8px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 14px;
+        border-radius: 22px;
+        background: #004df2;
+        box-sizing: border-box;
+      }
+
+      .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-title {
+        color: #26333a;
+        text-align: center;
+        font-family: "Moderat-Bold";
+        font-variant-numeric: lining-nums proportional-nums;
+        font-feature-settings: "ss01" on, "ss04" on, "ss18" on, "liga" off;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 20px;
+      }
+
+      .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-price {
+        color: #333;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-feature-settings: "ss03" on, "ss04" on, "liga" off;
+        font-family: Moderat-Bold;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-price > div {
+        color: rgba(38, 51, 58, 0.5);
+        text-align: center;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-feature-settings: "ss03" on, "ss04" on, "liga" off;
+        font-family: Moderat-Medium;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        text-decoration: line-through;
+      }
+
+      .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-price > span {
+        color: rgba(38, 51, 58, 0.8);
+        font-variant-numeric: lining-nums tabular-nums;
+        font-feature-settings: "ss03" on, "ss04" on, "liga" off;
+        font-family: Moderat-Medium;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+      }
+
+      .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        padding: 18px 40px;
+        color: #fff;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-feature-settings: "ss03" on, "ss04" on, "liga" off;
+        font-family: Moderat-Bold;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+        border-radius: 40px;
+        background: #26333a;
+      }
+
+      .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-link svg {
+        margin-right: 6px;
+      }
+
+      .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-link:hover {
+        background-color: #004df2;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul-topLi
+        .desk_li-btnbox {
+        width: 100%;
+        margin: 11px 0 28px;
+        text-align: center;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul-topLi
+        .desk_li-btnbox
+        .desk_li-btn {
+        display: flex;
+        width: max-content;
+        height: 40px;
+        padding: 16px 24px;
+        margin: 0 auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+        border-radius: 40px;
+        border: 2.5px solid #26333a;
+        color: #26333a;
+        font-family: "Moderat-Bold";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0.7px;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul-topLi
+        .desk_li-btnbox
+        .desk_li-btn:hover {
+        background: #004df2;
+        color: #fff;
+        border: 2.5px solid #004df2;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul
+        .desk_ul-contextLi {
+        width: 100%;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul
+        .desk_ul-contextLi
+        > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 0;
+        height: 96px;
+        color: #26333a;
+        text-align: center;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-feature-settings: "ss03" on, "ss04" on, "liga" off;
+        font-family: Moderat-Regular;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        border-bottom: 1px solid rgba(38, 51, 58, 0.1);
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul
+        .desk_ul-contextLi
+        > div
+        > div {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul
+        .desk_ul-contextLi
+        > div
+        > div
+        span {
+        font-family: Moderat-Regular;
+        font-weight: 400;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul
+        .desk_ul-contextLi
+        > div
+        > div
+        span
+        strong {
+        font-family: Moderat-Bold;
+        font-weight: 700;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul
+        .desk_ul-contextLi
+        > div
+        p
+        svg {
+        vertical-align: middle;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul
+        .desk_ul-contextLi
+        > div
+        img {
+        max-width: 200px;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .swiperTable-pre-box {
+        position: absolute;
+        top: 0px;
+        left: calc(8.5% + 22px);
+        width: 44px;
+        height: 79.5%;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .swiperTable-pre-box
+        .swiperTable-pre {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 179px;
+        width: 44px;
+        height: 44px;
+        margin-top: 75px;
+        background: #ede9e4
+          url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_left.svg")
+          no-repeat center center;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 3;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .swiperTable-pre-box
+        .swiperTable-pre:hover {
+        background: #004df2
+          url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_left_hover.svg")
+          no-repeat center center;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .swiperTable-pre-box
+        .swiperTable-pre.swiper-button-disabled:hover {
+        background: #ede9e4
+          url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_left.svg")
+          no-repeat center center;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .swiperTable-next-box {
+        position: absolute;
+        top: 0px;
+        right: -26px;
+        width: 44px;
+        height: 79.5%;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .swiperTable-next-box
+        .swiperTable-next {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 179px;
+        width: 44px;
+        height: 44px;
+        margin-top: 75px;
+        background: #ede9e4
+          url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_right.svg")
+          no-repeat center center;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 2;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .swiperTable-next-box
+        .swiperTable-next:hover {
+        background: #004df2
+          url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_right_hover.svg")
+          no-repeat center center;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .swiperTable-next-box
+        .swiperTable-next.swiper-button-disabled:hover {
+        background: #ede9e4
+          url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_right.svg")
+          no-repeat center center;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .swiper-button-disabled {
+        opacity: 0.5;
+        cursor: not-allowed !important;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .c_table_theme {
+        height: 112px !important;
+      }
+
+      @supports not (overflow: clip) {
+        html,
+        body {
+          overflow-x: hidden;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide
+          #swiperTable {
+          overflow: visible;
+          clip-path: inset(0);
+        }
+      }
+
+      @media screen and (max-width: 1440px) {
+        .desk_container {
+          max-width: 1000px;
+          margin: 80px auto;
+        }
+
+        .desk_container .desk_product .desk_product-title {
+          font-size: 42px;
+        }
+
+        .desk_container .desk_product .desk_product-text {
+          font-size: 20px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide
+          .desk_ul-topLi
+          .desk_ul-topLi-img {
+          width: 180px;
+          height: 180px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide
+          .desk_ul-topLi,
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .desk_product-table-title
+          .height-zw {
+          height: 413px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .swiperTable-pre-box {
+          left: calc(6% + 22px);
+          height: 82.5%;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .swiperTable-next-box {
+          right: -35px;
+          height: 82.5%;
+        }
+
+        .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-title {
+          font-size: 20px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .desk_product-table-title
+          > div
+          p,
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide
+          .desk_ul
+          .desk_ul-contextLi
+          > div {
+          font-size: 14px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide
+          .desk_ul
+          .desk_ul-contextLi
+          > div
+          img {
+          max-width: 160px;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        .desk_container {
+          max-width: 768px;
+          margin: 60px auto;
+        }
+
+        .desk_container .desk_product .desk_product-title {
+          font-size: 32px;
+          margin-bottom: 28px;
+        }
+
+        .desk_container .desk_product .desk_product-text {
+          margin-bottom: 24px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .desk_product-table-title {
+          width: 12.5%;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide {
+          width: 87.5%;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide
+          .desk_ul-topLi
+          .desk_ul-topLi-img {
+          width: 140px;
+          height: 140px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .swiperTable-pre-box {
+          left: calc(5% + 22px);
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide
+          .desk_ul-topLi,
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .desk_product-table-title
+          .height-zw {
+          top: 92px;
+          height: 328px;
+          padding-bottom: 24px;
+        }
+
+        .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-title {
+          font-size: 20px;
+        }
+
+        .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-price {
+          font-size: 20px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_ul-topLi
+          .desk_ul-topLi-price
+          > span {
+          font-size: 14px;
+        }
+
+        .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-price > div,
+        .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-link {
+          font-size: 14px;
+        }
+
+        .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-link svg {
+          width: 20px;
+          height: 20px;
+        }
+
+        .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-link {
+          height: 40px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide
+          .desk_ul
+          .desk_ul-contextLi
+          > div,
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .desk_product-table-title
+          > div {
+          height: 60px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .desk_product-table-title
+          > div
+          p,
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide
+          .desk_ul
+          .desk_ul-contextLi
+          > div {
+          font-size: 14px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .swiperTable-pre-box
+          .swiperTable-pre,
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .swiperTable-next-box
+          .swiperTable-next {
+          top: 163px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .c_table_theme {
+          height: 84px !important;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide
+          .desk_ul
+          .desk_ul-contextLi
+          > div
+          img {
+          max-width: 128px;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .desk_container {
+          padding: 0 20px;
+          margin: 42px 0 48px;
+        }
+
+        .table-first-column-img {
+          width: 34px !important;
+          height: 34px !important;
+        }
+
+        .desk_container .desk_product .desk_product-title {
+          text-align: center;
+          font-size: 28px;
+          margin-bottom: 20px;
+        }
+
+        .desk_container .desk_product .desk_product-text {
+          max-width: 100%;
+          margin: 12px 0 24px;
+          font-size: 18px;
+          text-align: left;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .desk_product-table-title {
+          width: 28.65%;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide {
+          width: 71.35%;
+          z-index: 99;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide
+          .desk_ul
+          .desk_ul-contextLi
+          > div
+          svg {
+          width: 16px;
+          height: 16px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide
+          .desk_ul
+          .desk_ul-contextLi
+          > div
+          svg.yes_svg {
+          width: 12px;
+          height: 8px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide
+          .desk_ul-topLi,
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .desk_product-table-title
+          .height-zw {
+          height: 328px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide
+          .swiper-slide {
+          width: 168px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .swiperTable-pre-box {
+          left: calc(20% + 22px);
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .swiperTable-pre-box
+          .swiperTable-pre {
+          z-index: 100;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .swiperTable-next-box {
+          right: 0px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .swiperTable-next-box
+          .swiperTable-next {
+          z-index: 99;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .c_table_theme {
+          height: 84px !important;
+        }
+
+        .desk_product-table {
+          position: relative;
+          margin-right: -20px;
+        }
+
+        .desk_product-table .chair_buying_guide-product-mobile-shadow {
+          display: none;
+          position: absolute;
+          height: 100%;
+          width: calc(100% + 20px);
+          margin-left: -20px;
+        }
+
+        .desk_product-table
+          .chair_buying_guide-product-mobile-shadow
+          .chair_buying_guide-product-mobile-shadow-main {
+          position: sticky;
+          width: 100%;
+          height: 328px;
+          top: 92px;
+          background: #fdfcf5;
+          box-shadow: 0px 4px 10px 0px rgba(38, 51, 58, 0.15);
+          z-index: 1;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="ip-top">
+      <div class="banner-pc">
+        <img
+          src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7-family-20241015-banner-pc.jpg"
+        />
+      </div>
+      <div class="banner-mobile">
+        <img
+          src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7-family-20241015-banner-mobile.png"
+        />
+      </div>
+    </div>
+
+    <div class="desk_container">
+      <div class="desk_product">
+        <div class="desk_product-title">
+          Which Ergonomic Chair is right for you?
+        </div>
+        <div class="desk_product-table">
+          <div class="chair_buying_guide-product-mobile-shadow">
+            <div class="chair_buying_guide-product-mobile-shadow-main"></div>
+          </div>
+          <ul class="desk_product-table-list">
+            <li class="desk_product-table-title">
+              <div class="height-zw"></div>
+              <div>
+                <img
+                  class="table-first-column-img"
+                  src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/US-20241016-icon1.png"
+                  alt=""
+                />
+                <p>Seat Option</p>
+              </div>
+              <div>
+                <img
+                  class="table-first-column-img"
+                  src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/US-20241016-icon2.png"
+                  alt=""
+                />
+                <p>Backrest Height Adjustment</p>
+              </div>
+              <div>
+                <img
+                  class="table-first-column-img"
+                  src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/US-20241016-icon3.png"
+                  alt=""
+                />
+                <p>Lumbar Support</p>
+              </div>
+              <div>
+                <img
+                  class="table-first-column-img"
+                  src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/US-20241016-icon4.png"
+                  alt=""
+                />
+                <p>Recommended height</p>
+              </div>
+              <div>
+                <img
+                  class="table-first-column-img"
+                  src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/US-20241016-icon5.png"
+                  alt=""
+                />
+                <p>Max Weight Capacity</p>
+              </div>
+              <div class="c_table_theme">
+                <img
+                  class="table-first-column-img"
+                  src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/US-20241016-icon6.png"
+                  alt=""
+                />
+                <p>Armrest</p>
+              </div>
+              <div class="c_table_theme">
+                <img
+                  class="table-first-column-img"
+                  src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/US-20241016-icon7.png"
+                  alt=""
+                />
+                <p>Forward Seat Tilt</p>
+              </div>
+              <div>
+                <img
+                  class="table-first-column-img"
+                  src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/US-20241016-icon8.png"
+                  alt=""
+                />
+                <p>Seat Height Adjustment Range</p>
+              </div>
+              <div>
+                <img
+                  class="table-first-column-img"
+                  src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/US-20241016-icon9.png"
+                  alt=""
+                />
+                <p>Back Recline</p>
+              </div>
+              <div>
+                <img
+                  class="table-first-column-img"
+                  src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/US-20241016-icon10.png"
+                  alt=""
+                />
+                <p>Headrest Adjustment</p>
+              </div>
+              <div>
+                <img
+                  class="table-first-column-img"
+                  src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/US-20241016-icon11.png"
+                  alt=""
+                />
+                <p>Adjustable Seat Depth</p>
+              </div>
+              <div>
+                <img
+                  class="table-first-column-img"
+                  src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/US-20241016-icon12.png"
+                  alt=""
+                />
+                <p>Footrest</p>
+              </div>
+              <div>
+                <img
+                  class="table-first-column-img"
+                  src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/US-20241016-icon13.png"
+                  alt=""
+                />
+                <p>Seat Dimensions</p>
+              </div>
+              <div>
+                <img
+                  class="table-first-column-img"
+                  src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/US-20241016-icon14.png"
+                  alt=""
+                />
+                <p>Base Material</p>
+              </div>
+              <div>
+                <img
+                  class="table-first-column-img"
+                  src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/US-20241016-icon15.png"
+                  alt=""
+                />
+                <p>Warranty</p>
+              </div>
+            </li>
+            <div class="swiperTable-pre-box">
+              <div class="swiperTable-pre"></div>
+            </div>
+            <li class="chair_buyerguide">
+              <div class="swiper" id="swiperTable">
+                <div class="swiper-wrapper"></div>
+              </div>
+            </li>
+            <div class="swiperTable-next-box">
+              <div class="swiperTable-next"></div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="ip-sale">
+      <div class="ip-sale-title">Buy More,Save More</div>
+      <div class="ip-sale-subtitle">Apply for C7 family</div>
+      <div class="ip-sale-box">
+        <div class="ip-sale-box-item">
+          <div class="ip-sale-box-item-off">3% Off</div>
+          <div class="ip-sale-box-item-pcs">3-5 Pcs</div>
+          <div class="ip-sale-box-item-code-box">
+            <div class="ip-sale-box-item-code">Code: <span>C7F3OFF</span></div>
+            <div class="ip-sale-box-item-icon" onclick="copyCode(this)">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M5.92719 5.41113H15.7614C16.0375 5.41113 16.2614 5.63499 16.2614 5.91113V6.0708H17.7614V5.91113C17.7614 4.80656 16.866 3.91113 15.7614 3.91113H5.92719C4.82262 3.91113 3.92719 4.80656 3.92719 5.91113V15.8228C3.92719 16.9273 4.82262 17.8228 5.92719 17.8228H7.08047V16.3228H5.92719C5.65104 16.3228 5.42719 16.0989 5.42719 15.8228V5.91113C5.42719 5.63499 5.65104 5.41113 5.92719 5.41113ZM19.7273 8.55664H9.89313C9.61698 8.55664 9.39313 8.7805 9.39313 9.05664V18.9683C9.39313 19.2444 9.61699 19.4683 9.89313 19.4683H19.7273C20.0035 19.4683 20.2273 19.2444 20.2273 18.9683V9.05664C20.2273 8.7805 20.0035 8.55664 19.7273 8.55664ZM9.89313 7.05664C8.78856 7.05664 7.89313 7.95207 7.89313 9.05664V18.9683C7.89313 20.0728 8.78856 20.9683 9.89313 20.9683H19.7273C20.8319 20.9683 21.7273 20.0728 21.7273 18.9683V9.05664C21.7273 7.95207 20.8319 7.05664 19.7273 7.05664H9.89313ZM14.8102 10.3403C15.2245 10.3403 15.5602 10.6761 15.5602 11.0903V13.2622H17.7326C18.1468 13.2622 18.4826 13.598 18.4826 14.0122C18.4826 14.4264 18.1468 14.7622 17.7326 14.7622H15.5602V16.9352C15.5602 17.3494 15.2245 17.6852 14.8102 17.6852C14.396 17.6852 14.0602 17.3494 14.0602 16.9352V14.7622H11.8878C11.4736 14.7622 11.1378 14.4264 11.1378 14.0122C11.1378 13.598 11.4736 13.2622 11.8878 13.2622H14.0602V11.0903C14.0602 10.6761 14.396 10.3403 14.8102 10.3403Z"
+                  fill="#26333A"
+                />
+              </svg>
+            </div>
+            <div class="ip-code-copy-success" style="display: none">
+              Copy successfully!
+            </div>
+          </div>
+        </div>
+        <div class="ip-sale-box-item">
+          <div class="ip-sale-box-item-off">5% Off</div>
+          <div class="ip-sale-box-item-pcs">6-10 Pcs</div>
+          <div class="ip-sale-box-item-code-box">
+            <div class="ip-sale-box-item-code">Code: <span>C7F5OFF</span></div>
+            <div class="ip-sale-box-item-icon" onclick="copyCode(this)">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M5.92719 5.41113H15.7614C16.0375 5.41113 16.2614 5.63499 16.2614 5.91113V6.0708H17.7614V5.91113C17.7614 4.80656 16.866 3.91113 15.7614 3.91113H5.92719C4.82262 3.91113 3.92719 4.80656 3.92719 5.91113V15.8228C3.92719 16.9273 4.82262 17.8228 5.92719 17.8228H7.08047V16.3228H5.92719C5.65104 16.3228 5.42719 16.0989 5.42719 15.8228V5.91113C5.42719 5.63499 5.65104 5.41113 5.92719 5.41113ZM19.7273 8.55664H9.89313C9.61698 8.55664 9.39313 8.7805 9.39313 9.05664V18.9683C9.39313 19.2444 9.61699 19.4683 9.89313 19.4683H19.7273C20.0035 19.4683 20.2273 19.2444 20.2273 18.9683V9.05664C20.2273 8.7805 20.0035 8.55664 19.7273 8.55664ZM9.89313 7.05664C8.78856 7.05664 7.89313 7.95207 7.89313 9.05664V18.9683C7.89313 20.0728 8.78856 20.9683 9.89313 20.9683H19.7273C20.8319 20.9683 21.7273 20.0728 21.7273 18.9683V9.05664C21.7273 7.95207 20.8319 7.05664 19.7273 7.05664H9.89313ZM14.8102 10.3403C15.2245 10.3403 15.5602 10.6761 15.5602 11.0903V13.2622H17.7326C18.1468 13.2622 18.4826 13.598 18.4826 14.0122C18.4826 14.4264 18.1468 14.7622 17.7326 14.7622H15.5602V16.9352C15.5602 17.3494 15.2245 17.6852 14.8102 17.6852C14.396 17.6852 14.0602 17.3494 14.0602 16.9352V14.7622H11.8878C11.4736 14.7622 11.1378 14.4264 11.1378 14.0122C11.1378 13.598 11.4736 13.2622 11.8878 13.2622H14.0602V11.0903C14.0602 10.6761 14.396 10.3403 14.8102 10.3403Z"
+                  fill="#26333A"
+                />
+              </svg>
+            </div>
+            <div class="ip-code-copy-success" style="display: none">
+              Copy successfully!
+            </div>
+          </div>
+        </div>
+        <div class="ip-sale-box-item">
+          <div class="ip-sale-box-item-off">10% Off</div>
+          <div class="ip-sale-box-item-pcs">11+ Pcs</div>
+          <div class="ip-sale-box-item-code-box">
+            <div class="ip-sale-box-item-code">Code: <span>C7F10OFF</span></div>
+            <div class="ip-sale-box-item-icon" onclick="copyCode(this)">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M5.92719 5.41113H15.7614C16.0375 5.41113 16.2614 5.63499 16.2614 5.91113V6.0708H17.7614V5.91113C17.7614 4.80656 16.866 3.91113 15.7614 3.91113H5.92719C4.82262 3.91113 3.92719 4.80656 3.92719 5.91113V15.8228C3.92719 16.9273 4.82262 17.8228 5.92719 17.8228H7.08047V16.3228H5.92719C5.65104 16.3228 5.42719 16.0989 5.42719 15.8228V5.91113C5.42719 5.63499 5.65104 5.41113 5.92719 5.41113ZM19.7273 8.55664H9.89313C9.61698 8.55664 9.39313 8.7805 9.39313 9.05664V18.9683C9.39313 19.2444 9.61699 19.4683 9.89313 19.4683H19.7273C20.0035 19.4683 20.2273 19.2444 20.2273 18.9683V9.05664C20.2273 8.7805 20.0035 8.55664 19.7273 8.55664ZM9.89313 7.05664C8.78856 7.05664 7.89313 7.95207 7.89313 9.05664V18.9683C7.89313 20.0728 8.78856 20.9683 9.89313 20.9683H19.7273C20.8319 20.9683 21.7273 20.0728 21.7273 18.9683V9.05664C21.7273 7.95207 20.8319 7.05664 19.7273 7.05664H9.89313ZM14.8102 10.3403C15.2245 10.3403 15.5602 10.6761 15.5602 11.0903V13.2622H17.7326C18.1468 13.2622 18.4826 13.598 18.4826 14.0122C18.4826 14.4264 18.1468 14.7622 17.7326 14.7622H15.5602V16.9352C15.5602 17.3494 15.2245 17.6852 14.8102 17.6852C14.396 17.6852 14.0602 17.3494 14.0602 16.9352V14.7622H11.8878C11.4736 14.7622 11.1378 14.4264 11.1378 14.0122C11.1378 13.598 11.4736 13.2622 11.8878 13.2622H14.0602V11.0903C14.0602 10.6761 14.396 10.3403 14.8102 10.3403Z"
+                  fill="#26333A"
+                />
+              </svg>
+            </div>
+            <div class="ip-code-copy-success" style="display: none">
+              Copy successfully!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ip-vfm">
+      <div class="ip-title">Voice From Media</div>
+      <div class="ip-vfm-contain-all">
+        <div class="ip-vfm-contain">
+          <div class="swiper" id="ip-vfm-contain-swiper">
+            <div class="swiper-wrapper"></div>
+          </div>
+          <div class="swiper-button-box">
+            <div class="swiper-button-prev swiper-button-prev-vfm">
+              <svg
+                width="18"
+                height="16"
+                viewBox="0 0 18 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.25195 15.1685L1.41661 8.33312L8.25195 1.49925"
+                  stroke="white"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M1.94092 8.47046L17.9409 8.47046"
+                  stroke="white"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </div>
+            <div class="swiper-button-next swiper-button-next-vfm">
+              <svg
+                width="18"
+                height="16"
+                viewBox="0 0 18 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.25195 15.1685L1.41661 8.33312L8.25195 1.49925"
+                  stroke="white"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M1.94092 8.47046L17.9409 8.47046"
+                  stroke="white"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="swiper-pagination ip-vfm-contain-pagination"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ip-kols">
+      <div class="ip-title">Voice From Media</div>
+
+      <div class="swiper-kols ip-scroll" style="--db-scroll-timeout: 100s">
+        <div class="swiper-kols-slide">
+          <div class="swiper-kols-slide-contain">
+            <iframe
+              src="https://www.youtube.com/embed/8rofPMY54Ko?si=ECP0hdsyg3F0zptn"
+              frameborder="0"
+              allowfullscreen=""
+            ></iframe>
+            <!-- <img
+              class="lazyload"
+              src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/us-Inflience-Program-kol-1.jpg"
+              alt=""
+            /> -->
+            <div class="swiper-kols-slide-contain-name">
+              <span>Linus</span>
+              <span>Verified review</span>
+            </div>
+            <div class="swiper-kols-slide-contain-text">
+              "It's hard to find an office or gaming chair that combines
+              comfort, support, and durability. The three pillars of booty care.
+              Thankfully, the C7 Premium Ergonomic Chair fits the bill!"
+            </div>
+          </div>
+          <div class="swiper-kols-slide-contain">
+            <iframe
+              src="https://www.youtube.com/embed/Jjqqdyx4o78?si=ciBlzNDk0tW-OFHw"
+              frameborder="0"
+              allowfullscreen=""
+            ></iframe>
+            <!-- <img
+              class="lazyload"
+              src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/us-Inflience-Program-kol-2.jpg"
+              alt=""
+            /> -->
+            <div class="swiper-kols-slide-contain-name">
+              <span>The Lore Lodge</span>
+              <span>Verified review</span>
+            </div>
+            <div class="swiper-kols-slide-contain-text">
+              "I'm somebody who has a bad back from years of contact sports that
+              I did not properly do physical therapy for and this thing is the
+              most comfortable office chair I've ever had by far."
+            </div>
+          </div>
+          <div class="swiper-kols-slide-contain">
+            <iframe
+              src="https://www.youtube.com/embed/a7MO9A0Oi9Q?si=ghzJaQr1780ZFP2g"
+              frameborder="0"
+              allowfullscreen=""
+            ></iframe>
+            <!-- <img
+              class="lazyload"
+              src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/us-Inflience-Program-kol-3.jpg"
+              alt=""
+            /> -->
+            <div class="swiper-kols-slide-contain-name">
+              <span>Jeff Geerling</span>
+              <span>Verified review</span>
+            </div>
+            <div class="swiper-kols-slide-contain-text">
+              “Luckily, FlexiSpot has the perfect desk chair for me. After
+              destroying my back lifting these servers, at least the C7 chair
+              can help me sit with the proper form. Like literally, the first
+              time I sat in the chair, I actually fell asleep. It's that
+              comfortable.”
+            </div>
+          </div>
+          <div class="swiper-kols-slide-contain">
+            <iframe
+              src="https://www.youtube.com/embed/J6mhI3U0RHs?si=dYJV394zmcXGyzAf"
+              frameborder="0"
+              allowfullscreen=""
+            ></iframe>
+            <!-- <img
+              class="lazyload"
+              src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/us-Inflience-Program-kol-4.jpg"
+              alt=""
+            /> -->
+            <div class="swiper-kols-slide-contain-name">
+              <span>Shaun Boyd Made This</span>
+              <span>Verified review</span>
+            </div>
+            <div class="swiper-kols-slide-contain-text">
+              "I'm on my feet most of the day out in the shop, working and
+              cutting all my stuff but I also spend an equal amount of time
+              sitting at my computer, since my videos aren't going to edit
+              themselves. So, I need an ergonomic chair like FlexiSpot C7."
+            </div>
+          </div>
+          <div class="swiper-kols-slide-contain">
+            <!-- <iframe
+              src="https://www.youtube.com/embed/FZpeTtPX4TY?si=-x-Bk6NJlcNpG-98"
+              frameborder="0"
+              allowfullscreen=""
+            ></iframe> -->
+            <a
+              href="https://www.youtube.com/watch?v=FZpeTtPX4TY"
+              target="_blank"
+            >
+              <img
+                class="lazyload"
+                src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/US-20241017-bottom-img.jpg"
+                alt=""
+            /></a>
+            <div class="swiper-kols-slide-contain-name">
+              <span>Will Hall</span>
+              <span>Verified review</span>
+            </div>
+            <div class="swiper-kols-slide-contain-text">
+              "This is definitely a lot more comfortable than my old chair. C7
+              comes featured with an adjustable headrest self adaptive back
+              support a breathable meshback, a 4D adjustable armrest as well as
+              adjustable height forward seat tilt 90° to 128° recline as well as
+              biometric back support."
+            </div>
+          </div>
+          <div class="swiper-kols-slide-contain">
+            <iframe
+              src="https://www.youtube.com/embed/gPr1moiCOh4?si=zB9qzD_YSTSn0NAZ"
+              frameborder="0"
+              allowfullscreen=""
+            ></iframe>
+            <!-- <img
+              class="lazyload"
+              src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/us-Inflience-Program-kol-6.jpg"
+              alt=""
+            /> -->
+            <div class="swiper-kols-slide-contain-name">
+              <span>Dzeeff</span>
+              <span>Verified review</span>
+            </div>
+            <div class="swiper-kols-slide-contain-text">
+              " If you like me, spend a lot of time in your office chair opening
+              Master duel packs then treat yourself to FlexiSpot's C7 Premium
+              Ergonomic Chair. It is the best chair that I've ever used and it's
+              the perfect upgrade for students, gamers or anyone that works from
+              home like me."
+            </div>
+          </div>
+        </div>
+        <div class="swiper-kols-slide">
+          <div class="swiper-kols-slide-contain">
+            <iframe
+              src="https://www.youtube.com/embed/8rofPMY54Ko?si=ECP0hdsyg3F0zptn"
+              frameborder="0"
+              allowfullscreen=""
+            ></iframe>
+            <!-- <img
+              class="lazyload"
+              src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/us-Inflience-Program-kol-1.jpg"
+              alt=""
+            /> -->
+            <div class="swiper-kols-slide-contain-name">
+              <span>Linus</span>
+              <span>Verified review</span>
+            </div>
+            <div class="swiper-kols-slide-contain-text">
+              "It's hard to find an office or gaming chair that combines
+              comfort, support, and durability. The three pillars of booty care.
+              Thankfully, the C7 Premium Ergonomic Chair fits the bill!"
+            </div>
+          </div>
+          <div class="swiper-kols-slide-contain">
+            <iframe
+              src="https://www.youtube.com/embed/Jjqqdyx4o78?si=ciBlzNDk0tW-OFHw"
+              frameborder="0"
+              allowfullscreen=""
+            ></iframe>
+            <!-- <img
+              class="lazyload"
+              src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/us-Inflience-Program-kol-2.jpg"
+              alt=""
+            /> -->
+            <div class="swiper-kols-slide-contain-name">
+              <span>The Lore Lodge</span>
+              <span>Verified review</span>
+            </div>
+            <div class="swiper-kols-slide-contain-text">
+              "I'm somebody who has a bad back from years of contact sports that
+              I did not properly do physical therapy for and this thing is the
+              most comfortable office chair I've ever had by far."
+            </div>
+          </div>
+          <div class="swiper-kols-slide-contain">
+            <iframe
+              src="https://www.youtube.com/embed/a7MO9A0Oi9Q?si=ghzJaQr1780ZFP2g"
+              frameborder="0"
+              allowfullscreen=""
+            ></iframe>
+            <!-- <img
+              class="lazyload"
+              src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/us-Inflience-Program-kol-3.jpg"
+              alt=""
+            /> -->
+            <div class="swiper-kols-slide-contain-name">
+              <span>Jeff Geerling</span>
+              <span>Verified review</span>
+            </div>
+            <div class="swiper-kols-slide-contain-text">
+              “Luckily, FlexiSpot has the perfect desk chair for me. After
+              destroying my back lifting these servers, at least the C7 chair
+              can help me sit with the proper form. Like literally, the first
+              time I sat in the chair, I actually fell asleep. It's that
+              comfortable.”
+            </div>
+          </div>
+          <div class="swiper-kols-slide-contain">
+            <iframe
+              src="https://www.youtube.com/embed/J6mhI3U0RHs?si=dYJV394zmcXGyzAf"
+              frameborder="0"
+              allowfullscreen=""
+            ></iframe>
+            <!-- <img
+              class="lazyload"
+              src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/us-Inflience-Program-kol-4.jpg"
+              alt=""
+            /> -->
+            <div class="swiper-kols-slide-contain-name">
+              <span>Shaun Boyd Made This</span>
+              <span>Verified review</span>
+            </div>
+            <div class="swiper-kols-slide-contain-text">
+              "I'm on my feet most of the day out in the shop, working and
+              cutting all my stuff but I also spend an equal amount of time
+              sitting at my computer, since my videos aren't going to edit
+              themselves. So, I need an ergonomic chair like FlexiSpot C7."
+            </div>
+          </div>
+          <div class="swiper-kols-slide-contain">
+            <!-- <iframe
+              src="https://www.youtube.com/embed/FZpeTtPX4TY?si=-x-Bk6NJlcNpG-98"
+              frameborder="0"
+              allowfullscreen=""
+            ></iframe> -->
+            <a
+              href="https://www.youtube.com/watch?v=FZpeTtPX4TY"
+              target="_blank"
+            >
+              <img
+                class="lazyload"
+                src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/US-20241017-bottom-img.jpg"
+                alt=""
+            /></a>
+            <div class="swiper-kols-slide-contain-name">
+              <span>Will Hall</span>
+              <span>Verified review</span>
+            </div>
+            <div class="swiper-kols-slide-contain-text">
+              "This is definitely a lot more comfortable than my old chair. C7
+              comes featured with an adjustable headrest self adaptive back
+              support a breathable meshback, a 4D adjustable armrest as well as
+              adjustable height forward seat tilt 90° to 128° recline as well as
+              biometric back support."
+            </div>
+          </div>
+          <div class="swiper-kols-slide-contain">
+            <iframe
+              src="https://www.youtube.com/embed/gPr1moiCOh4?si=zB9qzD_YSTSn0NAZ"
+              frameborder="0"
+              allowfullscreen=""
+            ></iframe>
+            <!-- <img
+              class="lazyload"
+              src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/us-Inflience-Program-kol-6.jpg"
+              alt=""
+            /> -->
+            <div class="swiper-kols-slide-contain-name">
+              <span>Dzeeff</span>
+              <span>Verified review</span>
+            </div>
+            <div class="swiper-kols-slide-contain-text">
+              " If you like me, spend a lot of time in your office chair opening
+              Master duel packs then treat yourself to FlexiSpot's C7 Premium
+              Ergonomic Chair. It is the best chair that I've ever used and it's
+              the perfect upgrade for students, gamers or anyone that works from
+              home like me."
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    function loadScript(url, callback) {
+      document.getElementById("") && document.getElementById("").remove()
+      var script = document.createElement("script")
+      script.type = "text/javascript"
+      script.async = "async"
+      script.src = url
+      script.id = ""
+      var head = document.head || document.getElementsByTagName("head")[0]
+      head.appendChild(script)
+      if (script.readyState) {
+        script.onreadystatechange = function () {
+          if (
+            script.readyState == "complete" ||
+            script.readyState == "loaded"
+          ) {
+            script.onreadystatechange = null
+            callback()
+          }
+        }
+      } else {
+        script.onload = function () {
+          callback()
+        }
+      }
+    }
+    // ip-sale js start
+    function copyCode(element) {
+      // 获取当前点击的svg所在的父级容器中的span内容
+      var code = element.parentElement.querySelector("span").textContent
+
+      // 创建临时文本输入框
+      var tempInput = document.createElement("input")
+      tempInput.value = code
+      document.body.appendChild(tempInput)
+      tempInput.select()
+      document.execCommand("copy")
+      document.body.removeChild(tempInput)
+
+      // 显示复制成功的提示
+      var successMessage = element.parentElement.querySelector(
+        ".ip-code-copy-success"
+      )
+      successMessage.style.display = "block"
+
+      // 1秒后隐藏提示信息
+      setTimeout(function () {
+        successMessage.style.display = "none"
+      }, 1000)
+    }
+    // ip-sale js end
+    loadScript(
+      "https://staticprod.site.flexispot.com/dev/trantor/attachments/jquery-3.6.0.min.js",
+      function () {
+        loadScript(
+          "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/swiper@8.4.7-min-us.js",
+          function () {
+            function isMobile() {
+              return window.innerWidth <= 768
+            }
+
+            // desk_container js start
+            const swiperTable = document.querySelector(
+                "#swiperTable .swiper-wrapper"
+              ),
+              swiperTableList = [
+                {
+                  imgUrl:
+                    "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7-family-20241015-C7ProMax.png",
+                  productTitle: "C7 Pro Max",
+                  // productSku: "C7 Pro Max",
+                  productSku: "E7 New", //dev
+                  href: "https://www.flexispot.com/flexispot-premium-ergo-office-chair-c7-pro-max",
+                  productPrice: "???",
+                  SeatOption: `<span style="color: #004DF2;">DuPont Bounce<br/> Technology Mesh</span>`,
+                  HeightAdjustment: `<span style="color: #004DF2;">10-Position</span>`,
+                  LumbarSupport: "Adjustable Self-adaptive<br/> Dynamic",
+                  Recommendedheight: `5'9"-6'11"`,
+                  MaxWeight: `<span style="color: #004DF2;">330lbs</span>`,
+                  Armrest: `<span style="color: #004DF2;">5D</span>`,
+                  ForwardSeat: "X",
+                  SeatHeightAdjustment: "√",
+                  BackRecline: "93°-135°",
+                  HeadrestAdjustment: "4.72'',25°",
+                  AdjustableDepth: `16.96''-19.88''`,
+                  Footrest: "√",
+                  SeatDimensions: `18.9" W x 16.5''-18.5" D`,
+                  BaseMaterial: `<span style="color: #004DF2;">Aluminum Alloy Base</span>`,
+                  Warranty: "5 years",
+                },
+                {
+                  imgUrl:
+                    "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/US-20241017-C7Max.png",
+                  productTitle: "C7 Max",
+                  // productSku: "C7 Max",
+                  productSku: "ESD101-2", //dev
+                  href: "https://www.flexispot.com/flexispot-professional-ergonomic-office-chair-c7m",
+                  productPrice: "???",
+                  SeatOption: `<span style="color: #004DF2;">Foam Cushion with 0.2''<br/> Latex Layer</span>`,
+                  HeightAdjustment: "5-Position",
+                  LumbarSupport: "Adjustable Self-adaptive<br/> Dynamic",
+                  Recommendedheight: `5'7"-6'9"`,
+                  MaxWeight: "300lbs",
+                  Armrest: `<span style="color: #004DF2;">5D</span>`,
+                  ForwardSeat: "X",
+                  SeatHeightAdjustment: "√",
+                  BackRecline: "93°-135°",
+                  HeadrestAdjustment: "2.36'',135°",
+                  AdjustableDepth: `18.5''-20.9''`,
+                  Footrest: "√",
+                  SeatDimensions: `20" W x 15.7''-17.3" D`,
+                  BaseMaterial: "Nylon Base",
+                  Warranty: "5 years",
+                },
+                {
+                  imgUrl:
+                    "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7-family-20241015-C7.png",
+                  productTitle: "C7",
+                  // productSku: "C7 Series",
+                  productSku: "C7 M", //dev
+                  href: "https://www.flexispot.com/flexispot-best-ergonomic-office-chair-c7",
+                  productPrice: "???",
+                  SeatOption: "Foam&Mesh",
+                  HeightAdjustment: "X",
+                  LumbarSupport: "Adjustable Self-adaptive<br/> Dynamic",
+                  Recommendedheight: `5'10"-6'10"`,
+                  MaxWeight: "300lbs",
+                  Armrest: "3D",
+                  ForwardSeat: `<span style="color: #004DF2;">√</span>`,
+                  SeatHeightAdjustment: "√",
+                  BackRecline: "93°-128°",
+                  HeadrestAdjustment: "2.36''，45°",
+                  AdjustableDepth: `19.3''-22.6''`,
+                  Footrest: "√",
+                  SeatDimensions: `<span style="color: #004DF2;">21" W x 17''-20" D</span>`,
+                  BaseMaterial: "Nylon Base",
+                  Warranty: `<span style="color: #004DF2;">10 years</span>`,
+                },
+              ]
+
+            let table_innerWidth = window.innerWidth
+            const bbc_data = [
+              {
+                // ids: [446000, 392001, 202002],
+                ids: [922001, 446007, 1130001], //dev
+                inStock: true,
+                origin: "US",
+                pageSize: 24,
+              },
+            ]
+
+            let product_data = []
+            const requestOptions = {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(bbc_data),
+            }
+            fetch(
+              "/api/trantor/flow/bbc_item_FrontItemSearchFlow",
+              requestOptions
+            )
+              .then((res) => {
+                return res.json()
+              })
+              .then((data) => {
+                if (data.success) {
+                  const resList = data.res.data
+
+                  for (let i = 0; i < resList.length; i++) {
+                    for (let j = 0; j < swiperTableList.length; j++) {
+                      if (
+                        swiperTableList[j].productSku === resList[i].itemCode
+                      ) {
+                        swiperTableList[j].productPrice =
+                          "$" + resList[i].salePrc
+                      }
+                    }
+                  }
+
+                  swiperTableList.forEach((item) => {
+                    swiperTable.innerHTML += `
+                            <div class="swiper-slide">
+                              <div class="desk_ul-topLi">
+                                <div class="desk_ul-topLi-img ${
+                                  item.hot ? "isHot" : ""
+                                }">
+                                  <img
+                                    class="lazyload"
+                                    data-src="${item.imgUrl}"
+                                    width="160"
+                                    height="160"
+                                  />
+                                  </div>
+                                  <div class='desk_ul-topLi-title'>${
+                                    item.productTitle
+                                  }</div>
+                                  <a href="${
+                                    item.href
+                                  }" target="_blank" class='desk_ul-topLi-link'>Buy</a>
+                                  <div class='desk_ul-topLi-price'>${
+                                    item.productPrice
+                                  } </div>
+                              </div>
+                                    <ul class="desk_ul">
+                                      <li class="desk_ul-li">
+                                        <div class="desk_ul-contextLi">
+                                          <div>${item.SeatOption}</div>
+                                          <div>${item.HeightAdjustment}</div>
+                                          <div>${item.LumbarSupport}</div>
+                                          <div>${item.Recommendedheight}</div>
+                                          <div>${item.MaxWeight}</div>
+                                          <div class="c_table_theme">${
+                                            item.Armrest
+                                          }</div>
+                                          <div class="c_table_theme">${
+                                            item.ForwardSeat
+                                          }</div>
+                                          <div>${
+                                            item.SeatHeightAdjustment
+                                          }</div>
+                                          <div>${item.BackRecline}</div>
+                                          <div>${item.HeadrestAdjustment}</div>
+                                          <div>${item.AdjustableDepth}</div>
+                                          <div>${item.Footrest}</div>
+                                          <div>${item.SeatDimensions}</div>
+                                          <div>${item.BaseMaterial}</div>
+                                          <div>${item.Warranty}</div>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                            `
+                  })
+
+                  if (table_innerWidth <= 768) {
+                    table_innerWidth_intersectionFn()
+                  }
+                  height_zw_fn()
+                } else {
+                  console.error(data.msg)
+                }
+                new Swiper("#swiperTable", {
+                  slidesPerView: 3,
+                  slidesPerGroup: 1,
+                  navigation: {
+                    nextEl: ".swiperTable-next",
+                    prevEl: ".swiperTable-pre",
+                  },
+                  breakpoints: {
+                    1025: {
+                      slidesPerView: 3,
+                    },
+                    769: {
+                      slidesPerView: 2,
+                    },
+                    0: {
+                      slidesPerView: 1,
+                    },
+                  },
+                })
+              })
+              .catch((err) => {
+                console.error(err)
+              })
+
+            function height_zw_fn() {
+              document.querySelector(
+                ".desk_product-table .desk_product-table-list .height-zw"
+              ).style.height =
+                document.querySelectorAll(
+                  ".desk_product-table .chair_buyerguide .desk_ul-topLi"
+                )[0].offsetHeight + "px"
+            }
+            window.addEventListener("resize", () => {
+              height_zw_fn()
+            })
+
+            const intersectionFn = function (ele, cb, cb2) {
+              new IntersectionObserver(
+                (entries) => {
+                  entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                      cb2 && cb2()
+                    } else {
+                      cb && cb()
+                    }
+                  })
+                },
+                {
+                  threshold: [1],
+                }
+              ).observe(ele)
+            }
+
+            const chair_buyerguide_product_text = document.querySelector(
+                ".desk_container .desk_product .desk_product-text"
+              ),
+              chair_buying_guide_product_mobile_shadow = document.querySelector(
+                ".desk_product-table .chair_buying_guide-product-mobile-shadow"
+              )
+            function table_innerWidth_intersectionFn() {
+              if (table_innerWidth <= 768) {
+                intersectionFn(
+                  chair_buyerguide_product_text,
+                  () => {
+                    chair_buying_guide_product_mobile_shadow.style.display =
+                      "block"
+                  },
+                  () => {
+                    chair_buying_guide_product_mobile_shadow.style.display =
+                      "none"
+                  }
+                )
+                chair_buying_guide_product_mobile_shadow.children[0].style.height =
+                  document.querySelectorAll(
+                    ".desk_product-table .chair_buyerguide .desk_ul-topLi"
+                  )[0].offsetHeight + "px"
+              }
+            }
+            window.addEventListener("resize", () => {
+              table_innerWidth = window.innerWidth
+              table_innerWidth_intersectionFn()
+            })
+            // desk_container js end
+
+            // Voice From Media
+            const vfm_data = [
+              {
+                logo: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7-family-20241015-md-img2.png",
+                text: `“With its sleek, minimalist design, this is a chair for any home office, boasting a self-adaptive lumbar support and plenty of comfort controls.“`,
+                href: "https://www.techradar.com/best/best-office-chairs",
+              },
+              {
+                logo: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7-family-20241015-md-img3.png",
+                text: `“Like the OC14 before it, the C7 has an extremely comfortable headrest. The mesh back is very comfortable as well. It's breathable but feels strong enough to support my weight without ripping.”`,
+                href: "https://www.cnet.com/home/kitchen-and-household/best-office-chairs/",
+              },
+              { // 暂定
+                logo: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7-family-20241015-md-img9.png",
+                text: `“The FlexiSpot C7, named the best big and tall office chair by Forbes, features extensive adjustments, self-adjusting lumbar support, and a 300-pound capacity—perfect for ergonomic comfort in any workspace. ”`,
+                href: "https://www.ign.com/articles/flexispot-c7-ergonomic-office-chair-review",
+              },
+              {
+                logo: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7-family-20241015-md-img4.png",
+                text: `The FlexiSpot C7 is a solid chair... Compared to straight-up gaming chairs, its sedate styling means it won't be out of place in even the most conservative of office environments.”`,
+                href: "https://www.ign.com/articles/flexispot-c7-ergonomic-office-chair-review",
+              },
+              {
+                logo: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7-family-20241015-md-img5.png",
+                text: `“The C7 with footrest is very impressive, extremely competitively priced at $300, very comfortable, and very customizable. It easily competes with chairs that cost two or three times as much.”`,
+                href: "https://medium.com/@Cory_91072/flexispot-c7-chair-with-footrest-review-26c3fc49b3bf",
+              },
+              {
+                logo: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7-family-20241015-md-img6.png",
+                text: `“The FlexiSpot Ergonomic Office Chair C7 is solidly comfortable. The adjustments dial this into your body shape. A half a star off because the chair arms could be a little tighter and still be as adjustable.“`,
+                href: "https://photofocus.com/reviews/review-flexispot-c7-ergonomic-office-chair/",
+              },
+              {
+                logo: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7-family-20241015-md-img7.png",
+                text: `“I genuinely did not expect to be a big fan of the FlexiSpot C7. The words "ergonomic" and "office chair" are not the most appealing combination, after all. However, not only does the chair look the part, but your bones and muscles will thank you, too.”`,
+                href: "https://www.techspot.com/review/2757-flexispot-c7-ergonomic-chair/",
+              },
+              {
+                logo: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7-family-20241015-md-img8.png",
+                text: `“There are many adjustments available. The chair height, seat forward/backward, backrest tilt with tension adjustment and locking, seat tilt adjustment, and armrest position and rotation. ”`,
+                href: "https://the-gadgeteer.com/2023/09/01/flexispot-c7-premium-ergonomic-office-chair-review-how-much-is-comfort-worth-to-you/",
+              },
+            ]
+
+            vfm_data.forEach((item) => {
+              $(
+                ".ip-vfm .ip-vfm-contain #ip-vfm-contain-swiper .swiper-wrapper"
+              ).append(`
+                <div class="swiper-slide">
+                  <div class="ip-vfm-card">
+                    <div>
+                      <div class="ip-vfm-card-logo">
+                        <img class="lazyload" data-src="${item.logo}" alt="" />
+                      </div>
+                      <div class="ip-vfm-card-text">${item.text}</div>
+
+                      <div class="ip-vfm-card-text-show">${item.text}</div>
+                    </div>
+                    <a href="${item.href}" target="_blank" class="ip-vfm-card-more">Read More</a>
+                  </div>
+                </div>
+                `)
+            })
+
+            new Swiper("#ip-vfm-contain-swiper", {
+              navigation: {
+                nextEl: ".swiper-button-next-vfm",
+                prevEl: ".swiper-button-prev-vfm",
+              },
+              pagination: {
+                el: ".ip-vfm-contain-pagination",
+                clickable: true,
+              },
+              breakpoints: {
+                1441: {
+                  spaceBetween: 80,
+                  slidesPerView: 3,
+                  slidesPerGroup: 3,
+                  grid: {
+                    fill: "row",
+                    rows: 2,
+                  },
+                },
+                1025: {
+                  spaceBetween: 30,
+                  slidesPerView: 3,
+                  slidesPerGroup: 3,
+                  grid: {
+                    fill: "row",
+                    rows: 2,
+                  },
+                },
+                769: {
+                  spaceBetween: 24,
+                  slidesPerView: 2,
+                  slidesPerGroup: 2,
+                  grid: {
+                    fill: "row",
+                    rows: 2,
+                  },
+                },
+                0: {
+                  spaceBetween: 0,
+                  slidesPerView: 1,
+                  slidesPerGroup: 1,
+                  grid: {
+                    fill: "row",
+                    rows: 2,
+                  },
+                },
+              },
+            })
+          }
+        )
+      }
+    )
+  </script>
+</html>
