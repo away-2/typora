@@ -2,211 +2,351 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- showMore-module -->
     <style>
-        .ip-sale {
-            position: relative;
+        .buying_guide-container * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .buying_guide-container img {
+            max-width: 100%;
+        }
+
+        /* FAQ */
+        .buying_guide-container .buying_guide-qs {
+            width: 100%;
+        }
+
+        .buying_guide-container .buying_guide-qs .buying_guide-box {
             max-width: 1384px;
-            margin: 48px auto 68px;
+            margin: 0 auto;
+            padding: 100px 0;
         }
 
-        .ip-sale .ip-sale-box .ip-sale-box-item .ip-sale-box-item-code-box .ip-code-copy-success {
-            position: absolute;
-            top: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            transition: all 0.3s;
-            width: max-content;
-            padding: 10px 16px;
-            background: #fff;
-            border-radius: 4px;
-            box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
-                0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
-        }
-
-        .ip-sale .ip-sale-title {
+        .buying_guide-container .buying_guide-qs .buying_guide-box .buying_guide-title {
+            width: 100%;
             color: #26333a;
             text-align: center;
             font-variant-numeric: lining-nums proportional-nums;
             font-feature-settings: "ss01" on, "ss04" on, "ss18" on, "liga" off;
             font-family: "SupremeLLSub-Black";
-            font-size: 52px;
+            font-size: 40px;
             font-style: normal;
             font-weight: 900;
             line-height: 120%;
-            /* 62.4px */
-            margin-bottom: 20px;
         }
 
-        .ip-sale .ip-sale-subtitle {
-            color: rgba(38, 51, 58, 0.8);
-            text-align: center;
-            font-family: "Moderat-Medium";
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 120%;
-            /* 24px */
-            margin-bottom: 40px;
-        }
-
-        .ip-sale .ip-sale-box {
-            position: relative;
-            display: flex;
-            max-width: 100%;
-            align-items: center;
-            justify-content: center;
-            gap: 70px;
-        }
-
-        .ip-sale .ip-sale-box .ip-sale-box-item {
-            background: url("https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7-family-20241015-bg.png") no-repeat;
-            background-size: 357px 154px;
-            width: 357px;
-        }
-
-        .ip-sale .ip-sale-box .ip-sale-box-item .ip-sale-box-item-off {
-            margin-top: 20px;
-            color: #043e1b;
-            text-align: center;
-            font-family: "Moderat-Bold";
-            font-size: 40px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 120%;
-            /* 48px */
-            text-align: center;
-        }
-
-        .ip-sale .ip-sale-box .ip-sale-box-item .ip-sale-box-item-pcs {
-            color: #043e1b;
-            font-family: "Moderat-Medium";
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 120%;
-            /* 21.6px */
-            margin-bottom: 25px;
-            text-align: center;
-        }
-
-        .ip-sale .ip-sale-box .ip-sale-box-item .ip-sale-box-item-code-box {
-            display: flex;
-            position: relative;
-            justify-content: center;
-            align-items: center;
-            gap: 4px;
-            margin-bottom: 15px;
-            height: 24px;
-        }
-
-        .ip-sale .ip-sale-box .ip-sale-box-item .ip-sale-box-item-code-box .ip-sale-box-item-code {
-            color: #26333a;
-            text-align: center;
-            font-family: "Moderat-Medium";
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 120%;
-            /* 19.2px */
-        }
-
-        .ip-sale .ip-sale-box .ip-sale-box-item .ip-sale-box-item-code-box .ip-sale-box-item-icon {
-            width: 24px;
+        .buying_guide-container .buying_guide-qs .buying_guide-box .buying_guide-question-item {
+            border-bottom: 1px solid #f1f1f1;
+            padding: 32px 66.5px;
+            box-sizing: border-box;
             cursor: pointer;
         }
 
-        @media screen and (max-width: 1440px) {}
+        .buying_guide-container .buying_guide-qs .buying_guide-box .buying_guide-question-item .buying_guide-question {
+            color: #26333a;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-feature-settings: "ss02" on;
+            font-family: "Moderat-Bold";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+        }
 
-        @media screen and (max-width: 1024px) {}
+        .buying_guide-container .buying_guide-qs .buying_guide-box .buying_guide-content-hidden {
+            color: #26333a;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-feature-settings: "ss02" on;
+            font-family: "Moderat-Bold";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+        }
 
-        @media screen and (max-width: 768px) {}
+        .buying_guide-container .buying_guide-qs .buying_guide-box .buying_guide-content-hidden .content-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 20px;
+        }
+
+        .buying_guide-container .buying_guide-qs .buying_guide-box .buying_guide-content-hidden .content-item {
+            padding: 32px 66.5px;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .buying_guide-container .buying_guide-qs .buying_guide-box .buying_guide-question-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .buying_guide-container .buying_guide-qs .buying_guide-box .buying_guide-question-item .buying_guide-qs-show_more-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* 隐藏内容时设置为高度 0，带有过渡动画 */
+        .buying_guide-content-hidden {
+            overflow: hidden;
+            max-height: 0;
+            transition: all 0.8s ease-in-out;
+        }
+
+        /* 展开时的状态 */
+        .show-content {
+            max-height: 1000px;
+        }
+
+        .buying_guide-qs-show_more-icon {
+            transition: transform 0.5s ease;
+        }
+
+        .rotated {
+            transform: rotate(180deg);
+        }
+
+        @media screen and (max-width: 1440px) {
+
+            /* FAQ */
+            .buying_guide-container .buying_guide-qs .buying_guide-box {
+                max-width: 1000px;
+                padding: 80px 0;
+            }
+
+            .buying_guide-container .buying_guide-qs .buying_guide-box .buying_guide-title {
+                font-size: 34px;
+            }
+
+            .buying_guide-container .buying_guide-qs .buying_guide-box .buying_guide-question-item {
+                padding: 32px 24.5px;
+            }
+
+            .buying_guide-container .buying_guide-qs .buying_guide-box .buying_guide-content-hidden {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 120%;
+            }
+
+            .buying_guide-container .buying_guide-qs .buying_guide-box .buying_guide-content-hidden .content-item {
+                display: flex;
+                column-gap: 48px;
+                padding: 32px 24.5px;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+
+            /* FAQ */
+            .buying_guide-container .buying_guide-qs .buying_guide-box {
+                max-width: 768px;
+                padding: 60px 0;
+            }
+
+            .buying_guide-container .buying_guide-qs .buying_guide-box .buying_guide-title {
+                margin-bottom: 8px;
+                font-size: 26px;
+            }
+
+            .buying_guide-container .buying_guide-qs .buying_guide-box .buying_guide-question-item {
+                padding: 20px 23.5px;
+            }
+
+            .buying_guide-container .buying_guide-qs .buying_guide-box .buying_guide-question-item .buying_guide-question {
+                font-size: 16px;
+            }
+
+            .buying_guide-container .buying_guide-qs .buying_guide-box .buying_guide-content-hidden {
+                font-size: 12px;
+            }
+
+            .buying_guide-container .buying_guide-qs .buying_guide-box .buying_guide-content-hidden .content-item {
+                column-gap: 36px;
+            }
+
+            .buying_guide-container .buying_guide-qs .buying_guide-box .buying_guide-content-hidden .content-item {
+                padding: 20px 23.5px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+
+            /* FAQ */
+            .buying_guide-container .buying_guide-qs .buying_guide-box {
+                padding: 60px 20px;
+            }
+
+            .buying_guide-container .buying_guide-qs .buying_guide-box .buying_guide-question-item {
+                padding: 0px;
+                column-gap: 60px;
+                height: max-content;
+                padding: 24px 0 20px 0;
+            }
+
+            .buying_guide-container .buying_guide-qs .buying_guide-box .buying_guide-question-item .buying_guide-question {
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            .buying_guide-container .buying_guide-qs .buying_guide-box .buying_guide-content-hidden .content-item {
+                flex-direction: column-reverse;
+                row-gap: 20px;
+            }
+
+            .buying_guide-container .buying_guide-qs .buying_guide-box .buying_guide-content-hidden .content-item {
+                padding: 24px 0px;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div class="ip-sale">
-        <div class="ip-sale-title">Buy More,Save More</div>
-        <div class="ip-sale-subtitle">Apply for C7 family</div>
-        <div class="ip-sale-box">
-            <div class="ip-sale-box-item">
-                <div class="ip-sale-box-item-off">3% Off</div>
-                <div class="ip-sale-box-item-pcs">3-5 Pcs</div>
-                <div class="ip-sale-box-item-code-box">
-                    <div class="ip-sale-box-item-code">Code: <span>C7F3OFF</span></div>
-                    <div class="ip-sale-box-item-icon" onclick="copyCode(this)">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M5.92719 5.41113H15.7614C16.0375 5.41113 16.2614 5.63499 16.2614 5.91113V6.0708H17.7614V5.91113C17.7614 4.80656 16.866 3.91113 15.7614 3.91113H5.92719C4.82262 3.91113 3.92719 4.80656 3.92719 5.91113V15.8228C3.92719 16.9273 4.82262 17.8228 5.92719 17.8228H7.08047V16.3228H5.92719C5.65104 16.3228 5.42719 16.0989 5.42719 15.8228V5.91113C5.42719 5.63499 5.65104 5.41113 5.92719 5.41113ZM19.7273 8.55664H9.89313C9.61698 8.55664 9.39313 8.7805 9.39313 9.05664V18.9683C9.39313 19.2444 9.61699 19.4683 9.89313 19.4683H19.7273C20.0035 19.4683 20.2273 19.2444 20.2273 18.9683V9.05664C20.2273 8.7805 20.0035 8.55664 19.7273 8.55664ZM9.89313 7.05664C8.78856 7.05664 7.89313 7.95207 7.89313 9.05664V18.9683C7.89313 20.0728 8.78856 20.9683 9.89313 20.9683H19.7273C20.8319 20.9683 21.7273 20.0728 21.7273 18.9683V9.05664C21.7273 7.95207 20.8319 7.05664 19.7273 7.05664H9.89313ZM14.8102 10.3403C15.2245 10.3403 15.5602 10.6761 15.5602 11.0903V13.2622H17.7326C18.1468 13.2622 18.4826 13.598 18.4826 14.0122C18.4826 14.4264 18.1468 14.7622 17.7326 14.7622H15.5602V16.9352C15.5602 17.3494 15.2245 17.6852 14.8102 17.6852C14.396 17.6852 14.0602 17.3494 14.0602 16.9352V14.7622H11.8878C11.4736 14.7622 11.1378 14.4264 11.1378 14.0122C11.1378 13.598 11.4736 13.2622 11.8878 13.2622H14.0602V11.0903C14.0602 10.6761 14.396 10.3403 14.8102 10.3403Z"
-                                fill="#26333A" />
-                        </svg>
-                    </div>
-                    <div class="ip-code-copy-success" style="display: none">
-                        Copy successfully!
-                    </div>
-                </div>
-            </div>
-            <div class="ip-sale-box-item">
-                <div class="ip-sale-box-item-off">5% Off</div>
-                <div class="ip-sale-box-item-pcs">6-10 Pcs</div>
-                <div class="ip-sale-box-item-code-box">
-                    <div class="ip-sale-box-item-code">Code: <span>C7F5OFF</span></div>
-                    <div class="ip-sale-box-item-icon" onclick="copyCode(this)">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M5.92719 5.41113H15.7614C16.0375 5.41113 16.2614 5.63499 16.2614 5.91113V6.0708H17.7614V5.91113C17.7614 4.80656 16.866 3.91113 15.7614 3.91113H5.92719C4.82262 3.91113 3.92719 4.80656 3.92719 5.91113V15.8228C3.92719 16.9273 4.82262 17.8228 5.92719 17.8228H7.08047V16.3228H5.92719C5.65104 16.3228 5.42719 16.0989 5.42719 15.8228V5.91113C5.42719 5.63499 5.65104 5.41113 5.92719 5.41113ZM19.7273 8.55664H9.89313C9.61698 8.55664 9.39313 8.7805 9.39313 9.05664V18.9683C9.39313 19.2444 9.61699 19.4683 9.89313 19.4683H19.7273C20.0035 19.4683 20.2273 19.2444 20.2273 18.9683V9.05664C20.2273 8.7805 20.0035 8.55664 19.7273 8.55664ZM9.89313 7.05664C8.78856 7.05664 7.89313 7.95207 7.89313 9.05664V18.9683C7.89313 20.0728 8.78856 20.9683 9.89313 20.9683H19.7273C20.8319 20.9683 21.7273 20.0728 21.7273 18.9683V9.05664C21.7273 7.95207 20.8319 7.05664 19.7273 7.05664H9.89313ZM14.8102 10.3403C15.2245 10.3403 15.5602 10.6761 15.5602 11.0903V13.2622H17.7326C18.1468 13.2622 18.4826 13.598 18.4826 14.0122C18.4826 14.4264 18.1468 14.7622 17.7326 14.7622H15.5602V16.9352C15.5602 17.3494 15.2245 17.6852 14.8102 17.6852C14.396 17.6852 14.0602 17.3494 14.0602 16.9352V14.7622H11.8878C11.4736 14.7622 11.1378 14.4264 11.1378 14.0122C11.1378 13.598 11.4736 13.2622 11.8878 13.2622H14.0602V11.0903C14.0602 10.6761 14.396 10.3403 14.8102 10.3403Z"
-                                fill="#26333A" />
-                        </svg>
-                    </div>
-                    <div class="ip-code-copy-success" style="display: none">
-                        Copy successfully!
-                    </div>
-                </div>
-            </div>
-            <div class="ip-sale-box-item">
-                <div class="ip-sale-box-item-off">10% Off</div>
-                <div class="ip-sale-box-item-pcs">11+ Pcs</div>
-                <div class="ip-sale-box-item-code-box">
-                    <div class="ip-sale-box-item-code">Code: <span>C7F10OFF</span></div>
-                    <div class="ip-sale-box-item-icon" onclick="copyCode(this)">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M5.92719 5.41113H15.7614C16.0375 5.41113 16.2614 5.63499 16.2614 5.91113V6.0708H17.7614V5.91113C17.7614 4.80656 16.866 3.91113 15.7614 3.91113H5.92719C4.82262 3.91113 3.92719 4.80656 3.92719 5.91113V15.8228C3.92719 16.9273 4.82262 17.8228 5.92719 17.8228H7.08047V16.3228H5.92719C5.65104 16.3228 5.42719 16.0989 5.42719 15.8228V5.91113C5.42719 5.63499 5.65104 5.41113 5.92719 5.41113ZM19.7273 8.55664H9.89313C9.61698 8.55664 9.39313 8.7805 9.39313 9.05664V18.9683C9.39313 19.2444 9.61699 19.4683 9.89313 19.4683H19.7273C20.0035 19.4683 20.2273 19.2444 20.2273 18.9683V9.05664C20.2273 8.7805 20.0035 8.55664 19.7273 8.55664ZM9.89313 7.05664C8.78856 7.05664 7.89313 7.95207 7.89313 9.05664V18.9683C7.89313 20.0728 8.78856 20.9683 9.89313 20.9683H19.7273C20.8319 20.9683 21.7273 20.0728 21.7273 18.9683V9.05664C21.7273 7.95207 20.8319 7.05664 19.7273 7.05664H9.89313ZM14.8102 10.3403C15.2245 10.3403 15.5602 10.6761 15.5602 11.0903V13.2622H17.7326C18.1468 13.2622 18.4826 13.598 18.4826 14.0122C18.4826 14.4264 18.1468 14.7622 17.7326 14.7622H15.5602V16.9352C15.5602 17.3494 15.2245 17.6852 14.8102 17.6852C14.396 17.6852 14.0602 17.3494 14.0602 16.9352V14.7622H11.8878C11.4736 14.7622 11.1378 14.4264 11.1378 14.0122C11.1378 13.598 11.4736 13.2622 11.8878 13.2622H14.0602V11.0903C14.0602 10.6761 14.396 10.3403 14.8102 10.3403Z"
-                                fill="#26333A" />
-                        </svg>
-                    </div>
-                    <div class="ip-code-copy-success" style="display: none">
-                        Copy successfully!
-                    </div>
-                </div>
+    <div class="buying_guide-container">
+        <!-- title-module -->
+        <div class="buying_guide-qs">
+            <div class="buying_guide-box">
             </div>
         </div>
     </div>
 </body>
+
 <script>
-    function copyCode(element) {
-        // 获取当前点击的svg所在的父级容器中的span内容
-        var code = element.parentElement.querySelector('span').textContent;
-
-        // 创建临时文本输入框
-        var tempInput = document.createElement('input');
-        tempInput.value = code;
-        document.body.appendChild(tempInput);
-        tempInput.select();
-        document.execCommand('copy');
-        document.body.removeChild(tempInput);
-
-        // 显示复制成功的提示
-        var successMessage = element.parentElement.querySelector('.ip-code-copy-success');
-        successMessage.style.display = 'block';
-
-        // 1秒后隐藏提示信息
-        setTimeout(function () {
-            successMessage.style.display = 'none';
-        }, 1000);
+    function loadScript(url, callback) {
+        document.getElementById("") && document.getElementById("").remove()
+        var script = document.createElement("script")
+        script.type = "text/javascript"
+        script.async = "async"
+        script.src = url
+        script.id = ""
+        var head = document.head || document.getElementsByTagName("head")[0]
+        head.appendChild(script)
+        if (script.readyState) {
+            script.onreadystatechange = function () {
+                if (
+                    script.readyState == "complete" ||
+                    script.readyState == "loaded"
+                ) {
+                    script.onreadystatechange = null
+                    callback()
+                }
+            }
+        } else {
+            script.onload = function () {
+                callback()
+            }
+        }
     }
+    loadScript(
+        "https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/swiper@8.4.7_swiper-bundle.min.js",
+        function () {
+            // show more start
+            const buying_guide_question = document.querySelector(
+                ".buying_guide-question"
+            )
+            const buying_guide_content = document.querySelector(
+                ".buying_guide-content-hidden"
+            )
+            const buying_guide_data = [
+                {
+                    productImg: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/E7Q-20241021.png",
+                    productName: "BS6",
+                    productSubName: "Premium Standing Desk (E7)",
+                    productDetails: `We ship to 48 states in the U.S. from 10 US warehouses via FedEx for free. If you are shipping to Alaska or Hawaii, you will be charged the FedEx posted rate. For orders shipping to Puerto Rico, or any country other than the U.S., please give us a call at(855) 585-5618.<br />
+                              You are free to return almost any item within 30 days of receipt. A 30-day risk-free policy applies to all items. No restocking fee is applied for items returned in "like new" condition. No shipping fee is applied for the return of the item.<br />
+                              Certain FlexiSpot products are eligible for our premium delivery services.<br />
+                              For more information on FlexiSpot shipping information, click<a herf="" target="_blank">here</a>.`,
+                    productSpecs: `Motor : Dual-motor ; Loading Capacity : 275lbs ; Leg Section : 2-stage ; Applicable Desktop : 47.2”-78.7” width`,
+                    productDetailsImg: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/product-detail-20241021.png",
+                },
+                {
+                    productImg: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/E7Q-20241021.png",
+                    productName: "BS6",
+                    productSubName: "Premium Standing Desk (E7)",
+                    productDetails: `We ship to 48 states in the U.S. from 10 US warehouses via FedEx for free. If you are shipping to Alaska or Hawaii, you will be charged the FedEx posted rate. For orders shipping to Puerto Rico, or any country other than the U.S., please give us a call at(855) 585-5618.<br />
+                              You are free to return almost any item within 30 days of receipt. A 30-day risk-free policy applies to all items. No restocking fee is applied for items returned in "like new" condition. No shipping fee is applied for the return of the item.<br />
+                              Certain FlexiSpot products are eligible for our premium delivery services.<br />
+                              For more information on FlexiSpot shipping information, click<a herf="" target="_blank">here</a>.`,
+                    productSpecs: `Motor : Dual-motor ; Loading Capacity : 275lbs ; Leg Section : 2-stage ; Applicable Desktop : 47.2”-78.7” width`,
+                    productDetailsImg: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/product-detail-20241021.png",
+                },
+            ]
+            const buying_guide_box = document.querySelector(".buying_guide-box")
+            buying_guide_data.forEach((item) => {
+                buying_guide_box.innerHTML += `
+                <div class="buying_guide-item">
+                    <div class="buying_guide-question-item">
+                        <div class="buying_guide-question">
+                            <img src="${item.productImg}" alt="">
+                            <div class="name-box">
+                                <div class="name">${item.productName}</div>
+                                <div class="subName">${item.productSubName}</div>
+                            </div>
+                        </div>
+                        <div class="buying_guide-qs-show_more-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 41 41"
+                                fill="none">
+                                <path d="M32.4727 14.3524L21.0804 25.7446L9.69065 14.3524" stroke="#26333A"
+                                    stroke-width="2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="buying_guide-content-hidden">
+                        <div class="content-item">
+                           <div class="flex-box-item">
+                            <div class="flex-box-item-title">Product Detail</div>
+                            <div class="flex-box-item-text">${item.productDetails}</div>
+                           </div>
+                        </div>
+                        <div class="content-item">
+                            <div class="flex-box-item">
+                             <div class="flex-box-item-title">Product Detail</div>
+                             <div class="flex-box-item-text">${item.productSpecs}</div>
+                            </div>
+                         </div>
+                         <div class="content-item">
+                            <div class="flex-box-item">
+                             <div class="flex-box-item-title">Product Detail</div>
+                             <div class="flex-box-item-img"><img src="${item.productDetailsImg}" alt=""></div>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+                `
+            })
+
+            const questions = document.querySelectorAll(".buying_guide-item")
+            questions.forEach((question, index) => {
+                const show_more = question.querySelector(
+                    ".buying_guide-question-item"
+                )
+                const show_more_icon = question.querySelector(
+                    ".buying_guide-qs-show_more-icon"
+                )
+                const more_text = question.querySelector(
+                    ".buying_guide-content-hidden"
+                )
+                let is_show = false
+
+                show_more.addEventListener("click", function () {
+                    if (!is_show) {
+                        more_text.classList.add("show-content")
+                        show_more_icon.classList.add("rotated")
+                    } else {
+                        more_text.classList.remove("show-content")
+                        show_more_icon.classList.remove("rotated")
+                    }
+                    is_show = !is_show
+                })
+            })
+            // show more end
+        }
+    )
 </script>
 
 </html>
