@@ -762,7 +762,7 @@
         )
         const show_more_data = [
           {
-            productImg: "",
+            productImg: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/E7Q-20241021.png",
             productName: "BS6",
             productSubName: "Premium Standing Desk (E7)",
             productDetails: `We ship to 48 states in the U.S. from 10 US warehouses via FedEx for free. If you are shipping to Alaska or Hawaii, you will be charged the FedEx posted rate. For orders shipping to Puerto Rico, or any country other than the U.S., please give us a call at(855) 585-5618.<br />
@@ -770,7 +770,18 @@
                               Certain FlexiSpot products are eligible for our premium delivery services.<br />
                               For more information on FlexiSpot shipping information, click<a herf="" target="_blank">here</a>.`,
             productSpecs: `Motor : Dual-motor ; Loading Capacity : 275lbs ; Leg Section : 2-stage ; Applicable Desktop : 47.2”-78.7” width`,
-            productDetailsImg: "",
+            productDetailsImg: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/product-detail-20241021.png",
+          },
+          {
+            productImg: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/E7Q-20241021.png",
+            productName: "BS6",
+            productSubName: "Premium Standing Desk (E7)",
+            productDetails: `We ship to 48 states in the U.S. from 10 US warehouses via FedEx for free. If you are shipping to Alaska or Hawaii, you will be charged the FedEx posted rate. For orders shipping to Puerto Rico, or any country other than the U.S., please give us a call at(855) 585-5618.<br />
+                              You are free to return almost any item within 30 days of receipt. A 30-day risk-free policy applies to all items. No restocking fee is applied for items returned in "like new" condition. No shipping fee is applied for the return of the item.<br />
+                              Certain FlexiSpot products are eligible for our premium delivery services.<br />
+                              For more information on FlexiSpot shipping information, click<a herf="" target="_blank">here</a>.`,
+            productSpecs: `Motor : Dual-motor ; Loading Capacity : 275lbs ; Leg Section : 2-stage ; Applicable Desktop : 47.2”-78.7” width`,
+            productDetailsImg: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/product-detail-20241021.png",
           },
         ]
         const questions = document.querySelectorAll(".buying_guide-item")
