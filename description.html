@@ -1,0 +1,1985 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/swiper@8.4.7-min-us.css"
+    />
+    <style xml="space">
+      .ant-collapse-content > .ant-collapse-content-box {
+        padding: 0;
+      }
+
+      .comp-item-spu
+        .item-spu-detail-pane
+        .description-page
+        .detail-pane-detail-content
+        * {
+        background: #fdfcf5;
+      }
+
+      .description-page-container-bg-gray {
+        background: #f6f4f1;
+      }
+
+      .description-page-container-bg-black {
+        background: #282828;
+      }
+
+      .description-page-container-bg-green {
+        background: #043e1b;
+      }
+
+      .banner ~ .banner {
+        margin-top: 40px;
+      }
+
+      .banner-m ~ .banner-m {
+        margin-top: 30px;
+      }
+
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .banner-m
+        img {
+        width: 100%;
+        display: none;
+      }
+
+      .detail-pane-detail-content img {
+        border-radius: 12px;
+      }
+
+      .description-page-container-item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border-radius: 12px;
+        margin-top: 100px;
+      }
+
+      .description-page-container-item-flex {
+        width: 100%;
+        display: flex;
+        grid-column-gap: 23px;
+      }
+
+      .description-page-container-item-flex-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        max-width: 446px;
+      }
+
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item-flex-content-text {
+        font-family: "Moderat-Bold" !important;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        color: #26333a;
+        margin-top: 24px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .banner img,
+      .comp-item-spu .item-spu-detail-pane .banner-m img {
+        width: 100%;
+        height: auto;
+      }
+
+      .description-page-container-item-text-box {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: baseline;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 30px 85px 30px 110px;
+      }
+
+      .description-page-container-item-text-left {
+        padding: 20px 20px 20px 100px;
+      }
+
+      .description-page-container-item-text-right {
+        padding: 20px 40px 20px 100px;
+      }
+
+      .description-page-container-item-img {
+        width: 50%;
+      }
+
+      .description-page-container-item-text {
+        width: 50%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: baseline;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item-text-smalltitle {
+        font-family: "Moderat-Bold" !important;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+        color: #004df2;
+        position: relative;
+      }
+
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item-text-title {
+        max-width: 500px;
+        font-family: "SupremeLLSub-Black" !important;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 52px;
+        line-height: 120%;
+        font-feature-settings: "pnum" on, "lnum" on, "ss01" on, "ss04" on,
+          "liga" off;
+        color: #26333a;
+        margin-top: 24px;
+      }
+
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item-text-subtitle {
+        max-width: 500px;
+        font-family: "Moderat-Regular" !important;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-feature-settings: "ss03" on, "ss04" on, "liga" off;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        color: rgba(38, 51, 58, 0.8);
+        margin-top: 24px;
+      }
+
+      .description-page-container-item-box {
+        width: 50%;
+        padding-bottom: 30px;
+        border-bottom: 1.5px solid #d2d1d1;
+      }
+
+      .description-page-container-item-line {
+        border-bottom: 1px solid rgba(237, 233, 228, 0.5);
+        padding-bottom: 16px;
+      }
+
+      .description-page-container-item-line-o {
+        border-bottom: 1px solid rgba(237, 233, 228, 0.2);
+        padding-bottom: 16px;
+      }
+
+      .description-page-container-item-line-g {
+        border-bottom: 1px solid #ede9e4;
+        padding-bottom: 16px;
+      }
+
+      .border-bottom {
+        border-bottom: 1px solid rgba(38, 51, 58, 0.2) !important;
+      }
+
+      .border-left {
+        border-left: 1px solid rgba(38, 51, 58, 0.2) !important;
+      }
+
+      @media (max-width: 1440px) {
+        .comp-item-spu
+          .item-spu-detail-pane
+          .detail-pane-detail-content
+          .description-page-container-item-text-subtitle {
+          font-size: 15px;
+          line-height: 20px;
+          margin-top: 20px;
+        }
+
+        .comp-item-spu
+          .item-spu-detail-pane
+          .detail-pane-detail-content
+          .description-page-container-item-text-title {
+          font-size: 46px;
+          margin-top: 20px;
+        }
+
+        .comp-item-spu
+          .item-spu-detail-pane
+          .detail-pane-detail-content
+          .description-page-container-item-text-bigtitle {
+          font-size: 60px;
+        }
+
+        .description-page-container-item-flex {
+          margin: 0 auto;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .comp-item-spu
+          .item-spu-detail-pane
+          .description-page-container-item-flex
+          img {
+          max-width: 240px;
+          width: 240px;
+        }
+
+        .description-page-container-item:has(
+            .description-page-container-item-flex
+          ) {
+          overflow: auto;
+        }
+
+        .description-page-container-item::-webkit-scrollbar {
+          height: 5px;
+          background: rgba(0, 0, 0, 0.1);
+          border-radius: 5px;
+        }
+
+        .description-page-container-item::-webkit-scrollbar-thumb {
+          height: 5px;
+          background: rgba(0, 0, 0, 0.1);
+          border-radius: 5px;
+        }
+
+        .description-page-container-item-i {
+          width: 50%;
+        }
+
+        .comp-item-spu
+          .item-spu-detail-pane
+          .detail-pane-detail-content
+          .description-page-container-item-text-title {
+          font-size: 29px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .home-active-l {
+          display: none !important;
+        }
+
+        .home-active-m {
+          display: block !important;
+        }
+
+        .description-page-container-margin60 {
+          margin-top: 20px;
+        }
+
+        .ant-collapse-content > .ant-collapse-content-box {
+          padding: 0;
+        }
+
+        .description-page-container .banner img {
+          width: 100%;
+          display: none;
+        }
+
+        .comp-item-spu
+          .item-spu-detail-pane
+          .detail-pane-detail-content
+          .banner-m
+          img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+
+        .description-page-container {
+          width: 100%;
+          padding: 0;
+        }
+
+        .description-page-container-item-text-right,
+        .description-page-container-item-text-left {
+          padding: 20px 40px;
+        }
+
+        .description-page-container-item-text {
+          padding-top: 20px;
+          margin-bottom: 22px;
+        }
+
+        .description-page-container-item {
+          flex-direction: column;
+          margin-top: 30px;
+        }
+
+        .description-page-container-item-reverse {
+          flex-direction: column-reverse;
+        }
+
+        .description-page-container-item-flex {
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        .description-page-container-item:has(
+            .description-page-container-item-flex
+          ) {
+          overflow: auto;
+        }
+
+        .comp-item-spu
+          .item-spu-detail-pane
+          .description-page-container-item-flex
+          img {
+          max-width: 100%;
+          width: 100%;
+        }
+
+        .description-page-container-item-flex-content-text {
+          font-size: 18px;
+          line-height: 24px;
+        }
+
+        .description-page-container-bg-gray,
+        .description-page-container-bg-green {
+          border-radius: 12px;
+        }
+
+        .comp-item-spu
+          .item-spu-detail-pane
+          .detail-pane-detail-content
+          .description-page-container-item-text-smalltitle {
+          font-size: 14px;
+          line-height: 14px;
+        }
+
+        .comp-item-spu
+          .item-spu-detail-pane
+          .detail-pane-detail-content
+          .description-page-container-item-text-subtitle {
+          font-size: 16px;
+          line-height: normal;
+          margin-top: 16px;
+        }
+
+        .description-page-container-item-line-m {
+          padding-bottom: 10px;
+          border-bottom: 1px solid #ede9e4;
+        }
+
+        .description-page-container-item-i {
+          width: 100%;
+          margin-top: 30px;
+        }
+
+        .description-page-container-item-i img {
+          width: 100%;
+        }
+
+        .description-page-container-item-img,
+        .description-page-container-item-text {
+          width: 100%;
+        }
+
+        .description-page-container-item-line-o {
+          border-bottom: 0;
+          padding-bottom: 0;
+        }
+
+        .description-page-container-item-text-img {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+
+    <style>
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item-flex-content-tip {
+        margin-top: 12px;
+        font-family: "Moderat-Regular" !important;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #26333a;
+        padding: 0 17px;
+      }
+
+      .flex-end {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item-text-subtitle {
+        position: relative;
+      }
+
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item
+        .description-page-container-item-context {
+        max-width: 1091px;
+        margin: 0 auto 52px;
+        text-align: center;
+        font-family: "Moderat-Regular" !important;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        color: #26333a;
+      }
+
+      .flex-column {
+        padding-bottom: 55px;
+        flex-direction: column;
+      }
+
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item-text-subtitle
+        strong {
+        color: #26333a;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-feature-settings: "ss04" on, "liga" off;
+        font-family: "Moderat-Bold" !important;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+      }
+
+      @media screen and (max-width: 768px) {
+        .comp-item-spu
+          .item-spu-detail-pane
+          .detail-pane-detail-content
+          .description-page-container-item-text-title {
+          font-size: 24px;
+          margin-top: 12px;
+        }
+
+        .comp-item-spu
+          .item-spu-detail-pane
+          .detail-pane-detail-content
+          .description-page-container-item-text-subtitle {
+          font-size: 16px;
+          margin-top: 12px;
+        }
+
+        .comp-item-spu
+          .item-spu-detail-pane
+          .detail-pane-detail-content
+          .description-page-container-item-flex-content-text {
+          margin-top: 20px;
+          font-size: 20px;
+          line-height: 24px;
+          text-align: center;
+        }
+
+        .description-page-container-item-flex-content {
+          margin-bottom: 0;
+        }
+
+        .description-page-container-item {
+          margin: 40px 0 0;
+        }
+
+        .pr {
+          padding: 17px 22px 0 33px;
+        }
+
+        .pl {
+          padding: 0 31px 0 33px;
+        }
+
+        .comp-item-spu
+          .item-spu-detail-pane
+          .detail-pane-detail-content
+          .description-page-container-item
+          .description-page-container-item-context {
+          max-width: 300px;
+          margin-bottom: 20px;
+          padding-left: 0;
+          padding-right: 0;
+          font-size: 9px;
+          line-height: 12px;
+        }
+
+        .flex-column {
+          padding-bottom: 12px;
+        }
+
+        .comp-item-spu
+          .item-spu-detail-pane
+          .detail-pane-detail-content
+          .description-page-container-item-flex-content-tip {
+          margin-top: 8px;
+          padding: 0;
+        }
+      }
+    </style>
+    <style>
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-smalltitle {
+        font-family: Moderat-Bold !important;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 120%;
+        letter-spacing: 0.05em;
+        text-align: center;
+        color: #004df2;
+        margin-bottom: 14px;
+        margin-top: 100px;
+        text-transform: uppercase;
+      }
+
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-title {
+        font-family: SupremeLLSub-Black !important;
+        font-size: 52px;
+        font-weight: 900;
+        line-height: 120%;
+        text-align: center;
+        color: #26333a;
+      }
+
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-box-titleBox
+        .description-page-container-box-titleBox-bigTitle {
+        font-family: SupremeLLSub-Black !important;
+        font-size: 52px;
+        font-weight: 900;
+        line-height: 120%;
+        text-align: center;
+        color: #26333a;
+      }
+
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-box-titleBox
+        .description-page-container-box-titleBox-smallTitle {
+        font-family: Moderat-Regular !important;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 120%;
+        text-align: center;
+        color: #26333a;
+        margin-top: 14px;
+      }
+
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-box-titleBox {
+        padding: 0 207px;
+        margin-top: 100px;
+        margin-bottom: 40px;
+      }
+
+      @media screen and (max-width: 1440px) {
+        .comp-item-spu
+          .item-spu-detail-pane
+          .detail-pane-detail-content
+          .description-page-container-box-titleBox {
+          padding: 0;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .comp-item-spu
+          .item-spu-detail-pane
+          .detail-pane-detail-content
+          .description-page-container-smalltitle {
+          margin-bottom: 12px;
+          margin-top: 80px;
+          text-align: left;
+          padding: 0 37.5px;
+        }
+
+        .comp-item-spu
+          .item-spu-detail-pane
+          .detail-pane-detail-content
+          .description-page-container-title {
+          font-size: 24px;
+          padding: 0 37.5px;
+          text-align: left;
+        }
+
+        .comp-item-spu
+          .item-spu-detail-pane
+          .detail-pane-detail-content
+          .description-page-container-box-titleBox {
+          margin-top: 80px;
+          margin-bottom: 20px;
+        }
+
+        .comp-item-spu
+          .item-spu-detail-pane
+          .detail-pane-detail-content
+          .description-page-container-box-titleBox
+          .description-page-container-box-titleBox-bigTitle {
+          font-size: 24px;
+          text-align: left;
+        }
+
+        .comp-item-spu
+          .item-spu-detail-pane
+          .detail-pane-detail-content
+          .description-page-container-box-titleBox
+          .description-page-container-box-titleBox-smallTitle {
+          font-size: 16px;
+          text-align: left;
+        }
+
+        .comp-item-spu
+          .item-spu-detail-pane
+          .detail-pane-detail-content
+          .description-page-container-box-titleBox {
+          padding: 0 37.5px;
+        }
+      }
+    </style>
+    <!-- desk_container module  -->
+    <style>
+      .desk_container * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+        text-decoration: none;
+      }
+
+      /* 隐藏水平滚动条 */
+      .description-page-container::-webkit-scrollbar {
+        height: 0;
+      }
+
+      .desk_container p {
+        margin: 0;
+      }
+
+      .desk_container {
+        max-width: 1384px;
+        margin: 48px auto 68px;
+        padding: 95px 92px;
+      }
+
+      .desk_container .desk_product .desk_product-title {
+        color: #26333a;
+        text-align: center;
+        font-variant-numeric: lining-nums proportional-nums;
+        font-feature-settings: "ss18" on, "ss04" on, "ss01" on, "liga" off;
+        font-family: "SupremeLLSub-Black" !important;
+        font-size: 52px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 120%;
+        margin-bottom: 24px;
+      }
+
+      .desk_container .desk_product .desk_product-subtitle {
+        color: rgba(38, 51, 58, 0.8);
+        text-align: center;
+        font-family: "Moderat-Regular" !important;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        margin-bottom: 40px;
+      }
+
+      .desk_container .desk_product .desk_product-text {
+        margin: 16px auto 40px;
+        color: #26333a;
+        text-align: center;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-feature-settings: "ss04" on, "liga" off;
+        font-family: Moderat-Medium;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list {
+        display: flex;
+        position: relative;
+        width: 100%;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .desk_product-table-title {
+        width: 33.3%;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .desk_product-table-title
+        > div {
+        display: flex;
+        align-items: center;
+        height: 70px;
+        border-bottom: 1px solid rgba(38, 51, 58, 0.1);
+        /* border-right: 1px solid rgba(38, 51, 58, 0.1); */
+        gap: 12px;
+        padding-left: 30px;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .desk_product-table-title
+        > div
+        p {
+        display: flex;
+        align-items: center;
+        padding: 5px 0;
+        color: rgba(38, 51, 58, 0.8);
+        font-variant-numeric: lining-nums tabular-nums;
+        font-feature-settings: "ss03" on, "ss04" on, "liga" off;
+        font-family: Moderat-Bold;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide {
+        position: relative;
+        width: 66.6%;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        #swiperTable {
+        height: 100%;
+        overflow: clip;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul
+        .desk_ul-li {
+        width: 100%;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul
+        .desk_ul-contextLi {
+        width: 100%;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul
+        .desk_ul-contextLi
+        > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 0;
+        height: 70px;
+        color: #26333a;
+        text-align: center;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-feature-settings: "ss03" on, "ss04" on, "liga" off;
+        font-family: Moderat-Regular;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        border-bottom: 1px solid rgba(38, 51, 58, 0.1);
+        border-left: 1px solid rgba(38, 51, 58, 0.1);
+      }
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul
+        .desk_ul-contextLi
+        > div p:first-child{
+          margin-bottom: 5px;
+        }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul
+        .desk_ul-contextLi
+        > div
+        > div {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul
+        .desk_ul-contextLi
+        > div
+        > div
+        span {
+        font-family: Moderat-Regular;
+        font-weight: 400;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul
+        .desk_ul-contextLi
+        > div
+        > div
+        span
+        strong {
+        font-family: Moderat-Bold;
+        font-weight: 700;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul
+        .desk_ul-contextLi
+        > div
+        p
+        svg {
+        vertical-align: middle;
+      }
+
+      .desk_container
+        .desk_product
+        .desk_product-table
+        .desk_product-table-list
+        .chair_buyerguide
+        .desk_ul
+        .desk_ul-contextLi
+        > div
+        img {
+        max-width: 200px;
+      }
+
+      @supports not (overflow: clip) {
+        html,
+        body {
+          overflow-x: hidden;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide
+          #swiperTable {
+          overflow: visible;
+          clip-path: inset(0);
+        }
+      }
+
+      @media screen and (max-width: 1440px) {
+        .desk_container {
+          max-width: 1000px;
+          margin: 80px auto;
+          padding: 0;
+        }
+
+        .desk_container .desk_product .desk_product-title {
+          font-size: 42px;
+        }
+
+        .desk_container .desk_product .desk_product-subtitle {
+          font-size: 18px;
+        }
+
+        .desk_container .desk_product .desk_product-text {
+          font-size: 20px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .desk_product-table-title
+          > div
+          p,
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide
+          .desk_ul
+          .desk_ul-contextLi
+          > div {
+          font-size: 14px;
+          height: 65px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .desk_product-table-title
+          > div {
+          padding-left: 25px;
+          height: 65px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide
+          .desk_ul
+          .desk_ul-contextLi
+          > div
+          img {
+          max-width: 160px;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        .desk_container {
+          max-width: 768px;
+          margin: 60px auto;
+        }
+
+        .desk_container .desk_product .desk_product-title {
+          font-size: 52px;
+        }
+
+        .desk_container .desk_product .desk_product-subtitle {
+          font-size: 16px;
+          margin-bottom: 28px;
+        }
+
+        .desk_container .desk_product .desk_product-text {
+          margin-bottom: 24px;
+        }
+
+        /* .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide {
+          width: 50%;
+        } */
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide
+          .desk_ul
+          .desk_ul-contextLi
+          > div,
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .desk_product-table-title
+          > div {
+          height: 60px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .desk_product-table-title
+          > div
+          p,
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide
+          .desk_ul
+          .desk_ul-contextLi
+          > div {
+          font-size: 14px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide
+          .desk_ul
+          .desk_ul-contextLi
+          > div
+          img {
+          max-width: 128px;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .mobile {
+          display: none;
+        }
+
+        .desk_container {
+          padding: 0;
+          margin: 42px 0 48px;
+        }
+
+        .table-first-column-img {
+          width: 34px !important;
+          height: 34px !important;
+        }
+
+        .desk_container .desk_product .desk_product-title {
+          font-size: 28px;
+          margin-bottom: 20px;
+        }
+
+        .desk_container .desk_product .desk_product-subtitle {
+          font-size: 14px;
+          margin-bottom: 23px;
+        }
+
+        .desk_container .desk_product .desk_product-text {
+          max-width: 100%;
+          margin: 12px 0 24px;
+          font-size: 18px;
+          text-align: left;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .desk_product-table-title {
+          width: 50%;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .desk_product-table-title
+          > div {
+          padding-left: 5px;
+          height: 65px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide {
+          width: 50%;
+          z-index: 99;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide
+          .desk_ul
+          .desk_ul-contextLi
+          > div {
+          border-left: none !important;
+          height: 65px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide
+          .desk_ul
+          .desk_ul-contextLi
+          > div
+          svg {
+          width: 16px;
+          height: 16px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide
+          .desk_ul
+          .desk_ul-contextLi
+          > div
+          svg.yes_svg {
+          width: 12px;
+          height: 8px;
+        }
+
+        .desk_container
+          .desk_product
+          .desk_product-table
+          .desk_product-table-list
+          .chair_buyerguide
+          .swiper-slide {
+          width: 100%;
+        }
+
+        .desk_product-table {
+          position: relative;
+          margin-right: -20px;
+        }
+      }
+    </style>
+    <style>
+      .desk_product-table .desk_product-top-box {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+      }
+
+      .desk_product-table .desk_product-top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .desk_product-table .desk_product-top .desk_product_column {
+        width: 33.3%;
+        display: flex !important;
+        justify-content: center !important;
+      }
+
+      .desk_product-table
+        .desk_product-top
+        .desk_product_column
+        .desk_product_button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 57px;
+        width: 292px;
+        color: #26333a;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-feature-settings: "ss03" on, "ss04" on, "liga" off;
+        font-family: Moderat-Bold;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 57px;
+        border-radius: 66px;
+        border: 1px solid#26333A;
+      }
+
+      .swiperTable-pre-box {
+        position: absolute;
+        top: -38px;
+        left: 0;
+        width: 24px;
+        height: 79.5%;
+      }
+
+      .swiperTable-pre-box .swiperTable-pre {
+        /* position: -webkit-sticky;
+        position: sticky;
+        top: 179px; */
+        width: 24px;
+        height: 24px;
+        margin-top: 75px;
+        background: #ede9e4
+          url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_left.svg")
+          no-repeat center center;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 3;
+      }
+
+      .swiperTable-pre-box .swiperTable-pre:hover {
+        background: #004df2
+          url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_left_hover.svg")
+          no-repeat center center;
+      }
+
+      .swiperTable-pre-box .swiperTable-pre.swiper-button-disabled:hover {
+        background: #ede9e4
+          url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_left.svg")
+          no-repeat center center;
+      }
+
+      .swiperTable-next-box {
+        position: absolute;
+        top: -38px;
+        right: -26px;
+        width: 24px;
+        height: 79.5%;
+      }
+
+      .swiperTable-next-box .swiperTable-next {
+        /* position: -webkit-sticky;
+        position: sticky;
+        top: 179px; */
+        width: 24px;
+        height: 24px;
+        margin-top: 75px;
+        background: #ede9e4
+          url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_right.svg")
+          no-repeat center center;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 2;
+      }
+
+      .swiperTable-next-box .swiperTable-next:hover {
+        background: #004df2
+          url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_right_hover.svg")
+          no-repeat center center;
+      }
+
+      .swiperTable-next-box .swiperTable-next.swiper-button-disabled:hover {
+        background: #ede9e4
+          url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_right.svg")
+          no-repeat center center;
+      }
+
+      .swiper-button-disabled {
+        opacity: 0.5;
+        cursor: not-allowed !important;
+      }
+      .desk_product_wh {
+        display: none !important;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .active_mobile {
+        display: none !important;
+        text-align: center;
+        height: 50px;
+        width: 245px;
+        color: #26333a;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-feature-settings: "ss03" on, "ss04" on, "liga" off;
+        font-family: Moderat-Bold;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 50px;
+        border-radius: 66px;
+        border: 1px solid#26333A;
+      }
+      @media screen and (max-width: 1440px) {
+        .desk_product-table
+          .desk_product-top
+          .desk_product_column
+          .desk_product_button {
+          height: 50px;
+          width: 250px;
+          font-size: 22px;
+          line-height: 50px;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        .desk_product-table
+          .desk_product-top
+          .desk_product_column
+          .desk_product_button {
+          height: 40px;
+          width: 170px;
+          font-size: 15px;
+          line-height: 40px;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .desk_product-table .desk_product-top-box {
+          /* position: -webkit-sticky;
+          position: sticky;
+          top: 0; */
+          background: #fdfcf5;
+          z-index: 100;
+        }
+        .desk_product_wh {
+          display: block !important;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .desk_product-table .desk_product-top .active_mobile {
+          display: flex;
+          align-items: center;
+          justify-self: center;
+          display: block !important;
+        }
+
+        .desk_product-table
+          .desk_product-top
+          .desk_product_column
+          .desk_product_button {
+          height: 50px;
+          width: 245px;
+          font-size: 20px;
+          line-height: 50px;
+        }
+
+        .desk_product-table .desk_product-top .desk_product_column {
+          display: none !important;
+        }
+
+        .swiperTable-pre-box {
+          left: 10px;
+          display: block !important;
+        }
+
+        .swiperTable-pre-box .swiperTable-pre {
+          z-index: 100;
+        }
+
+        .swiperTable-next-box {
+          display: block !important;
+          right: 20px;
+        }
+
+        .swiperTable-next-box .swiperTable-next {
+          z-index: 99;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="description" class="description-page">
+      <div class="description-page-container">
+        <div class="banner">
+          <img
+            class="lazyload"
+            data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/spacewalk-20241010-banner-pc.png"
+          />
+        </div>
+        <div class="banner-m">
+          <img
+            class="lazyload"
+            src="https://staticprod.site.flexispot.com/flexispot/catalog/product/placeholder/default/p.jpg"
+            data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/spacewalk--20241010-banner-app.png"
+          />
+        </div>
+        <div class="description-page-container-smalltitle">
+          Foldable Handrails
+        </div>
+        <div class="description-page-container-title">
+          Walk or Run, Your Choice！
+        </div>
+        <div class="banner">
+          <img
+            class="lazyload"
+            data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/spacewalk-20241010-img1-pc.png"
+          />
+        </div>
+        <div class="banner-m">
+          <img
+            class="lazyload"
+            src="https://staticprod.site.flexispot.com/flexispot/catalog/product/placeholder/default/p.jpg"
+            data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/spacewalk-20241010-img1-app.png"
+          />
+        </div>
+        <!-- module-2 -->
+        <div
+          class="description-page-container-item description-page-container-item-reverse"
+        >
+          <div class="description-page-container-item-img">
+            <img
+              class="lazyload"
+              src="https://staticprod.site.flexispot.com/flexispot/catalog/product/placeholder/default/p.jpg"
+              data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/spacewalk-20241010-img2.png"
+            />
+          </div>
+          <div
+            class="description-page-container-item-text description-page-container-item-text-right"
+          >
+            <div class="description-page-container-item-text-smalltitle">
+              6 Modes for Every Workout Need
+            </div>
+            <div class="description-page-container-item-text-title">
+              Personalize your Excercise
+            </div>
+            <div class="description-page-container-item-text-subtitle">
+              Our treadmill offers personalized workouts and excellent value for
+              money. Choose from six modes, including slow walking, hill
+              climbing, and race walking, etc.
+            </div>
+          </div>
+        </div>
+        <!-- module-3 -->
+        <div class="description-page-container-item">
+          <div
+            class="description-page-container-item-text description-page-container-item-text-left"
+          >
+            <div class="description-page-container-item-text-smalltitle">
+              264 lbs WEIGHT CAPACITY
+            </div>
+            <div class="description-page-container-item-text-title">
+              Strong Enough for Two
+            </div>
+            <div class="description-page-container-item-text-subtitle">
+              Boasting an ergonomic design and a weight capacity of 264 lbs,
+              this treadmill even has two reinforced base tubes, making it more
+              durable and reliable for your workouts!
+            </div>
+          </div>
+          <div class="description-page-container-item-img flex-end">
+            <img
+              class="lazyload"
+              data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/spacewalk-20241010-img3.png"
+            />
+          </div>
+        </div>
+        <!-- module-4 -->
+        <div
+          class="description-page-container-item description-page-container-item-reverse"
+        >
+          <div class="description-page-container-item-img">
+            <img
+              class="lazyload"
+              data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/spacewalk-20241010-img4.png"
+            />
+          </div>
+          <div
+            class="description-page-container-item-text description-page-container-item-text-right"
+          >
+            <div class="description-page-container-item-text-smalltitle">
+              Durability
+            </div>
+            <div class="description-page-container-item-text-title">
+              2-Year Warranty
+            </div>
+            <div class="description-page-container-item-text-subtitle">
+              Our walking treadmill offers a 2-year warranty, longer than most
+              on the market, and includes a built-in professional filter that
+              effectively prevents electronic component damage, extending the
+              machine's lifespan.
+            </div>
+          </div>
+        </div>
+        <!-- module-5 -->
+        <div class="description-page-container-item">
+          <div
+            class="description-page-container-item-text description-page-container-item-text-left"
+          >
+            <div class="description-page-container-item-text-smalltitle">
+              Anti-Slip Running Belt
+            </div>
+            <div class="description-page-container-item-text-title">
+              Multi-layer Running Belt Ensures Your Safety and Comfort
+            </div>
+            <div class="description-page-container-item-text-subtitle">
+              The anti-slip running belt gives you extra grip, keeping you safe
+              as you run. With its multi-layered design, it’s built to last,
+              offering greater durability and resistance to wear and tear, so
+              you can focus on your workout without worry.
+            </div>
+          </div>
+          <div class="description-page-container-item-img flex-end">
+            <img
+              class="lazyload"
+              data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/spacewalk-20241010-img5.png"
+            />
+          </div>
+        </div>
+        <!-- module-6 -->
+        <div
+          class="description-page-container-item description-page-container-item-reverse"
+        >
+          <div class="description-page-container-item-img">
+            <img
+              class="lazyload"
+              data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/spacewalk-20241010-img6-New.png"
+            />
+          </div>
+          <div
+            class="description-page-container-item-text description-page-container-item-text-right"
+          >
+            <div class="description-page-container-item-text-smalltitle">
+              Shock Absorption for Comfort
+            </div>
+            <div class="description-page-container-item-text-title">
+              Joint-friendly Shock Absorption
+            </div>
+            <div class="description-page-container-item-text-subtitle">
+              Enjoy smoother, more comfortable runs each time. The four
+              shock-absorbing pads (2 TPR front pads and 2 PVC rear pads) on the
+              treadmill’s base work together with the reinforced tubes and EVA
+              strips to absorb impact.
+            </div>
+          </div>
+        </div>
+        <!-- module-7 -->
+        <div class="description-page-container-item">
+          <div
+            class="description-page-container-item-text description-page-container-item-text-left"
+          >
+            <div class="description-page-container-item-text-smalltitle">
+              Effortless Control
+            </div>
+            <div class="description-page-container-item-text-title">
+              Wireless Control, Silence in a Click!
+            </div>
+            <div class="description-page-container-item-text-subtitle">
+              The treadmill also comes with a wireless remote control. Super
+              sensitive and versatile, it is way better than infrared ones, and
+              with a one-click mute button, you can work out quietly without
+              bothering anyone! Moreover, you can avoid misplacing the remote
+              control with the treadmill’s handy magnetic storage slot.
+            </div>
+          </div>
+          <div class="description-page-container-item-img flex-end">
+            <img
+              class="lazyload"
+              data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/spacewalk-20241010-img7.png"
+            />
+          </div>
+        </div>
+
+        <!-- module-8 -->
+        <div class="description-page-container-box-titleBox">
+          <div class="description-page-container-box-titleBox-bigTitle">
+            Compact Design for Easy Storage
+          </div>
+          <div class="description-page-container-box-titleBox-smallTitle">
+            A walking treadmill that fits anywhere? Yes, please! Just store it
+            under your bed or sofa to save space and take it out as you like.
+            Its compact design makes it the perfect fit for your home office or
+            living room.
+          </div>
+        </div>
+        <div class="description-page-container-box-four">
+          <div class="description-page-container-item" style="margin-top: 0">
+            <div class="description-page-container-item-flex">
+              <div class="description-page-container-item-flex-content">
+                <img
+                  class="lazyload"
+                  src="https://staticprod.site.flexispot.com/flexispot/catalog/product/placeholder/default/p.jpg"
+                  data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/spacewalk-20241010-img8.png"
+                />
+              </div>
+              <div class="description-page-container-item-flex-content">
+                <img
+                  class="lazyload"
+                  src="https://staticprod.site.flexispot.com/flexispot/catalog/product/placeholder/default/p.jpg"
+                  data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/spacewalk-20241010-img9.png"
+                />
+              </div>
+              <div class="description-page-container-item-flex-content">
+                <img
+                  class="lazyload"
+                  src="https://staticprod.site.flexispot.com/flexispot/catalog/product/placeholder/default/p.jpg"
+                  data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/spacewalk-20241010-img10.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="description-page-container-box-titleBox">
+          <div class="description-page-container-box-titleBox-bigTitle">
+            Quiet Workouts Anytime
+          </div>
+          <div class="description-page-container-box-titleBox-smallTitle">
+            Work out in peace with a quiet motor that produces less than 45
+            decibels of noise without bothering anyone.
+          </div>
+        </div>
+        <div class="banner">
+          <img
+            class="lazyload"
+            data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/spacewalk-20241010-img11-pc.png"
+          />
+        </div>
+        <div class="banner-m">
+          <img
+            class="lazyload"
+            src="https://staticprod.site.flexispot.com/flexispot/catalog/product/placeholder/default/p.jpg"
+            data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/spacewalk-20241010-img11-app.png"
+          />
+        </div>
+        <div class="description-page-container-box-four">
+          <div class="description-page-container-item">
+            <div class="description-page-container-item-flex">
+              <div class="description-page-container-item-flex-content">
+                <img
+                  class="lazyload"
+                  src="https://staticprod.site.flexispot.com/flexispot/catalog/product/placeholder/default/p.jpg"
+                  data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/spacewalk-20241010-img12.png"
+                />
+                <div class="description-page-container-item-flex-content-text">
+                  Keep Moving, Stay Entertained
+                </div>
+                <div class="description-page-container-item-flex-content-tip">
+                  Stay focused during workouts with the treadmill’s built-in
+                  iPad holder, specifically designed to support your phone and
+                  tablet. It’s a great addition for those with ADHD!
+                </div>
+              </div>
+              <div class="description-page-container-item-flex-content">
+                <img
+                  class="lazyload"
+                  src="https://staticprod.site.flexispot.com/flexispot/catalog/product/placeholder/default/p.jpg"
+                  data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/spacewalk-20241010-img13.png"
+                />
+                <div class="description-page-container-item-flex-content-text">
+                  Adjust with a Simple Lift
+                </div>
+                <div class="description-page-container-item-flex-content-tip">
+                  Unlike other 2-in-1 walking treadmills that require complex
+                  manual adjustments, you can lower the handrails of our
+                  treadmill with a simple tap of your foot. It’s simple and
+                  saves time too!
+                </div>
+              </div>
+              <div class="description-page-container-item-flex-content">
+                <img
+                  class="lazyload"
+                  src="https://staticprod.site.flexispot.com/flexispot/catalog/product/placeholder/default/p.jpg"
+                  data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/spacewalk-20241010-img14.png"
+                />
+                <div class="description-page-container-item-flex-content-text">
+                  Portable to move
+                </div>
+                <div class="description-page-container-item-flex-content-tip">
+                  Equipped with wheels and weighing at just 46.3 lbs, this
+                  lightweight walking treadmill is super convenient and easy to
+                  move around!
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- module 9 -->
+        <div class="desk_container">
+          <div class="desk_product">
+            <div class="desk_product-title">
+              How Does the WPS01 Stand Up Against Its Competitor?
+            </div>
+            <div class="desk_product-subtitle">
+              At FlexiSpot, we’re dedicated to enhancing your overall wellness
+              and supporting your active lifestyle. That’s why we continuously
+              innovate and refine our walking pad designs. Check out the
+              comparison table below to find the perfect walking pad for you and
+              boost your daily activity.
+            </div>
+            <div class="desk_product-table">
+              <div class="desk_product-top-box">
+                <div class="swiperTable-pre-box">
+                  <div class="swiperTable-pre"></div>
+                </div>
+                <div class="desk_product-top">
+                  <div class="desk_product_column"></div>
+                  <div class="desk_product_column">
+                    <div class="desk_product_button">FlexiSpot WPS01</div>
+                  </div>
+                  <div class="desk_product_column">
+                    <div class="desk_product_button">Brand X Walking Pad</div>
+                  </div>
+                  <div class="desk_product_wh">
+                    <div class="desk_product_button active_mobile">
+                      FlexiSpot WPS01
+                    </div>
+                  </div>
+                </div>
+                <div class="swiperTable-next-box">
+                  <div class="swiperTable-next"></div>
+                </div>
+              </div>
+              <ul class="desk_product-table-list">
+                <li class="desk_product-table-title">
+                  <!-- <div class="height-zw"></div> -->
+                  <div>
+                    <p>Warranty</p>
+                  </div>
+                  <div>
+                    <p>Running Belt Width</p>
+                  </div>
+                  <div>
+                    <p>Running Belt Layer</p>
+                  </div>
+                  <div>
+                    <p>Shock Absorption</p>
+                  </div>
+                  <div>
+                    <p>Speed Range</p>
+                  </div>
+                  <div>
+                    <p>Maximum Horsepower</p>
+                  </div>
+                  <div>
+                    <p>
+                      Maximum Weight<br />
+                      Recommendation
+                    </p>
+                  </div>
+                  <div>
+                    <p>With Handrail</p>
+                  </div>
+                  <div>
+                    <p>With Magnetic Remote Control Storage Slot</p>
+                  </div>
+                </li>
+
+                <li class="chair_buyerguide">
+                  <div class="swiper" id="swiperTable">
+                    <div class="swiper-wrapper"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function loadScript(url, callback) {
+      document.getElementById("") && document.getElementById("").remove()
+      var script = document.createElement("script")
+      script.type = "text/javascript"
+      script.async = "async"
+      script.src = url
+      script.id = ""
+      var head = document.head || document.getElementsByTagName("head")[0]
+      head.appendChild(script)
+      if (script.readyState) {
+        script.onreadystatechange = function () {
+          if (
+            script.readyState == "complete" ||
+            script.readyState == "loaded"
+          ) {
+            script.onreadystatechange = null
+            callback()
+          }
+        }
+      } else {
+        script.onload = function () {
+          callback()
+        }
+      }
+    }
+    loadScript(
+      "https://staticprod.site.flexispot.com/dev/trantor/attachments/jquery-3.6.0.min.js",
+      function () {
+        loadScript(
+          "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/swiper@8.4.7-min-us.js",
+          function () {
+            // desk_container js start
+            const swiperTable = document.querySelector(
+              "#swiperTable .swiper-wrapper"
+            )
+            const yes_svg = ` <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="25"
+                                  height="25"
+                                  viewBox="0 0 25 25"
+                                  fill="none"
+                                >
+                                  <path
+                                    d="M4.03479 12.6251L9.03479 17.6251L20.0348 6.62512"
+                                    stroke="#26333A"
+                                    stroke-width="1.5"
+                                  />
+                                </svg>`
+            const no_svg = ` <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="24"
+                                  height="25"
+                                  viewBox="0 0 24 25"
+                                  fill="none"
+                                >
+                                  <path
+                                    d="M6.55919 6.97633L12.0746 12.4918M17.5901 18.0072L12.0746 12.4918M12.0746 12.4918L6.45513 18.1113L17.486 7.08039"
+                                    stroke="#26333A"
+                                    stroke-width="1.5"
+                                  />
+                                </svg>`
+            swiperTableList = [
+              {
+                productTitle: "FlexiSpot WPS01",
+                warranty: "2 Years",
+                runningBeltWidth: `15.75"`,
+                runningBeltLayer: `<p>Multi-layer</p>
+                                      <p>Anti-slip</p>`,
+                shockAbsorption: "8 Shock-aborbing Pads",
+                speedRange: `<p>Running Speed: 0.6mph-4mph;</p>
+                                <p>Walking Speed: 0.6mph-6.2mph</p>`,
+                maximumHorsepower: "2.25HP",
+                maximumWeight: "265lbs",
+                withHandrail: yes_svg,
+                withMagnetic: no_svg,
+              },
+              {
+                productTitle: "Brand X Walking Pad",
+                warranty: "3 Months",
+                runningBeltWidth: `15"`,
+                runningBeltLayer: `<p>Single-layer</p>
+                                    <p>Easy to Slip</p>`,
+                shockAbsorption: "2 Shock-absorbing Pads",
+                speedRange: `0.6-3.7mph`,
+                maximumHorsepower: "0.65HP",
+                maximumWeight: "198lbs",
+                withHandrail: no_svg,
+                withMagnetic: no_svg,
+              },
+            ]
+
+            swiperTableList.forEach((item) => {
+              swiperTable.innerHTML += `
+                            <div class="swiper-slide">
+                                    <ul class="desk_ul">
+                                      <li class="desk_ul-li">
+                                        <div class="desk_ul-contextLi">
+                                          <div>${item.warranty}</div>
+                                          <div>${item.runningBeltWidth}</div>
+                                          <div>${item.runningBeltLayer}</div>
+                                          <div>${item.shockAbsorption}</div>
+                                          <div>${item.speedRange}</div>
+                                          <div>${item.maximumHorsepower}</div>
+                                          <div>${item.maximumWeight}</div>
+                                          <div>${item.withHandrail}</div>
+                                          <div>${item.withMagnetic}</div>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                            `
+            })
+            new Swiper("#swiperTable", {
+              slidesPerView: 2,
+              slidesPerGroup: 1,
+              observer: true,
+              navigation: {
+                nextEl: ".swiperTable-next",
+                prevEl: ".swiperTable-pre",
+              },
+              breakpoints: {
+                769: {
+                  slidesPerView: 2,
+                },
+                0: {
+                  slidesPerView: 1,
+                },
+              },
+            })
+            function isMobile() {
+              return window.innerWidth <= 768
+            }
+            const nextEl = document.querySelector(".swiperTable-next")
+            const preEl = document.querySelector(".swiperTable-pre")
+            const buttons = document.querySelectorAll(".desk_product_button")
+            nextEl.addEventListener("click", function () {
+              buttons.forEach((button) => {
+                button.innerText = "Brand X Walking Pad"
+              })
+            })
+            preEl.addEventListener("click", function () {
+              buttons.forEach((button) => {
+                button.innerText = "FlexiSpot WPS01"
+              })
+            })
+            // desk_container js end
+          }
+        )
+      }
+    )
+  </script>
+</html>
