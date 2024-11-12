@@ -1417,18 +1417,21 @@
   }
 
   .table-wrapper table thead tr th {
-    font-family: Moderat-Bold;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 21.6px;
-    text-align: center;
-    padding: 14.5px 0 24.5px;
+    width: 20%;
+    vertical-align: bottom;
+  }
+
+  .table-wrapper table tbody tr th img {
+    width: 100% !important;
+  }
+  .head-img {
+    width: 100% !important;
   }
 
   /* 表格内容每行下的线 */
-  .table-wrapper table tbody tr {
-    border-bottom: 1px solid #0000001a;
-  }
+  /* .table-wrapper table tbody tr {
+    border: 1px solid #0000001a;
+  } */
 
   .table-wrapper table tbody tr td {
     font-family: Moderat-Bold;
@@ -1437,6 +1440,7 @@
     line-height: 14px;
     text-align: center;
     color: #26333a;
+    border: 1px solid #0000001a;
   }
 
   .table-wrapper table tbody tr td:first-child {
@@ -1449,10 +1453,6 @@
   @media screen and (max-width: 1440px) {
     .swiperReasons {
       display: block;
-    }
-
-    .properlBox img {
-      width: 320px;
     }
   }
 
@@ -2311,608 +2311,7 @@
 </style>
 <!-- desk_container module end  -->
 <!-- suitcase_container module start -->
-<style>
-  .suitcase_container * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-  }
 
-  .suitcase_container img {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-  }
-
-  .suitcase_container p {
-    margin: 0;
-  }
-
-  .suitcase_container {
-    max-width: 1384px;
-    margin: 48px auto 68px;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-title {
-    color: #26333a;
-    text-align: center;
-    font-variant-numeric: lining-nums proportional-nums;
-    font-feature-settings: "ss18" on, "ss04" on, "ss01" on, "liga" off;
-    font-family: "SupremeLLSub-Black";
-    font-size: 52px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 120%;
-    margin-bottom: 40px;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-text {
-    margin: 16px auto 40px;
-    color: #26333a;
-    text-align: center;
-    font-variant-numeric: lining-nums tabular-nums;
-    font-feature-settings: "ss04" on, "liga" off;
-    font-family: Moderat-Medium;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 120%;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list {
-    display: flex;
-    position: relative;
-    width: 100%;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title {
-    width: 20%;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title>div {
-    display: flex;
-    align-items: center;
-    height: 96px;
-    border-bottom: 1px solid rgba(38, 51, 58, 0.1);
-    gap: 12px;
-  }
-
-  .table-first-column-img {
-    width: 40px !important;
-    height: 40px !important;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title>div p {
-    display: flex;
-    align-items: center;
-    padding: 5px 0;
-    color: rgba(38, 51, 58, 0.8);
-    font-variant-numeric: lining-nums tabular-nums;
-    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
-    font-family: Moderat-Bold;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 120%;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title .height-zw {
-    height: 420px;
-    border: none;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 104px;
-    background: #fdfcf5;
-    border-bottom: 1px solid rgba(38, 51, 58, 0.1);
-    z-index: 3;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide {
-    position: relative;
-    width: 80%;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide #swiperTable2 {
-    height: 100%;
-    overflow: clip;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-li {
-    width: 100%;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 104px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: space-between; */
-    gap: 15px;
-    height: 420px;
-    background: #fdfcf5;
-    border-bottom: 1px solid rgba(38, 51, 58, 0.1);
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi .suitcase_ul-topLi-img {
-    width: 240px;
-    height: 240px;
-    position: relative;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi .suitcase_ul-topLi-img.isHot {
-    position: relative;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-title {
-    color: #26333a;
-    text-align: center;
-    font-family: "Moderat-Bold";
-    font-variant-numeric: lining-nums proportional-nums;
-    font-feature-settings: "ss01" on, "ss04" on, "ss18" on, "liga" off;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-top: 20px;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-price {
-    color: #333;
-    font-variant-numeric: lining-nums tabular-nums;
-    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
-    font-family: Moderat-Bold;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-price>div {
-    color: rgba(38, 51, 58, 0.5);
-    text-align: center;
-    font-variant-numeric: lining-nums tabular-nums;
-    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
-    font-family: Moderat-Medium;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 100%;
-    text-decoration: line-through;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-price>span {
-    color: rgba(38, 51, 58, 0.8);
-    font-variant-numeric: lining-nums tabular-nums;
-    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
-    font-family: Moderat-Medium;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 100%;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 48px;
-    padding: 18px 40px;
-    color: #fff;
-    font-variant-numeric: lining-nums tabular-nums;
-    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
-    font-family: Moderat-Bold;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 100%;
-    border-radius: 40px;
-    background: #26333a;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-link svg {
-    margin-right: 6px;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-link:hover {
-    background-color: #004df2;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi .suitcase_li-btnbox {
-    width: 100%;
-    margin: 11px 0 28px;
-    text-align: center;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi .suitcase_li-btnbox .suitcase_li-btn {
-    display: flex;
-    width: max-content;
-    height: 40px;
-    padding: 16px 24px;
-    margin: 0 auto;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
-    border-radius: 40px;
-    border: 2.5px solid #26333a;
-    color: #26333a;
-    font-family: "Moderat-Bold";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 16px;
-    letter-spacing: 0.7px;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi .suitcase_li-btnbox .suitcase_li-btn:hover {
-    background: #004df2;
-    color: #fff;
-    border: 2.5px solid #004df2;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi {
-    width: 100%;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 0;
-    height: 96px;
-    color: #26333a;
-    text-align: center;
-    font-variant-numeric: lining-nums tabular-nums;
-    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
-    font-family: Moderat-Regular;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%;
-    border-bottom: 1px solid rgba(38, 51, 58, 0.1);
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div>div {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div>div span {
-    font-family: Moderat-Regular;
-    font-weight: 400;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div>div span strong {
-    font-family: Moderat-Bold;
-    font-weight: 700;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div p svg {
-    vertical-align: middle;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div img {
-    max-width: 200px;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box2 {
-    position: absolute;
-    top: 0px;
-    left: calc(8.5% + 22px);
-    width: 44px;
-    height: 79.5%;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box2 .swiperTable-pre2 {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 179px;
-    width: 44px;
-    height: 44px;
-    margin-top: 75px;
-    background: #ede9e4 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_left.svg") no-repeat center center;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 3;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box2 .swiperTable-pre2:hover {
-    background: #004df2 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_left_hover.svg") no-repeat center center;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box2 .swiperTable-pre2.swiper-button-disabled:hover {
-    background: #ede9e4 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_left.svg") no-repeat center center;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box2 {
-    position: absolute;
-    top: 0px;
-    right: -26px;
-    width: 44px;
-    height: 79.5%;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box2 .swiperTable-next2 {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 179px;
-    width: 44px;
-    height: 44px;
-    margin-top: 75px;
-    background: #ede9e4 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_right.svg") no-repeat center center;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 2;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box2 .swiperTable-next2:hover {
-    background: #004df2 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_right_hover.svg") no-repeat center center;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box2 .swiperTable-next2.swiper-button-disabled:hover {
-    background: #ede9e4 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_right.svg") no-repeat center center;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiper-button-disabled {
-    opacity: 0.5;
-    cursor: not-allowed !important;
-  }
-
-  @supports not (overflow: clip) {
-
-    html,
-    body {
-      overflow-x: hidden;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide #swiperTable2 {
-      overflow: visible;
-      clip-path: inset(0);
-    }
-  }
-
-  @media screen and (max-width: 1440px) {
-    .suitcase_container {
-      max-width: 1000px;
-      margin: 80px auto;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-title {
-      font-size: 42px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-text {
-      font-size: 20px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi .suitcase_ul-topLi-img {
-      width: 180px;
-      height: 180px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi,
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title .height-zw {
-      height: 413px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box2 {
-      left: calc(6% + 22px);
-      height: 82.5%;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box2 {
-      right: -35px;
-      height: 82.5%;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-title {
-      font-size: 20px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title>div p,
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div {
-      font-size: 14px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div img {
-      max-width: 160px;
-    }
-  }
-
-  @media screen and (max-width: 1024px) {
-    .suitcase_container {
-      max-width: 768px;
-      margin: 60px auto;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-title {
-      font-size: 32px;
-      margin-bottom: 28px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-text {
-      margin-bottom: 24px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title {
-      width: 12.5%;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide {
-      width: 87.5%;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi .suitcase_ul-topLi-img {
-      width: 140px;
-      height: 140px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box2 {
-      left: calc(5% + 22px);
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi,
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title .height-zw {
-      top: 92px;
-      height: 328px;
-      padding-bottom: 24px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-title {
-      font-size: 20px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-price {
-      font-size: 20px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-price>span {
-      font-size: 14px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-price>div,
-    .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-link {
-      font-size: 14px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-link svg {
-      width: 20px;
-      height: 20px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-link {
-      height: 40px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div,
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title>div {
-      height: 60px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title>div p,
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div {
-      font-size: 14px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box2 .swiperTable-pre2,
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box2 .swiperTable-next2 {
-      top: 163px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .c_table_theme {
-      height: 84px !important;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div img {
-      max-width: 128px;
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    .suitcase_container {
-      padding: 0 20px;
-      margin: 42px 0 48px;
-    }
-
-    .table-first-column-img {
-      width: 34px !important;
-      height: 34px !important;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-title {
-      text-align: center;
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-text {
-      max-width: 100%;
-      margin: 12px 0 24px;
-      font-size: 18px;
-      text-align: left;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title {
-      width: 28.65%;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide {
-      width: 71.35%;
-      z-index: 99;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div svg {
-      width: 16px;
-      height: 16px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div svg.yes_svg {
-      width: 12px;
-      height: 8px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi,
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title .height-zw {
-      height: 328px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .swiper-slide2 {
-      width: 168px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box2 {
-      left: calc(20% + 22px);
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box2 .swiperTable-pre2 {
-      z-index: 100;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box2 {
-      right: 0px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box2 .swiperTable-next2 {
-      z-index: 99;
-    }
-
-    .suitcase_product-table {
-      position: relative;
-      margin-right: -20px;
-    }
-
-    .suitcase_product-table .suitcase_buying_guide-product-mobile-shadow {
-      display: none;
-      position: absolute;
-      height: 100%;
-      width: calc(100% + 20px);
-      margin-left: -20px;
-    }
-
-    .suitcase_product-table .suitcase_buying_guide-product-mobile-shadow .suitcase_buying_guide-product-mobile-shadow-main {
-      position: sticky;
-      width: 100%;
-      height: 328px;
-      top: 92px;
-      background: #fdfcf5;
-      box-shadow: 0px 4px 10px 0px rgba(38, 51, 58, 0.15);
-      z-index: 1;
-    }
-  }
-</style>
 <!-- suitcase_container module end -->
 <div class="loc_container">
   <div class="loc_container_nav">
@@ -2987,47 +2386,71 @@
           smaller suitcase might suffice, allowing you to pack efficiently. However, for longer journeys, you'll likely
           need a larger suitcase to accommodate extra outfits, shoes, and personal items.
         </div>
-        <div class="suitcase_container">
-          <div class="suitcase_product">
-            <div class="suitcase_product-title">
-              Which Ergonomic Chair is right for you?
-            </div>
-            <div class="suitcase_product-table">
-              <div class="suitcase_buying_guide-product-mobile-shadow">
-                <div class="suitcase_buying_guide-product-mobile-shadow-main"></div>
-              </div>
-              <ul class="suitcase_product-table-list">
-                <li class="suitcase_product-table-title">
-                  <div class="height-zw"></div>
-                  <div>
-                    <p>Size</p>
-                  </div>
-                  <div>
-                    <p>Length of Trip</p>
-                  </div>
-                  <div>
-                    <p>Capacity</p>
-                  </div>
-                  <div>
-                    <p>Short Getaways</p>
-                  </div>
-                  <div>
-                    <p>Longer Journeys</p>
-                  </div>
-                </li>
-                <div class="swiperTable-pre-box2">
-                  <div class="swiperTable-pre2"></div>
-                </div>
-                <li class="suitcase_buyerguide">
-                  <div class="swiper2" id="swiperTable2">
-                    <div class="swiper-wrapper2"></div>
-                  </div>
-                </li>
-                <div class="swiperTable-next-box2">
-                  <div class="swiperTable-next2"></div>
-                </div>
-              </ul>
-            </div>
+        <div class="table-wrapper">
+          <div class="table-scroll">
+            <table border="0" align="center" cellpadding="0" cellspacing="20">
+              <!-- 表头 -->
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>
+                    <img
+                      class="head-img"
+                      src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241112-20-inch.png"
+                      alt="">
+                  </th>
+                  <th>
+                    <img
+                      class="head-img"
+                      src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241112-24-inch.png"
+                      alt="">
+                  </th>
+                  <th>
+                    <img
+                      class="head-img"
+                      src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241112-28-inch.png"
+                      alt="">
+                  </th>
+                  <th>
+                    <img
+                      class="head-img"
+                      src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241112-32-inch.png"
+                      alt="">
+                  </th>
+                </tr>
+              </thead>
+              <!-- 表格内容 -->
+              <tbody>
+                <tr>
+                  <td>Size</td>
+                  <td>Carry-On</td>
+                  <td>Check-In Medium</td>
+                  <td>Check-In Large</td>
+                  <td>Trunk</td>
+                </tr>
+                <tr>
+                  <td>Capacity</td>
+                  <td>5-7 outfits</td>
+                  <td>10-12 outfits</td>
+                  <td>15-18 outfits</td>
+                  <td>18-21 outfits</td>
+                </tr>
+                <tr>
+                  <td>Short Getaways</td>
+                  <td>Recommend</td>
+                  <td>/</td>
+                  <td>/</td>
+                  <td>/</td>
+                </tr>
+                <tr>
+                  <td>Longer Journeys</td>
+                  <td>/</td>
+                  <td>Recommend</td>
+                  <td>Recommend</td>
+                  <td>Recommend</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -3476,6 +2899,26 @@
                 Capacity: "15-18 outfits",
                 Dimensions: `29.1" x 20.5" x 12.2"`,
                 Weight: "11.1 lbs",
+                Material: "100% Polycarbonate",
+                Warranty: "3 Years",
+              },
+              {
+                imgUrl:
+                  "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-product-img5.png",
+                productTitle: "Trunk",
+                // productSku: "C7 Series",
+                productSku: "C7 M", //dev
+                href: "https://www.flexispot.com/flexispot-best-ergonomic-office-chair-c7",
+                // productPrice: "???",
+                productPrice: "$329.99",
+                ColorOption: `Black`,
+                CarryOn: "×",
+                CupHolder: "×",
+                LaptopCompartment: "×",
+                LengthOfTrip: "3+ weeks",
+                Capacity: "18-21 outfits",
+                Dimensions: `31.5" x 16.9" x 13.4"`,
+                Weight: "10.5 lbs",
                 Material: "100% Polycarbonate",
                 Warranty: "3 Years",
               },
