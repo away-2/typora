@@ -2,6 +2,8 @@
 <link rel="stylesheet" type="text/css" href="https://staticprod.site.flexispot.com/dev/trantor/attachments/slick.css" />
 <link rel="stylesheet" type="text/css"
   href="https://s3.springbeetle.com/prod-us-bucket/trantor/attachments/CA/slick-theme.css" />
+<link rel="stylesheet"
+  href="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/swiper@8.4.7-min-us.css" />
 <style>
   .eve-container-part-body {
     overflow: hidden;
@@ -79,7 +81,7 @@
     position: fixed;
     top: 217px;
     left: 93px;
-    z-index: 3;
+    z-index: 99;
   }
 
   .loc_container_nav_icon {
@@ -421,7 +423,7 @@
   }
 
   .parallax-background {
-    background-image: url("https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-parallax-bg-v2.jpg");
+    background-image: url("https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-parallax-pc.png");
     background-attachment: fixed;
     background-position: 40% -40%;
     background-repeat: no-repeat;
@@ -446,7 +448,7 @@
     }
 
     .parallax-background {
-      background-image: url("https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-parallax-bg-m.jpg");
+      background-image: url("https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-parallax-mobile.png");
       background-attachment: initial;
       background-position: inherit;
     }
@@ -672,26 +674,27 @@
     margin-top: 40px;
     display: flex;
     grid-gap: 8.75px;
+    justify-content: center;
   }
 
   .loc_moudle_3_content_tab_item {
     background: #ede9e4;
-    border-radius: 12px;
-    font-family: "Moderat-Medium";
+    border-radius: 43px;
+    font-family: "SupremeLLSub-Black";
     font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
+    font-weight: 900;
+    font-size: 14px;
     line-height: 24px;
     text-align: center;
     font-feature-settings: "pnum" on, "lnum" on, "ss02" on;
     color: #26333a;
-    padding: 16px 72px;
+    padding: 16px 35px;
     cursor: pointer;
   }
 
   .loc_tab_active {
     background: #26333a;
-    color: #f5f5f5;
+    color: #FDFCF5;
   }
 
   .loc_moudle_3_content_tab_content_box {
@@ -796,6 +799,7 @@
       grid-gap: 12px;
       overflow-x: scroll;
       padding-bottom: 8px;
+      justify-content: flex-start;
     }
 
     .loc_moudle_3_content_tab::-webkit-scrollbar-track {
@@ -896,9 +900,6 @@
     text-align: center;
     font-feature-settings: "pnum" on, "lnum" on;
     color: #26333a;
-    margin-top: 40px;
-    padding: 0 22px;
-    min-height: 48px;
   }
 
   .loc_moudle_5_content_slick_item_text {
@@ -913,6 +914,20 @@
     font-feature-settings: "pnum" on, "lnum" on;
     color: #26333a;
     margin-top: 12px;
+    min-height: 120px;
+  }
+
+
+  .loc_moudle_5_content_slick_item_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    width: 220px;
+  }
+
+  .loc_moudle_5_content_slick_item_img img {
+    width: 100%;
   }
 
   @media (max-width: 768px) {
@@ -953,7 +968,7 @@
     }
 
     .loc_moudle_5_content_slick_item_img img {
-      width: 60px;
+      width: 120px;
       height: auto;
     }
 
@@ -971,392 +986,6 @@
   }
 </style>
 <!-- loc_moudle_5 style end -->
-<!-- loc_moudle_6 style start -->
-<style>
-  .loc_moudle_6 {
-    margin-top: 120px;
-  }
-
-  .loc_moudle_6_content_slick_item {
-    position: relative;
-  }
-
-  .loc_moudle_6_content_slick_item_desc {
-    position: absolute;
-    top: 362px;
-    left: 42px;
-    padding: 42px 25px;
-    background: #f5fce0;
-    border-radius: 12px;
-  }
-
-  .loc_moudle_6_content_slick_item_desc_text {
-    font-family: "Moderat-Medium";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 120%;
-    font-feature-settings: "pnum" on, "lnum" on;
-    color: #26333a;
-    max-width: 200px;
-  }
-
-  .loc_moudle_6_footer {
-    margin-top: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .loc_moudle_6_footer_line {
-    border-bottom: 1px dashed rgba(38, 51, 58, 0.5);
-    width: 1220px;
-  }
-
-  .loc_moudle_6_footer_line:nth-child(1) {
-    margin-left: calc(50% - 1220px / 2 + 33.19px);
-  }
-
-  .loc_moudle_6_footer_line:last-child {
-    margin-left: calc(50% - 1220px / 2 - 33.19px);
-  }
-
-  .loc_moudle_6_footer_text {
-    font-style: normal;
-    font-size: 24px;
-    line-height: 28px;
-  }
-
-  .loc_moudle_6_footer_text:nth-child(2) {
-    font-family: "Moderat-Regular";
-    font-weight: 400;
-    color: rgba(38, 51, 58, 0.8);
-    margin-top: 40px;
-    text-align: center;
-  }
-
-  .loc_moudle_6_footer_text:nth-child(3) {
-    font-family: "Moderat-Medium";
-    font-weight: 700;
-    color: #26333a;
-    margin-left: calc(50% - 107px / 2 + 436.35px);
-    padding-bottom: 24px;
-    width: 130px;
-  }
-
-  @media (max-width: 768px) {
-    .loc_moudle_6 {
-      margin-top: 38px;
-    }
-
-    .loc_moudle_6_content_slick_item_desc {
-      top: auto;
-      bottom: 15px;
-      left: 15px;
-      padding: 26px 20px;
-    }
-
-    .loc_moudle_6_content_slick_item {
-      min-height: 280px;
-    }
-
-    .loc_moudle_6_content_slick_item_desc_text {
-      max-width: 140px;
-      font-size: 12px;
-    }
-
-    .loc_moudle_6_footer {
-      margin-top: 20px;
-      width: 100%;
-    }
-
-    .loc_moudle_6_footer_line {
-      width: 100%;
-    }
-
-    .loc_moudle_6_footer_line:nth-child(1) {
-      margin-left: 0;
-    }
-
-    .loc_moudle_6_footer_line:last-child {
-      margin-left: 0;
-    }
-
-    .loc_moudle_6_footer_text:nth-child(2) {
-      font-size: 16px;
-      line-height: 28px;
-      margin-top: 20px;
-    }
-
-    .loc_moudle_6_footer_text:nth-child(3) {
-      font-size: 18px;
-      line-height: 28px;
-      padding-bottom: 18px;
-      text-align: right;
-      margin-left: 0;
-      padding-right: 10px;
-      width: 100%;
-    }
-  }
-</style>
-<!-- loc_moudle_6 style end -->
-<!-- loc_moudle_7 style start -->
-<style>
-  .loc_moudle_7 {
-    margin-top: 120px;
-  }
-
-  .loc_moudle_7_content_box {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 80px;
-    position: relative;
-    margin-left: 42px;
-  }
-
-  .loc_moudle_7_content_box_left {
-    max-width: 470px;
-  }
-
-  .loc_moudle_7_content_dt {
-    position: relative;
-    width: 470px;
-    cursor: pointer;
-  }
-
-  .loc_moudle_7_content_dt_title_icon {
-    position: absolute;
-    top: 8px;
-    left: -42px;
-    font-family: "Moderat-Medium";
-    font-style: normal;
-    font-weight: 702;
-    font-size: 18px;
-    line-height: 18px;
-    text-align: right;
-    font-feature-settings: "salt" on, "ss01" on, "ss02" on, "ss03" on,
-      "liga" off;
-    color: #004df2;
-  }
-
-  .loc_moudle_7_content_dt_title {
-    font-family: "Moderat-Regular";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 34px;
-    line-height: 34px;
-    font-feature-settings: "liga" off;
-    color: #26333a;
-    max-width: 348px;
-  }
-
-  .loc_moudle_7_content_dt_icon {
-    position: absolute;
-    right: 10px;
-    top: 8px;
-    display: block;
-    width: 24px;
-    height: 24px;
-    background: url("https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-off.png") no-repeat;
-  }
-
-  #open .loc_moudle_7_content_dt_icon {
-    background: url("https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-open.png") no-repeat;
-  }
-
-  .loc_moudle_7_content_text,
-  .loc_moudle_7_content_li {
-    font-family: "Moderat-Regular";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 120%;
-    color: rgba(38, 51, 58, 0.8);
-    margin-top: 26px;
-  }
-
-  .loc_moudle_7_content_li {
-    margin-top: 8px;
-    text-indent: -20px;
-    margin-left: 25px;
-  }
-
-  .loc_moudle_7_content_li:first-child {
-    margin-top: 50px;
-  }
-
-  .loc_moudle_7_content_li::before {
-    content: "";
-    width: 4px;
-    height: 4px;
-    display: inline-block;
-    border-radius: 50%;
-    background: #666666;
-    vertical-align: middle;
-    margin-right: 8px;
-    margin-top: -6px;
-    margin-left: 5px;
-  }
-
-  .loc_moudle_7_content_li_a {
-    color: #004df2;
-    border-bottom: 1px solid;
-  }
-
-  .loc_moudle_7_content_dl_main_line {
-    margin: 32px 0;
-    border-bottom: 1px solid #ede9e4;
-  }
-
-  .loc_moudle_7_content_dl_main_dd {
-    display: none;
-  }
-
-  .loc_moudle_7_content_box_right {
-    position: sticky;
-    top: 150px;
-    width: 620px;
-    height: 620px;
-  }
-
-  .loc_moudle_7_footer {
-    margin-top: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .loc_moudle_7_footer_line {
-    border-bottom: 1px dashed rgba(38, 51, 58, 0.5);
-    width: 1220px;
-  }
-
-  .loc_moudle_7_footer_line:nth-child(1) {
-    margin-left: calc(50% - 1220px / 2 + 33.19px);
-  }
-
-  .loc_moudle_7_footer_line:last-child {
-    margin-left: calc(50% - 1220px / 2 - 33.19px);
-  }
-
-  .loc_moudle_7_footer_text {
-    font-style: normal;
-    font-size: 24px;
-    line-height: 28px;
-  }
-
-  .loc_moudle_7_footer_text:nth-child(2) {
-    font-family: "Moderat-Regular";
-    font-weight: 400;
-    color: rgba(38, 51, 58, 0.8);
-    margin: 0 auto;
-    margin-top: 40px;
-    text-align: center;
-    max-width: 665px;
-  }
-
-  .loc_moudle_7_footer_text:nth-child(3) {
-    font-family: "Moderat-Medium";
-    font-weight: 700;
-    color: #26333a;
-    margin-left: calc(50% - 107px / 2 + 436.35px);
-    padding-bottom: 24px;
-    width: 130px;
-  }
-
-  @media (max-width: 768px) {
-    .loc_moudle_7 {
-      margin-top: 60px;
-    }
-
-    .loc_moudle_7_content_box {
-      flex-direction: column-reverse;
-      margin-top: 20px;
-      margin-left: 0;
-    }
-
-    .loc_moudle_7_content_dt {
-      width: 100%;
-    }
-
-    .loc_moudle_7_content_box_left {
-      padding-left: 50px;
-    }
-
-    .loc_moudle_7_content_dt_title_icon {
-      left: -50px;
-    }
-
-    .loc_moudle_7_content_dt_title {
-      font-size: 24px;
-      line-height: 34px;
-      max-width: 213px;
-    }
-
-    .loc_moudle_7_content_text,
-    .loc_moudle_7_content_li {
-      margin-top: 20px;
-      font-size: 14px;
-    }
-
-    .loc_moudle_7_content_li:first-child {
-      margin-top: 20px;
-    }
-
-    .loc_moudle_7_content_dt_title:last-child {
-      margin-top: 40px;
-    }
-
-    .loc_moudle_7_content_dl_main_line {
-      margin: 24px 0;
-    }
-
-    .loc_moudle_7_content_box_right {
-      position: initial;
-      width: 100%;
-      height: auto;
-    }
-
-    .loc_moudle_7_content_box_right_img img {
-      width: 100%;
-      height: auto;
-    }
-
-    .loc_moudle_7_footer {
-      margin-top: 20px;
-      width: 100%;
-    }
-
-    .loc_moudle_7_footer_line {
-      width: 100%;
-    }
-
-    .loc_moudle_7_footer_line:nth-child(1) {
-      margin-left: 0;
-    }
-
-    .loc_moudle_7_footer_line:last-child {
-      margin-left: 0;
-    }
-
-    .loc_moudle_7_footer_text:nth-child(2) {
-      font-size: 16px;
-      line-height: 28px;
-      margin-top: 20px;
-    }
-
-    .loc_moudle_7_footer_text:nth-child(3) {
-      font-size: 18px;
-      line-height: 28px;
-      padding-bottom: 18px;
-      text-align: right;
-      margin-left: 0;
-      padding-right: 10px;
-      width: 100%;
-    }
-  }
-</style>
-<!-- loc_moudle_7 style end -->
 
 <!-- loc_moudle_8 style start -->
 <style>
@@ -1771,6 +1400,1551 @@
 </style>
 <!-- slick style end -->
 
+<!-- new add -->
+<!-- loc_moudle_1 table style start -->
+<style>
+  .table-wrapper table {
+    margin: 40px auto;
+    border-collapse: collapse;
+    max-width: 1000px;
+    width: 1000px;
+    table-layout: fixed;
+  }
+
+  /* 表头下的线 */
+  .table-wrapper table thead tr {
+    /* border-bottom: 1px solid #0000001a;  */
+  }
+
+  .table-wrapper table thead tr th {
+    width: 20%;
+    vertical-align: bottom;
+  }
+
+  .table-wrapper table tbody tr th img {
+    width: 100% !important;
+  }
+
+  .head-img {
+    width: 100% !important;
+  }
+
+  /* 表格内容每行下的线 */
+  /* .table-wrapper table tbody tr {
+    border: 1px solid #0000001a;
+  } */
+
+  .table-wrapper table tbody tr td {
+    font-family: Moderat-Bold;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    text-align: center;
+    color: #26333a;
+    border: 1px solid #0000001a;
+  }
+
+  .table-wrapper table tbody tr td:first-child {
+    text-align: left;
+    padding: 31px 0 28px 70px;
+    font-size: 18px;
+    line-height: 21.6px;
+  }
+
+  @media screen and (max-width: 1440px) {
+    .swiperReasons {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .table-wrapper table {
+      width: 768px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .table-wrapper {
+      display: flex;
+      width: 100%;
+      overflow-x: auto;
+      /* 允许水平滚动 */
+    }
+
+    .table-scroll {
+      overflow-x: auto;
+      /* 允许水平滚动 */
+      width: 100%;
+    }
+
+    .table-wrapper table {
+      border-collapse: collapse;
+      /* 合并边框 */
+      width: 100%;
+      min-width: 600px;
+      /* 设置最小宽度 */
+    }
+
+    .table-wrapper th,
+    .table-wrapper td {
+      padding: 10px;
+      /* 内边距 */
+      text-align: left;
+      /* 左对齐 */
+    }
+
+    .table-wrapper th:first-child,
+    .table-wrapper td:first-child {
+      position: sticky;
+      /* 固定列 */
+      left: 0;
+      /* 距离左边 0 */
+      background-color: rgb(253, 252, 245);
+      z-index: 1;
+      /* 确保它在其他列上面 */
+      width: 150px;
+    }
+
+    .table-wrapper table tbody tr td:first-child {
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: 16px;
+    }
+  }
+</style>
+<!--  loc_moudle_1 table end -->
+<!-- loc_moudle_2 style start -->
+<style>
+  .loc_moudle_2_content_title {
+    margin-top: 80px;
+    line-height: 60px;
+  }
+
+  .loc_moudle_2_content_accordion {
+    margin-top: 50px;
+  }
+
+  .loc_moudle_2_content_dl_main {
+    padding: 32px 66px;
+    border-bottom: 1px solid rgba(38, 51, 58, 0.1);
+  }
+
+  .loc_moudle_2_content_dl_main_dt {
+    cursor: pointer;
+  }
+
+  .loc_moudle_2_content_dt {
+    cursor: pointer;
+    position: relative;
+    font-family: "Moderat-Bold";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: "ss02" on;
+    color: #26333a;
+  }
+
+  .loc_moudle_2_content_dt_icon {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url("https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-off.png") no-repeat;
+  }
+
+  #open .loc_moudle_2_content_dt_icon {
+    background: url("https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-open.png") no-repeat;
+  }
+
+  .loc_moudle_2_content_text {
+    font-family: "Moderat-Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    /* align-items: left; */
+    font-feature-settings: "pnum" on, "lnum" on, "ss02" on;
+    color: rgba(38, 51, 58, 0.8);
+  }
+
+  .loc_moudle_2_content_dl_main_dd {
+    display: none;
+  }
+
+  .loc_moudle_2_content_dl_main_dd_box {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .loc_moudle_2_content_dd_botton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 182px;
+    height: 40px;
+    background: #26333a;
+    box-shadow: 8px 8px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    margin-top: 26px;
+    cursor: pointer;
+  }
+
+  .loc_moudle_2_content_dd_botton_box {
+    font-family: "Moderat-Medium";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+  }
+
+  @media screen and (max-width: 1440px) {
+    .loc_moudle_2_content_title {
+      margin-top: 60px;
+      font-size: 48px;
+    }
+
+    .loc_moudle_2_content_accordion {
+      margin-top: 32px;
+    }
+
+    .loc_moudle_2_content_dl_main {
+      padding: 32px 22px 32px 32px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .loc_moudle_2_content_title {
+      margin-top: 40px;
+      padding: 0 33px;
+      font-size: 32px;
+      line-height: 120%;
+    }
+
+    .loc_moudle_2_content_accordion {
+      margin-top: 24px;
+    }
+
+    .loc_moudle_2_content_dt,
+    .loc_moudle_2_content_text {
+      font-size: 16px;
+    }
+
+    .loc_moudle_2_content_dl_main {
+      padding: 20px 21px 32px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .loc_moudle_2_content_title {
+      margin-top: 32px;
+      padding: 0;
+    }
+
+    .loc_moudle_2_content_accordion {
+      margin-top: 32px;
+    }
+
+    .loc_moudle_2_content_dl_main {
+      padding: 14px 0 24px;
+    }
+
+    .loc_moudle_2_content_dl .loc_moudle_2_content_dl_main:nth-child(2) {
+      padding: 0;
+    }
+
+    .loc_moudle_2_content_dl_main_dd_box {
+      flex-direction: column-reverse;
+    }
+
+    .loc_moudle_2_content_dd_right img {
+      width: 200px;
+      margin-top: 20px;
+    }
+
+    .loc_moudle_2_content_text {
+      padding: 14px 0;
+      font-size: 14px;
+    }
+  }
+</style>
+<!-- loc_moudle_2 style end -->
+<!-- desk_container module start-->
+<style>
+  .desk_container * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+  }
+
+  .desk_container img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .desk_container p {
+    margin: 0;
+  }
+
+  .desk_container {
+    max-width: 1384px;
+    margin: 48px auto 68px;
+  }
+
+  .desk_container .desk_product .desk_product-title {
+    color: #26333a;
+    text-align: center;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: "ss18" on, "ss04" on, "ss01" on, "liga" off;
+    font-family: "SupremeLLSub-Black";
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 120%;
+    margin-bottom: 40px;
+  }
+
+  .desk_container .desk_product .desk_product-text {
+    margin: 16px auto 40px;
+    color: #26333a;
+    text-align: center;
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "ss04" on, "liga" off;
+    font-family: Moderat-Medium;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list {
+    display: flex;
+    position: relative;
+    width: 100%;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title {
+    width: 20%;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title>div {
+    display: flex;
+    align-items: center;
+    height: 96px;
+    border-bottom: 1px solid rgba(38, 51, 58, 0.1);
+    gap: 12px;
+  }
+
+  .table-first-column-img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title>div p {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    color: rgba(38, 51, 58, 0.8);
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
+    font-family: Moderat-Bold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title .height-zw {
+    height: 420px;
+    border: none;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 104px;
+    background: #fdfcf5;
+    border-bottom: 1px solid rgba(38, 51, 58, 0.1);
+    z-index: 3;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide {
+    position: relative;
+    width: 80%;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide #swiperTable {
+    height: 100%;
+    overflow: clip;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-li {
+    width: 100%;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 104px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 15px;
+    height: 420px;
+    background: #fdfcf5;
+    border-bottom: 1px solid rgba(38, 51, 58, 0.1);
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi .desk_ul-topLi-img {
+    width: 240px;
+    height: 240px;
+    position: relative;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi .desk_ul-topLi-img.isHot {
+    position: relative;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi .desk_ul-topLi-img.isHot::after {
+    content: "HOT";
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    display: flex;
+    padding: 1px 4px;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 16px;
+    color: #fff;
+    font-family: Moderat-Bold;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 14px;
+    border-radius: 22px;
+    background: #004df2;
+    box-sizing: border-box;
+  }
+
+  .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-title {
+    color: #26333a;
+    text-align: center;
+    font-family: "Moderat-Bold";
+    font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: "ss01" on, "ss04" on, "ss18" on, "liga" off;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 20px;
+  }
+
+  .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-price {
+    color: #333;
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
+    font-family: Moderat-Bold;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-price>div {
+    color: rgba(38, 51, 58, 0.5);
+    text-align: center;
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
+    font-family: Moderat-Medium;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    text-decoration: line-through;
+  }
+
+  .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-price>span {
+    color: rgba(38, 51, 58, 0.8);
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
+    font-family: Moderat-Medium;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+  }
+
+  .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    padding: 18px 40px;
+    color: #fff;
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
+    font-family: Moderat-Bold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    border-radius: 40px;
+    background: #26333a;
+  }
+
+  .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-link svg {
+    margin-right: 6px;
+  }
+
+  .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-link:hover {
+    background-color: #004df2;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi .desk_li-btnbox {
+    width: 100%;
+    margin: 11px 0 28px;
+    text-align: center;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi .desk_li-btnbox .desk_li-btn {
+    display: flex;
+    width: max-content;
+    height: 40px;
+    padding: 16px 24px;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 40px;
+    border: 2.5px solid #26333a;
+    color: #26333a;
+    font-family: "Moderat-Bold";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.7px;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi .desk_li-btnbox .desk_li-btn:hover {
+    background: #004df2;
+    color: #fff;
+    border: 2.5px solid #004df2;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi {
+    width: 100%;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    height: 96px;
+    color: #26333a;
+    text-align: center;
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
+    font-family: Moderat-Regular;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    border-bottom: 1px solid rgba(38, 51, 58, 0.1);
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div>div {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div>div span {
+    font-family: Moderat-Regular;
+    font-weight: 400;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div>div span strong {
+    font-family: Moderat-Bold;
+    font-weight: 700;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div p svg {
+    vertical-align: middle;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div img {
+    max-width: 200px;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-pre-box {
+    position: absolute;
+    top: 0px;
+    left: calc(8.5% + 22px);
+    width: 44px;
+    height: 79.5%;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-pre-box .swiperTable-pre {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 179px;
+    width: 44px;
+    height: 44px;
+    margin-top: 75px;
+    background: #ede9e4 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_left.svg") no-repeat center center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-pre-box .swiperTable-pre:hover {
+    background: #004df2 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_left_hover.svg") no-repeat center center;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-pre-box .swiperTable-pre.swiper-button-disabled:hover {
+    background: #ede9e4 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_left.svg") no-repeat center center;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-next-box {
+    position: absolute;
+    top: 0px;
+    right: -26px;
+    width: 44px;
+    height: 79.5%;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-next-box .swiperTable-next {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 179px;
+    width: 44px;
+    height: 44px;
+    margin-top: 75px;
+    background: #ede9e4 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_right.svg") no-repeat center center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-next-box .swiperTable-next:hover {
+    background: #004df2 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_right_hover.svg") no-repeat center center;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-next-box .swiperTable-next.swiper-button-disabled:hover {
+    background: #ede9e4 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_right.svg") no-repeat center center;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .swiper-button-disabled {
+    opacity: 0.5;
+    cursor: not-allowed !important;
+  }
+
+  .desk_container .desk_product .desk_product-table .desk_product-table-list .c_table_theme {
+    height: 112px !important;
+  }
+
+  @supports not (overflow: clip) {
+
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide #swiperTable {
+      overflow: visible;
+      clip-path: inset(0);
+    }
+  }
+
+  @media screen and (max-width: 1440px) {
+    .desk_container {
+      max-width: 1000px;
+      margin: 80px auto;
+    }
+
+    .desk_container .desk_product .desk_product-title {
+      font-size: 42px;
+    }
+
+    .desk_container .desk_product .desk_product-text {
+      font-size: 20px;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi .desk_ul-topLi-img {
+      width: 180px;
+      height: 180px;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi,
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title .height-zw {
+      height: 413px;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-pre-box {
+      left: calc(6% + 22px);
+      height: 82.5%;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-next-box {
+      right: -35px;
+      height: 82.5%;
+    }
+
+    .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-title {
+      font-size: 20px;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title>div p,
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div {
+      font-size: 14px;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div img {
+      max-width: 160px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .desk_container {
+      max-width: 768px;
+      margin: 60px auto;
+    }
+
+    .desk_container .desk_product .desk_product-title {
+      font-size: 32px;
+      margin-bottom: 28px;
+    }
+
+    .desk_container .desk_product .desk_product-text {
+      margin-bottom: 24px;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title {
+      width: 12.5%;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide {
+      width: 87.5%;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi .desk_ul-topLi-img {
+      width: 140px;
+      height: 140px;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-pre-box {
+      left: calc(5% + 22px);
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi,
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title .height-zw {
+      top: 92px;
+      height: 328px;
+      padding-bottom: 24px;
+    }
+
+    .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-title {
+      font-size: 20px;
+    }
+
+    .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-price {
+      font-size: 20px;
+    }
+
+    .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-price>span {
+      font-size: 14px;
+    }
+
+    .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-price>div,
+    .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-link {
+      font-size: 14px;
+    }
+
+    .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-link svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-link {
+      height: 40px;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div,
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title>div {
+      height: 60px;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title>div p,
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div {
+      font-size: 14px;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-pre-box .swiperTable-pre,
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-next-box .swiperTable-next {
+      top: 163px;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .c_table_theme {
+      height: 84px !important;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div img {
+      max-width: 128px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .desk_container {
+      padding: 0 20px;
+      margin: 42px 0 48px;
+    }
+
+    .table-first-column-img {
+      width: 34px !important;
+      height: 34px !important;
+    }
+
+    .desk_container .desk_product .desk_product-title {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .desk_container .desk_product .desk_product-text {
+      max-width: 100%;
+      margin: 12px 0 24px;
+      font-size: 18px;
+      text-align: left;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title {
+      width: 28.65%;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide {
+      width: 71.35%;
+      z-index: 99;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div svg.yes_svg {
+      width: 12px;
+      height: 8px;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi,
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title .height-zw {
+      height: 328px;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .swiper-slide2 {
+      width: 168px;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-pre-box {
+      left: calc(20% + 22px);
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-pre-box .swiperTable-pre {
+      z-index: 100;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-next-box {
+      right: 0px;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-next-box .swiperTable-next {
+      z-index: 99;
+    }
+
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .c_table_theme {
+      height: 84px !important;
+    }
+
+    .desk_product-table {
+      position: relative;
+      margin-right: -20px;
+    }
+
+    .desk_product-table .chair_buying_guide-product-mobile-shadow {
+      display: none;
+      position: absolute;
+      height: 100%;
+      width: calc(100% + 20px);
+      margin-left: -20px;
+    }
+
+    .desk_product-table .chair_buying_guide-product-mobile-shadow .chair_buying_guide-product-mobile-shadow-main {
+      position: sticky;
+      width: 100%;
+      height: 328px;
+      top: 92px;
+      background: #fdfcf5;
+      box-shadow: 0px 4px 10px 0px rgba(38, 51, 58, 0.15);
+      z-index: 1;
+    }
+  }
+</style>
+<!-- desk_container module end  -->
+<!-- suitcase_container module start -->
+<style>
+  .suitcase_container * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+  }
+
+  .suitcase_container img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .suitcase_container p {
+    margin: 0;
+  }
+
+  .suitcase_container {
+    max-width: 1384px;
+    margin: 48px auto 68px;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-title {
+    color: #26333a;
+    text-align: center;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: "ss18" on, "ss04" on, "ss01" on, "liga" off;
+    font-family: "SupremeLLSub-Black";
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 120%;
+    margin-bottom: 40px;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-text {
+    margin: 16px auto 40px;
+    color: #26333a;
+    text-align: center;
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "ss04" on, "liga" off;
+    font-family: Moderat-Medium;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list {
+    display: flex;
+    position: relative;
+    width: 100%;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title {
+    width: 20%;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title>div {
+    display: flex;
+    align-items: center;
+    height: 96px;
+    border-bottom: 1px solid rgba(38, 51, 58, 0.1);
+    gap: 12px;
+  }
+
+  .table-first-column-img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title>div p {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    color: rgba(38, 51, 58, 0.8);
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
+    font-family: Moderat-Bold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title .height-zw {
+    height: 100px;
+    border: none;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 104px;
+    background: #fdfcf5;
+    border-bottom: 1px solid rgba(38, 51, 58, 0.1);
+    z-index: 3;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide {
+    position: relative;
+    width: 80%;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide #swiperTable2 {
+    height: 100%;
+    overflow: clip;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-li {
+    width: 100%;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 104px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 15px;
+    height: 100px;
+    background: #fdfcf5;
+    border-bottom: 1px solid rgba(38, 51, 58, 0.1);
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi .suitcase_ul-topLi-img {
+    width: 240px;
+    height: 240px;
+    position: relative;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi .suitcase_ul-topLi-img.isHot {
+    position: relative;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi .suitcase_ul-topLi-img.isHot::after {
+    content: "HOT";
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    display: flex;
+    padding: 1px 4px;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 16px;
+    color: #fff;
+    font-family: Moderat-Bold;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 14px;
+    border-radius: 22px;
+    background: #004df2;
+    box-sizing: border-box;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-title {
+    color: #26333a;
+    text-align: center;
+    font-family: "Moderat-Bold";
+    font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: "ss01" on, "ss04" on, "ss18" on, "liga" off;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 20px;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-price {
+    color: #333;
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
+    font-family: Moderat-Bold;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-price>div {
+    color: rgba(38, 51, 58, 0.5);
+    text-align: center;
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
+    font-family: Moderat-Medium;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    text-decoration: line-through;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-price>span {
+    color: rgba(38, 51, 58, 0.8);
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
+    font-family: Moderat-Medium;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    padding: 18px 40px;
+    color: #fff;
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
+    font-family: Moderat-Bold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    border-radius: 40px;
+    background: #26333a;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-link svg {
+    margin-right: 6px;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-link:hover {
+    background-color: #004df2;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi .suitcase_li-btnbox {
+    width: 100%;
+    margin: 11px 0 28px;
+    text-align: center;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi .suitcase_li-btnbox .suitcase_li-btn {
+    display: flex;
+    width: max-content;
+    height: 40px;
+    padding: 16px 24px;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 40px;
+    border: 2.5px solid #26333a;
+    color: #26333a;
+    font-family: "Moderat-Bold";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.7px;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi .suitcase_li-btnbox .suitcase_li-btn:hover {
+    background: #004df2;
+    color: #fff;
+    border: 2.5px solid #004df2;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi {
+    width: 100%;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    height: 96px;
+    color: #26333a;
+    text-align: center;
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
+    font-family: Moderat-Regular;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    border-bottom: 1px solid rgba(38, 51, 58, 0.1);
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div>div {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div>div span {
+    font-family: Moderat-Regular;
+    font-weight: 400;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div>div span strong {
+    font-family: Moderat-Bold;
+    font-weight: 700;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div p svg {
+    vertical-align: middle;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div img {
+    max-width: 200px;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box {
+    position: absolute;
+    top: 0px;
+    left: calc(8.5% + 22px);
+    width: 44px;
+    height: 79.5%;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box .swiperTable-pre {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 179px;
+    width: 44px;
+    height: 44px;
+    margin-top: 75px;
+    background: #ede9e4 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_left.svg") no-repeat center center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box .swiperTable-pre:hover {
+    background: #004df2 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_left_hover.svg") no-repeat center center;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box .swiperTable-pre.swiper-button-disabled:hover {
+    background: #ede9e4 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_left.svg") no-repeat center center;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box {
+    position: absolute;
+    top: 0px;
+    right: -26px;
+    width: 44px;
+    height: 79.5%;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box .swiperTable-next {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 179px;
+    width: 44px;
+    height: 44px;
+    margin-top: 75px;
+    background: #ede9e4 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_right.svg") no-repeat center center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box .swiperTable-next:hover {
+    background: #004df2 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_right_hover.svg") no-repeat center center;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box .swiperTable-next.swiper-button-disabled:hover {
+    background: #ede9e4 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_right.svg") no-repeat center center;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiper-button-disabled {
+    opacity: 0.5;
+    cursor: not-allowed !important;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .c_table_theme {
+    height: 112px !important;
+  }
+
+  @supports not (overflow: clip) {
+
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide #swiperTable2 {
+      overflow: visible;
+      clip-path: inset(0);
+    }
+  }
+
+  @media screen and (max-width: 1440px) {
+    .suitcase_container {
+      max-width: 1000px;
+      margin: 80px auto;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-title {
+      font-size: 42px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-text {
+      font-size: 20px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi .suitcase_ul-topLi-img {
+      width: 180px;
+      height: 180px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi,
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title .height-zw {
+      height: 90px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box {
+      left: calc(6% + 22px);
+      height: 82.5%;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box {
+      right: -35px;
+      height: 82.5%;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-title {
+      font-size: 20px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title>div p,
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div {
+      font-size: 14px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div img {
+      max-width: 160px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .suitcase_container {
+      max-width: 768px;
+      margin: 60px auto;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-title {
+      font-size: 32px;
+      margin-bottom: 28px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-text {
+      margin-bottom: 24px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title {
+      width: 12.5%;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide {
+      width: 87.5%;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi .suitcase_ul-topLi-img {
+      width: 140px;
+      height: 140px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box {
+      left: calc(5% + 22px);
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi,
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title .height-zw {
+      top: 92px;
+      height: 80px;
+      padding-bottom: 24px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-title {
+      font-size: 20px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-price {
+      font-size: 20px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-price>span {
+      font-size: 14px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-price>div,
+    .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-link {
+      font-size: 14px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-link svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-link {
+      height: 40px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div,
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title>div {
+      height: 60px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title>div p,
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div {
+      font-size: 14px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box .swiperTable-pre,
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box .swiperTable-next {
+      top: 163px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .c_table_theme {
+      height: 84px !important;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div img {
+      max-width: 128px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .suitcase_container {
+      padding: 0 20px;
+      margin: 42px 0 48px;
+    }
+
+    .table-first-column-img {
+      width: 34px !important;
+      height: 34px !important;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-title {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-text {
+      max-width: 100%;
+      margin: 12px 0 24px;
+      font-size: 18px;
+      text-align: left;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title {
+      width: 28.65%;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide {
+      width: 71.35%;
+      z-index: 99;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div svg.yes_svg {
+      width: 12px;
+      height: 8px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi,
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title .height-zw {
+      height: 70px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .swiper-slide {
+      width: 168px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box {
+      left: calc(20% + 22px);
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box .swiperTable-pre {
+      z-index: 100;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box {
+      right: 0px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box .swiperTable-next {
+      z-index: 99;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .c_table_theme {
+      height: 84px !important;
+    }
+
+    .suitcase_product-table {
+      position: relative;
+      margin-right: -20px;
+    }
+
+    .suitcase_product-table .suitcase_buying_guide-product-mobile-shadow {
+      display: none;
+      position: absolute;
+      height: 100%;
+      width: calc(100% + 20px);
+      margin-left: -20px;
+    }
+
+    .suitcase_product-table .suitcase_buying_guide-product-mobile-shadow .suitcase_buying_guide-product-mobile-shadow-main {
+      position: sticky;
+      width: 100%;
+      height: 328px;
+      top: 92px;
+      background: #fdfcf5;
+      box-shadow: 0px 4px 10px 0px rgba(38, 51, 58, 0.15);
+      z-index: 1;
+    }
+  }
+</style>
+<!-- suitcase_container module end -->
 <div class="loc_container">
   <div class="loc_container_nav">
     <div class="loc_container_nav_icon">
@@ -1780,31 +2954,22 @@
     <!-- loc_container_nav_menu start -->
     <div class="loc_container_nav_menu">
       <div class="loc_container_nav_menu_item">
-        <a href="loc_nav_item_1">What’s a standing desk?</a>
+        <a href="loc_nav_item_1">FlexiSpot Luggage Buyer's Guide</a>
       </div>
       <div class="loc_container_nav_menu_item">
-        <a href="loc_nav_item_2">Why do you need a standing desk?</a>
+        <a href="loc_nav_item_2">What to consider when choosing a luggage?</a>
       </div>
       <div class="loc_container_nav_menu_item">
         <a href="loc_nav_item_3">How to select a standing desk?</a>
       </div>
       <div class="loc_container_nav_menu_item">
-        <a href="loc_nav_item_4">FlexiSpot standing desk features</a>
+        <a href="loc_nav_item_4">Why choose FlexiSpot luggage?</a>
       </div>
       <div class="loc_container_nav_menu_item">
-        <a href="loc_nav_item_9">Discover ideal workspaces for any budget</a>
+        <a href="loc_nav_item_5">FlexiSpot Luggage Quality Tests</a>
       </div>
       <div class="loc_container_nav_menu_item">
-        <a href="loc_nav_item_5">Which FlexiDesk is right for you？</a>
-      </div>
-      <div class="loc_container_nav_menu_item">
-        <a href="loc_nav_item_8">Why choose FlexiSpot over others?</a>
-      </div>
-      <div class="loc_container_nav_menu_item">
-        <a href="loc_nav_item_6">How to use a standing desk properly</a>
-      </div>
-      <div class="loc_container_nav_menu_item">
-        <a href="loc_nav_item_7">30-Day free return policy</a>
+        <a href="loc_nav_item_6"> Which luggage is right for you?</a>
       </div>
     </div>
     <!-- loc_container_nav_menu end -->
@@ -1814,20 +2979,20 @@
     <div class="loc_banner">
       <div class="loc_banner_left">
         <div class="loc_title loc_banner_left_title">
-          What’s a standing desk<span class="loc_mark">?</span>
+          FlexiSpot Luggage Buyer's Guide
         </div>
         <div class="loc_text loc_banner_left_text">
-          With a height-adjustable standing desk, you can easily switch
-          positions between sitting and standing throughout your day – for
-          greater comfort and productivity.
+          Discover the best luggage for all your travel needs, blending style and functionality. With smooth-rolling
+          wheels and a sturdy telescopic handle, navigating through airports is a breeze. Travel with confidence,
+          knowing you have the ideal companion for every adventure!
         </div>
 
         <div class="hidden_dom" id="loc_nav_item_2"></div>
       </div>
       <div class="loc_banner_right">
         <img class="lazyload"
-          data-src="https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-banner.png" width="610"
-          height="578" alt="" />
+          data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-banner.png"
+          width="610" height="578" alt="" />
       </div>
     </div>
     <!-- loc_banner end -->
@@ -1836,54 +3001,76 @@
     <div class="loc_moudle_1">
       <div class="loc_moudle_1_content">
         <div class="loc_title loc_moudle_1_content_title">
-          Why do you need a standing desk<span class="loc_mark">?</span>
+          What to consider when choosing a luggage<span class="loc_mark">?</span>
         </div>
         <div class="loc_text loc_moudle_1_content_text">
-          We live in a world of hybrid work. And we’ve abruptly force-fit that
-          work into our homes, leaving us with makeshift spaces that never feel
-          quite as energizing as the office, or as comfortable as home. An
-          electric standing desk can:
+          Start by evaluating your travel requirements to determine the appropriate suitcase sizes size. When selecting
+          your suitcase, consider the duration of your trip and the type of clothing you'll need. For short getaways, a
+          smaller suitcase might suffice, allowing you to pack efficiently. However, for longer journeys, you'll likely
+          need a larger suitcase to accommodate extra outfits, shoes, and personal items.
         </div>
-        <div class="loc_moudle_1_flex">
-          <div class="loc_moudle_1_flex_item">
-            <div class="loc_moudle_1_flex_item_title">
-              Give your physical and mental well-being a lift
-            </div>
-            <div class="loc_moudle_1_flex_item_text">
-              With the flexibility to change positions throughout the day,
-              you’ll be taking a stand against the effects of a sedentary
-              lifestyle, and be able to see things from an elevated perspective.
-            </div>
+        <div class="table-wrapper">
+          <div class="table-scroll">
+            <table border="0" align="center" cellpadding="0" cellspacing="20">
+              <!-- 表头 -->
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>
+                    <img class="head-img"
+                      src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241112-20-inch.png"
+                      alt="">
+                  </th>
+                  <th>
+                    <img class="head-img"
+                      src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241112-24-inch.png"
+                      alt="">
+                  </th>
+                  <th>
+                    <img class="head-img"
+                      src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241112-28-inch.png"
+                      alt="">
+                  </th>
+                  <th>
+                    <img class="head-img"
+                      src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241112-32-inch.png"
+                      alt="">
+                  </th>
+                </tr>
+              </thead>
+              <!-- 表格内容 -->
+              <tbody>
+                <tr>
+                  <td>Size</td>
+                  <td>Carry-On</td>
+                  <td>Check-In Medium</td>
+                  <td>Check-In Large</td>
+                  <td>Trunk</td>
+                </tr>
+                <tr>
+                  <td>Capacity</td>
+                  <td>5-7 outfits</td>
+                  <td>10-12 outfits</td>
+                  <td>15-18 outfits</td>
+                  <td>18-21 outfits</td>
+                </tr>
+                <tr>
+                  <td>Short Getaways</td>
+                  <td>Recommend</td>
+                  <td>/</td>
+                  <td>/</td>
+                  <td>/</td>
+                </tr>
+                <tr>
+                  <td>Longer Journeys</td>
+                  <td>/</td>
+                  <td>Recommend</td>
+                  <td>Recommend</td>
+                  <td>Recommend</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <div class="loc_moudle_1_flex_item">
-            <div class="loc_moudle_1_flex_item_title">
-              Adapt to whatever you’re doing
-            </div>
-            <div class="loc_moudle_1_flex_item_text">
-              Whether you’re hard at work, taking some much-needed me time, or
-              giving the kids a space for homework, a height-adjustable standing
-              desk can adapt to your home life as well as your work life .
-            </div>
-          </div>
-          <div class="loc_moudle_1_flex_item">
-            <div class="loc_moudle_1_flex_item_title">
-              Give your employees a productive working environment
-            </div>
-            <div class="loc_moudle_1_flex_item_text">
-              For your employees to be at their best, they need to feel at their
-              best, wherever they’re working from. A standing desk gives them a
-              comfortable work environment that helps them meet their full
-              potential.
-            </div>
-          </div>
-        </div>
-        <div class="loc_moudle_1_footer">
-          <div class="loc_moudle_1_footer_line"></div>
-          <div class="loc_moudle_1_footer_text">
-            “This…has changed the way I work.”
-          </div>
-          <div class="loc_moudle_1_footer_text">James M.</div>
-          <div class="loc_moudle_1_footer_line"></div>
         </div>
       </div>
     </div>
@@ -1901,433 +3088,156 @@
   <!-- loc_parallax end -->
 
   <div class="loc_content">
-    <!-- loc_moudle 2 start -->
-    <div class="loc_moudle_2">
-      <div class="loc_moudle_2_content">
-        <div class="loc_title loc_moudle_2_content_title">
-          What to consider when shopping for a standing desk
+    <!-- loc_moudle 5 start -->
+    <div class="loc_moudle_5">
+      <div class="loc_moudle_5_content">
+        <div class="loc_title loc_moudle_5_content_title">
+          In addition to size, there are other performance aspects you need to prioritize.
         </div>
-        <div class="loc_moudle_2_content_accordion">
-          <div class="loc_moudle_2_content_dl">
-            <div class="loc_moudle_2_content_dl_main_dt loc_moudle_2_content_dl_main">
-              <div class="loc_moudle_2_content_dt">
-                <div>Stability</div>
-                <i class="loc_moudle_2_content_dt_icon"></i>
+        <div class="loc_moudle_5_content_slick"></div>
+      </div>
+      <div class="hidden_dom" id="loc_nav_item_3"></div>
+    </div>
+    <!-- loc_moudle 5 end -->
+    <!-- loc_moudle suitcase start -->
+    <div class="suitcase_container">
+      <div class="suitcase_product">
+        <div class="suitcase_product-title">
+          Why choose FlexiSpot luggage？
+        </div>
+        <div class="hidden_dom" id="loc_nav_item_4"></div>
+        <div class="suitcase_product-table">
+          <ul class="suitcase_product-table-list">
+            <li class="suitcase_product-table-title">
+              <div class="height-zw"></div>
+              <div>
+                <p>Price</p>
               </div>
-            </div>
-            <div class="loc_moudle_2_content_dl_main_dd loc_moudle_2_content_dl_main">
-              <div class="loc_moudle_2_content_dd">
-                <div class="loc_moudle_2_content_text">
-                  Using a desk that wobbles as you work can be frustrating. Some
-                  standing desks that are on the maximum height setting can
-                  wobble when typing, moving the mouse or leaning on the desk
-                  edge. A premium FlexiSpot standing desk, like the E7, can give
-                  you a stable foundation for your work that you can rely on,
-                  without wobbling on the highest setting, the lowest setting,
-                  or anywhere in between.
-                </div>
+              <div>
+                <p>Carry-On</p>
               </div>
-            </div>
-          </div>
-
-          <div class="loc_moudle_2_content_dl">
-            <div class="loc_moudle_2_content_dl_main_dt loc_moudle_2_content_dl_main">
-              <div class="loc_moudle_2_content_dt">
-                <div>Durability</div>
-                <i class="loc_moudle_2_content_dt_icon"></i>
+              <div>
+                <p>Empty Weight</p>
               </div>
-            </div>
-            <div class="loc_moudle_2_content_dl_main_dd loc_moudle_2_content_dl_main">
-              <div class="loc_moudle_2_content_dd">
-                <div class="loc_moudle_2_content_text">
-                  When you invest in a height-adjustable standing desk, you’ll
-                  want one that lasts. So, it’s wise to invest in a high-quality
-                  desk that can support you for years to come, which means it’ll
-                  be worth every penny. All FlexiSpot desks are built to last.
-                  In fact, we’re so confident in their quality that desks like
-                  the E7 come with a 15 year warranty.
-                </div>
+              <div>
+                <p>Handle Adjustment Settings</p>
               </div>
-            </div>
-          </div>
-
-          <div class="loc_moudle_2_content_dl">
-            <div class="loc_moudle_2_content_dl_main_dt loc_moudle_2_content_dl_main">
-              <div class="loc_moudle_2_content_dt">
-                <div>Height range</div>
-                <i class="loc_moudle_2_content_dt_icon"></i>
+              <div>
+                <p>Wheels</p>
               </div>
-            </div>
-            <div class="loc_moudle_2_content_dl_main_dd loc_moudle_2_content_dl_main">
-              <div class="loc_moudle_2_content_dd">
-                <div class="loc_moudle_2_content_text">
-                  How tall are you? Different electric standing desks can reach
-                  different heights. It’s helpful to measure what your ideal
-                  height is for working standing up, as well as sitting down.
-                  Whether you’re sitting or standing, and for the greatest
-                  comfort and support, your desk should reach just under your
-                  elbows when you’re using the keyboard.
-                </div>
+              <div>
+                <p>Lining Fabric</p>
               </div>
-            </div>
-          </div>
-
-          <div class="loc_moudle_2_content_dl">
-            <div class="loc_moudle_2_content_dl_main_dt loc_moudle_2_content_dl_main">
-              <div class="loc_moudle_2_content_dt">
-                <div>Desk depth</div>
-                <i class="loc_moudle_2_content_dt_icon"></i>
+              <div>
+                <p>Bonus Items</p>
               </div>
+            </li>
+            <div class="swiperTable-pre-box">
+              <div class="swiperTable-pre"></div>
             </div>
-            <div class="loc_moudle_2_content_dl_main_dd loc_moudle_2_content_dl_main">
-              <div class="loc_moudle_2_content_dd">
-                <div class="loc_moudle_2_content_text">
-                  Desk depth is the distance between the front and the back of
-                  the desk. How much space do you need to work with? If you’re
-                  using a computer on the desk, how far away do you want the
-                  monitor from you? Finding your ideal monitor distance can help
-                  reduce eye strain.
-                </div>
+            <li class="suitcase_buyerguide">
+              <div class="swiper2" id="swiperTable2">
+                <div class="swiper-wrapper"></div>
               </div>
+            </li>
+            <div class="swiperTable-next-box">
+              <div class="swiperTable-next"></div>
             </div>
-          </div>
-
-          <div class="loc_moudle_2_content_dl">
-            <div class="loc_moudle_2_content_dl_main_dt loc_moudle_2_content_dl_main">
-              <div class="loc_moudle_2_content_dt">
-                <div>Weight capacity</div>
-                <i class="loc_moudle_2_content_dt_icon"></i>
-              </div>
-            </div>
-            <div class="loc_moudle_2_content_dl_main_dd loc_moudle_2_content_dl_main">
-              <div class="loc_moudle_2_content_dd">
-                <div class="loc_moudle_2_content_text">
-                  If you need a lot of equipment in your workspace, you need a
-                  desk that can take the weight of it all. Different desks
-                  actually have different weight capacities. For example, the
-                  E7Q Odin can hold up to 660 lbs for the heaviest of workloads.
-                  So, it’s a good idea to think about how much weight capacity
-                  you need for your work, or hobbies.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="loc_moudle_2_content_dl">
-            <div class="loc_moudle_2_content_dl_main_dt loc_moudle_2_content_dl_main">
-              <div class="loc_moudle_2_content_dt">
-                <div>Adjustment speed</div>
-                <i class="loc_moudle_2_content_dt_icon"></i>
-              </div>
-            </div>
-            <div class="loc_moudle_2_content_dl_main_dd loc_moudle_2_content_dl_main">
-              <div class="loc_moudle_2_content_dd">
-                <div class="loc_moudle_2_content_text">
-                  If you want to quickly adjust from sitting to standing, you’ll
-                  want a faster adjustment speed. But you might also be
-                  comfortable with a slower adjustment speed to give you a break
-                  while you’re switching positions. Different models of
-                  height-adjustable standing desks come with different motors
-                  which adjust at different speeds.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="loc_moudle_2_content_dl">
-            <div class="loc_moudle_2_content_dl_main_dt loc_moudle_2_content_dl_main">
-              <div class="loc_moudle_2_content_dt">
-                <div>Noise</div>
-                <i class="loc_moudle_2_content_dt_icon"></i>
-              </div>
-            </div>
-            <div class="loc_moudle_2_content_dl_main_dd loc_moudle_2_content_dl_main">
-              <div class="loc_moudle_2_content_dd">
-                <div class="loc_moudle_2_content_text">
-                  The noise of a motor for adjusting the level of an electric
-                  standing desk is small. But different motors can have varying
-                  levels of noise. If you want a completely silent working
-                  environment, you’ll want one of the quieter motors like the E7
-                  Pro.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="loc_moudle_2_content_dl">
-            <div class="loc_moudle_2_content_dl_main_dt loc_moudle_2_content_dl_main">
-              <div class="loc_moudle_2_content_dt">
-                <div>Desktop material</div>
-                <i class="loc_moudle_2_content_dt_icon"></i>
-              </div>
-            </div>
-            <div class="loc_moudle_2_content_dl_main_dd loc_moudle_2_content_dl_main">
-              <div class="loc_moudle_2_content_dl_main_dd_box">
-                <div class="loc_moudle_2_content_dd loc_moudle_2_content_dd_left">
-                  <div class="loc_moudle_2_content_text">
-                    You can choose between a range of different desktop
-                    surfaces, including: laminated, fiberboard, solid wood,
-                    bamboo, and glass. At FlexiSpot, we use desktop materials
-                    that meet the highest E0 environmental protection standard,
-                    so you can rest easy knowing that they’re planet-friendly
-                    and safe.
-                  </div>
-                  <a class="loc_moudle_2_content_dd_botton loc_botton"
-                    href="https://staticprod.site.flexispot.com/dev/trantor/attachments/FlexiSpot_Desktop_Lookbook.pdf"
-                    target="_blank">
-                    <div class="loc_moudle_2_content_dd_botton_box">
-                      Desktop Lookbook
-                    </div>
-                  </a>
-                </div>
-                <div class="loc_moudle_2_content_dd loc_moudle_2_content_dd_right">
-                  <img class="lazyload"
-                    data-src="https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-Rectangle.png"
-                    alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="loc_moudle_2_content_dl">
-            <div class="loc_moudle_2_content_dl_main_dt loc_moudle_2_content_dl_main">
-              <div class="loc_moudle_2_content_dt">
-                <div>Safety features</div>
-                <i class="loc_moudle_2_content_dt_icon"></i>
-              </div>
-            </div>
-            <div class="loc_moudle_2_content_dl_main_dd loc_moudle_2_content_dl_main">
-              <div class="loc_moudle_2_content_dd">
-                <div class="loc_moudle_2_content_text">
-                  Protect your children’s tiny fingers with a child-lock safety
-                  feature, or shield your equipment from damage with a standing
-                  desk that comes with an anti-collision feature.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="loc_moudle_2_footer" id="loc_nav_item_4">
-            <div class="loc_moudle_2_footer_line"></div>
-            <div class="loc_moudle_2_footer_text">
-              “Made my life easier, very quiet, ease of use.”
-            </div>
-            <div class="loc_moudle_2_footer_text">Barrne.</div>
-            <div class="loc_moudle_2_footer_line"></div>
-          </div>
+          </ul>
         </div>
       </div>
     </div>
-    <!-- loc_moudle 2 end -->
+    <!-- loc_moudle suitcase end -->
 
     <!-- loc_moudle 3 start -->
     <div class="loc_moudle_3">
       <div class="loc_moudle_3_content">
         <div class="loc_title loc_moudle_3_content_title">
-          FlexiSpot Standing Desk Features
+          FlexiSpot Luggage Quality Tests
         </div>
         <div class="loc_moudle_3_content_tab">
-          <div class="loc_moudle_3_content_tab_item loc_tab_active">Motor</div>
-          <div class="loc_moudle_3_content_tab_item">C-frame and T-frame</div>
-          <div class="loc_moudle_3_content_tab_item">Leg stages</div>
-          <div class="loc_moudle_3_content_tab_item">Keypad panels</div>
-          <div class="loc_moudle_3_content_tab_item">Anti-collision system</div>
+          <div class="loc_moudle_3_content_tab_item loc_tab_active">Drop Test</div>
+          <div class="loc_moudle_3_content_tab_item">Mileage Test</div>
+          <div class="loc_moudle_3_content_tab_item">Vibration Test</div>
+          <div class="loc_moudle_3_content_tab_item">Tumble Test</div>
         </div>
       </div>
-      <div class="hidden_dom" id="loc_nav_item_9"></div>
+      <div class="hidden_dom" id="loc_nav_item_5"></div>
     </div>
     <!-- loc_moudle 3 end -->
 
-    <!-- loc_moudle 8 start -->
-    <div class="loc_moudle_8">
-      <div class="loc_moudle_8_content">
-        <div class="loc_title loc_moudle_8_content_title">
-          FlexiSpot E7 Family<br /><span class="loc_title-s">Find the perfect workspace</span>
+    <!-- desk_container module start -->
+    <div class="desk_container">
+      <div class="desk_product">
+        <div class="desk_product-title">
+          Which luggage is right for you ?
         </div>
-        <div class="loc_moudle_8_content_flex"></div>
-        <!-- <div class="loc_moudle_8_content_button_box">
-          <a
-            class="loc_moudle_8_content_button loc_botton"
-            href="https://www.flexispot.com/category/height-adjustable-desks"
-            target="_blank"
-            >Find My Perfect Standing Desk Now</a
-          >
-        </div> -->
-      </div>
-    </div>
-    <div class="hidden_dom" id="loc_nav_item_5"></div>
-    <!-- loc_moudle 8 end -->
-
-
-    <!-- loc_moudle 5 start -->
-    <div class="loc_moudle_5">
-      <div class="loc_moudle_5_content">
-        <div class="loc_title loc_moudle_5_content_title">
-          7 reasons to choose FlexiSpot
-        </div>
-        <div class="loc_moudle_5_content_slick"></div>
-      </div>
-    </div>
-    <!-- loc_moudle 5 end -->
-
-    <!-- loc_moudle 6 start -->
-    <div class="loc_moudle_6">
-      <div class="loc_moudle_6_content">
-        <div class="loc_moudle_6_content_slick"></div>
-        <div class="loc_moudle_6_footer">
-          <div class="loc_moudle_6_footer_line" id="loc_nav_item_6"></div>
-          <div class="loc_moudle_6_footer_text">
-            “...top class and excellent value for money.”
+        <div class="hidden_dom" id="loc_nav_item_6"></div>
+        <div class="desk_product-table">
+          <div class="chair_buying_guide-product-mobile-shadow">
+            <div class="chair_buying_guide-product-mobile-shadow-main"></div>
           </div>
-          <div class="loc_moudle_6_footer_text">Jon T.</div>
-          <div class="loc_moudle_6_footer_line"></div>
-        </div>
-      </div>
-    </div>
-    <!-- loc_moudle 6 end -->
-
-    <!-- loc_moudle 7 start -->
-    <div class="loc_moudle_7">
-      <div class="loc_moudle_7_content">
-        <div class="loc_title loc_moudle_7_content_title">
-          How to use a standing desk properly
-        </div>
-        <div class="loc_moudle_7_content_box">
-          <div class="loc_moudle_7_content_box_left">
-            <div class="loc_moudle_7_content_dl">
-              <div class="loc_moudle_7_content_dl_main_dt loc_moudle_7_content_dl_main">
-                <div class="loc_moudle_7_content_dt">
-                  <div class="loc_moudle_7_content_dt_title_box">
-                    <div class="loc_moudle_7_content_dt_title_icon">(A)</div>
-                    <div class="loc_moudle_7_content_dt_title">
-                      Height adjustment
-                    </div>
-                  </div>
-                  <i class="loc_moudle_7_content_dt_icon"></i>
-                </div>
+          <ul class="desk_product-table-list">
+            <li class="desk_product-table-title">
+              <div class="height-zw"></div>
+              <div>
+                <p>Price</p>
               </div>
-              <div class="loc_moudle_7_content_dl_main_dd loc_moudle_7_content_dl_main">
-                <div class="loc_moudle_7_content_dd">
-                  <div class="loc_moudle_7_content_text">
-                    To find your ideal desk height when standing (or sitting),
-                    the desk should be high enough to reach just under your
-                    elbows while you’re using the keyboard. Your eyes should
-                    also be level with the top third of the computer monitor;
-                    this will help you find the perfect height, and protect you
-                    from eye strain.
-                  </div>
-                </div>
+              <div>
+                <p>Color Option</p>
               </div>
-              <div class="loc_moudle_7_content_dl_main_line"></div>
+              <div>
+                <p>Carry-On</p>
+              </div>
+              <div>
+                <p>Features / Cup Holder</p>
+              </div>
+              <div>
+                <p>Features / Laptop <br />
+                  Compartment</p>
+              </div>
+              <div>
+                <p>Length of Trip</p>
+              </div>
+              <div>
+                <p>Capacity</p>
+              </div>
+              <div>
+                <p>Dimensions</p>
+              </div>
+              <div>
+                <p>Weight</p>
+              </div>
+              <div>
+                <p>Material</p>
+              </div>
+              <div>
+                <p>Warranty</p>
+              </div>
+            </li>
+            <div class="swiperTable-pre-box">
+              <div class="swiperTable-pre"></div>
             </div>
-
-            <div class="loc_moudle_7_content_dl">
-              <div class="loc_moudle_7_content_dl_main_dt loc_moudle_7_content_dl_main">
-                <div class="loc_moudle_7_content_dt">
-                  <div class="loc_moudle_7_content_dt_title_box">
-                    <div class="loc_moudle_7_content_dt_title_icon">(B)</div>
-                    <div class="loc_moudle_7_content_dt_title">
-                      How long should you stand for?
-                    </div>
-                  </div>
-                  <i class="loc_moudle_7_content_dt_icon"></i>
-                </div>
+            <li class="chair_buyerguide">
+              <div class="swiper" id="swiperTable">
+                <div class="swiper-wrapper"></div>
               </div>
-              <div class="loc_moudle_7_content_dl_main_dd loc_moudle_7_content_dl_main">
-                <div class="loc_moudle_7_content_dd">
-                  <div class="loc_moudle_7_content_text">
-                    Change positions from sitting to standing every 30-60
-                    minutes. Generally, it’s recommended that you stand for 30
-                    minutes after an hour of sitting. It’s also helpful to move
-                    around regularly, so you don’t tense up when standing.
-                  </div>
-                </div>
-              </div>
-              <div class="loc_moudle_7_content_dl_main_line"></div>
+            </li>
+            <div class="swiperTable-next-box">
+              <div class="swiperTable-next"></div>
             </div>
-
-            <div class="loc_moudle_7_content_dl">
-              <div class="loc_moudle_7_content_dl_main_dt loc_moudle_7_content_dl_main">
-                <div class="loc_moudle_7_content_dt">
-                  <div class="loc_moudle_7_content_dt_title_box">
-                    <div class="loc_moudle_7_content_dt_title_icon">(C)</div>
-                    <div class="loc_moudle_7_content_dt_title">
-                      Standing desk add-ons to elevate your well-being
-                    </div>
-                  </div>
-                  <i class="loc_moudle_2_content_dt_icon"></i>
-                </div>
-              </div>
-              <div class="loc_moudle_7_content_dl_main_dd loc_moudle_7_content_dl_main">
-                <div class="loc_moudle_7_content_dd">
-                  <div class="loc_moudle_7_content_li">
-                    <a class="loc_moudle_7_content_li_a" href="https://www.flexispot.com/category/chairs"
-                      target="_blank">An ergonomic chair</a>
-                    – Give yourself greater comfort and support when you do sit.
-                  </div>
-                  <div class="loc_moudle_7_content_li">
-                    <a class="loc_moudle_7_content_li_a" href="https://www.flexispot.com/cable-management-tray-cmp502"
-                      target="_blank">Cable trays</a>
-                    – Keep your mind and workspace uncluttered with a tray that
-                    keeps those cables out of the way.
-                  </div>
-                  <div class="loc_moudle_7_content_li">
-                    <a class="loc_moudle_7_content_li_a"
-                      href="https://www.flexispot.com/clamp-on-adjustable-keyboard-tray-kt2b" target="_blank">Keyboard
-                      trays</a>
-                    – Add on a keyboard tray to keep your workspace tidy, and to
-                    support your wrist while you’re working.
-                  </div>
-                  <div class="loc_moudle_7_content_li">
-                    <a class="loc_moudle_7_content_li_a"
-                      href="https://www.flexispot.com/slim-under-desk-storage-drawer-s07" target="_blank">Add-on
-                      drawers</a>
-                    – Stay organized with an add-on drawer made from stylish,
-                    sustainably sourced bamboo.
-                  </div>
-                  <div class="loc_moudle_7_content_li">
-                    <a class="loc_moudle_7_content_li_a" href="https://www.flexispot.com/dual-monitor-mount-f7d-f8ld"
-                      target="_blank">Monitor mounts</a>
-                    – Keep your monitors at the right height and reduce back,
-                    neck and eye strain.
-                  </div>
-                  <div class="loc_moudle_7_content_li">
-                    <a class="loc_moudle_7_content_li_a"
-                      href="https://www.flexispot.com/all-in-one-desk-bikes-deskcise-pro" target="_blank">Deskbike</a>
-                    – Keep moving and stay in shape, even while you work.
-                  </div>
-                </div>
-              </div>
-              <div class="loc_moudle_7_content_dl_main_line"></div>
-            </div>
-          </div>
-          <div class="loc_moudle_7_content_box_right">
-            <div class="loc_moudle_7_content_box_right_img">
-              <img class="lazyload"
-                data-src="https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-moudle-7.jpg"
-                alt="" />
-            </div>
-          </div>
-        </div>
-
-        <div class="loc_moudle_7_footer">
-          <div class="loc_moudle_7_footer_line"></div>
-          <div class="loc_moudle_7_footer_text" id="loc_nav_item_7">
-            “...feeling good for having the extra flexibility of working from
-            home....comfortably.”
-          </div>
-          <div class="loc_moudle_7_footer_text">Gareth J.</div>
-          <div class="loc_moudle_7_footer_line"></div>
+          </ul>
         </div>
       </div>
     </div>
-    <!-- loc_moudle 7 end -->
+    <!-- desk_container module end  -->
 
     <!-- loc_moudle 9 start -->
     <div class="loc_moudle_9">
       <div class="loc_moudle_9_content">
         <img class="lazyload home-active-l"
-          data-src="https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-footer-bg.png" alt="" />
+          data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-bottom-pc.png"
+          alt="" />
         <img class="lazyload home-active-m"
           data-src="https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-footer-bg-m.png" alt="" />
       </div>
@@ -2387,144 +3297,36 @@
         $(".loc_moudle_4_comparison_item_li_sku_hover").hide()
       })
 
-      // loc_moudle_2 js start
-      $(".loc_moudle_2_content_dl_main_dt").on("click", function () {
-        if ($(this).attr("id") == "open") {
-          $(this).attr("id", "")
-          $(this).siblings(".loc_moudle_2_content_dl_main_dd").hide(300)
-        } else {
-          $(this).attr("id", "open")
-          $(this).siblings(".loc_moudle_2_content_dl_main_dd").show(300)
-        }
-      })
-      // loc_moudle_2 js end
-
       // loc_moudle_3 js start
       let moudle_3_tab_data = [
         {
-          text: `You can choose between a single motor or a Dual-motor on a FlexiSpot standing desk. A single motor is perfect for a lightweight setup, and adjusts the height easily. A Dual-motor gives you better performance with two powerful motors on each side of the desk. It can handle heavier equipment, adjusts quickly and has greater stability.`,
+          text: `To assess the durability of the outer shell, our luggage completed 1,500 drop tests. Each test simulates impacts that occur during travel, ensuring the hard shell luggage can withstand rough handling and protect your belongings. The results confirm that our outer shell remains intact, demonstrating its strength and resistance to cracks.`,
           img: [
-            "https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-tab-item1-1.jpg",
-            "https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-tab-item1-2.jpg",
+            "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-btn-img1.png",
           ],
         },
         {
-          text: `A T-frame standing desk has the legs in the middle of the desk, centered on the feet, giving them that T shape for greater stability. A C-frame desk has legs at the back of the desk, at the end of the feet, which gives you more leg room as well as space for a cabinet, or a computer case. A semi-C frame standing desk means that the desk legs are positioned slightly towards the back of the desk, so you have both stability and extra space – for legroom or extra storage.`,
+          text: `To evaluate the performance of our luggage's wheels, we subjected them to a rigorous mileage test, carrying a weight of 44 lbs at a speed of 3 mph. The four wheels ran for 4 hours, covering 11.9 miles, with wear not exceeding 2 mm, showcasing their exceptional durability. Trust our luggage for a smooth journey, designed to withstand the demands of your travels while providing effortless movement.`,
           img: [
-            "https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-tab-item2-v2.jpg",
+            "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-btn-img2.png",
           ],
         },
         {
-          text: `Our standing desks come with 2-stage or 3-stage legs. 2-stage legs are perfect if you’re 5 '10’’ (178 cm) or less in height. If you’re taller than that, we’d recommend 3-stage legs. The 3-stage legs are also more stable at the highest setting.`,
+          text: `Evaluating the pull handle, our luggage underwent 1,500 vibration tests to verify the handle's performance and durability. Each test simulates real-world conditions, ensuring the handle can withstand repeated stress without compromising functionality. The results show that our handle maintains its integrity and responsiveness, providing you with a reliable and smooth travel experience.`,
           img: [
-            "https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-tab-item3-1.jpg",
-            "https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-tab-item3-2.jpg",
+            "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-btn-img3.png",
           ],
         },
         {
-          text: `
-                        <div class="content_tab_small_text">
-                            There are 4 types of keypad panels that can give you a variety of features:
-                       </div>
-
-                       <div class="content_tab_small_text">
-                            <strong>Basic</strong>
-                       </div>
-                       <div class="content_tab_small_text content_tab_small_li">
-                            Two buttons to raise and lower the desk to your perfect height.
-                       </div>
-                       <div class="content_tab_small_text content_tab_small_li">
-                            LED touchscreen.
-                       </div>
-                       <div class="content_tab_small_text content_tab_small_li">
-                            Two USB Ports.
-                       </div>
-
-                       <div class="content_tab_small_text">
-                            <strong>Standard</strong>
-                       </div>
-                       <div class="content_tab_small_text content_tab_small_li">
-                            Two buttons to raise and lower the desk to your perfect height.
-                       </div>
-                       <div class="content_tab_small_text content_tab_small_li">
-                            Programmable height presets.
-                       </div>
-                       <div class="content_tab_small_text content_tab_small_li">
-                            Energy-saving display.
-                       </div>
-                       <div class="content_tab_small_text content_tab_small_li">
-                            LED touchscreen.
-                       </div>
-                       <div class="content_tab_small_text content_tab_small_li">
-                            Type-C charger.
-                       </div>
-
-                       <div class="content_tab_small_text">
-                            <strong>Advanced</strong>
-                       </div>
-                       <div class="content_tab_small_text content_tab_small_li">
-                            Two buttons to raise and lower the desk to your perfect height.
-                       </div>
-                       <div class="content_tab_small_text content_tab_small_li">
-                            Programmable height presets.
-                       </div>
-                       <div class="content_tab_small_text content_tab_small_li">
-                            Energy-saving display.
-                       </div>
-                       <div class="content_tab_small_text content_tab_small_li">
-                            LED touchscreen.
-                       </div>
-                       <div class="content_tab_small_text content_tab_small_li">
-                            Anti-collision system.
-                       </div>
-                       <div class="content_tab_small_text content_tab_small_li">
-                            Sit-stand reminder.
-                       </div>
-                       
-                       <div class="content_tab_small_text">
-                            <strong>Premium</strong>
-                        </div>
-                        <div class="content_tab_small_text content_tab_small_li">
-                            Two buttons to raise and lower the desk to your perfect height.
-                        </div>
-                        <div class="content_tab_small_text content_tab_small_li">
-                            Programmable height presets.
-                        </div>
-                        <div class="content_tab_small_text content_tab_small_li">
-                            Energy-saving display.
-                        </div>
-                        <div class="content_tab_small_text content_tab_small_li">
-                            LED touchscreen.
-                        </div>
-                        <div class="content_tab_small_text content_tab_small_li">
-                            Anti-collision system.
-                        </div>
-                        <div class="content_tab_small_text content_tab_small_li">
-                            Child lock.
-                        </div>
-                        <div class="content_tab_small_text content_tab_small_li">
-                            Type-A charger.
-                        </div>
-                `,
+          text: `Our checked luggage also underwent rigorous impact resistance testing, completing 25 tumble tests to simulate the rough conditions it might endure during your travels. Each test confirmed that our luggage can withstand repeated stress without compromising its structural integrity, ensuring your belongings stay safe and secure no matter where you go.`,
           img: [
-            "https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-tab-item4-1-v2.jpg",
-            "https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-tab-item4-2-v2.jpg",
-            "https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-tab-item4-3.jpg",
-            "https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-tab-item4-4-v2.jpg",
-          ],
-        },
-        {
-          text: `Some FlexiSpot standing desks come with an anti-collision system. It protects your desktop, equipment – and any objects in the way – from damage while the desk’s moving.`,
-          img: [
-            "https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-tab-item5.jpg",
+            "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-btn-img4.png",
           ],
         },
       ]
 
       moudle_3_tab_data.forEach((item, index) => {
         let active = index == 0 ? "loc_tab_content_active" : ""
-        let text_4 = index == 3 ? "loc_moudle_3_content_tab_content_text_4" : ""
-        let img_4 = index == 3 ? "loc_moudle_3_content_tab_content_img_4" : ""
         let img_html = ""
         item.img.forEach((img) => {
           img_html += `
@@ -2534,10 +3336,10 @@
         $(".loc_moudle_3_content").append(`
                 <div class="loc_moudle_3_content_tab_content_box ${active}">
                     <div class="loc_moudle_3_content_tab_content">
-                        <div class="loc_moudle_3_content_tab_content_text ${text_4}">
+                        <div class="loc_moudle_3_content_tab_content_text">
                         ${item.text}
                         </div>
-                        <div class="loc_moudle_3_content_tab_content_img ${img_4}">
+                        <div class="loc_moudle_3_content_tab_content_img">
                             ${img_html}
                         </div>
                     </div>
@@ -2561,488 +3363,452 @@
             .addClass("loc_tab_content_active")
         })
       })
-
       // loc_moudle_3 js end
-
-      // loc_moudle_7 js start
-      $(".loc_moudle_7_content_dl_main_dt").on("click", function () {
-        if ($(this).attr("id") == "open") {
-          $(this).attr("id", "")
-          $(this).siblings(".loc_moudle_7_content_dl_main_dd").hide(300)
-        } else {
-          $(this).attr("id", "open")
-          $(this).siblings(".loc_moudle_7_content_dl_main_dd").show(300)
-        }
-      })
-      $(".loc_moudle_7_content_dl_main_dt").eq(0).click()
-      // loc_moudle_7 js end
-
-      // slick
       loadScript(
-        "https://staticprod.site.flexispot.com/dev/trantor/attachments/slick.min.js",
+        "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/swiper@8.4.7-min-us.js",
         function () {
-          // loc_moudle_8 js start
-          const svg_2 = `<svg width="82" height="46" viewBox="0 0 82 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="7.54504" y="5.83117" width="66.9098" height="33.0777" rx="2.56099" stroke="#151C20" stroke-width="0.939685"/>
-  <circle cx="17.7364" cy="10.4864" r="1.18658" fill="#151C20"/>
-  <circle cx="63.2252" cy="10.4864" r="1.18658" fill="#151C20"/>
-</svg>`,
-            svg_3 = `<svg width="62" height="48" viewBox="0 0 62 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M33.5472 47.3096L25.0532 47.249" stroke="#151C20" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M15.0144 47.1772L1.37744 47.0785L11.3074 11.4932H51.6866L60.6229 47.5044L42.8155 47.3775" stroke="#151C20" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M18.7256 11.4708C18.7256 5.40689 24.1591 0.495117 30.8627 0.495117C37.5664 0.495117 42.9984 5.40971 42.9984 11.4708" stroke="#151C20" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M21.3294 37.674H18.3228V22.3633H21.3294V37.674Z" fill="#151C20"/>
-  <path d="M24.2939 22.3633H27.1943V37.674H24.2939V22.3633ZM28.0831 37.3468C27.6029 37.0017 27.2407 36.5183 27.0454 35.962L27.1943 33.4659C27.1849 33.782 27.2499 34.0959 27.3842 34.3825C27.5045 34.6281 27.6987 34.8302 27.9399 34.9607C28.2124 35.1011 28.5163 35.1701 28.823 35.161C29.3674 35.161 29.7894 34.9819 30.0889 34.6237C30.3885 34.2655 30.5383 33.7602 30.5383 33.1077V31.3661C30.5383 30.6995 30.3885 30.1824 30.0889 29.8149C29.9361 29.6306 29.742 29.4845 29.5221 29.3885C29.3023 29.2925 29.0628 29.2492 28.823 29.262C28.5158 29.2529 28.2115 29.3234 27.9399 29.4665C27.6972 29.6028 27.503 29.8108 27.3842 30.0616C27.2492 30.359 27.1842 30.6831 27.1943 31.0093L26.9717 28.588C27.2255 28.002 27.6286 27.4921 28.1412 27.1087C28.6049 26.767 29.1674 26.5839 29.7445 26.5869C30.4524 26.5545 31.152 26.7501 31.7393 27.1446C32.3267 27.5391 32.7705 28.1116 33.0048 28.7769C33.3131 29.6019 33.4603 30.4778 33.4386 31.3576V33.1049C33.4603 33.9746 33.313 34.8403 33.0048 35.6545C32.7661 36.3159 32.3207 36.8838 31.734 37.2751C31.1473 37.6664 30.4501 37.8605 29.7445 37.8291C29.1535 37.8461 28.5721 37.6773 28.0831 37.3468Z" fill="#151C20"/>
-  <path d="M38.3712 37.6587C37.7728 37.549 37.1875 37.3774 36.6248 37.1468C36.1112 36.9401 35.627 36.6675 35.1846 36.3359L36.9735 34.1148C37.4906 34.446 38.0492 34.7082 38.6349 34.8947C39.1681 35.0694 39.7251 35.1616 40.2864 35.1682C40.964 35.1682 41.4899 35.0926 41.8641 34.9412C42.2383 34.7898 42.4274 34.5811 42.4311 34.3151C42.4386 34.2085 42.4204 34.1017 42.378 34.0036C42.3356 33.9055 42.2702 33.8188 42.1873 33.751C42.0026 33.6148 41.7886 33.5231 41.5622 33.483C41.2087 33.4167 40.8519 33.3696 40.4933 33.342L40.1078 33.2997L39.7108 33.2574C39.6809 33.2506 39.6506 33.2454 39.6201 33.2419C39.5904 33.2399 39.5605 33.2399 39.5308 33.2419C38.8646 33.1679 38.2059 33.0377 37.5618 32.8527C37.0607 32.6933 36.622 32.3822 36.3073 31.9628C35.9642 31.5238 35.7932 30.8868 35.7941 30.052C35.7634 29.3894 35.9473 28.7346 36.3189 28.1839C36.6905 27.6332 37.2301 27.2158 37.8581 26.9932C38.6357 26.7038 39.462 26.5659 40.292 26.5871C40.852 26.5876 41.4104 26.6438 41.9591 26.7549C42.5047 26.8652 43.0382 27.0277 43.5524 27.24C44.047 27.4433 44.5188 27.6976 44.9601 27.9987L43.2349 30.0943C42.7601 29.8293 42.2558 29.6206 41.7323 29.4724C41.2437 29.3295 40.7375 29.255 40.2282 29.251C39.7646 29.2321 39.3016 29.3001 38.8631 29.4512C38.538 29.5847 38.376 29.7728 38.3769 30.0153C38.3765 30.1028 38.4006 30.1887 38.4464 30.2634C38.4922 30.3381 38.5579 30.3987 38.6363 30.4384C38.8363 30.55 39.0547 30.625 39.2813 30.6598C39.5393 30.7058 39.915 30.7566 40.4083 30.8121L40.5996 30.8332L40.7896 30.8544C40.8207 30.862 40.8526 30.8658 40.8846 30.8657C40.917 30.8651 40.9494 30.8684 40.981 30.8755C41.6852 30.946 42.3825 31.0729 43.0662 31.2549C43.609 31.4141 44.0882 31.738 44.437 32.1814C44.815 32.6458 45.004 33.327 45.004 34.2248C45.0358 34.9159 44.843 35.5988 44.4541 36.1723C44.0653 36.7458 43.5011 37.1795 42.8451 37.4091C42.0297 37.7115 41.1634 37.8552 40.2935 37.8321C39.6487 37.8338 39.0052 37.7757 38.3712 37.6587Z" fill="#151C20"/>
-</svg>`,
-            svg_4 = `<svg width="52" height="50" viewBox="0 0 52 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M28.8667 2.69895L16.2268 13.8241H4.49432C2.29428 13.8241 0.643746 15.7362 0.643746 18.1947C0.597911 21.5181 0.533743 29.0664 0.643746 32.6721C0.753748 36.2778 3.89798 37.3613 5.45635 37.4524H16.0785L28.7287 47.969C31.548 49.8469 33.9539 47.6958 33.9539 46.4666V42.3973L34.3668 21.555V4.47448C34.3668 2.27048 33.0271 1.30784 31.6855 1.2931C30.5941 1.28112 29.6411 2.06336 28.8881 2.68137L28.8667 2.69895Z" stroke="#151C20" stroke-width="1.13444" stroke-linecap="round"/>
-  <path d="M38.7368 15.3701C42.639 18.4641 48.1019 26.6478 38.7368 34.6307" stroke="black" stroke-width="1.13444" stroke-linecap="round"/>
-  <path d="M43.9077 11.0142C49.5748 15.5076 57.5088 27.3929 43.9077 38.9865" stroke="black" stroke-width="1.13444" stroke-linecap="round"/>
-</svg>`,
-            svg_5 = `<svg width="58" height="50" viewBox="0 0 58 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M17.5041 20.2726L26.7801 4.20592C27.7667 2.49721 30.233 2.49721 31.2195 4.20592L54.9699 45.3428C55.9564 47.0515 54.7233 49.1874 52.7502 49.1874H5.46738C3.50981 49.1874 2.46493 46.978 2.99592 45.0938V45.0938" stroke="#151C20"/>
-  <path d="M2.89551 22.0933C2.89551 20.9539 3.81917 20.0303 4.95857 20.0303H29.3852C30.5246 20.0303 31.4483 20.9539 31.4483 22.0933V47.0769C31.4483 48.2163 30.5246 49.14 29.3852 49.14H4.95856C3.81917 49.14 2.89551 48.2163 2.89551 47.0769V22.0933Z" stroke="#151C20"/>
-  <path d="M3.44385 30.4019H31.3556M3.44385 38.3142H31.3556" stroke="#151C20"/>
-</svg>`
-
-          const bbc_data = [
-            {
-              ids: [21083, 194000, 262000, 19097],
-              inStock: true,
-              origin: "US",
-              pageSize: 24,
-            },
-          ]
-
-          let product_data = []
-
-          $.ajax({
-            type: "POST",
-            url: "/api/trantor/flow/bbc_item_FrontItemSearchFlow",
-            data: JSON.stringify(bbc_data),
-            async: false,
-            cache: false,
-            crossDomain: true,
-            contentType: false,
-            processData: false,
-            dataType: "json",
-            contentType: "application/json; charset=UTF-8",
-            success: function (msg) {
-              // 成功
-              if (msg.code == 200) {
-                product_data = msg.res.data
-              }
-            },
-            error: function (res) {
-              console.log(res)
-              alert(res.responseJSON.msg)
-            },
-            complete: function () {
-              let E7 = [],
-                E7Pro = [],
-                E7Plus = [],
-                E7L = []
-
-              product_data.forEach((item) => {
-                if (item.itemShortName == "E7") {
-                  E7.push(item.salePrc)
-                } else if (item.itemShortName == "E7 Pro") {
-                  E7Pro.push(item.salePrc)
-                } else if (item.itemShortName == "E7 Plus") {
-                  E7Plus.push(item.salePrc)
-                } else if (item.itemShortName == "E7L") {
-                  E7L.push(item.salePrc)
-                }
-              })
-
-              let moudle_8_tab_data = [
-                {
-                  img: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/buyerguide-E7-compare-1-3.png",
-                  // icon:60,
-                  // right_icon: "https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-corner%20-mark-2.png",
-                  sku: "E7",
-                  newPrice: E7[0],
-                  href: "https://www.flexispot.com/flexispot-pro-standing-desk-e7",
-                  svg_1: `<svg width="44" height="54" viewBox="0 0 44 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="25.5699" y="6.41514" width="2.95869" height="6.92954" stroke="#151C20" stroke-width="0.937706"/>
-  <rect x="25.0504" y="13.339" width="3.99773" height="7.74082" stroke="#151C20" stroke-width="0.937706"/>
-  <rect x="24.5309" y="21.0909" width="5.03677" height="26.4178" stroke="#151C20" stroke-width="0.937706"/>
-  <path d="M1.46289 51.2919V49.6035L23.5425 47.5254H29.7767L43.2842 49.6035V51.2919H1.46289Z" stroke="#151C20" stroke-width="0.937706"/>
-  <rect x="4.26544" y="51.6258" width="3.74637" height="0.409788" fill="#151C20" stroke="#151C20" stroke-width="0.409788"/>
-  <rect x="36.4759" y="51.6258" width="3.74637" height="0.409788" fill="#151C20" stroke="#151C20" stroke-width="0.409788"/>
-  <path d="M5.94336 4.42182V1.9541H43.2189V4.42182H32.4389L30.8803 6.24014H23.607L22.3082 4.42182H5.94336Z" stroke="#151C20" stroke-width="0.937706"/>
-  <rect width="2.34426" height="0.792105" transform="matrix(1 0 0 -1 7.37598 1.9541)" fill="#151C20"/>
-  <rect width="2.34426" height="0.792105" transform="matrix(1 0 0 -1 11.897 1.9541)" fill="#151C20"/>
-  <rect width="2.34426" height="0.792105" transform="matrix(1 0 0 -1 20.7173 1.9541)" fill="#151C20"/>
-  <rect width="2.34426" height="0.792105" transform="matrix(1 0 0 -1 34.5615 1.9541)" fill="#151C20"/>
-  <rect width="2.34426" height="0.792105" transform="matrix(1 0 0 -1 39.2549 1.9541)" fill="#151C20"/>
-  <g opacity="0.5">
-    <path d="M5.94385 10.5908V8.12305H43.2194V10.5908H32.4394L30.8808 12.4091H23.6075L22.3087 10.5908H5.94385Z" stroke="#151C20" stroke-width="0.937706"/>
-    <rect width="2.34426" height="0.79705" transform="matrix(1 0 0 -1 7.37598 8.12305)" fill="#151C20"/>
-    <rect width="2.34426" height="0.79705" transform="matrix(1 0 0 -1 11.897 8.12207)" fill="#151C20"/>
-    <rect width="2.34426" height="0.79705" transform="matrix(1 0 0 -1 20.7178 8.12305)" fill="#151C20"/>
-    <rect width="2.34426" height="0.79705" transform="matrix(1 0 0 -1 34.562 8.12305)" fill="#151C20"/>
-    <rect width="2.34426" height="0.79705" transform="matrix(1 0 0 -1 39.2549 8.12305)" fill="#151C20"/>
-  </g>
-</svg>`,
-                  svg_2: svg_2,
-                  svg_3: svg_3,
-                  svg_4: svg_4,
-                  svg_5: svg_5,
-                  desc_1: `22.8"-48.4"`,
-                  desc_2: `W: 47.2"-80"<br/>
-                  D: 24"-40"`,
-                  desc_3: `355lbs<br/>
-                  Max. Static Load`,
-                  desc_4: `< 50DB<br/>
-                  Basically silent`,
-                  desc_5: `Frame: Carbon Steel<br/>
-                  Destop: Chipboard,<br/>
-                  Bamboo, MDF, Solid Wood`,
-                  desc_6: `Frame:15years<br/>
-                  Desktop:bamboo-5years &<br/>
-                  Others-2years`,
-                },
-                {
-                  img: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/buyerguide-E7Pro-compare-1-3.png",
-                  sku: "E7 Pro",
-                  newPrice: E7Pro[0],
-                  href: "https://www.flexispot.com/flexispot-best-standing-desk-e7pro",
-                  svg_1: `<svg width="45" height="54" viewBox="0 0 45 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="25.7364" y="6.41514" width="2.95869" height="6.92954" stroke="#151C20" stroke-width="0.937706"/>
-  <rect x="25.2169" y="13.339" width="3.99773" height="7.74082" stroke="#151C20" stroke-width="0.937706"/>
-  <rect x="24.6974" y="21.0909" width="5.03677" height="26.4178" stroke="#151C20" stroke-width="0.937706"/>
-  <path d="M1.62939 51.2919V49.6035L23.709 47.5254H29.9432L43.4507 49.6035V51.2919H1.62939Z" stroke="#151C20" stroke-width="0.937706"/>
-  <rect x="4.43194" y="51.6258" width="3.74637" height="0.409788" fill="#151C20" stroke="#151C20" stroke-width="0.409788"/>
-  <rect x="36.6424" y="51.6258" width="3.74637" height="0.409788" fill="#151C20" stroke="#151C20" stroke-width="0.409788"/>
-  <path d="M6.10986 4.42182V1.9541H43.3854V4.42182H32.6054L31.0468 6.24014H23.7735L22.4747 4.42182H6.10986Z" stroke="#151C20" stroke-width="0.937706"/>
-  <rect width="2.34426" height="0.792105" transform="matrix(1 0 0 -1 7.54248 1.9541)" fill="#151C20"/>
-  <rect width="2.34426" height="0.792105" transform="matrix(1 0 0 -1 12.0635 1.9541)" fill="#151C20"/>
-  <rect width="2.34426" height="0.792105" transform="matrix(1 0 0 -1 20.8838 1.9541)" fill="#151C20"/>
-  <rect width="2.34426" height="0.792105" transform="matrix(1 0 0 -1 34.728 1.9541)" fill="#151C20"/>
-  <rect width="2.34426" height="0.792105" transform="matrix(1 0 0 -1 39.4214 1.9541)" fill="#151C20"/>
-  <g opacity="0.5">
-    <path d="M6.11035 10.5908V8.12305H43.3859V10.5908H32.6059L31.0473 12.4091H23.774L22.4752 10.5908H6.11035Z" stroke="#151C20" stroke-width="0.937706"/>
-    <rect width="2.34426" height="0.79705" transform="matrix(1 0 0 -1 7.54248 8.12305)" fill="#151C20"/>
-    <rect width="2.34426" height="0.79705" transform="matrix(1 0 0 -1 12.0635 8.12207)" fill="#151C20"/>
-    <rect width="2.34426" height="0.79705" transform="matrix(1 0 0 -1 20.8843 8.12305)" fill="#151C20"/>
-    <rect width="2.34426" height="0.79705" transform="matrix(1 0 0 -1 34.7285 8.12305)" fill="#151C20"/>
-    <rect width="2.34426" height="0.79705" transform="matrix(1 0 0 -1 39.4214 8.12305)" fill="#151C20"/>
-  </g>
-</svg>`,
-                  svg_2: svg_2,
-                  svg_3: svg_3,
-                  svg_4: svg_4,
-                  svg_5: svg_5,
-                  desc_1: `25"-50.6"`,
-                  desc_2: `W: 47.2"-80"<br/>
-                  D: 24"-40"`,
-                  desc_3: `440lbs<br/>
-                  Max. Static Load`,
-                  desc_4: `< 50DB<br/>
-                  Basically silent`,
-                  desc_5: `Frame: Carbon Steel<br/>
-                  Destop: Chipboard,<br/>
-                  Bamboo, MDF, Solid Wood`,
-                  desc_6: `Frame:15years<br/>
-                  Desktop:bamboo-5years &<br/>
-                  Others-2years`,
-                },
-                {
-                  img: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/buyerguide-E7L-compare-1-3.png",
-                  sku: "E7L",
-                  newPrice: E7L[0],
-                  href: "https://www.flexispot.com/l-shaped-standing-desk-e4l",
-                  svg_1: `<svg width="88" height="66" viewBox="0 0 88 66" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <g clip-path="url(#clip0_1461_6056)">
-    <path d="M74.6226 18.9733V13.4845L76.8454 14.1478V19.7735L74.6226 18.9733Z" stroke="black" stroke-width="0.94"/>
-    <path d="M74.2114 24.4481L74.2115 18.7764L77.1189 19.8757V25.5402L74.2114 24.4481Z" stroke="black" stroke-width="0.94"/>
-    <path d="M73.4632 49.9249L73.93 24.3623L77.4697 25.7218L76.9058 50.9944" stroke="black" stroke-width="0.94" stroke-linejoin="round"/>
-    <path d="M81.3843 15.5817L45.3691 3.83066L51.684 2.17578L85.8922 13.2057L81.3843 15.5817Z" stroke="black" stroke-width="0.94" stroke-linejoin="round"/>
-    <path d="M51.9248 15.5672V10.1696L54.4977 9.45801V14.9526L51.9248 15.5672Z" stroke="black" stroke-width="0.94"/>
-    <path d="M51.6855 21.6883V15.6944L54.7374 14.8252V20.8416L51.6855 21.6883Z" stroke="black" stroke-width="0.94"/>
-    <path d="M51.279 40.8734L51.2788 21.6846L55.144 20.749V39.7264L51.279 40.8734Z" stroke="black" stroke-width="0.94"/>
-    <path d="M53.638 6.50098L14.646 16.8113L19.5771 18.7801L58.855 8.25793L53.638 6.50098Z" stroke="black" stroke-width="0.94"/>
-    <path d="M22.8537 23.1742L2.92188 15.2146L7.30202 14.0654L26.7091 21.6313L22.8537 23.1742Z" stroke="black" stroke-width="0.94" stroke-linejoin="round"/>
-    <path d="M13.4131 19.5352V25.7531L15.365 26.3663V20.497" stroke="black" stroke-width="0.94"/>
-    <path d="M12.9302 32.1361L12.9302 25.6504L15.7295 26.4378L15.7295 32.8838L12.9302 32.1361Z" stroke="black" stroke-width="0.94"/>
-    <path d="M12.4941 50.5278V32.0322L15.883 33.0071V51.7523L12.4941 50.5278Z" stroke="black" stroke-width="0.94"/>
-    <path d="M24.6008 54.9481L8.08711 48.9199L5.50977 50.1995L21.0306 56.2634L24.6008 54.9481Z" stroke="black" stroke-width="0.94" stroke-linejoin="round"/>
-    <path d="M45.3858 45.4012L42.6689 43.8919L59.9953 38.1572L63.7382 39.1831L45.3858 45.4012Z" stroke="black" stroke-width="0.94" stroke-linejoin="round"/>
-    <path d="M67.3727 55.5391L63.9941 54.1369L83.5901 45.5957L86.6236 46.7551L67.3727 55.5391Z" stroke="black" stroke-width="0.94" stroke-linejoin="round"/>
-  </g>
-  <defs>
-    <clipPath id="clip0_1461_6056">
-      <rect width="87" height="66" fill="white" transform="translate(0.833008)"/>
-    </clipPath>
-  </defs>
-</svg>`,
-                  svg_2: `<svg width="83" height="46" viewBox="0 0 83 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M7.68762 4.70215C7.68762 3.85707 8.37269 3.17199 9.21777 3.17199H55.871V21.667C55.871 21.9598 55.6336 22.1971 55.3408 22.1971H9.21777C8.37269 22.1971 7.68762 21.5121 7.68762 20.667V4.70215Z" stroke="#151C20" stroke-width="0.939685"/>
-  <path d="M73.4482 3.17199C74.2933 3.17199 74.9784 3.85707 74.9784 4.70215L74.9784 40.0381C74.9784 40.8832 74.2933 41.5682 73.4482 41.5682L57.4834 41.5682C56.6383 41.5682 55.9532 40.8832 55.9532 40.0381L55.9532 3.17199L73.4482 3.17199Z" stroke="#151C20" stroke-width="0.939685"/>
-  <circle cx="14.9405" cy="7.82721" r="1.18658" fill="#151C20"/>
-  <circle cx="47.7066" cy="7.82721" r="1.18658" fill="#151C20"/>
-</svg>`,
-                  svg_3: svg_3,
-                  svg_4: svg_4,
-                  svg_5: svg_5,
-                  desc_1: `25.0"-50.7"`,
-                  desc_2: `W: 55"x 76"x 24"<br/>
-                  D: 78"x 72"x 24"`,
-                  desc_3: `330lbs<br/>
-                  Max. Static Load`,
-                  desc_4: `< 50DB<br/>
-                  Basically silent`,
-                  desc_5: `Frame: Carbon Steel<br/>
-                  Destop: Bamboo,<br/>
-                  Chipboard`,
-                  desc_6: `Frame:15years<br/>
-                  Desktop:bamboo-5years &<br/>
-                  Others-2years`,
-                },
-                {
-                  img: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/buyerguide-E7Plus-compare-1-3.png",
-                  sku: "E7 Plus",
-                  newPrice: E7Plus[0],
-                  href: "https://www.flexispot.com/flexispot-4-leg-standing-desk-e7plus",
-                  svg_1: `<svg width="87" height="66" viewBox="0 0 87 66" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M72.0902 2.2832H14.9097V7.78667H72.0902V2.2832Z" stroke="#151C20" stroke-width="0.94" stroke-linecap="round"/>
-  <rect x="19.8894" y="7.92312" width="4.00031" height="4.00031" stroke="#151C20" stroke-width="0.94"/>
-  <rect x="19.2781" y="12.2366" width="5.22333" height="6.74123" stroke="#151C20" stroke-width="0.94"/>
-  <path d="M25.8634 56.8731V19.1279H17.916V60.6866" stroke="#151C20" stroke-width="0.94"/>
-  <path d="M25.8633 56.4082H61.1364" stroke="#151C20" stroke-width="0.94"/>
-  <path d="M17.9165 60.2148L69.0838 60.2148" stroke="#151C20" stroke-width="0.94"/>
-  <rect x="20.8037" y="60.9566" width="4.75078" height="0.540097" fill="#151C20" stroke="#151C20" stroke-width="0.540097"/>
-  <rect x="61.7998" y="60.8765" width="4.75078" height="0.540097" fill="#151C20" stroke="#151C20" stroke-width="0.540097"/>
-  <rect x="63.1096" y="7.92312" width="4.00031" height="4.00031" stroke="#151C20" stroke-width="0.94"/>
-  <rect x="62.4978" y="12.2366" width="5.22333" height="6.74123" stroke="#151C20" stroke-width="0.94"/>
-  <path d="M69.0836 60.6866V19.1279H61.1362V56.8639" stroke="#151C20" stroke-width="0.94"/>
-</svg>`,
-                  svg_2: svg_2,
-                  svg_3: svg_3,
-                  svg_4: svg_4,
-                  svg_5: svg_5,
-                  desc_1: `26”-51.6“`,
-                  desc_2: `W: 47.2”-80“<br/>
-                  D: 28”-35“`,
-                  desc_3: `540lbs<br/>
-                  Max. Static Load`,
-                  desc_4: `< 50DB<br/>
-                  Basically silent`,
-                  desc_5: `Frame: Carbon Steel<br/>
-                  Destop: Chipboard,<br/>
-                  Bamboo, MDF, Solid Wood`,
-                  desc_6: `Frame:15years<br/>
-                  Desktop:bamboo-5years &<br/>
-                  Others-2years`,
-                },
-              ]
-
-              moudle_8_tab_data.forEach((item) => {
-                $(".loc_moudle_8_content_flex").append(`
-                <div class="loc_moudle_8_content_flex_item_box">
-                  <a class="loc_moudle_8_content_flex_item" href="${item.href
-                  }" target="_blank">
-                    ${item.icon
-                    ? `<div class="loc_moudle_8_content_flex_item_corner_mark">- $${item.icon}</div>`
-                    : ""
-                  }
-                    ${item.right_icon
-                    ? `<div class="loc_moudle_8_content_flex_item_corner_mark_right">
-                            <img class="lazyload" data-src="${item.right_icon}" alt="">
-                    </div>`
-                    : ""
-                  }
-                    <div class="loc_moudle_8_content_flex_item_img">
-                        <img class="lazyload" data-src="${item.img}" alt="">
-                    </div>
-                    <div class="loc_moudle_8_content_flex_item_title">${item.sku
-                  }</div>
-                    <div class="loc_moudle_8_content_flex_item_price">
-                        <div class="loc_moudle_8_content_flex_item_price_new">$${item.newPrice
-                  }</div>
-                    </div>
-                    <div class="loc_moudle_8_content_flex_item_buy">Buy</div>
-                </a>
-                <div class="loc_moudle_8_content_flex_item_main">
-                  ${item.svg_1}
-                  ${item.desc_1}
-                </div>
-                <div class="loc_moudle_8_content_flex_item_main">
-                  ${item.svg_2}
-                  ${item.desc_2}
-                </div>
-                <div class="loc_moudle_8_content_flex_item_main">
-                  ${item.svg_3}
-                  ${item.desc_3}
-                </div>
-                <div class="loc_moudle_8_content_flex_item_main">
-                  ${item.svg_4}
-                  ${item.desc_4}
-                </div>
-                <div class="loc_moudle_8_content_flex_item_main">
-                  ${item.svg_5}
-                  ${item.desc_5}
-                </div>
-                <div class="loc_moudle_8_content_flex_item_main">
-                  ${item.desc_6}
-                </div>
-               </div>
-            `)
-              })
-            },
-          })
-
-          if (isMobile()) {
-            $(".loc_moudle_8_content_flex").slick({
-              dots: false,
-              infinite: false,
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              prevArrow: `<div class="slick-prev" aria-label="Previous" type="button">
-                        <img class="lazyload" data-src="https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-arrow.png" />
-                        </div>`,
-              nextArrow: `<div class="slick-next" aria-label="Previous" type="button">
-                        <img class="lazyload" data-src="https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-arrow.png" />
-                        </div>`,
-            })
+          function isMobile() {
+            return window.innerWidth <= 768
           }
 
-          // loc_moudle_8 js end
-
-          // loc_moudle_5 js start
-          let moudle_5_slick_data = [
-            {
-              img: "https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-1.png",
-              title: "Affordable and high-quality",
-              text: "We take care of every step, from those 3 a.m new-design lightbulb moments, right through to development, manufacturing and delivery. It means we can keep the price lower for you, and guarantee you a standing desk of the highest quality.",
-            },
-            {
-              img: "https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-2.png",
-              title: "Award-winning design",
-              text: "FlexiSpot standing desks aren’t just practical, they’re stylish too. The Q8 standing desk has won the International Design Award for aesthetics and the SIT Furniture Design Award.",
-            },
-            {
-              img: "https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-3.png",
-              title: "Everything you need for less",
-              text: "Combine your electric standing desk with a variety of accessories and ergonomic furniture to make your workspace your own, at a fraction of the price.",
-            },
-            {
-              img: "https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-4.png",
-              title: "A range of designs that meet your needs",
-              text: "From L-shaped standing desks, through to two-tier height-adjustable standing desks, you can choose from a range of designs that meet your needs and suit your style.",
-            },
-            {
-              img: "https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-5.png",
-              title: "24/7 Customer service",
-              text: "Got a question? We’re happy to help. You can reach us 24/7 for anything you need before or after you order.",
-            },
-            {
-              img: "https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-6.png",
-              title: "Extended warranty",
-              text: "We’ve got your back with a 15-year warranty on the E7, one of our most popular electric standing desks.",
-            },
-            {
-              img: "https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-7.png",
-              title: "Safe and environmentally friendly",
-              text: "All of our standing desks are CARB (California Air Resources Board) and EPA (Environmental Protection Agency) certified. That means our formaldehyde emissions levels are lower than the industry standard. So you can feel good about using a standing desk that’s kinder to you, and the planet.",
-            },
-          ]
-
-          moudle_5_slick_data.forEach((item) => {
-            $(".loc_moudle_5_content_slick").append(`
-                    <div class="loc_moudle_5_content_slick_item_box">
-                        <div class="loc_moudle_5_content_slick_item">
-                            <div class="loc_moudle_5_content_slick_item_img">
-                                <img class="lazyload" data-src="${item.img}" alt="">
-                            </div>
-                            <div class="loc_moudle_5_content_slick_item_title">
-                                ${item.title}
-                            </div>
-                            <div class="loc_moudle_5_content_slick_item_text">
-                                ${item.text}
-                            </div>
-                        </div>
-                    </div>
-                `)
-          })
-
-          if (!isMobile()) {
-            $(".loc_moudle_5_content_slick").slick({
-              dots: false,
-              infinite: true,
-              slidesToShow: 4,
-              slidesToScroll: 1,
-              prevArrow: `<div class="slick-prev" aria-label="Previous" type="button">
-                        <img class="lazyload" data-src="https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-arrow.png" />
-                        </div>`,
-              nextArrow: `<div class="slick-next" aria-label="Previous" type="button">
-                        <img class="lazyload" data-src="https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-arrow.png" />
-                        </div>`,
-            })
-          }
-          // loc_moudle_5 js end
-
-          // loc_moudle_6 js start
-          let moudle_6_slick_data = [
-            {
-              img: "https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-item2.jpg",
-              img_m:
-                "https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-item2-m.jpg",
-              text: "Q8-Gold Winner of 2023 IDA Design Awards",
-              href: "https://www.flexispot.com/intelligent-office-fitness-chair",
-            },
-            {
-              img: "https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-item1-v2.jpg",
-              img_m:
-                "https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-item1-m-v2.jpg",
-              text: "E7-Best overall standing desk GQ Magazine 2023",
-              href: "https://www.flexispot.com/flexispot-pro-standing-desk-e7",
-            },
-            {
-              img: "https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-item3.jpg",
-              img_m:
-                "https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-item3-m.jpg",
-              text: "Q8-SIT Furniture Design Award Winner 2023",
-              href: "https://www.flexispot.com/comhar-pro-standing-desk-q8",
-            },
-          ]
-          moudle_6_slick_data.forEach((item) => {
-            $(".loc_moudle_6_content_slick").append(`
-                    <div class="loc_moudle_6_content_slick_item">
-                        <a href="${item.href}" target="_blank">
-                            <div class="home-active-l">
-                                <img class="lazyload" data-src="${item.img}" alt="">
-                            </div>
-                            <div class="home-active-m">
-                                <img class="lazyload" data-src="${item.img_m}" alt="">
-                            </div>
-                            <div class="loc_moudle_6_content_slick_item_desc">
-                                <div class="loc_moudle_6_content_slick_item_desc_text">${item.text}</div>
-                            </div>
-                        </a>
-                    </div>
-                `)
-          })
-
-          $(".loc_moudle_6_content_slick").slick({
-            dots: true,
-            arrows: false,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            responsive: [
+          // desk_container js start
+          const swiperTable = document.querySelector(
+            "#swiperTable .swiper-wrapper"
+          ),
+            swiperTableList = [
               {
-                breakpoint: 768,
-                settings: {
-                  dots: true,
-                },
+                imgUrl:
+                  "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-product-img1.png",
+                productTitle: "Carry-On Pro",
+                // productSku: "C7 Pro Max",
+                productSku: "E7 New", //dev
+                href: "https://www.flexispot.com/flexispot-premium-ergo-office-chair-c7-pro-max",
+                // productPrice: "???",
+                productPrice: "$249.99",
+                ColorOption: `Beige/Black`,
+                CarryOn: `<span style="color: #004DF2;">√</span>`,
+                CupHolder: `<span style="color: #004DF2;">√</span>`,
+                LaptopCompartment: `<span style="color: #004DF2;">√</span>`,
+                LengthOfTrip: "3-5 days",
+                Capacity: "4-6 outfits",
+                Dimensions: `21.5" x 14" x 8.7"`,
+                Weight: "8.1 lbs",
+                Material: "100% Polycarbonate",
+                Warranty: "3 Years",
               },
-            ],
+              {
+                imgUrl:
+                  "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-product-img2.png",
+                productTitle: "Carry-On",
+                // productSku: "C7 Max",
+                productSku: "ESD101-2", //dev
+                href: "https://www.flexispot.com/flexispot-professional-ergonomic-office-chair-c7m",
+                // productPrice: "???",
+                productPrice: "$199.99",
+                ColorOption: `Black/Blue/Pink`,
+                CarryOn: `<span style="color: #004DF2;">√</span>`,
+                CupHolder: "×",
+                LaptopCompartment: "×",
+                LengthOfTrip: "3-5 days",
+                Capacity: "5-7 outfits",
+                Dimensions: `21.7" x 14" x 8.9"`,
+                Weight: "7.4 lbs",
+                Material: "100% Polycarbonate",
+                Warranty: "3 Years",
+              },
+              {
+                imgUrl:
+                  "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-product-img3.png",
+                productTitle: "Check-in Medium",
+                // productSku: "C7 Series",
+                productSku: "C7 M", //dev
+                href: "https://www.flexispot.com/flexispot-best-ergonomic-office-chair-c7",
+                // productPrice: "???",
+                productPrice: "$269.99",
+                ColorOption: `Black/Blue`,
+                CarryOn: "×",
+                CupHolder: "×",
+                LaptopCompartment: "×",
+                LengthOfTrip: "1-2 weeks",
+                Capacity: "10-12 outfits",
+                Dimensions: `26" x 18.5" x 10.4"`,
+                Weight: "9.8 lbs",
+                Material: "100% Polycarbonate",
+                Warranty: "3 Years",
+              },
+              {
+                imgUrl:
+                  "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-product-img4.png",
+                productTitle: "Check-In Large",
+                // productSku: "C7 Series",
+                productSku: "C7 M", //dev
+                href: "https://www.flexispot.com/flexispot-best-ergonomic-office-chair-c7",
+                // productPrice: "???",
+                productPrice: "$299.99",
+                ColorOption: `Black/Blue/Pink`,
+                CarryOn: "×",
+                CupHolder: "×",
+                LaptopCompartment: "×",
+                LengthOfTrip: "2+ weeks",
+                Capacity: "15-18 outfits",
+                Dimensions: `29.1" x 20.5" x 12.2"`,
+                Weight: "11.1 lbs",
+                Material: "100% Polycarbonate",
+                Warranty: "3 Years",
+              },
+              {
+                imgUrl:
+                  "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-product-img5.png",
+                productTitle: "Trunk",
+                // productSku: "C7 Series",
+                productSku: "C7 M", //dev
+                href: "https://www.flexispot.com/flexispot-best-ergonomic-office-chair-c7",
+                // productPrice: "???",
+                productPrice: "$329.99",
+                ColorOption: `Black`,
+                CarryOn: "×",
+                CupHolder: "×",
+                LaptopCompartment: "×",
+                LengthOfTrip: "3+ weeks",
+                Capacity: "18-21 outfits",
+                Dimensions: `31.5" x 16.9" x 13.4"`,
+                Weight: "10.5 lbs",
+                Material: "100% Polycarbonate",
+                Warranty: "3 Years",
+              },
+            ]
+
+          let table_innerWidth = window.innerWidth
+
+          // 下面注释部分等待产品上线后使用接口获取产品价格
+          // const bbc_data = [
+          //   {
+          //     // ids: [446000, 392001, 202002],
+          //     ids: [922001, 446007, 1130001], //dev
+          //     inStock: true,
+          //     origin: "US",
+          //     pageSize: 24,
+          //   },
+          // ]
+
+          // let product_data = []
+          // const requestOptions = {
+          //   method: "POST",
+          //   headers: {
+          //     "Content-Type": "application/json",
+          //   },
+          //   body: JSON.stringify(bbc_data),
+          // }
+          // fetch(
+          //   "/api/trantor/flow/bbc_item_FrontItemSearchFlow",
+          //   requestOptions
+          // )
+          //   .then((res) => {
+          //     return res.json()
+          //   })
+          //   .then((data) => {
+          //     if (data.success) {
+          //       const resList = data.res.data
+
+          //       for (let i = 0; i < resList.length; i++) {
+          //         for (let j = 0; j < swiperTableList.length; j++) {
+          //           if (
+          //             swiperTableList[j].productSku === resList[i].itemCode
+          //           ) {
+          //             swiperTableList[j].productPrice =
+          //               "$" + resList[i].salePrc
+          //           }
+          //         }
+          //       }
+
+          //       swiperTableList.forEach((item) => {
+          //         swiperTable.innerHTML += `
+          //                   <div class="swiper-slide">
+          //                     <div class="desk_ul-topLi">
+          //                       <div class="desk_ul-topLi-img">
+          //                         <img
+          //                           class="lazyload"
+          //                           data-src="${item.imgUrl}"
+          //                           width="160"
+          //                           height="160"
+          //                         />
+          //                         </div>
+          //                         <div class='desk_ul-topLi-title'>${item.productTitle
+          //           }</div>
+          //                         <a href="${item.href
+          //           }" target="_blank" class='desk_ul-topLi-link'>Shop Now</a>
+          //                     </div>
+          //                           <ul class="desk_ul">
+          //                             <li class="desk_ul-li">
+          //                               <div class="desk_ul-contextLi">
+          //                                 <div>${item.productPrice}</div>
+          //                                 <div>${item.ColorOption}</div>
+          //                                 <div>${item.CarryOn}</div>
+          //                                 <div>${item.CupHolder}</div>
+          //                                 <div>${item.LaptopCompartment}</div>
+          //                                 <div>${item.LengthOfTrip}</div>
+          //                                 <div>${item.Capacity}</div>
+          //                                 <div>${item.Dimensions}</div>
+          //                                 <div>${item.Weight}</div>
+          //                                 <div>${item.Material}</div>
+          //                                 <div>${item.Warranty}</div>
+          //                               </div>
+          //                             </li>
+          //                           </ul>
+          //                         </div>
+          //                   `
+          //       })
+
+          //       if (table_innerWidth <= 768) {
+          //         table_innerWidth_intersectionFn()
+          //       }
+          //       height_zw_fn()
+          //     } else {
+          //       console.error(data.msg)
+          //     }
+          //     new Swiper("#swiperTable", {
+          //       slidesPerView: 3,
+          //       slidesPerGroup: 1,
+          //       navigation: {
+          //         nextEl: ".swiperTable-next",
+          //         prevEl: ".swiperTable-pre",
+          //       },
+          //       breakpoints: {
+          //         1025: {
+          //           slidesPerView: 3,
+          //         },
+          //         769: {
+          //           slidesPerView: 2,
+          //         },
+          //         0: {
+          //           slidesPerView: 1,
+          //         },
+          //       },
+          //     })
+          //   })
+          //   .catch((err) => {
+          //     console.error(err)
+          //   })
+          swiperTableList.forEach((item) => {
+            swiperTable.innerHTML += `
+                            <div class="swiper-slide">
+                              <div class="desk_ul-topLi">
+                                <div class="desk_ul-topLi-img">
+                                  <img
+                                    class="lazyload"
+                                    data-src="${item.imgUrl}"
+                                    width="160"
+                                    height="160"
+                                  />
+                                  </div>
+                                  <div class='desk_ul-topLi-title'>${item.productTitle
+              }</div>
+                                  <a href="${item.href
+              }" target="_blank" class='desk_ul-topLi-link'>Shop Now</a>
+                              </div>
+                                    <ul class="desk_ul">
+                                      <li class="desk_ul-li">
+                                        <div class="desk_ul-contextLi">
+                                          <div>${item.productPrice}</div>
+                                          <div>${item.ColorOption}</div>
+                                          <div>${item.CarryOn}</div>
+                                          <div>${item.CupHolder}</div>
+                                          <div>${item.LaptopCompartment}</div>
+                                          <div>${item.LengthOfTrip}</div>
+                                          <div>${item.Capacity}</div>
+                                          <div>${item.Dimensions}</div>
+                                          <div>${item.Weight}</div>
+                                          <div>${item.Material}</div>
+                                          <div>${item.Warranty}</div>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                            `
           })
-          // loc_moudle_6 js end
-        }
-      )
+          new Swiper("#swiperTable", {
+            slidesPerView: 4,
+            slidesPerGroup: 1,
+            navigation: {
+              nextEl: ".swiperTable-next",
+              prevEl: ".swiperTable-pre",
+            },
+            breakpoints: {
+              1441: {
+                slidesPerView: 4,
+              },
+              1025: {
+                slidesPerView: 3,
+              },
+              769: {
+                slidesPerView: 2,
+              },
+              0: {
+                slidesPerView: 1,
+              },
+            },
+          })
+          function height_zw_fn() {
+            document.querySelector(
+              ".desk_product-table .desk_product-table-list .height-zw"
+            ).style.height =
+              document.querySelectorAll(
+                ".desk_product-table .chair_buyerguide .desk_ul-topLi"
+              )[0].offsetHeight + "px"
+          }
+          window.addEventListener("resize", () => {
+            height_zw_fn()
+          })
+
+          const intersectionFn = function (ele, cb, cb2) {
+            new IntersectionObserver(
+              (entries) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                    cb2 && cb2()
+                  } else {
+                    cb && cb()
+                  }
+                })
+              },
+              {
+                threshold: [1],
+              }
+            ).observe(ele)
+          }
+
+          const chair_buyerguide_product_text = document.querySelector(
+            ".desk_container .desk_product .desk_product-text"
+          ),
+            chair_buying_guide_product_mobile_shadow = document.querySelector(
+              ".desk_product-table .chair_buying_guide-product-mobile-shadow"
+            )
+          function table_innerWidth_intersectionFn() {
+            if (table_innerWidth <= 768) {
+              intersectionFn(
+                chair_buyerguide_product_text,
+                () => {
+                  chair_buying_guide_product_mobile_shadow.style.display =
+                    "block"
+                },
+                () => {
+                  chair_buying_guide_product_mobile_shadow.style.display =
+                    "none"
+                }
+              )
+              chair_buying_guide_product_mobile_shadow.children[0].style.height =
+                document.querySelectorAll(
+                  ".desk_product-table .chair_buyerguide .desk_ul-topLi"
+                )[0].offsetHeight + "px"
+            }
+          }
+          window.addEventListener("resize", () => {
+            table_innerWidth = window.innerWidth
+            table_innerWidth_intersectionFn()
+          })
+          // desk_container js end
+
+          // suitcase_container js start
+          const swiperTable2 = document.querySelector(
+            "#swiperTable2 .swiper-wrapper"
+          ),
+            swiperTableList2 = [
+              {
+                Title: "FlexiSpot Carry-On",
+                Price: "$249.99",
+                CarryOn: "√",
+                EmptyWeight: "8.1 lbs",
+                AdjustmentSetting: "3 Height Settings",
+                Wheels: `Hinomoto <br />5-millimeter Thick Tire`,
+                LiningFabric: `150D Polyester<br />
+                            with Skin-friendly Treatment`,
+                BonusItems: `2 Dirty Laundry Bags+<br />
+                          3 Storage Bags+<br />
+                          Luggage Tag`,
+                isBest: "true",
+              },
+              {
+                Title: "Other Brand",
+                Price: "$325",
+                CarryOn: `×`,
+                EmptyWeight: "9 lbs",
+                AdjustmentSetting: "2 Height Settings",
+                Wheels: `Hinomoto 4-millimeter<br /> Thick Tire`,
+                LiningFabric: `100% Polyester`,
+                BonusItems: `Not Included`,
+                isBest: "false",
+              },
+              {
+                Title: "FlexiSpot Check-In Medium ",
+                Price: "$269.99",
+                CarryOn: "×",
+                EmptyWeight: "9.8 lbs",
+                AdjustmentSetting: "3 Height Settings",
+                Wheels: `Hinomoto <br />5-millimeter Thick Tire`,
+                LiningFabric: `150D Polyester<br />
+                            with Skin-friendly Treatment`,
+                BonusItems: `2 Dirty Laundry Bags+<br />
+                          3 Storage Bags+<br />
+                          Luggage Tag`,
+                isBest: "true",
+              },
+              {
+                Title: "Other Brand",
+                Price: "$345",
+                CarryOn: `×`,
+                EmptyWeight: "10.4 lbs",
+                AdjustmentSetting: "2 Height Settings",
+                Wheels: `Hinomoto 4-millimeter<br /> Thick Tire`,
+                LiningFabric: `100% Polyester`,
+                BonusItems: `Not Included`,
+                isBest: "false",
+              },
+            ]
+
+          swiperTableList2.forEach((item) => {
+            swiperTable2.innerHTML += `
+                            <div class="swiper-slide">
+                              <div class="suitcase_ul-topLi">
+                                  <div class='suitcase_ul-topLi-title'>${item.Title}</div>
+                              </div>
+                                    <ul class="suitcase_ul">
+                                      <li class="suitcase_ul-li">
+                                        <div class="suitcase_ul-contextLi">
+                                          <div class="${item.isBest ? "isBest" : ""}">${item.Price} </div>
+                                          <div class="${item.isBest ? "isBest" : ""}">${item.CarryOn}</div>
+                                          <div class="${item.isBest ? "isBest" : ""}">${item.EmptyWeight}</div>
+                                          <div class="${item.isBest ? "isBest" : ""}">${item.AdjustmentSetting}</div>
+                                          <div class="${item.isBest ? "isBest" : ""}">${item.Wheels}</div>
+                                          <div class="${item.isBest ? "isBest" : ""}">${item.LiningFabric}</div>
+                                          <div class="${item.isBest ? "isBest" : ""}">${item.BonusItems}</div>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                            `
+          })
+          new Swiper("#swiperTable2", {
+            slidesPerView: 3,
+            slidesPerGroup: 1,
+            navigation: {
+              nextEl: ".swiperTable-next",
+              prevEl: ".swiperTable-pre",
+            },
+            breakpoints: {
+              1025: {
+                slidesPerView: 3,
+              },
+              769: {
+                slidesPerView: 2,
+              },
+              0: {
+                slidesPerView: 1,
+              },
+            },
+          })
+          // suitcase_container js end
+        })
+
     }
   )
 </script>
