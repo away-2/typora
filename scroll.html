@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Play YouTube Video on Scroll</title>
+    <style>
+        .top {
+            width: 500px;
+            height: 2000px;
+            background: red;
+            margin: 0 auto;
+        }
+
+        .video {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">这个</div>
+    <div class="video">
+        <iframe id="youtubePlayer" src="https://www.youtube.com/embed/GVR08bu5nLQ?enablejsapi=1&mute=1"
+            title="YouTube video player" frameborder="0"></iframe>
+    </div>
+
+    <script>
+        // 异步加载 IFrame Player API 代码
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        let player;
+
+        // 创建 YouTube 播放器的实例
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtubePlayer', {
+                events: {
+                    'onReady': onPlayerReady // 在播放器准备好时调用 onPlayerReady 函数
+                }
+            });
+        }
+
+        // 使用 Intersection Observer 自动播放和暂停视频
+        function onPlayerReady(event) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        player.playVideo(); // 当视频进入视口时播放视频
+                    } else {
+                        player.pauseVideo(); // 当视频离开视口时暂停视频
+                    }
+                });
+            }, {
+                threshold: 0.5 // 当 50% 的视频内容可见时触发
+            });
+
+            // 开始观察视频 iframe
+            observer.observe(document.getElementById('youtubePlayer'));
+        }
+    </script>
+</body>
+
+</html>
