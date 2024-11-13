@@ -1,0 +1,737 @@
+<div>
+  <style xml="space">
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content {
+      overflow-y: visible;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content img {
+      height: auto;
+    }
+
+    .yotpo.yotpo-main-widget {
+      background-color: transparent !important;
+    }
+
+    .description-page * {
+      background: initial;
+    }
+
+    .additional-info__section .container {
+      width: 1384px;
+    }
+
+    .ant-collapse-content>.ant-collapse-content-box {
+      padding: 16px 0;
+    }
+
+    .description-page-container-max-width {
+      width: 1340px;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+
+    .description-page-container-bg-gray {
+      background: #f6f4f1;
+    }
+
+    .description-page-container-bg-black {
+      background: #282828;
+    }
+
+    .description-page-container-bg-green {
+      background: #043e1b;
+    }
+
+    .description-page-container-text-color-blue {
+      color: #004df2;
+    }
+
+    .banner-m img {
+      width: 100%;
+      display: none;
+    }
+
+    .description-page img {
+      border-radius: 12px;
+    }
+
+    .img-left-radius {
+      border-radius: 12px 0px 0px 12px;
+    }
+
+    .description-page-container-item {
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 12px;
+      margin-top: 60px;
+    }
+
+    .description-page-container-item-text-box {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: baseline;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      padding: 0 60px;
+      max-width: 690px;
+    }
+
+    .description-page-container-item-text-img {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: baseline;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      padding: 0 60px;
+      max-width: 620px;
+    }
+
+    .description-page-container-item-text {
+      padding: 0 0px;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-smalltitle {
+      font-family: "NotoSansJP-Medium" !important;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 14px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #26333a;
+      position: relative;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title {
+      font-family: "Zen-Kaku-Gothic-New-Black" !important;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 60px;
+      font-feature-settings: "pnum" on, "lnum" on, "ss01" on, "ss04" on, "liga" off;
+      color: #26333a;
+      max-width: 500px;
+      margin-top: 28px;
+      margin-bottom: 28px;
+    }
+
+    .big-title {
+      width: 669px;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle {
+      font-family: "NotoSansJP-Regular" !important;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      font-feature-settings: "pnum" on, "lnum" on, "ss02" on;
+      color: #26333a;
+      max-width: 500px;
+      margin-top: 4px;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle-icon {
+      font-family: "NotoSansJP-Medium" !important;
+      font-style: normal;
+      font-weight: 702;
+      font-size: 16px;
+      line-height: 16px;
+      color: #004df2;
+      margin-top: 16px;
+    }
+
+    .description-page-container-item-text-mt {
+      margin-top: 40px;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-title {
+      font-family: "Zen-Kaku-Gothic-New-Medium" !important;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 44px;
+      text-align: center;
+      font-feature-settings: "pnum" on, "lnum" on, "ss01" on, "ss04" on, "liga" off;
+      color: #26333a;
+      padding: 100px 0 40px 0;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-title-hide {
+      padding: 20px 0 40px 0;
+    }
+
+    .description-page-container-item-flex {
+      display: flex;
+      grid-column-gap: 34px;
+      grid-template-columns: auto auto auto auto;
+    }
+
+    .description-page-container-item-flex img {
+      max-width: 430px;
+      width: 430px;
+      height: auto;
+    }
+
+    .description-page-container-item-flex-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex-content-text {
+      font-family: "NotoSansJP-Medium" !important;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 0.05em;
+      color: #26333a;
+      margin-top: 18px;
+      padding: 0 35px;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex-content-smalltext {
+      font-family: "NotoSansJP-Regular" !important;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 0.05em;
+      color: #26333a;
+      margin-top: 18px;
+      padding: 0 35px;
+    }
+
+    .description-page-container-item-theme {
+      justify-content: center;
+    }
+
+    .description-page-container-item-theme .description-page-container-item-bigtitle .description-page-container-item-bigtitle-text {
+      color: #26333a;
+      text-align: center;
+      font-feature-settings: "ss04" on, "ss01" on, "liga" off;
+      font-family: "Zen-Kaku-Gothic-New-Black" !important;
+      font-size: 52px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 120%;
+    }
+
+    .description-page-container-item-theme .description-page-container-item-bigtitle .description-page-container-item-bigtitle-detail {
+      margin: 14px 0 84px;
+      color: #26333a;
+      text-align: center;
+      font-feature-settings: "ss04" on, "ss01" on, "liga" off;
+      font-family: "NotoSansJP-Regular" !important;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      letter-spacing: 1.8px;
+    }
+
+    .description-page-container-item-text-white {
+      color: #ede9e4;
+    }
+
+    .description-page-container-item-line {
+      border-bottom: 1px solid #ede9e4;
+      padding-bottom: 16px;
+    }
+
+    .description-page-container-item-box {
+      width: 50%;
+      padding-bottom: 30px;
+      border-bottom: 1.5px solid #d2d1d1;
+    }
+
+    .description-page-container-item .description-page-container-item-iframe {
+      width: 100%;
+      height: 620px;
+    }
+
+    .description-page-container-item .description-page-container-item-iframe iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .description-page-container-item .custom-detail-video-mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      border-radius: 12px;
+    }
+
+    .home-active-l {
+      display: block;
+    }
+
+    .home-active-m {
+      display: none;
+    }
+
+    @media (max-width: 1440px) {
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle {
+        font-size: 15px;
+        line-height: 20px;
+        margin-top: 20px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title {
+        font-size: 46px;
+        line-height: 50px;
+        margin-top: 20px;
+      }
+
+      .description-page-container-item-text-bigtitle {
+        font-size: 60px;
+      }
+
+      .description-page-container-item .description-page-container-item-iframe {
+        height: 448px;
+      }
+    }
+
+    @media (max-width: 1280px) {
+      .description-page-container-item-flex img {
+        max-width: 380px;
+        width: 380px;
+      }
+
+      .big-title {
+        width: auto;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .response_img {
+        max-width: 350px;
+        height: auto;
+      }
+
+      .description-page-container-item .description-page-container-item-iframe {
+        height: 344px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .description-page-container-item .description-page-container-item-iframe {
+        height: 560px;
+      }
+
+      .description-page-container-item-flex img {
+        max-width: 250px;
+        min-width: 250px;
+        width: 250px;
+      }
+
+      .response_img {
+        max-width: 100%;
+      }
+
+      .home-active-l {
+        display: none !important;
+      }
+
+      .home-active-m {
+        display: block !important;
+      }
+
+      .description-page-container-margin60 {
+        margin-top: 20px;
+      }
+
+      .ant-collapse-content>.ant-collapse-content-box {
+        padding: 0;
+      }
+
+      .description-page-container .banner img {
+        width: 100%;
+        display: none;
+      }
+
+      .banner-m img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .description-page-container {
+        width: 100%;
+      }
+
+      .description-page-container-item {
+        flex-direction: column;
+        margin-top: 30px;
+      }
+
+      .description-page-container-item-text-box {
+        padding: 10px 20px;
+      }
+
+      .description-page-container-item-text-img {
+        padding: 0px 0px;
+        margin-top: 20px;
+      }
+
+      .description-page-container-item-text-box-m {
+        margin-top: 40px;
+      }
+
+      .description-page-container-item-text-padding-b-m {
+        padding-bottom: 40px;
+      }
+
+      .description-page-container-item-reverse {
+        flex-direction: column-reverse;
+      }
+
+      .img-left-radius {
+        border-radius: 12px;
+      }
+
+      .description-page-container-item-flex {
+        overflow: auto;
+      }
+
+      .description-page-container-item-text-box:has(.comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title) {
+        padding: 0 36px;
+      }
+
+      .big-title {
+        width: 100%;
+      }
+
+      .description-page-container-item:has(.description-page-container-item-text-box) {
+        align-items: flex-start;
+      }
+
+      .description-page-container-bg-gray,
+      .description-page-container-bg-green {
+        border-radius: 12px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-smalltitle {
+        font-size: 14px;
+        line-height: 14px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title {
+        font-size: 30px;
+        line-height: 36px;
+        margin-top: 24px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle {
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 4px;
+        min-width: 100%;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-title {
+        font-family: "Zen-Kaku-Gothic-New-Black" !important;
+        font-weight: 900;
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex-content-text {
+        font-size: 14px;
+        line-height: 22px;
+        padding: 0 20px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex-content-smalltext {
+        font-size: 13px;
+        line-height: 20px;
+        padding: 0px 10px;
+        margin-top: 10px;
+      }
+
+      .description-page-container-item-line-m {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ede9e4;
+      }
+
+      .description-page-container-item-theme .description-page-container-item-bigtitle .description-page-container-item-bigtitle-text {
+        font-size: 24px;
+        letter-spacing: -1.2px;
+      }
+
+      .description-page-container-item-theme .description-page-container-item-bigtitle .description-page-container-item-bigtitle-detail {
+        font-size: 16px;
+        margin-bottom: 60px;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .description-page-container-item .description-page-container-item-iframe {
+        height: 385px;
+      }
+    }
+
+    @media (max-width: 375px) {
+      .description-page-container-item .description-page-container-item-iframe {
+        height: 335px;
+      }
+    }
+
+    @media (max-width: 320px) {
+      .description-page-container-item .description-page-container-item-iframe {
+        height: 280px;
+      }
+    }
+  </style>
+</div>
+<div>
+  <div id="description" class="description-page">
+    <div class="description-page-container">
+      <div class="banner">
+        <img class="lazyload"
+          data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/C7PRO-2banner-1384x560.jpg" width="1384"
+          height="560" />
+      </div>
+      <div class="banner-m">
+        <img class="lazyload" data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/C7PRO-2banner-670x760.jpg
+" width="670" height="760" />
+      </div>
+      <!--  module 1 -->
+      <div class="description-page-container-item description-page-container-item-reverse">
+        <div class="description-page-container-item-text-img description-page-container-item-text">
+          <img class="lazyload" data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/XC7-FSGG-620-1.jpg"
+            width="620" height="620" />
+        </div>
+        <div class="description-page-container-item-text-box description-page-container-item-text-mt-m">
+          <div class="description-page-container-item-text-title home-active-l">FlexiSpotC7シリーズ</div>
+          <div class="description-page-container-item-text-title home-active-m">FlexiSpotC7シリーズ</div>
+          <div class="description-page-container-item-text-subtitle">
+            上質な座り⼼地と、オフィスの多様化に合わせてチェアを楽しめるシーティングです。豊かな機能を備えたオフィスチェアC7シリーズ、体への負担を軽減し、快適なワーク環境が整えられます。
+          </div>
+        </div>
+      </div>
+      <!--  module 2 -->
+      <div class="description-page-container-item">
+        <div class="description-page-container-item-text-box description-page-container-item-text-mt-m">
+          <div class="description-page-container-item-text-title big-title">
+            もっと楽しく、<br />
+            もっと快適に
+          </div>
+          <div class="description-page-container-item-text-subtitle">
+            使用者の多様な体格に合わせられる調節機能、さらに背もたれや座面の素材からこだわることで快適な座り心地と耐久性を兼ね備えました。
+          </div>
+          <br />
+          <div class="description-page-container-item-text-subtitle">
+            C7シリーズチェアの背もたれは通気性がよく、集中力を高めるメッシュ生地を採用。絶妙な弾力があり、長期間の使用にも耐えうるチェアです。通気性が高いので熱がこもらず、１年中快適に過ごせます。セパレート構造により背骨のS字形状を保持し、本来の自然な姿勢を維持しやすくなるため、腰痛を防止する効果も期待できます。背もたれと座面が体の動きに合わせて可動し、腰への負担を軽減します。
+          </div>
+        </div>
+        <div class="description-page-container-item-text-img description-page-container-item-text">
+          <img class="lazyload" data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/C7PRO-2-620.jpg"
+            width="620" height="620" />
+        </div>
+      </div>
+      <!--  module 3 -->
+      <div class="description-page-container-item description-page-container-item-reverse">
+        <div class="description-page-container-item-text-img description-page-container-item-text">
+          <img class="lazyload"
+            data-src="https://s3.springbeetle.eu/dev-de-s3-flexispot/trantor/attachments/JP/XC7-SS-620-3.jpg"
+            width="620" height="620" />
+        </div>
+        <div class="description-page-container-item-text-box description-page-container-item-text-mt-m">
+          <div class="description-page-container-item-text-title">座面で決まる座り心地</div>
+          <div class="description-page-container-item-text-subtitle">
+            一般的な椅子には20kg～30kg/m³程度の密度のウレタン素材が使用されることが多く、密度が低く、柔らかい座り心地になりますが、その分型崩れしやすい傾向があります。
+          </div>
+          <br />
+          <div class="description-page-container-item-text-subtitle">
+            FlexiSpot オフィスチェア
+            C7で使用されているモールドウレタンは、密度が45kg/m³ほどと高く、一般的な椅子よりも耐久性が向上しています。加えて、座面に厚み（約６cm）があり柔らかいので、仕事以外の時間も快適に使用できます。
+          </div>
+          <br />
+          <div class="description-page-container-item-text-subtitle">
+            オフィスチェア
+            C7Airは全面にメッシュを採用。弾力性と耐圧分散に優れ、一点に負荷がかかりにくいので、長時間座ってもお尻が疲れにくいのが特長です。
+          </div>
+          <br />
+          <div class="description-page-container-item-text-subtitle">
+            C7Proはオットマンが内蔵されています。デスク作業の時は収納、休憩するときにはリクライニングを倒し、オットマンに脚を乗せてリラックスタイムを過ごすことができます。
+          </div>
+        </div>
+      </div>
+      <!--  module 4 -->
+      <div class="description-page-container-item">
+        <img class="home-active-l lazyload"
+          data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/XC7-FSGG-2-1384x560.jpg" width="1384"
+          height="560" alt="" />
+        <img class="lazyload home-active-m"
+          data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/XC7-FSGG-APP-1.jpg" width="670"
+          height="352" alt="" />
+        <img class="lazyload home-active-m"
+          data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/xc7-5.2-app-2.jpg" width="670" height="352"
+          alt="" />
+        <img class="lazyload home-active-m"
+          data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/xc7-5.3-app-3.jpg" width="670" height="352"
+          alt="" />
+      </div>
+      <!--  module 5 -->
+      <div class="description-page-container-item description-page-container-item-theme">
+        <div class="description-page-container-item-bigtitle">
+          <div class="description-page-container-item-bigtitle-text">
+            FlexiSpot エルゴノミクス(人間工学)チェア C7シリーズ
+          </div>
+          <div class="description-page-container-item-bigtitle-detail">
+            世界水準の厳格な品質基準<br />
+            ワーカーの多様な体格に合わせられます
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="description-page-container-item-flex">
+          <div class="description-page-container-item-flex-content">
+            <img class="lazyload" data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/XC7-6-1-img6.jpg"
+              width="440" height="440" />
+            <div class="description-page-container-item-flex-content-text">グローバルスペックを追求</div>
+          </div>
+          <div class="description-page-container-item-flex-content">
+            <img class="lazyload" data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/XC7-6-2-img7.jpg"
+              width="440" height="440" />
+            <div class="description-page-container-item-flex-content-text">耐荷重130KG</div>
+          </div>
+          <div class="description-page-container-item-flex-content">
+            <img class="lazyload" data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/XC7-6-3-img8.jpg"
+              width="440" height="440" />
+            <div class="description-page-container-item-flex-content-text">男性も女性も　使いやすい</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="description-page-container-item description-page-container-item-iframe-box">
+        <div class="description-page-container-item-iframe">
+          <iframe id="youtubePlayer" src="https://www.youtube.com/embed/GVR08bu5nLQ?si=ZS2kBQNhp-aOaU9I"
+            title="YouTube video player" frameborder="0"></iframe>
+        </div>
+      </div>
+      <!-- <div class="banner description-page-container-item" onclick="displayFrame(this)">
+        <img
+          class="lazyload cover-image"
+          data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/XC7-FSGG-1384x620.jpg"
+          width="1384"
+          height="620"
+        />
+        <div class="custom-detail-video-mask">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M32.0002 9.33331C44.5189 9.33331 54.6669 19.4813 54.6669 32C54.6669 44.5187 44.5189 54.6667 32.0002 54.6667C19.4815 54.6667 9.3335 44.5187 9.3335 32C9.3335 19.4813 19.4815 9.33331 32.0002 9.33331ZM28.8402 24C27.6402 24 26.6669 24.9733 26.6669 26.1733V37.6107C26.6671 38.0007 26.7723 38.3834 26.9714 38.7188C27.1705 39.0541 27.4561 39.3297 27.7984 39.5166C28.1406 39.7036 28.5269 39.795 28.9166 39.7813C29.3064 39.7676 29.6852 39.6492 30.0135 39.4387L39.0015 33.664C39.309 33.4664 39.5617 33.1943 39.7362 32.8731C39.9107 32.5519 40.0013 32.1918 39.9997 31.8263C39.9981 31.4607 39.9043 31.1015 39.7271 30.7818C39.5498 30.4621 39.2947 30.1923 38.9855 29.9973L29.9975 24.3347C29.6506 24.1161 29.249 24 28.8389 24H28.8402Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="banner-m description-page-container-item" onclick="displayFrame(this)">
+        <img
+          class="lazyload cover-image"
+          data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/XC7-FSGG-335x2.jpg"
+          width="670"
+          height="670"
+        />
+        <div class="custom-detail-video-mask">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M32.0002 9.33331C44.5189 9.33331 54.6669 19.4813 54.6669 32C54.6669 44.5187 44.5189 54.6667 32.0002 54.6667C19.4815 54.6667 9.3335 44.5187 9.3335 32C9.3335 19.4813 19.4815 9.33331 32.0002 9.33331ZM28.8402 24C27.6402 24 26.6669 24.9733 26.6669 26.1733V37.6107C26.6671 38.0007 26.7723 38.3834 26.9714 38.7188C27.1705 39.0541 27.4561 39.3297 27.7984 39.5166C28.1406 39.7036 28.5269 39.795 28.9166 39.7813C29.3064 39.7676 29.6852 39.6492 30.0135 39.4387L39.0015 33.664C39.309 33.4664 39.5617 33.1943 39.7362 32.8731C39.9107 32.5519 40.0013 32.1918 39.9997 31.8263C39.9981 31.4607 39.9043 31.1015 39.7271 30.7818C39.5498 30.4621 39.2947 30.1923 38.9855 29.9973L29.9975 24.3347C29.6506 24.1161 29.249 24 28.8389 24H28.8402Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+      </div> -->
+    </div>
+  </div>
+
+  <script>
+    // function displayFrame(element) {
+    //   // 找到当前元素的父级元素并隐藏
+    //   element.style.display = "none"
+    //   var iframeContainer = document.querySelector(".description-page-container-item-iframe-box")
+    //   iframeContainer.style.display = "block"
+    //   var iframe = document.getElementById("youtubePlayer")
+    //   iframe.src = iframe.src + "&amp;autoplay=1&mute=1"
+    // }
+    console.log(123);
+    
+
+    // 异步加载 IFrame Player API 代码
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    let player;
+
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('youtubePlayer', {
+        events: {
+          'onReady': onPlayerReady
+        }
+      });
+    }
+
+    //自动播放和暂停视频
+    function onPlayerReady(event) {
+      player.mute(); // 静音
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            player.playVideo();
+          } else {
+            player.pauseVideo();
+          }
+        });
+      }, {
+        threshold: 0.5 
+      });
+
+      const iframeContainer = document.querySelector('.description-page-container-item-iframe-box');
+      if (iframeContainer) {
+        observer.observe(iframeContainer);
+      } else {
+        console.error("Container not found for IntersectionObserver.");
+      }
+    }
+
+  </script>
+</div>

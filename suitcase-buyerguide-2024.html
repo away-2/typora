@@ -167,6 +167,7 @@
     line-height: 120%;
     text-align: center;
     color: rgba(38, 51, 58, 0.8);
+    padding: 0 10px;
   }
 
   .loc_banner_left {
@@ -175,7 +176,7 @@
 
   .loc_banner_left_title {
     max-width: 540px;
-    padding: 0 50px;
+    /* padding: 0 50px; */
   }
 
   @media (max-width: 768px) {
@@ -205,6 +206,7 @@
       font-size: 16px;
       line-height: 120%;
       margin-top: 20px;
+      padding: 0;
     }
 
     .loc_banner_right img {
@@ -1421,15 +1423,18 @@
     vertical-align: bottom;
   }
 
-  /* .table-wrapper table tbody tr th img {
-    width: 100% !important;
-  } */
 
-  .table-wrapper table tbody tr th .head-img {
+  .table-wrapper table thead tr th .head-img {
     width: 100% !important;
   }
-  .table-wrapper table tbody tr th .head-img img {
-    width: 100%;
+
+  /* .table-wrapper table thead tr th .head-img .img-wrap {
+    width: 100% !important;
+    height: auto;
+  } */
+
+  .table-wrapper table thead tr th .head-img img {
+    width: 100% !important;
     height: auto;
     margin-bottom: 25px !important;
   }
@@ -1509,7 +1514,8 @@
       background-color: rgb(253, 252, 245);
       z-index: 1;
       /* 确保它在其他列上面 */
-      width: 150px;
+      /* width: 150px; */
+      width: 20%;
     }
 
     .table-wrapper table tbody tr td:first-child {
@@ -2269,7 +2275,7 @@
       height: 328px;
     }
 
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .swiper-slide2 {
+    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .swiper-slide {
       width: 168px;
     }
 
@@ -2396,7 +2402,7 @@
     display: flex;
     align-items: center;
     padding: 5px 0;
-    color: rgba(38, 51, 58, 0.8);
+    color: #26333a;
     font-variant-numeric: lining-nums tabular-nums;
     font-feature-settings: "ss03" on, "ss04" on, "liga" off;
     font-family: Moderat-Bold;
@@ -2407,7 +2413,7 @@
   }
 
   .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title .height-zw {
-    height: 100px;
+    height: 80px;
     border: none;
     position: -webkit-sticky;
     position: sticky;
@@ -2446,7 +2452,7 @@
     align-items: center;
     /* justify-content: space-between; */
     gap: 15px;
-    height: 100px;
+    height: 80px;
     background: #fdfcf5;
     border-bottom: 1px solid rgba(38, 51, 58, 0.1);
   }
@@ -2483,17 +2489,44 @@
     box-sizing: border-box;
   }
 
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi .isBest {
+    color: #004df2;
+    text-align: center;
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: 'ss03' on, 'ss04' on, 'liga' off;
+    font-family: Moderat-Bold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi .isBest svg {
+    margin-left: 20px;
+  }
+
   .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-title {
     color: #26333a;
     text-align: center;
     font-family: "Moderat-Bold";
     font-variant-numeric: lining-nums proportional-nums;
     font-feature-settings: "ss01" on, "ss04" on, "ss18" on, "liga" off;
-    font-size: 20px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-top: 20px;
+    padding: 14px 40px;
+    border-radius: 40px;
+    text-align: center;
+    border: 1px solid #26333A;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_ul-topLi .isBest {
+    color: #004df2;
+    font-size: 15px;
   }
 
   .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-price {
@@ -2652,7 +2685,7 @@
     top: 179px;
     width: 44px;
     height: 44px;
-    margin-top: 75px;
+    margin-top: 10px;
     background: #ede9e4 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_left.svg") no-repeat center center;
     border-radius: 50%;
     cursor: pointer;
@@ -2681,7 +2714,7 @@
     top: 179px;
     width: 44px;
     height: 44px;
-    margin-top: 75px;
+    margin-top: 10px;
     background: #ede9e4 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_right.svg") no-repeat center center;
     border-radius: 50%;
     cursor: pointer;
@@ -2743,7 +2776,7 @@
     }
 
     .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box {
-      left: calc(6% + 22px);
+      left: calc(6% + 4px);
       height: 82.5%;
     }
 
@@ -2753,7 +2786,8 @@
     }
 
     .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-title {
-      font-size: 20px;
+      font-size: 14px;
+      padding: 15px;
     }
 
     .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title>div p,
@@ -2806,7 +2840,8 @@
     }
 
     .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-title {
-      font-size: 20px;
+      font-size: 14px;
+      padding: 10px;
     }
 
     .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-price {
@@ -2843,7 +2878,10 @@
 
     .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box .swiperTable-pre,
     .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box .swiperTable-next {
+      width: 30px;
+      height: 30px;
       top: 163px;
+      margin-top: 6px;
     }
 
     .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .c_table_theme {
@@ -2908,7 +2946,7 @@
     }
 
     .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box {
-      left: calc(20% + 22px);
+      left: calc(20% + 4px);
     }
 
     .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box .swiperTable-pre {
@@ -2916,7 +2954,7 @@
     }
 
     .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box {
-      right: 0px;
+      right: -35px;
     }
 
     .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box .swiperTable-next {
@@ -2967,7 +3005,7 @@
         <a href="loc_nav_item_2">What to consider when choosing a luggage?</a>
       </div>
       <div class="loc_container_nav_menu_item">
-        <a href="loc_nav_item_3">How to select a standing desk?</a>
+        <a href="loc_nav_item_3">In addition to size</a>
       </div>
       <div class="loc_container_nav_menu_item">
         <a href="loc_nav_item_4">Why choose FlexiSpot luggage?</a>
@@ -3026,28 +3064,29 @@
                   <th>
                     <div class="head-img">
                       <img
-                        src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241112-20-inch.png"
+                        class="img-wrap"
+                        src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241113-20-inch.png"
                         alt="">
                     </div>
                   </th>
                   <th>
                     <div class="head-img">
                       <img
-                        src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241112-24-inch.png"
+                        src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241113-24-inch.png"
                         alt="">
                     </div>
                   </th>
                   <th>
                     <div class="head-img">
                       <img
-                        src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241112-28-inch.png"
+                        src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241113-28-inch.png"
                         alt="">
                     </div>
                   </th>
                   <th>
                     <div class="head-img">
                       <img
-                        src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241112-32-inch.png"
+                        src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241113-32-inch.png"
                         alt="">
                     </div>
                   </th>
@@ -3170,6 +3209,7 @@
         <div class="loc_title loc_moudle_3_content_title">
           FlexiSpot Luggage Quality Tests
         </div>
+      <div class="hidden_dom" id="loc_nav_item_5"></div>
         <div class="loc_moudle_3_content_tab">
           <div class="loc_moudle_3_content_tab_item loc_tab_active">Drop Test</div>
           <div class="loc_moudle_3_content_tab_item">Mileage Test</div>
@@ -3177,7 +3217,6 @@
           <div class="loc_moudle_3_content_tab_item">Tumble Test</div>
         </div>
       </div>
-      <div class="hidden_dom" id="loc_nav_item_5"></div>
     </div>
     <!-- loc_moudle 3 end -->
 
@@ -3726,21 +3765,32 @@
           // suitcase_container js start
           const swiperTable2 = document.querySelector(
             "#swiperTable2 .swiper-wrapper"
-          ),
+          )
+
+          const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 29 29" fill="none">
+  <g clip-path="url(#clip0_3354_10713)">
+    <path d="M21.2089 26.0751C21.2089 26.6845 20.7444 27.1545 20.1296 27.1545C16.8369 27.1545 4.45046 28.3212 4.45046 28.3212C3.45856 28.3212 2.67433 25.6106 2.67433 25.6106C0.11124 16.1971 0.19595 13.7816 0.19595 13.7816C0.19595 11.8606 1.94475 12.0054 1.94475 12.0054H9.52473C6.84141 1.36778 11.1533 0.345825 11.1533 0.345825C12.842 0.345825 12.6371 2.59195 12.6371 2.76409C12.6371 6.49397 17.7632 10.896 20.6788 12.6448C20.9985 12.8498 21.2035 13.1995 21.2035 13.5794V26.0751H21.2089ZM27.532 27.3266C27.8844 27.3867 28.2014 27.1217 28.2014 26.7446V13.5438C28.2014 13.1667 27.8817 12.9017 27.532 12.9618L24.0343 13.0793C23.742 13.1394 23.537 13.3717 23.537 13.6613V26.6025C23.537 26.8949 23.742 27.1271 24.0343 27.1845L27.532 27.3266Z" fill="#004df2"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_3354_10713">
+      <rect width="28" height="28" fill="white" transform="matrix(-1 0 0 1 28.2014 0.604492)"/>
+    </clipPath>
+  </defs>
+</svg>`,
             swiperTableList2 = [
               {
                 Title: "FlexiSpot Carry-On",
-                Price: "$249.99",
-                CarryOn: "√",
-                EmptyWeight: "8.1 lbs",
-                AdjustmentSetting: "3 Height Settings",
-                Wheels: `Hinomoto <br />5-millimeter Thick Tire`,
-                LiningFabric: `150D Polyester<br />
-                            with Skin-friendly Treatment`,
-                BonusItems: `2 Dirty Laundry Bags+<br />
+                Price: `<span>$249.99</span>${svg}`,
+                CarryOn: `<span>√</span>${svg}`,
+                EmptyWeight: `<span>8.1 lbs</span>${svg}`,
+                AdjustmentSetting: `<span>3 Height Settings</span>${svg}`,
+                Wheels: `<span>Hinomoto <br />5-millimeter Thick Tire</span>${svg}`,
+                LiningFabric: `<span>150D Polyester<br />
+                            with Skin-friendly Treatment</span>${svg}`,
+                BonusItems: `<span>2 Dirty Laundry Bags+<br />
                           3 Storage Bags+<br />
-                          Luggage Tag`,
-                isBest: "true",
+                          Luggage Tag</span>${svg}`,
+                isBest: true,
               },
               {
                 Title: "Other Brand",
@@ -3751,21 +3801,21 @@
                 Wheels: `Hinomoto 4-millimeter<br /> Thick Tire`,
                 LiningFabric: `100% Polyester`,
                 BonusItems: `Not Included`,
-                isBest: "false",
+                isBest: false,
               },
               {
                 Title: "FlexiSpot Check-In Medium ",
-                Price: "$269.99",
+                Price: `<span>$269.99</span>${svg}`,
                 CarryOn: "×",
-                EmptyWeight: "9.8 lbs",
-                AdjustmentSetting: "3 Height Settings",
-                Wheels: `Hinomoto <br />5-millimeter Thick Tire`,
-                LiningFabric: `150D Polyester<br />
-                            with Skin-friendly Treatment`,
-                BonusItems: `2 Dirty Laundry Bags+<br />
+                EmptyWeight: `<span>9.8 lbs</span>${svg}`,
+                AdjustmentSetting: `<span>3 Height Settings</span>${svg}`,
+                Wheels: `<span>Hinomoto <br />5-millimeter Thick Tire</span>${svg}`,
+                LiningFabric: `<span>150D Polyester<br />
+                            with Skin-friendly Treatment</span>${svg}`,
+                BonusItems: `<span>2 Dirty Laundry Bags+<br />
                           3 Storage Bags+<br />
-                          Luggage Tag`,
-                isBest: "true",
+                          Luggage Tag</span>${svg}`,
+                isBest: true,
               },
               {
                 Title: "Other Brand",
@@ -3776,7 +3826,7 @@
                 Wheels: `Hinomoto 4-millimeter<br /> Thick Tire`,
                 LiningFabric: `100% Polyester`,
                 BonusItems: `Not Included`,
-                isBest: "false",
+                isBest: false,
               },
             ]
 
@@ -3784,7 +3834,7 @@
             swiperTable2.innerHTML += `
                             <div class="swiper-slide">
                               <div class="suitcase_ul-topLi">
-                                  <div class='suitcase_ul-topLi-title'>${item.Title}</div>
+                                  <div class='suitcase_ul-topLi-title ${item.isBest ? "isBest" : ""}'>${item.Title}</div>
                               </div>
                                     <ul class="suitcase_ul">
                                       <li class="suitcase_ul-li">
@@ -3803,13 +3853,16 @@
                             `
           })
           new Swiper("#swiperTable2", {
-            slidesPerView: 3,
+            slidesPerView: 4,
             slidesPerGroup: 1,
             navigation: {
               nextEl: ".swiperTable-next",
               prevEl: ".swiperTable-pre",
             },
             breakpoints: {
+              1441: {
+                slidesPerView: 4,
+              },
               1025: {
                 slidesPerView: 3,
               },
@@ -3823,6 +3876,70 @@
           })
           // suitcase_container js end
         })
+    }
+  )
+  // slick
+  loadScript(
+    "https://staticprod.site.flexispot.com/dev/trantor/attachments/slick.min.js",
+    function () {
+
+      // loc_moudle_5 js start
+      let moudle_5_slick_data = [
+        {
+          img: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-slick-img1.png",
+          title: "Wheels Quality",
+          text: "The wheels should glide smoothly, quietly, and stay straight in use. After testing, they should be crack-free, secure, and show no more than 2mm wear. They must support 44-62 lbs (20-28 kg) and remain intact after being dropped from 900mm three times.",
+        },
+        {
+          img: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-slick-img2.png",
+          title: "Shell Durability",
+          text: "The shell should resist scratches, fingerprints, impacts, and deformation. After stress tests, it should show no dents or cracks. A textured matte finish helps prevent scratches and fingerprints. Preferred materials like PP/PC are more durable than ABS+PC or pure ABS.",
+        },
+        {
+          img: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-slick-img3.png",
+          title: "Handle Quality",
+          text: "The handle should offer a comfortable grip, with aluminum as the preferred durable material. Higher weight capacity means better performance and quality. A smooth, quick, and firm response is ideal, while wobbly or loose handles indicate poor quality.",
+        },
+        {
+          img: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-slick-img4.png",
+          title: "Lining Fabric",
+          text: "The lining fabric should feel soft to the touch, have antibacterial properties for easy care, and be durable enough to resist fading. It should also protect your clothes from damage, pilling, and other wear and tear.",
+        },
+      ]
+
+      moudle_5_slick_data.forEach((item) => {
+        $(".loc_moudle_5_content_slick").append(`
+                    <div class="loc_moudle_5_content_slick_item_box">
+                        <div class="loc_moudle_5_content_slick_item">
+                            <div class="loc_moudle_5_content_slick_item_title">
+                                ${item.title}
+                            </div>
+                            <div class="loc_moudle_5_content_slick_item_text">
+                                ${item.text}
+                            </div>
+                            <div class="loc_moudle_5_content_slick_item_img">
+                                <img class="lazyload" data-src="${item.img}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                `)
+      })
+
+      if (!isMobile()) {
+        $(".loc_moudle_5_content_slick").slick({
+          dots: false,
+          infinite: true,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          prevArrow: `<div class="slick-prev" aria-label="Previous" type="button">
+                        <img class="lazyload" data-src="https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-arrow.png" />
+                        </div>`,
+          nextArrow: `<div class="slick-next" aria-label="Previous" type="button">
+                        <img class="lazyload" data-src="https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-arrow.png" />
+                        </div>`,
+        })
+      }
+      // loc_moudle_5 js end
 
     }
   )
