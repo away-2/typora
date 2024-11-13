@@ -1,4 +1,10 @@
-<div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
   <style xml="space">
     .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content {
       overflow-y: visible;
@@ -517,8 +523,9 @@
       }
     }
   </style>
-</div>
-<div>
+</head>
+
+<body>
   <div id="description" class="description-page">
     <div class="description-page-container">
       <div class="banner">
@@ -642,8 +649,12 @@
 
       <div class="description-page-container-item description-page-container-item-iframe-box">
         <div class="description-page-container-item-iframe">
-          <iframe id="youtubePlayer" src="https://www.youtube.com/embed/GVR08bu5nLQ?si=ZS2kBQNhp-aOaU9I"
+          <iframe id="youtubePlayer" src="https://www.youtube.com/embed/GVR08bu5nLQ?enablejsapi=1&mute=1"
             title="YouTube video player" frameborder="0"></iframe>
+          <!-- <iframe id="youtubePlayer" width="560" height="315" src="https://www.youtube.com/embed/GVR08bu5nLQ?si=XpO1M2-lBCxc3-Ex?autoplay=1&mute=1"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
         </div>
       </div>
       <!-- <div class="banner description-page-container-item" onclick="displayFrame(this)">
@@ -680,58 +691,49 @@
       </div> -->
     </div>
   </div>
+</body>
+<script>
+  // 异步加载 IFrame Player API 代码
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-  <script>
-    // function displayFrame(element) {
-    //   // 找到当前元素的父级元素并隐藏
-    //   element.style.display = "none"
-    //   var iframeContainer = document.querySelector(".description-page-container-item-iframe-box")
-    //   iframeContainer.style.display = "block"
-    //   var iframe = document.getElementById("youtubePlayer")
-    //   iframe.src = iframe.src + "&amp;autoplay=1&mute=1"
-    // }
-    console.log(123);
-    
+let player;
 
-    // 异步加载 IFrame Player API 代码
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    let player;
-
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('youtubePlayer', {
+// 创建 YouTube 播放器的实例
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('youtubePlayer', {
         events: {
-          'onReady': onPlayerReady
+            'onReady': onPlayerReady // 在播放器准备好时调用 onPlayerReady 函数
         }
-      });
-    }
+    });
+}
 
-    //自动播放和暂停视频
-    function onPlayerReady(event) {
-      player.mute(); // 静音
-      
-      const observer = new IntersectionObserver((entries) => {
+// 使用 Intersection Observer 自动播放和暂停视频
+function onPlayerReady(event) {
+    // 静音视频以保证自动播放成功率
+    player.mute();
+
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            player.playVideo();
-          } else {
-            player.pauseVideo();
-          }
+            if (entry.isIntersecting) {
+              console.log(123);
+              
+                player.playVideo(); // 当视频进入视口时播放视频
+            } else {
+                player.pauseVideo(); // 当视频离开视口时暂停视频
+            }
         });
-      }, {
-        threshold: 0.5 
-      });
+    }, {
+        threshold: 0.5 // 当 50% 的视频内容可见时触发
+    });
 
-      const iframeContainer = document.querySelector('.description-page-container-item-iframe-box');
-      if (iframeContainer) {
-        observer.observe(iframeContainer);
-      } else {
-        console.error("Container not found for IntersectionObserver.");
-      }
-    }
+    // 开始观察视频的容器，而不是直接观察 iframe
+    observer.observe(document.querySelector('.description-page-container-item-iframe'));
+}
 
-  </script>
-</div>
+
+</script>
+
+</html>
