@@ -234,12 +234,12 @@
   }
 
   .loc_moudle_1_content_title {
-    max-width: 980px;
+    max-width: 1384px;
   }
 
   .loc_moudle_1_content_text {
     margin-top: 24px;
-    max-width: 980px;
+    max-width: 1384px;
   }
 
   .loc_moudle_1_flex {
@@ -1406,8 +1406,8 @@
   .table-wrapper table {
     margin: 40px auto;
     border-collapse: collapse;
-    max-width: 1000px;
-    width: 1000px;
+    max-width: 1384px;
+    width: 1384px;
     table-layout: fixed;
   }
 
@@ -1421,12 +1421,17 @@
     vertical-align: bottom;
   }
 
-  .table-wrapper table tbody tr th img {
+  /* .table-wrapper table tbody tr th img {
+    width: 100% !important;
+  } */
+
+  .table-wrapper table tbody tr th .head-img {
     width: 100% !important;
   }
-
-  .head-img {
-    width: 100% !important;
+  .table-wrapper table tbody tr th .head-img img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px !important;
   }
 
   /* 表格内容每行下的线 */
@@ -1435,9 +1440,9 @@
   } */
 
   .table-wrapper table tbody tr td {
-    font-family: Moderat-Bold;
-    font-size: 14px;
-    font-weight: 700;
+    font-family: Moderat-Regular;
+    font-size: 16px;
+    font-weight: 400;
     line-height: 14px;
     text-align: center;
     color: #26333a;
@@ -1445,8 +1450,10 @@
   }
 
   .table-wrapper table tbody tr td:first-child {
+    font-family: Moderat-Bold;
+    font-weight: 700;
     text-align: left;
-    padding: 31px 0 28px 70px;
+    padding: 31px 0 28px 30px;
     font-size: 18px;
     line-height: 21.6px;
   }
@@ -3017,24 +3024,32 @@
                 <tr>
                   <th></th>
                   <th>
-                    <img class="head-img"
-                      src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241112-20-inch.png"
-                      alt="">
+                    <div class="head-img">
+                      <img
+                        src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241112-20-inch.png"
+                        alt="">
+                    </div>
                   </th>
                   <th>
-                    <img class="head-img"
-                      src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241112-24-inch.png"
-                      alt="">
+                    <div class="head-img">
+                      <img
+                        src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241112-24-inch.png"
+                        alt="">
+                    </div>
                   </th>
                   <th>
-                    <img class="head-img"
-                      src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241112-28-inch.png"
-                      alt="">
+                    <div class="head-img">
+                      <img
+                        src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241112-28-inch.png"
+                        alt="">
+                    </div>
                   </th>
                   <th>
-                    <img class="head-img"
-                      src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241112-32-inch.png"
-                      alt="">
+                    <div class="head-img">
+                      <img
+                        src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241112-32-inch.png"
+                        alt="">
+                    </div>
                   </th>
                 </tr>
               </thead>
