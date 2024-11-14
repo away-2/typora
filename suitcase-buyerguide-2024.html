@@ -2383,6 +2383,7 @@
 
   .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title {
     width: 20%;
+    padding: 20px 0;
   }
 
   .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title>div {
@@ -2453,7 +2454,7 @@
     /* justify-content: space-between; */
     gap: 15px;
     height: 80px;
-    background: #fdfcf5;
+    /* background: #fdfcf5; */
     border-bottom: 1px solid rgba(38, 51, 58, 0.1);
   }
 
@@ -2490,7 +2491,7 @@
   }
 
   .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi .isBest {
-    color: #004df2;
+    color: #fff;
     text-align: center;
     font-variant-numeric: lining-nums tabular-nums;
     font-feature-settings: 'ss03' on, 'ss04' on, 'liga' off;
@@ -2502,11 +2503,27 @@
     display: flex;
     flex-direction: row;
     /* justify-content: space-between; */
+    border-bottom: 1px solid #fff;
+    margin: 0 2px;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi .isBest span {
+    width: 270px;
+    text-align: center;
   }
 
   .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi .isBest svg {
     margin-left: 20px;
+    margin-right: 3px;
   }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi .isBest .img {
+    margin-left: 20px;
+    margin-right: 3px;
+    width: 20px;
+    height: 20px;
+  }
+
 
   .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-title {
     color: #26333a;
@@ -2518,15 +2535,16 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    padding: 14px 40px;
+    padding: 14px 30px;
     border-radius: 40px;
     text-align: center;
     border: 1px solid #26333A;
   }
 
   .suitcase_container .suitcase_product .suitcase_ul-topLi .isBest {
-    color: #004df2;
+    color: #fff;
     font-size: 15px;
+    border: 1px solid #fff;
   }
 
   .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-price {
@@ -2738,6 +2756,16 @@
     height: 112px !important;
   }
 
+  .swiper-bg-blue {
+    background: #004df2 !important;
+    border-radius: 12px !important;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .swiper-slide {
+    padding: 20px 0 !important;
+    width: 20%;
+  }
+
   @supports not (overflow: clip) {
 
     html,
@@ -2781,7 +2809,7 @@
     }
 
     .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box {
-      right: -35px;
+      right: -130px;
       height: 82.5%;
     }
 
@@ -2882,6 +2910,11 @@
       height: 30px;
       top: 163px;
       margin-top: 6px;
+    }
+
+    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box {
+      right: -35px;
+      height: 82.5%;
     }
 
     .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .c_table_theme {
@@ -3063,8 +3096,7 @@
                   <th></th>
                   <th>
                     <div class="head-img">
-                      <img
-                        class="img-wrap"
+                      <img class="img-wrap"
                         src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241113-20-inch.png"
                         alt="">
                     </div>
@@ -3209,7 +3241,7 @@
         <div class="loc_title loc_moudle_3_content_title">
           FlexiSpot Luggage Quality Tests
         </div>
-      <div class="hidden_dom" id="loc_nav_item_5"></div>
+        <div class="hidden_dom" id="loc_nav_item_5"></div>
         <div class="loc_moudle_3_content_tab">
           <div class="loc_moudle_3_content_tab_item loc_tab_active">Drop Test</div>
           <div class="loc_moudle_3_content_tab_item">Mileage Test</div>
@@ -3769,7 +3801,7 @@
 
           const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 29 29" fill="none">
   <g clip-path="url(#clip0_3354_10713)">
-    <path d="M21.2089 26.0751C21.2089 26.6845 20.7444 27.1545 20.1296 27.1545C16.8369 27.1545 4.45046 28.3212 4.45046 28.3212C3.45856 28.3212 2.67433 25.6106 2.67433 25.6106C0.11124 16.1971 0.19595 13.7816 0.19595 13.7816C0.19595 11.8606 1.94475 12.0054 1.94475 12.0054H9.52473C6.84141 1.36778 11.1533 0.345825 11.1533 0.345825C12.842 0.345825 12.6371 2.59195 12.6371 2.76409C12.6371 6.49397 17.7632 10.896 20.6788 12.6448C20.9985 12.8498 21.2035 13.1995 21.2035 13.5794V26.0751H21.2089ZM27.532 27.3266C27.8844 27.3867 28.2014 27.1217 28.2014 26.7446V13.5438C28.2014 13.1667 27.8817 12.9017 27.532 12.9618L24.0343 13.0793C23.742 13.1394 23.537 13.3717 23.537 13.6613V26.6025C23.537 26.8949 23.742 27.1271 24.0343 27.1845L27.532 27.3266Z" fill="#004df2"/>
+    <path d="M21.2089 26.0751C21.2089 26.6845 20.7444 27.1545 20.1296 27.1545C16.8369 27.1545 4.45046 28.3212 4.45046 28.3212C3.45856 28.3212 2.67433 25.6106 2.67433 25.6106C0.11124 16.1971 0.19595 13.7816 0.19595 13.7816C0.19595 11.8606 1.94475 12.0054 1.94475 12.0054H9.52473C6.84141 1.36778 11.1533 0.345825 11.1533 0.345825C12.842 0.345825 12.6371 2.59195 12.6371 2.76409C12.6371 6.49397 17.7632 10.896 20.6788 12.6448C20.9985 12.8498 21.2035 13.1995 21.2035 13.5794V26.0751H21.2089ZM27.532 27.3266C27.8844 27.3867 28.2014 27.1217 28.2014 26.7446V13.5438C28.2014 13.1667 27.8817 12.9017 27.532 12.9618L24.0343 13.0793C23.742 13.1394 23.537 13.3717 23.537 13.6613V26.6025C23.537 26.8949 23.742 27.1271 24.0343 27.1845L27.532 27.3266Z" fill="#fff"/>
   </g>
   <defs>
     <clipPath id="clip0_3354_10713">
@@ -3806,7 +3838,7 @@
               {
                 Title: "FlexiSpot Check-In Medium ",
                 Price: `<span>$269.99</span>${svg}`,
-                CarryOn: "×",
+                CarryOn: `<span>×</sapn><div class="img"></div>`,
                 EmptyWeight: `<span>9.8 lbs</span>${svg}`,
                 AdjustmentSetting: `<span>3 Height Settings</span>${svg}`,
                 Wheels: `<span>Hinomoto <br />5-millimeter Thick Tire</span>${svg}`,
@@ -3832,7 +3864,7 @@
 
           swiperTableList2.forEach((item) => {
             swiperTable2.innerHTML += `
-                            <div class="swiper-slide">
+                            <div class="swiper-slide ${item.isBest ? "swiper-bg-blue" : ""}">
                               <div class="suitcase_ul-topLi">
                                   <div class='suitcase_ul-topLi-title ${item.isBest ? "isBest" : ""}'>${item.Title}</div>
                               </div>
