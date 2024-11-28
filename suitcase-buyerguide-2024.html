@@ -737,6 +737,12 @@
     justify-content: center;
   }
 
+  .loc_moudle_3_content_tab_content_img img {
+    border-radius: 12px;
+    width: 400px;
+    height: auto;
+  }
+
   .content_tab_small_text {
     font-family: "Moderat-Regular";
     font-style: normal;
@@ -876,7 +882,7 @@
 
   .loc_moudle_5_content_slick {
     display: flex;
-    grid-gap: 21.3px;
+    /* grid-gap: 21.3px; */
     margin-top: 38px;
   }
 
@@ -887,7 +893,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 46px 18.5px 20px;
+    padding: 20px 18.5px;
     margin: 10px;
     min-height: 370px;
   }
@@ -912,7 +918,7 @@
     line-height: 120%;
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: left;
     font-feature-settings: "pnum" on, "lnum" on;
     color: #26333a;
     margin-top: 12px;
@@ -1236,171 +1242,6 @@
   }
 </style>
 <!-- loc_moudle_9 style end -->
-<!-- slick style start -->
-<style>
-  .slick-prev:before,
-  .slick-next:before {
-    content: "";
-  }
-
-  .loc_container .slick-arrow:hover {
-    opacity: 0.7;
-  }
-
-  .loc_container .slick-prev {
-    transform: translateX(-150%) rotate(180deg);
-    z-index: 2;
-    left: 40px;
-    position: absolute;
-    background: #f1eeeb;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 50%;
-    cursor: pointer;
-  }
-
-  .loc_container .slick-next {
-    z-index: 2;
-    left: unset;
-    right: -20px;
-    position: absolute;
-    background: #f1eeeb;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 50%;
-    cursor: pointer;
-  }
-
-  .slick-dots {
-    background: #f6f4f1;
-    border-radius: 40px;
-    width: auto;
-    padding: 12px 16px;
-    right: 74px;
-    bottom: 24px;
-  }
-
-  .slick-dots li {
-    width: 8px;
-    height: 8px;
-  }
-
-  .slick-dots li button {
-    width: 8px;
-    height: 8px;
-    line-height: 12px;
-  }
-
-  .slick-dots li button:before {
-    width: 8px;
-    height: 8px;
-    line-height: 4px;
-  }
-
-  .slick-dots li.slick-active button:before {
-    opacity: 1;
-    color: #0d3147;
-  }
-
-  .home-banner-box .slick-dots li.slick-active button:before {
-    color: #0d3147;
-  }
-
-  .home-banner-box .slick-dots li.slick-active-d button:before {
-    color: #fdfcf5;
-  }
-
-  .home-banner-box .slick-dots li.slick-active-h button:before {
-    color: #fdfcf5;
-    opacity: 0.75;
-  }
-
-  .slick-dots li button:before {
-    border: 2px solid #0d3147;
-    border-radius: 10px;
-    width: 10px;
-    height: 10px;
-    content: "";
-    top: 3px;
-    opacity: 1;
-  }
-
-  .slick-dots li.slick-active button:before {
-    background: #0d3147;
-  }
-
-  .home-banner-box .slick-dots li.slick-active-d button:before {
-    background: transparent;
-    border: 2px solid #fdfcf5;
-  }
-
-  .home-banner-box .slick-dots li.slick-active-h button:before {
-    color: #fdfcf5;
-    border: 2px solid #fdfcf5;
-    opacity: 0.75;
-  }
-
-  .home-banner-box .slick-dots:hover li button:before {
-    border: 2px solid #fdfcf5;
-  }
-
-  .home-banner-box .slick-dots:hover .slick-active button:before {
-    background: #fdfcf5;
-  }
-
-  @media (max-width: 768px) {
-    .loc_moudle_6 .slick-slide img {
-      width: 100%;
-    }
-
-    .loc_moudle_6 .slick-dots {
-      right: 20px;
-      bottom: 65px;
-      padding: 9px;
-    }
-
-    .loc_moudle_6 .slick-dots li button:before {
-      border: 1px solid #0d3147;
-      width: 6px;
-      height: 6px;
-    }
-
-    .loc_moudle_6 .slick-dots li button {
-      width: 6px;
-      height: 6px;
-      padding: 3px;
-    }
-
-    .loc_container .slick-prev {
-      width: 27px;
-      height: 27px;
-      top: 114px;
-      left: 0;
-      transform: translateX(0) rotate(180deg);
-    }
-
-    .loc_container .slick-next {
-      width: 27px;
-      height: 27px;
-      top: 114px;
-      right: 0;
-    }
-
-    .loc_container .slick-prev img,
-    .loc_container .slick-next img {
-      max-width: 100%;
-    }
-  }
-</style>
-<!-- slick style end -->
 
 <!-- new add -->
 <!-- loc_moudle_1 table style start -->
@@ -1471,7 +1312,7 @@
 
   @media screen and (max-width: 1024px) {
     .table-wrapper table {
-      width: 768px;
+      width: 1000px;
     }
   }
 
@@ -1779,8 +1620,8 @@
   }
 
   .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title .height-zw {
-    height: 420px;
-    border: none;
+    height: 400px;
+    /* border: none; */
     position: -webkit-sticky;
     position: sticky;
     top: 104px;
@@ -1818,7 +1659,7 @@
     align-items: center;
     /* justify-content: space-between; */
     gap: 15px;
-    height: 420px;
+    height: 400px;
     background: #fdfcf5;
     border-bottom: 1px solid rgba(38, 51, 58, 0.1);
   }
@@ -1979,7 +1820,7 @@
     font-variant-numeric: lining-nums tabular-nums;
     font-feature-settings: "ss03" on, "ss04" on, "liga" off;
     font-family: Moderat-Regular;
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
@@ -2029,6 +1870,7 @@
     border-radius: 50%;
     cursor: pointer;
     z-index: 3;
+    display: block;
   }
 
   .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-pre-box .swiperTable-pre:hover {
@@ -2058,6 +1900,7 @@
     border-radius: 50%;
     cursor: pointer;
     z-index: 2;
+    display: block;
   }
 
   .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-next-box .swiperTable-next:hover {
@@ -2111,7 +1954,7 @@
 
     .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi,
     .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title .height-zw {
-      height: 413px;
+      height: 335px;
     }
 
     .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-pre-box {
@@ -2140,7 +1983,7 @@
 
   @media screen and (max-width: 1024px) {
     .desk_container {
-      max-width: 768px;
+      max-width: 1000px;
       margin: 60px auto;
     }
 
@@ -2173,7 +2016,7 @@
     .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi,
     .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title .height-zw {
       top: 92px;
-      height: 328px;
+      height: 280px;
       padding-bottom: 24px;
     }
 
@@ -2257,7 +2100,7 @@
 
     .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide {
       width: 71.35%;
-      z-index: 99;
+      z-index: 4;
     }
 
     .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div svg {
@@ -2284,7 +2127,7 @@
     }
 
     .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-pre-box .swiperTable-pre {
-      z-index: 100;
+      z-index: 5;
     }
 
     .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-next-box {
@@ -2292,7 +2135,7 @@
     }
 
     .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-next-box .swiperTable-next {
-      z-index: 99;
+      z-index: 4;
     }
 
     .desk_container .desk_product .desk_product-table .desk_product-table-list .c_table_theme {
@@ -2454,7 +2297,7 @@
     /* justify-content: space-between; */
     gap: 15px;
     height: 80px;
-    /* background: #fdfcf5; */
+    background: #fdfcf5;
     border-bottom: 1px solid rgba(38, 51, 58, 0.1);
   }
 
@@ -2505,6 +2348,10 @@
     /* justify-content: space-between; */
     border-bottom: 1px solid #fff;
     margin: 0 2px;
+  }
+
+  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi .isBest:first-child {
+    border-top: 1px solid #fff;
   }
 
   .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi .isBest span {
@@ -2766,6 +2613,9 @@
     width: 20%;
   }
 
+  .ul-topLi-bg-blue {
+    background: #004df2 !important;
+  }
   @supports not (overflow: clip) {
 
     html,
@@ -2830,7 +2680,7 @@
 
   @media screen and (max-width: 1024px) {
     .suitcase_container {
-      max-width: 768px;
+      /* max-width: 768px; */
       margin: 60px auto;
     }
 
@@ -2950,13 +2800,18 @@
       text-align: left;
     }
 
+    .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-title {
+      font-size: 13px;
+      padding: 8px;
+    }
+
     .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title {
       width: 28.65%;
     }
 
     .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide {
       width: 71.35%;
-      z-index: 99;
+      z-index: 4;
     }
 
     .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div svg {
@@ -2980,18 +2835,20 @@
 
     .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box {
       left: calc(20% + 4px);
+      top: 13px;
     }
 
     .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box .swiperTable-pre {
-      z-index: 100;
+      z-index: 5;
     }
 
     .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box {
-      right: -35px;
+      right: -32px;
+      top: 13px;
     }
 
     .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box .swiperTable-next {
-      z-index: 99;
+      z-index: 4;
     }
 
     .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .c_table_theme {
@@ -3023,6 +2880,172 @@
   }
 </style>
 <!-- suitcase_container module end -->
+
+<!-- slick style start -->
+<style>
+  .slick-prev:before,
+  .slick-next:before {
+    content: "";
+  }
+
+  .loc_container .slick-arrow:hover {
+    opacity: 0.7;
+  }
+
+  .loc_container .slick-prev {
+    transform: translateX(-150%) rotate(180deg);
+    z-index: 2;
+    left: 40px;
+    position: absolute;
+    background: #f1eeeb;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    cursor: pointer;
+  }
+
+  .loc_container .slick-next {
+    z-index: 2;
+    left: unset;
+    right: -20px;
+    position: absolute;
+    background: #f1eeeb;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    cursor: pointer;
+  }
+
+  .slick-dots {
+    background: #f6f4f1;
+    border-radius: 40px;
+    width: auto;
+    padding: 12px 16px;
+    right: 74px;
+    bottom: 24px;
+  }
+
+  .slick-dots li {
+    width: 8px;
+    height: 8px;
+  }
+
+  .slick-dots li button {
+    width: 8px;
+    height: 8px;
+    line-height: 12px;
+  }
+
+  .slick-dots li button:before {
+    width: 8px;
+    height: 8px;
+    line-height: 4px;
+  }
+
+  .slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: #0d3147;
+  }
+
+  .home-banner-box .slick-dots li.slick-active button:before {
+    color: #0d3147;
+  }
+
+  .home-banner-box .slick-dots li.slick-active-d button:before {
+    color: #fdfcf5;
+  }
+
+  .home-banner-box .slick-dots li.slick-active-h button:before {
+    color: #fdfcf5;
+    opacity: 0.75;
+  }
+
+  .slick-dots li button:before {
+    border: 2px solid #0d3147;
+    border-radius: 10px;
+    width: 10px;
+    height: 10px;
+    content: "";
+    top: 3px;
+    opacity: 1;
+  }
+
+  .slick-dots li.slick-active button:before {
+    background: #0d3147;
+  }
+
+  .home-banner-box .slick-dots li.slick-active-d button:before {
+    background: transparent;
+    border: 2px solid #fdfcf5;
+  }
+
+  .home-banner-box .slick-dots li.slick-active-h button:before {
+    color: #fdfcf5;
+    border: 2px solid #fdfcf5;
+    opacity: 0.75;
+  }
+
+  .home-banner-box .slick-dots:hover li button:before {
+    border: 2px solid #fdfcf5;
+  }
+
+  .home-banner-box .slick-dots:hover .slick-active button:before {
+    background: #fdfcf5;
+  }
+
+  @media (max-width: 768px) {
+    .loc_moudle_6 .slick-slide img {
+      width: 100%;
+    }
+
+    .loc_moudle_6 .slick-dots {
+      right: 20px;
+      bottom: 65px;
+      padding: 9px;
+    }
+
+    .loc_moudle_6 .slick-dots li button:before {
+      border: 1px solid #0d3147;
+      width: 6px;
+      height: 6px;
+    }
+
+    .loc_moudle_6 .slick-dots li button {
+      width: 6px;
+      height: 6px;
+      padding: 3px;
+    }
+
+    .loc_container .slick-prev {
+      width: 27px;
+      height: 27px;
+      top: 114px;
+      left: 0;
+      transform: translateX(0) rotate(180deg);
+    }
+
+    .loc_container .slick-next {
+      width: 27px;
+      height: 27px;
+      top: 114px;
+      right: 0;
+    }
+
+    .loc_container .slick-prev img,
+    .loc_container .slick-next img {
+      max-width: 100%;
+    }
+  }
+</style>
+<!-- slick style end -->
 <div class="loc_container">
   <div class="loc_container_nav">
     <div class="loc_container_nav_icon">
@@ -3038,7 +3061,7 @@
         <a href="loc_nav_item_2">What to consider when choosing a luggage?</a>
       </div>
       <div class="loc_container_nav_menu_item">
-        <a href="loc_nav_item_3">In addition to size</a>
+        <a href="loc_nav_item_3">Other Performance Aspects</a>
       </div>
       <div class="loc_container_nav_menu_item">
         <a href="loc_nav_item_4">Why choose FlexiSpot luggage?</a>
@@ -3134,6 +3157,13 @@
                   <td>Trunk</td>
                 </tr>
                 <tr>
+                  <td>Length of Trip</td>
+                  <td>3-5 days</td>
+                  <td>1-2 weeks</td>
+                  <td>2+ weeks</td>
+                  <td>3+ weeks</td>
+                </tr>
+                <tr>
                   <td>Capacity</td>
                   <td>5-7 outfits</td>
                   <td>10-12 outfits</td>
@@ -3180,9 +3210,9 @@
         <div class="loc_title loc_moudle_5_content_title">
           In addition to size, there are other performance aspects you need to prioritize.
         </div>
+        <div class="hidden_dom" id="loc_nav_item_3"></div>
         <div class="loc_moudle_5_content_slick"></div>
       </div>
-      <div class="hidden_dom" id="loc_nav_item_3"></div>
     </div>
     <!-- loc_moudle 5 end -->
     <!-- loc_moudle suitcase start -->
@@ -3325,7 +3355,8 @@
           data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-bottom-pc.png"
           alt="" />
         <img class="lazyload home-active-m"
-          data-src="https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-footer-bg-m.png" alt="" />
+          data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241115-bottom-mobile.png"
+          alt="" />
       </div>
     </div>
     <!-- loc_moudle 9 start -->
@@ -3386,27 +3417,27 @@
       // loc_moudle_3 js start
       let moudle_3_tab_data = [
         {
-          text: `To assess the durability of the outer shell, our luggage completed 1,500 drop tests. Each test simulates impacts that occur during travel, ensuring the hard shell luggage can withstand rough handling and protect your belongings. The results confirm that our outer shell remains intact, demonstrating its strength and resistance to cracks.`,
+          text: `To assess the durability of the outer shell, our luggage is loaded with a 59.5 lbs (27 kg) sandbag and dropped from a height of 35.4 inches onto each surface, edge, and corner. After multiple drops, the suitcase remained intact, demonstrating its durability and resistance to cracks. This test ensures that the hard shell can withstand rough handling and protect your belongings.`,
           img: [
-            "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-btn-img1.png",
+            "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/FLG20B-BU-20241115-gif1.gif",
           ],
         },
         {
           text: `To evaluate the performance of our luggage's wheels, we subjected them to a rigorous mileage test, carrying a weight of 44 lbs at a speed of 3 mph. The four wheels ran for 4 hours, covering 11.9 miles, with wear not exceeding 2 mm, showcasing their exceptional durability. Trust our luggage for a smooth journey, designed to withstand the demands of your travels while providing effortless movement.`,
           img: [
-            "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-btn-img2.png",
+            "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/FLG20B-BU-20241115-gif2.gif",
           ],
         },
         {
           text: `Evaluating the pull handle, our luggage underwent 1,500 vibration tests to verify the handle's performance and durability. Each test simulates real-world conditions, ensuring the handle can withstand repeated stress without compromising functionality. The results show that our handle maintains its integrity and responsiveness, providing you with a reliable and smooth travel experience.`,
           img: [
-            "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-btn-img3.png",
+            "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/FLG20B-BU-20241115-gif3.gif",
           ],
         },
         {
           text: `Our checked luggage also underwent rigorous impact resistance testing, completing 25 tumble tests to simulate the rough conditions it might endure during your travels. Each test confirmed that our luggage can withstand repeated stress without compromising its structural integrity, ensuring your belongings stay safe and secure no matter where you go.`,
           img: [
-            "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-btn-img4.png",
+            "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/FLG20B-BU-20241115-gif4.gif",
           ],
         },
       ]
@@ -3468,10 +3499,10 @@
                 productTitle: "Carry-On Pro",
                 // productSku: "C7 Pro Max",
                 productSku: "E7 New", //dev
-                href: "https://www.flexispot.com/flexispot-premium-ergo-office-chair-c7-pro-max",
+                href: "https://www.flexispot.com/flexispot-carry-on-pro-luggage",
                 // productPrice: "???",
                 productPrice: "$249.99",
-                ColorOption: `Beige/Black`,
+                ColorOption: `Beige / Black`,
                 CarryOn: `<span style="color: #004DF2;">√</span>`,
                 CupHolder: `<span style="color: #004DF2;">√</span>`,
                 LaptopCompartment: `<span style="color: #004DF2;">√</span>`,
@@ -3488,10 +3519,10 @@
                 productTitle: "Carry-On",
                 // productSku: "C7 Max",
                 productSku: "ESD101-2", //dev
-                href: "https://www.flexispot.com/flexispot-professional-ergonomic-office-chair-c7m",
+                href: "https://www.flexispot.com/flexispot-check-in-classic-luggage",
                 // productPrice: "???",
                 productPrice: "$199.99",
-                ColorOption: `Black/Blue/Pink`,
+                ColorOption: `Black / Blue / Pink`,
                 CarryOn: `<span style="color: #004DF2;">√</span>`,
                 CupHolder: "×",
                 LaptopCompartment: "×",
@@ -3508,10 +3539,10 @@
                 productTitle: "Check-in Medium",
                 // productSku: "C7 Series",
                 productSku: "C7 M", //dev
-                href: "https://www.flexispot.com/flexispot-best-ergonomic-office-chair-c7",
+                href: "https://www.flexispot.com/flexispot-check-in-classic-luggage",
                 // productPrice: "???",
                 productPrice: "$269.99",
-                ColorOption: `Black/Blue`,
+                ColorOption: `Black / Blue`,
                 CarryOn: "×",
                 CupHolder: "×",
                 LaptopCompartment: "×",
@@ -3528,10 +3559,10 @@
                 productTitle: "Check-In Large",
                 // productSku: "C7 Series",
                 productSku: "C7 M", //dev
-                href: "https://www.flexispot.com/flexispot-best-ergonomic-office-chair-c7",
+                href: "https://www.flexispot.com/flexispot-check-in-classic-luggage",
                 // productPrice: "???",
                 productPrice: "$299.99",
-                ColorOption: `Black/Blue/Pink`,
+                ColorOption: `Black / Blue / Pink`,
                 CarryOn: "×",
                 CupHolder: "×",
                 LaptopCompartment: "×",
@@ -3548,7 +3579,7 @@
                 productTitle: "Trunk",
                 // productSku: "C7 Series",
                 productSku: "C7 M", //dev
-                href: "https://www.flexispot.com/flexispot-best-ergonomic-office-chair-c7",
+                href: "https://www.flexispot.com/flexispot-check-in-classic-luggage",
                 // productPrice: "???",
                 productPrice: "$329.99",
                 ColorOption: `Black`,
@@ -3811,9 +3842,9 @@
 </svg>`,
             swiperTableList2 = [
               {
-                Title: "FlexiSpot Carry-On",
+                Title: "FlexiSpot Carry-On Pro",
                 Price: `<span>$249.99</span>${svg}`,
-                CarryOn: `<span>√</span>${svg}`,
+                CarryOn: `<span>√</span><div class="img"></div>`,
                 EmptyWeight: `<span>8.1 lbs</span>${svg}`,
                 AdjustmentSetting: `<span>3 Height Settings</span>${svg}`,
                 Wheels: `<span>Hinomoto <br />5-millimeter Thick Tire</span>${svg}`,
@@ -3827,7 +3858,7 @@
               {
                 Title: "Other Brand",
                 Price: "$325",
-                CarryOn: `×`,
+                CarryOn: `√`,
                 EmptyWeight: "9 lbs",
                 AdjustmentSetting: "2 Height Settings",
                 Wheels: `Hinomoto 4-millimeter<br /> Thick Tire`,
@@ -3838,7 +3869,7 @@
               {
                 Title: "FlexiSpot Check-In Medium ",
                 Price: `<span>$269.99</span>${svg}`,
-                CarryOn: `<span>×</sapn><div class="img"></div>`,
+                CarryOn: `<span>×</span><div class="img"></div>`,
                 EmptyWeight: `<span>9.8 lbs</span>${svg}`,
                 AdjustmentSetting: `<span>3 Height Settings</span>${svg}`,
                 Wheels: `<span>Hinomoto <br />5-millimeter Thick Tire</span>${svg}`,
@@ -3865,7 +3896,7 @@
           swiperTableList2.forEach((item) => {
             swiperTable2.innerHTML += `
                             <div class="swiper-slide ${item.isBest ? "swiper-bg-blue" : ""}">
-                              <div class="suitcase_ul-topLi">
+                              <div class="suitcase_ul-topLi ${item.isBest ? "ul-topLi-bg-blue" : ""}">
                                   <div class='suitcase_ul-topLi-title ${item.isBest ? "isBest" : ""}'>${item.Title}</div>
                               </div>
                                     <ul class="suitcase_ul">
@@ -3908,71 +3939,70 @@
           })
           // suitcase_container js end
         })
-    }
-  )
-  // slick
-  loadScript(
-    "https://staticprod.site.flexispot.com/dev/trantor/attachments/slick.min.js",
-    function () {
+      // slick
+      loadScript(
+        "https://staticprod.site.flexispot.com/dev/trantor/attachments/slick.min.js",
+        function () {
 
-      // loc_moudle_5 js start
-      let moudle_5_slick_data = [
-        {
-          img: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-slick-img1.png",
-          title: "Wheels Quality",
-          text: "The wheels should glide smoothly, quietly, and stay straight in use. After testing, they should be crack-free, secure, and show no more than 2mm wear. They must support 44-62 lbs (20-28 kg) and remain intact after being dropped from 900mm three times.",
-        },
-        {
-          img: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-slick-img2.png",
-          title: "Shell Durability",
-          text: "The shell should resist scratches, fingerprints, impacts, and deformation. After stress tests, it should show no dents or cracks. A textured matte finish helps prevent scratches and fingerprints. Preferred materials like PP/PC are more durable than ABS+PC or pure ABS.",
-        },
-        {
-          img: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-slick-img3.png",
-          title: "Handle Quality",
-          text: "The handle should offer a comfortable grip, with aluminum as the preferred durable material. Higher weight capacity means better performance and quality. A smooth, quick, and firm response is ideal, while wobbly or loose handles indicate poor quality.",
-        },
-        {
-          img: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-slick-img4.png",
-          title: "Lining Fabric",
-          text: "The lining fabric should feel soft to the touch, have antibacterial properties for easy care, and be durable enough to resist fading. It should also protect your clothes from damage, pilling, and other wear and tear.",
-        },
-      ]
+          // loc_moudle_5 js start
+          let moudle_5_slick_data = [
+            {
+              img: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-slick-img1.png",
+              title: "Wheels Quality",
+              text: "The wheels should glide smoothly, quietly, and stay straight in use. After testing, they should be crack-free, secure, and show no more than 2mm wear. They must support 44-62 lbs (20-28 kg) and remain intact after being dropped from 900mm three times.",
+            },
+            {
+              img: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-slick-img2.png",
+              title: "Shell Durability",
+              text: "The shell should resist scratches, fingerprints, impacts, and deformation. After stress tests, it should show no dents or cracks. A textured matte finish helps prevent scratches and fingerprints. Preferred materials like PP/PC are more durable than ABS+PC or pure ABS.",
+            },
+            {
+              img: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-slick-img3.png",
+              title: "Handle Quality",
+              text: "The handle should offer a comfortable grip, with aluminum as the preferred durable material. Higher weight capacity means better performance and quality. A smooth, quick, and firm response is ideal, while wobbly or loose handles indicate poor quality.",
+            },
+            {
+              img: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241115-slick-img4.png",
+              title: "Lining Fabric",
+              text: "The lining fabric should feel soft to the touch, have antibacterial properties for easy care, and be durable enough to resist fading. It should also protect your clothes from damage, pilling, and other wear and tear.",
+            },
+          ]
 
-      moudle_5_slick_data.forEach((item) => {
-        $(".loc_moudle_5_content_slick").append(`
-                    <div class="loc_moudle_5_content_slick_item_box">
-                        <div class="loc_moudle_5_content_slick_item">
-                            <div class="loc_moudle_5_content_slick_item_title">
-                                ${item.title}
-                            </div>
-                            <div class="loc_moudle_5_content_slick_item_text">
-                                ${item.text}
-                            </div>
-                            <div class="loc_moudle_5_content_slick_item_img">
-                                <img class="lazyload" data-src="${item.img}" alt="">
+          moudle_5_slick_data.forEach((item) => {
+            $(".loc_moudle_5_content_slick").append(`
+                        <div class="loc_moudle_5_content_slick_item_box">
+                            <div class="loc_moudle_5_content_slick_item">
+                                <div class="loc_moudle_5_content_slick_item_title">
+                                    ${item.title}
+                                </div>
+                                <div class="loc_moudle_5_content_slick_item_text">
+                                    ${item.text}
+                                </div>
+                                <div class="loc_moudle_5_content_slick_item_img">
+                                    <img class="lazyload" data-src="${item.img}" alt="">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                `)
-      })
+                    `)
+          })
 
-      if (!isMobile()) {
-        $(".loc_moudle_5_content_slick").slick({
-          dots: false,
-          infinite: true,
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          prevArrow: `<div class="slick-prev" aria-label="Previous" type="button">
-                        <img class="lazyload" data-src="https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-arrow.png" />
-                        </div>`,
-          nextArrow: `<div class="slick-next" aria-label="Previous" type="button">
-                        <img class="lazyload" data-src="https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-arrow.png" />
-                        </div>`,
-        })
-      }
-      // loc_moudle_5 js end
+          if (!isMobile()) {
+            $(".loc_moudle_5_content_slick").slick({
+              dots: false,
+              infinite: true,
+              slidesToShow: 4,
+              slidesToScroll: 1,
+              prevArrow: `<div class="slick-prev" aria-label="Previous" type="button">
+                            <img class="lazyload" data-src="https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-arrow.png" />
+                            </div>`,
+              nextArrow: `<div class="slick-next" aria-label="Previous" type="button">
+                            <img class="lazyload" data-src="https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-arrow.png" />
+                            </div>`,
+            })
+          }
+          // loc_moudle_5 js end
 
-    }
-  )
+        }
+      )
+    })
 </script>

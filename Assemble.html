@@ -1,0 +1,127 @@
+<div>
+    <!-- button start -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        button {
+            background-color: transparent;
+            font-family: "Supreme LL" !important;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 21.6px;
+            border-radius: 34px;
+            color: rgba(38, 51, 58, 0.5);
+            border: none;
+            padding: 10px 18px;
+            cursor: pointer;
+        }
+
+        button.active {
+            color: rgba(253, 252, 245, 1);
+            background: rgba(4, 62, 27, 1);
+        }
+
+        button.activeText {
+            color: rgba(4, 62, 27, 1);
+        }
+
+        .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content {
+            overflow: hidden;
+        }
+
+        @media screen and (max-width: 1024px) {
+            button {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 16.8px;
+                text-align: left;
+            }
+        }
+    </style>
+    <!-- button end -->
+</div>
+<div>
+    <div class="loc_container">
+        <div class="loc_content">
+            <div class="loc_moudle_2">
+                <div class="buttonBox">
+                    <button id="C7Button" class="active">About Our FlexiSpot Rugs</button>
+                    <button id="C7MAXButton" class="">Assemble</button>
+                    <button id="C7PROMAXButton" class="">Care and Maintenance</button>
+                    <button id="C7PROButton" class="">Shipping & Returns</button>
+                </div>
+                <div class="Newpage" id="C7Page" style="display: block;">
+                   <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241128-assemble-img3.png" alt="">
+                </div>
+
+                <div class="Newpage" id="C7MAXPage" style="display: none;">
+                    2
+                </div>
+
+                <div class="Newpage" id="C7PROMAXPage" style="display: none;">
+                    3
+                </div>
+                <div class="Newpage" id="C7PROPage" style="display: none;">
+                    4
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <script>
+        const C7Button = document.getElementById("C7Button")
+        const C7MAXButton = document.getElementById("C7MAXButton")
+        const C7PROMAXButton = document.getElementById("C7PROMAXButton")
+        const C7PROButton = document.getElementById("C7PROButton")
+        const C7Page = document.getElementById("C7Page")
+        const C7MAXPage = document.getElementById("C7MAXPage")
+        const C7PROMAXPage = document.getElementById("C7PROMAXPage")
+        const C7PROPage = document.getElementById("C7PROPage")
+
+        function handelClick(ele) {
+            document.querySelectorAll(ele)[0].click()
+        }
+
+        C7Button.addEventListener("click", () => {
+            showPage(C7Page, C7Button)
+        })
+        C7MAXButton.addEventListener("click", () => {
+            showPage(C7MAXPage, C7MAXButton)
+        })
+        C7PROMAXButton.addEventListener("click", () => {
+            showPage(C7PROMAXPage, C7PROMAXButton)
+        })
+        C7PROButton.addEventListener("click", () => {
+            showPage(C7PROPage, C7PROButton)
+        })
+
+        function showPage(pageElement, activeButton) {
+            const pages = document.querySelectorAll(".Newpage")
+            const buttons = document.querySelectorAll(".buttonBox button")
+            // 隐藏所有页面
+            pages.forEach((page) => {
+                page.style.display = "none"
+            })
+
+            // 移除所有按钮的active类
+            buttons.forEach((button) => {
+                button.classList.remove("active")
+            })
+
+            // 显示目标页面
+            pageElement.style.display = "block"
+
+            // 为当前按钮添加active类
+            activeButton.classList.add("active")
+        }
+
+
+    </script>
+</div>
