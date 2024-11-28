@@ -45,83 +45,191 @@
         }
     </style>
     <!-- button end -->
+    <!--top  -->
+    <style>
+        .loc_container {
+            width: 100%;
+            margin: 50px auto;
+        }
+
+        .loc_moudle_1 {
+            width: 100%;
+            height: 500px;
+        }
+
+        .loc_moudle_2 {
+            width: 100%;
+            height: 500px;
+        }
+
+        .loc_moudle_3 {
+            width: 100%;
+            height: 500px;
+        }
+
+        .loc_moudle_4 {
+            width: 100%;
+            height: 500px;
+        }
+
+        .loc_moudle_5 {
+            width: 100%;
+            height: 500px;
+        }
+
+        .loc_moudle_6 {
+            width: 100%;
+            height: 500px;
+        }
+
+        .loc_moudle_7 {
+            width: 100%;
+            height: 500px;
+        }
+
+        .loc_container_navigation_box {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            position: sticky;
+            top: 50px;
+        }
+
+        .loc_container_navigation_item {
+            padding: 10px 15px;
+            color: #fff;
+            background: #f1f1f1;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+        .active_nav {
+            color: rgba(253, 252, 245, 1);
+            background: rgba(4, 62, 27, 1);
+        }
+    </style>
 </div>
 <div>
     <div class="loc_container">
+        <div class="loc_container_navigation_box">
+            <div class="loc_container_navigation_title">how to assemble</div>
+            <div class="loc_container_navigation_item active_nav">tab 1</div>
+            <div class="loc_container_navigation_item">tab 2</div>
+            <div class="loc_container_navigation_item">tab 3</div>
+            <div class="loc_container_navigation_item">tab 4</div>
+            <div class="loc_container_navigation_item">tab 5</div>
+            <div class="loc_container_navigation_item">tab 6</div>
+            <div class="loc_container_navigation_item">tab 7</div>
+        </div>
         <div class="loc_content">
+            <div class="loc_moudle_1">1</div>
             <div class="loc_moudle_2">
                 <div class="buttonBox">
-                    <button id="C7Button" class="active">About Our FlexiSpot Rugs</button>
-                    <button id="C7MAXButton" class="">Assemble</button>
-                    <button id="C7PROMAXButton" class="">Care and Maintenance</button>
-                    <button id="C7PROButton" class="">Shipping & Returns</button>
+                    <button class="active">tab 1</button>
+                    <button class="">tab 2</button>
+                    <button class="">tab 3</button>
+                    <button class="">tab 4</button>
+                    <button class="">tab 5</button>
+                    <button class="">tab 6</button>
+                    <button class="">tab 7</button>
                 </div>
-                <div class="Newpage" id="C7Page" style="display: block;">
-                   <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241128-assemble-img3.png" alt="">
+                <div class="Newpage" style="display: block;">
+                    <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241128-assemble-img2-1.png"
+                        alt="">
                 </div>
-
-                <div class="Newpage" id="C7MAXPage" style="display: none;">
-                    2
+                <div class="Newpage" style="display: none;">
+                    <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241128-assemble-img2-2.png"
+                        alt="">
                 </div>
-
-                <div class="Newpage" id="C7PROMAXPage" style="display: none;">
-                    3
+                <div class="Newpage" style="display: none;">
+                    <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241128-assemble-img2-3.png"
+                        alt="">
                 </div>
-                <div class="Newpage" id="C7PROPage" style="display: none;">
-                    4
+                <div class="Newpage" style="display: none;">
+                    <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241128-assemble-img2-4.png"
+                        alt="">
+                </div>
+                <div class="Newpage" style="display: none;">
+                    <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241128-assemble-img2-5.png"
+                        alt="">
+                </div>
+                <div class="Newpage" style="display: none;">
+                    <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241128-assemble-img2-6.png"
+                        alt="">
+                </div>
+                <div class="Newpage" style="display: none;">
+                    <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241128-assemble-img2-7.png"
+                        alt="">
                 </div>
             </div>
+            <div class="loc_moudle_3">3</div>
+            <div class="loc_moudle_4">4</div>
+            <div class="loc_moudle_5">5</div>
+            <div class="loc_moudle_6">6</div>
+            <div class="loc_moudle_7">7</div>
         </div>
     </div>
 </div>
 <div>
     <script>
-        const C7Button = document.getElementById("C7Button")
-        const C7MAXButton = document.getElementById("C7MAXButton")
-        const C7PROMAXButton = document.getElementById("C7PROMAXButton")
-        const C7PROButton = document.getElementById("C7PROButton")
-        const C7Page = document.getElementById("C7Page")
-        const C7MAXPage = document.getElementById("C7MAXPage")
-        const C7PROMAXPage = document.getElementById("C7PROMAXPage")
-        const C7PROPage = document.getElementById("C7PROPage")
+        // 顶部导航 js start
+        const modules = document.querySelectorAll(".loc_moudle_1, .loc_moudle_2, .loc_moudle_3, .loc_moudle_4, .loc_moudle_5, .loc_moudle_6, .loc_moudle_7");
+        document.addEventListener("scroll", () => {
+            const navigationItems = document.querySelectorAll(".loc_container_navigation_item");
+            let activeIndex = -1; // 初始值为无活动项
+            // 遍历所有模块，判断哪个模块进入视口
+            modules.forEach((module, index) => {
+                const rect = module.getBoundingClientRect();
+                if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+                    activeIndex = index;
+                }
+            });
 
-        function handelClick(ele) {
-            document.querySelectorAll(ele)[0].click()
-        }
+            // 如果当前有活动模块，更新导航
+            if (activeIndex >= 0) {
+                navigationItems.forEach((item, i) => {
+                    item.classList.remove("active_nav"); // 移除所有导航项的 active_nav 类
+                    if (i === activeIndex) {
+                        item.classList.add("active_nav"); // 添加 active_nav 类到当前模块对应的导航项
+                    }
+                });
+            }
+        });
 
-        C7Button.addEventListener("click", () => {
-            showPage(C7Page, C7Button)
-        })
-        C7MAXButton.addEventListener("click", () => {
-            showPage(C7MAXPage, C7MAXButton)
-        })
-        C7PROMAXButton.addEventListener("click", () => {
-            showPage(C7PROMAXPage, C7PROMAXButton)
-        })
-        C7PROButton.addEventListener("click", () => {
-            showPage(C7PROPage, C7PROButton)
-        })
+        // 点击导航项，滚动到对应的模块
+        const navigationItems = document.querySelectorAll(".loc_container_navigation_item");
+        navigationItems.forEach((item, index) => {
+            item.addEventListener("click", () => {
+                modules[index].scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                });
+            });
+        });
 
-        function showPage(pageElement, activeButton) {
-            const pages = document.querySelectorAll(".Newpage")
-            const buttons = document.querySelectorAll(".buttonBox button")
-            // 隐藏所有页面
-            pages.forEach((page) => {
-                page.style.display = "none"
-            })
+        // 顶部导航 js end
 
-            // 移除所有按钮的active类
-            buttons.forEach((button) => {
-                button.classList.remove("active")
-            })
+        // tab切换 js start
+        const buttons = document.querySelectorAll(".buttonBox button"); // 获取所有按钮
+        const pages = document.querySelectorAll(".Newpage"); // 获取所有页面
+        const activeClass = "active"; // 定义激活样式的类名
 
-            // 显示目标页面
-            pageElement.style.display = "block"
+        // 遍历按钮并添加点击事件
+        buttons.forEach((button, index) => {
+            button.addEventListener("click", () => {
+                // 移除所有按钮的 active 类
+                buttons.forEach((btn) => btn.classList.remove(activeClass));
 
-            // 为当前按钮添加active类
-            activeButton.classList.add("active")
-        }
+                // 隐藏所有页面
+                pages.forEach((page) => (page.style.display = "none"));
 
+                // 当前按钮添加 active 类
+                button.classList.add(activeClass);
 
+                // 显示对应的页面
+                pages[index].style.display = "block";
+            });
+        });
+        // tab切换 js end
     </script>
 </div>
