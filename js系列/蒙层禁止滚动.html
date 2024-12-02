@@ -76,6 +76,8 @@
     }
     close_box.addEventListener('click', function () {
         mask_box.style.display = 'none'
+        // 解除监听
+        window.removeEventListener('wheel', wheelHandle)
     })
 </script>
 
