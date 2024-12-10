@@ -1,0 +1,19 @@
+{
+  "name": "socket-demo-main",
+  "version": "1.0.0",
+  "description": "用WebSocket技术实现一个即时通讯聊天室",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1",
+    "websocket": "^1.0.35",
+    "ws": "^8.18.0"
+  }
+}
