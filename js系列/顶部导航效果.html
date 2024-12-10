@@ -1,104 +1,128 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<div>
     <style>
-        .loc_container {
-            width: 100%;
-            margin: 50px auto;
+        .navigation-container * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style-type: none;
+            scroll-margin-block: 204px;
         }
 
-        .loc_moudle {
-            width: 100%;
-            height: 500px;
+        .navigation-container {
+            max-width: 1384px;
+            margin: 0 auto;
         }
 
-        .loc_container_navigation_box {
+        .navigation-container .navigation-main {
             display: flex;
-            gap: 15px;
-            align-items: center;
-            position: sticky;
-            top: 50px;
+            justify-content: space-between;
+            padding: 80px 0;
         }
 
-        .loc_container_navigation_item {
-            padding: 10px 15px;
-            color: #fff;
-            background: #f1f1f1;
-            border-radius: 50px;
+        .navigation-container .navigation-main h2 {
+            color: #26333a;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: "SupremeLLSub-Black";
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 120%;
+        }
+
+        .navigation-container .navigation-main .navigation-main-nav {
+            position: sticky;
+            position: -webkit-sticky;
+            top: 184px;
+            height: 100%;
+        }
+
+        .navigation-container .navigation-main .navigation-main-nav ul li {
+            margin-top: 32px;
+            color: #26333a;
+            font-family: "SupremeLLSub-Black";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 120%;
             cursor: pointer;
         }
 
-        .active_nav {
-            color: rgba(253, 252, 245, 1);
-            background: rgba(4, 62, 27, 1);
+        .navigation-container .navigation-main .navigation-main-nav ul li.s_active {
+            color: #004df2;
+        }
+
+        .navigation-container .navigation-main .navigation-main-content {
+            max-width: 950px;
+        }
+
+        .navigation-module {
+            height: 500px;
         }
     </style>
-</head>
 
-<body>
-    <div class="loc_container">
-        <div class="loc_container_navigation_box">
-            <div class="loc_container_navigation_title">how to assemble</div>
-            <div class="loc_container_navigation_item active_nav">tab 1</div>
-            <div class="loc_container_navigation_item">tab 2</div>
-            <div class="loc_container_navigation_item">tab 3</div>
-            <div class="loc_container_navigation_item">tab 4</div>
-            <div class="loc_container_navigation_item">tab 5</div>
-            <div class="loc_container_navigation_item">tab 6</div>
-            <div class="loc_container_navigation_item">tab 7</div>
-        </div>
-        <div class="loc_content">
-            <div class="loc_moudle">1</div>
-            <div class="loc_moudle">2</div>
-            <div class="loc_moudle">3</div>
-            <div class="loc_moudle">4</div>
-            <div class="loc_moudle">5</div>
-            <div class="loc_moudle">6</div>
-            <div class="loc_moudle">7</div>
+    <div class="navigation-container">
+        <div class="navigation-main">
+            <div class="navigation-main-nav">
+                <h2>Category</h2>
+                <div class="navigation-main-nav-ul">
+                    <ul>
+                        <li data-ids="s_shipping_handling" class="s_active">Shipping &amp; Handling</li>
+                        <li data-ids="s_ceva" class="">CEVA</li>
+                        <li data-ids="s_return_policy" class="">Return Policy</li>
+                        <li data-ids="s_order_cancellation" class="">Order Cancellation</li>
+                        <li data-ids="s_tips" class="">Tips</li>
+                        <li data-ids="s_no_shipping_days" class="">No Shipping Days</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navigation-main-content">
+                <div class="navigation-module" id="s_shipping_handling">
+                    <h2>Shipping &amp; Handling</h2>
+                </div>
+
+                <div class="navigation-module" id="s_ceva">
+                    <h2 class="navigation-main-content-mt32">CEVA</h2>
+                </div>
+
+                <div class="navigation-module" id="s_return_policy">
+                    <h2 class="navigation-main-content-mt32">Return Policy</h2>
+                </div>
+
+                <div class="navigation-module" id="s_order_cancellation">
+                    <h2 class="navigation-main-content-mt32">Order Cancellation</h2>
+                </div>
+
+                <div class="navigation-module" id="s_tips">
+                    <h2 class="navigation-main-content-mt32">Tips</h2>
+
+                </div>
+
+                <div class="navigation-module" id="s_no_shipping_days">
+                    <h2 class="navigation-main-content-mt32">No Shipping Days</h2>
+                </div>
+            </div>
         </div>
     </div>
-</body>
-<script>
-    // 顶部导航 js start
-    const modules = document.querySelectorAll(".loc_moudle");
-    document.addEventListener("scroll", () => {
-        const navigationItems = document.querySelectorAll(".loc_container_navigation_item");
-        let activeIndex = -1; // 初始值为无活动项
-        // 遍历所有模块，判断哪个模块进入视口
-        modules.forEach((module, index) => {
-            const rect = module.getBoundingClientRect();
-            if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-                activeIndex = index;
-            }
-        });
 
-        // 如果当前有活动模块，更新导航
-        if (activeIndex >= 0) {
-            navigationItems.forEach((item, i) => {
-                item.classList.remove("active_nav"); // 移除所有导航项的 active_nav 类
-                if (i === activeIndex) {
-                    item.classList.add("active_nav"); // 添加 active_nav 类到当前模块对应的导航项
-                }
-            });
-        }
-    });
-
-    // 点击导航项，滚动到对应的模块
-    const navigationItems = document.querySelectorAll(".loc_container_navigation_item");
-    navigationItems.forEach((item, index) => {
-        item.addEventListener("click", () => {
-            modules[index].scrollIntoView({
-                behavior: "smooth",
-                block: "start",  // center, end, nearst
+    <script>
+        const nav_items = document.querySelectorAll(
+            ".navigation-container .navigation-main .navigation-main-nav ul li"
+        );
+        nav_items.forEach((item, i) => {
+            item.addEventListener("click", function (e) {
+                nav_items.forEach(ele => {
+                    ele.classList.remove("s_active");
+                });
+                this.classList.add("s_active");
+                this.scrollIntoView({
+                    inline: "center",
+                });
+                document.getElementById(`${item.dataset.ids}`).scrollIntoView({
+                    block: "start",
+                });
             });
         });
-    });
 
-    // 顶部导航 js end
-</script>
-
-</html>
+    </script>
+</div>
