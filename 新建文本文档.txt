@@ -1,4206 +1,1324 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" type="text/css" href="https://staticprod.site.flexispot.com/dev/trantor/attachments/slick.css" />
-<link rel="stylesheet" type="text/css"
-  href="https://s3.springbeetle.com/prod-us-bucket/trantor/attachments/CA/slick-theme.css" />
-<link rel="stylesheet"
-  href="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/swiper@8.4.7-min-us.css" />
-<style>
-  .eve-container-part-body {
-    overflow: hidden;
-  }
-
-  .loc_container {
-    background: #fdfcf5;
-    padding-bottom: 125px;
-  }
-
-  .loc_container .loc_mark {
-    font-family: "Roboto-Regular";
-  }
-
-  .loc_container .loc_botton:hover {
-    background: #004df2;
-    color: #ffffff;
-  }
-
-  .loc_container .loc_botton a:hover {
-    color: #ffffff;
-  }
-
-  .home-active-l {
-    display: block;
-  }
-
-  .home-active-m {
-    display: none;
-  }
-
-  @media (max-width: 1440px) {
-    .loc_container {
-      zoom: 0.85;
-    }
-  }
-
-  @media (max-width: 1200px) {
-    .loc_container {
-      zoom: 0.7;
+<div>
+  <style xml="space">
+    * {
+      scroll-margin: 154px;
     }
 
-    .loc_container_nav {
-      top: 204px;
-    }
-  }
-
-  @media (max-width: 1200px) {
-    .loc_container {
-      zoom: 0.55;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .loc_container {
-      zoom: 1;
-    }
-
-    .home-active-l {
-      display: none !important;
-    }
-
-    .home-active-m {
-      display: block !important;
-    }
-
-    .loc_container {
-      padding-bottom: 64px;
-    }
-  }
-</style>
-<!-- loc_container_nav style start -->
-<style>
-  .loc_container_nav {
-    position: fixed;
-    top: 217px;
-    left: 93px;
-    z-index: 3;
-  }
-
-  .loc_container_nav_icon {
-    background: #ffffff;
-    box-shadow: 0px 4px 10px rgba(38, 51, 58, 0.15);
-    border-radius: 12px;
-    padding: 15px;
-    cursor: pointer;
-    position: relative;
-  }
-
-  .loc_container_nav_menu {
-    position: absolute;
-    top: 96px;
-    left: 0px;
-    background: #ffffff;
-    box-shadow: 0px 4px 10px rgba(38, 51, 58, 0.15);
-    border-radius: 12px;
-    padding: 9px 32px 38px 24px;
-    width: 400px;
-    display: none;
-  }
-
-  .loc_container_nav_menu_item {
-    font-family: "Moderat-Regular";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 24px;
-    color: #26333a;
-    margin-top: 20px;
-  }
-
-  .loc_container_nav_menu_item a {
-    color: #26333a;
-  }
-
-  .loc_container_nav_menu_item:hover a {
-    color: #004df2;
-  }
-
-  @media (max-width: 768px) {
-    .loc_container_nav {
-      display: none;
-    }
-  }
-</style>
-<!-- loc_container_nav style end -->
-<!-- loc_content style start -->
-<style>
-  .loc_content {
-    max-width: 1384px;
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .loc_banner {
-    display: flex;
-    padding: 30px 0 80px;
-    border-bottom: 1px solid rgba(38, 51, 58, 0.1);
-  }
-
-  .loc_title {
-    font-family: "SupremeLLSub-Black";
-    font-style: normal;
-    font-weight: 900;
-    font-size: 52px;
-    line-height: 120%;
-    text-align: center;
-    font-feature-settings: "ss03" on;
-    color: #26333a;
-  }
-
-  .loc_title .loc_title-s {
-    font-size: 44px;
-  }
-
-  .loc_text {
-    font-family: "Moderat-Regular";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 120%;
-    text-align: center;
-    color: rgba(38, 51, 58, 0.8);
-  }
-
-  .loc_banner_left {
-    padding: 135px 118px;
-  }
-
-  .loc_banner_left_title {
-    max-width: 540px;
-    padding: 0 50px;
-  }
-
-  @media (max-width: 768px) {
-    .loc_content {
-      padding: 0 20px;
-    }
-
-    .loc_banner {
-      flex-direction: column;
-      padding: 50px 0 40px;
-    }
-
-    .loc_banner_left {
+    .ant-collapse-content>.ant-collapse-content-box {
       padding: 0;
     }
 
-    .loc_title {
-      font-size: 32px;
-      line-height: 120%;
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-case tr td {
+      padding: 0;
+      border: none;
     }
 
-    .loc_title .loc_title-s {
-      font-size: 24px;
+    .comp-item-spu .item-spu-detail-pane .description-page .detail-pane-detail-content * {
+      background: #fdfcf5;
     }
 
-    .loc_text {
-      font-size: 16px;
-      line-height: 120%;
-      margin-top: 20px;
+    .description-page-container {
+      margin-top: 40px;
     }
 
-    .loc_banner_right img {
+    .description-page-container-bg-gray {
+      background: #f6f4f1;
+    }
+
+    .description-page-container-bg-black {
+      background: #282828;
+    }
+
+    .description-page-container-bg-green {
+      background: #043e1b;
+    }
+
+    .banner~.banner {
+      margin-top: 30px;
+    }
+
+    .banner-m~.banner-m {
+      margin-top: 30px;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .banner-m img {
+      width: 100%;
+      display: none;
+    }
+
+    .detail-pane-detail-content img {
+      border-radius: 12px;
+    }
+
+    .description-page-container-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: start;
+      justify-content: space-between;
+      border-radius: 12px;
+      margin-top: 50px;
+    }
+
+    .description-page-container-item-flex {
+      width: 100%;
+      display: flex;
+      grid-column-gap: 23px;
+    }
+
+    .description-page-container-item-flex-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      max-width: 446px;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex-content-text {
+      font-family: "Moderat-Bold" !important;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+      color: #26333a;
+      margin-top: 24px;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .banner img,
+    .comp-item-spu .item-spu-detail-pane .banner-m img {
       width: 100%;
       height: auto;
-      margin-top: 40px;
-    }
-  }
-</style>
-<!-- loc_content style end -->
-<!-- loc_moudle_1 style start -->
-<style>
-  .loc_moudle_1 {
-    margin-top: 80px;
-  }
-
-  .loc_moudle_1_content {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .loc_banner_left_text {
-    margin-top: 40px;
-    max-width: 540px;
-  }
-
-  .loc_moudle_1_content_title {
-    max-width: 980px;
-  }
-
-  .loc_moudle_1_content_text {
-    margin-top: 24px;
-    max-width: 980px;
-  }
-
-  .loc_moudle_1_flex {
-    margin-top: 40px;
-    display: flex;
-    grid-gap: 20px;
-  }
-
-  .loc_moudle_1_flex_item {
-    background: #26333a;
-    border-radius: 12px;
-    padding: 30px 52px 52px 24px;
-    flex: 1;
-  }
-
-  .loc_moudle_1_flex_item_title {
-    font-family: "SupremeLLSub-Black";
-    font-style: normal;
-    font-weight: 900;
-    font-size: 24px;
-    line-height: 29px;
-    font-feature-settings: "pnum" on, "lnum" on, "ss01" on, "ss04" on,
-      "liga" off;
-    color: #ffffff;
-    text-align: left;
-  }
-
-  .loc_moudle_1_flex_item:nth-child(1) .loc_moudle_1_flex_item_title {
-    width: 372px;
-  }
-
-  .loc_moudle_1_flex_item:nth-child(2) .loc_moudle_1_flex_item_title {
-    width: 300px;
-  }
-
-  .loc_moudle_1_flex_item:nth-child(3) .loc_moudle_1_flex_item_title {
-    width: 402px;
-  }
-
-  .loc_moudle_1_flex_item_text {
-    font-family: "Moderat-Regular";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 120%;
-    font-feature-settings: "pnum" on, "lnum" on, "ss02" on;
-    color: #ffffff;
-    text-align: left;
-    margin-top: 24px;
-    width: 372px;
-  }
-
-  .loc_moudle_1_footer {
-    margin-top: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .loc_moudle_1_footer_line {
-    border-bottom: 1px dashed rgba(38, 51, 58, 0.5);
-    width: 1220px;
-  }
-
-  .loc_moudle_1_footer_line:nth-child(1) {
-    margin-left: calc(50% - 1220px / 2 + 33.19px);
-  }
-
-  .loc_moudle_1_footer_line:last-child {
-    margin-left: calc(50% - 1220px / 2 - 33.19px);
-  }
-
-  .loc_moudle_1_footer_text {
-    font-style: normal;
-    font-size: 24px;
-    line-height: 28px;
-  }
-
-  .loc_moudle_1_footer_text:nth-child(2) {
-    font-family: "Moderat-Regular";
-    font-weight: 400;
-    color: rgba(38, 51, 58, 0.8);
-    margin-top: 40px;
-  }
-
-  .loc_moudle_1_footer_text:nth-child(3) {
-    font-family: "Moderat-Medium";
-    font-weight: 700;
-    color: #26333a;
-    margin-left: calc(50% - 107px / 2 + 436.35px);
-    padding-bottom: 24px;
-    width: 130px;
-  }
-
-  @media (max-width: 768px) {
-    .loc_moudle_1 {
-      margin-top: 40px;
     }
 
-    .loc_moudle_1_content_text {
-      font-size: 14px;
-      line-height: 120%;
-    }
-
-    .loc_moudle_1_flex {
+    .description-page-container-item-text-box {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
       flex-direction: column;
-      grid-gap: 12px;
-      width: 100%;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: baseline;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      padding: 30px 85px 30px 110px;
+    }
+
+    .description-page-container-item-text-left {
+      margin: auto 0 auto 122px;
+    }
+
+    .description-page-container-item-text-right {
+      /* padding: 20px 40px 20px 100px; */
+      margin: auto;
+    }
+
+    .description-page-container-item-img {
+      width: 620px;
+    }
+
+    .description-page-container-item-text {
+      /* width: 50%; */
+      max-width: 500px;
+      /* padding-top: 20px;
+      padding-bottom: 20px; */
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: baseline;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-smalltitle {
+      font-family: "Moderat-Bold" !important;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 14px;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+      color: #004df2;
+      position: relative;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title {
+      font-family: "SupremeLLSub-Black" !important;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 52px;
+      line-height: 60px;
+      font-feature-settings: "pnum" on, "lnum" on, "ss01" on, "ss04" on,
+        "liga" off;
+      color: #26333a;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle {
+      max-width: 500px;
+      font-family: "Moderat-Regular" !important;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: normal;
+      font-feature-settings: "pnum" on, "lnum" on, "ss02" on;
+      color: rgba(38, 51, 58, 0.8);
+      margin-top: 16px;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle-theme {
+      line-height: 24px !important;
+      color: #26333a;
+    }
+
+    .border-left {
+      border-left: 1px solid rgba(38, 51, 58, 0.2) !important;
+    }
+
+    @media (max-width: 1420px) {
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle {
+        font-size: 15px;
+        line-height: 20px;
+        margin-top: 20px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title {
+        font-size: 46px;
+        line-height: 50px;
+        margin-top: 20px;
+      }
+
+      .description-page-container-item-flex {
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 1280px) {
+      .ant-collapse-content>.ant-collapse-content-box {
+        padding: 0 20px;
+      }
+
+      .description-page-container-item-text-left {
+        padding: 20px 70px 20px 40px;
+      }
+
+      .description-page-container-item-text-right {
+        padding: 20px 40px 20px 70px;
+      }
+
+      .description-page-container-item-text-box {
+        padding: 30px 70px 30px 90px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title {
+        font-size: 42px;
+        line-height: 46px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title {
+        font-size: 35px;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .comp-item-spu .item-spu-detail-pane .description-page-container-item-flex img {
+        max-width: 320px;
+        width: 320px;
+      }
+
+      .description-page-container-item:has(.description-page-container-item-flex) {
+        overflow: auto;
+      }
+
+      .description-page-container-item::-webkit-scrollbar {
+        height: 5px;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
+
+      .description-page-container-item::-webkit-scrollbar-thumb {
+        height: 5px;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
+
+      .description-page-container-item-i {
+        width: 50%;
+      }
+
+      .description-page-container-item-text-box {
+        padding: 30px 50px 30px 50px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title {
+        font-size: 36px;
+        line-height: 40px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title {
+        font-size: 29px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .description-page-container-margin60 {
+        margin-top: 20px;
+      }
+
+      .ant-collapse-content>.ant-collapse-content-box {
+        padding: 0;
+      }
+
+      .description-page-container .banner img {
+        width: 100%;
+        display: none;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .banner-m img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .description-page-container {
+        width: 100%;
+        padding: 0;
+        margin-top: 24px;
+      }
+
+      .description-page-container-item-text-right,
+      .description-page-container-item-text-left {
+        padding: 20px 40px;
+      }
+
+      .description-page-container-item-text {
+        padding-top: 20px;
+        margin-bottom: 22px;
+      }
+
+      .description-page-container-item {
+        flex-direction: column;
+        margin-top: 30px;
+      }
+
+      .description-page-container-item-flex {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .description-page-container-item:has(.description-page-container-item-flex) {
+        overflow: auto;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .description-page-container-item-flex img {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .description-page-container-item-flex-content-text {
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      .description-page-container-item-text-box {
+        padding: 0px 0px;
+      }
+
+      .description-page-container-item-text-box-m {
+        margin-top: 40px;
+      }
+
+      .description-page-container-item-reverse {
+        flex-direction: column-reverse;
+      }
+
+      .description-page-container-item-text-box img {
+        margin-top: 33px;
+      }
+
+      .description-page-container-item-text-box:has(.description-page-container-item-text-title) {
+        padding: 0 36px;
+      }
+
+      .description-page-container-item:has(.description-page-container-item-text-box) {
+        align-items: flex-start;
+      }
+
+      .description-page-container-bg-gray,
+      .description-page-container-bg-green {
+        border-radius: 12px;
+        padding-top: 0px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-smalltitle {
+        font-size: 14px;
+        line-height: 14px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title {
+        font-size: 30px;
+        line-height: normal;
+        margin-top: 24px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle {
+        font-size: 16px;
+        line-height: normal;
+        margin-top: 16px;
+      }
+
+      .description-page-container-item-i {
+        width: 100%;
+        margin-top: 30px;
+      }
+
+      .description-page-container-item-i img {
+        width: 100%;
+      }
+
+      .description-page-container-item-img,
+      .description-page-container-item-text {
+        width: 100%;
+      }
+
+      .description-page-container-item-text-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .description-page-container-pad-m {
+        padding: 0 20px;
+      }
+
+      .description-page-container-item-img-theme {
+        flex-direction: column;
+      }
+    }
+  </style>
+  <style>
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex-content-tip {
+      margin-top: 12px;
+      font-family: "Moderat-Regular" !important;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: #26333acc;
+    }
+
+    .flex-end {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .pr {
+      padding-right: 128px;
+    }
+
+    .pl {
+      padding-left: 175px;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle {
+      position: relative;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item .description-page-container-item-context {
+      max-width: 1091px;
+      margin: 0 auto 52px;
+      text-align: center;
+      font-family: "Moderat-Regular" !important;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 28px;
+      color: #26333a;
+    }
+
+    .flex-column {
+      padding-bottom: 55px;
+      flex-direction: column;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-case .description-page-container-item-case-item .description-page-container-item-case-item-td {
+      border-bottom: 1px solid rgba(38, 51, 58, 0.2);
+      border-left: 1px solid rgba(38, 51, 58, 0.2);
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-case {
+      max-width: 1207px;
+      margin: auto;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title-theme {
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle strong {
+      color: #26333a;
+      font-variant-numeric: lining-nums tabular-nums;
+      font-feature-settings: "ss04" on, "liga" off;
+      font-family: "Moderat-Bold" !important;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 24px;
+    }
+
+    .w-theme {
+      width: 157px !important;
+    }
+
+    @media screen and (max-width: 768px) {
+      /* .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .banner-m {
+        padding: 0 20px;
+      } */
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title {
+        font-size: 24px;
+        margin-top: 12px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle {
+        font-size: 14px;
+        margin-top: 12px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex-content-text,
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex-content-tip {
+        padding-left: 0px;
+        padding-right: 0px;
+        text-align: center;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex-content-text {
+        margin-bottom: 20px;
+        font-weight: 900;
+        font-family: "SupremeLLSub-Black" !important;
+      }
+
+      .description-page-container-item-flex-content {
+        margin-bottom: 0;
+      }
+
+      .description-page-container-item {
+        margin: 40px 20px 0;
+      }
+
+      .pr {
+        padding: 17px 22px 0 33px;
+      }
+
+      .pl {
+        padding: 0 31px 0 33px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item .description-page-container-item-context {
+        max-width: 244px;
+        margin-bottom: 30px;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 12px;
+        line-height: normal;
+      }
+
+      .description-page-container-item-case {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 33px;
+      }
+
+      .description-page-container-item-case {
+        margin-top: 0;
+      }
+
+      .flex-column {
+        padding-bottom: 12px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex-content-tip {
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: normal;
+      }
+
+      .description-page-container-item-case .description-page-container-item-case-item .table-img-theme img {
+        width: 26px;
+      }
+
+      .w-theme {
+        width: 58px !important;
+      }
+
+      .description-page-container-item-text-left {
+        margin: auto;
+      }
+    }
+  </style>
+  <style>
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content {
       overflow: hidden;
     }
 
-    .loc_moudle_1_flex_item {
-      padding: 22px 40px 38px 18px;
-    }
-
-    .loc_moudle_1_flex_item_title {
-      font-size: 18px;
-      line-height: 22px;
-    }
-
-    .loc_moudle_1_flex_item_text {
-      font-size: 12px;
-      line-height: 120%;
-      width: 100%;
-    }
-
-    .loc_moudle_1_flex_item:nth-child(1) .loc_moudle_1_flex_item_title,
-    .loc_moudle_1_flex_item:nth-child(2) .loc_moudle_1_flex_item_title,
-    .loc_moudle_1_flex_item:nth-child(3) .loc_moudle_1_flex_item_title {
-      width: 100%;
-    }
-
-    .loc_moudle_1_footer {
-      margin-top: 60px;
-      width: 100%;
-    }
-
-    .loc_moudle_1_footer_line {
-      width: 100%;
-    }
-
-    .loc_moudle_1_footer_line:nth-child(1) {
-      margin-left: 0;
-    }
-
-    .loc_moudle_1_footer_line:last-child {
-      margin-left: 0;
-    }
-
-    .loc_moudle_1_footer_text:nth-child(2) {
-      font-size: 16px;
-      line-height: 28px;
-      margin-top: 20px;
-    }
-
-    .loc_moudle_1_footer_text:nth-child(3) {
-      font-size: 18px;
-      line-height: 28px;
-      padding-bottom: 18px;
-      text-align: right;
-      margin-left: 0;
-      padding-right: 10px;
-      width: 100%;
-    }
-  }
-</style>
-<!-- loc_moudle_1 style end -->
-<!-- loc_parallax style start -->
-<style>
-  .loc_parallax {
-    margin: 0px;
-    padding: 0px;
-    margin-top: 120px;
-  }
-
-  .parallax {
-    height: 520px;
-    width: 100%;
-    display: table;
-    position: relative;
-  }
-
-  .parallax-background {
-    background-image: url("https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-parallax-pc.png");
-    background-attachment: fixed;
-    background-position: 40% -40%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-  }
-
-  @media (max-width: 768px) {
-    .loc_parallax {
-      margin-top: 60px;
-    }
-
-    .parallax {
-      height: 280px;
-    }
-
-    .parallax-background {
-      background-image: url("https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-parallax-mobile.png");
-      background-attachment: initial;
-      background-position: inherit;
-    }
-  }
-</style>
-<!-- loc_parallax style end -->
-<!-- loc_moudle_2 style start -->
-<style>
-  .loc_moudle_2_content_title {
-    margin-top: 120px;
-  }
-
-  .loc_moudle_2_content_accordion {
-    margin-top: 50px;
-  }
-
-  .loc_moudle_2_content_dl_main {
-    padding: 32px 66px;
-    border-bottom: 1px solid rgba(38, 51, 58, 0.1);
-  }
-
-  .loc_moudle_2_content_dl_main_dt {
-    cursor: pointer;
-  }
-
-  .loc_moudle_2_content_dt {
-    cursor: pointer;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    position: relative;
-    font-family: "Moderat";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    font-feature-settings: "pnum" on, "lnum" on, "ss02" on;
-    color: #26333a;
-  }
-
-  .loc_moudle_2_content_dt_icon {
-    position: absolute;
-    right: 10px;
-    top: 0;
-    display: block;
-    width: 24px;
-    height: 24px;
-    background: url("https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-off.png") no-repeat;
-  }
-
-  #open .loc_moudle_2_content_dt_icon {
-    background: url("https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-open.png") no-repeat;
-  }
-
-  .loc_moudle_2_content_text {
-    font-family: "Moderat-Regular";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    font-feature-settings: "pnum" on, "lnum" on, "ss02" on;
-    color: rgba(38, 51, 58, 0.8);
-    padding: 32px 0 24px;
-  }
-
-  .loc_moudle_2_content_dl .loc_moudle_2_content_dl_main:nth-child(2) {
-    padding: 32px 66px 24px;
-  }
-
-  .loc_moudle_2_content_dl_main_dd {
-    display: none;
-  }
-
-  .loc_moudle_2_content_dl_main_dd_box {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .loc_moudle_2_content_dd_left {
-    width: 700px;
-  }
-
-  .loc_moudle_2_content_dd_botton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 182px;
-    height: 40px;
-    background: #26333a;
-    box-shadow: 8px 8px 40px rgba(0, 0, 0, 0.1);
-    border-radius: 40px;
-    margin-top: 26px;
-    cursor: pointer;
-  }
-
-  .loc_moudle_2_content_dd_botton_box {
-    font-family: "Moderat-Medium";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.05em;
-    color: #ffffff;
-  }
-
-  .loc_moudle_2_footer {
-    margin-top: 122px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .loc_moudle_2_footer_line {
-    border-bottom: 1px dashed rgba(38, 51, 58, 0.5);
-    width: 1220px;
-  }
-
-  .loc_moudle_2_footer_line:nth-child(1) {
-    margin-left: calc(50% - 1220px / 2 + 33.19px);
-  }
-
-  .loc_moudle_2_footer_line:last-child {
-    margin-left: calc(50% - 1220.39px / 2 - 33px);
-  }
-
-  .loc_moudle_2_footer_text {
-    font-style: normal;
-    font-size: 24px;
-    line-height: 28px;
-  }
-
-  .loc_moudle_2_footer_text:nth-child(2) {
-    font-family: "Moderat-Regular";
-    font-weight: 400;
-    color: rgba(38, 51, 58, 0.8);
-    margin-top: 40px;
-  }
-
-  .loc_moudle_2_footer_text:nth-child(3) {
-    font-family: "Moderat-Medium";
-    font-weight: 700;
-    color: #26333a;
-    margin-left: calc(50% - 81px / 2 + 260px);
-    padding-bottom: 24px;
-  }
-
-  @media (max-width: 768px) {
-    .loc_moudle_2_content_title {
-      margin-top: 60px;
-    }
-
-    .loc_moudle_2_content_accordion {
-      margin-top: 8px;
-    }
-
-    .loc_moudle_2_content_dl_main {
-      padding: 24px 0;
-    }
-
-    .loc_moudle_2_content_dl .loc_moudle_2_content_dl_main:nth-child(2) {
-      padding: 0;
-    }
-
-    .loc_moudle_2_content_dl_main_dd_box {
-      flex-direction: column-reverse;
-    }
-
-    .loc_moudle_2_content_dd_left {
-      width: 100%;
-      margin-bottom: 34px;
-    }
-
-    .loc_moudle_2_content_dd_right img {
-      width: 200px;
-      margin-top: 20px;
-    }
-
-    .loc_moudle_2_content_text {
-      padding: 24px 0 24px;
-    }
-
-    .loc_moudle_2_footer {
-      margin-top: 60px;
-    }
-
-    .loc_moudle_2_footer_line {
-      width: 100%;
-    }
-
-    .loc_moudle_2_footer_line:nth-child(1),
-    .loc_moudle_2_footer_line:last-child {
-      margin-left: 0;
-    }
-
-    .loc_moudle_2_footer_text:nth-child(2) {
-      margin-top: 20px;
-      font-size: 16px;
-    }
-
-    .loc_moudle_2_footer_text:nth-child(3) {
-      margin-left: 0;
-      padding-bottom: 18px;
-      font-size: 18px;
-      width: 100%;
-      text-align: right;
-      padding-right: 28px;
-    }
-  }
-</style>
-<!-- loc_moudle_2 style end -->
-<!-- loc_moudle_3 style start -->
-<style>
-  .loc_moudle_3_content_title {
-    margin-top: 120px;
-  }
-
-  .loc_moudle_3_content_tab {
-    margin-top: 40px;
-    display: flex;
-    grid-gap: 8.75px;
-    justify-content: center;
-  }
-
-  .loc_moudle_3_content_tab_item {
-    background: #ede9e4;
-    border-radius: 43px;
-    font-family: "SupremeLLSub-Black";
-    font-style: normal;
-    font-weight: 900;
-    font-size: 14px;
-    line-height: 24px;
-    text-align: center;
-    font-feature-settings: "pnum" on, "lnum" on, "ss02" on;
-    color: #26333a;
-    padding: 16px 35px;
-    cursor: pointer;
-  }
-
-  .loc_tab_active {
-    background: #26333a;
-    color: #FDFCF5;
-  }
-
-  .loc_moudle_3_content_tab_content_box {
-    display: none;
-  }
-
-  .loc_moudle_3_content_tab_content {
-    margin-top: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 80px;
-    border-bottom: 1px solid rgba(38, 51, 58, 0.1);
-  }
-
-  .loc_tab_content_active {
-    display: block;
-  }
-
-  .loc_moudle_3_content_tab_content_text {
-    font-family: "Moderat-Regular";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    font-feature-settings: "pnum" on, "lnum" on, "ss02" on;
-    color: rgba(38, 51, 58, 0.8);
-    width: 600px;
-  }
-
-  .loc_moudle_3_content_tab_content_img {
-    display: flex;
-    margin-left: 122px;
-    grid-gap: 40px;
-    min-width: 542px;
-    justify-content: center;
-  }
-
-  .content_tab_small_text {
-    font-family: "Moderat-Regular";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    font-feature-settings: "pnum" on, "lnum" on, "ss02" on;
-    color: rgba(38, 51, 58, 0.8);
-  }
-
-  .content_tab_small_text~.content_tab_small_text {
-    margin-top: 20px;
-  }
-
-  .loc_moudle_3_content_tab_content_text .content_tab_small_li {
-    margin-top: 12px;
-  }
-
-  .content_tab_small_li:before {
-    content: "";
-    display: inline-block;
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-bottom: 4px;
-    width: 0px;
-    height: 0px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    border: 2.5px solid #515b5f;
-  }
-
-  .loc_moudle_3_content_tab_content_text_4 {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 640px;
-  }
-
-  .loc_moudle_3_content_tab_content_img_4 {
-    flex-wrap: wrap;
-    width: 540px;
-    margin-left: 67px;
-  }
-
-  .loc_moudle_3_content_tab_content_img .keyimg {
-    width: 46%;
-  }
-
-  .hidden_dom {
-    height: 0;
-  }
-
-  @media (max-width: 768px) {
-    .loc_moudle_3_content_title {
-      margin-top: 60px;
-    }
-
-    .loc_moudle_3_content_tab {
-      margin-top: 24px;
-      grid-gap: 12px;
-      overflow-x: scroll;
-      padding-bottom: 8px;
-      justify-content: flex-start;
-    }
-
-    .loc_moudle_3_content_tab::-webkit-scrollbar-track {
-      background: #f6f4f1;
-      border-radius: 25px;
-    }
-
-    .loc_moudle_3_content_tab::-webkit-scrollbar {
-      height: 4px;
-    }
-
-    .loc_moudle_3_content_tab::-webkit-scrollbar-thumb {
-      background: #26333a;
-      border-radius: 25px;
-    }
-
-    .loc_moudle_3_content_tab_item {
-      font-size: 14px;
-      padding: 10px 50px;
-      white-space: nowrap;
-    }
-
-    .loc_moudle_3_content_tab_content {
-      margin-top: 24px;
-      flex-direction: column;
-      padding-bottom: 24px;
-    }
-
-    .loc_moudle_3_content_tab_content_text {
-      width: 100%;
-    }
-
-    .loc_moudle_3_content_tab_content_img {
-      margin-left: 0;
-      grid-gap: 14px;
-      margin-top: 24px;
-      min-width: 100%;
-    }
-
-    .loc_moudle_3_content_tab_content_img img {
-      width: 160px;
-      height: 160px;
-    }
-
-    .loc_moudle_3_content_tab_content_box:nth-child(4) .loc_moudle_3_content_tab_content_img img,
-    .loc_moudle_3_content_tab_content_box:nth-child(7) .loc_moudle_3_content_tab_content_img img:first-child {
-      width: 314px;
-      height: 314px;
-    }
-
-    .loc_moudle_3_content_tab_content_text_4 {
-      width: 100%;
-    }
-
-    .loc_moudle_3_content_tab_content_img_4 {
-      width: 100%;
-    }
-
-    .content_tab_small_text {
-      font-size: 14px;
-      line-height: 120%;
-    }
-  }
-</style>
-<!-- loc_moudle_3 style end -->
-
-<!-- loc_moudle_5 style start -->
-<style>
-  .loc_moudle_5_content_title {
-    margin-top: 120px;
-  }
-
-  .loc_moudle_5_content_slick {
-    display: flex;
-    grid-gap: 21.3px;
-    margin-top: 38px;
-  }
-
-  .loc_moudle_5_content_slick_item {
-    background: #ffffff;
-    box-shadow: 0px 4px 10px rgba(38, 51, 58, 0.15);
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 46px 18.5px 20px;
-    margin: 10px;
-    min-height: 370px;
-  }
-
-  .loc_moudle_5_content_slick_item_title {
-    font-family: "SupremeLLSub-Black";
-    font-style: normal;
-    font-weight: 900;
-    font-size: 18px;
-    line-height: 24px;
-    display: flex;
-    text-align: center;
-    font-feature-settings: "pnum" on, "lnum" on;
-    color: #26333a;
-  }
-
-  .loc_moudle_5_content_slick_item_text {
-    font-family: "Moderat-Regular";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 120%;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    font-feature-settings: "pnum" on, "lnum" on;
-    color: #26333a;
-    margin-top: 12px;
-    min-height: 120px;
-  }
-
-
-  .loc_moudle_5_content_slick_item_img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 24px;
-    width: 220px;
-  }
-
-  .loc_moudle_5_content_slick_item_img img {
-    width: 100%;
-  }
-
-  @media (max-width: 768px) {
-    .loc_moudle_5_content_title {
-      margin-top: 60px;
-      padding: 0px 32px;
-    }
-
-    .loc_moudle_5 .slick-track {
-      margin-left: -50px;
-    }
-
-    .loc_moudle_5_content_slick {
-      grid-gap: 11px;
-      overflow: auto;
-      padding-bottom: 18px;
-    }
-
-    .loc_moudle_5_content_slick::-webkit-scrollbar-track {
-      background: #f6f4f1;
-      border-radius: 25px;
-    }
-
-    .loc_moudle_5_content_slick::-webkit-scrollbar {
-      height: 4px;
-    }
-
-    .loc_moudle_5_content_slick::-webkit-scrollbar-thumb {
-      background: #26333a;
-      border-radius: 25px;
-    }
-
-    .loc_moudle_5_content_slick_item {
-      margin: 10px 5px;
-      padding: 28px 17px 20px;
-      width: 250px;
-      min-height: 300px;
-    }
-
-    .loc_moudle_5_content_slick_item_img img {
-      width: 120px;
-      height: auto;
-    }
-
-    .loc_moudle_5_content_slick_item_title {
-      margin-top: 25px;
-      font-size: 16px;
-      line-height: 18px;
-      padding: 0 0px;
-    }
-
-    .loc_moudle_5_content_slick_item_text {
-      margin-top: 10px;
-      font-size: 12px;
-    }
-  }
-</style>
-<!-- loc_moudle_5 style end -->
-
-<!-- loc_moudle_8 style start -->
-<style>
-  .loc_moudle_8_content_title {
-    margin: 0 auto;
-    margin-top: 120px;
-    max-width: 900px;
-  }
-
-  .loc_moudle_8_content_flex {
-    display: flex;
-    margin-top: 66px;
-  }
-
-  .loc_moudle_8_content_flex_item_box {
-    width: 25%;
-  }
-
-  .loc_moudle_8_content_flex_item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .loc_moudle_8_content_flex_item_img {
-    max-height: 240px;
-  }
-
-  .loc_moudle_8_content_flex_item_img img {
-    max-width: 100%;
-  }
-
-  .loc_moudle_8_content_flex_item_corner_mark {
-    position: absolute;
-    height: 63px;
-    top: 15px;
-    left: 15px;
-    margin: 0;
-    font-size: 44px;
-    line-height: 44px;
-    letter-spacing: -0.02em;
-    color: #004df2;
-    font-family: SupremeLLSub-Black;
-  }
-
-  .loc_moudle_8_content_flex_item_corner_mark_right {
-    position: absolute;
-    top: 8px;
-    right: 12px;
-  }
-
-  .loc_moudle_8_content_flex_item_title {
-    font-family: "Moderat-Bold";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    color: #333;
-    margin-top: 20px;
-  }
-
-  .loc_moudle_8_content_flex_item_text {
-    font-family: "Moderat-Regular";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    color: #26333a;
-    margin-top: 6px;
-  }
-
-  .loc_moudle_8_content_flex_item_price {
-    display: flex;
-    margin: 12px 0;
-    font-family: "Moderat-Regular";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-
-  .loc_moudle_8_content_flex_item_price_new {
-    color: #333;
-  }
-
-  .loc_moudle_8_content_flex_item_price_old {
-    font-family: "Moderat-Regular";
-    text-decoration-line: line-through;
-    color: rgba(38, 51, 58, 0.5);
-    margin-left: 8px;
-  }
-
-  .loc_moudle_8_content_flex_item_buy {
-    display: flex;
-    padding: 14px 40px;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-family: "Moderat-Bold";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    border-radius: 40px;
-    background: #004df2;
-  }
-
-  .loc_moudle_8_content_flex_item_buy:hover {
-    background-color: #26333a;
-  }
-
-  .loc_moudle_8_content_flex_item_main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 20px 0;
-    min-height: 146px;
-    color: #26333a;
-    text-align: center;
-    font-family: "Moderat-Regular";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-  }
-
-  .loc_moudle_8_content_flex_item_main:last-child {
-    min-height: 94px;
-  }
-
-  .loc_moudle_8_content_flex_item_main svg {
-    margin-bottom: 13px;
-  }
-
-  .loc_moudle_8_content_button_box {
-    display: flex;
-    justify-content: center;
-    margin-top: 65px;
-  }
-
-  .loc_moudle_8_content_button {
-    background: #26333a;
-    box-shadow: 8px 8px 40px rgba(0, 0, 0, 0.1);
-    border-radius: 40px;
-    padding: 24px 44px;
-    font-family: "Moderat-Medium";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 16px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: #ffffff;
-    cursor: pointer;
-  }
-
-  @media (max-width: 768px) {
-    .loc_moudle_8_content_title {
-      margin-top: 60px;
-      line-height: 38px;
-    }
-
-    .loc_moudle_8_content_flex {
-      flex-wrap: wrap;
-      grid-gap: 19px;
-      margin-top: 32px;
-    }
-
-    .loc_moudle_8_content_flex_item_corner_mark {
-      font-size: 24px;
-      line-height: 24px;
-    }
-
-    .loc_moudle_8_content_flex_item_corner_mark_right img {
-      top: 6px;
-      right: 5px;
-    }
-
-    .loc_moudle_8_content_flex_item_corner_mark_right img {
-      width: 46px;
-      height: auto;
-    }
-
-    .loc_moudle_8_content_flex_item {
-      padding-bottom: 32px;
-    }
-
-    .loc_moudle_8_content_flex_item_title {
-      margin-top: 4px;
-      font-size: 28px;
-    }
-
-    .loc_moudle_8_content_flex_item_text {
-      margin-top: 4px;
-      font-size: 16px;
-      line-height: 24px;
-    }
-
-    .loc_moudle_8_content_flex_item_price {
-      margin: 14px 0;
-      font-size: 20px;
-    }
-
-    .loc_moudle_8_content_flex_item_main {
-      min-height: 138px;
-      padding: 16px 0;
-    }
-
-    .loc_moudle_8_content_flex_item_main:last-child {
-      min-height: 86px;
-    }
-
-    .loc_moudle_8_content_button_box {
-      margin-top: 32px;
-    }
-
-    .loc_moudle_8_content_button {
-      padding: 18px 28px;
-      font-size: 13px;
-      line-height: 16px;
-      text-transform: none;
-    }
-  }
-</style>
-<!-- loc_moudle_8 style end -->
-<!-- loc_moudle_9 style start -->
-<style>
-  .loc_moudle_9 {
-    margin-top: 80px;
-  }
-
-  @media (max-width: 768px) {
-    .loc_moudle_9 {
-      margin-top: 60px;
-    }
-
-    .loc_moudle_9 img {
-      width: 100%;
-    }
-  }
-</style>
-<!-- loc_moudle_9 style end -->
-<!-- slick style start -->
-<style>
-  .slick-prev:before,
-  .slick-next:before {
-    content: "";
-  }
-
-  .loc_container .slick-arrow:hover {
-    opacity: 0.7;
-  }
-
-  .loc_container .slick-prev {
-    transform: translateX(-150%) rotate(180deg);
-    z-index: 2;
-    left: 40px;
-    position: absolute;
-    background: #f1eeeb;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 50%;
-    cursor: pointer;
-  }
-
-  .loc_container .slick-next {
-    z-index: 2;
-    left: unset;
-    right: -20px;
-    position: absolute;
-    background: #f1eeeb;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 50%;
-    cursor: pointer;
-  }
-
-  .slick-dots {
-    background: #f6f4f1;
-    border-radius: 40px;
-    width: auto;
-    padding: 12px 16px;
-    right: 74px;
-    bottom: 24px;
-  }
-
-  .slick-dots li {
-    width: 8px;
-    height: 8px;
-  }
-
-  .slick-dots li button {
-    width: 8px;
-    height: 8px;
-    line-height: 12px;
-  }
-
-  .slick-dots li button:before {
-    width: 8px;
-    height: 8px;
-    line-height: 4px;
-  }
-
-  .slick-dots li.slick-active button:before {
-    opacity: 1;
-    color: #0d3147;
-  }
-
-  .home-banner-box .slick-dots li.slick-active button:before {
-    color: #0d3147;
-  }
-
-  .home-banner-box .slick-dots li.slick-active-d button:before {
-    color: #fdfcf5;
-  }
-
-  .home-banner-box .slick-dots li.slick-active-h button:before {
-    color: #fdfcf5;
-    opacity: 0.75;
-  }
-
-  .slick-dots li button:before {
-    border: 2px solid #0d3147;
-    border-radius: 10px;
-    width: 10px;
-    height: 10px;
-    content: "";
-    top: 3px;
-    opacity: 1;
-  }
-
-  .slick-dots li.slick-active button:before {
-    background: #0d3147;
-  }
-
-  .home-banner-box .slick-dots li.slick-active-d button:before {
-    background: transparent;
-    border: 2px solid #fdfcf5;
-  }
-
-  .home-banner-box .slick-dots li.slick-active-h button:before {
-    color: #fdfcf5;
-    border: 2px solid #fdfcf5;
-    opacity: 0.75;
-  }
-
-  .home-banner-box .slick-dots:hover li button:before {
-    border: 2px solid #fdfcf5;
-  }
-
-  .home-banner-box .slick-dots:hover .slick-active button:before {
-    background: #fdfcf5;
-  }
-
-  @media (max-width: 768px) {
-    .loc_moudle_6 .slick-slide img {
-      width: 100%;
-    }
-
-    .loc_moudle_6 .slick-dots {
-      right: 20px;
-      bottom: 65px;
-      padding: 9px;
-    }
-
-    .loc_moudle_6 .slick-dots li button:before {
-      border: 1px solid #0d3147;
-      width: 6px;
-      height: 6px;
-    }
-
-    .loc_moudle_6 .slick-dots li button {
-      width: 6px;
-      height: 6px;
-      padding: 3px;
-    }
-
-    .loc_container .slick-prev {
-      width: 27px;
-      height: 27px;
-      top: 114px;
-      left: 0;
-      transform: translateX(0) rotate(180deg);
-    }
-
-    .loc_container .slick-next {
-      width: 27px;
-      height: 27px;
-      top: 114px;
-      right: 0;
-    }
-
-    .loc_container .slick-prev img,
-    .loc_container .slick-next img {
-      max-width: 100%;
-    }
-  }
-</style>
-<!-- slick style end -->
-
-<!-- new add -->
-<!-- loc_moudle_1 table style start -->
-<style>
-  .table-wrapper table {
-    margin: 40px auto;
-    border-collapse: collapse;
-    max-width: 1000px;
-    width: 1000px;
-    table-layout: fixed;
-  }
-
-  /* 表头下的线 */
-  .table-wrapper table thead tr {
-    /* border-bottom: 1px solid #0000001a;  */
-  }
-
-  .table-wrapper table thead tr th {
-    font-family: Moderat-Bold;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 21.6px;
-    text-align: center;
-    padding: 14.5px 0 24.5px;
-  }
-
-  /* 表格内容每行下的线 */
-  .table-wrapper table tbody tr {
-    border-bottom: 1px solid #0000001a;
-  }
-
-  .table-wrapper table tbody tr td {
-    font-family: Moderat-Bold;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 14px;
-    text-align: center;
-    color: #26333a;
-  }
-
-  .table-wrapper table tbody tr td:first-child {
-    text-align: left;
-    padding: 31px 0 28px 70px;
-    font-size: 18px;
-    line-height: 21.6px;
-  }
-
-  @media screen and (max-width: 1440px) {
-    .swiperReasons {
-      display: block;
-    }
-
-    .properlBox img {
-      width: 320px;
-    }
-  }
-
-  @media screen and (max-width: 1024px) {
-    .table-wrapper table {
-      width: 768px;
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    .table-wrapper {
+    .description-page-container-item-img-theme {
       display: flex;
+    }
+
+    .description-page-container-item-img-theme img {
+      width: 430px;
+    }
+
+    .description-page-container-item .description-page-container-item-Imgtext {
+      width: 49%;
+    }
+
+    .description-page-container-item .description-page-container-item-Imgtext img {
       width: 100%;
-      overflow-x: auto;
-      /* 允许水平滚动 */
+      border-radius: 12px;
     }
 
-    .table-scroll {
-      overflow-x: auto;
-      /* 允许水平滚动 */
-      width: 100%;
-    }
-
-    .table-wrapper table {
-      border-collapse: collapse;
-      /* 合并边框 */
-      width: 100%;
-      min-width: 600px;
-      /* 设置最小宽度 */
-    }
-
-    .table-wrapper th,
-    .table-wrapper td {
-      padding: 10px;
-      /* 内边距 */
-      text-align: left;
-      /* 左对齐 */
-    }
-
-    .table-wrapper th:first-child,
-    .table-wrapper td:first-child {
-      position: sticky;
-      /* 固定列 */
-      left: 0;
-      /* 距离左边 0 */
-      background-color: rgb(253, 252, 245);
-      z-index: 1;
-      /* 确保它在其他列上面 */
-      width: 150px;
-    }
-
-    .table-wrapper table tbody tr td:first-child {
-      padding-left: 10px;
-      padding-right: 10px;
-      font-size: 16px;
-    }
-  }
-</style>
-<!--  loc_moudle_1 table end -->
-<!-- loc_moudle_2 style start -->
-<style>
-  .loc_moudle_2_content_title {
-    margin-top: 80px;
-    line-height: 60px;
-  }
-
-  .loc_moudle_2_content_accordion {
-    margin-top: 50px;
-  }
-
-  .loc_moudle_2_content_dl_main {
-    padding: 32px 66px;
-    border-bottom: 1px solid rgba(38, 51, 58, 0.1);
-  }
-
-  .loc_moudle_2_content_dl_main_dt {
-    cursor: pointer;
-  }
-
-  .loc_moudle_2_content_dt {
-    cursor: pointer;
-    position: relative;
-    font-family: "Moderat-Bold";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 120%;
-    display: flex;
-    align-items: center;
-    font-variant-numeric: lining-nums proportional-nums;
-    font-feature-settings: "ss02" on;
-    color: #26333a;
-  }
-
-  .loc_moudle_2_content_dt_icon {
-    position: absolute;
-    right: 10px;
-    top: 0;
-    display: block;
-    width: 24px;
-    height: 24px;
-    background: url("https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-off.png") no-repeat;
-  }
-
-  #open .loc_moudle_2_content_dt_icon {
-    background: url("https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-open.png") no-repeat;
-  }
-
-  .loc_moudle_2_content_text {
-    font-family: "Moderat-Regular";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    display: flex;
-    /* align-items: left; */
-    font-feature-settings: "pnum" on, "lnum" on, "ss02" on;
-    color: rgba(38, 51, 58, 0.8);
-  }
-
-  .loc_moudle_2_content_dl_main_dd {
-    display: none;
-  }
-
-  .loc_moudle_2_content_dl_main_dd_box {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .loc_moudle_2_content_dd_botton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 182px;
-    height: 40px;
-    background: #26333a;
-    box-shadow: 8px 8px 40px rgba(0, 0, 0, 0.1);
-    border-radius: 40px;
-    margin-top: 26px;
-    cursor: pointer;
-  }
-
-  .loc_moudle_2_content_dd_botton_box {
-    font-family: "Moderat-Medium";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.05em;
-    color: #ffffff;
-  }
-
-  @media screen and (max-width: 1440px) {
-    .loc_moudle_2_content_title {
-      margin-top: 60px;
-      font-size: 48px;
-    }
-
-    .loc_moudle_2_content_accordion {
-      margin-top: 32px;
-    }
-
-    .loc_moudle_2_content_dl_main {
-      padding: 32px 22px 32px 32px;
-    }
-  }
-
-  @media screen and (max-width: 1024px) {
-    .loc_moudle_2_content_title {
-      margin-top: 40px;
-      padding: 0 33px;
-      font-size: 32px;
+    .description-page-container-item .description-page-container-item-Imgtext .description-page-container-item-Imgtext-title {
+      font-family: "SupremeLLSub-Medium" !important;
+      font-size: 24px;
+      font-weight: 500;
       line-height: 120%;
+      text-align: left;
+      padding: 0 91px;
+      margin: 30px 0 16px;
+      color: #26333a;
     }
 
-    .loc_moudle_2_content_accordion {
-      margin-top: 24px;
-    }
-
-    .loc_moudle_2_content_dt,
-    .loc_moudle_2_content_text {
+    .description-page-container-item .description-page-container-item-Imgtext .description-page-container-item-Imgtext-content {
+      font-family: "Moderat-Regular" !important;
       font-size: 16px;
+      font-weight: 400;
+      line-height: 120%;
+      text-align: left;
+      padding: 0 91px;
+      margin-bottom: 28px;
+      color: #26333acc;
     }
 
-    .loc_moudle_2_content_dl_main {
-      padding: 20px 21px 32px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .loc_moudle_2_content_title {
-      margin-top: 32px;
-      padding: 0;
+    .description-page-container-item-text-Small {
+      max-width: 344px;
     }
 
-    .loc_moudle_2_content_accordion {
-      margin-top: 32px;
+    .description-page-container-item-rightThree {
+      margin: auto auto auto 144px;
     }
 
-    .loc_moudle_2_content_dl_main {
-      padding: 14px 0 24px;
-    }
-
-    .loc_moudle_2_content_dl .loc_moudle_2_content_dl_main:nth-child(2) {
-      padding: 0;
-    }
-
-    .loc_moudle_2_content_dl_main_dd_box {
-      flex-direction: column-reverse;
-    }
-
-    .loc_moudle_2_content_dd_right img {
-      width: 200px;
-      margin-top: 20px;
-    }
-
-    .loc_moudle_2_content_text {
-      padding: 14px 0;
-      font-size: 14px;
-    }
-  }
-</style>
-<!-- loc_moudle_2 style end -->
-<!-- desk_container module start-->
-<style>
-  .desk_container * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-  }
-
-  .desk_container img {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-  }
-
-  .desk_container p {
-    margin: 0;
-  }
-
-  .desk_container {
-    max-width: 1384px;
-    margin: 48px auto 68px;
-  }
-
-  .desk_container .desk_product .desk_product-title {
-    color: #26333a;
-    text-align: center;
-    font-variant-numeric: lining-nums proportional-nums;
-    font-feature-settings: "ss18" on, "ss04" on, "ss01" on, "liga" off;
-    font-family: "SupremeLLSub-Black";
-    font-size: 52px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 120%;
-    margin-bottom: 40px;
-  }
-
-  .desk_container .desk_product .desk_product-text {
-    margin: 16px auto 40px;
-    color: #26333a;
-    text-align: center;
-    font-variant-numeric: lining-nums tabular-nums;
-    font-feature-settings: "ss04" on, "liga" off;
-    font-family: Moderat-Medium;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 120%;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list {
-    display: flex;
-    position: relative;
-    width: 100%;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title {
-    width: 20%;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title>div {
-    display: flex;
-    align-items: center;
-    height: 96px;
-    border-bottom: 1px solid rgba(38, 51, 58, 0.1);
-    gap: 12px;
-  }
-
-  .table-first-column-img {
-    width: 40px !important;
-    height: 40px !important;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title>div p {
-    display: flex;
-    align-items: center;
-    padding: 5px 0;
-    color: rgba(38, 51, 58, 0.8);
-    font-variant-numeric: lining-nums tabular-nums;
-    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
-    font-family: Moderat-Bold;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 120%;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title .height-zw {
-    height: 420px;
-    border: none;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 104px;
-    background: #fdfcf5;
-    border-bottom: 1px solid rgba(38, 51, 58, 0.1);
-    z-index: 3;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide {
-    position: relative;
-    width: 80%;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide #swiperTable {
-    height: 100%;
-    overflow: clip;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-li {
-    width: 100%;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 104px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: space-between; */
-    gap: 15px;
-    height: 420px;
-    background: #fdfcf5;
-    border-bottom: 1px solid rgba(38, 51, 58, 0.1);
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi .desk_ul-topLi-img {
-    width: 240px;
-    height: 240px;
-    position: relative;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi .desk_ul-topLi-img.isHot {
-    position: relative;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi .desk_ul-topLi-img.isHot::after {
-    content: "HOT";
-    position: absolute;
-    top: 6px;
-    right: 6px;
-    display: flex;
-    padding: 1px 4px;
-    justify-content: center;
-    align-items: center;
-    width: 25px;
-    height: 16px;
-    color: #fff;
-    font-family: Moderat-Bold;
-    font-size: 8px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 14px;
-    border-radius: 22px;
-    background: #004df2;
-    box-sizing: border-box;
-  }
-
-  .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-title {
-    color: #26333a;
-    text-align: center;
-    font-family: "Moderat-Bold";
-    font-variant-numeric: lining-nums proportional-nums;
-    font-feature-settings: "ss01" on, "ss04" on, "ss18" on, "liga" off;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-top: 20px;
-  }
-
-  .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-price {
-    color: #333;
-    font-variant-numeric: lining-nums tabular-nums;
-    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
-    font-family: Moderat-Bold;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-
-  .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-price>div {
-    color: rgba(38, 51, 58, 0.5);
-    text-align: center;
-    font-variant-numeric: lining-nums tabular-nums;
-    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
-    font-family: Moderat-Medium;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 100%;
-    text-decoration: line-through;
-  }
-
-  .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-price>span {
-    color: rgba(38, 51, 58, 0.8);
-    font-variant-numeric: lining-nums tabular-nums;
-    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
-    font-family: Moderat-Medium;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 100%;
-  }
-
-  .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 48px;
-    padding: 18px 40px;
-    color: #fff;
-    font-variant-numeric: lining-nums tabular-nums;
-    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
-    font-family: Moderat-Bold;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 100%;
-    border-radius: 40px;
-    background: #26333a;
-  }
-
-  .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-link svg {
-    margin-right: 6px;
-  }
-
-  .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-link:hover {
-    background-color: #004df2;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi .desk_li-btnbox {
-    width: 100%;
-    margin: 11px 0 28px;
-    text-align: center;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi .desk_li-btnbox .desk_li-btn {
-    display: flex;
-    width: max-content;
-    height: 40px;
-    padding: 16px 24px;
-    margin: 0 auto;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
-    border-radius: 40px;
-    border: 2.5px solid #26333a;
-    color: #26333a;
-    font-family: "Moderat-Bold";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 16px;
-    letter-spacing: 0.7px;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi .desk_li-btnbox .desk_li-btn:hover {
-    background: #004df2;
-    color: #fff;
-    border: 2.5px solid #004df2;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi {
-    width: 100%;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 0;
-    height: 96px;
-    color: #26333a;
-    text-align: center;
-    font-variant-numeric: lining-nums tabular-nums;
-    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
-    font-family: Moderat-Regular;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%;
-    border-bottom: 1px solid rgba(38, 51, 58, 0.1);
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div>div {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div>div span {
-    font-family: Moderat-Regular;
-    font-weight: 400;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div>div span strong {
-    font-family: Moderat-Bold;
-    font-weight: 700;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div p svg {
-    vertical-align: middle;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div img {
-    max-width: 200px;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-pre-box {
-    position: absolute;
-    top: 0px;
-    left: calc(8.5% + 22px);
-    width: 44px;
-    height: 79.5%;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-pre-box .swiperTable-pre {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 179px;
-    width: 44px;
-    height: 44px;
-    margin-top: 75px;
-    background: #ede9e4 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_left.svg") no-repeat center center;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 3;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-pre-box .swiperTable-pre:hover {
-    background: #004df2 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_left_hover.svg") no-repeat center center;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-pre-box .swiperTable-pre.swiper-button-disabled:hover {
-    background: #ede9e4 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_left.svg") no-repeat center center;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-next-box {
-    position: absolute;
-    top: 0px;
-    right: -26px;
-    width: 44px;
-    height: 79.5%;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-next-box .swiperTable-next {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 179px;
-    width: 44px;
-    height: 44px;
-    margin-top: 75px;
-    background: #ede9e4 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_right.svg") no-repeat center center;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 2;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-next-box .swiperTable-next:hover {
-    background: #004df2 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_right_hover.svg") no-repeat center center;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-next-box .swiperTable-next.swiper-button-disabled:hover {
-    background: #ede9e4 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_right.svg") no-repeat center center;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .swiper-button-disabled {
-    opacity: 0.5;
-    cursor: not-allowed !important;
-  }
-
-  .desk_container .desk_product .desk_product-table .desk_product-table-list .c_table_theme {
-    height: 112px !important;
-  }
-
-  @supports not (overflow: clip) {
-
-    html,
-    body {
-      overflow-x: hidden;
-    }
-
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide #swiperTable {
-      overflow: visible;
-      clip-path: inset(0);
-    }
-  }
-
-  @media screen and (max-width: 1440px) {
-    .desk_container {
-      max-width: 1000px;
-      margin: 80px auto;
-    }
-
-    .desk_container .desk_product .desk_product-title {
-      font-size: 42px;
-    }
-
-    .desk_container .desk_product .desk_product-text {
-      font-size: 20px;
-    }
-
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi .desk_ul-topLi-img {
-      width: 180px;
-      height: 180px;
-    }
-
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi,
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title .height-zw {
-      height: 413px;
-    }
-
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-pre-box {
-      left: calc(6% + 22px);
-      height: 82.5%;
-    }
-
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-next-box {
-      right: -35px;
-      height: 82.5%;
-    }
-
-    .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-title {
-      font-size: 20px;
-    }
-
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title>div p,
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div {
-      font-size: 14px;
-    }
-
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div img {
-      max-width: 160px;
-    }
-  }
-
-  @media screen and (max-width: 1024px) {
-    .desk_container {
-      max-width: 768px;
-      margin: 60px auto;
-    }
-
-    .desk_container .desk_product .desk_product-title {
-      font-size: 32px;
+    .description-page-container-item-rightThree .description-page-container-item-rightThree-item {
+      display: flex;
       margin-bottom: 28px;
     }
 
-    .desk_container .desk_product .desk_product-text {
-      margin-bottom: 24px;
-    }
-
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title {
-      width: 12.5%;
-    }
-
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide {
-      width: 87.5%;
-    }
-
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi .desk_ul-topLi-img {
+    .description-page-container-item-rightThree .description-page-container-item-rightThree-item .description-page-container-item-rightThree-item-img {
       width: 140px;
-      height: 140px;
     }
 
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-pre-box {
-      left: calc(5% + 22px);
+    .description-page-container-item-rightThree .description-page-container-item-rightThree-item .description-page-container-item-rightThree-item-img img {
+      width: 100%;
     }
 
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi,
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title .height-zw {
-      top: 92px;
-      height: 328px;
-      padding-bottom: 24px;
+    .description-page-container-item-rightThree .description-page-container-item-rightThree-item .description-page-container-item-rightThree-item-Content {
+      padding-left: 24px;
+      padding-right: 32px;
     }
 
-    .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-title {
-      font-size: 20px;
+    .description-page-container-item-rightThree .description-page-container-item-rightThree-item .description-page-container-item-rightThree-item-Content .description-page-container-item-rightThree-item-title {
+      font-family: "Moderat-Bold" !important;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 120%;
+      text-align: left;
+      margin-top: 48px;
+      color: #26333a;
     }
 
-    .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-price {
-      font-size: 20px;
-    }
-
-    .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-price>span {
+    .description-page-container-item-rightThree .description-page-container-item-rightThree-item .description-page-container-item-rightThree-item-Content .description-page-container-item-rightThree-item-text {
+      font-family: "Moderat-Regular" !important;
       font-size: 14px;
+      font-weight: 400;
+      line-height: 120%;
+      text-align: left;
+      margin-top: 14px;
+      color: #26333a;
+      width: 424px;
     }
 
-    .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-price>div,
-    .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-link {
+    .details_content {
+      width: 500px;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .details_content .details_content_bigTitle {
+      font-family: "SupremeLLSub-Medium" !important;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 120%;
+      text-align: left;
+      margin-top: 30px;
+      color: #26333a;
+    }
+
+    .details_content .details_content_TitleTxet {
+      margin-top: 16px;
+    }
+
+    .details_content .details_content_TitleTxet .details_content_Title_title {
+      font-family: "Moderat-Bold" !important;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 120%;
+      text-align: left;
+      color: #26333a;
+    }
+
+    .details_content .details_content_TitleTxet .details_content_Title_text {
+      font-family: "Moderat-Regular" !important;
       font-size: 14px;
+      font-weight: 400;
+      line-height: 120%;
+      text-align: left;
+      color: #26333acc;
     }
 
-    .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-link svg {
-      width: 20px;
-      height: 20px;
+    @media screen and (max-width: 768px) {
+      .description-page-container-item .description-page-container-item-Imgtext {
+        width: 100%;
+      }
+
+      .description-page-container-item .description-page-container-item-Imgtext .description-page-container-item-Imgtext-title {
+        padding: 0 37.5px;
+      }
+
+      .description-page-container-item .description-page-container-item-Imgtext .description-page-container-item-Imgtext-content {
+        padding: 0 37.5px;
+      }
+
+      .description-page-container-item-rightThree {
+        margin: 22px auto auto auto;
+        padding: 0 14px;
+      }
+
+      .description-page-container-item-rightThree .description-page-container-item-rightThree-item .description-page-container-item-rightThree-item-Content .description-page-container-item-rightThree-item-title {
+        margin-top: 7px;
+      }
+
+      .description-page-container-item-rightThree .description-page-container-item-rightThree-item .description-page-container-item-rightThree-item-Content .description-page-container-item-rightThree-item-text {
+        width: auto;
+        margin-top: 9.5px;
+      }
+
+      .details_content {
+        width: 256px;
+      }
+
+      .details_content .details_content_bigTitle {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+
+      .details_content .details_content_TitleTxet {
+        margin-top: 10px;
+      }
+    }
+  </style>
+  <style>
+    .description-page-container-item-table {
+      max-width: 1981px;
+      margin: auto;
+      /* margin-top: 20px; */
     }
 
-    .desk_container .desk_product .desk_ul-topLi .desk_ul-topLi-link {
+    .description-page-container-item-table table {
+      border-collapse: collapse;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td {
+      color: #26333a;
+      text-align: center;
+      font-feature-settings: "liga" off;
+      font-family: "Moderat-Bold" !important;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px;
+      border: none;
+      word-break: keep-all;
+      height: 40px;
+      /* border-top: 0.7px solid #f1f1f1; */
+      border-bottom: 0.7px solid #f1f1f1;
+      padding: 40px 0;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.bold {
+      font-family: "SupremeLLSub-Bold" !important;
+      font-size: 28px;
+      font-weight: 710;
+      line-height: 33.6px;
+      color: #fff;
+      background: #26333a;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.pc {
+      display: revert;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.mobile {
+      display: none;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr.header {
+      /* background-color: #26333a; */
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.head {
+      color: #fff;
+      font-size: 28px !important;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.second-item {
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 22px;
+      text-align: center;
+      /* color: #004df2; */
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td:nth-child(1) {
+      width: 25%;
+      text-align: left;
+      font-size: 16px;
+      font-weight: 400;
+      color: #26333a;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td:nth-child(2) {
+      width: 25%;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td:nth-child(3) {
+      width: 25%;
+      font-weight: 700;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td:nth-child(4) {
+      width: 25%;
+      font-weight: 700;
+    }
+
+    .scoreBox {
+      /* display: flex; */
+      /* gap: 4px; */
+      /* margin: auto;
+       */
+      margin-right: 4px;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .banner .scoreBox img {
+      width: 14px;
+      height: 14px;
+      margin: auto;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .banner .trueErrorImg {
+      width: 30px;
+      height: 30px;
+      margin: auto;
+    }
+
+    .headerImg {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .headerImg img {
+      width: 40px;
       height: 40px;
     }
 
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div,
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title>div {
-      height: 60px;
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td .headerImg {
+      font-family: "Moderat-Bold" !important;
     }
 
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title>div p,
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div {
-      font-size: 14px;
+    .tableHeaderImg {
+      padding: 0 85px 0 0;
     }
 
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-pre-box .swiperTable-pre,
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-next-box .swiperTable-next {
-      top: 163px;
+    @media screen and (max-width: 1440px) {
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.pc {
+        display: none;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.mobile {
+        display: revert;
+        font-weight: 700;
+        /* font-size: 10px; */
+      }
+
+      .tableHeaderImg {
+        padding: 0 60px 0 0;
+      }
     }
 
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .c_table_theme {
-      height: 84px !important;
+    @media screen and (max-width: 1024px) {
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.pc {
+        display: none;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.mobile {
+        display: revert;
+        font-weight: 700;
+        /* font-size: 8px; */
+      }
+
+      .tableHeaderImg {
+        padding: 0 50px 0 0;
+      }
     }
 
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div img {
-      max-width: 128px;
-    }
-  }
+    @media (max-width: 768px) {
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .banner-m .scoreBox img {
+        width: 14px;
+        height: 14px;
+      }
 
-  @media screen and (max-width: 768px) {
-    .desk_container {
-      padding: 0 20px;
-      margin: 42px 0 48px;
-    }
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .banner-m .trueErrorImg {
+        width: 30px;
+        height: 30px;
+        margin: auto;
+      }
 
-    .table-first-column-img {
-      width: 34px !important;
-      height: 34px !important;
-    }
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content table {
+        -webkit-border-horizontal-spacing: 8px;
+        -webkit-border-vertical-spacing: 8px;
+      }
 
-    .desk_container .desk_product .desk_product-title {
-      text-align: center;
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td,
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.bold {
+        padding: 5px;
+        font-size: 6.78px;
+        line-height: 8.13px;
+        font-weight: 710;
+      }
 
-    .desk_container .desk_product .desk_product-text {
-      max-width: 100%;
-      margin: 12px 0 24px;
-      font-size: 18px;
-      text-align: left;
-    }
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.pc {
+        display: none;
+      }
 
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title {
-      width: 28.65%;
-    }
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.mobile {
+        display: revert;
+        font-weight: 700;
+        font-size: 4.841px;
+      }
 
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide {
-      width: 71.35%;
-      z-index: 99;
-    }
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td {
+        font-size: 4.84px;
+        font-weight: 700;
+        line-height: 4.84px;
+        text-align: center;
+        padding: 9.68px;
+      }
 
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div svg {
-      width: 16px;
-      height: 16px;
-    }
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.head {
+        font-size: 8.714px !important;
+        font-weight: 710 !important;
+      }
 
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul .desk_ul-contextLi>div svg.yes_svg {
-      width: 12px;
-      height: 8px;
-    }
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.head {
+        font-size: 8.71px;
+        font-weight: 710;
+        line-height: 10.46px;
+        text-align: center;
+      }
 
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .desk_ul-topLi,
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .desk_product-table-title .height-zw {
-      height: 328px;
-    }
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.second {
+        font-size: 5.325px;
+        font-weight: 700;
+        text-align: center;
+      }
 
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .chair_buyerguide .swiper-slide2 {
-      width: 168px;
-    }
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.second-item {
+        font-size: 5.33px;
+        font-weight: 700;
+        line-height: 5.33px;
+        text-align: center;
+      }
 
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-pre-box {
-      left: calc(20% + 22px);
-    }
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td:nth-child(1) {
+        font-size: 4.84px;
+        font-weight: 400;
+        line-height: 4.84px;
+        text-align: center;
+      }
 
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-pre-box .swiperTable-pre {
-      z-index: 100;
-    }
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td svg {
+        width: 12px;
+        height: 10px;
+      }
 
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-next-box {
-      right: 0px;
-    }
+      .table-wrapper {
+        width: 100%;
+        /* max-height: 400px; */
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-top: 35px;
+      }
 
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .swiperTable-next-box .swiperTable-next {
-      z-index: 99;
-    }
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .table-wrapper table {
+        width: 200%;
+        border-collapse: collapse;
+      }
 
-    .desk_container .desk_product .desk_product-table .desk_product-table-list .c_table_theme {
-      height: 84px !important;
-    }
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .table-wrapper table td {
+        border: none;
+      }
 
-    .desk_product-table {
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .table-wrapper table th,
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .table-wrapper table td {
+        padding: 23px 0;
+        border: none;
+        white-space: nowrap;
+        font-family: "Moderat-Bold" !important;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 120%;
+        text-align: center;
+        color: #26333a;
+        border-bottom: #26333a1a solid 0.6px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .table-wrapper table th {
+        color: #fdfcf5;
+        background-color: #26333a;
+      }
+
+      /* 固定表头 */
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .table-wrapper thead th {
+        color: #fdfcf5;
+        background-color: #26333a;
+        position: sticky;
+        top: 0;
+        z-index: 3;
+        font-family: "SupremeLLSub-Black" !important;
+        font-size: 16px;
+        font-weight: 710;
+        line-height: 120%;
+        text-align: center;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .table-wrapper tbody td:first-child .headerImg {
+        font-family: " Moderat-Bold" !important;
+        font-size: 14px;
+        font-weight: 700;
+        color: #26333a;
+      }
+
+      /* 固定第一列 */
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .table-wrapper tbody td:first-child,
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .table-wrapper thead th:first-child {
+        position: sticky;
+        left: -1px;
+        z-index: 2;
+        background: #fdfcf5;
+        font-family: "Moderat-Medium" !important;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 12px;
+        text-align: left;
+        color: #26333acc;
+      }
+
+      /* 确保左上角单元格在最上层 */
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .table-wrapper thead th:first-child {
+        z-index: 4;
+      }
+
+      .scoreBox {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+      }
+    }
+  </style>
+  <!-- video相关 -->
+  <style>
+    .description-page-container-item-kittok {
       position: relative;
-      margin-right: -20px;
+      width: 323px;
     }
 
-    .desk_product-table .chair_buying_guide-product-mobile-shadow {
-      display: none;
-      position: absolute;
-      height: 100%;
-      width: calc(100% + 20px);
-      margin-left: -20px;
-    }
-
-    .desk_product-table .chair_buying_guide-product-mobile-shadow .chair_buying_guide-product-mobile-shadow-main {
-      position: sticky;
+    .description-page-container-item .description-page-container-item-iframe {
       width: 100%;
-      height: 328px;
-      top: 92px;
-      background: #fdfcf5;
-      box-shadow: 0px 4px 10px 0px rgba(38, 51, 58, 0.15);
-      z-index: 1;
-    }
-  }
-</style>
-<!-- desk_container module end  -->
-<!-- suitcase_container module start -->
-<style>
-  .suitcase_container * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-  }
-
-  .suitcase_container img {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-  }
-
-  .suitcase_container p {
-    margin: 0;
-  }
-
-  .suitcase_container {
-    max-width: 1384px;
-    margin: 48px auto 68px;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-title {
-    color: #26333a;
-    text-align: center;
-    font-variant-numeric: lining-nums proportional-nums;
-    font-feature-settings: "ss18" on, "ss04" on, "ss01" on, "liga" off;
-    font-family: "SupremeLLSub-Black";
-    font-size: 52px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 120%;
-    margin-bottom: 40px;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-text {
-    margin: 16px auto 40px;
-    color: #26333a;
-    text-align: center;
-    font-variant-numeric: lining-nums tabular-nums;
-    font-feature-settings: "ss04" on, "liga" off;
-    font-family: Moderat-Medium;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 120%;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list {
-    display: flex;
-    position: relative;
-    width: 100%;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title {
-    width: 20%;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title>div {
-    display: flex;
-    align-items: center;
-    height: 96px;
-    border-bottom: 1px solid rgba(38, 51, 58, 0.1);
-    gap: 12px;
-  }
-
-  .table-first-column-img {
-    width: 40px !important;
-    height: 40px !important;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title>div p {
-    display: flex;
-    align-items: center;
-    padding: 5px 0;
-    color: rgba(38, 51, 58, 0.8);
-    font-variant-numeric: lining-nums tabular-nums;
-    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
-    font-family: Moderat-Bold;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 120%;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title .height-zw {
-    height: 420px;
-    border: none;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 104px;
-    background: #fdfcf5;
-    border-bottom: 1px solid rgba(38, 51, 58, 0.1);
-    z-index: 3;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide {
-    position: relative;
-    width: 80%;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide #swiperTable2 {
-    height: 100%;
-    overflow: clip;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-li {
-    width: 100%;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 104px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: space-between; */
-    gap: 15px;
-    height: 420px;
-    background: #fdfcf5;
-    border-bottom: 1px solid rgba(38, 51, 58, 0.1);
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi .suitcase_ul-topLi-img {
-    width: 240px;
-    height: 240px;
-    position: relative;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi .suitcase_ul-topLi-img.isHot {
-    position: relative;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-title {
-    color: #26333a;
-    text-align: center;
-    font-family: "Moderat-Bold";
-    font-variant-numeric: lining-nums proportional-nums;
-    font-feature-settings: "ss01" on, "ss04" on, "ss18" on, "liga" off;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-top: 20px;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-price {
-    color: #333;
-    font-variant-numeric: lining-nums tabular-nums;
-    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
-    font-family: Moderat-Bold;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-price>div {
-    color: rgba(38, 51, 58, 0.5);
-    text-align: center;
-    font-variant-numeric: lining-nums tabular-nums;
-    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
-    font-family: Moderat-Medium;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 100%;
-    text-decoration: line-through;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-price>span {
-    color: rgba(38, 51, 58, 0.8);
-    font-variant-numeric: lining-nums tabular-nums;
-    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
-    font-family: Moderat-Medium;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 100%;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 48px;
-    padding: 18px 40px;
-    color: #fff;
-    font-variant-numeric: lining-nums tabular-nums;
-    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
-    font-family: Moderat-Bold;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 100%;
-    border-radius: 40px;
-    background: #26333a;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-link svg {
-    margin-right: 6px;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-link:hover {
-    background-color: #004df2;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi .suitcase_li-btnbox {
-    width: 100%;
-    margin: 11px 0 28px;
-    text-align: center;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi .suitcase_li-btnbox .suitcase_li-btn {
-    display: flex;
-    width: max-content;
-    height: 40px;
-    padding: 16px 24px;
-    margin: 0 auto;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
-    border-radius: 40px;
-    border: 2.5px solid #26333a;
-    color: #26333a;
-    font-family: "Moderat-Bold";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 16px;
-    letter-spacing: 0.7px;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi .suitcase_li-btnbox .suitcase_li-btn:hover {
-    background: #004df2;
-    color: #fff;
-    border: 2.5px solid #004df2;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi {
-    width: 100%;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 0;
-    height: 96px;
-    color: #26333a;
-    text-align: center;
-    font-variant-numeric: lining-nums tabular-nums;
-    font-feature-settings: "ss03" on, "ss04" on, "liga" off;
-    font-family: Moderat-Regular;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%;
-    border-bottom: 1px solid rgba(38, 51, 58, 0.1);
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div>div {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div>div span {
-    font-family: Moderat-Regular;
-    font-weight: 400;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div>div span strong {
-    font-family: Moderat-Bold;
-    font-weight: 700;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div p svg {
-    vertical-align: middle;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div img {
-    max-width: 200px;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box2 {
-    position: absolute;
-    top: 0px;
-    left: calc(8.5% + 22px);
-    width: 44px;
-    height: 79.5%;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box2 .swiperTable-pre2 {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 179px;
-    width: 44px;
-    height: 44px;
-    margin-top: 75px;
-    background: #ede9e4 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_left.svg") no-repeat center center;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 3;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box2 .swiperTable-pre2:hover {
-    background: #004df2 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_left_hover.svg") no-repeat center center;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box2 .swiperTable-pre2.swiper-button-disabled:hover {
-    background: #ede9e4 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_left.svg") no-repeat center center;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box2 {
-    position: absolute;
-    top: 0px;
-    right: -26px;
-    width: 44px;
-    height: 79.5%;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box2 .swiperTable-next2 {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 179px;
-    width: 44px;
-    height: 44px;
-    margin-top: 75px;
-    background: #ede9e4 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_right.svg") no-repeat center center;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 2;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box2 .swiperTable-next2:hover {
-    background: #004df2 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_right_hover.svg") no-repeat center center;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box2 .swiperTable-next2.swiper-button-disabled:hover {
-    background: #ede9e4 url("https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/arrow_right.svg") no-repeat center center;
-  }
-
-  .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiper-button-disabled {
-    opacity: 0.5;
-    cursor: not-allowed !important;
-  }
-
-  @supports not (overflow: clip) {
-
-    html,
-    body {
-      overflow-x: hidden;
+      height: 620px;
     }
 
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide #swiperTable2 {
-      overflow: visible;
-      clip-path: inset(0);
-    }
-  }
-
-  @media screen and (max-width: 1440px) {
-    .suitcase_container {
-      max-width: 1000px;
-      margin: 80px auto;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-title {
-      font-size: 42px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-text {
-      font-size: 20px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi .suitcase_ul-topLi-img {
-      width: 180px;
-      height: 180px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi,
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title .height-zw {
-      height: 413px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box2 {
-      left: calc(6% + 22px);
-      height: 82.5%;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box2 {
-      right: -35px;
-      height: 82.5%;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-title {
-      font-size: 20px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title>div p,
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div {
-      font-size: 14px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div img {
-      max-width: 160px;
-    }
-  }
-
-  @media screen and (max-width: 1024px) {
-    .suitcase_container {
-      max-width: 768px;
-      margin: 60px auto;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-title {
-      font-size: 32px;
-      margin-bottom: 28px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-text {
-      margin-bottom: 24px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title {
-      width: 12.5%;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide {
-      width: 87.5%;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi .suitcase_ul-topLi-img {
-      width: 140px;
-      height: 140px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box2 {
-      left: calc(5% + 22px);
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi,
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title .height-zw {
-      top: 92px;
-      height: 328px;
-      padding-bottom: 24px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-title {
-      font-size: 20px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-price {
-      font-size: 20px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-price>span {
-      font-size: 14px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-price>div,
-    .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-link {
-      font-size: 14px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-link svg {
-      width: 20px;
-      height: 20px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_ul-topLi .suitcase_ul-topLi-link {
-      height: 40px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div,
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title>div {
-      height: 60px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title>div p,
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div {
-      font-size: 14px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box2 .swiperTable-pre2,
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box2 .swiperTable-next2 {
-      top: 163px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .c_table_theme {
-      height: 84px !important;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div img {
-      max-width: 128px;
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    .suitcase_container {
-      padding: 0 20px;
-      margin: 42px 0 48px;
-    }
-
-    .table-first-column-img {
-      width: 34px !important;
-      height: 34px !important;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-title {
-      text-align: center;
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-text {
-      max-width: 100%;
-      margin: 12px 0 24px;
-      font-size: 18px;
-      text-align: left;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title {
-      width: 28.65%;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide {
-      width: 71.35%;
-      z-index: 99;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div svg {
-      width: 16px;
-      height: 16px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul .suitcase_ul-contextLi>div svg.yes_svg {
-      width: 12px;
-      height: 8px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .suitcase_ul-topLi,
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_product-table-title .height-zw {
-      height: 328px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .suitcase_buyerguide .swiper-slide2 {
-      width: 168px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box2 {
-      left: calc(20% + 22px);
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-pre-box2 .swiperTable-pre2 {
-      z-index: 100;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box2 {
-      right: 0px;
-    }
-
-    .suitcase_container .suitcase_product .suitcase_product-table .suitcase_product-table-list .swiperTable-next-box2 .swiperTable-next2 {
-      z-index: 99;
-    }
-
-    .suitcase_product-table {
-      position: relative;
-      margin-right: -20px;
-    }
-
-    .suitcase_product-table .suitcase_buying_guide-product-mobile-shadow {
-      display: none;
+    .description-page-container-item .description-page-container-item-kittok-mask {
       position: absolute;
-      height: 100%;
-      width: calc(100% + 20px);
-      margin-left: -20px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      border-radius: 12px;
     }
 
-    .suitcase_product-table .suitcase_buying_guide-product-mobile-shadow .suitcase_buying_guide-product-mobile-shadow-main {
-      position: sticky;
-      width: 100%;
-      height: 328px;
-      top: 92px;
-      background: #fdfcf5;
-      box-shadow: 0px 4px 10px 0px rgba(38, 51, 58, 0.15);
-      z-index: 1;
+    .description-page-container-item .description-page-container-item-kittok-mask img {
+      width: 323px;
     }
-  }
-</style>
-<!-- suitcase_container module end -->
-<div class="loc_container">
-  <div class="loc_container_nav">
-    <div class="loc_container_nav_icon">
-      <img class="lazyload"
-        data-src="https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-nav-icon.png" alt="" />
-    </div>
-    <!-- loc_container_nav_menu start -->
-    <div class="loc_container_nav_menu">
-      <div class="loc_container_nav_menu_item">
-        <a href="loc_nav_item_1">What’s a standing desk?</a>
-      </div>
-      <div class="loc_container_nav_menu_item">
-        <a href="loc_nav_item_2">Why do you need a standing desk?</a>
-      </div>
-      <div class="loc_container_nav_menu_item">
-        <a href="loc_nav_item_3">How to select a standing desk?</a>
-      </div>
-      <div class="loc_container_nav_menu_item">
-        <a href="loc_nav_item_4">FlexiSpot standing desk features</a>
-      </div>
-      <div class="loc_container_nav_menu_item">
-        <a href="loc_nav_item_9">Discover ideal workspaces for any budget</a>
-      </div>
-      <div class="loc_container_nav_menu_item">
-        <a href="loc_nav_item_5">Which FlexiDesk is right for you？</a>
-      </div>
-      <div class="loc_container_nav_menu_item">
-        <a href="loc_nav_item_8">Why choose FlexiSpot over others?</a>
-      </div>
-      <div class="loc_container_nav_menu_item">
-        <a href="loc_nav_item_6">How to use a standing desk properly</a>
-      </div>
-      <div class="loc_container_nav_menu_item">
-        <a href="loc_nav_item_7">30-Day free return policy</a>
-      </div>
-    </div>
-    <!-- loc_container_nav_menu end -->
-  </div>
-  <div class="loc_content" id="loc_nav_item_1">
-    <!-- loc_banner start -->
-    <div class="loc_banner">
-      <div class="loc_banner_left">
-        <div class="loc_title loc_banner_left_title">
-          FlexiSpot Luggage Buyer's Guide
-        </div>
-        <div class="loc_text loc_banner_left_text">
-          Discover the best luggage for all your travel needs, blending style and functionality. With smooth-rolling
-          wheels and a sturdy telescopic handle, navigating through airports is a breeze. Travel with confidence,
-          knowing you have the ideal companion for every adventure!
-        </div>
-
-        <div class="hidden_dom" id="loc_nav_item_2"></div>
-      </div>
-      <div class="loc_banner_right">
+  </style>
+</div>
+<div>
+  <div id="description" class="description-page">
+    <!-- <div class="description-page-container">
+      <div class="banner">
         <img class="lazyload"
-          data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-banner.png"
-          width="610" height="578" alt="" />
+          data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7M-20240801-pc.jpg" />
+      </div>
+      <div class="banner-m">
+        <img class="lazyload"
+          src="https://staticprod.site.flexispot.com/flexispot/catalog/product/placeholder/default/p.jpg"
+          data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7M-20240801-app.jpg" />
+      </div> -->
+    <!-- module-1 -->
+    <div class="description-page-container-item">
+      <div class="description-page-container-item-text description-page-container-item-text-left">
+        <div class="description-page-container-item-text-smalltitle">
+          Upgraded Backrest
+        </div>
+        <div class="description-page-container-item-text-title">
+          Adjust the Entire Backrest Height
+        </div>
+        <div class="description-page-container-item-text-subtitle">
+          5 Levels of Adjustment, 2.36'' Total Range
+        </div>
+        <div class="description-page-container-item-text-subtitle">
+          Our chair's backrest can be adjusted to five different levels,
+          ensuring comfort and support for users of varying heights.
+        </div>
+      </div>
+      <div class="description-page-container-item-img flex-end">
+        <img class="lazyload"
+          data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/CM7-20240729-img1.png" />
       </div>
     </div>
-    <!-- loc_banner end -->
+    <!-- module-2 -->
+    <div class="description-page-container-item description-page-container-item-reverse">
+      <div class="description-page-container-item-img">
+        <img class="lazyload"
+          data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/CM7-20240729-img2-New.png" />
+      </div>
+      <div class="description-page-container-item-text description-page-container-item-text-right">
+        <div class="description-page-container-item-text-smalltitle">
+          Softer Than Regular Foam Cushions
+        </div>
+        <div class="description-page-container-item-text-title">
+          Enhanced Comfort with 0.2" Latex Seat Cushion
+        </div>
 
-    <!-- loc_moudle_1 start -->
-    <div class="loc_moudle_1">
-      <div class="loc_moudle_1_content">
-        <div class="loc_title loc_moudle_1_content_title">
-          What to consider when choosing a luggage<span class="loc_mark">?</span>
+        <div class="description-page-container-item-text-subtitle">
+          Latex seat cushions offer firm, springy comfort, mold-resistant,
+          hypoallergenic, and durable compared to traditional foam.
         </div>
-        <div class="loc_text loc_moudle_1_content_text">
-          Start by evaluating your travel requirements to determine the appropriate suitcase sizes size. When selecting
-          your suitcase, consider the duration of your trip and the type of clothing you'll need. For short getaways, a
-          smaller suitcase might suffice, allowing you to pack efficiently. However, for longer journeys, you'll likely
-          need a larger suitcase to accommodate extra outfits, shoes, and personal items.
+      </div>
+    </div>
+    <!-- module-3 -->
+    <div class="description-page-container-item">
+      <div class="description-page-container-item-text description-page-container-item-text-left">
+        <div class="description-page-container-item-text-smalltitle">
+          Upgraded Backrest
         </div>
-        <div class="suitcase_container">
-          <div class="suitcase_product">
-            <div class="suitcase_product-title">
-              Which Ergonomic Chair is right for you?
-            </div>
-            <div class="suitcase_product-table">
-              <div class="suitcase_buying_guide-product-mobile-shadow">
-                <div class="suitcase_buying_guide-product-mobile-shadow-main"></div>
-              </div>
-              <ul class="suitcase_product-table-list">
-                <li class="suitcase_product-table-title">
-                  <div class="height-zw"></div>
-                  <div>
-                    <p>Size</p>
-                  </div>
-                  <div>
-                    <p>Length of Trip</p>
-                  </div>
-                  <div>
-                    <p>Capacity</p>
-                  </div>
-                  <div>
-                    <p>Short Getaways</p>
-                  </div>
-                  <div>
-                    <p>Longer Journeys</p>
-                  </div>
-                </li>
-                <div class="swiperTable-pre-box2">
-                  <div class="swiperTable-pre2"></div>
-                </div>
-                <li class="suitcase_buyerguide">
-                  <div class="swiper2" id="swiperTable2">
-                    <div class="swiper-wrapper2"></div>
-                  </div>
-                </li>
-                <div class="swiperTable-next-box2">
-                  <div class="swiperTable-next2"></div>
-                </div>
-              </ul>
+        <div class="description-page-container-item-text-title">
+          Adjust the Entire Backrest Height
+        </div>
+        <div class="description-page-container-item-text-subtitle">
+          5 Levels of Adjustment, 2.36'' Total Range
+        </div>
+        <div class="description-page-container-item-text-subtitle">
+          Our chair's backrest can be adjusted to five different levels,
+          ensuring comfort and support for users of varying heights.
+        </div>
+      </div>
+      <div class="description-page-container-item-img flex-end">
+        <img class="lazyload"
+          data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/CM7-20240729-img1.png" />
+      </div>
+    </div>
+    <!-- module-4 -->
+    <div class="description-page-container-item description-page-container-item-reverse">
+      <div class="description-page-container-item-img">
+        <img class="lazyload"
+          data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/CM7-20240729-img2-New.png" />
+      </div>
+      <div class="description-page-container-item-text description-page-container-item-text-right">
+        <div class="description-page-container-item-text-smalltitle">
+          Softer Than Regular Foam Cushions
+        </div>
+        <div class="description-page-container-item-text-title">
+          Enhanced Comfort with 0.2" Latex Seat Cushion
+        </div>
+
+        <div class="description-page-container-item-text-subtitle">
+          Latex seat cushions offer firm, springy comfort, mold-resistant,
+          hypoallergenic, and durable compared to traditional foam.
+        </div>
+      </div>
+    </div>
+    <!-- module-5 -->
+    <div class="description-page-container-item">
+      <div class="description-page-container-item-text description-page-container-item-text-left">
+        <div class="description-page-container-item-text-smalltitle">
+          Upgraded Backrest
+        </div>
+        <div class="description-page-container-item-text-title">
+          Adjust the Entire Backrest Height
+        </div>
+        <div class="description-page-container-item-text-subtitle">
+          5 Levels of Adjustment, 2.36'' Total Range
+        </div>
+        <div class="description-page-container-item-text-subtitle">
+          Our chair's backrest can be adjusted to five different levels,
+          ensuring comfort and support for users of varying heights.
+        </div>
+      </div>
+      <div class="description-page-container-item-img flex-end">
+        <img class="lazyload"
+          data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/CM7-20240729-img1.png" />
+      </div>
+    </div>
+    <!-- module-6 -->
+    <div class="description-page-container-item description-page-container-item-reverse">
+      <div class="description-page-container-item-img">
+        <img class="lazyload"
+          data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/CM7-20240729-img2-New.png" />
+      </div>
+      <div class="description-page-container-item-text description-page-container-item-text-right">
+        <div class="description-page-container-item-text-smalltitle">
+          Softer Than Regular Foam Cushions
+        </div>
+        <div class="description-page-container-item-text-title">
+          Enhanced Comfort with 0.2" Latex Seat Cushion
+        </div>
+
+        <div class="description-page-container-item-text-subtitle">
+          Latex seat cushions offer firm, springy comfort, mold-resistant,
+          hypoallergenic, and durable compared to traditional foam.
+        </div>
+      </div>
+    </div>
+
+    <!-- moudele-7 -->
+    <div class="description-page-container-item mb0">
+      <div class="description-page-container-item-bigtitle">
+        For more detailed information, DO NOT hesitate to
+        visit FlexiSpot Spot Cleaner via the TikTok App.
+      </div>
+    </div>
+
+    <!-- module-8 -->
+    <div class="description-page-container-item">
+      <div class="description-page-container-item-kittok">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@becca.vera/video/7374846453870529834"
+          data-video-id="7374846453870529834" style="max-width: 605px;min-width: 325px;">
+          <section>
+             <a target="_blank" title="@becca.vera"
+              href="https://www.tiktok.com/@becca.vera?refer=embed">@becca.vera</a> La ame demasiado, de las mejores
+            cosas que pude aver encontrado aqui en tiktok @FlexiSpot tiene esta maquinita a mitad de lo que sale en
+            otros lugares . Como mamá te la recomiendo , la vas a amar . <a title="flexispot" target="_blank"
+              href="https://www.tiktok.com/tag/flexispot?refer=embed">#flexispot</a> <a title="cleaning" target="_blank"
+              href="https://www.tiktok.com/tag/cleaning?refer=embed">#cleaning</a> <a title="sofacleaning"
+              target="_blank" href="https://www.tiktok.com/tag/sofacleaning?refer=embed">#sofacleaning</a> <a
+              title="cleanmachine" target="_blank"
+              href="https://www.tiktok.com/tag/cleanmachine?refer=embed">#cleanmachine</a> <a title="sillones"
+              target="_blank" href="https://www.tiktok.com/tag/sillones?refer=embed">#sillones</a> <a title="limpieza"
+              target="_blank" href="https://www.tiktok.com/tag/limpieza?refer=embed">#limpieza</a> <a title="lavando"
+              target="_blank" href="https://www.tiktok.com/tag/lavando?refer=embed">#lavando</a> <a
+              title="housecleaning" target="_blank"
+              href="https://www.tiktok.com/tag/housecleaning?refer=embed">#housecleaning</a> <a title="hogar"
+              target="_blank" href="https://www.tiktok.com/tag/hogar?refer=embed">#hogar</a> <a title="sofas"
+              target="_blank" href="https://www.tiktok.com/tag/sofas?refer=embed">#sofas</a> <a title="tiktok"
+              target="_blank" href="https://www.tiktok.com/tag/tiktok?refer=embed">#tiktok</a> <a title="momsoftiktok"
+              target="_blank" href="https://www.tiktok.com/tag/momsoftiktok?refer=embed">#momsoftiktok</a> <a
+              title="carcleaning" target="_blank"
+              href="https://www.tiktok.com/tag/carcleaning?refer=embed">#carcleaning</a> <a
+              title="portablecarpetcleaner" target="_blank"
+              href="https://www.tiktok.com/tag/portablecarpetcleaner?refer=embed">#portablecarpetcleaner</a> <a
+              title="carpetcleaning" target="_blank"
+              href="https://www.tiktok.com/tag/carpetcleaning?refer=embed">#carpetcleaning</a> <a target="_blank"
+              title="♬ sonido original - SONIDOS LARGOS"
+              href="https://www.tiktok.com/music/sonido-original-7345653928603552517?refer=embed">♬ sonido original -
+              SONIDOS LARGOS</a> 
+            </section>
+        </blockquote>
+        <script async src="https://www.tiktok.com/embed.js"></script>
+
+        <div class="description-page-container-item-kittok-mask">
+          <div class="description-page-container-item" onclick="displayFrame(this)">
+            <img class="lazyload cover-image"
+              src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/dust-collector-20241211-video-1.png" width="1384"
+              height="620" />
+            <div class="custom-detail-video-mask">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M32.0002 9.33331C44.5189 9.33331 54.6669 19.4813 54.6669 32C54.6669 44.5187 44.5189 54.6667 32.0002 54.6667C19.4815 54.6667 9.3335 44.5187 9.3335 32C9.3335 19.4813 19.4815 9.33331 32.0002 9.33331ZM28.8402 24C27.6402 24 26.6669 24.9733 26.6669 26.1733V37.6107C26.6671 38.0007 26.7723 38.3834 26.9714 38.7188C27.1705 39.0541 27.4561 39.3297 27.7984 39.5166C28.1406 39.7036 28.5269 39.795 28.9166 39.7813C29.3064 39.7676 29.6852 39.6492 30.0135 39.4387L39.0015 33.664C39.309 33.4664 39.5617 33.1943 39.7362 32.8731C39.9107 32.5519 40.0013 32.1918 39.9997 31.8263C39.9981 31.4607 39.9043 31.1015 39.7271 30.7818C39.5498 30.4621 39.2947 30.1923 38.9855 29.9973L29.9975 24.3347C29.6506 24.1161 29.249 24 28.8389 24H28.8402Z"
+                  fill="white" />
+              </svg>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <!-- loc_moudle_1 end -->
-  </div>
-
-  <!-- loc_parallax start -->
-  <div class="loc_parallax">
-    <div class="parallax">
-      <div id="parallax" class="parallax-background lazyloaded" role="img" aria-label="" sizes="1903px">
-        <div id="loc_nav_item_3"></div>
-      </div>
-    </div>
-  </div>
-  <!-- loc_parallax end -->
-
-  <div class="loc_content">
-    <!-- loc_moudle 5 start -->
-    <div class="loc_moudle_5">
-      <div class="loc_moudle_5_content">
-        <div class="loc_title loc_moudle_5_content_title">
-          In addition to size, there are other performance aspects you need to prioritize.
-        </div>
-        <div class="loc_moudle_5_content_slick"></div>
-      </div>
-    </div>
-    <!-- loc_moudle 5 end -->
-
-    <!-- loc_moudle 2 start -->
-    <div class="loc_moudle_2">
-      <div class="loc_moudle_2_content">
-        <div class="hidden_dom" id="loc_nav_item_2"></div>
-        <div class="loc_title loc_moudle_2_content_title">
-          Why Choose FlexiSpot Walking Pad？
-        </div>
-      </div>
-      <div class="table-wrapper">
-        <div class="table-scroll">
-          <table border="0" align="center" cellpadding="0" cellspacing="20">
-            <!-- 表头 -->
-            <thead>
-              <tr>
-                <th></th>
-                <th>FlexiSpot Walking Pad WPM03</th>
-                <th>Other Brand</th>
-              </tr>
-            </thead>
-            <!-- 表格内容 -->
-            <tbody>
-              <tr>
-                <td></td>
-                <td>
-                  <img
-                    src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/buyerguide-Pad-img1.png" />
-                </td>
-                <td>
-                  <img
-                    src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/buyerguide-Pad-img2.png" />
-                </td>
-              </tr>
-              <tr>
-                <td>Warranty</td>
-                <td style="color: #004df2">
-                  2 Years<img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/jiangbei.png" />
-                </td>
-                <td>3 Months</td>
-              </tr>
-              <tr>
-                <td>Running Belt Width</td>
-                <td style="color: #004df2">
-                  16.9"<img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/jiangbei.png" />
-                </td>
-                <td>15"</td>
-              </tr>
-              <tr>
-                <td>Running Belt Layer</td>
-                <td style="color: #004df2">
-                  Multi-layer<img
-                    src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/jiangbei.png" />
-                </td>
-                <td>Single-layer</td>
-              </tr>
-              <tr>
-                <td>Shock Absorption</td>
-                <td style="color: #004df2">
-                  8 Shock-absorbing Pads<img
-                    src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/jiangbei.png" />
-                </td>
-                <td>2 Shock-absorbing Pads</td>
-              </tr>
-              <tr>
-                <td>Speed Range</td>
-                <td style="color: #004df2">
-                  0.6mph-4mph<img
-                    src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/jiangbei.png" />
-                </td>
-                <td>0.6-3.7mph</td>
-              </tr>
-              <tr>
-                <td>With Incline</td>
-                <td style="color: #004df2">
-                  Auto Incline<img
-                    src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/jiangbei.png" />
-                </td>
-                <td>/</td>
-              </tr>
-              <tr>
-                <td>Maximum Horsepower</td>
-                <td style="color: #004df2">
-                  2.25Hp<img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/jiangbei.png" />
-                </td>
-                <td>0.65HP</td>
-              </tr>
-              <tr>
-                <td>Maximum Weight Recommendation</td>
-                <td style="color: #004df2">
-                  265lbs<img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/jiangbei.png" />
-                </td>
-                <td>198lbs</td>
-              </tr>
-              <tr>
-                <td>With Magnetic Remote Control Storage Slot</td>
-                <td style="color: #004df2">√</td>
-                <td>×</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-    <!-- loc_moudle 2 end -->
-
-    <!-- loc_moudle 3 start -->
-    <div class="loc_moudle_3">
-      <div class="loc_moudle_3_content">
-        <div class="loc_title loc_moudle_3_content_title">
-          FlexiSpot Luggage Quality Tests
-        </div>
-        <div class="loc_moudle_3_content_tab">
-          <div class="loc_moudle_3_content_tab_item loc_tab_active">Drop Test</div>
-          <div class="loc_moudle_3_content_tab_item">Mileage Test</div>
-          <div class="loc_moudle_3_content_tab_item">Vibration Test</div>
-          <div class="loc_moudle_3_content_tab_item">Tumble Test</div>
-        </div>
-      </div>
-      <div class="hidden_dom" id="loc_nav_item_9"></div>
-    </div>
-    <!-- loc_moudle 3 end -->
-
-    <!-- loc_moudle 8 start -->
-    <!-- <div class="loc_moudle_8">
-      <div class="loc_moudle_8_content">
-        <div class="loc_title loc_moudle_8_content_title">
-          FlexiSpot E7 Family<br /><span class="loc_title-s">Find the perfect workspace</span>
-        </div>
-        <div class="loc_moudle_8_content_flex"></div>
-      </div>
-    </div>
-    <div class="hidden_dom" id="loc_nav_item_5"></div> -->
-    <!-- loc_moudle 8 end -->
-
-    <!-- desk_container module start -->
-    <div class="desk_container">
-      <div class="desk_product">
-        <div class="desk_product-title">
-          Which luggage is right for you ?
-        </div>
-        <div class="desk_product-table">
-          <div class="chair_buying_guide-product-mobile-shadow">
-            <div class="chair_buying_guide-product-mobile-shadow-main"></div>
-          </div>
-          <ul class="desk_product-table-list">
-            <li class="desk_product-table-title">
-              <div class="height-zw"></div>
-              <div>
-                <p>Price</p>
-              </div>
-              <div>
-                <p>Color Option</p>
-              </div>
-              <div>
-                <p>Carry-On</p>
-              </div>
-              <div>
-                <p>Features / Cup Holder</p>
-              </div>
-              <div>
-                <p>Features / Laptop <br />
-                  Compartment</p>
-              </div>
-              <div>
-                <p>Length of Trip</p>
-              </div>
-              <div>
-                <p>Capacity</p>
-              </div>
-              <div>
-                <p>Dimensions</p>
-              </div>
-              <div>
-                <p>Weight</p>
-              </div>
-              <div>
-                <p>Material</p>
-              </div>
-              <div>
-                <p>Warranty</p>
-              </div>
-            </li>
-            <div class="swiperTable-pre-box">
-              <div class="swiperTable-pre"></div>
+          <!-- <div class="banner-m description-page-container-item" onclick="displayFrame(this)">
+            <img class="lazyload cover-image"
+              data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/dust-collector-20241211-video-1.png"
+              width="670" height="670" />
+            <div class="custom-detail-video-mask">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M32.0002 9.33331C44.5189 9.33331 54.6669 19.4813 54.6669 32C54.6669 44.5187 44.5189 54.6667 32.0002 54.6667C19.4815 54.6667 9.3335 44.5187 9.3335 32C9.3335 19.4813 19.4815 9.33331 32.0002 9.33331ZM28.8402 24C27.6402 24 26.6669 24.9733 26.6669 26.1733V37.6107C26.6671 38.0007 26.7723 38.3834 26.9714 38.7188C27.1705 39.0541 27.4561 39.3297 27.7984 39.5166C28.1406 39.7036 28.5269 39.795 28.9166 39.7813C29.3064 39.7676 29.6852 39.6492 30.0135 39.4387L39.0015 33.664C39.309 33.4664 39.5617 33.1943 39.7362 32.8731C39.9107 32.5519 40.0013 32.1918 39.9997 31.8263C39.9981 31.4607 39.9043 31.1015 39.7271 30.7818C39.5498 30.4621 39.2947 30.1923 38.9855 29.9973L29.9975 24.3347C29.6506 24.1161 29.249 24 28.8389 24H28.8402Z"
+                  fill="white" />
+              </svg>
             </div>
-            <li class="chair_buyerguide">
-              <div class="swiper" id="swiperTable">
-                <div class="swiper-wrapper"></div>
-              </div>
-            </li>
-            <div class="swiperTable-next-box">
-              <div class="swiperTable-next"></div>
-            </div>
-          </ul>
+          </div> -->
         </div>
       </div>
-    </div>
-    <!-- desk_container module end  -->
 
-    <!-- loc_moudle 9 start -->
-    <div class="loc_moudle_9">
-      <div class="loc_moudle_9_content">
-        <img class="lazyload home-active-l"
-          data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-bottom-pc.png"
-          alt="" />
-        <img class="lazyload home-active-m"
-          data-src="https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-footer-bg-m.png" alt="" />
-      </div>
     </div>
-    <!-- loc_moudle 9 start -->
+
   </div>
 </div>
 <script>
-  function loadScript(url, callback) {
-    document.getElementById("") && document.getElementById("").remove()
-    var script = document.createElement("script")
-    script.type = "text/javascript"
-    script.async = "async"
-    script.src = url
-    script.id = ""
-    var head = document.head || document.getElementsByTagName("head")[0]
-    head.appendChild(script)
-    if (script.readyState) {
-      script.onreadystatechange = function () {
-        if (script.readyState == "complete" || script.readyState == "loaded") {
-          script.onreadystatechange = null
-          callback()
-        }
-      }
-    } else {
-      script.onload = function () {
-        callback()
-      }
-    }
+  function displayFrame(element) {
+    // 找到当前元素的父级元素并隐藏
+    element.style.display = "none"
+    var iframeContainer = document.querySelector(".description-page-container-item-iframe-box")
+    iframeContainer.style.display = "block"
+    var iframe = document.getElementById("youtubePlayer")
+    iframe.src = iframe.src + "&amp;autoplay=1&mute=1"
   }
-  loadScript(
-    "https://staticprod.site.flexispot.com/dev/trantor/attachments/jquery-3.6.0.min.js",
-    function () {
-      function isMobile() {
-        return window.navigator.userAgent.indexOf("Mobile") >= 0
-      }
 
-      // loc_container_nav_menu js start
-      $(".loc_container_nav_icon").click(function (e) {
-        e.preventDefault()
-        e.stopPropagation()
-        $(".loc_container_nav_menu").show()
-      })
-      $(".loc_container_nav_menu_item").click(function (e) {
-        e.preventDefault()
-        e.stopPropagation()
-        window.location.href =
-          window.location.href.split("#")[0] +
-          "#" +
-          $(this).find("a").attr("href")
-        $(".loc_container_nav_menu").hide()
-      })
-      // loc_container_nav_menu js end
-
-      $("body").on("click", function (e) {
-        $(".loc_container_nav_menu").hide()
-        $(".loc_moudle_4_comparison_item_li_sku_hover").hide()
-      })
-
-      // loc_moudle_3 js start
-      let moudle_3_tab_data = [
-        {
-          text: `To assess the durability of the outer shell, our luggage completed 1,500 drop tests. Each test simulates impacts that occur during travel, ensuring the hard shell luggage can withstand rough handling and protect your belongings. The results confirm that our outer shell remains intact, demonstrating its strength and resistance to cracks.`,
-          img: [
-            "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-btn-img1.png",
-          ],
-        },
-        {
-          text: `To evaluate the performance of our luggage's wheels, we subjected them to a rigorous mileage test, carrying a weight of 44 lbs at a speed of 3 mph. The four wheels ran for 4 hours, covering 11.9 miles, with wear not exceeding 2 mm, showcasing their exceptional durability. Trust our luggage for a smooth journey, designed to withstand the demands of your travels while providing effortless movement.`,
-          img: [
-            "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-btn-img2.png",
-          ],
-        },
-        {
-          text: `Evaluating the pull handle, our luggage underwent 1,500 vibration tests to verify the handle's performance and durability. Each test simulates real-world conditions, ensuring the handle can withstand repeated stress without compromising functionality. The results show that our handle maintains its integrity and responsiveness, providing you with a reliable and smooth travel experience.`,
-          img: [
-            "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-btn-img3.png",
-          ],
-        },
-        {
-          text: `Our checked luggage also underwent rigorous impact resistance testing, completing 25 tumble tests to simulate the rough conditions it might endure during your travels. Each test confirmed that our luggage can withstand repeated stress without compromising its structural integrity, ensuring your belongings stay safe and secure no matter where you go.`,
-          img: [
-            "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-btn-img4.png",
-          ],
-        },
-      ]
-
-      moudle_3_tab_data.forEach((item, index) => {
-        let active = index == 0 ? "loc_tab_content_active" : ""
-        let img_html = ""
-        item.img.forEach((img) => {
-          img_html += `
-                    <img class="lazyload" data-src="${img}" alt="">
-                `
-        })
-        $(".loc_moudle_3_content").append(`
-                <div class="loc_moudle_3_content_tab_content_box ${active}">
-                    <div class="loc_moudle_3_content_tab_content">
-                        <div class="loc_moudle_3_content_tab_content_text">
-                        ${item.text}
-                        </div>
-                        <div class="loc_moudle_3_content_tab_content_img">
-                            ${img_html}
-                        </div>
-                    </div>
-                </div>
-            `)
-      })
-
-      let tab_old_num = 0
-      $(".loc_moudle_3_content_tab_item").map((index, item) => {
-        $(item).click(function () {
-          $(".loc_moudle_3_content_tab_item")
-            .eq(tab_old_num)
-            .removeClass("loc_tab_active")
-          $(".loc_moudle_3_content_tab_content_box")
-            .eq(tab_old_num)
-            .removeClass("loc_tab_content_active")
-          tab_old_num = index
-          $(item).addClass("loc_tab_active")
-          $(".loc_moudle_3_content_tab_content_box")
-            .eq(index)
-            .addClass("loc_tab_content_active")
-        })
-      })
-      // loc_moudle_3 js end
-      loadScript(
-        "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/swiper@8.4.7-min-us.js",
-        function () {
-          function isMobile() {
-            return window.innerWidth <= 768
-          }
-
-          // desk_container js start
-          const swiperTable = document.querySelector(
-            "#swiperTable .swiper-wrapper"
-          ),
-            swiperTableList = [
-              {
-                imgUrl:
-                  "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-product-img1.png",
-                productTitle: "Carry-On Pro",
-                // productSku: "C7 Pro Max",
-                productSku: "E7 New", //dev
-                href: "https://www.flexispot.com/flexispot-premium-ergo-office-chair-c7-pro-max",
-                // productPrice: "???",
-                productPrice: "$249.99",
-                ColorOption: `Beige/Black`,
-                CarryOn: `<span style="color: #004DF2;">√</span>`,
-                CupHolder: `<span style="color: #004DF2;">√</span>`,
-                LaptopCompartment: `<span style="color: #004DF2;">√</span>`,
-                LengthOfTrip: "3-5 days",
-                Capacity: "4-6 outfits",
-                Dimensions: `21.5" x 14" x 8.7"`,
-                Weight: "8.1 lbs",
-                Material: "100% Polycarbonate",
-                Warranty: "3 Years",
-              },
-              {
-                imgUrl:
-                  "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-product-img2.png",
-                productTitle: "Carry-On",
-                // productSku: "C7 Max",
-                productSku: "ESD101-2", //dev
-                href: "https://www.flexispot.com/flexispot-professional-ergonomic-office-chair-c7m",
-                // productPrice: "???",
-                productPrice: "$199.99",
-                ColorOption: `Black/Blue/Pink`,
-                CarryOn: `<span style="color: #004DF2;">√</span>`,
-                CupHolder: "×",
-                LaptopCompartment: "×",
-                LengthOfTrip: "3-5 days",
-                Capacity: "5-7 outfits",
-                Dimensions: `21.7" x 14" x 8.9"`,
-                Weight: "7.4 lbs",
-                Material: "100% Polycarbonate",
-                Warranty: "3 Years",
-              },
-              {
-                imgUrl:
-                  "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-product-img3.png",
-                productTitle: "Check-in Medium",
-                // productSku: "C7 Series",
-                productSku: "C7 M", //dev
-                href: "https://www.flexispot.com/flexispot-best-ergonomic-office-chair-c7",
-                // productPrice: "???",
-                productPrice: "$269.99",
-                ColorOption: `Black/Blue`,
-                CarryOn: "×",
-                CupHolder: "×",
-                LaptopCompartment: "×",
-                LengthOfTrip: "1-2 weeks",
-                Capacity: "10-12 outfits",
-                Dimensions: `26" x 18.5" x 10.4"`,
-                Weight: "9.8 lbs",
-                Material: "100% Polycarbonate",
-                Warranty: "3 Years",
-              },
-              {
-                imgUrl:
-                  "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-product-img4.png",
-                productTitle: "Check-In Large",
-                // productSku: "C7 Series",
-                productSku: "C7 M", //dev
-                href: "https://www.flexispot.com/flexispot-best-ergonomic-office-chair-c7",
-                // productPrice: "???",
-                productPrice: "$299.99",
-                ColorOption: `Black/Blue/Pink`,
-                CarryOn: "×",
-                CupHolder: "×",
-                LaptopCompartment: "×",
-                LengthOfTrip: "2+ weeks",
-                Capacity: "15-18 outfits",
-                Dimensions: `29.1" x 20.5" x 12.2"`,
-                Weight: "11.1 lbs",
-                Material: "100% Polycarbonate",
-                Warranty: "3 Years",
-              },
-            ]
-
-          let table_innerWidth = window.innerWidth
-
-          // 下面注释部分等待产品上线后使用接口获取产品价格
-          // const bbc_data = [
-          //   {
-          //     // ids: [446000, 392001, 202002],
-          //     ids: [922001, 446007, 1130001], //dev
-          //     inStock: true,
-          //     origin: "US",
-          //     pageSize: 24,
-          //   },
-          // ]
-
-          // let product_data = []
-          // const requestOptions = {
-          //   method: "POST",
-          //   headers: {
-          //     "Content-Type": "application/json",
-          //   },
-          //   body: JSON.stringify(bbc_data),
-          // }
-          // fetch(
-          //   "/api/trantor/flow/bbc_item_FrontItemSearchFlow",
-          //   requestOptions
-          // )
-          //   .then((res) => {
-          //     return res.json()
-          //   })
-          //   .then((data) => {
-          //     if (data.success) {
-          //       const resList = data.res.data
-
-          //       for (let i = 0; i < resList.length; i++) {
-          //         for (let j = 0; j < swiperTableList.length; j++) {
-          //           if (
-          //             swiperTableList[j].productSku === resList[i].itemCode
-          //           ) {
-          //             swiperTableList[j].productPrice =
-          //               "$" + resList[i].salePrc
-          //           }
-          //         }
-          //       }
-
-          //       swiperTableList.forEach((item) => {
-          //         swiperTable.innerHTML += `
-          //                   <div class="swiper-slide">
-          //                     <div class="desk_ul-topLi">
-          //                       <div class="desk_ul-topLi-img">
-          //                         <img
-          //                           class="lazyload"
-          //                           data-src="${item.imgUrl}"
-          //                           width="160"
-          //                           height="160"
-          //                         />
-          //                         </div>
-          //                         <div class='desk_ul-topLi-title'>${item.productTitle
-          //           }</div>
-          //                         <a href="${item.href
-          //           }" target="_blank" class='desk_ul-topLi-link'>Shop Now</a>
-          //                     </div>
-          //                           <ul class="desk_ul">
-          //                             <li class="desk_ul-li">
-          //                               <div class="desk_ul-contextLi">
-          //                                 <div>${item.productPrice}</div>
-          //                                 <div>${item.ColorOption}</div>
-          //                                 <div>${item.CarryOn}</div>
-          //                                 <div>${item.CupHolder}</div>
-          //                                 <div>${item.LaptopCompartment}</div>
-          //                                 <div>${item.LengthOfTrip}</div>
-          //                                 <div>${item.Capacity}</div>
-          //                                 <div>${item.Dimensions}</div>
-          //                                 <div>${item.Weight}</div>
-          //                                 <div>${item.Material}</div>
-          //                                 <div>${item.Warranty}</div>
-          //                               </div>
-          //                             </li>
-          //                           </ul>
-          //                         </div>
-          //                   `
-          //       })
-
-          //       if (table_innerWidth <= 768) {
-          //         table_innerWidth_intersectionFn()
-          //       }
-          //       height_zw_fn()
-          //     } else {
-          //       console.error(data.msg)
-          //     }
-          //     new Swiper("#swiperTable", {
-          //       slidesPerView: 3,
-          //       slidesPerGroup: 1,
-          //       navigation: {
-          //         nextEl: ".swiperTable-next",
-          //         prevEl: ".swiperTable-pre",
-          //       },
-          //       breakpoints: {
-          //         1025: {
-          //           slidesPerView: 3,
-          //         },
-          //         769: {
-          //           slidesPerView: 2,
-          //         },
-          //         0: {
-          //           slidesPerView: 1,
-          //         },
-          //       },
-          //     })
-          //   })
-          //   .catch((err) => {
-          //     console.error(err)
-          //   })
-          swiperTableList.forEach((item) => {
-            swiperTable.innerHTML += `
-                            <div class="swiper-slide">
-                              <div class="desk_ul-topLi">
-                                <div class="desk_ul-topLi-img">
-                                  <img
-                                    class="lazyload"
-                                    data-src="${item.imgUrl}"
-                                    width="160"
-                                    height="160"
-                                  />
-                                  </div>
-                                  <div class='desk_ul-topLi-title'>${item.productTitle
-              }</div>
-                                  <a href="${item.href
-              }" target="_blank" class='desk_ul-topLi-link'>Shop Now</a>
-                              </div>
-                                    <ul class="desk_ul">
-                                      <li class="desk_ul-li">
-                                        <div class="desk_ul-contextLi">
-                                          <div>${item.productPrice}</div>
-                                          <div>${item.ColorOption}</div>
-                                          <div>${item.CarryOn}</div>
-                                          <div>${item.CupHolder}</div>
-                                          <div>${item.LaptopCompartment}</div>
-                                          <div>${item.LengthOfTrip}</div>
-                                          <div>${item.Capacity}</div>
-                                          <div>${item.Dimensions}</div>
-                                          <div>${item.Weight}</div>
-                                          <div>${item.Material}</div>
-                                          <div>${item.Warranty}</div>
-                                        </div>
-                                      </li>
-                                    </ul>
-                                  </div>
-                            `
-          })
-          new Swiper("#swiperTable", {
-            slidesPerView: 4,
-            slidesPerGroup: 1,
-            navigation: {
-              nextEl: ".swiperTable-next",
-              prevEl: ".swiperTable-pre",
-            },
-            breakpoints: {
-              1441: {
-                slidesPerView: 4,
-              },
-              1025: {
-                slidesPerView: 3,
-              },
-              769: {
-                slidesPerView: 2,
-              },
-              0: {
-                slidesPerView: 1,
-              },
-            },
-          })
-          function height_zw_fn() {
-            document.querySelector(
-              ".desk_product-table .desk_product-table-list .height-zw"
-            ).style.height =
-              document.querySelectorAll(
-                ".desk_product-table .chair_buyerguide .desk_ul-topLi"
-              )[0].offsetHeight + "px"
-          }
-          window.addEventListener("resize", () => {
-            height_zw_fn()
-          })
-
-          const intersectionFn = function (ele, cb, cb2) {
-            new IntersectionObserver(
-              (entries) => {
-                entries.forEach((entry) => {
-                  if (entry.isIntersecting) {
-                    cb2 && cb2()
-                  } else {
-                    cb && cb()
-                  }
-                })
-              },
-              {
-                threshold: [1],
-              }
-            ).observe(ele)
-          }
-
-          const chair_buyerguide_product_text = document.querySelector(
-            ".desk_container .desk_product .desk_product-text"
-          ),
-            chair_buying_guide_product_mobile_shadow = document.querySelector(
-              ".desk_product-table .chair_buying_guide-product-mobile-shadow"
-            )
-          function table_innerWidth_intersectionFn() {
-            if (table_innerWidth <= 768) {
-              intersectionFn(
-                chair_buyerguide_product_text,
-                () => {
-                  chair_buying_guide_product_mobile_shadow.style.display =
-                    "block"
-                },
-                () => {
-                  chair_buying_guide_product_mobile_shadow.style.display =
-                    "none"
-                }
-              )
-              chair_buying_guide_product_mobile_shadow.children[0].style.height =
-                document.querySelectorAll(
-                  ".desk_product-table .chair_buyerguide .desk_ul-topLi"
-                )[0].offsetHeight + "px"
-            }
-          }
-          window.addEventListener("resize", () => {
-            table_innerWidth = window.innerWidth
-            table_innerWidth_intersectionFn()
-          })
-          // desk_container js end
-          // suitcase_container js start
-          const swiperTable2 = document.querySelector(
-            "#swiperTable2 .swiper-wrapper2"
-          ),
-            swiperTableList2 = [
-              {
-                imgUrl:
-                  "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-20-inch.png",
-                size: "Carry-On",
-                LengthofTrip: "3-5 days",
-                Capacity: "5-7 outfits",
-                ShortGetaways: "Recommend",
-                LongerJourneys: "/",
-              },
-              {
-                imgUrl:
-                  "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-24-inch.png",
-                size: "Check-In Large",
-                LengthofTrip: "2+ weeks",
-                Capacity: "15-18 outfits",
-                ShortGetaways: "/",
-                LongerJourneys: "Recommend",
-              },
-              {
-                imgUrl:
-                  "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-28-inch.png",
-                size: "Check-In Medium",
-                LengthofTrip: "1-2 weeks",
-                Capacity: "10-12 outfits",
-                ShortGetaways: "/",
-                LongerJourneys: "Recommend",
-              },
-              {
-                imgUrl:
-                  "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-32-inch.png",
-                size: "Trunk",
-                LengthofTrip: "3+ weeks",
-                Capacity: "18-21 outfits",
-                ShortGetaways: "/",
-                LongerJourneys: "Recommend",
-              },
-            ]
-
-          swiperTableList2.forEach((item) => {
-            swiperTable2.innerHTML += `
-                            <div class="swiper-slide2">
-                              <div class="suitcase_ul-topLi">
-                                <div class="suitcase_ul-topLi-img">
-                                  <img
-                                    class="lazyload"
-                                    data-src="${item.imgUrl}"
-                                    width="160"
-                                    height="160"
-                                  />
-                                  </div>
-                              </div>
-                                    <ul class="suitcase_ul">
-                                      <li class="suitcase_ul-li">
-                                        <div class="suitcase_ul-contextLi">
-                                          <div>${item.size}</div>
-                                          <div>${item.LengthofTrip}</div>
-                                          <div>${item.Capacity}</div>
-                                          <div>${item.ShortGetaways}</div>
-                                          <div>${item.LongerJourneys}</div>
-                                        </div>
-                                      </li>
-                                    </ul>
-                                  </div>
-                            `
-          })
-
-          new Swiper("#swiperTable2", {
-            slidesPerView: 4,
-            slidesPerGroup: 1,
-            navigation: {
-              nextEl: ".swiperTable-next2",
-              prevEl: ".swiperTable-pre2",
-            },
-            breakpoints: {
-              1441: {
-                slidesPerView: 4,
-              },
-              1025: {
-                slidesPerView: 3,
-              },
-              769: {
-                slidesPerView: 2,
-              },
-              0: {
-                slidesPerView: 1,
-              },
-            },
-          })
-          // suitcase_container js end
-        })
-
-
-      // slick
-      loadScript(
-        "https://staticprod.site.flexispot.com/dev/trantor/attachments/slick.min.js",
-        function () {
-          // loc_moudle_8 js start
-          const svg_2 = `<svg width="82" height="46" viewBox="0 0 82 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="7.54504" y="5.83117" width="66.9098" height="33.0777" rx="2.56099" stroke="#151C20" stroke-width="0.939685"/>
-  <circle cx="17.7364" cy="10.4864" r="1.18658" fill="#151C20"/>
-  <circle cx="63.2252" cy="10.4864" r="1.18658" fill="#151C20"/>
-</svg>`,
-            svg_3 = `<svg width="62" height="48" viewBox="0 0 62 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M33.5472 47.3096L25.0532 47.249" stroke="#151C20" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M15.0144 47.1772L1.37744 47.0785L11.3074 11.4932H51.6866L60.6229 47.5044L42.8155 47.3775" stroke="#151C20" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M18.7256 11.4708C18.7256 5.40689 24.1591 0.495117 30.8627 0.495117C37.5664 0.495117 42.9984 5.40971 42.9984 11.4708" stroke="#151C20" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M21.3294 37.674H18.3228V22.3633H21.3294V37.674Z" fill="#151C20"/>
-  <path d="M24.2939 22.3633H27.1943V37.674H24.2939V22.3633ZM28.0831 37.3468C27.6029 37.0017 27.2407 36.5183 27.0454 35.962L27.1943 33.4659C27.1849 33.782 27.2499 34.0959 27.3842 34.3825C27.5045 34.6281 27.6987 34.8302 27.9399 34.9607C28.2124 35.1011 28.5163 35.1701 28.823 35.161C29.3674 35.161 29.7894 34.9819 30.0889 34.6237C30.3885 34.2655 30.5383 33.7602 30.5383 33.1077V31.3661C30.5383 30.6995 30.3885 30.1824 30.0889 29.8149C29.9361 29.6306 29.742 29.4845 29.5221 29.3885C29.3023 29.2925 29.0628 29.2492 28.823 29.262C28.5158 29.2529 28.2115 29.3234 27.9399 29.4665C27.6972 29.6028 27.503 29.8108 27.3842 30.0616C27.2492 30.359 27.1842 30.6831 27.1943 31.0093L26.9717 28.588C27.2255 28.002 27.6286 27.4921 28.1412 27.1087C28.6049 26.767 29.1674 26.5839 29.7445 26.5869C30.4524 26.5545 31.152 26.7501 31.7393 27.1446C32.3267 27.5391 32.7705 28.1116 33.0048 28.7769C33.3131 29.6019 33.4603 30.4778 33.4386 31.3576V33.1049C33.4603 33.9746 33.313 34.8403 33.0048 35.6545C32.7661 36.3159 32.3207 36.8838 31.734 37.2751C31.1473 37.6664 30.4501 37.8605 29.7445 37.8291C29.1535 37.8461 28.5721 37.6773 28.0831 37.3468Z" fill="#151C20"/>
-  <path d="M38.3712 37.6587C37.7728 37.549 37.1875 37.3774 36.6248 37.1468C36.1112 36.9401 35.627 36.6675 35.1846 36.3359L36.9735 34.1148C37.4906 34.446 38.0492 34.7082 38.6349 34.8947C39.1681 35.0694 39.7251 35.1616 40.2864 35.1682C40.964 35.1682 41.4899 35.0926 41.8641 34.9412C42.2383 34.7898 42.4274 34.5811 42.4311 34.3151C42.4386 34.2085 42.4204 34.1017 42.378 34.0036C42.3356 33.9055 42.2702 33.8188 42.1873 33.751C42.0026 33.6148 41.7886 33.5231 41.5622 33.483C41.2087 33.4167 40.8519 33.3696 40.4933 33.342L40.1078 33.2997L39.7108 33.2574C39.6809 33.2506 39.6506 33.2454 39.6201 33.2419C39.5904 33.2399 39.5605 33.2399 39.5308 33.2419C38.8646 33.1679 38.2059 33.0377 37.5618 32.8527C37.0607 32.6933 36.622 32.3822 36.3073 31.9628C35.9642 31.5238 35.7932 30.8868 35.7941 30.052C35.7634 29.3894 35.9473 28.7346 36.3189 28.1839C36.6905 27.6332 37.2301 27.2158 37.8581 26.9932C38.6357 26.7038 39.462 26.5659 40.292 26.5871C40.852 26.5876 41.4104 26.6438 41.9591 26.7549C42.5047 26.8652 43.0382 27.0277 43.5524 27.24C44.047 27.4433 44.5188 27.6976 44.9601 27.9987L43.2349 30.0943C42.7601 29.8293 42.2558 29.6206 41.7323 29.4724C41.2437 29.3295 40.7375 29.255 40.2282 29.251C39.7646 29.2321 39.3016 29.3001 38.8631 29.4512C38.538 29.5847 38.376 29.7728 38.3769 30.0153C38.3765 30.1028 38.4006 30.1887 38.4464 30.2634C38.4922 30.3381 38.5579 30.3987 38.6363 30.4384C38.8363 30.55 39.0547 30.625 39.2813 30.6598C39.5393 30.7058 39.915 30.7566 40.4083 30.8121L40.5996 30.8332L40.7896 30.8544C40.8207 30.862 40.8526 30.8658 40.8846 30.8657C40.917 30.8651 40.9494 30.8684 40.981 30.8755C41.6852 30.946 42.3825 31.0729 43.0662 31.2549C43.609 31.4141 44.0882 31.738 44.437 32.1814C44.815 32.6458 45.004 33.327 45.004 34.2248C45.0358 34.9159 44.843 35.5988 44.4541 36.1723C44.0653 36.7458 43.5011 37.1795 42.8451 37.4091C42.0297 37.7115 41.1634 37.8552 40.2935 37.8321C39.6487 37.8338 39.0052 37.7757 38.3712 37.6587Z" fill="#151C20"/>
-</svg>`,
-            svg_4 = `<svg width="52" height="50" viewBox="0 0 52 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M28.8667 2.69895L16.2268 13.8241H4.49432C2.29428 13.8241 0.643746 15.7362 0.643746 18.1947C0.597911 21.5181 0.533743 29.0664 0.643746 32.6721C0.753748 36.2778 3.89798 37.3613 5.45635 37.4524H16.0785L28.7287 47.969C31.548 49.8469 33.9539 47.6958 33.9539 46.4666V42.3973L34.3668 21.555V4.47448C34.3668 2.27048 33.0271 1.30784 31.6855 1.2931C30.5941 1.28112 29.6411 2.06336 28.8881 2.68137L28.8667 2.69895Z" stroke="#151C20" stroke-width="1.13444" stroke-linecap="round"/>
-  <path d="M38.7368 15.3701C42.639 18.4641 48.1019 26.6478 38.7368 34.6307" stroke="black" stroke-width="1.13444" stroke-linecap="round"/>
-  <path d="M43.9077 11.0142C49.5748 15.5076 57.5088 27.3929 43.9077 38.9865" stroke="black" stroke-width="1.13444" stroke-linecap="round"/>
-</svg>`,
-            svg_5 = `<svg width="58" height="50" viewBox="0 0 58 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M17.5041 20.2726L26.7801 4.20592C27.7667 2.49721 30.233 2.49721 31.2195 4.20592L54.9699 45.3428C55.9564 47.0515 54.7233 49.1874 52.7502 49.1874H5.46738C3.50981 49.1874 2.46493 46.978 2.99592 45.0938V45.0938" stroke="#151C20"/>
-  <path d="M2.89551 22.0933C2.89551 20.9539 3.81917 20.0303 4.95857 20.0303H29.3852C30.5246 20.0303 31.4483 20.9539 31.4483 22.0933V47.0769C31.4483 48.2163 30.5246 49.14 29.3852 49.14H4.95856C3.81917 49.14 2.89551 48.2163 2.89551 47.0769V22.0933Z" stroke="#151C20"/>
-  <path d="M3.44385 30.4019H31.3556M3.44385 38.3142H31.3556" stroke="#151C20"/>
-</svg>`
-
-          const bbc_data = [
-            {
-              ids: [21083, 194000, 262000, 19097],
-              inStock: true,
-              origin: "US",
-              pageSize: 24,
-            },
-          ]
-
-          let product_data = []
-
-          $.ajax({
-            type: "POST",
-            url: "/api/trantor/flow/bbc_item_FrontItemSearchFlow",
-            data: JSON.stringify(bbc_data),
-            async: false,
-            cache: false,
-            crossDomain: true,
-            contentType: false,
-            processData: false,
-            dataType: "json",
-            contentType: "application/json; charset=UTF-8",
-            success: function (msg) {
-              // 成功
-              if (msg.code == 200) {
-                product_data = msg.res.data
-              }
-            },
-            error: function (res) {
-              console.log(res)
-              alert(res.responseJSON.msg)
-            },
-            complete: function () {
-              let E7 = [],
-                E7Pro = [],
-                E7Plus = [],
-                E7L = []
-
-              product_data.forEach((item) => {
-                if (item.itemShortName == "E7") {
-                  E7.push(item.salePrc)
-                } else if (item.itemShortName == "E7 Pro") {
-                  E7Pro.push(item.salePrc)
-                } else if (item.itemShortName == "E7 Plus") {
-                  E7Plus.push(item.salePrc)
-                } else if (item.itemShortName == "E7L") {
-                  E7L.push(item.salePrc)
-                }
-              })
-
-              let moudle_8_tab_data = [
-                {
-                  img: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/buyerguide-E7-compare-1-3.png",
-                  // icon:60,
-                  // right_icon: "https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-corner%20-mark-2.png",
-                  sku: "E7",
-                  newPrice: E7[0],
-                  href: "https://www.flexispot.com/flexispot-pro-standing-desk-e7",
-                  svg_1: `<svg width="44" height="54" viewBox="0 0 44 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="25.5699" y="6.41514" width="2.95869" height="6.92954" stroke="#151C20" stroke-width="0.937706"/>
-  <rect x="25.0504" y="13.339" width="3.99773" height="7.74082" stroke="#151C20" stroke-width="0.937706"/>
-  <rect x="24.5309" y="21.0909" width="5.03677" height="26.4178" stroke="#151C20" stroke-width="0.937706"/>
-  <path d="M1.46289 51.2919V49.6035L23.5425 47.5254H29.7767L43.2842 49.6035V51.2919H1.46289Z" stroke="#151C20" stroke-width="0.937706"/>
-  <rect x="4.26544" y="51.6258" width="3.74637" height="0.409788" fill="#151C20" stroke="#151C20" stroke-width="0.409788"/>
-  <rect x="36.4759" y="51.6258" width="3.74637" height="0.409788" fill="#151C20" stroke="#151C20" stroke-width="0.409788"/>
-  <path d="M5.94336 4.42182V1.9541H43.2189V4.42182H32.4389L30.8803 6.24014H23.607L22.3082 4.42182H5.94336Z" stroke="#151C20" stroke-width="0.937706"/>
-  <rect width="2.34426" height="0.792105" transform="matrix(1 0 0 -1 7.37598 1.9541)" fill="#151C20"/>
-  <rect width="2.34426" height="0.792105" transform="matrix(1 0 0 -1 11.897 1.9541)" fill="#151C20"/>
-  <rect width="2.34426" height="0.792105" transform="matrix(1 0 0 -1 20.7173 1.9541)" fill="#151C20"/>
-  <rect width="2.34426" height="0.792105" transform="matrix(1 0 0 -1 34.5615 1.9541)" fill="#151C20"/>
-  <rect width="2.34426" height="0.792105" transform="matrix(1 0 0 -1 39.2549 1.9541)" fill="#151C20"/>
-  <g opacity="0.5">
-    <path d="M5.94385 10.5908V8.12305H43.2194V10.5908H32.4394L30.8808 12.4091H23.6075L22.3087 10.5908H5.94385Z" stroke="#151C20" stroke-width="0.937706"/>
-    <rect width="2.34426" height="0.79705" transform="matrix(1 0 0 -1 7.37598 8.12305)" fill="#151C20"/>
-    <rect width="2.34426" height="0.79705" transform="matrix(1 0 0 -1 11.897 8.12207)" fill="#151C20"/>
-    <rect width="2.34426" height="0.79705" transform="matrix(1 0 0 -1 20.7178 8.12305)" fill="#151C20"/>
-    <rect width="2.34426" height="0.79705" transform="matrix(1 0 0 -1 34.562 8.12305)" fill="#151C20"/>
-    <rect width="2.34426" height="0.79705" transform="matrix(1 0 0 -1 39.2549 8.12305)" fill="#151C20"/>
-  </g>
-</svg>`,
-                  svg_2: svg_2,
-                  svg_3: svg_3,
-                  svg_4: svg_4,
-                  svg_5: svg_5,
-                  desc_1: `22.8"-48.4"`,
-                  desc_2: `W: 47.2"-80"<br/>
-                  D: 24"-40"`,
-                  desc_3: `355lbs<br/>
-                  Max. Static Load`,
-                  desc_4: `< 50DB<br/>
-                  Basically silent`,
-                  desc_5: `Frame: Carbon Steel<br/>
-                  Destop: Chipboard,<br/>
-                  Bamboo, MDF, Solid Wood`,
-                  desc_6: `Frame:15years<br/>
-                  Desktop:bamboo-5years &<br/>
-                  Others-2years`,
-                },
-                {
-                  img: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/buyerguide-E7Pro-compare-1-3.png",
-                  sku: "E7 Pro",
-                  newPrice: E7Pro[0],
-                  href: "https://www.flexispot.com/flexispot-best-standing-desk-e7pro",
-                  svg_1: `<svg width="45" height="54" viewBox="0 0 45 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="25.7364" y="6.41514" width="2.95869" height="6.92954" stroke="#151C20" stroke-width="0.937706"/>
-  <rect x="25.2169" y="13.339" width="3.99773" height="7.74082" stroke="#151C20" stroke-width="0.937706"/>
-  <rect x="24.6974" y="21.0909" width="5.03677" height="26.4178" stroke="#151C20" stroke-width="0.937706"/>
-  <path d="M1.62939 51.2919V49.6035L23.709 47.5254H29.9432L43.4507 49.6035V51.2919H1.62939Z" stroke="#151C20" stroke-width="0.937706"/>
-  <rect x="4.43194" y="51.6258" width="3.74637" height="0.409788" fill="#151C20" stroke="#151C20" stroke-width="0.409788"/>
-  <rect x="36.6424" y="51.6258" width="3.74637" height="0.409788" fill="#151C20" stroke="#151C20" stroke-width="0.409788"/>
-  <path d="M6.10986 4.42182V1.9541H43.3854V4.42182H32.6054L31.0468 6.24014H23.7735L22.4747 4.42182H6.10986Z" stroke="#151C20" stroke-width="0.937706"/>
-  <rect width="2.34426" height="0.792105" transform="matrix(1 0 0 -1 7.54248 1.9541)" fill="#151C20"/>
-  <rect width="2.34426" height="0.792105" transform="matrix(1 0 0 -1 12.0635 1.9541)" fill="#151C20"/>
-  <rect width="2.34426" height="0.792105" transform="matrix(1 0 0 -1 20.8838 1.9541)" fill="#151C20"/>
-  <rect width="2.34426" height="0.792105" transform="matrix(1 0 0 -1 34.728 1.9541)" fill="#151C20"/>
-  <rect width="2.34426" height="0.792105" transform="matrix(1 0 0 -1 39.4214 1.9541)" fill="#151C20"/>
-  <g opacity="0.5">
-    <path d="M6.11035 10.5908V8.12305H43.3859V10.5908H32.6059L31.0473 12.4091H23.774L22.4752 10.5908H6.11035Z" stroke="#151C20" stroke-width="0.937706"/>
-    <rect width="2.34426" height="0.79705" transform="matrix(1 0 0 -1 7.54248 8.12305)" fill="#151C20"/>
-    <rect width="2.34426" height="0.79705" transform="matrix(1 0 0 -1 12.0635 8.12207)" fill="#151C20"/>
-    <rect width="2.34426" height="0.79705" transform="matrix(1 0 0 -1 20.8843 8.12305)" fill="#151C20"/>
-    <rect width="2.34426" height="0.79705" transform="matrix(1 0 0 -1 34.7285 8.12305)" fill="#151C20"/>
-    <rect width="2.34426" height="0.79705" transform="matrix(1 0 0 -1 39.4214 8.12305)" fill="#151C20"/>
-  </g>
-</svg>`,
-                  svg_2: svg_2,
-                  svg_3: svg_3,
-                  svg_4: svg_4,
-                  svg_5: svg_5,
-                  desc_1: `25"-50.6"`,
-                  desc_2: `W: 47.2"-80"<br/>
-                  D: 24"-40"`,
-                  desc_3: `440lbs<br/>
-                  Max. Static Load`,
-                  desc_4: `< 50DB<br/>
-                  Basically silent`,
-                  desc_5: `Frame: Carbon Steel<br/>
-                  Destop: Chipboard,<br/>
-                  Bamboo, MDF, Solid Wood`,
-                  desc_6: `Frame:15years<br/>
-                  Desktop:bamboo-5years &<br/>
-                  Others-2years`,
-                },
-                {
-                  img: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/buyerguide-E7L-compare-1-3.png",
-                  sku: "E7L",
-                  newPrice: E7L[0],
-                  href: "https://www.flexispot.com/l-shaped-standing-desk-e4l",
-                  svg_1: `<svg width="88" height="66" viewBox="0 0 88 66" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <g clip-path="url(#clip0_1461_6056)">
-    <path d="M74.6226 18.9733V13.4845L76.8454 14.1478V19.7735L74.6226 18.9733Z" stroke="black" stroke-width="0.94"/>
-    <path d="M74.2114 24.4481L74.2115 18.7764L77.1189 19.8757V25.5402L74.2114 24.4481Z" stroke="black" stroke-width="0.94"/>
-    <path d="M73.4632 49.9249L73.93 24.3623L77.4697 25.7218L76.9058 50.9944" stroke="black" stroke-width="0.94" stroke-linejoin="round"/>
-    <path d="M81.3843 15.5817L45.3691 3.83066L51.684 2.17578L85.8922 13.2057L81.3843 15.5817Z" stroke="black" stroke-width="0.94" stroke-linejoin="round"/>
-    <path d="M51.9248 15.5672V10.1696L54.4977 9.45801V14.9526L51.9248 15.5672Z" stroke="black" stroke-width="0.94"/>
-    <path d="M51.6855 21.6883V15.6944L54.7374 14.8252V20.8416L51.6855 21.6883Z" stroke="black" stroke-width="0.94"/>
-    <path d="M51.279 40.8734L51.2788 21.6846L55.144 20.749V39.7264L51.279 40.8734Z" stroke="black" stroke-width="0.94"/>
-    <path d="M53.638 6.50098L14.646 16.8113L19.5771 18.7801L58.855 8.25793L53.638 6.50098Z" stroke="black" stroke-width="0.94"/>
-    <path d="M22.8537 23.1742L2.92188 15.2146L7.30202 14.0654L26.7091 21.6313L22.8537 23.1742Z" stroke="black" stroke-width="0.94" stroke-linejoin="round"/>
-    <path d="M13.4131 19.5352V25.7531L15.365 26.3663V20.497" stroke="black" stroke-width="0.94"/>
-    <path d="M12.9302 32.1361L12.9302 25.6504L15.7295 26.4378L15.7295 32.8838L12.9302 32.1361Z" stroke="black" stroke-width="0.94"/>
-    <path d="M12.4941 50.5278V32.0322L15.883 33.0071V51.7523L12.4941 50.5278Z" stroke="black" stroke-width="0.94"/>
-    <path d="M24.6008 54.9481L8.08711 48.9199L5.50977 50.1995L21.0306 56.2634L24.6008 54.9481Z" stroke="black" stroke-width="0.94" stroke-linejoin="round"/>
-    <path d="M45.3858 45.4012L42.6689 43.8919L59.9953 38.1572L63.7382 39.1831L45.3858 45.4012Z" stroke="black" stroke-width="0.94" stroke-linejoin="round"/>
-    <path d="M67.3727 55.5391L63.9941 54.1369L83.5901 45.5957L86.6236 46.7551L67.3727 55.5391Z" stroke="black" stroke-width="0.94" stroke-linejoin="round"/>
-  </g>
-  <defs>
-    <clipPath id="clip0_1461_6056">
-      <rect width="87" height="66" fill="white" transform="translate(0.833008)"/>
-    </clipPath>
-  </defs>
-</svg>`,
-                  svg_2: `<svg width="83" height="46" viewBox="0 0 83 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M7.68762 4.70215C7.68762 3.85707 8.37269 3.17199 9.21777 3.17199H55.871V21.667C55.871 21.9598 55.6336 22.1971 55.3408 22.1971H9.21777C8.37269 22.1971 7.68762 21.5121 7.68762 20.667V4.70215Z" stroke="#151C20" stroke-width="0.939685"/>
-  <path d="M73.4482 3.17199C74.2933 3.17199 74.9784 3.85707 74.9784 4.70215L74.9784 40.0381C74.9784 40.8832 74.2933 41.5682 73.4482 41.5682L57.4834 41.5682C56.6383 41.5682 55.9532 40.8832 55.9532 40.0381L55.9532 3.17199L73.4482 3.17199Z" stroke="#151C20" stroke-width="0.939685"/>
-  <circle cx="14.9405" cy="7.82721" r="1.18658" fill="#151C20"/>
-  <circle cx="47.7066" cy="7.82721" r="1.18658" fill="#151C20"/>
-</svg>`,
-                  svg_3: svg_3,
-                  svg_4: svg_4,
-                  svg_5: svg_5,
-                  desc_1: `25.0"-50.7"`,
-                  desc_2: `W: 55"x 76"x 24"<br/>
-                  D: 78"x 72"x 24"`,
-                  desc_3: `330lbs<br/>
-                  Max. Static Load`,
-                  desc_4: `< 50DB<br/>
-                  Basically silent`,
-                  desc_5: `Frame: Carbon Steel<br/>
-                  Destop: Bamboo,<br/>
-                  Chipboard`,
-                  desc_6: `Frame:15years<br/>
-                  Desktop:bamboo-5years &<br/>
-                  Others-2years`,
-                },
-                {
-                  img: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/buyerguide-E7Plus-compare-1-3.png",
-                  sku: "E7 Plus",
-                  newPrice: E7Plus[0],
-                  href: "https://www.flexispot.com/flexispot-4-leg-standing-desk-e7plus",
-                  svg_1: `<svg width="87" height="66" viewBox="0 0 87 66" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M72.0902 2.2832H14.9097V7.78667H72.0902V2.2832Z" stroke="#151C20" stroke-width="0.94" stroke-linecap="round"/>
-  <rect x="19.8894" y="7.92312" width="4.00031" height="4.00031" stroke="#151C20" stroke-width="0.94"/>
-  <rect x="19.2781" y="12.2366" width="5.22333" height="6.74123" stroke="#151C20" stroke-width="0.94"/>
-  <path d="M25.8634 56.8731V19.1279H17.916V60.6866" stroke="#151C20" stroke-width="0.94"/>
-  <path d="M25.8633 56.4082H61.1364" stroke="#151C20" stroke-width="0.94"/>
-  <path d="M17.9165 60.2148L69.0838 60.2148" stroke="#151C20" stroke-width="0.94"/>
-  <rect x="20.8037" y="60.9566" width="4.75078" height="0.540097" fill="#151C20" stroke="#151C20" stroke-width="0.540097"/>
-  <rect x="61.7998" y="60.8765" width="4.75078" height="0.540097" fill="#151C20" stroke="#151C20" stroke-width="0.540097"/>
-  <rect x="63.1096" y="7.92312" width="4.00031" height="4.00031" stroke="#151C20" stroke-width="0.94"/>
-  <rect x="62.4978" y="12.2366" width="5.22333" height="6.74123" stroke="#151C20" stroke-width="0.94"/>
-  <path d="M69.0836 60.6866V19.1279H61.1362V56.8639" stroke="#151C20" stroke-width="0.94"/>
-</svg>`,
-                  svg_2: svg_2,
-                  svg_3: svg_3,
-                  svg_4: svg_4,
-                  svg_5: svg_5,
-                  desc_1: `26”-51.6“`,
-                  desc_2: `W: 47.2”-80“<br/>
-                  D: 28”-35“`,
-                  desc_3: `540lbs<br/>
-                  Max. Static Load`,
-                  desc_4: `< 50DB<br/>
-                  Basically silent`,
-                  desc_5: `Frame: Carbon Steel<br/>
-                  Destop: Chipboard,<br/>
-                  Bamboo, MDF, Solid Wood`,
-                  desc_6: `Frame:15years<br/>
-                  Desktop:bamboo-5years &<br/>
-                  Others-2years`,
-                },
-              ]
-
-              moudle_8_tab_data.forEach((item) => {
-                $(".loc_moudle_8_content_flex").append(`
-                <div class="loc_moudle_8_content_flex_item_box">
-                  <a class="loc_moudle_8_content_flex_item" href="${item.href
-                  }" target="_blank">
-                    ${item.icon
-                    ? `<div class="loc_moudle_8_content_flex_item_corner_mark">- $${item.icon}</div>`
-                    : ""
-                  }
-                    ${item.right_icon
-                    ? `<div class="loc_moudle_8_content_flex_item_corner_mark_right">
-                            <img class="lazyload" data-src="${item.right_icon}" alt="">
-                    </div>`
-                    : ""
-                  }
-                    <div class="loc_moudle_8_content_flex_item_img">
-                        <img class="lazyload" data-src="${item.img}" alt="">
-                    </div>
-                    <div class="loc_moudle_8_content_flex_item_title">${item.sku
-                  }</div>
-                    <div class="loc_moudle_8_content_flex_item_price">
-                        <div class="loc_moudle_8_content_flex_item_price_new">$${item.newPrice
-                  }</div>
-                    </div>
-                    <div class="loc_moudle_8_content_flex_item_buy">Buy</div>
-                </a>
-                <div class="loc_moudle_8_content_flex_item_main">
-                  ${item.svg_1}
-                  ${item.desc_1}
-                </div>
-                <div class="loc_moudle_8_content_flex_item_main">
-                  ${item.svg_2}
-                  ${item.desc_2}
-                </div>
-                <div class="loc_moudle_8_content_flex_item_main">
-                  ${item.svg_3}
-                  ${item.desc_3}
-                </div>
-                <div class="loc_moudle_8_content_flex_item_main">
-                  ${item.svg_4}
-                  ${item.desc_4}
-                </div>
-                <div class="loc_moudle_8_content_flex_item_main">
-                  ${item.svg_5}
-                  ${item.desc_5}
-                </div>
-                <div class="loc_moudle_8_content_flex_item_main">
-                  ${item.desc_6}
-                </div>
-               </div>
-            `)
-              })
-            },
-          })
-
-          if (isMobile()) {
-            $(".loc_moudle_8_content_flex").slick({
-              dots: false,
-              infinite: false,
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              prevArrow: `<div class="slick-prev" aria-label="Previous" type="button">
-                        <img class="lazyload" data-src="https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-arrow.png" />
-                        </div>`,
-              nextArrow: `<div class="slick-next" aria-label="Previous" type="button">
-                        <img class="lazyload" data-src="https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-arrow.png" />
-                        </div>`,
-            })
-          }
-
-          // loc_moudle_8 js end
-
-          // loc_moudle_5 js start
-          let moudle_5_slick_data = [
-            {
-              img: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-slick-img1.png",
-              title: "Wheels Quality",
-              text: "The wheels should glide smoothly, quietly, and stay straight in use. After testing, they should be crack-free, secure, and show no more than 2mm wear. They must support 44-62 lbs (20-28 kg) and remain intact after being dropped from 900mm three times.",
-            },
-            {
-              img: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-slick-img2.png",
-              title: "Shell Durability",
-              text: "The shell should resist scratches, fingerprints, impacts, and deformation. After stress tests, it should show no dents or cracks. A textured matte finish helps prevent scratches and fingerprints. Preferred materials like PP/PC are more durable than ABS+PC or pure ABS.",
-            },
-            {
-              img: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-slick-img3.png",
-              title: "Handle Quality",
-              text: "The handle should offer a comfortable grip, with aluminum as the preferred durable material. Higher weight capacity means better performance and quality. A smooth, quick, and firm response is ideal, while wobbly or loose handles indicate poor quality.",
-            },
-            {
-              img: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/suitcase-20241111-slick-img4.png",
-              title: "Lining Fabric",
-              text: "The lining fabric should feel soft to the touch, have antibacterial properties for easy care, and be durable enough to resist fading. It should also protect your clothes from damage, pilling, and other wear and tear.",
-            },
-          ]
-
-          moudle_5_slick_data.forEach((item) => {
-            $(".loc_moudle_5_content_slick").append(`
-                    <div class="loc_moudle_5_content_slick_item_box">
-                        <div class="loc_moudle_5_content_slick_item">
-                            <div class="loc_moudle_5_content_slick_item_title">
-                                ${item.title}
-                            </div>
-                            <div class="loc_moudle_5_content_slick_item_text">
-                                ${item.text}
-                            </div>
-                            <div class="loc_moudle_5_content_slick_item_img">
-                                <img class="lazyload" data-src="${item.img}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                `)
-          })
-
-          if (!isMobile()) {
-            $(".loc_moudle_5_content_slick").slick({
-              dots: false,
-              infinite: true,
-              slidesToShow: 4,
-              slidesToScroll: 1,
-              prevArrow: `<div class="slick-prev" aria-label="Previous" type="button">
-                        <img class="lazyload" data-src="https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-arrow.png" />
-                        </div>`,
-              nextArrow: `<div class="slick-next" aria-label="Previous" type="button">
-                        <img class="lazyload" data-src="https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-arrow.png" />
-                        </div>`,
-            })
-          }
-          // loc_moudle_5 js end
-
-        }
-      )
-    }
-  )
 </script>
+</div>
