@@ -1,137 +1,158 @@
 <div>
-    <div class="detail-pane-detail-content">
+    <style>
+        .navigation-container * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style-type: none;
+            scroll-margin-block: 204px;
+        }
 
+        .navigation-container {
+            max-width: 1384px;
+            margin: 0 auto;
+        }
 
+        .navigation-container .navigation-main {
+            display: flex;
+            justify-content: space-between;
+            padding: 80px 0;
+        }
 
-        <style>
-            .navigation-container * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                text-decoration: none;
-                list-style-type: none;
-                scroll-margin-block: 204px;
-            }
+        .navigation-container .navigation-main h2 {
+            color: #26333a;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: "SupremeLLSub-Black";
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 120%;
+        }
 
-            .navigation-container {
-                max-width: 1384px;
-                margin: 0 auto;
-            }
+        .navigation-container .navigation-main .navigation-main-nav {
+            position: sticky;
+            position: -webkit-sticky;
+            top: 184px;
+            height: 100%;
+        }
 
-            .navigation-container .navigation-main {
-                display: flex;
-                justify-content: space-between;
-                padding: 80px 0;
-            }
+        .navigation-container .navigation-main .navigation-main-nav ul li {
+            margin-top: 32px;
+            color: #26333a;
+            font-family: "SupremeLLSub-Black";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 120%;
+            cursor: pointer;
+        }
 
-            .navigation-container .navigation-main h2 {
-                color: #26333a;
-                font-variant-numeric: lining-nums proportional-nums;
-                font-family: "SupremeLLSub-Black";
-                font-size: 48px;
-                font-style: normal;
-                font-weight: 900;
-                line-height: 120%;
-            }
+        .navigation-container .navigation-main .navigation-main-nav ul li.s_active {
+            color: #004df2;
+        }
 
-            .navigation-container .navigation-main .navigation-main-nav {
-                position: sticky;
-                position: -webkit-sticky;
-                top: 184px;
-                height: 100%;
-            }
+        .navigation-container .navigation-main .navigation-main-content {
+            max-width: 950px;
+        }
 
-            .navigation-container .navigation-main .navigation-main-nav ul li {
-                margin-top: 32px;
-                color: #26333a;
-                font-family: "SupremeLLSub-Black";
-                font-size: 24px;
-                font-style: normal;
-                font-weight: 900;
-                line-height: 120%;
-                cursor: pointer;
-            }
+        .navigation-module {
+            height: 500px;
+        }
+    </style>
 
-            .navigation-container .navigation-main .navigation-main-nav ul li.s_active {
-                color: #004df2;
-            }
-
-            .navigation-container .navigation-main .navigation-main-content {
-                max-width: 950px;
-            }
-
-            .navigation-module {
-                height: 500px;
-            }
-        </style>
-
-
-        <div class="navigation-container">
-            <div class="navigation-main">
-                <div class="navigation-main-nav">
-                    <h2>Category</h2>
-                    <div class="navigation-main-nav-ul">
-                        <ul>
-                            <li data-ids="navigation_module_1" class="s_active">Shipping &amp; Handling</li>
-                            <li data-ids="navigation_module_2" class="">CEVA</li>
-                            <li data-ids="navigation_module_3" class="">Return Policy</li>
-                            <li data-ids="navigation_module_4" class="">Order Cancellation</li>
-                            <li data-ids="navigation_module_5" class="">Tips</li>
-                            <li data-ids="navigation_module_6" class="">No Shipping Days</li>
-                        </ul>
-                    </div>
+    <div class="navigation-container">
+        <div class="navigation-main">
+            <div class="navigation-main-nav">
+                <h2>Category</h2>
+                <div class="navigation-main-nav-ul">
+                    <ul>
+                        <li data-ids="navigation_module_1" class="s_active">Shipping &amp; Handling</li>
+                        <li data-ids="navigation_module_2" class="">CEVA</li>
+                        <li data-ids="navigation_module_3" class="">Return Policy</li>
+                        <li data-ids="navigation_module_4" class="">Order Cancellation</li>
+                        <li data-ids="navigation_module_5" class="">Tips</li>
+                        <li data-ids="navigation_module_6" class="">No Shipping Days</li>
+                    </ul>
                 </div>
-                <div class="navigation-main-content">
-                    <div class="navigation-module" id="navigation_module_1">
-                        <h2>Shipping &amp; Handling</h2>
-                    </div>
+            </div>
+            <div class="navigation-main-content">
+                <div class="navigation-module" id="navigation_module_1">
+                    <h2>Shipping &amp; Handling</h2>
+                </div>
 
-                    <div class="navigation-module" id="navigation_module_2">
-                        <h2 class="navigation-main-content-mt32">CEVA</h2>
-                    </div>
+                <div class="navigation-module" id="navigation_module_2">
+                    <h2>CEVA</h2>
+                </div>
 
-                    <div class="navigation-module" id="navigation_module_3">
-                        <h2 class="navigation-main-content-mt32">Return Policy</h2>
-                    </div>
+                <div class="navigation-module" id="navigation_module_3">
+                    <h2>Return Policy</h2>
+                </div>
 
-                    <div class="navigation-module" id="navigation_module_4">
-                        <h2 class="navigation-main-content-mt32">Order Cancellation</h2>
-                    </div>
+                <div class="navigation-module" id="navigation_module_4">
+                    <h2>Order Cancellation</h2>
+                </div>
 
-                    <div class="navigation-module" id="navigation_module_5">
-                        <h2 class="navigation-main-content-mt32">Tips</h2>
+                <div class="navigation-module" id="navigation_module_5">
+                    <h2>Tips</h2>
 
-                    </div>
+                </div>
 
-                    <div class="navigation-module" id="navigation_module_6">
-                        <h2 class="navigation-main-content-mt32">No Shipping Days</h2>
-                    </div>
+                <div class="navigation-module" id="navigation_module_6">
+                    <h2>No Shipping Days</h2>
                 </div>
             </div>
         </div>
+    </div>
 
-
-        <script>
-            const nav_items = document.querySelectorAll(
-                ".navigation-container .navigation-main .navigation-main-nav ul li"
-            );
-            nav_items.forEach((item, i) => {
-                item.addEventListener("click", function (e) {
-                    nav_items.forEach(ele => {
-                        ele.classList.remove("s_active");
-                    });
-                    this.classList.add("s_active");
-                    this.scrollIntoView({
-                        inline: "center",
-                    });
-                    document.getElementById(`${item.dataset.ids}`).scrollIntoView({
-                        block: "start",
-                    });
+    <script>
+        const nav_items = document.querySelectorAll(
+            ".navigation-container .navigation-main .navigation-main-nav ul li"
+        );
+        nav_items.forEach((item, i) => {
+            item.addEventListener("click", function (e) {
+                nav_items.forEach(ele => {
+                    ele.classList.remove("s_active");
+                });
+                this.classList.add("s_active");
+                this.scrollIntoView({
+                    inline: "center",
+                });
+                document.getElementById(`${item.dataset.ids}`).scrollIntoView({
+                    block: "start",
                 });
             });
+        });
 
-        </script>
+        // 右侧内容区域（根据菜单的 data-ids 属性指向）
+        const content_sections = Array.from(nav_items).map(item =>
+            document.getElementById(item.dataset.ids)
+        );
+        // 检测右侧内容区域滚动事件
+        window.addEventListener("scroll", () => {
+            let activeIndex = -1;
 
+            // 遍历所有内容区域，找到当前进入视口的部分
+            content_sections.forEach((section, index) => {
+                const rect = section.getBoundingClientRect();
+                // 检测内容区域是否出现在视口中（设置触发条件，比如顶部 100px 内）
+                if (rect.top >= 0 && rect.top <= 100) {
+                    activeIndex = index;
+                }
+            });
 
-    </div>
+            // 如果检测到新的激活区域，更新菜单状态
+            if (activeIndex !== -1) {
+                nav_items.forEach(ele => ele.classList.remove("s_active"));
+                nav_items[activeIndex].classList.add("s_active");
+
+                // 可选：如果需要菜单自动滚动居中
+                // nav_items[activeIndex].scrollIntoView({
+                //     inline: "center", // 横向居中
+                //     behavior: "smooth", // 平滑滚动
+                // });
+            }
+        });
+    </script>
+
 </div>
