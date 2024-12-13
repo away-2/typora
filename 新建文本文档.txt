@@ -1,24 +1,29 @@
 <div>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- E7Pro_style start -->
   <style xml="space">
-    * {
-      scroll-margin: 154px;
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content {
+      overflow-y: hidden;
+    }
+
+    .yotpo.yotpo-main-widget {
+      background-color: #fdfcf5 !important;
     }
 
     .ant-collapse-content>.ant-collapse-content-box {
       padding: 0;
     }
 
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-case tr td {
-      padding: 0;
-      border: none;
-    }
-
     .comp-item-spu .item-spu-detail-pane .description-page .detail-pane-detail-content * {
       background: #fdfcf5;
     }
 
-    .description-page-container {
-      margin-top: 40px;
+    .description-page-container-max-width {
+      width: 1340px;
+      margin: 0 auto;
+      max-width: 100%;
     }
 
     .description-page-container-bg-gray {
@@ -33,19 +38,6 @@
       background: #043e1b;
     }
 
-    .banner~.banner {
-      margin-top: 30px;
-    }
-
-    .banner-m~.banner-m {
-      margin-top: 30px;
-    }
-
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .banner-m img {
-      width: 100%;
-      display: none;
-    }
-
     .detail-pane-detail-content img {
       border-radius: 12px;
     }
@@ -56,40 +48,9 @@
       display: flex;
       -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: start;
-      justify-content: space-between;
+      align-items: center;
       border-radius: 12px;
-      margin-top: 50px;
-    }
-
-    .description-page-container-item-flex {
-      width: 100%;
-      display: flex;
-      grid-column-gap: 23px;
-    }
-
-    .description-page-container-item-flex-content {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      max-width: 446px;
-    }
-
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex-content-text {
-      font-family: "Moderat-Bold" !important;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 24px;
-      text-align: center;
-      color: #26333a;
-      margin-top: 24px;
-    }
-
-    .comp-item-spu .item-spu-detail-pane .banner img,
-    .comp-item-spu .item-spu-detail-pane .banner-m img {
-      width: 100%;
-      height: auto;
+      /* margin-bottom: 100px; */
     }
 
     .description-page-container-item-text-box {
@@ -110,23 +71,29 @@
     }
 
     .description-page-container-item-text-left {
-      margin: auto 0 auto 122px;
+      padding: 0 60px 0 40px;
     }
 
     .description-page-container-item-text-right {
-      /* padding: 20px 40px 20px 100px; */
-      margin: auto;
+      padding: 0 40px 0 60px;
     }
 
-    .description-page-container-item-img {
-      width: 620px;
+    .description-page-container-box {
+      padding: 0 96px;
+    }
+
+    .description-page-container-item-img-right {
+      width: 50%;
+      text-align: right;
+    }
+
+    .description-page-container-item-img-left {
+      width: 50%;
+      text-align: left;
     }
 
     .description-page-container-item-text {
-      /* width: 50%; */
-      max-width: 500px;
-      /* padding-top: 20px;
-      padding-bottom: 20px; */
+      width: 50%;
       -webkit-box-flex: 1;
       -ms-flex: 1;
       flex: 1;
@@ -143,103 +110,268 @@
     }
 
     .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-smalltitle {
-      font-family: "Moderat-Bold" !important;
+      font-family: "Moderat-Medium" !important;
       font-style: normal;
       font-weight: 700;
       font-size: 14px;
       line-height: 14px;
-      letter-spacing: 0.7px;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
-      color: #004df2;
+      color: #26333a;
       position: relative;
     }
 
     .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title {
-      font-family: "SupremeLLSub-Black" !important;
+      font-family: "Zen-Kaku-Gothic-New-Black" !important;
       font-style: normal;
       font-weight: 900;
-      font-size: 52px;
-      line-height: 60px;
-      font-feature-settings: "pnum" on, "lnum" on, "ss01" on, "ss04" on,
-        "liga" off;
+      font-size: 40px;
+      line-height: 120%;
+      font-feature-settings: "pnum" on, "lnum" on, "ss01" on, "ss04" on, "liga" off;
       color: #26333a;
-      margin-top: 20px;
-      margin-bottom: 8px;
     }
 
     .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle {
       max-width: 500px;
-      font-family: "Moderat-Regular" !important;
+      font-family: "NotoSansJP-Regular" !important;
       font-style: normal;
       font-weight: 400;
-      font-size: 16px;
-      line-height: normal;
-      font-feature-settings: "pnum" on, "lnum" on, "ss02" on;
+      font-size: 20px;
+      line-height: 120%;
+      font-variant-numeric: lining-nums tabular-nums;
+      font-feature-settings: "ss03" on, "ss04" on, "liga" off;
       color: rgba(38, 51, 58, 0.8);
+      margin-top: 24px;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle span {
+      color: #004df2;
+      font-family: "NotoSansJP-Medium" !important;
+      font-weight: 700;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle strong {
+      font-family: "NotoSansJP-Medium" !important;
+      font-weight: 700;
+      color: #26333a;
+      opacity: 0.8;
+      letter-spacing: 1.5px;
+    }
+
+    .description-page-container-item-text-subtitle-icon {
+      font-family: "NotoSansJP" !important;
+      font-style: normal;
+      font-weight: 702;
+      font-size: 16px;
+      line-height: 16px;
+      color: #004df2;
       margin-top: 16px;
     }
 
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle-theme {
-      line-height: 24px !important;
+    .border-bottom {
+      width: 500px;
+      height: 1px;
+      background: #EDE9E4;
+      margin-top: 16px;
+    }
+
+    .description-page-container-item-text-small-title {
+      color: #004DF2;
+      font-family: "NotoSansJP-Medium";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 14px;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle-small {
+      font-family: "NotoSansJP-Regular" !important;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #26333a;
+      margin-top: 10px;
+      min-width: 100%;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-white {
+      color: #ede9e4;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-box-four .description-page-container-box-four-title {
+      margin-top: 100px;
+      text-align: center;
+      font-family: "SupremeLLSub-Black" !important;
+      font-size: 40px;
+      font-weight: 900;
+      line-height: 44px;
+      letter-spacing: 0em;
+      text-align: center;
       color: #26333a;
     }
 
-    .border-left {
-      border-left: 1px solid rgba(38, 51, 58, 0.2) !important;
+    .description-page-container-item-box {
+      width: 50%;
+      padding-bottom: 30px;
+      border-bottom: 1.5px solid #d2d1d1;
     }
 
-    @media (max-width: 1420px) {
+    .description-page-container-item-line {
+      border-bottom: 1px solid rgba(237, 233, 228, 0.5);
+      padding-bottom: 16px;
+    }
+
+    .description-page-container-item-line-o {
+      border-bottom: 1px solid rgba(237, 233, 228, 0.2);
+      padding-bottom: 16px;
+    }
+
+    .description-page-container-item-line-g {
+      border-bottom: 1px solid #ede9e4;
+      padding-bottom: 16px;
+    }
+
+    .description-page-container-item-img-padding {
+      padding: 30px 25px;
+    }
+
+    .accessories_block .accessories .home-active-l {
+      display: block !important;
+    }
+
+    .accessories_block .accessories .home-active-m {
+      display: none !important;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex {
+      display: flex;
+      grid-column-gap: 20px;
+      grid-template-columns: auto auto auto auto;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex-content-text {
+      color: #26333a;
+      text-align: center;
+      font-variant-numeric: lining-nums proportional-nums;
+      font-feature-settings: "ss01" on, "ss04" on;
+      font-family: "Zen-Kaku-Gothic-New-Black" !important;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 28px;
+      /* 140% */
+      margin-bottom: 24px;
+    }
+
+    .description-page {
+      max-width: 1384px;
+      /* padding: 207px 0; */
+      margin: 0 auto;
+    }
+
+    .description-page .description-page-container-normal-box {
+      /* margin: 0 auto; */
+      max-width: 1384px;
+      padding: 60px 0;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-button2 {
+      border-radius: 100px;
+      background: #004df3;
+      text-align: center;
+      padding: 5px 0px;
+      color: #fdfcf5;
+      font-feature-settings: "liga" off;
+      font-family: "Zen-Kaku-Gothic-New-Black" !important;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 120%;
+      width: 254px;
+      margin: 20px auto;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-title2 {
+      font-family: "Zen-Kaku-Gothic-New-Black" !important;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 46px;
+      line-height: 60px;
+      text-align: center;
+      font-feature-settings: "liga" off;
+      color: #26333a;
+      margin-top: 60px;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-desc2 {
+      color: #26333a;
+      text-align: center;
+      font-feature-settings: "liga" off;
+      font-family: "NotoSansJP-Regular" !important;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+    }
+
+
+    .border {
+      border-bottom: 1px solid #ede9e4;
+      padding-bottom: 16px;
+    }
+
+    .mb100 {
+      margin: 100px 0px !important;
+    }
+
+    @media (max-width: 1440px) {
       .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle {
-        font-size: 15px;
+        font-size: 18px;
         line-height: 20px;
         margin-top: 20px;
       }
 
       .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title {
-        font-size: 46px;
+        font-size: 38px;
         line-height: 50px;
-        margin-top: 20px;
       }
 
-      .description-page-container-item-flex {
-        margin: 0 auto;
-      }
-    }
-
-    @media (max-width: 1280px) {
-      .ant-collapse-content>.ant-collapse-content-box {
-        padding: 0 20px;
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-bigtitle {
+        font-size: 60px;
       }
 
-      .description-page-container-item-text-left {
-        padding: 20px 70px 20px 40px;
+      .border-bottom {
+        width: 400px;
       }
 
-      .description-page-container-item-text-right {
-        padding: 20px 40px 20px 70px;
-      }
-
-      .description-page-container-item-text-box {
-        padding: 30px 70px 30px 90px;
-      }
-
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title {
-        font-size: 42px;
-        line-height: 46px;
-      }
-
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title {
-        font-size: 35px;
-      }
     }
 
     @media (max-width: 1024px) {
-      .comp-item-spu .item-spu-detail-pane .description-page-container-item-flex img {
-        max-width: 320px;
-        width: 320px;
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-button2 {
+        font-size: 20px;
+        margin: 10px auto;
       }
 
-      .description-page-container-item:has(.description-page-container-item-flex) {
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-title2 {
+        font-size: 40px;
+        margin-top: 40px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex {
         overflow: auto;
       }
 
@@ -264,16 +396,109 @@
       }
 
       .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title {
-        font-size: 36px;
-        line-height: 40px;
+        font-size: 35px;
+        line-height: 120%;
       }
 
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title {
-        font-size: 29px;
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle {
+        font-size: 16px;
+        line-height: 120%;
+      }
+
+      .border-bottom {
+        width: 284px;
       }
     }
 
     @media (max-width: 768px) {
+      .description-page {
+        max-width: 768px;
+        /* padding: 50px 20px; */
+        margin: 0 auto;
+      }
+
+      .description-page .description-page-container-normal-box {
+        /* max-width: 375px; */
+        padding: 30px 0;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-title2 {
+        font-size: 32px;
+        margin-top: 30px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-title {
+        font-size: 32px;
+        line-height: normal;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-desc2 {
+        font-size: 16px;
+      }
+
+
+      .description-page-container-item {
+        margin-bottom: 40px !important;
+        margin-top: 0px !important;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex::-webkit-scrollbar {
+        height: 5px;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex::-webkit-scrollbar-thumb {
+        height: 5px;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-title {
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 36px;
+      }
+
+      .description-page-container-item-img-right {
+        width: 100%;
+        text-align: center;
+      }
+
+      .description-page-container-item-img-left {
+        width: 100%;
+        text-align: left;
+      }
+
+      .description-page-container-item-img-right {
+        width: 100%;
+        text-align: left;
+      }
+
+      /* .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item-flex
+        img {
+        max-width: 370px;
+
+      } */
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex {
+        /* overflow: auto; */
+        flex-direction: column;
+        margin-bottom: 40px;
+        row-gap: 30px;
+        width: 100%;
+      }
+
+      .accessories_block .accessories .home-active-l {
+        display: none !important;
+      }
+
+      .accessories_block .accessories .home-active-m {
+        display: block !important;
+      }
+
       .description-page-container-margin60 {
         margin-top: 20px;
       }
@@ -282,31 +507,22 @@
         padding: 0;
       }
 
-      .description-page-container .banner img {
-        width: 100%;
-        display: none;
-      }
-
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .banner-m img {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
-
       .description-page-container {
         width: 100%;
-        padding: 0;
-        margin-top: 24px;
+      }
+
+      .description-page-container-box {
+        padding: 0 20px;
       }
 
       .description-page-container-item-text-right,
       .description-page-container-item-text-left {
-        padding: 20px 40px;
+        padding: 0 !important;
+        text-align: left;
       }
 
       .description-page-container-item-text {
-        padding-top: 20px;
-        margin-bottom: 22px;
+        margin-bottom: 30px;
       }
 
       .description-page-container-item {
@@ -314,23 +530,13 @@
         margin-top: 30px;
       }
 
-      .description-page-container-item-flex {
-        flex-direction: column;
-        gap: 30px;
+      .mb {
+        margin-bottom: 0 !important;
       }
 
-      .description-page-container-item:has(.description-page-container-item-flex) {
-        overflow: auto;
-      }
-
-      .comp-item-spu .item-spu-detail-pane .description-page-container-item-flex img {
-        max-width: 100%;
-        width: 100%;
-      }
-
-      .description-page-container-item-flex-content-text {
-        font-size: 18px;
-        line-height: 24px;
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex-content-text {
+        font-size: 14px;
+        line-height: 22px;
       }
 
       .description-page-container-item-text-box {
@@ -349,18 +555,19 @@
         margin-top: 33px;
       }
 
-      .description-page-container-item-text-box:has(.description-page-container-item-text-title) {
+      /* .description-page-container-item-text-box:has(
+          .description-page-container-item-text-title
+        ) {
         padding: 0 36px;
-      }
-
+      } */
       .description-page-container-item:has(.description-page-container-item-text-box) {
         align-items: flex-start;
       }
 
-      .description-page-container-bg-gray,
-      .description-page-container-bg-green {
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container .description-page-container-bg-gray,
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container .description-page-container-bg-green {
         border-radius: 12px;
-        padding-top: 0px;
+        padding-top: 39px;
       }
 
       .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-smalltitle {
@@ -369,32 +576,48 @@
       }
 
       .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title {
-        font-size: 30px;
-        line-height: normal;
-        margin-top: 24px;
+        font-size: 24px;
       }
 
       .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle {
-        font-size: 16px;
-        line-height: normal;
-        margin-top: 16px;
+        font-size: 14px;
+        line-height: 120%;
+        margin-top: 12px;
       }
 
-      .description-page-container-item-i {
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle-small {
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container .description-page-container-bg-green .description-page-container-item-text-subtitle-small:last-child {
+        padding-bottom: 33px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container .description-page-container-item-line-m {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ede9e4;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container .description-page-container-item-i {
         width: 100%;
         margin-top: 30px;
       }
 
-      .description-page-container-item-i img {
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container .description-page-container-item-i img {
         width: 100%;
       }
 
-      .description-page-container-item-img,
-      .description-page-container-item-text {
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container .description-page-container-item-text {
         width: 100%;
       }
 
-      .description-page-container-item-text-img {
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container .description-page-container-item-line-o {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container .description-page-container-item-text-img {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -402,69 +625,114 @@
         margin-bottom: 20px;
       }
 
-      .description-page-container-pad-m {
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container .description-page-container-pad-m {
         padding: 0 20px;
       }
 
-      .description-page-container-item-img-theme {
-        flex-direction: column;
+      .border-bottom {
+        width: 335px;
+      }
+
+      .mb100 {
+        margin: 60px 0px !important;
       }
     }
   </style>
+
   <style>
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex-content-tip {
-      margin-top: 12px;
-      font-family: "Moderat-Regular" !important;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: center;
-      color: #26333acc;
+    .home-active-l {
+      display: block;
     }
 
-    .flex-end {
-      display: flex;
-      justify-content: flex-end;
+    .home-active-m {
+      display: none;
     }
 
-    .pr {
-      padding-right: 128px;
-    }
-
-    .pl {
-      padding-left: 175px;
-    }
-
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle {
+    .master_map {
       position: relative;
     }
 
+    .master_map .master_map-absolute-box {
+      position: absolute;
+      top: 70px;
+      left: 68px;
+    }
+
+    .master_map .master_map-absolute-box .master_map-title {
+      color: #FDFCF5;
+      font-variant-numeric: lining-nums proportional-nums;
+      font-feature-settings: 'ss01' on, 'ss04' on, 'liga' off;
+      font-family: "Zen-Kaku-Gothic-New-Black" !important;
+      font-size: 46px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 120%;
+    }
+
+    .master_map .master_map-absolute-box .master_map-desc {
+      color: #FDFCF5;
+      font-family: "NotoSansJP-Regular" !important;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      letter-spacing: 1px;
+      opacity: 0.8;
+      max-width: 530px;
+      margin-top: 24px;
+    }
+
+    .master_map_mobile {
+      display: none;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container .description-page-container-item-text-theme {
+      width: 100%;
+      margin-top: 28px;
+      padding-top: 30px;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-theme .description-page-container-item-text-subtitle {
+      max-width: 937px;
+      font-size: 16px;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container .description-page-container-box-four {
+      padding: 0;
+    }
+
+    .pr {
+      padding-right: 60px;
+    }
+
+    .pl {
+      /* padding: 0px 100px; */
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle .text-blue {
+      margin-bottom: 4px;
+      font-family: "Moderat-Medium" !important;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 16px;
+      color: #004df2;
+    }
+
     .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item .description-page-container-item-context {
-      max-width: 1091px;
-      margin: 0 auto 52px;
-      text-align: center;
-      font-family: "Moderat-Regular" !important;
+      font-family: "NotoSansJP-Regular" !important;
       font-style: normal;
       font-weight: 400;
       font-size: 20px;
       line-height: 28px;
       color: #26333a;
+      padding-left: 74px;
     }
 
     .flex-column {
-      padding-bottom: 55px;
+      padding-bottom: 85px;
       flex-direction: column;
-    }
-
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-case .description-page-container-item-case-item .description-page-container-item-case-item-td {
-      border-bottom: 1px solid rgba(38, 51, 58, 0.2);
-      border-left: 1px solid rgba(38, 51, 58, 0.2);
-    }
-
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-case {
-      max-width: 1207px;
-      margin: auto;
+      align-items: flex-start;
     }
 
     .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title-theme {
@@ -472,602 +740,467 @@
       margin-bottom: 0;
     }
 
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle strong {
-      color: #26333a;
-      font-variant-numeric: lining-nums tabular-nums;
-      font-feature-settings: "ss04" on, "liga" off;
-      font-family: "Moderat-Bold" !important;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 24px;
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-theme .description-page-container-item-text-subtitle-theme {
+      margin-top: 12px;
     }
 
-    .w-theme {
-      width: 157px !important;
-    }
-
-    @media screen and (max-width: 768px) {
-      /* .comp-item-spu
-        .item-spu-detail-pane
-        .detail-pane-detail-content
-        .banner-m {
-        padding: 0 20px;
-      } */
-
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title {
-        font-size: 24px;
-        margin-top: 12px;
-      }
-
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle {
-        font-size: 14px;
-        margin-top: 12px;
-      }
-
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex-content-text,
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex-content-tip {
-        padding-left: 0px;
-        padding-right: 0px;
-        text-align: center;
-      }
-
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex-content-text {
-        margin-bottom: 20px;
-        font-weight: 900;
-        font-family: "SupremeLLSub-Black" !important;
-      }
-
-      .description-page-container-item-flex-content {
-        margin-bottom: 0;
-      }
-
-      .description-page-container-item {
-        margin: 40px 20px 0;
-      }
-
-      .pr {
-        padding: 17px 22px 0 33px;
-      }
-
-      .pl {
-        padding: 0 31px 0 33px;
-      }
-
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item .description-page-container-item-context {
-        max-width: 244px;
-        margin-bottom: 30px;
-        padding-left: 0;
-        padding-right: 0;
-        font-size: 12px;
-        line-height: normal;
-      }
-
-      .description-page-container-item-case {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 33px;
-      }
-
-      .description-page-container-item-case {
-        margin-top: 0;
-      }
-
-      .flex-column {
-        padding-bottom: 12px;
-      }
-
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex-content-tip {
-        margin-bottom: 20px;
-        font-size: 14px;
-        line-height: normal;
-      }
-
-      .description-page-container-item-case .description-page-container-item-case-item .table-img-theme img {
-        width: 26px;
-      }
-
-      .w-theme {
-        width: 58px !important;
-      }
-
-      .description-page-container-item-text-left {
-        margin: auto;
-      }
-    }
-  </style>
-  <style>
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content {
-      overflow: hidden;
-    }
-
-    .description-page-container-item-img-theme {
-      display: flex;
-    }
-
-    .description-page-container-item-img-theme img {
-      width: 430px;
-    }
-
-    .description-page-container-item .description-page-container-item-Imgtext {
-      width: 49%;
-    }
-
-    .description-page-container-item .description-page-container-item-Imgtext img {
-      width: 100%;
-      border-radius: 12px;
-    }
-
-    .description-page-container-item .description-page-container-item-Imgtext .description-page-container-item-Imgtext-title {
-      font-family: "SupremeLLSub-Medium" !important;
-      font-size: 24px;
-      font-weight: 500;
-      line-height: 120%;
-      text-align: left;
-      padding: 0 91px;
-      margin: 30px 0 16px;
-      color: #26333a;
-    }
-
-    .description-page-container-item .description-page-container-item-Imgtext .description-page-container-item-Imgtext-content {
-      font-family: "Moderat-Regular" !important;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 120%;
-      text-align: left;
-      padding: 0 91px;
-      margin-bottom: 28px;
-      color: #26333acc;
-    }
-
-    .description-page-container-item-text-Small {
-      max-width: 344px;
-    }
-
-    .description-page-container-item-rightThree {
-      margin: auto auto auto 144px;
-    }
-
-    .description-page-container-item-rightThree .description-page-container-item-rightThree-item {
-      display: flex;
-      margin-bottom: 28px;
-    }
-
-    .description-page-container-item-rightThree .description-page-container-item-rightThree-item .description-page-container-item-rightThree-item-img {
-      width: 140px;
-    }
-
-    .description-page-container-item-rightThree .description-page-container-item-rightThree-item .description-page-container-item-rightThree-item-img img {
-      width: 100%;
-    }
-
-    .description-page-container-item-rightThree .description-page-container-item-rightThree-item .description-page-container-item-rightThree-item-Content {
-      padding-left: 24px;
-      padding-right: 32px;
-    }
-
-    .description-page-container-item-rightThree .description-page-container-item-rightThree-item .description-page-container-item-rightThree-item-Content .description-page-container-item-rightThree-item-title {
-      font-family: "Moderat-Bold" !important;
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 120%;
-      text-align: left;
-      margin-top: 48px;
-      color: #26333a;
-    }
-
-    .description-page-container-item-rightThree .description-page-container-item-rightThree-item .description-page-container-item-rightThree-item-Content .description-page-container-item-rightThree-item-text {
-      font-family: "Moderat-Regular" !important;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 120%;
-      text-align: left;
-      margin-top: 14px;
-      color: #26333a;
-      width: 424px;
-    }
-
-    .details_content {
-      width: 500px;
-    }
-
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .details_content .details_content_bigTitle {
-      font-family: "SupremeLLSub-Medium" !important;
-      font-size: 24px;
-      font-weight: 500;
-      line-height: 120%;
-      text-align: left;
-      margin-top: 30px;
-      color: #26333a;
-    }
-
-    .details_content .details_content_TitleTxet {
-      margin-top: 16px;
-    }
-
-    .details_content .details_content_TitleTxet .details_content_Title_title {
-      font-family: "Moderat-Bold" !important;
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 120%;
-      text-align: left;
-      color: #26333a;
-    }
-
-    .details_content .details_content_TitleTxet .details_content_Title_text {
-      font-family: "Moderat-Regular" !important;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 120%;
-      text-align: left;
-      color: #26333acc;
-    }
-
-    @media screen and (max-width: 768px) {
-      .description-page-container-item .description-page-container-item-Imgtext {
-        width: 100%;
-      }
-
-      .description-page-container-item .description-page-container-item-Imgtext .description-page-container-item-Imgtext-title {
-        padding: 0 37.5px;
-      }
-
-      .description-page-container-item .description-page-container-item-Imgtext .description-page-container-item-Imgtext-content {
-        padding: 0 37.5px;
-      }
-
-      .description-page-container-item-rightThree {
-        margin: 22px auto auto auto;
-        padding: 0 14px;
-      }
-
-      .description-page-container-item-rightThree .description-page-container-item-rightThree-item .description-page-container-item-rightThree-item-Content .description-page-container-item-rightThree-item-title {
-        margin-top: 7px;
-      }
-
-      .description-page-container-item-rightThree .description-page-container-item-rightThree-item .description-page-container-item-rightThree-item-Content .description-page-container-item-rightThree-item-text {
-        width: auto;
-        margin-top: 9.5px;
-      }
-
-      .details_content {
-        width: 256px;
-      }
-
-      .details_content .details_content_bigTitle {
-        font-size: 20px;
-        margin-top: 20px;
-      }
-
-      .details_content .details_content_TitleTxet {
-        margin-top: 10px;
-      }
-    }
-  </style>
-  <style>
-    .description-page-container-item-table {
-      max-width: 1981px;
-      margin: auto;
-      /* margin-top: 20px; */
-    }
-
-    .description-page-container-item-table table {
-      border-collapse: collapse;
-    }
-
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td {
-      color: #26333a;
-      text-align: center;
-      font-feature-settings: "liga" off;
-      font-family: "Moderat-Bold" !important;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 16px;
-      border: none;
-      word-break: keep-all;
-      height: 40px;
-      /* border-top: 0.7px solid #f1f1f1; */
-      border-bottom: 0.7px solid #f1f1f1;
-      padding: 40px 0;
-    }
-
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.bold {
-      font-family: "SupremeLLSub-Bold" !important;
-      font-size: 28px;
-      font-weight: 710;
-      line-height: 33.6px;
-      color: #fff;
-      background: #26333a;
-    }
-
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.pc {
-      display: revert;
-    }
-
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.mobile {
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .master_map_mobile-desc {
       display: none;
     }
 
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr.header {
-      /* background-color: #26333a; */
-    }
-
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.head {
-      color: #fff;
-      font-size: 28px !important;
-    }
-
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.second-item {
-      font-size: 22px;
-      font-weight: 700;
-      line-height: 22px;
-      text-align: center;
-      /* color: #004df2; */
-    }
-
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td:nth-child(1) {
-      width: 25%;
-      text-align: left;
-      font-size: 16px;
-      font-weight: 400;
-      color: #26333a;
-    }
-
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td:nth-child(2) {
-      width: 25%;
-    }
-
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td:nth-child(3) {
-      width: 25%;
-      font-weight: 700;
-    }
-
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td:nth-child(4) {
-      width: 25%;
-      font-weight: 700;
-    }
-
-    .scoreBox {
-      /* display: flex; */
-      /* gap: 4px; */
-      /* margin: auto;
-       */
-      margin-right: 4px;
-    }
-
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .banner .scoreBox img {
-      width: 14px;
-      height: 14px;
-      margin: auto;
-    }
-
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .banner .trueErrorImg {
-      width: 30px;
-      height: 30px;
-      margin: auto;
-    }
-
-    .headerImg {
-      display: flex;
-      gap: 4px;
-      align-items: center;
-    }
-
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .headerImg img {
-      width: 40px;
-      height: 40px;
-    }
-
-    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td .headerImg {
-      font-family: "Moderat-Bold" !important;
-    }
-
-    .tableHeaderImg {
-      padding: 0 85px 0 0;
-    }
-
+    /* .description-page-container-item {
+      margin-top: 100px;
+    } */
     @media screen and (max-width: 1440px) {
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.pc {
-        display: none;
+      .master_map {
+        position: relative;
       }
 
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.mobile {
-        display: revert;
-        font-weight: 700;
-        /* font-size: 10px; */
+      .master_map .master_map-absolute-box {
+        position: absolute;
+        top: 60px;
+        left: 58px;
       }
 
-      .tableHeaderImg {
-        padding: 0 60px 0 0;
+      .master_map .master_map-absolute-box .master_map-title {
+        font-size: 40px;
+      }
+
+      .master_map .master_map-absolute-box .master_map-desc {
+        font-size: 16px;
+        max-width: 450px;
+        margin-top: 20px;
       }
     }
 
     @media screen and (max-width: 1024px) {
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.pc {
-        display: none;
+      .master_map {
+        position: relative;
       }
 
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.mobile {
-        display: revert;
-        font-weight: 700;
-        /* font-size: 8px; */
+      .master_map .master_map-absolute-box .master_map-title {
+        font-size: 30px;
       }
 
-      .tableHeaderImg {
-        padding: 0 50px 0 0;
+      .master_map .master_map-absolute-box .master_map-desc {
+        font-size: 14px;
+        max-width: 350px;
+        margin-top: 12px;
+      }
+
+      .master_map .master_map-absolute-box {
+        position: absolute;
+        top: 20px;
+        left: 20px;
       }
     }
 
-    @media (max-width: 768px) {
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .banner-m .scoreBox img {
-        width: 14px;
-        height: 14px;
+    @media screen and (max-width: 768px) {
+      .home-active-l {
+        display: none !important;
       }
 
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .banner-m .trueErrorImg {
-        width: 30px;
-        height: 30px;
-        margin: auto;
+      .home-active-m {
+        display: block !important;
       }
 
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content table {
-        -webkit-border-horizontal-spacing: 8px;
-        -webkit-border-vertical-spacing: 8px;
-      }
-
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td,
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.bold {
-        padding: 5px;
-        font-size: 6.78px;
-        line-height: 8.13px;
-        font-weight: 710;
-      }
-
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.pc {
+      .master_map {
         display: none;
       }
 
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.mobile {
-        display: revert;
-        font-weight: 700;
-        font-size: 4.841px;
-      }
-
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td {
-        font-size: 4.84px;
-        font-weight: 700;
-        line-height: 4.84px;
-        text-align: center;
-        padding: 9.68px;
-      }
-
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.head {
-        font-size: 8.714px !important;
-        font-weight: 710 !important;
-      }
-
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.head {
-        font-size: 8.71px;
-        font-weight: 710;
-        line-height: 10.46px;
-        text-align: center;
-      }
-
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.second {
-        font-size: 5.325px;
-        font-weight: 700;
-        text-align: center;
-      }
-
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td.second-item {
-        font-size: 5.33px;
-        font-weight: 700;
-        line-height: 5.33px;
-        text-align: center;
-      }
-
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td:nth-child(1) {
-        font-size: 4.84px;
-        font-weight: 400;
-        line-height: 4.84px;
-        text-align: center;
-      }
-
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-table table tr td svg {
-        width: 12px;
-        height: 10px;
-      }
-
-      .table-wrapper {
+      .master_map_mobile {
+        display: block;
+        position: relative;
         width: 100%;
-        /* max-height: 400px; */
-        overflow: auto;
-        -webkit-overflow-scrolling: touch;
-        margin-top: 35px;
       }
 
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .table-wrapper table {
-        width: 200%;
-        border-collapse: collapse;
-      }
 
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .table-wrapper table td {
-        border: none;
-      }
-
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .table-wrapper table th,
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .table-wrapper table td {
-        padding: 23px 0;
-        border: none;
-        white-space: nowrap;
-        font-family: "Moderat-Bold" !important;
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .master_map_mobile-desc {
+        display: block;
+        color: #26333A;
+        font-family: "NotoSansJP-Regular" !important;
         font-size: 14px;
-        font-weight: 700;
-        line-height: 120%;
-        text-align: center;
-        color: #26333a;
-        border-bottom: #26333a1a solid 0.6px;
-      }
-
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .table-wrapper table th {
-        color: #fdfcf5;
-        background-color: #26333a;
-      }
-
-      /* 固定表头 */
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .table-wrapper thead th {
-        color: #fdfcf5;
-        background-color: #26333a;
-        position: sticky;
-        top: 0;
-        z-index: 3;
-        font-family: "SupremeLLSub-Black" !important;
-        font-size: 16px;
-        font-weight: 710;
-        line-height: 120%;
-        text-align: center;
-      }
-
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .table-wrapper tbody td:first-child .headerImg {
-        font-family: " Moderat-Bold" !important;
-        font-size: 14px;
-        font-weight: 700;
-        color: #26333a;
-      }
-
-      /* 固定第一列 */
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .table-wrapper tbody td:first-child,
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .table-wrapper thead th:first-child {
-        position: sticky;
-        left: -1px;
-        z-index: 2;
-        background: #fdfcf5;
-        font-family: "Moderat-Medium" !important;
-        font-size: 12px;
+        font-style: normal;
         font-weight: 400;
+        line-height: 130%;
+        letter-spacing: 0.7px;
+        margin-bottom: 40px;
+        opacity: 0.8;
+        max-width: 335px;
+      }
+
+      .master_map_mobile img {
+        max-width: 100%;
+        /* width: 100% !important; */
+      }
+
+      .master_map_mobile .master_map_mobile-absolute-box {
+        position: absolute;
+        top: 26px;
+        left: 23px;
+        max-width: 192px;
+      }
+
+      .master_map_mobile .master_map_mobile-absolute-box .master_map_mobile-title {
+        color: #FDFCF5;
+        text-align: center;
+        font-variant-numeric: lining-nums proportional-nums;
+        font-feature-settings: 'ss01' on, 'ss04' on, 'liga' off;
+        font-family: "Zen-Kaku-Gothic-New-Black" !important;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 120%;
+        text-align: center;
+      }
+
+      .master_map_mobile .master_map_mobile-absolute-box .master_map_mobile-title span {
+        width: 22px;
+        height: 22px;
+        color: #26333A;
+        background: #fff;
+        border-radius: 50%;
+        margin: 5px 0;
+
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container .description-page-container-item-text-theme {
+        margin-top: 38px;
+        padding-top: 0;
+      }
+
+      /* .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle {
+        margin-top: 8px;
+      } */
+
+      .description-page-container-item-text-small-title {
+        font-size: 12px;
         line-height: 12px;
-        text-align: left;
-        color: #26333acc;
+        margin-bottom: 12px;
       }
 
-      /* 确保左上角单元格在最上层 */
-      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .table-wrapper thead th:first-child {
-        z-index: 4;
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container .description-page-container-item {
+        margin: 0;
       }
 
-      .scoreBox {
-        display: flex;
-        justify-content: center;
-        gap: 5px;
+      .pr {
+        padding: 0px;
+      }
+
+      .pl {
+        padding: 0px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title {
+        font-size: 32px;
+        line-height: 120%;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle {
+        margin-top: 12px;
+        font-size: 16px;
+        line-height: 120%;
+        max-width: 335px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle .text-blue {
+        left: -24px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item .description-page-container-item-context {
+        padding-left: 32px;
+        padding-right: 12px;
+      }
+
+      .flex-column {
+        padding-bottom: 57px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex-content-text {
+        font-size: 20px;
+        line-height: 120%;
+        /* 24px */
+        margin-bottom: 15px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-title {
+        font-size: 21px;
+        line-height: 120%;
+        text-align: center;
+        max-width: 85%;
+        margin: 0 auto;
       }
     }
   </style>
-  <!-- video相关 -->
-  <style>
-    .description-page-container-item-kittok {
+  <!-- E7Pro_style end -->
+
+  <!-- C7Air_style start -->
+  <style xml="space">
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content {
+      overflow-y: visible;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content img {
+      height: auto;
+    }
+
+    .yotpo.yotpo-main-widget {
+      background-color: transparent !important;
+    }
+
+    .description-page * {
+      background: initial;
+    }
+
+    .additional-info__section .container {
+      width: 1384px;
+    }
+
+    .ant-collapse-content>.ant-collapse-content-box {
+      padding: 16px 0;
+    }
+
+    .description-page-container-max-width {
+      width: 1340px;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+
+    .description-page-container-bg-gray {
+      background: #f6f4f1;
+    }
+
+    .description-page-container-bg-black {
+      background: #282828;
+    }
+
+    .description-page-container-bg-green {
+      background: #043e1b;
+    }
+
+    .description-page-container-text-color-blue {
+      color: #004df2;
+    }
+
+    .banner-m img {
+      width: 100%;
+      display: none;
+    }
+
+    .description-page img {
+      border-radius: 12px;
+    }
+
+    .img-left-radius {
+      border-radius: 12px 0px 0px 12px;
+    }
+
+    .description-page-container-item {
       position: relative;
-      width: 323px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 12px;
+      margin-top: 60px;
+    }
+
+    .description-page-container-item-text-box {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: baseline;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      padding: 0 60px;
+      max-width: 690px;
+    }
+
+    .description-page-container-item-text-img {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: baseline;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      padding: 0 60px;
+      max-width: 620px;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-smalltitle {
+      font-family: "NotoSansJP-Medium" !important;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 14px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #26333a;
+      position: relative;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title {
+      font-family: "Zen-Kaku-Gothic-New-Black" !important;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 60px;
+      font-feature-settings: "pnum" on, "lnum" on, "ss01" on, "ss04" on, "liga" off;
+      color: #26333a;
+      max-width: 500px;
+      margin-top: 28px;
+      margin-bottom: 28px;
+    }
+
+    .big-title {
+      width: 669px;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle {
+      font-family: "NotoSansJP-Regular" !important;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      font-feature-settings: "pnum" on, "lnum" on, "ss02" on;
+      color: #26333a;
+      max-width: 500px;
+      margin-top: 4px;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle-icon {
+      font-family: "NotoSansJP-Medium" !important;
+      font-style: normal;
+      font-weight: 702;
+      font-size: 16px;
+      line-height: 16px;
+      color: #004df2;
+      margin-top: 16px;
+    }
+
+    .description-page-container-item-text-mt {
+      margin-top: 40px;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-title {
+      font-family: "Zen-Kaku-Gothic-New-Medium" !important;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 44px;
+      text-align: center;
+      font-feature-settings: "pnum" on, "lnum" on, "ss01" on, "ss04" on, "liga" off;
+      color: #26333a;
+      padding: 100px 0 40px 0;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-title-hide {
+      padding: 20px 0 40px 0;
+    }
+
+    .description-page-container-item-flex {
+      display: flex;
+      grid-column-gap: 34px;
+      grid-template-columns: auto auto auto auto;
+    }
+
+    .description-page-container-item-flex img {
+      max-width: 430px;
+      width: 430px;
+      height: auto;
+    }
+
+    .description-page-container-item-flex-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex-content-text {
+      font-family: "NotoSansJP-Medium" !important;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 0.05em;
+      color: #26333a;
+      margin-top: 18px;
+      padding: 0 35px;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex-content-smalltext {
+      font-family: "NotoSansJP-Regular" !important;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 0.05em;
+      color: #26333a;
+      margin-top: 18px;
+      padding: 0 35px;
+    }
+
+    .description-page-container-item-theme {
+      justify-content: center;
+    }
+
+    .description-page-container-item-theme .description-page-container-item-bigtitle .description-page-container-item-bigtitle-text {
+      color: #26333a;
+      text-align: center;
+      font-feature-settings: "ss04" on, "ss01" on, "liga" off;
+      font-family: "Zen-Kaku-Gothic-New-Black" !important;
+      font-size: 52px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 120%;
+    }
+
+    .description-page-container-item-theme .description-page-container-item-bigtitle .description-page-container-item-bigtitle-detail {
+      margin: 14px 0 84px;
+      color: #26333a;
+      text-align: center;
+      font-feature-settings: "ss04" on, "ss01" on, "liga" off;
+      font-family: "NotoSansJP-Regular" !important;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      letter-spacing: 1.8px;
+    }
+
+    .description-page-container-item-text-white {
+      color: #ede9e4;
+    }
+
+    .description-page-container-item-line {
+      border-bottom: 1px solid #ede9e4;
+      padding-bottom: 16px;
+    }
+
+    .description-page-container-item-box {
+      width: 50%;
+      padding-bottom: 30px;
+      border-bottom: 1.5px solid #d2d1d1;
     }
 
     .description-page-container-item .description-page-container-item-iframe {
@@ -1075,7 +1208,19 @@
       height: 620px;
     }
 
-    .description-page-container-item .description-page-container-item-kittok-mask {
+    .description-page-container-item .description-page-container-item-iframe iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content iframe {
+      width: 100% !important;
+      height: 100% !important;
+      max-width: 100% !important;
+    }
+
+    .description-page-container-item .custom-detail-video-mask {
       position: absolute;
       top: 0;
       left: 0;
@@ -1089,236 +1234,690 @@
       border-radius: 12px;
     }
 
-    .description-page-container-item .description-page-container-item-kittok-mask img {
-      width: 323px;
+    .home-active-l {
+      display: block;
+    }
+
+    .home-active-m {
+      display: none;
+    }
+
+    @media (max-width: 1440px) {
+      .description-page-container-item-text-img {
+        padding: 0;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle {
+        font-size: 15px;
+        line-height: 20px;
+        margin-top: 20px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title {
+        font-size: 46px;
+        line-height: 50px;
+        margin-top: 20px;
+      }
+
+      .description-page-container-item-text-bigtitle {
+        font-size: 60px;
+      }
+
+      .description-page-container-item .description-page-container-item-iframe {
+        height: 448px;
+      }
+    }
+
+    @media (max-width: 1280px) {
+      .description-page-container-item-flex img {
+        max-width: 380px;
+        width: 380px;
+      }
+
+      .big-title {
+        width: auto;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .response_img {
+        max-width: 350px;
+        height: auto;
+      }
+
+      .description-page-container-item .description-page-container-item-iframe {
+        height: 344px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .description-page-container-item .description-page-container-item-iframe {
+        height: 560px;
+      }
+
+      .description-page-container-item-flex img {
+        max-width: 250px;
+        min-width: 250px;
+        width: 250px;
+      }
+
+      .response_img {
+        max-width: 100%;
+      }
+
+      .home-active-l {
+        display: none !important;
+      }
+
+      .home-active-m {
+        display: block !important;
+      }
+
+      .description-page-container-margin60 {
+        margin-top: 20px;
+      }
+
+      .ant-collapse-content>.ant-collapse-content-box {
+        padding: 0;
+      }
+
+      .description-page-container .banner img {
+        width: 100%;
+        display: none;
+      }
+
+      .banner-m img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .description-page-container {
+        width: 100%;
+      }
+
+      .description-page-container-item {
+        flex-direction: column;
+        margin-top: 30px;
+      }
+
+      .description-page-container-item-text-box {
+        padding: 10px 20px;
+      }
+
+      .description-page-container-item-text-img {
+        padding: 0px 0px;
+        margin-top: 20px;
+      }
+
+      .description-page-container-item-text-box-m {
+        margin-top: 40px;
+      }
+
+      .description-page-container-item-text-padding-b-m {
+        padding-bottom: 40px;
+      }
+
+      .description-page-container-item-reverse {
+        flex-direction: column-reverse;
+      }
+
+      .img-left-radius {
+        border-radius: 12px;
+      }
+
+      .description-page-container-item-flex {
+        overflow: auto;
+      }
+
+      .description-page-container-item-text-box:has(.comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title) {
+        padding: 0 36px;
+      }
+
+      .big-title {
+        width: 100%;
+      }
+
+      .description-page-container-item:has(.description-page-container-item-text-box) {
+        align-items: flex-start;
+      }
+
+      .description-page-container-bg-gray,
+      .description-page-container-bg-green {
+        border-radius: 12px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-smalltitle {
+        font-size: 14px;
+        line-height: 14px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-title {
+        font-size: 30px;
+        line-height: 36px;
+        margin-top: 24px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-text-subtitle {
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 4px;
+        min-width: 100%;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-title {
+        font-family: "Zen-Kaku-Gothic-New-Black" !important;
+        font-weight: 900;
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex-content-text {
+        font-size: 14px;
+        line-height: 22px;
+        padding: 0 20px;
+      }
+
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .description-page-container-item-flex-content-smalltext {
+        font-size: 13px;
+        line-height: 20px;
+        padding: 0px 10px;
+        margin-top: 10px;
+      }
+
+      .description-page-container-item-line-m {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ede9e4;
+      }
+
+      .description-page-container-item-theme .description-page-container-item-bigtitle .description-page-container-item-bigtitle-text {
+        font-size: 24px;
+        letter-spacing: -1.2px;
+      }
+
+      .description-page-container-item-theme .description-page-container-item-bigtitle .description-page-container-item-bigtitle-detail {
+        font-size: 16px;
+        margin-bottom: 60px;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .description-page-container-item .description-page-container-item-iframe {
+        height: 385px;
+      }
+    }
+
+    @media (max-width: 375px) {
+      .description-page-container-item .description-page-container-item-iframe {
+        height: 335px;
+      }
+    }
+
+    @media (max-width: 320px) {
+      .description-page-container-item .description-page-container-item-iframe {
+        height: 280px;
+      }
     }
   </style>
-</div>
-<div>
-  <div id="description" class="description-page">
-    <!-- <div class="description-page-container">
-      <div class="banner">
-        <img class="lazyload"
-          data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7M-20240801-pc.jpg" />
-      </div>
-      <div class="banner-m">
-        <img class="lazyload"
-          src="https://staticprod.site.flexispot.com/flexispot/catalog/product/placeholder/default/p.jpg"
-          data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7M-20240801-app.jpg" />
-      </div> -->
-    <!-- module-1 -->
-    <div class="description-page-container-item">
-      <div class="description-page-container-item-text description-page-container-item-text-left">
-        <div class="description-page-container-item-text-smalltitle">
-          Upgraded Backrest
-        </div>
-        <div class="description-page-container-item-text-title">
-          Adjust the Entire Backrest Height
-        </div>
-        <div class="description-page-container-item-text-subtitle">
-          5 Levels of Adjustment, 2.36'' Total Range
-        </div>
-        <div class="description-page-container-item-text-subtitle">
-          Our chair's backrest can be adjusted to five different levels,
-          ensuring comfort and support for users of varying heights.
-        </div>
-      </div>
-      <div class="description-page-container-item-img flex-end">
-        <img class="lazyload"
-          data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/CM7-20240729-img1.png" />
-      </div>
+  <!-- C7Air_style end -->
+
+  <!-- button相关 start -->
+  <style>
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content {
+      overflow: visible !important;
+    }
+
+    .divContainer {
+      position: relative;
+    }
+
+    .divContainer .buttonBoxNew {
+      display: flex;
+      justify-content: center;
+      border-radius: 40px;
+      background: #f1eeeb;
+      width: max-content;
+      margin: 30px auto;
+      position: sticky;
+      top: 180px;
+      z-index: 3;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .buttonBoxNew button {
+      font-family: Moderat-Bold;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 120%;
+      letter-spacing: 0.05em;
+      text-align: left;
+      padding: 10px 36px;
+      color: #26333acc;
+      border: none;
+      border-radius: 40px;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .buttonBoxNew .active {
+      background: #004df2;
+      color: #ede9e4;
+    }
+
+    @media screen and (max-width: 768px) {
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .buttonBoxNew button {
+        padding: 10px 20px;
+      }
+    }
+  </style>
+  <!-- button相关 end -->
+
+  <div class="divContainer">
+    <div class="buttonBoxNew">
+      <button class="active" onclick="setActive(0)">E7Pro</button>
+      <button onclick="setActive(1)" class="">C7Air</button>
     </div>
-    <!-- module-2 -->
-    <div class="description-page-container-item description-page-container-item-reverse">
-      <div class="description-page-container-item-img">
-        <img class="lazyload"
-          data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/CM7-20240729-img2-New.png" />
-      </div>
-      <div class="description-page-container-item-text description-page-container-item-text-right">
-        <div class="description-page-container-item-text-smalltitle">
-          Softer Than Regular Foam Cushions
-        </div>
-        <div class="description-page-container-item-text-title">
-          Enhanced Comfort with 0.2" Latex Seat Cushion
+    <div id="description" class="contentDiv" style="display: block;">
+      <div class="description-page-container">
+        <div class="box_banner">
+          <!-- 主图1_pc -->
+          <div class="master_map">
+            <img src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/xe7-1384x480.jpg" alt="" />
+          </div>
+          <!-- 主图1_m -->
+          <div class="master_map_mobile">
+            <img src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/20241113-banner-mobile.jpg" alt="" />
+          </div>
         </div>
 
-        <div class="description-page-container-item-text-subtitle">
-          Latex seat cushions offer firm, springy comfort, mold-resistant,
-          hypoallergenic, and durable compared to traditional foam.
+        <!-- module-1 -->
+        <div class="description-page-container-normal-box">
+          <div class="description-page-container-item-title2">シームレスに高さ調整が可能</div>
+          <div class="description-page-container-item-button2">
+            E7 Pro
+          </div>
+          <div class="description-page-container-item-desc2">
+            実用性・デザイン性の両方を兼ね備える
+          </div>
         </div>
-      </div>
-    </div>
-    <!-- module-3 -->
-    <div class="description-page-container-item">
-      <div class="description-page-container-item-text description-page-container-item-text-left">
-        <div class="description-page-container-item-text-smalltitle">
-          Upgraded Backrest
-        </div>
-        <div class="description-page-container-item-text-title">
-          Adjust the Entire Backrest Height
-        </div>
-        <div class="description-page-container-item-text-subtitle">
-          5 Levels of Adjustment, 2.36'' Total Range
-        </div>
-        <div class="description-page-container-item-text-subtitle">
-          Our chair's backrest can be adjusted to five different levels,
-          ensuring comfort and support for users of varying heights.
-        </div>
-      </div>
-      <div class="description-page-container-item-img flex-end">
-        <img class="lazyload"
-          data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/CM7-20240729-img1.png" />
-      </div>
-    </div>
-    <!-- module-4 -->
-    <div class="description-page-container-item description-page-container-item-reverse">
-      <div class="description-page-container-item-img">
-        <img class="lazyload"
-          data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/CM7-20240729-img2-New.png" />
-      </div>
-      <div class="description-page-container-item-text description-page-container-item-text-right">
-        <div class="description-page-container-item-text-smalltitle">
-          Softer Than Regular Foam Cushions
-        </div>
-        <div class="description-page-container-item-text-title">
-          Enhanced Comfort with 0.2" Latex Seat Cushion
-        </div>
+        <!-- module-2 -->
+        <div class="description-page-container-item description-page-container-item-reverse">
+          <div class="description-page-container-item-img-left">
+            <img class="lazyload"
+              data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/E7PRO-20241112-img1.jpg" />
+          </div>
+          <div class="description-page-container-item-text description-page-container-item-text-right">
+            <div class="description-page-container-item-text-title">
+              コの字型フレーム
+            </div>
 
-        <div class="description-page-container-item-text-subtitle">
-          Latex seat cushions offer firm, springy comfort, mold-resistant,
-          hypoallergenic, and durable compared to traditional foam.
-        </div>
-      </div>
-    </div>
-    <!-- module-5 -->
-    <div class="description-page-container-item">
-      <div class="description-page-container-item-text description-page-container-item-text-left">
-        <div class="description-page-container-item-text-smalltitle">
-          Upgraded Backrest
-        </div>
-        <div class="description-page-container-item-text-title">
-          Adjust the Entire Backrest Height
-        </div>
-        <div class="description-page-container-item-text-subtitle">
-          5 Levels of Adjustment, 2.36'' Total Range
-        </div>
-        <div class="description-page-container-item-text-subtitle">
-          Our chair's backrest can be adjusted to five different levels,
-          ensuring comfort and support for users of varying heights.
-        </div>
-      </div>
-      <div class="description-page-container-item-img flex-end">
-        <img class="lazyload"
-          data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/CM7-20240729-img1.png" />
-      </div>
-    </div>
-    <!-- module-6 -->
-    <div class="description-page-container-item description-page-container-item-reverse">
-      <div class="description-page-container-item-img">
-        <img class="lazyload"
-          data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/CM7-20240729-img2-New.png" />
-      </div>
-      <div class="description-page-container-item-text description-page-container-item-text-right">
-        <div class="description-page-container-item-text-smalltitle">
-          Softer Than Regular Foam Cushions
-        </div>
-        <div class="description-page-container-item-text-title">
-          Enhanced Comfort with 0.2" Latex Seat Cushion
-        </div>
-
-        <div class="description-page-container-item-text-subtitle">
-          Latex seat cushions offer firm, springy comfort, mold-resistant,
-          hypoallergenic, and durable compared to traditional foam.
-        </div>
-      </div>
-    </div>
-
-    <!-- moudele-7 -->
-    <div class="description-page-container-item mb0">
-      <div class="description-page-container-item-bigtitle">
-        For more detailed information, DO NOT hesitate to
-        visit FlexiSpot Spot Cleaner via the TikTok App.
-      </div>
-    </div>
-
-    <!-- module-8 -->
-    <div class="description-page-container-item">
-      <div class="description-page-container-item-kittok">
-        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@becca.vera/video/7374846453870529834"
-          data-video-id="7374846453870529834" style="max-width: 605px;min-width: 325px;">
-          <section>
-             <a target="_blank" title="@becca.vera"
-              href="https://www.tiktok.com/@becca.vera?refer=embed">@becca.vera</a> La ame demasiado, de las mejores
-            cosas que pude aver encontrado aqui en tiktok @FlexiSpot tiene esta maquinita a mitad de lo que sale en
-            otros lugares . Como mamá te la recomiendo , la vas a amar . <a title="flexispot" target="_blank"
-              href="https://www.tiktok.com/tag/flexispot?refer=embed">#flexispot</a> <a title="cleaning" target="_blank"
-              href="https://www.tiktok.com/tag/cleaning?refer=embed">#cleaning</a> <a title="sofacleaning"
-              target="_blank" href="https://www.tiktok.com/tag/sofacleaning?refer=embed">#sofacleaning</a> <a
-              title="cleanmachine" target="_blank"
-              href="https://www.tiktok.com/tag/cleanmachine?refer=embed">#cleanmachine</a> <a title="sillones"
-              target="_blank" href="https://www.tiktok.com/tag/sillones?refer=embed">#sillones</a> <a title="limpieza"
-              target="_blank" href="https://www.tiktok.com/tag/limpieza?refer=embed">#limpieza</a> <a title="lavando"
-              target="_blank" href="https://www.tiktok.com/tag/lavando?refer=embed">#lavando</a> <a
-              title="housecleaning" target="_blank"
-              href="https://www.tiktok.com/tag/housecleaning?refer=embed">#housecleaning</a> <a title="hogar"
-              target="_blank" href="https://www.tiktok.com/tag/hogar?refer=embed">#hogar</a> <a title="sofas"
-              target="_blank" href="https://www.tiktok.com/tag/sofas?refer=embed">#sofas</a> <a title="tiktok"
-              target="_blank" href="https://www.tiktok.com/tag/tiktok?refer=embed">#tiktok</a> <a title="momsoftiktok"
-              target="_blank" href="https://www.tiktok.com/tag/momsoftiktok?refer=embed">#momsoftiktok</a> <a
-              title="carcleaning" target="_blank"
-              href="https://www.tiktok.com/tag/carcleaning?refer=embed">#carcleaning</a> <a
-              title="portablecarpetcleaner" target="_blank"
-              href="https://www.tiktok.com/tag/portablecarpetcleaner?refer=embed">#portablecarpetcleaner</a> <a
-              title="carpetcleaning" target="_blank"
-              href="https://www.tiktok.com/tag/carpetcleaning?refer=embed">#carpetcleaning</a> <a target="_blank"
-              title="♬ sonido original - SONIDOS LARGOS"
-              href="https://www.tiktok.com/music/sonido-original-7345653928603552517?refer=embed">♬ sonido original -
-              SONIDOS LARGOS</a> 
-            </section>
-        </blockquote>
-        <script async src="https://www.tiktok.com/embed.js"></script>
-
-        <div class="description-page-container-item-kittok-mask">
-          <div class="description-page-container-item" onclick="displayFrame(this)">
-            <img class="lazyload cover-image"
-              src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/dust-collector-20241211-video-1.png" width="1384"
-              height="620" />
-            <div class="custom-detail-video-mask">
-              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M32.0002 9.33331C44.5189 9.33331 54.6669 19.4813 54.6669 32C54.6669 44.5187 44.5189 54.6667 32.0002 54.6667C19.4815 54.6667 9.3335 44.5187 9.3335 32C9.3335 19.4813 19.4815 9.33331 32.0002 9.33331ZM28.8402 24C27.6402 24 26.6669 24.9733 26.6669 26.1733V37.6107C26.6671 38.0007 26.7723 38.3834 26.9714 38.7188C27.1705 39.0541 27.4561 39.3297 27.7984 39.5166C28.1406 39.7036 28.5269 39.795 28.9166 39.7813C29.3064 39.7676 29.6852 39.6492 30.0135 39.4387L39.0015 33.664C39.309 33.4664 39.5617 33.1943 39.7362 32.8731C39.9107 32.5519 40.0013 32.1918 39.9997 31.8263C39.9981 31.4607 39.9043 31.1015 39.7271 30.7818C39.5498 30.4621 39.2947 30.1923 38.9855 29.9973L29.9975 24.3347C29.6506 24.1161 29.249 24 28.8389 24H28.8402Z"
-                  fill="white" />
-              </svg>
+            <div class="description-page-container-item-text-subtitle">
+              壁にピッタリと配置できるすっきりとしたデザインで、スペースを最大限に活用できます。工字型（支柱が中央にある）デスクよりも、デスク下のスペースも有効に使えます。
             </div>
           </div>
-          <!-- <div class="banner-m description-page-container-item" onclick="displayFrame(this)">
-            <img class="lazyload cover-image"
-              data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/dust-collector-20241211-video-1.png"
-              width="670" height="670" />
-            <div class="custom-detail-video-mask">
-              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M32.0002 9.33331C44.5189 9.33331 54.6669 19.4813 54.6669 32C54.6669 44.5187 44.5189 54.6667 32.0002 54.6667C19.4815 54.6667 9.3335 44.5187 9.3335 32C9.3335 19.4813 19.4815 9.33331 32.0002 9.33331ZM28.8402 24C27.6402 24 26.6669 24.9733 26.6669 26.1733V37.6107C26.6671 38.0007 26.7723 38.3834 26.9714 38.7188C27.1705 39.0541 27.4561 39.3297 27.7984 39.5166C28.1406 39.7036 28.5269 39.795 28.9166 39.7813C29.3064 39.7676 29.6852 39.6492 30.0135 39.4387L39.0015 33.664C39.309 33.4664 39.5617 33.1943 39.7362 32.8731C39.9107 32.5519 40.0013 32.1918 39.9997 31.8263C39.9981 31.4607 39.9043 31.1015 39.7271 30.7818C39.5498 30.4621 39.2947 30.1923 38.9855 29.9973L29.9975 24.3347C29.6506 24.1161 29.249 24 28.8389 24H28.8402Z"
-                  fill="white" />
-              </svg>
+        </div>
+        <!-- module-3 -->
+        <div class="description-page-container-item">
+          <div class="description-page-container-item-text description-page-container-item-text-left pl">
+            <div class="description-page-container-item-text-title">
+              優れた機能性
             </div>
-          </div> -->
+
+            <div class="description-page-container-item-text-subtitle">
+              <span>（1）</span>
+              <strong>三段式のフレーム構造：</strong>SPCC鋼材をふんだんに使用した堅牢な仕様でデスクトップを支え、耐久性と安定性、スピードも向上しています。<br /><br />
+
+              <span>（2）</span><strong>デュアルモーター：</strong>左右脚フレームにそれぞれ1基ずつモーターを搭載、シングルモーターと比べ上下昇降駆動力に優れています。<br /><br />
+
+              <span>（3）</span><strong>障害物検知機能：</strong>昇降時に障害物を検知するセンサーが内蔵されており、昇降時に異物を検知し、自動的に現在の操作を停止して元の位置に戻ります。
+            </div>
+          </div>
+          <div class="description-page-container-item-img-right">
+            <img class="lazyload"
+              data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/E7PRO-20241112-img2.jpg" />
+          </div>
+        </div>
+        <!-- module 4 -->
+        <div class="box_banner mb100">
+          <!-- 主图pc -->
+          <div class="master_map">
+            <img src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/E7PRO-20241112-img3-pc.jpg" alt="" />
+            <div class="master_map-absolute-box">
+              <div class="master_map-title">スタビリティ＆コントローラブル</div>
+              <div class="master_map-desc">従来のリニア駆動制御と比べ、速度ループと位置のオープンループ制御が追加されています。<br />
+                目標とする高さと加速度が制御モジュールに入力され、動作中に必要な速度をアルゴリズムによりリアルタイムで計算されます。それにより発進・停止時の加速がよりスムーズで安定したものになります。</div>
+            </div>
+          </div>
+          <!-- 主图m -->
+          <div class="master_map_mobile-desc">従来のリニア駆動制御と比べ、速度ループと位置のオープンループ制御が追加されています。<br />
+            目標とする高さと加速度が制御モジュールに入力され、動作中に必要な速度をアルゴリズムによりリアルタイムで計算されます。それにより発進・停止時の加速がよりスムーズで安定したものになります。
+          </div>
+          <div class="master_map_mobile">
+            <img src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/E7PRO-20241113-img3-mobile.jpg" alt="" />
+            <!-- <div class="master_map_mobile-absolute-box">
+              <div class="master_map_mobile-title">
+                スタビリティ<br />
+                <span>＆</span><br />
+                コントローラブル
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <!-- module-5 -->
+        <div class="description-page-container-item">
+          <div class="description-page-container-item-text description-page-container-item-text-left pl">
+            <div class="description-page-container-item-text-title home-active-l">
+              ワンタッチで高さ調整
+            </div>
+            <div class="description-page-container-item-text-title home-active-m">
+              ワンタッチで高さ調整
+            </div>
+
+            <div class="description-page-container-item-text-subtitle">
+              <span>(A)</span><br />
+              <strong>上・下昇降機能:</strong><br />
+              簡単な操作で昇降が可能な、シンプルデザインのコントローラー。
+            </div>
+            <div class="border-bottom"></div>
+            <div class="description-page-container-item-text-subtitle">
+              <span>(B)</span><br />
+              <strong>ロック機能:</strong><br />
+              大人でも片手で簡単に操作でき、安全のためのロック機能が付いており、好奇心旺盛な子お子様がいるご家庭でも安心です。
+            </div>
+            <div class="border-bottom"></div>
+            <div class="description-page-container-item-text-subtitle">
+              <span>(C)</span><br />
+              <strong>メモリ機能:</strong><br />
+              複数の高さを予めセットすることができます。
+            </div>
+            <div class="border-bottom"></div>
+            <div class="description-page-container-item-text-subtitle">
+              <span>(D)</span><br />
+              <strong>USB端子:</strong><br />
+              パネルの側面にUSB端子を備えており、充電をしながら作業を行える便利な環境を提供します。
+            </div>
+          </div>
+          <div class="description-page-container-item-img-right">
+            <img class="lazyload"
+              data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/E7PRO-511-620-XQ-04-g.jpg" />
+          </div>
+        </div>
+        <!-- module-6 -->
+        <div class="description-page-container-item description-page-container-item-reverse">
+          <div class="description-page-container-item-img-left">
+            <img class="lazyload"
+              data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/E7PRO-20241112-img5.jpg" />
+          </div>
+          <div class="description-page-container-item-text description-page-container-item-text-right">
+            <div class="description-page-container-item-text-title">
+              配線を整えて<br />
+              省スペースに
+            </div>
+
+            <div class="description-page-container-item-text-subtitle">
+              乱雑になりがちなケーブル配線はトレーに収納可能。床や足もとのスペースをすっきりと有効的に使うことができます。
+            </div>
+          </div>
+        </div>
+        <!-- module-7 -->
+        <div class="description-page-container-item">
+          <div class="description-page-container-item-text description-page-container-item-text-left pl">
+            <div class="description-page-container-item-text-small-title">( Desk Frame )</div>
+            <div class="description-page-container-item-text-title home-active-l">
+              プレートの位置<br />
+              をカスタマイズ可能
+            </div>
+            <div class="description-page-container-item-text-title home-active-m">
+              プレートの位置<br />
+              をカスタマイズ可能
+            </div>
+
+            <div class="description-page-container-item-text-subtitle">
+              収納に合わせてプレートの位置や枚数をアレンジ可能です。プレートの位置を自在に変えられるので、自分の好みの位置に棚を設置し、空間を無駄なく使って収納できます。
+            </div>
+          </div>
+          <div class="description-page-container-item-img-right">
+            <img class="lazyload"
+              data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/E7PRO-20241112-img6.gif" />
+          </div>
         </div>
       </div>
-
     </div>
+    <div id="description" class="contentDiv" style="display: none;">
+      <div class="description-page-container">
+        <div class="banner">
+          <img class="lazyload"
+            data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/c7air-511-3banner-1384x560.jpg"
+            width="1384" height="560" />
+        </div>
+        <div class="banner-m">
+          <img class="lazyload"
+            data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/c7air-511-3banner-670x760.jpg"
+            width="670" height="760" />
+        </div>
+        <!--  module 1 -->
+        <div class="description-page-container-item description-page-container-item-reverse">
+          <div class="description-page-container-item-text-img description-page-container-item-text">
+            <img class="lazyload" data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/XC7-FSGG-620-1.jpg"
+              width="620" height="620" />
+          </div>
+          <div class="description-page-container-item-text-box description-page-container-item-text-mt-m">
+            <div class="description-page-container-item-text-title home-active-l">FlexiSpotC7シリーズ</div>
+            <div class="description-page-container-item-text-title home-active-m">FlexiSpotC7シリーズ</div>
+            <div class="description-page-container-item-text-subtitle">
+              上質な座り⼼地と、オフィスの多様化に合わせてチェアを楽しめるシーティングです。豊かな機能を備えたオフィスチェアC7シリーズ、体への負担を軽減し、快適なワーク環境が整えられます。
+            </div>
+          </div>
+        </div>
+        <!--  module 2 -->
+        <div class="description-page-container-item">
+          <div class="description-page-container-item-text-box description-page-container-item-text-mt-m">
+            <div class="description-page-container-item-text-title big-title">
+              もっと健康的に<br />
+              もっと快適に
+            </div>
+            <div class="description-page-container-item-text-subtitle">
+              使用者の多様な体格に合わせられる調節機能、さらに背もたれや座面の素材からこだわることで快適な座り心地と耐久性を兼ね備えました。
+            </div>
+            <br />
+            <div class="description-page-container-item-text-subtitle">
+              C7シリーズチェアの背もたれは通気性がよく、集中力を高めるメッシュ生地を採用。絶妙な弾力があり、長期間の使用にも耐えうるチェアです。通気性が高いので熱がこもらず、１年中快適に過ごせます。セパレート構造により背骨のS字形状を保持し、本来の自然な姿勢を維持しやすくなるため、腰痛を防止する効果も期待できます。背もたれと座面が体の動きに合わせて可動し、腰への負担を軽減します。
+            </div>
+          </div>
+          <div class="description-page-container-item-text-img description-page-container-item-text">
+            <img class="lazyload"
+              data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/c7air-511-3-800.jpg" width="620"
+              height="620" />
+          </div>
+        </div>
+        <!--  module 3 -->
+        <div class="description-page-container-item description-page-container-item-reverse">
+          <div class="description-page-container-item-text-img description-page-container-item-text">
+            <img class="lazyload"
+              data-src="https://s3.springbeetle.eu/dev-de-s3-flexispot/trantor/attachments/JP/XC7-SS-620-3.jpg"
+              width="620" height="620" />
+          </div>
+          <div class="description-page-container-item-text-box description-page-container-item-text-mt-m">
+            <div class="description-page-container-item-text-title">座面で決まる座り心地</div>
+            <div class="description-page-container-item-text-subtitle">
+              一般的な椅子には20kg～30kg/m³程度の密度のウレタン素材が使用されることが多く、密度が低く、柔らかい座り心地になりますが、その分型崩れしやすい傾向があります。
+            </div>
+            <br />
+            <div class="description-page-container-item-text-subtitle">
+              FlexiSpot オフィスチェア
+              C7で使用されているモールドウレタンは、密度が45kg/m³ほどと高く、一般的な椅子よりも耐久性が向上しています。加えて、座面に厚み（約６cm）があり柔らかいので、仕事以外の時間も快適に使用できます。
+            </div>
+            <br />
+            <div class="description-page-container-item-text-subtitle">
+              オフィスチェア
+              C7Airは全面にメッシュを採用。弾力性と耐圧分散に優れ、一点に負荷がかかりにくいので、長時間座ってもお尻が疲れにくいのが特長です。
+            </div>
+            <br />
+            <div class="description-page-container-item-text-subtitle">
+              C7Proはオットマンが内蔵されています。デスク作業の時は収納、休憩するときにはリクライニングを倒し、オットマンに脚を乗せてリラックスタイムを過ごすことができます。
+            </div>
+          </div>
+        </div>
+        <!--  module 4 -->
+        <div class="description-page-container-item">
+          <img class="home-active-l lazyload"
+            data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/XC7-FSGG-2-1384x560.jpg" width="1384"
+            height="560" alt="" />
+          <img class="lazyload home-active-m"
+            data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/XC7-FSGG-APP-1.jpg" width="670"
+            height="352" alt="" />
+          <img class="lazyload home-active-m"
+            data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/xc7-5.2-app-2.jpg" width="670"
+            height="352" alt="" />
+          <img class="lazyload home-active-m"
+            data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/xc7-5.3-app-3.jpg" width="670"
+            height="352" alt="" />
+        </div>
+        <!--  module 5 -->
+        <div class="description-page-container-item description-page-container-item-theme">
+          <div class="description-page-container-item-bigtitle">
+            <div class="description-page-container-item-bigtitle-text">
+              FlexiSpot エルゴノミクス(人間工学)チェア C7シリーズ
+            </div>
+            <div class="description-page-container-item-bigtitle-detail">
+              世界レベルの厳しい品質水準をクリア<br />
+              様々なユーザー、多様なシーンに対応します
+            </div>
+          </div>
+        </div>
 
+        <div>
+          <div class="description-page-container-item-flex">
+            <div class="description-page-container-item-flex-content">
+              <img class="lazyload" data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/XC7-6-1-img6.jpg"
+                width="440" height="440" />
+              <div class="description-page-container-item-flex-content-text">グローバルスペックを追求</div>
+            </div>
+            <div class="description-page-container-item-flex-content">
+              <img class="lazyload" data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/XC7-6-2-img7.jpg"
+                width="440" height="440" />
+              <div class="description-page-container-item-flex-content-text">耐荷重130KG</div>
+            </div>
+            <div class="description-page-container-item-flex-content">
+              <img class="lazyload" data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/XC7-6-3-img8.jpg"
+                width="440" height="440" />
+              <div class="description-page-container-item-flex-content-text">男性も女性も　使いやすい</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="description-page-container-item description-page-container-item-iframe-box">
+          <div class="description-page-container-item-iframe">
+            <iframe id="youtubePlayer" src="https://www.youtube.com/embed/GVR08bu5nLQ?enablejsapi=1&mute=1"
+              title="YouTube video player" frameborder="0"></iframe>
+          </div>
+        </div>
+        <!-- <div class="banner description-page-container-item" onclick="displayFrame(this)">
+          <img
+            class="lazyload cover-image"
+            data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/XC7-FSGG-1384x620.jpg"
+            width="1384"
+            height="620"
+          />
+          <div class="custom-detail-video-mask">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M32.0002 9.33331C44.5189 9.33331 54.6669 19.4813 54.6669 32C54.6669 44.5187 44.5189 54.6667 32.0002 54.6667C19.4815 54.6667 9.3335 44.5187 9.3335 32C9.3335 19.4813 19.4815 9.33331 32.0002 9.33331ZM28.8402 24C27.6402 24 26.6669 24.9733 26.6669 26.1733V37.6107C26.6671 38.0007 26.7723 38.3834 26.9714 38.7188C27.1705 39.0541 27.4561 39.3297 27.7984 39.5166C28.1406 39.7036 28.5269 39.795 28.9166 39.7813C29.3064 39.7676 29.6852 39.6492 30.0135 39.4387L39.0015 33.664C39.309 33.4664 39.5617 33.1943 39.7362 32.8731C39.9107 32.5519 40.0013 32.1918 39.9997 31.8263C39.9981 31.4607 39.9043 31.1015 39.7271 30.7818C39.5498 30.4621 39.2947 30.1923 38.9855 29.9973L29.9975 24.3347C29.6506 24.1161 29.249 24 28.8389 24H28.8402Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="banner-m description-page-container-item" onclick="displayFrame(this)">
+          <img
+            class="lazyload cover-image"
+            data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/XC7-FSGG-335x2.jpg"
+            width="670"
+            height="670"
+          />
+          <div class="custom-detail-video-mask">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M32.0002 9.33331C44.5189 9.33331 54.6669 19.4813 54.6669 32C54.6669 44.5187 44.5189 54.6667 32.0002 54.6667C19.4815 54.6667 9.3335 44.5187 9.3335 32C9.3335 19.4813 19.4815 9.33331 32.0002 9.33331ZM28.8402 24C27.6402 24 26.6669 24.9733 26.6669 26.1733V37.6107C26.6671 38.0007 26.7723 38.3834 26.9714 38.7188C27.1705 39.0541 27.4561 39.3297 27.7984 39.5166C28.1406 39.7036 28.5269 39.795 28.9166 39.7813C29.3064 39.7676 29.6852 39.6492 30.0135 39.4387L39.0015 33.664C39.309 33.4664 39.5617 33.1943 39.7362 32.8731C39.9107 32.5519 40.0013 32.1918 39.9997 31.8263C39.9981 31.4607 39.9043 31.1015 39.7271 30.7818C39.5498 30.4621 39.2947 30.1923 38.9855 29.9973L29.9975 24.3347C29.6506 24.1161 29.249 24 28.8389 24H28.8402Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+        </div> -->
+      </div>
+    </div>
   </div>
-</div>
-<script>
-  function displayFrame(element) {
-    // 找到当前元素的父级元素并隐藏
-    element.style.display = "none"
-    var iframeContainer = document.querySelector(".description-page-container-item-iframe-box")
-    iframeContainer.style.display = "block"
-    var iframe = document.getElementById("youtubePlayer")
-    iframe.src = iframe.src + "&amp;autoplay=1&mute=1"
-  }
+  <script>
+    // tab切换 js start
+    function setActive(index) {
+      // 获取所有按钮和内容 div
+      const buttons = document.querySelectorAll(".buttonBoxNew button")
+      const contentDivs = document.querySelectorAll(".contentDiv")
 
-</script>
+      // 移除所有按钮的 'active' 类并隐藏所有内容 div
+      buttons.forEach((btn) => btn.classList.remove("active"))
+      contentDivs.forEach((div) => (div.style.display = "none"))
+
+      // 为被点击的按钮添加 'active' 类并显示对应的内容 div
+      buttons[index].classList.add("active")
+      contentDivs[index].style.display = "block"
+      document.querySelectorAll("#description")[index].scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+
+    // tab切换 js end
+
+    // E7Pro 视频相关 js start
+    // function displayFrame(element) {
+    //   // 找到当前元素的父级元素并隐藏
+    //   element.style.display = "none"
+    //   var iframeContainer = document.querySelector(".description-page-container-item-iframe-box")
+    //   iframeContainer.style.display = "block"
+    //   var iframe = document.getElementById("youtubePlayer")
+    //   iframe.src = iframe.src + "&amp;autoplay=1&mute=1"
+    // }    
+
+    // 异步加载 IFrame Player API 代码
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    let player;
+
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('youtubePlayer', {
+        events: {
+          'onReady': onPlayerReady
+        }
+      });
+    }
+
+    //自动播放和暂停视频
+    function onPlayerReady(event) {
+      player.mute(); // 静音
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            player.playVideo();
+          } else {
+            player.pauseVideo();
+          }
+        });
+      }, {
+        threshold: 0.5
+      });
+
+      const iframeContainer = document.querySelector('.description-page-container-item-iframe-box');
+      if (iframeContainer) {
+        observer.observe(iframeContainer);
+      } else {
+        console.error("Container not found for IntersectionObserver.");
+      }
+    }
+    // E7Pro 视频相关 js end
+
+  </script>
 </div>
