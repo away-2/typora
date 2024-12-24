@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+            width: 100px;
+            height: 30px;
+            background: #007bff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            color: #fff;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .detail {
+            display: grid;
+            grid-template-rows:  0fr;
+            transition: 0.5s;
+            width: 288px;
+            border-radius: 5px;
+            background: #007bff;
+            color: #fff;
+            line-height: 1.5;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .content {
+            padding: 10px;
+        }
+
+        .btn:hover .detail {
+           grid-template-rows: 1fr;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btn">hover me
+        <div class="detail">
+            <div class="content">
+                    为了支持我们的全球客户和我们的业务战略，IBM 基础设施决定将开发任务从中国系统实验室转移到海外的其他 IBM基础设施基地。
+                    我们正在退出在中国的所有开发任务。
+                    正如你们所知道的，IBM
+                    基础设施继续转型，以帮助释放我们组织必须提供的全部价值，并帮助我们实现具有挑战性的全球市场的可持续业务。这种转变受市场动态和激烈竞争的影响。而**中国的基建业务近年来有所下滑。
+                    对于 IBM Z，我们做出了艰难的决定——将开发工作转移到其他国家，以便更好地抓住市场机遇，并且更加更接近客户。
+                    在存储方面，我们正在将开发工作整合到更少的地点，以应对激烈的竞争。基础设施的协同办公战略是全球性的。协同办公也不仅限于中国。我们做出了这一艰难的商业决策，以便提高效率并简化运营。
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
