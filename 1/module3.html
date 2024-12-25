@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- module_5 style start -->
+    <style>
+        .about-us-content-video {
+            background-color: #f5f5f5;
+            margin: 0 auto;
+            max-width: 1384px;
+        }
+
+        .about-us-content-video .about-us-content-video-title {
+            color: #26333A;
+            text-align: center;
+            font-family: "SupremeLLSub-Bold" !important;
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 710;
+            line-height: 120%;
+            margin-top: 100px;
+        }
+
+        .about-us-content-video .about-us-content-tab-box {
+            display: flex;
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .about-us-content-video .about-us-content-tab-box button {
+            padding: 22px 55px;
+            border-radius: 34px;
+            background: #EFEEEB;
+            border: none;
+            color: rgba(38, 51, 58, 0.50);
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: "Moderat-Bold" !important;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .about-us-content-video .about-us-content-tab-box button.active {
+            background: #26333A;
+            color: #FDFCF5;
+        }
+
+        .about-us-content-video .about-us-content-video-box {
+            display: flex;
+            gap: 50px;
+            margin-top: 80px;
+            align-items: center;
+            border-radius: 12px;
+            background: #F1EEEB;
+        }
+
+        .about-us-content-video .about-us-content-video-box .about-us-content-video-box-left {
+            width: 50%;
+            position: relative;
+            height: 550px;
+        }
+
+        .about-us-content-video .about-us-content-video-box .about-us-content-video-box-left img {
+            position: absolute;
+            bottom: 0;
+            left: 20px;
+        }
+
+        .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right {
+            flex: 1;
+        }
+
+        .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-title {
+            color: #26333A;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: "Moderat-Bold" !important;
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%;
+            max-width: 506px;
+        }
+
+
+        .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-desc {
+            color: #26333A;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: "Moderat-Regular" !important;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            margin-top: 40px;
+            max-width: 506px;
+        }
+
+        .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-smalltitle {
+            color: #26333A;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: "Moderat-Regular" !important;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            margin-top: 70px;
+            max-width: 506px;
+        }
+
+        .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-icon {
+            margin-top: 40px;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 1440px) {
+            .about-us-content-video {
+                max-width: 1000px;
+            }
+
+            .about-us-content-video .about-us-content-video-title {
+                font-size: 48px;
+                margin-top: 80px;
+            }
+
+            .about-us-content-video .about-us-content-tab-box {
+                display: flex;
+                gap: 18px;
+                margin-top: 40px;
+            }
+
+            .about-us-content-video .about-us-content-tab-box button {
+                padding: 24px 42px;
+                font-size: 16px;
+            }
+
+            .about-us-content-video .about-us-content-video-box {
+                display: flex;
+                gap: 40px;
+                margin-top: 60px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-left {
+                width: 50%;
+                position: relative;
+                height: 400px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-left img {
+                position: absolute;
+                bottom: 0;
+                left: 20px;
+                width: 370px;
+                height: auto;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right {
+                flex: 1;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-title {
+                font-size: 48px;
+                max-width: 390px;
+            }
+
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-desc {
+                font-size: 16px;
+                margin-top: 32px;
+                max-width: 390px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-smalltitle {
+                font-size: 14px;
+                margin-top: 60px;
+                max-width: 390px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-icon {
+                margin-top: 28px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-icon svg {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            .about-us-content-video {
+                max-width: 768px;
+            }
+
+            .about-us-content-video .about-us-content-video-title {
+                font-size: 34px;
+            }
+
+            .about-us-content-video .about-us-content-tab-box {
+                display: flex;
+                gap: 16px;
+                margin-top: 40px;
+            }
+
+            .about-us-content-video .about-us-content-tab-box button {
+                padding: 19px 39px;
+                font-size: 14px;
+            }
+
+            .about-us-content-video .about-us-content-video-box {
+                display: flex;
+                gap: 30px;
+                margin-top: 60px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-left {
+                width: 50%;
+                position: relative;
+                height: 307px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-left img {
+                position: absolute;
+                bottom: 0;
+                left: 20px;
+                width: 300px;
+                height: auto;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right {
+                flex: 1;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-title {
+                font-size: 34px;
+                max-width: 316px;
+            }
+
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-desc {
+                font-size: 14px;
+                margin-top: 20px;
+                max-width: 316px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-smalltitle {
+                font-size: 12px;
+                margin-top: 40px;
+                max-width: 316px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-icon {
+                margin-top: 20px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-icon svg {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .about-us-content-video {
+                max-width: 100%;
+            }
+
+            .about-us-content-video .about-us-content-video-title {
+                font-size: 34px;
+            }
+
+            .about-us-content-video .about-us-content-tab-box {
+                display: flex;
+                gap: 12px;
+                margin-top: 40px;
+                overflow-x: scroll;
+            }
+
+            .about-us-content-video .about-us-content-tab-box button {
+                white-space: nowrap;
+            }
+
+            .about-us-content-video .about-us-content-video-box {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                margin-top: 50px;
+                padding: 0 17.5px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-left {
+                width: 100%;
+                position: relative;
+                height: 380px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-left img {
+                position: absolute;
+                bottom: 0;
+                left: 10px;
+                width: 300px;
+                height: 350px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right {
+                width: 100%;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-title {
+                font-size: 34px;
+                max-width: 300px;
+            }
+
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-desc {
+                max-width: 300px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-smalltitle {
+                max-width: 300px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-icon {
+                margin-top: 20px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-icon svg {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+    <!-- module_5 style end -->
+</head>
+
+<body>
+    <div class="about-us-content-video">
+        <div class="about-us-content-video-title">Raved by top influencer</div>
+        <div class="about-us-content-tab-box">
+            <button class="active">Linus Tech Tips</button>
+            <button>Basically Homeless</button>
+            <button>Bob & Brad</button>
+            <button>Styropyro</button>
+        </div>
+        <div class="about-us-content-video-box">
+            <div class="about-us-content-video-box-left">
+                <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-video-img1.png"
+                    alt="">
+            </div>
+            <div class="about-us-content-video-box-right">
+                <div class="about-us-content-video-box-right-title">Linus Tech Tips</div>
+                <div class="about-us-content-video-box-right-desc">Our members have been using the FlexiSpot E7 legs
+                    for a while now and have been thoroughly impressed with thier remarkable stability.</div>
+                <div class="about-us-content-video-box-right-smalltitle"># Host of one YouTube's largest technology
+                    channels</div>
+                <div class="about-us-content-video-box-right-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                        <g clip-path="url(#clip0_80_3325)">
+                            <circle cx="20.8047" cy="20.1184" r="20" fill="#004DF2" />
+                            <circle cx="20.8047" cy="20.1184" r="19.375" stroke="#26333A" stroke-opacity="0.1"
+                                stroke-width="1.25" />
+                            <path d="M27.0547 20.1184L17.6797 25.5311L17.6797 14.7057L27.0547 20.1184Z"
+                                fill="#FDFCF5" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_80_3325">
+                                <rect width="40" height="40" fill="white" transform="translate(0.804688 0.118408)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // module_5 js start
+    const tabData = [
+        {
+            title: "Linus Tech Tips",
+            content: "Our members have been using the FlexiSpot E7 legs for a while now and have been thoroughly impressed with their remarkable stability.",
+            imgurl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-video-img1.png",
+            channel: "# Host of one YouTube's largest technology channels",
+            videoUrl: "https://www.youtube.com/embed/u6WDvzlmtSM?si=FRxkRRuVoRMGSGXB",
+        },
+        {
+            title: "Basically Homeless",
+            content: "FlexiSpot E7 is an ideal choice for those seeking remarkable stability and functionality.",
+            imgurl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-video-img2.png",
+            channel: "# Host of Basically Homeless",
+            videoUrl: "https://www.youtube.com/embed/nCiUuBx06kg?si=nD_DwO-ZrPZ_0-Gi",
+        },
+        {
+            title: "Bob & Brad",
+            content: "Ergonomic designs that make life easier with an adjustable desk solution.",
+            imgurl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-video-img3.png",
+            channel: "# Hosts of physical therapy channel",
+            videoUrl: "https://www.youtube.com/embed/fn_Dt5FIAvQ?si=K1ziwVmhLPt5OX24",
+        },
+        {
+            title: "Styropyro",
+            content: "FlexiSpot E7: Sturdy and ergonomic. Perfect for any tech enthusiast!",
+            imgurl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-video-img4.png",
+            channel: "# Host of a laser enthusiast channel",
+            videoUrl: "https://www.youtube.com/embed/fIM6943BSRA?si=_zxVvIZHrAVvC0iC",
+        },
+    ];
+
+    const tabs = document.querySelectorAll(".about-us-content-tab-box button");
+    const videoBoxLeft = document.querySelector(".about-us-content-video-box-left");
+    const videoBoxRightTitle = document.querySelector(".about-us-content-video-box-right-title");
+    const videoBoxRightDesc = document.querySelector(".about-us-content-video-box-right-desc");
+    const videoBoxRightChannel = document.querySelector(".about-us-content-video-box-right-smalltitle");
+    const videoBoxRightIcon = document.querySelector(".about-us-content-video-box-right-icon");
+
+    // 初始化内容
+    function updateContent(index) {
+        const data = tabData[index];
+        videoBoxLeft.innerHTML = `<img src="${data.imgurl}" alt="${data.title}" />`;
+        videoBoxRightTitle.textContent = data.title;
+        videoBoxRightDesc.textContent = data.content;
+        videoBoxRightChannel.textContent = data.channel;
+    }
+
+    // 点击 Tab 更新内容
+    tabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => {
+            // 移除所有按钮的 active 样式
+            tabs.forEach(btn => btn.classList.remove("active"));
+            // 当前按钮添加 active 样式
+            tab.classList.add("active");
+            // 更新内容
+            updateContent(index);
+        });
+    });
+
+    // 点击 Icon 替换图片为视频，并自动播放
+    videoBoxRightIcon.addEventListener("click", () => {
+        const activeIndex = [...tabs].findIndex(tab => tab.classList.contains("active"));
+        const data = tabData[activeIndex];
+        const videoUrlWithAutoplay = `${data.videoUrl}&autoplay=1`; // 添加 autoplay 参数
+        videoBoxLeft.innerHTML = `<iframe width="100%" height="100%" src="${videoUrlWithAutoplay}" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>`;
+    });
+
+    // 初始化时加载第一个 Tab 的内容
+    updateContent(0);
+
+    // module_5 js end
+</script>
+
+</html>

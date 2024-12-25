@@ -258,6 +258,7 @@
             position: absolute;
             top: 0px;
             left: -6%;
+            transform: translateY(50%);
         }
 
         .swiperTable-next-box {
@@ -300,14 +301,10 @@
             opacity: 0.5;
         }
 
-        .swiperTable-next-box,
-        .swiperTable-pre-box {
-            height: calc(100% - 137px);
-        }
 
         .swiperTable-pre-box .swiperTable-pre,
         .swiperTable-next-box .swiperTable-next {
-            top: 500px;
+            top: 0px;
             margin-top: 147px;
         }
 
@@ -334,7 +331,7 @@
             margin-bottom: 87px;
         }
 
-        .about-us-content-swiper-content .about-us-content-swiper-title {
+        .about-us-content-swiper .about-us-content-swiper-title {
             color: #26333A;
             text-align: center;
             font-family: "SupremeLLSub-Bold";
@@ -342,11 +339,7 @@
             font-style: normal;
             font-weight: 710;
             line-height: 120%;
-            margin-top: 100px;
-        }
-
-        .about-us-content-swiper-content .about-us-content-swiper-box {
-            margin-top: 40px;
+            margin: 100px 0 40px;
         }
 
         .swiper-slide .swiper-slide-mask-bg {
@@ -404,13 +397,9 @@
                 margin-bottom: 80px;
             }
 
-            .about-us-content-swiper-content .about-us-content-swiper-title {
+            .about-us-content-swiper .about-us-content-swiper-title {
                 font-size: 48px;
-                margin-top: 80px;
-            }
-
-            .about-us-content-swiper-content .about-us-content-swiper-box {
-                margin-top: 40px;
+                margin: 80px 0 40px;
             }
 
             .swiper-slide .swiper-slide-mask-bg {
@@ -453,14 +442,10 @@
                 margin-bottom: 80px;
             }
 
-            .about-us-content-swiper-content .about-us-content-swiper-title {
+            .about-us-content-swiper .about-us-content-swiper-title {
                 font-size: 34px;
-                margin-top: 80px;
             }
 
-            .about-us-content-swiper-content .about-us-content-swiper-box {
-                margin-top: 40px;
-            }
 
             .swiper-slide .swiper-slide-mask-bg {
                 position: relative;
@@ -502,13 +487,12 @@
                 margin-bottom: 60px;
             }
 
-            .about-us-content-swiper-content .about-us-content-swiper-title {
+            .about-us-content-swiper .about-us-content-swiper-title {
                 font-size: 34px;
-                margin-top: 60px;
+                margin: 60px 0 40px;
             }
 
             .about-us-content-swiper-content .about-us-content-swiper-box {
-                margin-top: 40px;
                 padding: 0 20px;
             }
 
@@ -559,27 +543,27 @@
             width: 100%;
         }
 
-        .about-us-content-iframe iframe {
+        .about-us-content-iframe video {
             width: 100%;
             height: 778px;
         }
 
         @media screen and (max-width: 1440px) {
-            .about-us-content-iframe iframe {
+            .about-us-content-iframe video {
                 width: 100%;
                 height: 582px;
             }
         }
 
         @media screen and (max-width: 1024px) {
-            .about-us-content-iframe iframe {
+            .about-us-content-iframe video {
                 width: 100%;
                 height: 414px;
             }
         }
 
-        @media screen and (max-width: 1440px) {
-            .about-us-content-iframe iframe {
+        @media screen and (max-width: 768px) {
+            .about-us-content-iframe video {
                 width: 375px;
                 height: 235px;
             }
@@ -587,7 +571,746 @@
     </style>
     <!-- module_4 style end -->
     <!-- module_5 style start -->
+    <style>
+        .about-us-content-video {
+            margin: 0 auto;
+            max-width: 1384px;
+        }
+
+        .about-us-content-video .about-us-content-video-title {
+            color: #26333A;
+            text-align: center;
+            font-family: "SupremeLLSub-Bold" !important;
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 710;
+            line-height: 120%;
+            margin-top: 100px;
+        }
+
+        .about-us-content-video .about-us-content-tab-box {
+            display: flex;
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .about-us-content-video .about-us-content-tab-box button {
+            padding: 22px 55px;
+            border-radius: 34px;
+            background: #EFEEEB;
+            border: none;
+            color: rgba(38, 51, 58, 0.50);
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: "Moderat-Bold" !important;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .about-us-content-video .about-us-content-tab-box button.active {
+            background: #26333A;
+            color: #FDFCF5;
+        }
+
+        .about-us-content-video .about-us-content-video-box {
+            display: flex;
+            gap: 50px;
+            margin-top: 80px;
+            align-items: center;
+            border-radius: 12px;
+            background: #F1EEEB;
+        }
+
+        .about-us-content-video .about-us-content-video-box .about-us-content-video-box-left {
+            width: 50%;
+            position: relative;
+            height: 550px;
+        }
+
+        .about-us-content-video .about-us-content-video-box .about-us-content-video-box-left img {
+            position: absolute;
+            bottom: 0;
+            left: 20px;
+        }
+
+        .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right {
+            flex: 1;
+        }
+
+        .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-title {
+            color: #26333A;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: "Moderat-Bold" !important;
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%;
+            max-width: 506px;
+        }
+
+
+        .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-desc {
+            color: #26333A;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: "Moderat-Regular" !important;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            margin-top: 40px;
+            max-width: 506px;
+        }
+
+        .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-smalltitle {
+            color: #26333A;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: "Moderat-Regular" !important;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            margin-top: 70px;
+            max-width: 506px;
+        }
+
+        .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-icon {
+            margin-top: 40px;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 1440px) {
+            .about-us-content-video {
+                max-width: 1000px;
+            }
+
+            .about-us-content-video .about-us-content-video-title {
+                font-size: 48px;
+                margin-top: 80px;
+            }
+
+            .about-us-content-video .about-us-content-tab-box {
+                display: flex;
+                gap: 18px;
+                margin-top: 40px;
+            }
+
+            .about-us-content-video .about-us-content-tab-box button {
+                padding: 24px 42px;
+                font-size: 16px;
+            }
+
+            .about-us-content-video .about-us-content-video-box {
+                display: flex;
+                gap: 40px;
+                margin-top: 60px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-left {
+                width: 50%;
+                position: relative;
+                height: 400px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-left img {
+                position: absolute;
+                bottom: 0;
+                left: 20px;
+                width: 370px;
+                height: auto;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right {
+                flex: 1;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-title {
+                font-size: 48px;
+                max-width: 390px;
+            }
+
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-desc {
+                font-size: 16px;
+                margin-top: 32px;
+                max-width: 390px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-smalltitle {
+                font-size: 14px;
+                margin-top: 60px;
+                max-width: 390px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-icon {
+                margin-top: 28px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-icon svg {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            .about-us-content-video {
+                max-width: 768px;
+            }
+
+            .about-us-content-video .about-us-content-video-title {
+                font-size: 34px;
+            }
+
+            .about-us-content-video .about-us-content-tab-box {
+                display: flex;
+                gap: 16px;
+                margin-top: 40px;
+            }
+
+            .about-us-content-video .about-us-content-tab-box button {
+                padding: 19px 39px;
+                font-size: 14px;
+            }
+
+            .about-us-content-video .about-us-content-video-box {
+                display: flex;
+                gap: 30px;
+                margin-top: 60px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-left {
+                width: 50%;
+                position: relative;
+                height: 307px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-left img {
+                position: absolute;
+                bottom: 0;
+                left: 20px;
+                width: 300px;
+                height: auto;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right {
+                flex: 1;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-title {
+                font-size: 34px;
+                max-width: 316px;
+            }
+
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-desc {
+                font-size: 14px;
+                margin-top: 20px;
+                max-width: 316px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-smalltitle {
+                font-size: 12px;
+                margin-top: 40px;
+                max-width: 316px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-icon {
+                margin-top: 20px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-icon svg {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .about-us-content-video {
+                max-width: 100%;
+            }
+
+            .about-us-content-video .about-us-content-video-title {
+                font-size: 34px;
+            }
+
+            .about-us-content-video .about-us-content-tab-box {
+                display: flex;
+                gap: 12px;
+                margin-top: 40px;
+                overflow-x: scroll;
+            }
+
+            .about-us-content-video .about-us-content-tab-box button {
+                white-space: nowrap;
+            }
+
+            .about-us-content-video .about-us-content-video-box {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                margin-top: 50px;
+                padding: 0 17.5px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-left {
+                width: 100%;
+                position: relative;
+                height: 380px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-left img {
+                position: absolute;
+                bottom: 0;
+                left: 10px;
+                width: 300px;
+                height: 350px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right {
+                width: 100%;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-title {
+                font-size: 34px;
+                max-width: 300px;
+            }
+
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-desc {
+                max-width: 300px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-smalltitle {
+                max-width: 300px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-icon {
+                margin-top: 20px;
+            }
+
+            .about-us-content-video .about-us-content-video-box .about-us-content-video-box-right .about-us-content-video-box-right-icon svg {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
     <!-- module_5 style end -->
+    <!-- module_6 style start -->
+    <style>
+        .scroller {
+            width: 100%
+        }
+
+        .scroller__inner {
+            display: flex;
+            gap: 15px;
+            padding-block: 15px;
+            flex-wrap: wrap;
+            width: max-content;
+        }
+
+        .scroller[data-animated='true'] {
+            overflow: hidden;
+            /* mask: linear-gradient(90deg, transparent, blue 20%, blue 80%, transparent); */
+        }
+
+        .scroller[data-animated='true'] .scroller__inner {
+            flex-wrap: nowrap;
+            animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, normal) linear infinite;
+        }
+
+        .scroller[animation-direction='right'] {
+            --_animation-direction: reverse;
+        }
+
+        .scroller[animation-direction='left'] {
+            --_animation-direction: normal;
+        }
+
+        .scroller[animation-duration='fast'] {
+            --_animation-duration: 10s;
+        }
+
+        .scroller[animation-duration='slow'] {
+            --_animation-duration: 40s;
+        }
+
+        @keyframes scroll {
+            to {
+                transform: translateX(calc(-50% - 7px));
+            }
+        }
+
+        .about-us-infinite-scroll {
+            width: 100%;
+            margin-bottom: 100px;
+        }
+
+        .about-us-background-color-white {
+            background: #FBF9F9;
+        }
+
+        .about-us-background-color-purple {
+            background: #EEF0F5;
+        }
+
+        .about-us-background-color-green {
+            background: #F2F5F1;
+        }
+
+        .about-us-infinite-scroll .about-us-infinite-scroll-title {
+            color: #26333A;
+            text-align: center;
+            font-family: "SupremeLLSub-Bold" !important;
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 710;
+            line-height: 120%;
+            margin: 100px 0 60px;
+        }
+
+        .about-us-infinite-scroll .scroller .scroller-box {
+            display: flex;
+            gap: 40px;
+        }
+
+        .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item {
+            padding: 24px;
+            display: flex;
+            gap: 24px;
+            border-radius: 12px;
+        }
+
+        .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-img {
+            width: 160px;
+            height: auto;
+        }
+
+        .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-img img {
+            width: 100%;
+        }
+
+        .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-text .scroller-box-item-text-title {
+            color: #26333A;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: "Moderat-Bold" !important;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+        }
+
+        .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-text .scroller-box-item-text-desc {
+            color: rgba(38, 51, 58, 0.80);
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: "Moderat-Regular" !important;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+        @media screen and (max-width: 1440px) {
+            .about-us-infinite-scroll {
+                margin-bottom: 80px;
+            }
+
+            .about-us-infinite-scroll .about-us-infinite-scroll-title {
+                font-size: 48px;
+                margin: 80px 0 40px;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box {
+                display: flex;
+                gap: 40px;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item {
+                padding: 24px;
+                display: flex;
+                gap: 24px;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-img {
+                width: 160px;
+                height: auto;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-img img {
+                width: 100%;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-text .scroller-box-item-text-title {
+                font-size: 20px;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-text .scroller-box-item-text-desc {
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            .about-us-infinite-scroll .about-us-infinite-scroll-title {
+                font-size: 34px;
+                margin: 80px 0 40px;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box {
+                display: flex;
+                gap: 28px;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item {
+                padding: 18px;
+                display: flex;
+                gap: 18px;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-img {
+                width: 114px;
+                height: auto;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-img img {
+                width: 100%;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-text .scroller-box-item-text-title {
+                font-size: 16px;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-text .scroller-box-item-text-desc {
+                font-size: 12px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .about-us-infinite-scroll {
+                margin-bottom: 60px;
+            }
+
+            .about-us-infinite-scroll .about-us-infinite-scroll-title {
+                font-size: 34px;
+                margin: 60px 0 40px;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box {
+                display: flex;
+                gap: 10px;
+            }
+
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-img {
+                width: 110px;
+                height: auto;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-img img {
+                width: 100%;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-text .scroller-box-item-text-title {
+                font-size: 16px;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-text .scroller-box-item-text-desc {
+                font-size: 12px;
+            }
+        }
+    </style>
+    <!-- module_6 style end -->
+     <!-- module_7 style start -->
+     <style>
+        .about-us-content-achievements {
+            width: 100%;
+            background: #F1EEEB;
+            padding: 80px 200px;
+            display: flex;
+            justify-content: center;
+            gap: 141px;
+        }
+    
+        .about-us-content-achievements .about-us-content-achievements-text {
+            max-width: 574px;
+            margin-left: 80px;
+        }
+    
+        .about-us-content-achievements .about-us-content-achievements-text .about-us-content-achievements-text-title {
+            color: #26333A;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: "SupremeLLSub-Bold" !important;
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 710;
+            line-height: 120%;
+        }
+    
+        .about-us-content-achievements .about-us-content-achievements-text .about-us-content-achievements-text-desc {
+            color: rgba(38, 51, 58, 0.80);
+            font-family: "Moderat-Regular" !important;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 1.2px;
+            margin-top: 24px;
+        }
+    
+        .about-us-content-achievements .about-us-content-achievements-text a {
+            padding: 24px 44px;
+            border-radius: 40px;
+            background: #26333A;
+            box-shadow: 8px 8px 40px 0px rgba(0, 0, 0, 0.10);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #FDFCF5;
+            font-family: "Moderat-Bold" !important;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 16px;
+            letter-spacing: 0.9px;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: block;
+            width: max-content;
+            margin-top: 48px;
+        }
+    
+        .about-us-content-achievements .about-us-content-achievements-img {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+        }
+    
+        .about-us-content-achievements .about-us-content-achievements-img .about-us-content-achievements-img-item {
+            width: 164px;
+        }
+    
+        .about-us-content-achievements .about-us-content-achievements-img .about-us-content-achievements-img-item img {
+            width: 100%;
+        }
+    
+        @media screen and (max-width: 1440px) {
+            .about-us-content-achievements {
+                width: 100%;
+                padding: 80px 200px;
+                display: flex;
+                gap: 33px;
+            }
+    
+            .about-us-content-achievements .about-us-content-achievements-text {
+                max-width: 430px;
+                margin-left: 20px;
+            }
+    
+            .about-us-content-achievements .about-us-content-achievements-text .about-us-content-achievements-text-title {
+                font-size: 48px;
+            }
+    
+            .about-us-content-achievements .about-us-content-achievements-text .about-us-content-achievements-text-desc {
+                font-size: 20px;
+                letter-spacing: 1px;
+                margin-top: 24px;
+            }
+    
+            .about-us-content-achievements .about-us-content-achievements-text a {
+                padding: 24px 44px;
+                font-size: 16px;
+                line-height: 16px;
+                margin-top: 48px;
+            }
+    
+            .about-us-content-achievements .about-us-content-achievements-img {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 17px;
+            }
+    
+            .about-us-content-achievements .about-us-content-achievements-img .about-us-content-achievements-img-item {
+                width: 164px;
+            }
+    
+            .about-us-content-achievements .about-us-content-achievements-img .about-us-content-achievements-img-item img {
+                width: 100%;
+            }
+        }
+    
+        @media screen and (max-width: 1024px) {
+            .about-us-content-achievements {
+                width: 100%;
+                padding: 40px 130px;
+                display: flex;
+                gap: 24px;
+            }
+    
+            .about-us-content-achievements .about-us-content-achievements-text {
+                max-width: 310px;
+                margin-left: 0px;
+            }
+    
+            .about-us-content-achievements .about-us-content-achievements-text .about-us-content-achievements-text-title {
+                font-size: 34px;
+            }
+    
+            .about-us-content-achievements .about-us-content-achievements-text .about-us-content-achievements-text-desc {
+                font-size: 16px;
+                letter-spacing: 0.8px;
+                margin-top: 20px;
+            }
+    
+            .about-us-content-achievements .about-us-content-achievements-text a {
+                padding: 24px 44px;
+                font-size: 16px;
+                line-height: 16px;
+                margin-top: 40px;
+            }
+    
+            .about-us-content-achievements .about-us-content-achievements-img {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 14px;
+            }
+    
+            .about-us-content-achievements .about-us-content-achievements-img .about-us-content-achievements-img-item {
+                width: 134px;
+            }
+    
+            .about-us-content-achievements .about-us-content-achievements-img .about-us-content-achievements-img-item img {
+                width: 100%;
+            }
+        }
+    
+        @media screen and (max-width: 1024px) {
+            .about-us-content-achievements {
+                width: 100%;
+                padding: 40px 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+    
+            .about-us-content-achievements .about-us-content-achievements-text {
+                max-width: 335px;
+            }
+    
+            .about-us-content-achievements .about-us-content-achievements-img {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 12px;
+            }
+    
+            .about-us-content-achievements .about-us-content-achievements-img .about-us-content-achievements-img-item {
+                width: 102px;
+            }
+    
+            .about-us-content-achievements .about-us-content-achievements-img .about-us-content-achievements-img-item img {
+                width: 100%;
+            }
+        }
+    </style>
+      <!-- module_7 style end -->
 </head>
 
 <body>
@@ -646,8 +1369,8 @@
         </div>
         <!-- module 3 -->
         <div class="about-us-content-swiper">
+            <div class="about-us-content-swiper-title">New Working, New Living.</div>
             <div class="about-us-content-swiper-content">
-                <div class="about-us-content-swiper-title">New Working, New Living.</div>
                 <div class="about-us-content-swiper-box">
                     <div class="swiper" id="swiperTable">
                         <div class="swiper-wrapper"></div>
@@ -675,11 +1398,8 @@
         </div>
         <!-- module 4 -->
         <div class="about-us-content-iframe">
-            <iframe class="videoIframe" width="100%" height="778px"
-                src="https://www.youtube.com/embed/LLFiUs1ejuQ?si=7aqcm5IUR444lCFn" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <video autoplay loop muted controls
+                src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241225-video1.mp4"></video>
         </div>
         <!-- module 5 -->
         <div class="about-us-content-video">
@@ -697,14 +1417,140 @@
                 </div>
                 <div class="about-us-content-video-box-right">
                     <div class="about-us-content-video-box-right-title">Linus Tech Tips</div>
-                    <div class="about-us-content-video-box-right-desc">Our members have been using the FlexiSpot E7 legs
-                        for a while now and have been thoroughly impressed with thier remarkable stability.</div>
-                    <div class="about-us-content-video-box-right-smalltitle"># Host of one YouTube's largest technology
-                        channels</div>
-                    <div class="about-us-content-video-box-right-icon">icon</div>
+                    <div class="about-us-content-video-box-right-desc">"Our members have been using the FlexiSpot E7
+                        legs for a while now and have been thoroughly impressed with their remarkable stability."</div>
+                    <div class="about-us-content-video-box-right-smalltitle"># Host of one of YouTube’s largest
+                        technology channels</div>
+                    <div class="about-us-content-video-box-right-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+                            <g clip-path="url(#clip0_80_3325)">
+                                <circle cx="20.8047" cy="20.1184" r="20" fill="#004DF2" />
+                                <circle cx="20.8047" cy="20.1184" r="19.375" stroke="#26333A" stroke-opacity="0.1"
+                                    stroke-width="1.25" />
+                                <path d="M27.0547 20.1184L17.6797 25.5311L17.6797 14.7057L27.0547 20.1184Z"
+                                    fill="#FDFCF5" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_80_3325">
+                                    <rect width="40" height="40" fill="white"
+                                        transform="translate(0.804688 0.118408)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- module 6 -->
+        <div class="about-us-infinite-scroll">
+            <div class="about-us-infinite-scroll-title">Top rated by top media</div>
+            <div class="scroller" data-animated="true" animation-direction="right" animation-duration="fast">
+                <div class="scroller-box scroller__inner">
+                    <div class="scroller-box-item about-us-background-color-white">
+                        <div class="scroller-box-item-img">
+                            <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-scroll-logo1.png"
+                                alt="">
+                        </div>
+                        <div class="scroller-box-item-text">
+                            <div class="scroller-box-item-text-title">E7 Pro Standing Desk</div>
+                            <div class="scroller-box-item-text-desc">Top Pick of</div>
+                            <div class="scroller-box-item-text-desc">Best Standing Desk in 2024</div>
+                        </div>
+                    </div>
+                    <div class="scroller-box-item about-us-background-color-purple">
+                        <div class="scroller-box-item-img">
+                            <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-scroll-logo2.png"
+                                alt="">
+                        </div>
+                        <div class="scroller-box-item-text">
+                            <div class="scroller-box-item-text-title">C7 Ergonomic Chair</div>
+                            <div class="scroller-box-item-text-desc">Best for Home Offices in</div>
+                            <div class="scroller-box-item-text-desc">Best Office Chair of 2024</div>
+                        </div>
+                    </div>
+                    <div class="scroller-box-item about-us-background-color-green">
+                        <div class="scroller-box-item-img">
+                            <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-scroll-logo3.png"
+                                alt="">
+                        </div>
+                        <div class="scroller-box-item-text">
+                            <div class="scroller-box-item-text-title">XL6 Lift Recliner</div>
+                            <div class="scroller-box-item-text-desc">Best for Senior in</div>
+                            <div class="scroller-box-item-text-desc">Best Recliner Chairs for Ultimate Comfort</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroller" data-animated="true" animation-direction="right" animation-duration="fast">
+                <div class="scroller-box scroller__inner">
+                    <div class="scroller-box-item about-us-background-color-green">
+                        <div class="scroller-box-item-img">
+                            <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-scroll-logo4.png"
+                                alt="">
+                        </div>
+                        <div class="scroller-box-item-text">
+                            <div class="scroller-box-item-text-title">E7 Pro Standing Desk</div>
+                            <div class="scroller-box-item-text-desc">Best Heavy Duty of</div>
+                            <div class="scroller-box-item-text-desc">Best Standing Desk in 2024</div>
+                        </div>
+                    </div>
+                    <div class="scroller-box-item about-us-background-color-white">
+                        <div class="scroller-box-item-img">
+                            <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-scroll-logo5.png"
+                                alt="">
+                        </div>
+                        <div class="scroller-box-item-text">
+                            <div class="scroller-box-item-text-title">C7 Ergonomic Chair</div>
+                            <div class="scroller-box-item-text-desc">Best Office Chair in 2024</div>
+                        </div>
+                    </div>
+                    <div class="scroller-box-item about-us-background-color-purple">
+                        <div class="scroller-box-item-img">
+                            <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-scroll-logo6.png"
+                                alt="">
+                        </div>
+                        <div class="scroller-box-item-text">
+                            <div class="scroller-box-item-text-title">E7L Standing Desk</div>
+                            <div class="scroller-box-item-text-desc">Best L-Shape Desk of</div>
+                            <div class="scroller-box-item-text-desc">Best Gaming Desk 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- module 7 -->
+        <div class="about-us-content-achievements">
+            <div class="about-us-content-achievements-text">
+                <div class="about-us-content-achievements-text-title">Our Achievements</div>
+                <div class="about-us-content-achievements-text-desc">At FlexiSpot, our dedication to innovation and design
+                    excellence has been recognized globally, earning us multiple prestigious awards in the ergonomic and
+                    furniture industries.</div>
+                <a href="https://www.flexispot.com/" target="_blank">shop now</a>
+            </div>
+            <div class="about-us-content-achievements-img">
+                <div class="about-us-content-achievements-img-item">
+                    <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-shop-logo1.png"
+                        alt="">
+                </div>
+                <div class="about-us-content-achievements-img-item">
+                    <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-shop-logo2.png"
+                        alt="">
+                </div>
+                <div class="about-us-content-achievements-img-item">
+                    <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-shop-logo3.png"
+                        alt="">
+                </div>
+                <div class="about-us-content-achievements-img-item">
+                    <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-shop-logo4.png"
+                        alt="">
+                </div>
+                <div class="about-us-content-achievements-img-item">
+                    <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-shop-logo5.png"
+                        alt="">
+                </div>
+            </div>
+        </div>
+        <!-- module 8 -->
     </div>
 </body>
 <script>
@@ -816,31 +1662,31 @@
                     const tabData = [
                         {
                             title: "Linus Tech Tips",
-                            content: "Our members have been using the FlexiSpot E7 legs for a while now and have been thoroughly impressed with their remarkable stability.",
+                            content: `"Our members have been using the FlexiSpot E7 legs for a while now and have been thoroughly impressed with their remarkable stability."`,
                             imgurl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-video-img1.png",
-                            channel: "# Host of one YouTube's largest technology channels",
-                            videoUrl: "https://www.youtube.com/embed/LLFiUs1ejuQ?si=7aqcm5IUR444lCFn"
+                            channel: "# Host of one of YouTube’s largest technology channels",
+                            videoUrl: "https://www.youtube.com/embed/u6WDvzlmtSM?si=FRxkRRuVoRMGSGXB",
                         },
                         {
                             title: "Basically Homeless",
-                            content: "FlexiSpot E7 is an ideal choice for those seeking remarkable stability and functionality.",
+                            content: `"FlexiSpot is truly the pinnacle of standing desks. I stand with FlexiSpot… literally almost every day."`,
                             imgurl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-video-img2.png",
-                            channel: "# Host of Basically Homeless",
-                            videoUrl: "https://www.youtube.com/embed/XYZ1234?si=7aqcm5IUR444lCFn"
+                            channel: "# Turns unconventional ideas into engaging content",
+                            videoUrl: "https://www.youtube.com/embed/nCiUuBx06kg?si=nD_DwO-ZrPZ_0-Gi",
                         },
                         {
                             title: "Bob & Brad",
-                            content: "Ergonomic designs that make life easier with an adjustable desk solution.",
+                            content: `"I always think that FlexiSpot has a good value. They've got good quality products, for home or work."`,
                             imgurl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-video-img3.png",
-                            channel: "# Hosts of physical therapy channel",
-                            videoUrl: "https://www.youtube.com/embed/ABC5678?si=7aqcm5IUR444lCFn"
+                            channel: "# The most famous physical therapists on the internet",
+                            videoUrl: "https://www.youtube.com/embed/fn_Dt5FIAvQ?si=K1ziwVmhLPt5OX24",
                         },
                         {
                             title: "Styropyro",
-                            content: "FlexiSpot E7: Sturdy and ergonomic. Perfect for any tech enthusiast!",
+                            content: `"FlexiSpot desks provide the ideal stability and flexibility for my high-energy laser experiments and DIY creations."`,
                             imgurl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-video-img4.png",
-                            channel: "# Host of a laser enthusiast channel",
-                            videoUrl: "https://www.youtube.com/embed/DEF91011?si=7aqcm5IUR444lCFn"
+                            channel: "# A laser enthusiast and science creator",
+                            videoUrl: "https://www.youtube.com/embed/fIM6943BSRA?si=_zxVvIZHrAVvC0iC",
                         },
                     ];
 
@@ -884,6 +1730,35 @@
                     updateContent(0);
 
                     // module_5 js end
+
+                    // module_6 js start
+                    const scrollers = document.querySelectorAll(".scroller");
+
+                    addAnimation();
+
+                    function addAnimation() {
+                        scrollers.forEach((scroller) => {
+                            if (scroller.getAttribute("data-animated")) {
+                                const scrollerInner = scroller.querySelector(".scroller__inner");
+                                const scrollerContent = Array.from(scrollerInner.children);
+                                scrollerContent.forEach((item) => {
+                                    // 拿到每个节点
+                                    const cloneNode = item.cloneNode(true);
+                                    // 把节点添加进去
+                                    scrollerInner.appendChild(cloneNode);
+                                });
+                                // 鼠标移至元素节点时动画停止
+                                scrollerInner.addEventListener("mouseenter", () => {
+                                    scrollerInner.style.animationPlayState = "paused";
+                                });
+                                // 鼠标移出元素节点时动画开始
+                                scrollerInner.addEventListener("mouseleave", () => {
+                                    scrollerInner.style.animationPlayState = "running";
+                                });
+                            }
+                        });
+                    }
+                    // module_6 js end
 
                 })
         })

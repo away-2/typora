@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .about-us-content-achievements {
+        width: 100%;
+        background: #F1EEEB;
+        padding: 80px 200px;
+        display: flex;
+        justify-content: center;
+        gap: 141px;
+    }
+
+    .about-us-content-achievements .about-us-content-achievements-text {
+        max-width: 574px;
+        margin-left: 80px;
+    }
+
+    .about-us-content-achievements .about-us-content-achievements-text .about-us-content-achievements-text-title {
+        color: #26333A;
+        font-variant-numeric: lining-nums proportional-nums;
+        font-family: "SupremeLLSub-Bold" !important;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 710;
+        line-height: 120%;
+    }
+
+    .about-us-content-achievements .about-us-content-achievements-text .about-us-content-achievements-text-desc {
+        color: rgba(38, 51, 58, 0.80);
+        font-family: "Moderat-Regular" !important;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 1.2px;
+        margin-top: 24px;
+    }
+
+    .about-us-content-achievements .about-us-content-achievements-text a {
+        padding: 24px 44px;
+        border-radius: 40px;
+        background: #26333A;
+        box-shadow: 8px 8px 40px 0px rgba(0, 0, 0, 0.10);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FDFCF5;
+        font-family: "Moderat-Bold" !important;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0.9px;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: block;
+        width: max-content;
+        margin-top: 48px;
+    }
+
+    .about-us-content-achievements .about-us-content-achievements-img {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+    }
+
+    .about-us-content-achievements .about-us-content-achievements-img .about-us-content-achievements-img-item {
+        width: 164px;
+    }
+
+    .about-us-content-achievements .about-us-content-achievements-img .about-us-content-achievements-img-item img {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 1440px) {
+        .about-us-content-achievements {
+            width: 100%;
+            padding: 80px 200px;
+            display: flex;
+            gap: 33px;
+        }
+
+        .about-us-content-achievements .about-us-content-achievements-text {
+            max-width: 430px;
+            margin-left: 20px;
+        }
+
+        .about-us-content-achievements .about-us-content-achievements-text .about-us-content-achievements-text-title {
+            font-size: 48px;
+        }
+
+        .about-us-content-achievements .about-us-content-achievements-text .about-us-content-achievements-text-desc {
+            font-size: 20px;
+            letter-spacing: 1px;
+            margin-top: 24px;
+        }
+
+        .about-us-content-achievements .about-us-content-achievements-text a {
+            padding: 24px 44px;
+            font-size: 16px;
+            line-height: 16px;
+            margin-top: 48px;
+        }
+
+        .about-us-content-achievements .about-us-content-achievements-img {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 17px;
+        }
+
+        .about-us-content-achievements .about-us-content-achievements-img .about-us-content-achievements-img-item {
+            width: 164px;
+        }
+
+        .about-us-content-achievements .about-us-content-achievements-img .about-us-content-achievements-img-item img {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .about-us-content-achievements {
+            width: 100%;
+            padding: 40px 130px;
+            display: flex;
+            gap: 24px;
+        }
+
+        .about-us-content-achievements .about-us-content-achievements-text {
+            max-width: 310px;
+            margin-left: 0px;
+        }
+
+        .about-us-content-achievements .about-us-content-achievements-text .about-us-content-achievements-text-title {
+            font-size: 34px;
+        }
+
+        .about-us-content-achievements .about-us-content-achievements-text .about-us-content-achievements-text-desc {
+            font-size: 16px;
+            letter-spacing: 0.8px;
+            margin-top: 20px;
+        }
+
+        .about-us-content-achievements .about-us-content-achievements-text a {
+            padding: 24px 44px;
+            font-size: 16px;
+            line-height: 16px;
+            margin-top: 40px;
+        }
+
+        .about-us-content-achievements .about-us-content-achievements-img {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .about-us-content-achievements .about-us-content-achievements-img .about-us-content-achievements-img-item {
+            width: 134px;
+        }
+
+        .about-us-content-achievements .about-us-content-achievements-img .about-us-content-achievements-img-item img {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .about-us-content-achievements {
+            width: 100%;
+            padding: 40px 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .about-us-content-achievements .about-us-content-achievements-text {
+            max-width: 335px;
+        }
+
+        .about-us-content-achievements .about-us-content-achievements-img {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .about-us-content-achievements .about-us-content-achievements-img .about-us-content-achievements-img-item {
+            width: 102px;
+        }
+
+        .about-us-content-achievements .about-us-content-achievements-img .about-us-content-achievements-img-item img {
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+    <div class="about-us-content-achievements">
+        <div class="about-us-content-achievements-text">
+            <div class="about-us-content-achievements-text-title">Our Achievements</div>
+            <div class="about-us-content-achievements-text-desc">At FlexiSpot, our dedication to innovation and design
+                excellence has been recognized globally, earning us multiple prestigious awards in the ergonomic and
+                furniture industries.</div>
+            <a href="https://www.flexispot.com/" target="_blank">shop now</a>
+        </div>
+        <div class="about-us-content-achievements-img">
+            <div class="about-us-content-achievements-img-item">
+                <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-shop-logo1.png"
+                    alt="">
+            </div>
+            <div class="about-us-content-achievements-img-item">
+                <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-shop-logo2.png"
+                    alt="">
+            </div>
+            <div class="about-us-content-achievements-img-item">
+                <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-shop-logo3.png"
+                    alt="">
+            </div>
+            <div class="about-us-content-achievements-img-item">
+                <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-shop-logo4.png"
+                    alt="">
+            </div>
+            <div class="about-us-content-achievements-img-item">
+                <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-shop-logo5.png"
+                    alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
