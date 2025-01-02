@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background: #000;
+        color: #fff;
+        margin: 0;
+    }
+
+    .container {
+        width: 80%;
+        margin: 2em auto;
+        position: relative;
+        text-indent: 2em;
+        line-height: 2;
+        letter-spacing: 2px;
+    }
+
+    .eraser {
+        position: absolute;
+        inset: 0;
+        margin: 0;
+    }
+
+    /* 变量转换成属性 */
+    @property --p {
+        /* 类型：百分比 */
+        syntax: '<percentage>';
+        /* 是否能继承 */
+        inherits: false;
+        /* 初始值 */
+        initial-value: 0%;
+    }
+
+    /* 动画需要两个特点，一是数值变化，二是必须是属性的数值变化，--p不是属性，所以需要将--p转化为属性后，动画才生效 */
+
+    .text {
+        --p: 0%;
+        background: linear-gradient(to right, transparent var(--p), #000 calc(var(--p) + 10px));
+        color: transparent;
+        animation: erase 10s forwards linear;
+    }
+
+    @keyframes erase {
+        to {
+            --p: 100%;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <p>
+            Recently, I'm about to leave my job, and I interviewed for some non-development jobs (don't have any
+            skills), and I found that I didn't want to go even after I interviewed for the job, the salary is low, and
+            it's very boring and tedious when I think about it. I realized that in addition to the development of what I
+            will not do skills of work.
+            In addition to development and what I can do, recently hit my soul.
+            Write their own projects and always write a bunch of bugs, I am very distressed, leading to the idea of
+            changing careers, but suddenly realized that I do not know what industry to turn.
+        </p>
+        <p class="eraser">
+            <span class="text">
+                Recently, I'm about to leave my job, and I interviewed for some non-development jobs (don't have any
+                skills), and I found that I didn't want to go even after I interviewed for the job, the salary is low,
+                and it's very boring and tedious when I think about it. I realized that in addition to the development
+                of what I will not do skills of work.
+                In addition to development and what I can do, recently hit my soul.
+                Write their own projects and always write a bunch of bugs, I am very distressed, leading to the idea of
+                changing careers, but suddenly realized that I do not know what industry to turn.
+            </span>
+        </p>
+    </div>
+</body>
+
+</html>
