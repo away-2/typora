@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .labeling-activity-contribute-box {
+            max-width: 1384px;
+            margin: 0 auto;
+            margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .labeling-activity-contribute-box .labeling-activity-contribute-text {
+            color: #26333A;
+            text-align: center;
+            font-family: "NotoSansJP-Medium" !important;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%;
+            letter-spacing: 1.2px;
+        }
+
+        .labeling-activity-contribute-box .labeling-activity-contribute-copy-box {
+            margin-top: 32px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            padding: 14px 40px;
+            border-radius: 40px;
+            width: max-content;
+            border: 2.5px solid #26333A;
+        }
+
+        .labeling-activity-contribute-box .labeling-activity-contribute-copy-box .labeling-activity-contribute-copy-text {
+            color: #26333A;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-feature-settings: 'liga' off;
+            font-family: "NotoSansJP-Medium";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%;
+        }
+
+        .labeling-activity-contribute-box .labeling-activity-contribute-copy-box svg {
+            cursor: pointer;
+        }
+
+        .labeling-activity-contribute-box .labeling-activity-contribute-button {
+            display: block;
+            width: 681px;
+            padding: 18px 0px;
+            border-radius: 40px;
+            background: #043E1B;
+            text-align: center;
+            color: #FFF;
+            font-family: "NotoSansJP-Medium" !important;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%;
+            margin-top: 32px;
+            text-decoration: none;
+        }
+
+        .labeling-activity-contribute-box .labeling-activity-contribute-desc {
+            color: rgba(38, 51, 58, 0.80);
+            text-align: center;
+            font-family: "NotoSansJP-Regular" !important;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            letter-spacing: 0.9px;
+            margin-top: 32px;
+        }
+
+        @media screen and (max-width: 1440px) {
+            .labeling-activity-contribute-box {
+                max-width: 1000px;
+                margin-top: 60px;
+            }
+
+            .labeling-activity-contribute-box .labeling-activity-contribute-text {
+                font-size: 18px;
+                letter-spacing: 0.9px;
+            }
+
+            .labeling-activity-contribute-box .labeling-activity-contribute-copy-box {
+                margin-top: 24px;
+                gap: 8px;
+                align-items: center;
+                padding: 14px 40px;
+            }
+
+            .labeling-activity-contribute-box .labeling-activity-contribute-copy-box .labeling-activity-contribute-copy-text {
+                font-size: 20px;
+            }
+
+            .labeling-activity-contribute-box .labeling-activity-contribute-copy-box svg {
+                cursor: pointer;
+            }
+
+            .labeling-activity-contribute-box .labeling-activity-contribute-button {
+                width: 681px;
+                padding: 18px 0px;
+                font-size: 20px;
+                margin-top: 24px;
+            }
+
+            .labeling-activity-contribute-box .labeling-activity-contribute-desc {
+                font-size: 16px;
+                letter-spacing: 0.8px;
+                margin-top: 24px;
+            }
+
+        }
+
+        @media screen and (max-width: 1024px) {
+            .labeling-activity-contribute-box {
+                max-width: 768px;
+                margin-top: 40px;
+            }
+
+            .labeling-activity-contribute-box .labeling-activity-contribute-text {
+                font-size: 16px;
+                letter-spacing: 0.8px;
+            }
+
+            .labeling-activity-contribute-box .labeling-activity-contribute-copy-box {
+                margin-top: 16px;
+                gap: 8px;
+                align-items: center;
+                padding: 14px 40px;
+            }
+
+            .labeling-activity-contribute-box .labeling-activity-contribute-copy-box .labeling-activity-contribute-copy-text {
+                font-size: 18px;
+            }
+
+            .labeling-activity-contribute-box .labeling-activity-contribute-copy-box svg {
+                cursor: pointer;
+            }
+
+            .labeling-activity-contribute-box .labeling-activity-contribute-button {
+                width: 681px;
+                padding: 18px 0px;
+                font-size: 18px;
+                margin-top: 16px;
+            }
+
+            .labeling-activity-contribute-box .labeling-activity-contribute-desc {
+                font-size: 14px;
+                letter-spacing: 0.7px;
+                margin-top: 16px;
+            }
+
+        }
+
+        @media screen and (max-width: 768px) {
+            .labeling-activity-contribute-box {
+                max-width: 100%;
+                margin-top: 20px;
+            }
+
+            .labeling-activity-contribute-box .labeling-activity-contribute-text {
+                font-size: 14px;
+                letter-spacing: 0.7px;
+            }
+
+            .labeling-activity-contribute-box .labeling-activity-contribute-copy-box {
+                align-items: center;
+                padding: 14px;
+            }
+
+            .labeling-activity-contribute-box .labeling-activity-contribute-copy-box .labeling-activity-contribute-copy-text {
+                font-size: 14px;
+                max-width: 260px;
+            }
+
+            .labeling-activity-contribute-box .labeling-activity-contribute-copy-box svg {
+                cursor: pointer;
+            }
+
+            .labeling-activity-contribute-box .labeling-activity-contribute-button {
+                width: 335px;
+                padding: 18px 0px;
+                font-size: 14px;
+                margin-top: 16px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="labeling-activity-contribute-box">
+        <div class="labeling-activity-contribute-text">▽ボタンをタップしてハッシュタグをコピー▽</div>
+        <div class="labeling-activity-contribute-copy-box">
+            <div class="labeling-activity-contribute-copy-text">
+                #FlexiSpotのある暮らし #FlexiSpotプレゼントキャンペーン
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M8.1499 7.83569H22.9012C23.3154 7.83569 23.6512 8.17148 23.6512 8.58569V8.8252H25.9012V8.58569C25.9012 6.92884 24.5581 5.58569 22.9012 5.58569H8.1499C6.49305 5.58569 5.1499 6.92884 5.1499 8.58569V23.4531C5.1499 25.11 6.49305 26.4531 8.1499 26.4531H9.87984V24.2031H8.1499C7.73569 24.2031 7.3999 23.8673 7.3999 23.4531V8.58569C7.3999 8.17148 7.73569 7.83569 8.1499 7.83569ZM28.8501 12.554H14.0988C13.6846 12.554 13.3488 12.8897 13.3488 13.304V28.1714C13.3488 28.5856 13.6846 28.9214 14.0988 28.9214H28.8501C29.2643 28.9214 29.6001 28.5856 29.6001 28.1714V13.304C29.6001 12.8897 29.2643 12.554 28.8501 12.554ZM14.0988 10.304C12.442 10.304 11.0988 11.6471 11.0988 13.304V28.1714C11.0988 29.8282 12.442 31.1714 14.0988 31.1714H28.8501C30.507 31.1714 31.8501 29.8282 31.8501 28.1714V13.304C31.8501 11.6471 30.507 10.304 28.8501 10.304H14.0988ZM21.4745 15.2295C22.0958 15.2295 22.5995 15.7332 22.5995 16.3545V19.6123H25.8581C26.4794 19.6123 26.9831 20.116 26.9831 20.7373C26.9831 21.3586 26.4794 21.8623 25.8581 21.8623H22.5995V25.1217C22.5995 25.743 22.0958 26.2467 21.4745 26.2467C20.8532 26.2467 20.3495 25.743 20.3495 25.1217V21.8623H17.0908C16.4695 21.8623 15.9658 21.3586 15.9658 20.7373C15.9658 20.116 16.4695 19.6123 17.0908 19.6123H20.3495V16.3545C20.3495 15.7332 20.8532 15.2295 21.4745 15.2295Z"
+                    fill="#26333A" />
+            </svg>
+        </div>
+        <a href="https://x.com/home" target="_blank" class="labeling-activity-contribute-button">Xに投稿する</a>
+        <div class="labeling-activity-contribute-desc">
+            ※Xの投稿を「非公開」設定にされている場合は、本キャンペーンの応募対象外になりますのでご注意ください。<br />
+            ※本キャンペーンはXの企画となります。X以外のSNSで投稿された場合、キャンペーン対象になりません。<br />
+            ※投稿された写真は@FlexiSpot_JPにリポスト投稿する場合もあります。
+        </div>
+    </div>
+</body>
+
+</html>
