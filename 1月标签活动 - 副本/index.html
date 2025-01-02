@@ -218,7 +218,7 @@
 
         .labeling-activity-contribute-box .labeling-activity-contribute-copy-box .ip-code-copy-success {
             position: absolute;
-            top: 40px;
+            top: 70px;
             left: 50%;
             transform: translateX(-50%);
             transition: all 0.3s;
@@ -980,10 +980,10 @@
     </div>
 </body>
 <script>
-    // ip-sale js start
-    function copyCode(element) {
-        // 获取当前点击的svg所在的父级容器中的span内容
-        var code = element.parentElement.querySelector("span").textContent
+    const copy_svg = document.querySelector(".labeling-activity-contribute-copy-box svg")
+
+    copy_svg.addEventListener("click", function () {
+        var code = document.querySelector(".labeling-activity-contribute-copy-text").textContent
 
         // 创建临时文本输入框
         var tempInput = document.createElement("input")
@@ -994,7 +994,7 @@
         document.body.removeChild(tempInput)
 
         // 显示复制成功的提示
-        var successMessage = element.parentElement.querySelector(
+        var successMessage = document.querySelector(
             ".ip-code-copy-success"
         )
         successMessage.style.display = "block"
@@ -1003,8 +1003,7 @@
         setTimeout(function () {
             successMessage.style.display = "none"
         }, 1000)
-    }
-    // ip-sale js end
+    })
 </script>
 
 </html>
