@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rug_container * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .rug_container {
+            max-width: 1384px;
+            margin: 50px auto;
+        }
+
+        .rug_container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .rug_container .rug_titles {
+            color: #26333a;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-feature-settings: "ss01" on, "ss04" on, "ss18" on, "liga" off;
+            font-family: "SupremeLLSub-Black" !important;
+            font-size: 52px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 120%;
+            text-align: center;
+        }
+
+        .rug_container .rug_tabs {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            margin: 30px 0;
+            padding: 0 50px;
+        }
+
+        .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .rug_container .rug_tabs .rug_tabs_item {
+            min-width: 92px;
+            padding: 8px 0px;
+            margin-right: 14px;
+            text-align: center;
+            color: #26333a;
+            font-family: "SupremeLLSub-Bold" !important;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 710;
+            line-height: 120%;
+            cursor: pointer;
+            border-radius: 29.808px;
+            border: 1.092px solid #26333A;
+        }
+
+        .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .rug_container .rug_tabs .rug_tabs_item:hover {
+            background-color: #26333a;
+            color: #fff;
+        }
+
+        .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .rug_container .rug_tabs .rug_tabs_item.rug_tabs_active {
+            background-color: #26333a;
+            color: #fff;
+        }
+
+        .rug_container .rug_ctx {
+            display: none;
+            column-gap: 17px;
+            justify-content: center;
+        }
+
+        .rug_container .rug_ctx .rug_ctx_item img {
+            border-radius: 4px;
+        }
+
+        @media screen and (max-width: 1440px) {
+            .rug_container {
+                max-width: 100%;
+            }
+
+            .rug_container .rug_tabs {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                margin: 30px 0;
+                padding: 0 40px;
+            }
+
+
+            .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .rug_container .rug_tabs .rug_tabs_item {
+                margin-right: 14px;
+                font-size: 20px;
+            }
+
+        }
+
+        @media screen and (max-width: 1024px) {
+            .rug_container {
+                max-width: 768px;
+                margin-bottom: 64px;
+            }
+
+            .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .rug_container .rug_titles {
+                font-size: 24px;
+            }
+
+            .rug_container .rug_tabs {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                margin: 30px 0;
+                padding: 0px;
+                row-gap: 20px;
+            }
+
+            .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .rug_container .rug_tabs .rug_tabs_item {
+                margin-right: 14px;
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .rug_container {
+                margin-bottom: 50px;
+            }
+
+            .rug_container .rug_tabs {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                margin: 20px 0;
+                padding: 0 10px;
+            }
+
+            .rug_container .rug_titles {
+                text-align: center;
+            }
+
+            .rug_container .rug_tabs_case {
+                width: 335px;
+            }
+
+            .rug_container .rug_tabs_case::-webkit-scrollbar,
+            .rug_container .rug_ctx::-webkit-scrollbar {
+                display: none;
+            }
+
+
+            .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .rug_container .rug_tabs .rug_tabs_item {
+                margin-right: 10px;
+                font-size: 14px;
+                padding: 4px 0;
+            }
+
+            .rug_container .rug_ctx {
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            .rug_container .rug_ctx .rug_ctx_item {
+                flex-shrink: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rug_container">
+        <div class="rug_titles">Washable Rug in Real Life</div>
+        <div class="rug_tabs_case">
+            <div class="rug_tabs">
+                <div class="rug_tabs_item rug_tabs_active">Living Room</div>
+                <div class="rug_tabs_item">Bedroom</div>
+                <div class="rug_tabs_item">Dinning Room</div>
+                <div class="rug_tabs_item">Kitchen</div>
+                <div class="rug_tabs_item">Home Office</div>
+                <div class="rug_tabs_item">Hallway</div>
+            </div>
+        </div>
+
+        <div class="rug_ctx" style="display: flex">
+            <div class="rug_ctx_item">
+                <img class="lazyload"
+                    data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241127-livingRoom-img1.png"
+                    alt="" width="450" height="450" />
+            </div>
+            <div class="rug_ctx_item">
+                <img class="lazyload"
+                    data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241127-livingRoom-img2.png"
+                    alt="" width="450" height="450" />
+            </div>
+            <div class="rug_ctx_item">
+                <img class="lazyload"
+                    data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241127-livingRoom-img3.png"
+                    alt="" width="450" height="450" />
+            </div>
+        </div>
+
+        <div class="rug_ctx">
+            <div class="rug_ctx_item">
+                <img class="lazyload"
+                    data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241127-bedroom-img1.png"
+                    alt="" width="450" height="450" />
+            </div>
+        </div>
+
+        <div class="rug_ctx">
+            <div class="rug_ctx_item">
+                <img class="lazyload"
+                    data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241127-dinningRoom-img1.png"
+                    alt="" width="450" height="450" />
+            </div>
+            <div class="rug_ctx_item">
+                <img class="lazyload"
+                    data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241127-dinningRoom-img2.png"
+                    alt="" width="450" height="450" />
+            </div>
+        </div>
+
+        <div class="rug_ctx">
+            <div class="rug_ctx_item">
+                <img class="lazyload"
+                    data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241127-kitchen-img1.png"
+                    alt="" width="450" height="450" />
+            </div>
+        </div>
+
+        <div class="rug_ctx">
+            <div class="rug_ctx_item">
+                <img class="lazyload"
+                    data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241224-homeOffice-img2.png"
+                    alt="" width="450" height="450" />
+            </div>
+            <div class="rug_ctx_item">
+                <img class="lazyload"
+                    data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241127-homeOffice-img2.png"
+                    alt="" width="450" height="450" />
+            </div>
+            <div class="rug_ctx_item">
+                <img class="lazyload"
+                    data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241224-homeOffice-img1.png"
+                    alt="" width="450" height="450" />
+            </div>
+        </div>
+
+        <div class="rug_ctx">
+            <div class="rug_ctx_item">
+                <img class="lazyload"
+                    data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241127-hallway-img1.png"
+                    alt="" width="450" height="450" />
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const rug_tabs = document.querySelectorAll(
+        ".rug_container .rug_tabs .rug_tabs_item"
+    )
+    const rug_data = [
+        
+    ]
+        rug_ctx = document.querySelectorAll(".rug_container .rug_ctx")
+    rug_tabs.forEach((item, i) => {
+        item.addEventListener("click", () => {
+            rug_tabs.forEach((item) => item.classList.remove("rug_tabs_active"))
+            rug_ctx.forEach((item) => (item.style.display = "none"))
+            item.classList.add("rug_tabs_active")
+            rug_ctx[i].style.display = "flex"
+            item.scrollIntoView({
+                inline: "center",
+                block: "nearest",
+            })
+        })
+    })
+
+</script>
+
+</html>
