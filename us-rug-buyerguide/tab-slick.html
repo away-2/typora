@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+    <link rel="stylesheet" type="text/css"
+        href="https://staticprod.site.flexispot.com/dev/trantor/attachments/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://s3.springbeetle.com/prod-us-bucket/trantor/attachments/CA/slick-theme.css" />
+
     <style>
         .rug_container * {
             margin: 0;
@@ -23,7 +33,7 @@
             border-radius: 12px;
         }
 
-        .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .rug_container .rug_titles {
+        .rug_container .rug_titles {
             color: #26333a;
             font-variant-numeric: lining-nums proportional-nums;
             font-feature-settings: "ss01" on, "ss04" on, "ss18" on, "liga" off;
@@ -42,7 +52,7 @@
             padding: 0 50px;
         }
 
-        .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .rug_container .rug_tabs .rug_tabs_item {
+        .rug_container .rug_tabs .rug_tabs_item {
             min-width: 92px;
             padding: 8px 0px;
             margin-right: 14px;
@@ -58,25 +68,16 @@
             border: 1.092px solid #26333A;
         }
 
-        .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .rug_container .rug_tabs .rug_tabs_item:hover {
+        .rug_container .rug_tabs .rug_tabs_item:hover {
             background-color: #26333a;
             color: #fff;
         }
 
-        .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .rug_container .rug_tabs .rug_tabs_item.rug_tabs_active {
+        .rug_container .rug_tabs .rug_tabs_item.rug_tabs_active {
             background-color: #26333a;
             color: #fff;
         }
 
-        .rug_container .rug_ctx {
-            display: none;
-            column-gap: 17px;
-            justify-content: center;
-        }
-
-        .rug_container .rug_ctx .rug_ctx_item img {
-            border-radius: 4px;
-        }
 
         @media screen and (max-width: 1440px) {
             .rug_container {
@@ -90,8 +91,7 @@
                 padding: 0 40px;
             }
 
-
-            .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .rug_container .rug_tabs .rug_tabs_item {
+            .rug_container .rug_tabs .rug_tabs_item {
                 margin-right: 14px;
                 font-size: 20px;
             }
@@ -104,7 +104,7 @@
                 margin-bottom: 64px;
             }
 
-            .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .rug_container .rug_titles {
+            .rug_container .rug_titles {
                 font-size: 24px;
             }
 
@@ -116,7 +116,7 @@
                 row-gap: 20px;
             }
 
-            .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .rug_container .rug_tabs .rug_tabs_item {
+            .rug_container .rug_tabs .rug_tabs_item {
                 margin-right: 14px;
                 font-size: 16px;
             }
@@ -148,7 +148,7 @@
             }
 
 
-            .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .rug_container .rug_tabs .rug_tabs_item {
+            .rug_container .rug_tabs .rug_tabs_item {
                 margin-right: 10px;
                 font-size: 14px;
                 padding: 4px 0;
@@ -180,101 +180,299 @@
             </div>
         </div>
 
-        <div class="rug_ctx" style="display: flex">
-            <div class="rug_ctx_item">
-                <img class="lazyload"
-                    data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241127-livingRoom-img1.png"
-                    alt="" width="450" height="450" />
-            </div>
-            <div class="rug_ctx_item">
-                <img class="lazyload"
-                    data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241127-livingRoom-img2.png"
-                    alt="" width="450" height="450" />
-            </div>
-            <div class="rug_ctx_item">
-                <img class="lazyload"
-                    data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241127-livingRoom-img3.png"
-                    alt="" width="450" height="450" />
-            </div>
-        </div>
-
         <div class="rug_ctx">
-            <div class="rug_ctx_item">
-                <img class="lazyload"
-                    data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241127-bedroom-img1.png"
-                    alt="" width="450" height="450" />
+            <div class="rug_ctx_content">
+                <div class="rug_ctx_content_left">
+                    <div class="rug_ctx_content_left_title">222</div>
+                    <div class="rug_ctx_content_left_text">333</div>
+                </div>
+                <div class="rug_ctx_content_right">
+                    <img class="lazyload"
+                        data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-tab-img1.png"
+                        alt="" />
+                </div>
             </div>
-        </div>
-
-        <div class="rug_ctx">
-            <div class="rug_ctx_item">
-                <img class="lazyload"
-                    data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241127-dinningRoom-img1.png"
-                    alt="" width="450" height="450" />
-            </div>
-            <div class="rug_ctx_item">
-                <img class="lazyload"
-                    data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241127-dinningRoom-img2.png"
-                    alt="" width="450" height="450" />
-            </div>
-        </div>
-
-        <div class="rug_ctx">
-            <div class="rug_ctx_item">
-                <img class="lazyload"
-                    data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241127-kitchen-img1.png"
-                    alt="" width="450" height="450" />
-            </div>
-        </div>
-
-        <div class="rug_ctx">
-            <div class="rug_ctx_item">
-                <img class="lazyload"
-                    data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241224-homeOffice-img2.png"
-                    alt="" width="450" height="450" />
-            </div>
-            <div class="rug_ctx_item">
-                <img class="lazyload"
-                    data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241127-homeOffice-img2.png"
-                    alt="" width="450" height="450" />
-            </div>
-            <div class="rug_ctx_item">
-                <img class="lazyload"
-                    data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241224-homeOffice-img1.png"
-                    alt="" width="450" height="450" />
-            </div>
-        </div>
-
-        <div class="rug_ctx">
-            <div class="rug_ctx_item">
-                <img class="lazyload"
-                    data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-20241127-hallway-img1.png"
-                    alt="" width="450" height="450" />
-            </div>
+            <div class="rug_ctx_slick"></div>
         </div>
     </div>
 </body>
 <script>
-    const rug_tabs = document.querySelectorAll(
-        ".rug_container .rug_tabs .rug_tabs_item"
-    )
-    const rug_data = [
-        
-    ]
-        rug_ctx = document.querySelectorAll(".rug_container .rug_ctx")
-    rug_tabs.forEach((item, i) => {
-        item.addEventListener("click", () => {
-            rug_tabs.forEach((item) => item.classList.remove("rug_tabs_active"))
-            rug_ctx.forEach((item) => (item.style.display = "none"))
-            item.classList.add("rug_tabs_active")
-            rug_ctx[i].style.display = "flex"
-            item.scrollIntoView({
-                inline: "center",
-                block: "nearest",
-            })
-        })
-    })
+    function loadScript(url, callback) {
+        document.getElementById("") && document.getElementById("").remove()
+        var script = document.createElement("script")
+        script.type = "text/javascript"
+        script.async = "async"
+        script.src = url
+        script.id = ""
+        var head = document.head || document.getElementsByTagName("head")[0]
+        head.appendChild(script)
+        if (script.readyState) {
+            script.onreadystatechange = function () {
+                if (script.readyState == "complete" || script.readyState == "loaded") {
+                    script.onreadystatechange = null
+                    callback()
+                }
+            }
+        } else {
+            script.onload = function () {
+                callback()
+            }
+        }
+    }
+    loadScript(
+        "https://staticprod.site.flexispot.com/dev/trantor/attachments/jquery-3.6.0.min.js",
+        function () {
+            loadScript(
+                "https://staticprod.site.flexispot.com/dev/trantor/attachments/slick.min.js",
+                function () {
+                    const rug_data = [
+                        {
+                            title: "Living Room",
+                            text: "Selecting a living room rug item for the first time in the game over the game over the game over the game over the game over the game over the.",
+                            imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-tab-img1.png",
+                            slickData: [
+                                {
+                                    imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-slick1-img1.png",
+                                    title: "9'x12' Rugs",
+                                    titleUrl: "http://www.flexispot.com",
+                                    text: "A wide range of 9'x12' rugs are available, including high-quality, luxury fabrics and eco-friendly options.",
+                                },
+                                {
+                                    imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-slick1-img2.png",
+                                    title: "8'x10' Rugs",
+                                    titleUrl: "http://www.flexispot.com",
+                                    text: "A wide range of 9'x12' rugs are available, including high-quality, luxury fabrics and eco-friendly options."
+                                },
+                                {
+                                    imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-slick1-img3.png",
+                                    title: "6'x9' Rugs",
+                                    titleUrl: "http://www.flexispot.com",
+                                    text: "A wide range of 9'x12' rugs are available, including high-quality, luxury fabrics and eco-friendly options."
+                                },
+                                {
+                                    imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-slick1-img4.png",
+                                    title: "5'x7' Rugs",
+                                    titleUrl: "http://www.flexispot.com",
+                                    text: "A wide range of 9'x12' rugs are available, including high-quality, luxury fabrics and eco-friendly options."
+                                },
+                                {
+                                    imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-slick1-img5.png",
+                                    title: "4'x6' Rugs",
+                                    titleUrl: "http://www.flexispot.com",
+                                    text: "A wide range of 9'x12' rugs are available, including high-quality, luxury fabrics and eco-friendly options."
+                                },
+                            ]
+                        },
+                        {
+                            title: "Bedroom",
+                            text: "Selecting a living room rug item for the first time in the game over the game over the game over the game over the game over the game over the.",
+                            imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-tab-img2.png",
+                            slickData: [
+                                {
+                                    imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-slick2-img1.png",
+                                    title: "9'x12' Rugs",
+                                    titleUrl: "http://www.flexispot.com",
+                                    text: "A wide range of 9'x12' rugs are available, including high-quality, luxury fabrics and eco-friendly options."
+                                },
+                                {
+                                    imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-slick2-img2.png",
+                                    title: "8'x10' Rugs",
+                                    titleUrl: "http://www.flexispot.com",
+                                    text: "A wide range of 9'x12' rugs are available, including high-quality, luxury fabrics and eco-friendly options."
+                                },
+                                {
+                                    imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-slick2-img3.png",
+                                    title: "6'x9' Rugs",
+                                    titleUrl: "http://www.flexispot.com",
+                                    text: "A wide range of 9'x12' rugs are available, including high-quality, luxury fabrics and eco-friendly options."
+                                },
+                                {
+                                    imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-slick2-img4.png",
+                                    title: "5'x7' Rugs",
+                                    titleUrl: "http://www.flexispot.com",
+                                    text: "A wide range of 9'x12' rugs are available, including high-quality, luxury fabrics and eco-friendly options."
+                                },
+                            ]
+                        },
+                        {
+                            title: "Dinning Room",
+                            text: "Selecting a living room rug item for the first time in the game over the game over the game over the game over the game over the game over the.",
+                            imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-tab-img3.png",
+                            slickData: [
+                                {
+                                    imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-slick3-img1.png",
+                                    title: "9'x12' Rugs",
+                                    titleUrl: "http://www.flexispot.com",
+                                    text: "A wide range of 9'x12' rugs are available, including high-quality, luxury fabrics and eco-friendly options."
+                                },
+                                {
+                                    imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-slick3-img2.png",
+                                    title: "8'x10' Rugs",
+                                    titleUrl: "http://www.flexispot.com",
+                                    text: "A wide range of 9'x12' rugs are available, including high-quality, luxury fabrics and eco-friendly options."
+                                },
+                                {
+                                    imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-slick3-img3.png",
+                                    title: "6'x9' Rugs",
+                                    titleUrl: "http://www.flexispot.com",
+                                    text: "A wide range of 9'x12' rugs are available, including high-quality, luxury fabrics and eco-friendly options."
+                                },
+                            ]
+                        },
+                        {
+                            title: "Home Office",
+                            text: "Selecting a living room rug item for the first time in the game over the game over the game over the game over the game over the game over the.",
+                            imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-tab-img4.png",
+                            slickData: [
+                                {
+                                    imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-slick4-img1.png",
+                                    title: "9'x12' Rugs",
+                                    titleUrl: "http://www.flexispot.com",
+                                    text: "A wide range of 9'x12' rugs are available, including high-quality, luxury fabrics and eco-friendly options."
+                                },
+                                {
+                                    imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-slick4-img2.png",
+                                    title: "8'x10' Rugs",
+                                    titleUrl: "http://www.flexispot.com",
+                                    text: "A wide range of 9'x12' rugs are available, including high-quality, luxury fabrics and eco-friendly options."
+                                },
+                                {
+                                    imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-slick4-img3.png",
+                                    title: "6'x9' Rugs",
+                                    titleUrl: "http://www.flexispot.com",
+                                    text: "A wide range of 9'x12' rugs are available, including high-quality, luxury fabrics and eco-friendly options."
+                                },
+                                {
+                                    imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-slick4-img4.png",
+                                    title: "4'x6' Rugs",
+                                    titleUrl: "http://www.flexispot.com",
+                                    text: "A wide range of 9'x12' rugs are available, including high-quality, luxury fabrics and eco-friendly options."
+                                },
+                            ]
+                        },
+                        {
+                            title: "Kitchen",
+                            text: "Selecting a living room rug item for the first time in the game over the game over the game over the game over the game over the game over the.",
+                            imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-tab-img5.png",
+                            slickData: [
+                                {
+                                    imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-slick5-img1.png",
+                                    title: "5'x7' Rugs",
+                                    titleUrl: "http://www.flexispot.com",
+                                    text: "A wide range of 9'x12' rugs are available, including high-quality, luxury fabrics and eco-friendly options."
+                                },
+                                {
+                                    imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-slick5-img2.png",
+                                    title: "4'x6' Rugs",
+                                    titleUrl: "http://www.flexispot.com",
+                                    text: "A wide range of 9'x12' rugs are available, including high-quality, luxury fabrics and eco-friendly options."
+                                },
+                                {
+                                    imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-slick5-img3.png",
+                                    title: "Runners",
+                                    titleUrl: "http://www.flexispot.com",
+                                    text: "A wide range of 9'x12' rugs are available, including high-quality, luxury fabrics and eco-friendly options."
+                                },
+                            ]
+                        },
+                        {
+                            title: "Hallway",
+                            text: "Selecting a living room rug item for the first time in the game over the game over the game over the game over the game over the game over the.",
+                            imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-tab-img6.png",
+                            slickData: [
+                                {
+                                    imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-slick6-img1.png",
+                                    title: "4'x6' Rugs",
+                                    titleUrl: "http://www.flexispot.com",
+                                    text: "A wide range of 9'x12' rugs are available, including high-quality, luxury fabrics and eco-friendly options."
+                                },
+                                {
+                                    imgUrl: "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/rug-buyerguide-20250107-slick6-img2.png",
+                                    title: "Runners",
+                                    titleUrl: "http://www.flexispot.com",
+                                    text: "A wide range of 9'x12' rugs are available, including high-quality, luxury fabrics and eco-friendly options."
+                                },
+                            ]
+                        },
+                    ]
+                    // const rug_tabs = document.querySelectorAll(".rug_container .rug_tabs .rug_tabs_item")
+                    // const rug_ctx = document.querySelectorAll(".rug_container .rug_ctx")
+                    // 初始化 Tab 切换和内容更新
+                    function updateContent(tabIndex) {
+                        const selectedData = rug_data[tabIndex]
+                        console.log(selectedData, "updateContent")
 
+                        // 更新左侧标题和文本
+                        $(".rug_ctx_content_left .rug_ctx_content_left_title").text(selectedData.title)
+                        $(".rug_ctx_content_left .rug_ctx_content_left_text").text(selectedData.text)
+
+                        // 更新右侧图片
+                        $(".rug_ctx_content_right img").attr("data-src", selectedData.imgUrl)
+
+                        // 更新 slick 内容
+                        const $slickContainer = $(".rug_ctx_slick")
+                        $slickContainer.empty() // 清空当前的 slick 项目
+
+                        $.each(selectedData.slickData, function (index, item) {
+                            const slickItemHTML = `
+                                <div class="slick-item">
+                                    <img src="${item.imgUrl}" alt="${item.title}" />
+                                    <a href="${item.titleUrl}" target="_blank">${item.title}</a>
+                                    <p>${item.text}</p>
+                                </div>
+                            `
+                            $slickContainer.append(slickItemHTML)
+                        })
+
+                        // 初始化 Slick 轮播图
+                        // initializeSlick()
+                        function isMobile() {
+                            return window.navigator.userAgent.indexOf("Mobile") >= 0
+                        }
+                        if (!isMobile()) {
+                            $(".rug_ctx_slick").slick({
+                                dots: false,
+                                infinite: true,
+                                slidesToShow: 4,
+                                slidesToScroll: 1,
+                                prevArrow: `<div class="slick-prev" aria-label="Previous" type="button">
+                        <img class="lazyload" data-src="https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-arrow.png" />
+                        </div>`,
+                                nextArrow: `<div class="slick-next" aria-label="Previous" type="button">
+                        <img class="lazyload" data-src="https://staticprod.site.flexispot.com/dev/trantor/attachments/buyerguide-slick-arrow.png" />
+                        </div>`,
+                            })
+                        }
+                    }
+
+                    // 初始化 Slick 插件
+                    // function initializeSlick() {
+                    //     $(".rug_ctx_slick").slick({
+                    //         infinite: true,
+                    //         slidesToShow: 3,
+                    //         slidesToScroll: 1,
+                    //         arrows: true,
+                    //         dots: true
+                    //     })
+                    // }
+
+                    // Tab 点击事件绑定
+                    $(".rug_tabs_item").on("click", function () {
+                        const tabIndex = $(this).index()  // 获取当前点击的 Tab 索引
+                        console.log(tabIndex, "tab")
+
+                        // 更新 Tab 的激活状态
+                        $(".rug_tabs_item").removeClass("rug_tabs_active")
+                        $(this).addClass("rug_tabs_active")
+
+                        // 更新内容
+                        updateContent(tabIndex)
+                    })
+
+                    // 默认选择第一个 Tab
+                    updateContent(0)
+                })
+        })
 </script>
 
 </html>
