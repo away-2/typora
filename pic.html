@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片切换效果</title>
+    <style>
+        .pic_container {
+            margin: 0 auto;
+            max-width: 1384px;
+            background: #fdfcf5;
+            display: flex;
+            gap: 5px;
+        }
+
+        .pic_left {
+            width: 1180px;
+            height: 672px;
+        }
+
+        .pic_left img {
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .pic_right {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            /* position: relative; */
+        }
+
+        .pic_right img {
+            width: 200px;
+            height: 144px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .pic_right img::before {
+            content: '11';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .pic_right img.selected::before {
+            background: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pic_container">
+        <div class="pic_left">
+            <img src="https://image.springbeetle.com/cdn-cgi/image/dpr=1,format=webp/https://s3.springbeetle.com/prod-us2-bucket/2025/01/02/US/E7-339-1000x560%20101.png"
+                alt="">
+        </div>
+        <div class="pic_right">
+            <img class="selected"
+                src="https://image.springbeetle.com/cdn-cgi/image/dpr=1,format=webp/https://s3.springbeetle.com/prod-us2-bucket/2025/01/02/US/E7-339-1000x560%20101.png"
+                alt="">
+            <img src="https://image.springbeetle.com/cdn-cgi/image/dpr=1,format=webp/https://s3.springbeetle.com/prod-us2-bucket/2025/01/06/US/1000x560-c7max-449%20106.png"
+                alt="">
+            <img src="https://image.springbeetle.com/cdn-cgi/image/dpr=1,format=webp/https://s3.springbeetle.com/prod-us2-bucket/2025/01/02/US/E7-339-1000x560%20101.png"
+                alt="">
+            <img src="https://image.springbeetle.com/cdn-cgi/image/dpr=1,format=webp/https://s3.springbeetle.com/prod-us2-bucket/2025/01/06/US/1000x560-c7max-449%20106.png"
+                alt="">
+        </div>
+    </div>
+
+    <script>
+        const pic_all = document.querySelectorAll(".pic_right img")
+        const pic_left = document.querySelector(".pic_left img")
+
+        pic_all.forEach(img => {
+            img.addEventListener("click", function () {
+                pic_left.src = this.src
+                pic_all.forEach(item => {
+                    item.classList.remove("selected")
+                });
+                this.classList.add("selected")
+            });
+        });
+    </script>
+</body>
+
+</html>

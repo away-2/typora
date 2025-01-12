@@ -1,0 +1,954 @@
+<div>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            scroll-padding-top: 104px;
+            scroll-snap-align: center;
+        }
+
+        button {
+            border: none;
+        }
+
+        body {
+            background: #fdfcf5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1382px;
+            margin: 0 auto;
+        }
+
+        .container .d_top_case {
+            width: 1382px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 51px;
+            margin-bottom: 80px;
+        }
+
+        .container .d_top_case .img {
+            /* height: 100%; */
+            width: 500px;
+            height: 500px;
+        }
+
+        .container .d_top_case .top_ctx {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 812px;
+            /* margin-top: 163px; */
+        }
+
+        .container .d_top_case .top_ctx .title {
+            margin-bottom: 14px;
+            font-family: "SupremeLLSub-Black";
+            font-style: normal;
+            font-weight: 900;
+            font-size: 52px;
+            line-height: 120%;
+            font-feature-settings: "liga" off;
+            color: #26333a;
+        }
+
+        .container .d_top_case .top_ctx .text {
+            font-family: "Moderat-Medium";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 120%;
+            font-feature-settings: "liga" off;
+            color: rgba(38, 51, 58, 0.8);
+        }
+
+        .container .d_top_case .top_ctx .apply_btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 189px;
+            height: 52px;
+            margin-top: 28px;
+            background: #26333a;
+            box-shadow: 8px 8px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 40px;
+            cursor: pointer;
+        }
+
+        .container .d_top_case .top_ctx .apply_btn>a {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Moderat-Medium";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 16px;
+            letter-spacing: 0.05em;
+            font-feature-settings: "pnum" on, "lnum" on, "ss02" on;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .container .d_top_case .top_ctx .apply_btn:hover {
+            background: #004df2;
+        }
+
+        .container .form_case {
+            width: 1208px;
+            padding: 68px 0 62px;
+            margin-bottom: 120px;
+            background: #f6f4f1;
+        }
+
+        .container .form_case .form_container {
+            max-width: 1032px;
+            margin: 0 auto;
+        }
+
+        .container .form_case .form_container .form_title {
+            margin-bottom: 40px;
+            font-family: "SupremeLLSub-Black";
+            font-style: normal;
+            font-weight: 900;
+            font-size: 64px;
+            line-height: 120%;
+            text-align: center;
+            text-transform: uppercase;
+            font-feature-settings: "liga" off;
+            color: #26333a;
+        }
+
+        .container .form_case .form_container .ipt_case {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .container .form_case .form_container input,
+        .container .form_case .form_container textarea {
+            width: 49%;
+            height: 71px;
+            padding-left: 28.55px;
+            margin-bottom: 20px;
+            background: #ffffff;
+            border: 1px solid #ede9e4;
+            border-radius: 8px;
+            font-family: "Moderat-Regular";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 120%;
+            color: #26333a;
+        }
+
+        .container .form_case .form_container input::placeholder,
+        .container .form_case .form_container textarea::placeholder {
+            font-family: "Moderat-Regular";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 120%;
+            text-transform: capitalize;
+            color: #a3a3a3;
+        }
+
+        .container .form_case .form_container textarea {
+            width: 100%;
+            height: 160px;
+            padding-top: 24px;
+            resize: none;
+        }
+
+        .container .form_case .form_container .label_case {
+            width: 49%;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .container .form_case .form_container .label_case input {
+            width: 100%;
+        }
+
+        .container .form_case .form_container .ipt_label {
+            position: absolute;
+            top: 35%;
+            left: 28.55px;
+            font-family: "Moderat-Regular";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 120%;
+            text-transform: capitalize;
+            color: #a3a3a3;
+            cursor: text;
+        }
+
+        .container .form_case .form_container .ipt_label span {
+            color: #ef2e13;
+        }
+
+        .container .form_case .form_container .check_box {
+            position: relative;
+        }
+
+        .container .form_case .form_container .check_box #check {
+            position: relative;
+            width: 24px;
+            height: 24px;
+            margin-bottom: 0;
+            border: 1px solid rgba(38, 51, 58, 0.8);
+            border-radius: 2px;
+            cursor: pointer;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .container .form_case .form_container .check_box #check::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 24px;
+            height: 24px;
+            background-color: #f6f4f1;
+            border: 1px solid rgba(38, 51, 58, 0.8);
+            border-radius: 2px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        .container .form_case .form_container .check_box #check:checked:after {
+            display: none;
+        }
+
+        .container .form_case .form_container .check_box .check_text {
+            display: inline-block;
+            max-width: 950px;
+            margin-left: 10px;
+            font-family: "Moderat-Medium";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 120%;
+            text-transform: capitalize;
+            color: rgba(38, 51, 58, 0.8);
+            cursor: pointer;
+        }
+
+        .container .form_case .form_container .submit_btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 250px;
+            height: 64px;
+            margin-top: 40px;
+            background: #26333a;
+            box-shadow: 8px 8px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 40px;
+            font-family: "Moderat-Medium";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 16px;
+            letter-spacing: 0.05em;
+            font-feature-settings: "pnum" on, "lnum" on, "ss02" on;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .container .form_case .form_container .submit_btn:hover {
+            background: #004df2;
+        }
+
+        .container .form_case .form_container .ipt_wrong {
+            display: none;
+            position: absolute;
+            bottom: -70%;
+            padding-left: 24px;
+            font-family: "Moderat-Regular";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 120%;
+            text-transform: capitalize;
+            color: #ef2e13;
+        }
+
+        .container .form_case .form_container .checkbox_wrong {
+            bottom: -28px;
+        }
+
+        .container .form_case .form_container .ipt_wrong::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: -2px;
+            width: 24px;
+            height: 24px;
+            background: url("https://staticprod.site.flexispot.com/dev/trantor/attachments/Become-Our-Supplier-i.png") no-repeat;
+            background-size: 24px;
+        }
+
+        .container .form_case .form_container input.m0 {
+            margin: 0;
+        }
+
+        @media screen and (max-width: 1280px) {
+            .container {
+                max-width: 908px;
+            }
+
+            .container .form_case .form_container {
+                max-width: 732px;
+            }
+
+            .container .d_top_case .top_ctx {
+                max-width: 435px;
+            }
+
+            .container .form_case .form_container .check_box .check_text {
+                max-width: 650px;
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            .container {
+                max-width: 708px;
+            }
+
+            .container .form_case .form_container {
+                max-width: 632px;
+            }
+
+            .container .d_top_case {
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 60px;
+            }
+
+            .container .d_top_case .img {
+                width: 50%;
+            }
+
+            .container .d_top_case .top_ctx {
+                margin: 23px auto 0;
+            }
+
+            .container .d_top_case .top_ctx .title {
+                margin-bottom: 20px;
+                font-size: 48px;
+            }
+
+            .container .d_top_case .top_ctx .text {
+                font-size: 30px;
+            }
+
+            .container .form_case .form_container .form_title {
+                font-size: 44px;
+            }
+
+            .container .form_case .form_container .check_box .check_text {
+                max-width: 550px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                margin: 0 20px;
+            }
+
+            .container .form_case {
+                border-radius: 8px;
+            }
+
+            .container .d_top_case {
+                display: block;
+                margin-top: 0;
+                margin-bottom: 40px;
+            }
+
+            .container .d_top_case .img {
+                display: none;
+            }
+
+            .container .d_top_case .top_ctx .apply_btn {
+                width: 141px;
+                height: 42px;
+                margin: 20px auto 0;
+            }
+
+            .container .d_top_case .top_ctx .apply_btn>a {
+                font-size: 12px;
+                line-height: 13px;
+            }
+
+            .container .d_top_case .top_ctx .title {
+                margin-bottom: 12px;
+                font-size: 24px;
+                line-height: 29px;
+                text-align: center;
+            }
+
+            .container .d_top_case .top_ctx .text {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                text-align: center;
+            }
+
+            /* .container .form_case .form_container .form_title {
+        display: none;
+      } */
+            .container .form_case .form_container .ipt_case {
+                display: block;
+            }
+
+            .container .form_case .form_container .label_case,
+            .container .form_case .form_container input,
+            .container .form_case .form_container .label_case input {
+                width: 100% !important;
+                height: 40px;
+                margin-bottom: 12px;
+            }
+
+            .container .form_case {
+                padding: 26px 17.5px 53px;
+                margin-bottom: 60px;
+            }
+
+            .container .form_case .form_container .ipt_label,
+            .container .form_case .form_container input,
+            .container .form_case .form_container input::placeholder,
+            .container .form_case .form_container .ipt_wrong,
+            .container .form_case .form_container textarea,
+            .container .form_case .form_container textarea::placeholder {
+                font-size: 12px;
+                line-height: 14px;
+            }
+
+            .container .form_case .form_container textarea {
+                padding: 13px 0 0 10px;
+                height: 165px;
+            }
+
+            .container .form_case .form_container input {
+                padding-left: 10px;
+            }
+
+            .container .form_case .form_container .ipt_label {
+                left: 10px;
+            }
+
+            .container .form_case .form_container .ipt_wrong::after {
+                top: -4px;
+                width: 17px;
+                height: 17px;
+                background-size: 17px;
+            }
+
+            .container .form_case .form_container .ipt_wrong {
+                bottom: -40px;
+                padding-left: 18px;
+            }
+
+            .container .form_case .form_container .check_box #check::after {
+                width: 17px !important;
+                height: 17px;
+            }
+
+            .container .form_case .form_container .check_box #check {
+                width: 17px !important;
+                height: 17px;
+            }
+
+            .container .form_case .form_container .check_box .check_text {
+                max-width: 265px;
+                font-size: 14px;
+                vertical-align: top;
+            }
+
+            .container .form_case .form_container .submit_btn {
+                width: 141px;
+                height: 42px;
+                font-size: 12px;
+                line-height: 13px;
+                margin-top: 32px;
+            }
+        }
+    </style>
+    <style>
+        @media screen and (max-width: 1440px) {
+            .container .form_case {
+                width: 1000px;
+            }
+
+            .container .d_top_case {
+                width: 1000px;
+            }
+
+            .container .d_top_case .img {
+                width: 460px;
+                height: 460px;
+            }
+
+            .container .d_top_case .top_ctx .title {
+                font-size: 40px;
+            }
+
+            .container .d_top_case .top_ctx .text {
+                font-size: 20px;
+            }
+
+            .container .d_top_case .top_ctx {
+                margin-left: 70px;
+            }
+
+            .container .d_top_case {
+                margin-bottom: 60px;
+            }
+
+            .container .form_case {
+                padding: 68px 50px 62px;
+            }
+
+            .container .form_case .form_container .form_title {
+                font-size: 42px;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            .container .form_case {
+                width: 768px;
+            }
+
+            .container .d_top_case {
+                width: 768px;
+            }
+
+            .container .d_top_case .img {
+                width: 354px;
+                height: 354px;
+            }
+
+            .container .d_top_case .top_ctx .title {
+                font-size: 32px;
+            }
+
+            .container .d_top_case .top_ctx .text {
+                font-size: 16px;
+            }
+
+            .container .d_top_case .top_ctx {
+                margin-left: 52px;
+            }
+
+            .container .d_top_case .top_ctx .apply_btn {
+                width: 136px;
+                height: 40px;
+            }
+
+            .container .d_top_case .top_ctx .apply_btn>a {
+                font-size: 14px;
+            }
+
+            .container .d_top_case {
+                margin-bottom: 40px;
+            }
+
+            .container .form_case .form_container .form_title {
+                font-size: 32px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                max-width: 335px;
+            }
+
+            .container .d_top_case {
+                width: 335px;
+            }
+
+            .container .form_case {
+                width: 335px;
+            }
+
+            .container .form_case .form_container .form_title {
+                font-size: 24px;
+            }
+
+            .container .form_case {
+                padding-top: 35px;
+            }
+
+            .container .d_top_case .top_ctx {
+                margin-left: 0px;
+            }
+
+            .container .d_top_case .top_ctx .title {
+                font-size: 24px;
+            }
+
+            .container .form_case {
+                padding: 35px 17.5px 50px;
+            }
+        }
+    </style>
+    <style>
+        .custom-radio {
+            display: block;
+        }
+        /* 隐藏原生的radio按钮 */
+        .custom-radio input[type="radio"] {
+            display: none;
+        }
+
+        /* 创建一个新的自定义按钮 */
+        .custom-radio .radio-btn {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            /* 圆形按钮 */
+            border: 2px solid #A3A3A3;
+            /* 边框样式 */
+            display: inline-block;
+            margin-right: 5px;
+            vertical-align: middle;
+            position: relative;
+            cursor: pointer;
+        }
+
+        /* 当radio按钮被选中时改变样式 */
+        .custom-radio input[type="radio"]:checked+.radio-btn {
+            background-color: #4e90fe;
+            /* 蓝色背景 */
+            border-color: #4e90fe;
+        }
+
+        /* 在选中状态下添加一个小圆形 */
+        .custom-radio input[type="radio"]:checked+.radio-btn::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            /* 白色小圆 */
+            border-radius: 50%;
+        }
+    </style>
+    <div class="container">
+
+        <!-- form module -->
+        <div class="form_case" id="form-case">
+            <div class="form_container">
+                <form action="" id="form">
+                    <div class="form_title">Become a Vendor</div>
+                    <div class="ipt_case">
+                        <div class="label_case">
+                            <label for="Country" class="ipt_label Country_label">Country<span>*</span></label>
+                            <input type="text" name="Country" id="Country" class="m0">
+                            <p class="ipt_wrong">Please enter a valid input</p>
+                        </div>
+                        <div class="label_case">
+                            <label for="Country" class="ipt_label Country_label">Country<span>*</span></label>
+                            <input type="text" name="Country" id="Country" class="m0">
+                            <p class="ipt_wrong">Please enter a valid input</p>
+                        </div>
+                    </div>
+                    <div class="label_case" style="width: 100%">
+                        <label for="Company_Name" class="ipt_label Company_Name_label">Company
+                            Name<span>*</span></label>
+                        <input type="text" name="Company_Name" id="Company_Name" class="m0">
+                        <p class="ipt_wrong">Please enter a valid input</p>
+                    </div>
+                    <div class="ipt_case">
+                        <div class="label_case">
+                            <label for="Country" class="ipt_label Country_label">Country<span>*</span></label>
+                            <input type="text" name="Country" id="Country" class="m0">
+                            <p class="ipt_wrong">Please enter a valid input</p>
+                        </div>
+                        <div class="label_case">
+                            <label for="Country" class="ipt_label Country_label">Country<span>*</span></label>
+                            <input type="text" name="Country" id="Country" class="m0">
+                            <p class="ipt_wrong">Please enter a valid input</p>
+                        </div>
+                    </div>
+                    <div class="ipt_case">
+                        <div class="label_case">
+                            <label for="Country" class="ipt_label Country_label">Country<span>*</span></label>
+                            <input type="text" name="Country" id="Country" class="m0">
+                            <p class="ipt_wrong">Please enter a valid input</p>
+                        </div>
+                        <div class="label_case">
+                            <label for="Country" class="ipt_label Country_label">Country<span>*</span></label>
+                            <input type="text" name="Country" id="Country" class="m0">
+                            <p class="ipt_wrong">Please enter a valid input</p>
+                        </div>
+                        <div class="label_case">
+                            <label for="Country" class="ipt_label Country_label">Country<span>*</span></label>
+                            <input type="text" name="Country" id="Country" class="m0">
+                            <p class="ipt_wrong">Please enter a valid input</p>
+                        </div>
+                    </div>
+                    <div class="label_case" style="width: 100%">
+                        <label for="Company_Name" class="ipt_label Company_Name_label">Company
+                            Name<span>*</span></label>
+                        <input type="text" name="Company_Name" id="Company_Name" class="m0">
+                        <p class="ipt_wrong">Please enter a valid input</p>
+                    </div>
+                    <div class="label_case" style="width: 100%">
+                        <label for="Company_Name" class="ipt_label Company_Name_label">Company
+                            Name<span>*</span></label>
+                        <input type="text" name="Company_Name" id="Company_Name" class="m0">
+                        <p class="ipt_wrong">Please enter a valid input</p>
+                    </div>
+                    <div class="label_radio_title">What are you focusing?</div>
+                    <div class="label_case_radio">
+                        <label class="custom-radio">
+                            <input type="radio" name="radio" value="red" />
+                            <span class="radio-btn"></span>红色
+                        </label>
+                        <label class="custom-radio">
+                            <input type="radio" name="radio" value="green" />
+                            <span class="radio-btn"></span>绿色
+                        </label>
+                        <label class="custom-radio">
+                            <input type="radio" name="radio" value="blue" />
+                            <span class="radio-btn"></span>蓝色
+                        </label>
+                    </div>
+                    <div class="btn" onclick="getSelectedRadioValue()">获取选中的颜色</div>
+
+                    <p id="result"></p>
+                    <button class="submit_btn" id="submit">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function loadScript(url, callback) {
+            document.getElementById("") && document.getElementById("").remove()
+            var script = document.createElement("script")
+            script.type = "text/javascript"
+            script.async = "async"
+            script.src = url
+            script.id = ""
+            var head = document.head || document.getElementsByTagName("head")[0]
+            head.appendChild(script)
+            if (script.readyState) {
+                //IE
+                script.onreadystatechange = function () {
+                    if (
+                        script.readyState == "complete" ||
+                        script.readyState == "loaded"
+                    ) {
+                        script.onreadystatechange = null
+                        callback()
+                    }
+                }
+            } else {
+                //非IE
+                script.onload = function () {
+                    callback()
+                }
+            }
+        }
+        // 获取选中的 radio 按钮的值
+        function getSelectedRadioValue() {
+            const radios = document.getElementsByName('radio');  // 获取所有 name 为 'radio' 的 radio 按钮
+            let selectedValue = null;
+
+            // 遍历所有 radio 按钮，检查哪个按钮被选中
+            for (const radio of radios) {
+                if (radio.checked) {
+                    selectedValue = radio.value;
+                    break;  // 一旦找到选中的按钮就停止循环
+                }
+            }
+
+            // 显示选中的值
+            document.getElementById('result').textContent = selectedValue ? `选中的颜色是：${selectedValue}` : '没有选中任何颜色';
+        }
+
+        const Company_Name = document.getElementById("Company_Name")
+        const Country = document.getElementById("Country")
+        const Contact_Name = document.getElementById("Contact_Name")
+        const Email = document.getElementById("Email")
+        const Phone = document.getElementById("Phone")
+        const emailReg =
+            /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
+        let [thisCompanyName, thisCountry, thisContactName, thisEmail, thisPhone] =
+            [null, null, null, null, null]
+
+        function labelShow(ele, label) {
+            ele.oninput = function () {
+                // this.value = this.value.trim();
+                if (this.value) {
+                    label.style.display = "none"
+                    this.nextElementSibling.style.display = "none"
+                    this.parentElement.style.marginBottom =
+                        window.innerWidth > 768 ? "20px" : "12px"
+                } else {
+                    label.style.display = "block"
+                }
+            }
+        }
+
+        labelShow(Company_Name, document.querySelector(".Company_Name_label"))
+        labelShow(Country, document.querySelector(".Country_label"))
+        labelShow(Contact_Name, document.querySelector(".Contact_Name_label"))
+        labelShow(Email, document.querySelector(".Email_label"))
+        labelShow(Phone, document.querySelector(".Phone_label"))
+
+        const checkValue = (ele) => {
+            if (ele.value.trim() === "") {
+                ele.nextElementSibling.style.display = "block"
+                ele.parentElement.style.marginBottom =
+                    window.innerWidth > 768 ? "56px" : "41px"
+                return false
+            } else {
+                ele.nextElementSibling.style.display = "none"
+                ele.parentElement.style.marginBottom =
+                    window.innerWidth > 768 ? "20px" : "12px"
+                return true
+            }
+        }
+
+        Company_Name.onblur = function () {
+            checkValue(Company_Name)
+        }
+        Country.onblur = function () {
+            checkValue(Country)
+        }
+        Contact_Name.onblur = function () {
+            checkValue(Contact_Name)
+        }
+        Email.onblur = function () {
+            checkValue(Email)
+            if (emailReg.test(this.value)) {
+                this.nextElementSibling.style.display = "none"
+                this.parentElement.style.marginBottom =
+                    window.innerWidth > 768 ? "20px" : "12px"
+                thisEmail = true
+            } else {
+                this.nextElementSibling.style.display = "block"
+                this.parentElement.style.marginBottom =
+                    window.innerWidth > 768 ? "56px" : "41px"
+                thisEmail = false
+            }
+        }
+        Phone.onblur = function () {
+            checkValue(Phone)
+        }
+
+        loadScript(
+            "https://staticprod.site.flexispot.com/dev/trantor/attachments/jquery-3.6.0.min.js",
+            function () {
+                document
+                    .getElementById("submit")
+                    .addEventListener("click", function (e) {
+                        e.preventDefault()
+                        thisCompanyName = checkValue(Company_Name)
+                        thisCountry = checkValue(Country)
+                        thisContactName = checkValue(Contact_Name)
+                        thisEmail = checkValue(Email)
+                        thisPhone = checkValue(Phone)
+
+                        if (emailReg.test(Email.value)) {
+                            Email.nextElementSibling.style.display = "none"
+                            Email.parentElement.style.marginBottom =
+                                window.innerWidth > 768 ? "20px" : "12px"
+                            thisEmail = true
+                        } else {
+                            Email.nextElementSibling.style.display = "block"
+                            Email.parentElement.style.marginBottom =
+                                window.innerWidth > 768 ? "56px" : "41px"
+                            thisEmail = false
+                        }
+
+                        if (
+                            thisCompanyName &&
+                            thisCountry &&
+                            thisContactName &&
+                            thisEmail &&
+                            thisPhone
+                        ) {
+                            let data = [
+                                {
+                                    site: `US`,
+                                    subscribeType: "EMARSYS",
+                                    companyName: $("#Company_Name").val(),
+                                    address: $("#Address").val(),
+                                    streetAddress: $("#Street_Address").val(),
+                                    addressLine: $("#Address_Line_2").val(),
+                                    city: $("#City").val(),
+                                    state: $("#State").val(),
+                                    postalCode: $("#Postal_Zip_Code").val(),
+                                    companyWebsite: $("#Company_Website").val(),
+                                    contactName: $("#Contact_Name").val(),
+                                    email: $("#Email").val(),
+                                    phone: $("#Phone").val(),
+                                    message: $("#Message").val(),
+                                    subscribe: document.getElementById("check").checked,
+                                    country: $("#Country").val(),
+                                },
+                            ]
+                            $.ajax({
+                                type: "POST",
+                                url: "/api/trantor/flow/flexispot_misc_CreateSupplierApplicationFlow",
+                                data: JSON.stringify(data),
+                                async: false,
+                                cache: false,
+                                processData: false,
+                                dataType: "json",
+                                contentType: "application/json; charset=UTF-8",
+                                success: function (msg) {
+                                    // 成功
+                                    if (msg.code === 200) {
+                                        window.location.href = "/contact/success"
+                                    }
+                                },
+                                error: function (res) {
+                                    if (res.responseJSON.code == 500) {
+                                        alert(res.responseJSON.msg)
+                                    }
+                                },
+                            })
+                        } else {
+                            const ipt_wrong = document.querySelectorAll(".ipt_wrong")
+                            for (let i = 0; i < ipt_wrong.length; i++) {
+                                if (ipt_wrong[i].style.display === "block") {
+                                    ipt_wrong[i].scrollIntoView({
+                                        block: "center",
+                                        behavior: "smooth",
+                                    })
+                                    return
+                                }
+                            }
+                        }
+                    })
+            }
+        )
+    </script>
+</div>
