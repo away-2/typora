@@ -1,0 +1,329 @@
+<div>
+    <style>
+        .banner-pc {
+            width: 100%;
+        }
+
+        .banner-pc img {
+            width: 100%;
+        }
+
+        .banner-m {
+            display: none;
+        }
+
+        .b2b-container-about-box {
+            margin: 100px auto;
+            max-width: 1384px;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .b2b-container-about-box .b2b-container-about-box-text {
+            max-width: 610px;
+        }
+
+        .b2b-container-about-box .b2b-container-about-box-text .b2b-container-about-box-text-title {
+            color: #26333A;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-feature-settings: 'ss02' on;
+            font-family: "SupremeLLSub-Bold" !important;
+            font-size: 38px;
+            font-style: normal;
+            font-weight: 710;
+            line-height: 120%;
+        }
+
+        .b2b-container-about-box .b2b-container-about-box-text .b2b-container-about-box-text-desc {
+            color: rgba(38, 51, 58, 0.80);
+            font-variant-numeric: lining-nums proportional-nums;
+            font-feature-settings: 'ss02' on;
+            font-family: "Moderat-Regular" !important;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            margin-top: 32px;
+        }
+
+        .b2b-container-about-box .b2b-container-about-box-img {
+            width: 695px;
+        }
+
+        .b2b-container-about-box .b2b-container-about-box-img img {
+            width: 100%;
+        }
+
+        .b2b-container-warranty-box {
+            margin: 0 auto;
+            padding: 60px 0;
+            background: #F6F4F1;
+        }
+
+        .b2b-container-warranty-box .b2b-container-warranty-box-title {
+            color: #26333A;
+            text-align: center;
+            font-family: "SupremeLLSub-Bold" !important;
+            font-size: 38px;
+            font-style: normal;
+            font-weight: 710;
+            line-height: 120%;
+        }
+
+        .b2b-container-warranty-box .b2b-container-warranty-box-list {
+            margin-top: 40px;
+            display: flex;
+            gap: 74px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .b2b-container-warranty-box .b2b-container-warranty-box-list .b2b-container-warranty-box-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 290px;
+        }
+
+        .b2b-container-warranty-box .b2b-container-warranty-box-list .b2b-container-warranty-box-item .b2b-container-warranty-box-item-img {
+            width: 64px;
+        }
+
+        .b2b-container-warranty-box .b2b-container-warranty-box-list .b2b-container-warranty-box-item .b2b-container-warranty-box-item-img img {
+            width: 100%;
+        }
+
+        .b2b-container-warranty-box .b2b-container-warranty-box-list .b2b-container-warranty-box-item .b2b-container-warranty-box-item-title {
+            color: #26333A;
+            text-align: center;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: "SupremeLLSub-Bold";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 710;
+            line-height: 24px;
+            margin-top: 8px;
+        }
+
+        .b2b-container-warranty-box .b2b-container-warranty-box-list .b2b-container-warranty-box-item .b2b-container-warranty-box-item-desc {
+            color: rgba(38, 51, 58, 0.80);
+            text-align: center;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: "Moderat-Regular" !important;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            margin-top: 12px;
+            height: 68px;
+        }
+
+        .b2b-container-purchase-box {
+            margin: 100px auto;
+            max-width: 1384px;
+        }
+
+        .b2b-container-purchase-box .b2b-container-purchase-box-title {
+            color: #26333A;
+            text-align: center;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-feature-settings: 'ss01' on, 'ss04' on, 'ss18' on, 'liga' off;
+            font-family: "SupremeLLSub-Bold";
+            font-size: 38px;
+            font-style: normal;
+            font-weight: 710;
+            line-height: 120%;
+        }
+
+        .b2b-container-purchase-box .b2b-container-purchase-content {
+            display: flex;
+            gap: 4px;
+            margin-top: 40px;
+        }
+
+        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-show-img {
+            width: 1180px;
+            height: 672px;
+        }
+
+        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-show-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+
+        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item {
+            width: 200px;
+        }
+
+        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item .b2b-container-purchase-content-tab-item-title {
+            width: 170px;
+            background: #26333A;
+            color: #FFF;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-feature-settings: 'ss04' on, 'liga' off;
+            font-family: "Moderat-Bold" !important;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            padding: 6px 15px;
+        }
+        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item img {
+            width: 100%;
+            height: 108px;
+        }
+        @media screen and (max-width: 768px) {
+            .banner-pc {
+                display: none;
+            }
+
+            .banner-m {
+                display: block;
+                width: 100%;
+            }
+
+            .banner-m img {
+                width: 100%;
+            }
+
+            .b2b-container-about-box {
+                margin: 30px 20px;
+                max-width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 32px;
+            }
+        }
+    </style>
+    <div class="container">
+        <div class="banner-pc">
+            <img class="lazyload"
+                src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/B2B-20250113-banner-pc.png"
+                alt="">
+        </div>
+        <div class="banner-m">
+            <img class="lazyload"
+                src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/B2B-20250113-banner-m.png"
+                alt="">
+        </div>
+        <div class="b2b-container-about-box">
+            <div class="b2b-container-about-box-text">
+                <div class="b2b-container-about-box-text-title">About FlexiSpot B2B Program</div>
+                <div class="b2b-container-about-box-text-desc">FlexiSpot, with facilities established globally across
+                    the USA, Europe, and Asia, has become a trusted brand for ergonomic furniture solutions. We
+                    collaborate with businesses worldwide to enhance living spaces with quality, comfort, and design
+                    innovation.</div>
+                <div class="b2b-container-about-box-text-desc">Contract Program: FlexiSpot focuses on delivering
+                    top-tier, ergonomic furniture tailored to meet the needs of businesses, institutions, and
+                    organizations. Our contract-grade products, crafted with durability and style in mind, come with
+                    exclusive service options to seamlessly integrate into various living environments.</div>
+                <div class="b2b-container-about-box-text-desc">Distribution Program: FlexiSpot supports our partners
+                    with competitive pricing, ready-to-ship inventory, and a reliable delivery network to meet orders of
+                    any scale. We also offer batch customization directly from our global facilities to accommodate your
+                    specific needs, ensuring high-quality and efficient fulfillment for large orders.</div>
+            </div>
+            <div class="b2b-container-about-box-img">
+                <img class="lazyload"
+                    src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/B2B-20250113-img1.png"
+                    alt="">
+            </div>
+        </div>
+        <div class="b2b-container-warranty-box">
+            <div class="b2b-container-warranty-box-title">Together we work,<br />
+                To exceed expectations and delight our clients.</div>
+            <div class="b2b-container-warranty-box-list">
+                <div class="b2b-container-warranty-box-item">
+                    <div class="b2b-container-warranty-box-item-img">
+                        <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/B2B-20250113-icon1.png"
+                            alt="">
+                    </div>
+                    <div class="b2b-container-warranty-box-item-title">Exclusive Partnership Service</div>
+                    <div class="b2b-container-warranty-box-item-desc">Benefit from exclusive partnership pricing and
+                        dedicated support for product information, quotations, and seamless order placement.</div>
+                </div>
+                <div class="b2b-container-warranty-box-item">
+                    <div class="b2b-container-warranty-box-item-img">
+                        <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/B2B-20250113-icon2.png"
+                            alt="">
+                    </div>
+                    <div class="b2b-container-warranty-box-item-title">Professional Packaging</div>
+                    <div class="b2b-container-warranty-box-item-desc">
+                        With advanced packaging methods, the majority of products arrive in pristine, showroom-ready
+                        condition.
+                    </div>
+                </div>
+                <div class="b2b-container-warranty-box-item">
+                    <div class="b2b-container-warranty-box-item-img">
+                        <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/B2B-20250113-icon3.png"
+                            alt="">
+                    </div>
+                    <div class="b2b-container-warranty-box-item-title">Real-Time Supply Chain</div>
+                    <div class="b2b-container-warranty-box-item-desc">
+                        Gain access to a real-time supply chain, providing clear visibility into the status of your
+                        orders.
+                    </div>
+                </div>
+                <div class="b2b-container-warranty-box-item">
+                    <div class="b2b-container-warranty-box-item-img">
+                        <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/B2B-20250113-icon4.png"
+                            alt="">
+                    </div>
+                    <div class="b2b-container-warranty-box-item-title">Effective Response</div>
+                    <div class="b2b-container-warranty-box-item-desc">
+                        Ample in-stock inventory ensures quick order fulfillment, with prompt responses to any customer
+                        inquiries.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="b2b-container-purchase-box">
+            <div class="b2b-container-purchase-box-title">Purchase by Room</div>
+            <div class="b2b-container-purchase-content">
+                <div class="b2b-container-purchase-content-show-img">
+                    <img src="https://image.springbeetle.com/cdn-cgi/image/dpr=1,format=webp/https://s3.springbeetle.com/prod-us2-bucket/2025/01/02/US/E7-339-1000x560%20101.png"
+                        alt="">
+                </div>
+                <div class="b2b-container-purchase-content-tab">
+                    <div class="b2b-container-purchase-content-tab-item">
+                        <div class="b2b-container-purchase-content-tab-item-title">Studio</div>
+                        <img src="https://image.springbeetle.com/cdn-cgi/image/dpr=1,format=webp/https://s3.springbeetle.com/prod-us2-bucket/2025/01/02/US/E7-339-1000x560%20101.png"
+                            alt="">
+                    </div>
+                    <div class="b2b-container-purchase-content-tab-item">
+                        <div class="b2b-container-purchase-content-tab-item-title">Living Room</div>
+                        <img src="https://image.springbeetle.com/cdn-cgi/image/dpr=1,format=webp/https://s3.springbeetle.com/prod-us2-bucket/2025/01/06/US/1000x560-c7max-449%20106.png"
+                            alt="">
+                    </div>
+                    <div class="b2b-container-purchase-content-tab-item">
+                        <div class="b2b-container-purchase-content-tab-item-title">Bedroom</div>
+                        <img src="https://image.springbeetle.com/cdn-cgi/image/dpr=1,format=webp/https://s3.springbeetle.com/prod-us2-bucket/2025/01/02/US/E7-339-1000x560%20101.png"
+                            alt="">
+                    </div>
+                    <div class="b2b-container-purchase-content-tab-item">
+                        <div class="b2b-container-purchase-content-tab-item-title">Outdoor</div>
+                        <img src="https://image.springbeetle.com/cdn-cgi/image/dpr=1,format=webp/https://s3.springbeetle.com/prod-us2-bucket/2025/01/06/US/1000x560-c7max-449%20106.png"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const big_img = document.querySelector("b2b-container-purchase-content-show-img img")
+        const tabs = document.querySelectorAll(".b2b-container-purchase-content-tab-item img")
+        tabs.forEach((tab, index) => {
+            tab.addEventListener("click", () => {
+                big_img.src = tab.src
+            })
+        })
+    </script>
+</div>
