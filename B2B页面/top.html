@@ -127,11 +127,8 @@
         .b2b-container-purchase-box .b2b-container-purchase-box-title {
             color: #26333A;
             text-align: center;
-            font-variant-numeric: lining-nums proportional-nums;
-            font-feature-settings: 'ss01' on, 'ss04' on, 'ss18' on, 'liga' off;
             font-family: "SupremeLLSub-Bold";
             font-size: 38px;
-            font-style: normal;
             font-weight: 710;
             line-height: 120%;
         }
@@ -158,28 +155,53 @@
             gap: 32px;
         }
 
-
         .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item {
             width: 200px;
+            cursor: pointer;
         }
 
         .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item .b2b-container-purchase-content-tab-item-title {
             width: 170px;
             background: #26333A;
             color: #FFF;
-            font-variant-numeric: lining-nums tabular-nums;
-            font-feature-settings: 'ss04' on, 'liga' off;
             font-family: "Moderat-Bold" !important;
             font-size: 16px;
-            font-style: normal;
             font-weight: 700;
             line-height: 24px;
             padding: 6px 15px;
         }
-        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item img {
+
+        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item .b2b-container-purchase-content-tab-item-img {
             width: 100%;
             height: 108px;
+            position: relative;
         }
+
+        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item .b2b-container-purchase-content-tab-item-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item .b2b-container-purchase-content-tab-item-img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #26333A;
+            opacity: 0.55;
+            transition: all 0.3s ease;
+        }
+
+        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item .b2b-container-purchase-content-tab-item-img.selected::after {
+            background: transparent;
+        }
+
+        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item .b2b-container-purchase-content-tab-item-img:hover::after {
+            background: transparent;
+        }
+
         @media screen and (max-width: 768px) {
             .banner-pc {
                 display: none;
@@ -295,34 +317,47 @@
                 <div class="b2b-container-purchase-content-tab">
                     <div class="b2b-container-purchase-content-tab-item">
                         <div class="b2b-container-purchase-content-tab-item-title">Studio</div>
-                        <img src="https://image.springbeetle.com/cdn-cgi/image/dpr=1,format=webp/https://s3.springbeetle.com/prod-us2-bucket/2025/01/02/US/E7-339-1000x560%20101.png"
-                            alt="">
+                        <div class="b2b-container-purchase-content-tab-item-img selected">
+                            <img src="https://image.springbeetle.com/cdn-cgi/image/dpr=1,format=webp/https://s3.springbeetle.com/prod-us2-bucket/2025/01/02/US/E7-339-1000x560%20101.png"
+                                alt="">
+                        </div>
                     </div>
                     <div class="b2b-container-purchase-content-tab-item">
                         <div class="b2b-container-purchase-content-tab-item-title">Living Room</div>
-                        <img src="https://image.springbeetle.com/cdn-cgi/image/dpr=1,format=webp/https://s3.springbeetle.com/prod-us2-bucket/2025/01/06/US/1000x560-c7max-449%20106.png"
-                            alt="">
+                        <div class="b2b-container-purchase-content-tab-item-img">
+                            <img src="https://image.springbeetle.com/cdn-cgi/image/dpr=1,format=webp/https://s3.springbeetle.com/prod-us2-bucket/2025/01/06/US/1000x560-c7max-449%20106.png"
+                                alt="">
+                        </div>
                     </div>
                     <div class="b2b-container-purchase-content-tab-item">
                         <div class="b2b-container-purchase-content-tab-item-title">Bedroom</div>
-                        <img src="https://image.springbeetle.com/cdn-cgi/image/dpr=1,format=webp/https://s3.springbeetle.com/prod-us2-bucket/2025/01/02/US/E7-339-1000x560%20101.png"
-                            alt="">
+                        <div class="b2b-container-purchase-content-tab-item-img">
+                            <img src="https://image.springbeetle.com/cdn-cgi/image/dpr=1,format=webp/https://s3.springbeetle.com/prod-us2-bucket/2025/01/02/US/E7-339-1000x560%20101.png"
+                                alt="">
+                        </div>
                     </div>
                     <div class="b2b-container-purchase-content-tab-item">
                         <div class="b2b-container-purchase-content-tab-item-title">Outdoor</div>
-                        <img src="https://image.springbeetle.com/cdn-cgi/image/dpr=1,format=webp/https://s3.springbeetle.com/prod-us2-bucket/2025/01/06/US/1000x560-c7max-449%20106.png"
-                            alt="">
+                        <div class="b2b-container-purchase-content-tab-item-img">
+                            <img src="https://image.springbeetle.com/cdn-cgi/image/dpr=1,format=webp/https://s3.springbeetle.com/prod-us2-bucket/2025/01/06/US/1000x560-c7max-449%20106.png"
+                                alt="">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <script>
-        const big_img = document.querySelector("b2b-container-purchase-content-show-img img")
-        const tabs = document.querySelectorAll(".b2b-container-purchase-content-tab-item img")
+        const big_img = document.querySelector(".b2b-container-purchase-content-show-img img")
+        const tabs = document.querySelectorAll(".b2b-container-purchase-content-tab-item-img")
+
         tabs.forEach((tab, index) => {
             tab.addEventListener("click", () => {
-                big_img.src = tab.src
+                big_img.src = tab.querySelector("img").src
+                tabs.forEach(item => {
+                    item.classList.remove("selected")
+                });
+                tab.classList.add("selected")
             })
         })
     </script>
