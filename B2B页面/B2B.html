@@ -182,7 +182,6 @@
 
         .container .form_case .form_container .label_case.label_case_three {
             width: 32%;
-            margin-bottom: 0;
         }
 
         .container .form_case .form_container .label_case input {
@@ -674,6 +673,7 @@
             display: flex;
             flex-direction: column;
             gap: 32px;
+            position: relative;
         }
 
         .label_case_radio .custom-radio {
@@ -714,7 +714,7 @@
             font-size: 20px;
             line-height: 120%;
             text-transform: capitalize;
-            color: #a3a3a3;
+            color: #26333A;
             width: 100%;
         }
 
@@ -743,7 +743,7 @@
             font-size: 16px;
             line-height: 120%;
             text-transform: capitalize;
-            color: #a3a3a3;
+            color: #26333A;
         }
 
         .custom-option:hover {
@@ -873,10 +873,20 @@
                                 class="m0">
                         </div>
                         <div class="label_case label_case_three">
-                            <input type="text">
+                            <div class="custom-select select-one">
+                                <div class="custom-select-trigger">Select an option</div>
+                                <div class="custom-options">
+                                </div>
+                            </div>
+                            <p class="ipt_wrong">Please enter a valid input</p>
+                            <svg class="contactjp-arrow arrow-one" xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M5.33105 15.0837L12.1664 8.2484L19.0003 15.0837" stroke="#26333A"
+                                    stroke-width="1.5" />
+                            </svg>
                         </div>
                         <div class="label_case label_case_three">
-                            <div class="custom-select">
+                            <div class="custom-select select-two">
                                 <div class="custom-select-trigger">Select an option</div>
                                 <div class="custom-options">
                                     <div class="custom-option" data-value="1">Option 1</div>
@@ -885,8 +895,8 @@
                                 </div>
                             </div>
                             <p class="ipt_wrong">Please enter a valid input</p>
-                            <svg class="contactjp-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none">
+                            <svg class="contactjp-arrow arrow-two" xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M5.33105 15.0837L12.1664 8.2484L19.0003 15.0837" stroke="#26333A"
                                     stroke-width="1.5" />
                             </svg>
@@ -908,7 +918,7 @@
                     <div class="label_radio_title">What are you focusing?</div>
                     <div class="label_case_radio">
                         <label class="custom-radio">
-                            <input type="radio" name="radio" value="Furniture Retailer" />
+                            <input type="radio" name="radio" value="Furniture Retailer" checked />
                             <span class="radio-btn"></span>Furniture Retailer
                         </label>
                         <label class="custom-radio">
@@ -935,7 +945,7 @@
                             <input type="radio" name="radio" value="Others( designer, consultant etc)" />
                             <span class="radio-btn"></span>Others( designer, consultant etc)
                         </label>
-                        <p class="ipt_wrong">Please enter a valid input</p>
+                        <p class="ipt_wrong radio_wrong">Please enter a valid input</p>
                     </div>
                     <button class="submit_btn" id="submit">SUBMIT</button>
                 </form>
@@ -972,7 +982,7 @@
                 }
             }
         }
-        let selectedRadioValue
+        let selectedRadioValue = null;
 
         // 获取选中radio的值
         function getSelectedRadioValue() {
@@ -987,41 +997,62 @@
 
 
         const address_data = ["address1", "address2", "address3", "address4"]
-        const storage_way = ["Physical store", "online store", "other"]
-        const trigger = document.querySelector(".custom-select-trigger");
-        const select_box = document.querySelector(".custom-select")
-        const options = document.querySelector(".custom-options");
-        const customOptions = document.querySelectorAll(".custom-option");
-        const up_svg = document.querySelector(".contactjp-arrow")
-        let isShow = false;
-        up_svg.addEventListener("click",() => {
-            isShow = !isShow
-            if(isShow){
+        let selectedAddress = null;
+        let selectedOption = null;
+        const initSelect = (selectClass, arrowClass, data, callback) => {
+            const selectBox = document.querySelector(selectClass)
+            const trigger = selectBox.querySelector(".custom-select-trigger")
+            const options = selectBox.querySelector(".custom-options")
+            const arrow = document.querySelector(arrowClass)
+
+            options.innerHTML = data.map(item => `<div class="custom-option" data-value="${item}">${item}</div>`).join("")
+
+            let isShow = false;
+
+            // 点击箭头
+            arrow.addEventListener("click", (e) => {
+                e.stopPropagation()
+                isShow = !isShow
+                options.classList.toggle("active", isShow)
+                arrow.style.transform = isShow ? "rotate(180deg)" : "rotate(0deg)"
+            })
+
+            // 点击选择框
+            selectBox.addEventListener("click", () => {
+                isShow = true
                 options.classList.add("active")
-            }else{
-                options.classList.remove("active")
-            }
-        })
-        select_box.addEventListener("click", () => {
-            options.classList.add("active");
-            up_svg.style.transform = "rotate(180deg)"
-        });
+                arrow.style.transform = "rotate(180deg)"
+            })
 
-        customOptions.forEach(option => {
-            option.addEventListener("click", () => {
-                trigger.textContent = option.textContent;
-                options.classList.remove("active");
-                up_svg.style.transform = "rotate(0deg)"
-
+            // 点击选项
+            options.addEventListener("click", (e) => {
+                e.stopPropagation()
+                if (e.target.classList.contains("custom-option")) {
+                    trigger.textContent = e.target.textContent
+                    options.classList.remove("active")
+                    arrow.style.transform = "rotate(0deg)"
+                    isShow = false
+                    callback(e.target.textContent)
+                }
             });
+
+            document.addEventListener("click", (e) => {
+                if (!e.target.closest(selectClass)) {
+                    options.classList.remove("active")
+                    arrow.style.transform = "rotate(0deg)"
+                }
+            });
+        };
+
+        // 初始化两个 Select
+        initSelect(".select-one", ".arrow-one", address_data, (value) => {
+            selectedAddress = value
         });
 
-        document.addEventListener("click", (e) => {
-            if (!e.target.closest(".custom-select")) {
-                options.classList.remove("active");
-                up_svg.style.transform = "rotate(0deg)"
-            }
+        initSelect(".select-two", ".arrow-two", ["Option 1", "Option 2", "Option 3"], (value) => {
+            selectedOption = value
         });
+
         const First_Name = document.getElementById("First_Name")
         const Last_Name = document.getElementById("Last_Name")
         const Company_Name = document.getElementById("Company_Name")
@@ -1137,23 +1168,29 @@
                             thisEmail &&
                             thisPhone &&
                             thisBusinessWebsite &&
-                            thisRequirement
+                            thisRequirement &&
+                            selectedRadioValue
                         ) {
                             let data = [
                                 {
                                     site: `US`,
                                     subscribeType: "EMARSYS",
                                     companyName: $("#Company_Name").val(),
-                                    FirstName: $("#First_Name").val(),
-                                    LastName: $("#Last_Name").val(),
+                                    firstName: $("#First_Name").val(),
+                                    lastName: $("#Last_Name").val(),
                                     email: $("#Email").val(),
                                     phone: $("#Phone_Number").val(),
                                     businessWebsite: $("#Business_Website").val(),
                                     requirement: $("#Requirement").val(),
                                     radioValue: selectedRadioValue,
+                                    unitedStates: $("#United_States").val(),
+                                    selectedAddress,
+                                    selectedOption,
+
                                 },
                             ]
-                            console.log(data, "this data");
+                            console.log(data, "data");
+
 
                             // $.ajax({
                             //     type: "POST",

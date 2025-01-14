@@ -1,74 +1,148 @@
 <style>
-    .custom-select {
-      position: relative;
-      display: inline-block;
-      width: 200px;
-    }
-  
-    .custom-select-trigger {
-      display: block;
-      padding: 10px;
-      background: #f0f0f0;
-      border: 1px solid #ccc;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-  
-    .custom-options {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background: white;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      display: none;
-      z-index: 10;
-    }
-  
-    .custom-options.active {
-      display: block;
-    }
-  
-    .custom-option {
-      padding: 10px;
-      cursor: pointer;
-    }
-  
-    .custom-option:hover {
-      background: #f0f0f0;
-    }
-  </style>
-  
-  <div class="custom-select">
-    <div class="custom-select-trigger">Select an option</div>
-    <div class="custom-options">
-      <div class="custom-option" data-value="1">Option 1</div>
-      <div class="custom-option" data-value="2">Option 2</div>
-      <div class="custom-option" data-value="3">Option 3</div>
-    </div>
+  .custom-select {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 71px;
+    border: 1px solid #EDE9E4;
+    background: #fff;
+    border-radius: 8px;
+    font-family: "Moderat-Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 71px;
+    text-transform: capitalize;
+    color: #a3a3a3;
+  }
+
+  .custom-select-trigger {
+    cursor: pointer;
+    position: absolute;
+    top: 35%;
+    left: 28.55px;
+    font-family: "Moderat-Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    text-transform: capitalize;
+    color: #26333A;
+    width: 100%;
+  }
+
+  .custom-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: none;
+    z-index: 10;
+  }
+
+  .custom-options.active {
+    display: block;
+  }
+
+  .custom-option {
+    padding: 10px;
+    cursor: pointer;
+    font-family: "Moderat-Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    text-transform: capitalize;
+    color: #26333A;
+  }
+
+  .custom-option:hover {
+    background: #f0f0f0;
+  }
+
+  .contactjp-arrow {
+    position: absolute;
+    display: inline-block;
+    top: 30%;
+    right: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+</style>
+
+<div class="ipt_case">
+  <div class="label_case label_case_three">
+    <input type="text" placeholder="United States" name="United_States" id="United_States" class="m0">
   </div>
-  
-  <script>
-    const trigger = document.querySelector(".custom-select-trigger");
-    const options = document.querySelector(".custom-options");
-    const customOptions = document.querySelectorAll(".custom-option");
-  
-    trigger.addEventListener("click", () => {
-      options.classList.toggle("active");
+  <div class="label_case label_case_three">
+    <div class="custom-select">
+      <div class="custom-select-trigger">Select an option</div>
+      <div class="custom-options">
+      </div>
+    </div>
+    <p class="ipt_wrong">Please enter a valid input</p>
+    <svg class="contactjp-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+      fill="none">
+      <path d="M5.33105 15.0837L12.1664 8.2484L19.0003 15.0837" stroke="#26333A" stroke-width="1.5" />
+    </svg>
+  </div>
+  <div class="label_case label_case_three">
+    <div class="custom-select">
+      <div class="custom-select-trigger">Select an option</div>
+      <div class="custom-options">
+        <div class="custom-option" data-value="1">Option 1</div>
+        <div class="custom-option" data-value="2">Option 2</div>
+        <div class="custom-option" data-value="3">Option 3</div>
+      </div>
+    </div>
+    <p class="ipt_wrong">Please enter a valid input</p>
+    <svg class="contactjp-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+      fill="none">
+      <path d="M5.33105 15.0837L12.1664 8.2484L19.0003 15.0837" stroke="#26333A" stroke-width="1.5" />
+    </svg>
+  </div>
+</div>
+
+<script>
+  const address_data = ["address1", "address2", "address3", "address4"]
+  const trigger = document.querySelector(".custom-select-trigger");
+  const select_box = document.querySelector(".custom-select")
+  const options = document.querySelector(".custom-options");
+  const customOptions = document.querySelectorAll(".custom-option");
+  const up_svg = document.querySelector(".contactjp-arrow")
+  let isShow = false;
+  up_svg.addEventListener("click", () => {
+    isShow = !isShow
+    if (isShow) {
+      console.log(isShow, "isShow");
+
+      options.classList.add("active")
+    } else {
+      options.classList.remove("active")
+    }
+  })
+  select_box.addEventListener("click", () => {
+    options.classList.add("active")
+    up_svg.style.transform = "rotate(180deg)"
+  });
+  let shop_way;
+  customOptions.forEach(option => {
+    option.addEventListener("click", () => {
+      trigger.textContent = option.textContent
+      shop_way = option.textContent
+      options.classList.remove("active")
+      up_svg.style.transform = "rotate(0deg)"
+
     });
-  
-    customOptions.forEach(option => {
-      option.addEventListener("click", () => {
-        trigger.textContent = option.textContent;
-        options.classList.remove("active");
-      });
-    });
-  
-    document.addEventListener("click", (e) => {
-      if (!e.target.closest(".custom-select")) {
-        options.classList.remove("active");
-      }
-    });
-  </script>
-  
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".custom-select")) {
+      options.classList.remove("active");
+      up_svg.style.transform = "rotate(0deg)"
+    }
+  });
+</script>
