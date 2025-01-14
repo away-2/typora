@@ -1,0 +1,74 @@
+<style>
+    .custom-select {
+      position: relative;
+      display: inline-block;
+      width: 200px;
+    }
+  
+    .custom-select-trigger {
+      display: block;
+      padding: 10px;
+      background: #f0f0f0;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  
+    .custom-options {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      display: none;
+      z-index: 10;
+    }
+  
+    .custom-options.active {
+      display: block;
+    }
+  
+    .custom-option {
+      padding: 10px;
+      cursor: pointer;
+    }
+  
+    .custom-option:hover {
+      background: #f0f0f0;
+    }
+  </style>
+  
+  <div class="custom-select">
+    <div class="custom-select-trigger">Select an option</div>
+    <div class="custom-options">
+      <div class="custom-option" data-value="1">Option 1</div>
+      <div class="custom-option" data-value="2">Option 2</div>
+      <div class="custom-option" data-value="3">Option 3</div>
+    </div>
+  </div>
+  
+  <script>
+    const trigger = document.querySelector(".custom-select-trigger");
+    const options = document.querySelector(".custom-options");
+    const customOptions = document.querySelectorAll(".custom-option");
+  
+    trigger.addEventListener("click", () => {
+      options.classList.toggle("active");
+    });
+  
+    customOptions.forEach(option => {
+      option.addEventListener("click", () => {
+        trigger.textContent = option.textContent;
+        options.classList.remove("active");
+      });
+    });
+  
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".custom-select")) {
+        options.classList.remove("active");
+      }
+    });
+  </script>
+  
