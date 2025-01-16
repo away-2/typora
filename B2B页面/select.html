@@ -75,22 +75,23 @@
 
 <div class="ipt_case">
   <div class="label_case label_case_three">
-    <input type="text" placeholder="United States" name="United_States" id="United_States" class="m0">
+    <input type="text" disabled value="United States" placeholder="United States" name="United_States"
+      id="United_States" class="m0">
   </div>
   <div class="label_case label_case_three">
-    <div class="custom-select">
-      <div class="custom-select-trigger">Select an option</div>
+    <div class="custom-select select-one">
+      <input type="text" class="custom-select-trigger" placeholder="Search and select">
       <div class="custom-options">
       </div>
     </div>
     <p class="ipt_wrong">Please enter a valid input</p>
-    <svg class="contactjp-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+    <svg class="contactjp-arrow arrow-one" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
       fill="none">
       <path d="M5.33105 15.0837L12.1664 8.2484L19.0003 15.0837" stroke="#26333A" stroke-width="1.5" />
     </svg>
   </div>
   <div class="label_case label_case_three">
-    <div class="custom-select">
+    <div class="custom-select select-two">
       <div class="custom-select-trigger">Select an option</div>
       <div class="custom-options">
         <div class="custom-option" data-value="1">Option 1</div>
@@ -99,7 +100,7 @@
       </div>
     </div>
     <p class="ipt_wrong">Please enter a valid input</p>
-    <svg class="contactjp-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+    <svg class="contactjp-arrow arrow-two" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
       fill="none">
       <path d="M5.33105 15.0837L12.1664 8.2484L19.0003 15.0837" stroke="#26333A" stroke-width="1.5" />
     </svg>
@@ -107,42 +108,131 @@
 </div>
 
 <script>
-  const address_data = ["address1", "address2", "address3", "address4"]
-  const trigger = document.querySelector(".custom-select-trigger");
-  const select_box = document.querySelector(".custom-select")
-  const options = document.querySelector(".custom-options");
-  const customOptions = document.querySelectorAll(".custom-option");
-  const up_svg = document.querySelector(".contactjp-arrow")
-  let isShow = false;
-  up_svg.addEventListener("click", () => {
-    isShow = !isShow
-    if (isShow) {
-      console.log(isShow, "isShow");
+  let selectedOption = null;
+  const address_data = ["address1", "address2", "address3", "address4"];
+  let selectedAddress = null;
 
-      options.classList.add("active")
-    } else {
-      options.classList.remove("active")
-    }
-  })
-  select_box.addEventListener("click", () => {
-    options.classList.add("active")
-    up_svg.style.transform = "rotate(180deg)"
-  });
-  let shop_way;
-  customOptions.forEach(option => {
-    option.addEventListener("click", () => {
-      trigger.textContent = option.textContent
-      shop_way = option.textContent
-      options.classList.remove("active")
-      up_svg.style.transform = "rotate(0deg)"
+  const initInputSelect = (selectClass, arrowClass, data, callback) => {
+    const selectBox = document.querySelector(selectClass);
+    const inputField = selectBox.querySelector(".custom-select-trigger");
+    const options = selectBox.querySelector(".custom-options");
+    const arrow = document.querySelector(arrowClass);
 
+    // 渲染选项
+    const renderOptions = (filteredData) => {
+      options.innerHTML = filteredData
+        .map((item) => `<div class="custom-option" data-value="${item}">${item}</div>`)
+        .join("");
+    };
+
+    // 初始渲染所有选项
+    renderOptions(data);
+
+    let isShow = false;
+
+    // 点击箭头展开/收起选项
+    arrow.addEventListener("click", (e) => {
+      e.stopPropagation();
+      isShow = !isShow;
+      options.classList.toggle("active", isShow);
+      arrow.style.transform = isShow ? "rotate(180deg)" : "rotate(0deg)";
     });
+
+    // 聚焦输入框展开选项
+    inputField.addEventListener("focus", () => {
+      isShow = true;
+      options.classList.add("active");
+      arrow.style.transform = "rotate(180deg)";
+    });
+
+    // 输入框动态过滤
+    inputField.addEventListener("input", (e) => {
+      const inputValue = e.target.value.toLowerCase();
+      const filteredData = data.filter((item) => item.toLowerCase().includes(inputValue));
+      renderOptions(filteredData);
+    });
+
+    // 失去焦点时检查输入值
+    inputField.addEventListener("blur", () => {
+      const inputValue = inputField.value;
+      if (!data.includes(inputValue)) {
+        inputField.value = data[0]; // 默认选中第一项
+        callback(data[0]);
+      }
+    });
+
+    // 点击选项后设置值并关闭选项列表
+    options.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (e.target.classList.contains("custom-option")) {
+        inputField.value = e.target.textContent;
+        options.classList.remove("active");
+        arrow.style.transform = "rotate(0deg)";
+        isShow = false;
+        callback(e.target.textContent);
+      }
+    });
+
+    // 点击外部关闭选项列表
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(selectClass)) {
+        options.classList.remove("active");
+        arrow.style.transform = "rotate(0deg)";
+      }
+    });
+  };
+
+  // 初始化 select-one
+  initInputSelect(".select-one", ".arrow-one", address_data, (value) => {
+    selectedAddress = value;
+    console.log("Selected Address:", selectedAddress);
   });
 
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest(".custom-select")) {
-      options.classList.remove("active");
-      up_svg.style.transform = "rotate(0deg)"
-    }
+  // 初始化 select-two（不可输入）
+  const initSelect = (selectClass, arrowClass, data, callback) => {
+    const selectBox = document.querySelector(selectClass);
+    const trigger = selectBox.querySelector(".custom-select-trigger");
+    const options = selectBox.querySelector(".custom-options");
+    const arrow = document.querySelector(arrowClass);
+
+    options.innerHTML = data.map((item) => `<div class="custom-option" data-value="${item}">${item}</div>`).join("");
+
+    let isShow = false;
+
+    arrow.addEventListener("click", (e) => {
+      e.stopPropagation();
+      isShow = !isShow;
+      options.classList.toggle("active", isShow);
+      arrow.style.transform = isShow ? "rotate(180deg)" : "rotate(0deg)";
+    });
+
+    selectBox.addEventListener("click", () => {
+      isShow = true;
+      options.classList.add("active");
+      arrow.style.transform = "rotate(180deg)";
+    });
+
+    options.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (e.target.classList.contains("custom-option")) {
+        trigger.textContent = e.target.textContent;
+        options.classList.remove("active");
+        arrow.style.transform = "rotate(0deg)";
+        isShow = false;
+        callback(e.target.textContent);
+      }
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(selectClass)) {
+        options.classList.remove("active");
+        arrow.style.transform = "rotate(0deg)";
+      }
+    });
+  };
+
+  initSelect(".select-two", ".arrow-two", ["Option 1", "Option 2", "Option 3"], (value) => {
+    selectedOption = value;
+    console.log("Selected Option:", selectedOption);
   });
 </script>
