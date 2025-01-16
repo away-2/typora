@@ -2,7 +2,245 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <style>
+        .banner-pc {
+            width: 100%;
+        }
 
+        .banner-pc img {
+            width: 100%;
+        }
+
+        .banner-m {
+            display: none;
+        }
+
+        .b2b-container-about-box {
+            margin: 100px auto;
+            max-width: 1384px;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .b2b-container-about-box .b2b-container-about-box-text {
+            max-width: 610px;
+        }
+
+        .b2b-container-about-box .b2b-container-about-box-text .b2b-container-about-box-text-title {
+            color: #26333A;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-feature-settings: 'ss02' on;
+            font-family: "SupremeLLSub-Bold" !important;
+            font-size: 38px;
+            font-style: normal;
+            font-weight: 710;
+            line-height: 120%;
+        }
+
+        .b2b-container-about-box .b2b-container-about-box-text .b2b-container-about-box-text-desc {
+            color: rgba(38, 51, 58, 0.80);
+            font-variant-numeric: lining-nums proportional-nums;
+            font-feature-settings: 'ss02' on;
+            font-family: "Moderat-Regular" !important;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            margin-top: 32px;
+        }
+
+        .b2b-container-about-box .b2b-container-about-box-img {
+            width: 695px;
+        }
+
+        .b2b-container-about-box .b2b-container-about-box-img img {
+            width: 100%;
+        }
+
+        .b2b-container-warranty-box {
+            margin: 0 auto;
+            padding: 60px 0;
+            background: #F6F4F1;
+        }
+
+        .b2b-container-warranty-box .b2b-container-warranty-box-title {
+            color: #26333A;
+            text-align: center;
+            font-family: "SupremeLLSub-Bold" !important;
+            font-size: 38px;
+            font-style: normal;
+            font-weight: 710;
+            line-height: 120%;
+        }
+
+        .b2b-container-warranty-box .b2b-container-warranty-box-list {
+            margin-top: 40px;
+            display: flex;
+            gap: 74px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .b2b-container-warranty-box .b2b-container-warranty-box-list .b2b-container-warranty-box-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 290px;
+        }
+
+        .b2b-container-warranty-box .b2b-container-warranty-box-list .b2b-container-warranty-box-item .b2b-container-warranty-box-item-img {
+            width: 64px;
+        }
+
+        .b2b-container-warranty-box .b2b-container-warranty-box-list .b2b-container-warranty-box-item .b2b-container-warranty-box-item-img img {
+            width: 100%;
+        }
+
+        .b2b-container-warranty-box .b2b-container-warranty-box-list .b2b-container-warranty-box-item .b2b-container-warranty-box-item-title {
+            color: #26333A;
+            text-align: center;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: "SupremeLLSub-Bold";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 710;
+            line-height: 24px;
+            margin-top: 8px;
+        }
+
+        .b2b-container-warranty-box .b2b-container-warranty-box-list .b2b-container-warranty-box-item .b2b-container-warranty-box-item-desc {
+            color: rgba(38, 51, 58, 0.80);
+            text-align: center;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: "Moderat-Regular" !important;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            margin-top: 12px;
+            height: 68px;
+        }
+
+        .b2b-container-purchase-box {
+            margin: 100px auto;
+            max-width: 1384px;
+        }
+
+        .b2b-container-purchase-box .b2b-container-purchase-box-title {
+            color: #26333A;
+            text-align: center;
+            font-family: "SupremeLLSub-Bold";
+            font-size: 38px;
+            font-weight: 710;
+            line-height: 120%;
+        }
+
+        .b2b-container-purchase-box .b2b-container-purchase-content {
+            display: flex;
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-show-img {
+            width: 1165px;
+            height: 728px;
+        }
+
+        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-show-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item {
+            width: 188px;
+            cursor: pointer;
+        }
+
+        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item .b2b-container-purchase-content-tab-item-title {
+            width: 200px;
+            color: #26333A;
+            font-family: "Moderat-Medium" !important;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            margin-top: 8px;
+            text-align: center;
+        }
+
+        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item .b2b-container-purchase-content-tab-item-img {
+            width: 100%;
+            height: 135px;
+            position: relative;
+            padding: 6px;
+        }
+
+        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item .b2b-container-purchase-content-tab-item-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item .b2b-container-purchase-content-tab-item-img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* background: #26333A; */
+            opacity: 0.55;
+            transition: all 0.3s ease;
+        }
+
+        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item .b2b-container-purchase-content-tab-item-img.selected::after {
+            border: 1.5px solid #26333A;
+            transform: scale(1.1)
+        }
+
+        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item .b2b-container-purchase-content-tab-item-img.selected img {
+            transform: scale(1.1)
+        }
+
+        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item .b2b-container-purchase-content-tab-item-img:hover img {
+            transform: scale(1.1)
+        }
+
+        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item .b2b-container-purchase-content-tab-item-img:hover::after {
+            border: 1.5px solid #26333A;
+            transform: scale(1.1)
+        }
+
+        @media screen and (max-width: 768px) {
+            .banner-pc {
+                display: none;
+            }
+
+            .banner-m {
+                display: block;
+                width: 100%;
+            }
+
+            .banner-m img {
+                width: 100%;
+            }
+
+            .b2b-container-about-box {
+                margin: 30px 20px;
+                max-width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 32px;
+            }
+        }
+    </style>
+    <!-- form_style -->
     <style>
         * {
             margin: 0;
@@ -30,83 +268,6 @@
             align-items: center;
             max-width: 1382px;
             margin: 0 auto;
-        }
-
-        .container .d_top_case {
-            width: 1382px;
-            display: flex;
-            justify-content: space-between;
-            margin-top: 51px;
-            margin-bottom: 80px;
-        }
-
-        .container .d_top_case .img {
-            /* height: 100%; */
-            width: 500px;
-            height: 500px;
-        }
-
-        .container .d_top_case .top_ctx {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            max-width: 812px;
-            /* margin-top: 163px; */
-        }
-
-        .container .d_top_case .top_ctx .title {
-            margin-bottom: 14px;
-            font-family: "SupremeLLSub-Black";
-            font-style: normal;
-            font-weight: 900;
-            font-size: 52px;
-            line-height: 120%;
-            font-feature-settings: "liga" off;
-            color: #26333a;
-        }
-
-        .container .d_top_case .top_ctx .text {
-            font-family: "Moderat-Medium";
-            font-style: normal;
-            font-weight: 500;
-            font-size: 28px;
-            line-height: 120%;
-            font-feature-settings: "liga" off;
-            color: rgba(38, 51, 58, 0.8);
-        }
-
-        .container .d_top_case .top_ctx .apply_btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 189px;
-            height: 52px;
-            margin-top: 28px;
-            background: #26333a;
-            box-shadow: 8px 8px 40px rgba(0, 0, 0, 0.1);
-            border-radius: 40px;
-            cursor: pointer;
-        }
-
-        .container .d_top_case .top_ctx .apply_btn>a {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: "Moderat-Medium";
-            font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 16px;
-            letter-spacing: 0.05em;
-            font-feature-settings: "pnum" on, "lnum" on, "ss02" on;
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        .container .d_top_case .top_ctx .apply_btn:hover {
-            background: #004df2;
         }
 
         .container .form_case {
@@ -202,6 +363,10 @@
             cursor: text;
         }
 
+        .Requirement_label {
+            top: 15% !important;
+        }
+
         .container .form_case .form_container .ipt_label span {
             color: #ef2e13;
         }
@@ -294,6 +459,10 @@
             color: #ef2e13;
         }
 
+        .textarea_wrong {
+            bottom: -15% !important;
+        }
+
         .container .form_case .form_container .checkbox_wrong {
             bottom: -28px;
         }
@@ -313,6 +482,21 @@
             margin: 0;
         }
 
+        @media screen and (max-width: 1440px) {
+            .container .form_case {
+                width: 1000px;
+            }
+
+            .container .form_case {
+                padding: 68px 50px 62px;
+            }
+
+            .container .form_case .form_container .form_title {
+                font-size: 42px;
+            }
+        }
+
+
         @media screen and (max-width: 1280px) {
             .container {
                 max-width: 908px;
@@ -330,6 +514,27 @@
                 max-width: 650px;
             }
         }
+
+        @media screen and (max-width: 1024px) {
+            .container .form_case {
+                width: 768px;
+            }
+
+            .container .form_case .form_container .form_title {
+                font-size: 32px;
+            }
+
+            .container .form_case .form_container input::placeholder,
+            .container .form_case .form_container textarea::placeholder {
+                font-size: 18px;
+            }
+
+            .container .form_case .form_container input,
+            .container .form_case .form_container textarea {
+                left: 15px;
+            }
+        }
+
 
         @media screen and (max-width: 992px) {
             .container {
@@ -375,50 +580,19 @@
         @media screen and (max-width: 768px) {
             .container {
                 margin: 0 20px;
+                max-width: 335px;
             }
 
             .container .form_case {
                 border-radius: 8px;
+                width: 335px;
+                padding: 35px 17.5px 50px;
             }
 
-            .container .d_top_case {
-                display: block;
-                margin-top: 0;
-                margin-bottom: 40px;
-            }
-
-            .container .d_top_case .img {
-                display: none;
-            }
-
-            .container .d_top_case .top_ctx .apply_btn {
-                width: 141px;
-                height: 42px;
-                margin: 20px auto 0;
-            }
-
-            .container .d_top_case .top_ctx .apply_btn>a {
-                font-size: 12px;
-                line-height: 13px;
-            }
-
-            .container .d_top_case .top_ctx .title {
-                margin-bottom: 12px;
+            .container .form_case .form_container .form_title {
                 font-size: 24px;
-                line-height: 29px;
-                text-align: center;
             }
 
-            .container .d_top_case .top_ctx .text {
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 17px;
-                text-align: center;
-            }
-
-            /* .container .form_case .form_container .form_title {
-        display: none;
-      } */
             .container .form_case .form_container .ipt_case {
                 display: block;
             }
@@ -429,6 +603,15 @@
                 width: 100% !important;
                 height: 40px;
                 margin-bottom: 12px;
+            }
+
+            .textarea_label_case {
+                height: 150px !important;
+            }
+
+            .Requirement_label {
+                top: 8% !important;
+                line-height: 140% !important;
             }
 
             .container .form_case {
@@ -448,7 +631,7 @@
 
             .container .form_case .form_container textarea {
                 padding: 13px 0 0 10px;
-                height: 165px;
+                height: 150px;
             }
 
             .container .form_case .form_container input {
@@ -494,126 +677,10 @@
                 line-height: 13px;
                 margin-top: 32px;
             }
+
         }
     </style>
-    <style>
-        @media screen and (max-width: 1440px) {
-            .container .form_case {
-                width: 1000px;
-            }
-
-            .container .d_top_case {
-                width: 1000px;
-            }
-
-            .container .d_top_case .img {
-                width: 460px;
-                height: 460px;
-            }
-
-            .container .d_top_case .top_ctx .title {
-                font-size: 40px;
-            }
-
-            .container .d_top_case .top_ctx .text {
-                font-size: 20px;
-            }
-
-            .container .d_top_case .top_ctx {
-                margin-left: 70px;
-            }
-
-            .container .d_top_case {
-                margin-bottom: 60px;
-            }
-
-            .container .form_case {
-                padding: 68px 50px 62px;
-            }
-
-            .container .form_case .form_container .form_title {
-                font-size: 42px;
-            }
-        }
-
-        @media screen and (max-width: 1024px) {
-            .container .form_case {
-                width: 768px;
-            }
-
-            .container .d_top_case {
-                width: 768px;
-            }
-
-            .container .d_top_case .img {
-                width: 354px;
-                height: 354px;
-            }
-
-            .container .d_top_case .top_ctx .title {
-                font-size: 32px;
-            }
-
-            .container .d_top_case .top_ctx .text {
-                font-size: 16px;
-            }
-
-            .container .d_top_case .top_ctx {
-                margin-left: 52px;
-            }
-
-            .container .d_top_case .top_ctx .apply_btn {
-                width: 136px;
-                height: 40px;
-            }
-
-            .container .d_top_case .top_ctx .apply_btn>a {
-                font-size: 14px;
-            }
-
-            .container .d_top_case {
-                margin-bottom: 40px;
-            }
-
-            .container .form_case .form_container .form_title {
-                font-size: 32px;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            .container {
-                max-width: 335px;
-            }
-
-            .container .d_top_case {
-                width: 335px;
-            }
-
-            .container .form_case {
-                width: 335px;
-            }
-
-            .container .form_case .form_container .form_title {
-                font-size: 24px;
-            }
-
-            .container .form_case {
-                padding-top: 35px;
-            }
-
-            .container .d_top_case .top_ctx {
-                margin-left: 0px;
-            }
-
-            .container .d_top_case .top_ctx .title {
-                font-size: 24px;
-            }
-
-            .container .form_case {
-                padding: 35px 17.5px 50px;
-            }
-        }
-    </style>
+    <!-- radio & select 相关style start -->
     <style>
         .custom-radio {
             display: block;
@@ -723,12 +790,28 @@
             top: 100%;
             left: 0;
             width: 100%;
+            max-height: 200px;
+            overflow-y: auto;
             background: white;
             border: 1px solid #ccc;
             border-radius: 5px;
             display: none;
             z-index: 10;
         }
+
+        /* .custom-options::-webkit-scrollbar-track {
+            background: #f6f4f1;
+            border-radius: 25px;
+        }
+
+        .custom-options::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .custom-options::-webkit-scrollbar-thumb {
+            background: #26333a;
+            border-radius: 25px;
+        } */
 
         .custom-options.active {
             display: block;
@@ -757,6 +840,38 @@
             right: 10px;
             transition: all 0.5s;
             cursor: pointer;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .custom-select-trigger {
+                font-size: 18px;
+                left: 15px;
+            }
+
+            .custom-radio .radio-btn {
+                width: 18px;
+                height: 18px;
+            }
+
+            .custom-radio input[type="radio"]:checked+.radio-btn::after {
+                width: 7px;
+                height: 7px;
+            }
+
+            .label_radio_title {
+                font-size: 22px;
+                margin: 30px 0 18px;
+            }
+
+            .label_case_radio {
+                padding: 25px 30px 35px;
+                gap: 20px;
+            }
+
+            .label_case_radio .custom-radio {
+                font-size: 18px;
+            }
+
         }
 
         @media screen and (max-width: 768px) {
@@ -820,17 +935,10 @@
                 padding: 7px;
                 font-size: 12px;
             }
-
-            .container .form_case .form_container .ipt_label {
-                width: 90%;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                overflow: hidden;
-            }
         }
     </style>
+    <!-- radio & select 相关style end -->
     <div class="container">
-
         <!-- form module -->
         <div class="form_case" id="form-case">
             <div class="form_container">
@@ -869,8 +977,8 @@
                     </div>
                     <div class="ipt_case">
                         <div class="label_case label_case_three">
-                            <input type="text" placeholder="United States" name="United_States" id="United_States"
-                                class="m0">
+                            <input type="text" disabled value="United States" placeholder="United States"
+                                name="United_States" id="United_States" class="m0">
                         </div>
                         <div class="label_case label_case_three">
                             <div class="custom-select select-one">
@@ -908,12 +1016,13 @@
                         <input type="text" name="Business_Website" id="Business_Website" class="m0">
                         <p class="ipt_wrong">Please enter a valid input</p>
                     </div>
-                    <div class="label_case" style="width: 100%">
+                    <div class="label_case textarea_label_case" style="width: 100%">
                         <label for="Requirement" class="ipt_label Requirement_label">
                             Please full in your requirements, we will contact you in a short time.
                             <span>*</span></label>
-                        <input type="text" name="Requirement" id="Requirement" class="m0">
-                        <p class="ipt_wrong">Please enter a valid input</p>
+                        <textarea name="Requirement" id="Requirement" cols="30" rows="10"></textarea>
+                        <!-- <input type="text" name="Requirement" id="Requirement" class="m0"> -->
+                        <p class="ipt_wrong textarea_wrong">Please enter a valid input</p>
                     </div>
                     <div class="label_radio_title">What are you focusing?</div>
                     <div class="label_case_radio">
@@ -982,6 +1091,22 @@
                 }
             }
         }
+
+        // /^(((ht|f)tps?):\/\/)?([^!@#$%^&*?.\s-]([^!@#$%^&*?.\s]{0,63}[^!@#$%^&*?.\s])?\.)+[a-z]{2,6}\/?/
+        // 图片切换
+        const big_img = document.querySelector(".b2b-container-purchase-content-show-img img")
+        const tabs = document.querySelectorAll(".b2b-container-purchase-content-tab-item-img")
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener("click", () => {
+                big_img.src = tab.querySelector("img").src
+                tabs.forEach(item => {
+                    item.classList.remove("selected")
+                });
+                tab.classList.add("selected")
+            })
+        })
+
         let selectedRadioValue = null;
 
         // 获取选中radio的值
@@ -996,7 +1121,83 @@
         }
 
 
-        const address_data = ["address1", "address2", "address3", "address4"]
+        const requestOptions = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json;charset=UTF-8",
+            },
+        }
+        fetch(
+            "/api/trantor/func/bbc_common_PagingDistrictFunc",
+            requestOptions
+        )
+            .then((res) => {
+                return res.json()
+            })
+            .then((data) => {
+                if (data.success) {
+                    const resList = data.res.data
+                    console.log(resList, "success");
+
+                } else {
+                    console.error(data.msg)
+                }
+            })
+
+
+        const address_data = [
+            "Alabama",
+            "Alaska",
+            "Arizona",
+            "Arkansas",
+            "California",
+            "Colorado",
+            "Connecticut",
+            "Delaware",
+            "Florida",
+            "Georgia",
+            "Hawaii",
+            "Idaho",
+            "Illinois",
+            "Indiana",
+            "Iowa",
+            "Kansas",
+            "Kentucky",
+            "Louisiana",
+            "Maine",
+            "Maryland",
+            "Massachusetts",
+            "Michigan",
+            "Minnesota",
+            "Mississippi",
+            "Missouri",
+            "Montana",
+            "Nebraska",
+            "Nevada",
+            "New Hampshire",
+            "New Jersey",
+            "New Mexico",
+            "New York",
+            "North Carolina",
+            "North Dakota",
+            "Ohio",
+            "Oklahoma",
+            "Oregon",
+            "Pennsylvania",
+            "Rhode Island",
+            "South Carolina",
+            "South Dakota",
+            "Tennessee",
+            "Texas",
+            "Utah",
+            "Vermont",
+            "Virginia",
+            "Washington",
+            "West Virginia",
+            "Wisconsin",
+            "Wyoming"
+        ]
+
         let selectedAddress = null;
         let selectedOption = null;
         const initSelect = (selectClass, arrowClass, data, callback) => {
@@ -1148,6 +1349,8 @@
                         thisBusinessWebsite = checkValue(Business_Website)
                         thisRequirement = checkValue(Requirement)
                         getSelectedRadioValue()
+                        let username = ($("#First_Name").val() + $("#Last_Name").val()).toString()
+                        let address = ($("#United_States").val() + selectedAddress)
 
                         if (emailReg.test(Email.value)) {
                             Email.nextElementSibling.style.display = "none"
@@ -1174,45 +1377,44 @@
                             let data = [
                                 {
                                     site: `US`,
-                                    subscribeType: "EMARSYS",
                                     companyName: $("#Company_Name").val(),
-                                    firstName: $("#First_Name").val(),
-                                    lastName: $("#Last_Name").val(),
+                                    userName: username,
                                     email: $("#Email").val(),
-                                    phone: $("#Phone_Number").val(),
+                                    phoneNumber: $("#Phone_Number").val(),
                                     businessWebsite: $("#Business_Website").val(),
-                                    requirement: $("#Requirement").val(),
-                                    radioValue: selectedRadioValue,
-                                    unitedStates: $("#United_States").val(),
-                                    selectedAddress,
-                                    selectedOption,
+                                    userNotes: $("#Requirement").val(),
+                                    userFocusing: selectedRadioValue,
+                                    address,
+                                    storeType: selectedOption,
 
                                 },
                             ]
                             console.log(data, "data");
 
 
-                            // $.ajax({
-                            //     type: "POST",
-                            //     url: "/api/trantor/flow/flexispot_misc_CreateSupplierApplicationFlow",
-                            //     data: JSON.stringify(data),
-                            //     async: false,
-                            //     cache: false,
-                            //     processData: false,
-                            //     dataType: "json",
-                            //     contentType: "application/json; charset=UTF-8",
-                            //     success: function (msg) {
-                            //         // 成功
-                            //         if (msg.code === 200) {
-                            //             window.location.href = "/contact/success"
-                            //         }
-                            //     },
-                            //     error: function (res) {
-                            //         if (res.responseJSON.code == 500) {
-                            //             alert(res.responseJSON.msg)
-                            //         }
-                            //     },
-                            // })
+                            $.ajax({
+                                type: "POST",
+                                url: "/api/trantor/func/flexispot_misc_CreateBTwoBProgramFunc",
+                                data: JSON.stringify(data),
+                                async: false,
+                                cache: false,
+                                processData: false,
+                                dataType: "json",
+                                contentType: "application/json; charset=UTF-8",
+                                success: function (msg) {
+                                    // 成功
+                                    if (msg.code === 200) {
+                                        // window.location.href = "/contact/success"
+                                        console.log("success");
+
+                                    }
+                                },
+                                error: function (res) {
+                                    if (res.responseJSON.code == 500) {
+                                        alert(res.responseJSON.msg)
+                                    }
+                                },
+                            })
                         } else {
                             const ipt_wrong = document.querySelectorAll(".ipt_wrong")
                             for (let i = 0; i < ipt_wrong.length; i++) {
