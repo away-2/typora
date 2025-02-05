@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+        }
+
+        .list-item {
+            background: #1b70d1;
+            width: 200px;
+            border-radius: 5px;
+            padding: 10px 0;
+            text-align: center;
+            color: #fff;
+            cursor: move;
+            user-select: none;
+        }
+
+        .list-item.moving {
+            background: #ccc;
+            color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="list">
+        <div draggable="true" class="list-item">1</div>
+        <div draggable="true" class="list-item">2</div>
+        <div draggable="true" class="list-item">3</div>
+        <div draggable="true" class="list-item">4</div>
+        <div draggable="true" class="list-item">5</div>
+    </div>
+
+    <script>
+        const list = document.querySelector(".list")
+
+        let source;  // 拖拽的元素
+        list.ondragstart = e => {
+            // 异步，保证在拖拽那一刻样式保持和原有样式一致
+            setTimeout(() => {
+                e.target.classList.add("moving")
+            }, 0)
+            source = e.target
+            e.dataTransfer.effctAllowed = "move"
+        }
+
+        list.ondragover = e => {
+            e.preventDefault()
+        }
+
+        list.ondragenter = e => {
+            e.preventDefault()
+            if (!source) return
+            // 这时的e.target不是拖动的元素，是进入的元素
+            const target = e.target
+            // 保证进入元素不是父元素和自身
+            if (target === list || target === source) return
+            const sourceIndex = Array.from(list.children).indexOf(source)
+            const targetIndex = Array.from(list.children).indexOf(target)
+            if (sourceIndex < targetIndex) {
+                list.insertBefore(target, source)
+                console.log("说明在向下拖动");
+            } else {
+                list.insertBefore(source, target)
+                console.log("说明在向上拖动");
+            }
+        }
+
+        // 样式复原
+        list.ondragend = e => {
+            e.target.classList.remove("moving")
+            source = null
+        }
+    </script>
+</body>
+
+</html>
