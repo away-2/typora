@@ -424,9 +424,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 250px;
+            width: 400px;
             height: 64px;
-            margin-top: 40px;
             background: #26333a;
             box-shadow: 8px 8px 40px rgba(0, 0, 0, 0.1);
             border-radius: 40px;
@@ -439,6 +438,7 @@
             font-feature-settings: "pnum" on, "lnum" on, "ss02" on;
             color: #ffffff;
             cursor: pointer;
+            margin: 40px auto 28px;
         }
 
         .container .form_case .form_container .submit_btn:hover {
@@ -480,6 +480,28 @@
 
         .container .form_case .form_container input.m0 {
             margin: 0;
+        }
+
+        .email-info-box {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            color: #26333A;
+            font-family: "Moderat-Regular";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+
+        .email-info-box span {
+            color: #004df2;
+            text-decoration: underline;
+            text-underline-offset: 2px;
         }
 
         @media screen and (max-width: 1440px) {
@@ -785,6 +807,10 @@
             width: 100%;
         }
 
+        .select-one .custom-select-trigger::placeholder {
+            color: #26333A !important;
+        }
+
         .select-one .custom-select-trigger {
             top: 0;
             left: 0;
@@ -988,11 +1014,10 @@
                         <div class="label_case label_case_three">
                             <div class="custom-select select-one">
                                 <!-- <div class="custom-select-trigger">Select an option</div> -->
-                                <input type="text" class="custom-select-trigger" placeholder="Search and select">
+                                <input type="text" class="custom-select-trigger" placeholder="Alabama">
                                 <div class="custom-options">
                                 </div>
                             </div>
-                            <p class="ipt_wrong">Please enter a valid input</p>
                             <svg class="contactjp-arrow arrow-one" xmlns="http://www.w3.org/2000/svg" width="24"
                                 height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M5.33105 15.0837L12.1664 8.2484L19.0003 15.0837" stroke="#26333A"
@@ -1001,14 +1026,13 @@
                         </div>
                         <div class="label_case label_case_three">
                             <div class="custom-select select-two">
-                                <div class="custom-select-trigger">Select an option</div>
+                                <div class="custom-select-trigger">Physical Store</div>
                                 <div class="custom-options">
-                                    <div class="custom-option" data-value="1">Option 1</div>
-                                    <div class="custom-option" data-value="2">Option 2</div>
-                                    <div class="custom-option" data-value="3">Option 3</div>
+                                    <div class="custom-option" data-value="1">Physical Store</div>
+                                    <div class="custom-option" data-value="2">Online Store</div>
+                                    <div class="custom-option" data-value="3">None</div>
                                 </div>
                             </div>
-                            <p class="ipt_wrong">Please enter a valid input</p>
                             <svg class="contactjp-arrow arrow-two" xmlns="http://www.w3.org/2000/svg" width="24"
                                 height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M5.33105 15.0837L12.1664 8.2484L19.0003 15.0837" stroke="#26333A"
@@ -1034,6 +1058,10 @@
                     <div class="label_case_radio">
                         <label class="custom-radio">
                             <input type="radio" name="radio" value="Furniture Retailer" checked />
+                            <span class="radio-btn"></span>Office Furniture Retailer
+                        </label>
+                        <label class="custom-radio">
+                            <input type="radio" name="radio" value="Furniture Distributor" />
                             <span class="radio-btn"></span>Furniture Retailer
                         </label>
                         <label class="custom-radio">
@@ -1060,12 +1088,21 @@
                             <input type="radio" name="radio" value="Others( designer, consultant etc)" />
                             <span class="radio-btn"></span>Others( designer, consultant etc)
                         </label>
-                        <p class="ipt_wrong radio_wrong">Please enter a valid input</p>
                     </div>
-                    <button class="submit_btn" id="submit">SUBMIT</button>
+                    <button class="submit_btn" id="submit">Submit</button>
                 </form>
             </div>
+            <div class="email-info-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" fill="none">
+                    <rect x="0.937012" y="1.29639" width="17.9917" height="14.5669" rx="2.5" stroke="#26333A" />
+                    <path d="M4.31982 5.89941L9.93555 10.2388L15.6786 5.89941" stroke="#26333A"
+                        stroke-linecap="round" />
+                </svg>
+                Email:
+                <span class="email-info">sales@flexispot.com</span>
+            </div>
         </div>
+
     </div>
 
 
@@ -1125,12 +1162,26 @@
             }
         }
 
+        let district_data;
+        let selectedAddress = null;
+        bbc_data = [{
+            // dev环境
+            origin: "US",
+            queryParams: { page: { no: 1, size: 999 } },
+            districtLevel: { value: 1 },
+            region: { id: 12016 }
+            // 生产环境
+            // region: { id: 2 }
+
+        }]
+
 
         const requestOptions = {
             method: "POST",
             headers: {
-                "Content-Type": "application/json;charset=UTF-8",
+                "Content-Type": "application/json;",
             },
+            body: JSON.stringify(bbc_data),
         }
         fetch(
             "/api/trantor/func/bbc_common_PagingDistrictFunc",
@@ -1142,201 +1193,89 @@
             .then((data) => {
                 if (data.success) {
                     const resList = data.res.data
-                    console.log(resList, "success");
+                    district_data = resList.map(item => item.districtName)
 
+                    const initInputSelect = (selectClass, arrowClass, data, callback) => {
+                        const selectBox = document.querySelector(selectClass)
+                        const inputField = selectBox.querySelector(".custom-select-trigger")
+                        const options = selectBox.querySelector(".custom-options")
+                        const arrow = document.querySelector(arrowClass)
+
+                        // 渲染选项
+                        const renderOptions = (filteredData) => {
+                            options.innerHTML = filteredData
+                                .map((item) => `<div class="custom-option" data-value="${item}">${item}</div>`)
+                                .join("")
+                        };
+
+                        // 初始渲染所有选项
+                        renderOptions(data)
+
+                        let isShow = false
+
+                        // 点击箭头展开/收起选项
+                        arrow.addEventListener("click", (e) => {
+                            e.stopPropagation()
+                            isShow = !isShow
+                            options.classList.toggle("active", isShow)
+                            arrow.style.transform = isShow ? "rotate(180deg)" : "rotate(0deg)"
+                        });
+
+                        // 聚焦输入框展开选项
+                        inputField.addEventListener("focus", () => {
+                            isShow = true
+                            options.classList.add("active")
+                            arrow.style.transform = "rotate(180deg)"
+                        });
+
+                        // 输入框动态过滤
+                        inputField.addEventListener("input", (e) => {
+                            const inputValue = e.target.value.toLowerCase()
+                            const filteredData = data.filter((item) => item.toLowerCase().includes(inputValue))
+                            renderOptions(filteredData)
+                        });
+
+                        // 失焦时检查输入值
+                        inputField.addEventListener("blur", () => {
+                            const inputValue = inputField.value
+                            if (!data.includes(inputValue)) {
+                                inputField.value = data[0] // 默认选中第一项
+                                callback(data[0])
+                            }
+                        });
+
+                        // 点击选项
+                        options.addEventListener("click", (e) => {
+                            e.stopPropagation()
+                            if (e.target.classList.contains("custom-option")) {
+                                inputField.value = e.target.textContent
+                                options.classList.remove("active")
+                                arrow.style.transform = "rotate(0deg)"
+                                isShow = false
+                                callback(e.target.textContent)
+                            }
+                        });
+
+                        // 点击外部关闭选项列表
+                        document.addEventListener("click", (e) => {
+                            if (!e.target.closest(selectClass)) {
+                                options.classList.remove("active")
+                                arrow.style.transform = "rotate(0deg)"
+                            }
+                        });
+                    };
+                    console.log(district_data, "?");
+
+                    // 初始化 select-one
+                    initInputSelect(".select-one", ".arrow-one", district_data, (value) => {
+                        selectedAddress = value
+                    });
                 } else {
                     console.error(data.msg)
                 }
             })
-
-
-        const address_data1 = [
-            "Alabama",
-            "Alaska",
-            "Arizona",
-            "Arkansas",
-            "California",
-            "Colorado",
-            "Connecticut",
-            "Delaware",
-            "Florida",
-            "Georgia",
-            "Hawaii",
-            "Idaho",
-            "Illinois",
-            "Indiana",
-            "Iowa",
-            "Kansas",
-            "Kentucky",
-            "Louisiana",
-            "Maine",
-            "Maryland",
-            "Massachusetts",
-            "Michigan",
-            "Minnesota",
-            "Mississippi",
-            "Missouri",
-            "Montana",
-            "Nebraska",
-            "Nevada",
-            "New Hampshire",
-            "New Jersey",
-            "New Mexico",
-            "New York",
-            "North Carolina",
-            "North Dakota",
-            "Ohio",
-            "Oklahoma",
-            "Oregon",
-            "Pennsylvania",
-            "Rhode Island",
-            "South Carolina",
-            "South Dakota",
-            "Tennessee",
-            "Texas",
-            "Utah",
-            "Vermont",
-            "Virginia",
-            "Washington",
-            "West Virginia",
-            "Wisconsin",
-            "Wyoming"
-        ]
-
-        // let selectedAddress = null;
-        // let selectedOption = null;
-        // const initSelect = (selectClass, arrowClass, data, callback) => {
-        //     const selectBox = document.querySelector(selectClass)
-        //     const trigger = selectBox.querySelector(".custom-select-trigger")
-        //     const options = selectBox.querySelector(".custom-options")
-        //     const arrow = document.querySelector(arrowClass)
-
-        //     options.innerHTML = data.map(item => `<div class="custom-option" data-value="${item}">${item}</div>`).join("")
-
-        //     let isShow = false;
-
-        //     // 点击箭头
-        //     arrow.addEventListener("click", (e) => {
-        //         e.stopPropagation()
-        //         isShow = !isShow
-        //         options.classList.toggle("active", isShow)
-        //         arrow.style.transform = isShow ? "rotate(180deg)" : "rotate(0deg)"
-        //     })
-
-        //     // 点击选择框
-        //     selectBox.addEventListener("click", () => {
-        //         isShow = true
-        //         options.classList.add("active")
-        //         arrow.style.transform = "rotate(180deg)"
-        //     })
-
-        //     // 点击选项
-        //     options.addEventListener("click", (e) => {
-        //         e.stopPropagation()
-        //         if (e.target.classList.contains("custom-option")) {
-        //             trigger.textContent = e.target.textContent
-        //             options.classList.remove("active")
-        //             arrow.style.transform = "rotate(0deg)"
-        //             isShow = false
-        //             callback(e.target.textContent)
-        //         }
-        //     });
-
-        //     document.addEventListener("click", (e) => {
-        //         if (!e.target.closest(selectClass)) {
-        //             options.classList.remove("active")
-        //             arrow.style.transform = "rotate(0deg)"
-        //         }
-        //     });
-        // };
-
-        // // 初始化两个 Select
-        // initSelect(".select-one", ".arrow-one", address_data, (value) => {
-        //     selectedAddress = value
-        // });
-
-        // initSelect(".select-two", ".arrow-two", ["Option 1", "Option 2", "Option 3"], (value) => {
-        //     selectedOption = value
-        // });
         let selectedOption = null
-        const address_data = ["address1", "address2", "address3", "address4"]
-        let selectedAddress = null
 
-        const initInputSelect = (selectClass, arrowClass, data, callback) => {
-            const selectBox = document.querySelector(selectClass)
-            const inputField = selectBox.querySelector(".custom-select-trigger")
-            const options = selectBox.querySelector(".custom-options")
-            const arrow = document.querySelector(arrowClass)
-
-            // 渲染选项
-            const renderOptions = (filteredData) => {
-                options.innerHTML = filteredData
-                    .map((item) => `<div class="custom-option" data-value="${item}">${item}</div>`)
-                    .join("")
-            };
-
-            // 初始渲染所有选项
-            renderOptions(data)
-
-            let isShow = false
-
-            // 点击箭头展开/收起选项
-            arrow.addEventListener("click", (e) => {
-                e.stopPropagation()
-                isShow = !isShow
-                options.classList.toggle("active", isShow)
-                arrow.style.transform = isShow ? "rotate(180deg)" : "rotate(0deg)"
-            });
-
-            // 聚焦输入框展开选项
-            inputField.addEventListener("focus", () => {
-                isShow = true
-                options.classList.add("active")
-                arrow.style.transform = "rotate(180deg)"
-            });
-
-            // 输入框动态过滤
-            inputField.addEventListener("input", (e) => {
-                const inputValue = e.target.value.toLowerCase()
-                const filteredData = data.filter((item) => item.toLowerCase().includes(inputValue))
-                renderOptions(filteredData)
-            });
-
-            // 失焦时检查输入值
-            inputField.addEventListener("blur", () => {
-                const inputValue = inputField.value
-                if (!data.includes(inputValue)) {
-                    inputField.value = data[0] // 默认选中第一项
-                    callback(data[0])
-                }
-            });
-
-            // 点击选项
-            options.addEventListener("click", (e) => {
-                e.stopPropagation()
-                if (e.target.classList.contains("custom-option")) {
-                    inputField.value = e.target.textContent
-                    options.classList.remove("active")
-                    arrow.style.transform = "rotate(0deg)"
-                    isShow = false
-                    callback(e.target.textContent)
-                }
-            });
-
-            // 点击外部关闭选项列表
-            document.addEventListener("click", (e) => {
-                if (!e.target.closest(selectClass)) {
-                    options.classList.remove("active")
-                    arrow.style.transform = "rotate(0deg)"
-                }
-            });
-        };
-
-        // 初始化 select-one
-        initInputSelect(".select-one", ".arrow-one", address_data, (value) => {
-            selectedAddress = value
-            console.log("Selected Address:", selectedAddress)
-        });
 
         // 初始化 select-two（不可输入）
         const initSelect = (selectClass, arrowClass, data, callback) => {
@@ -1381,9 +1320,8 @@
             });
         };
 
-        initSelect(".select-two", ".arrow-two", ["Option 1", "Option 2", "Option 3"], (value) => {
+        initSelect(".select-two", ".arrow-two", ["Physical Store", "Online Store", "None"], (value) => {
             selectedOption = value
-            console.log("Selected Option:", selectedOption)
         });
 
         const First_Name = document.getElementById("First_Name")
@@ -1509,6 +1447,8 @@
                                 window.innerWidth > 768 ? "56px" : "41px"
                             thisEmail = false
                         }
+                        console.log(123);
+
 
                         if (
                             thisFirstName &&

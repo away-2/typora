@@ -2,6 +2,119 @@
     <style>
         .banner-pc {
             width: 100%;
+            position: relative;
+        }
+
+        .B2B-about-box {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.55);
+            padding: 41px 175px 51px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .B2B-about-box .B2B-about-box-title {
+            color: #26333A;
+            text-align: center;
+            font-feature-settings: 'liga' off;
+            font-family: "Moderat-Regular";
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            letter-spacing: -0.32px;
+        }
+
+        .B2B-about-box .B2B-about-box-bigtitle {
+            color: #26333A;
+            text-align: center;
+            font-feature-settings: 'liga' off;
+            font-family: "SupremeLLSub-Bold";
+            font-size: 54px;
+            font-style: normal;
+            font-weight: 710;
+            line-height: 120%;
+            letter-spacing: -0.54px;
+        }
+
+        .B2B-about-box .B2B-about-box-content {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+
+        }
+
+        .B2B-about-box .B2B-about-box-content span {
+            color: #26333A;
+            text-align: center;
+            font-feature-settings: 'liga' off;
+            font-family: "Moderat-Regular";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            letter-spacing: -0.48px;
+        }
+
+        .B2B-about-box .B2B-about-box-content .email-copy-box {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .B2B-about-box .B2B-about-box-content .email-copy-box span {
+            color: #26333A;
+            text-align: center;
+            font-feature-settings: 'liga' off;
+            font-family: "Moderat-Regular";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            letter-spacing: -0.48px;
+            text-decoration: underline;
+        }
+
+        .copy-success-box {
+            position: absolute;
+            top: 170px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all 0.3s;
+            width: max-content;
+            padding: 10px 16px;
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+                0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+            z-index: 5;
+        }
+
+        .B2B-about-box .B2B-about-box-button {
+            display: block;
+            border-radius: 40px;
+            background: #151C20;
+            padding: 6px 24px;
+            color: #FFF;
+            font-family: "Moderat-Bold";
+            font-size: 24px;
+            text-align: center;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
+            text-decoration: none;
+            cursor: pointer;
+            opacity: 1;
+        }
+
+        .B2B-about-box .B2B-about-box-button:hover {
+            background: #004df2;
         }
 
         .banner-pc img {
@@ -35,6 +148,18 @@
             line-height: 120%;
         }
 
+        .b2b-container-about-box .b2b-container-about-box-text .b2b-container-about-box-text-subtitle {
+            color: #26333A;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-feature-settings: 'ss02' on;
+            font-family: "Moderat-Bold" !important;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 140%;
+            margin-top: 32px;
+        }
+
         .b2b-container-about-box .b2b-container-about-box-text .b2b-container-about-box-text-desc {
             color: rgba(38, 51, 58, 0.80);
             font-variant-numeric: lining-nums proportional-nums;
@@ -44,7 +169,12 @@
             font-style: normal;
             font-weight: 400;
             line-height: 140%;
-            margin-top: 32px;
+            margin-top: 14px;
+        }
+
+        .b2b-container-about-box .b2b-container-about-box-text .b2b-container-about-box-text-desc span{
+            font-family: "Moderat-Bold" !important;
+            font-weight: 700;
         }
 
         .b2b-container-about-box .b2b-container-about-box-img {
@@ -174,6 +304,7 @@
         .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item .b2b-container-purchase-content-tab-item-img {
             width: 100%;
             height: 135px;
+            overflow: hidden;
             position: relative;
             padding: 6px;
         }
@@ -190,27 +321,28 @@
             left: 0;
             width: 100%;
             height: 100%;
-            /* background: #26333A; */
-            opacity: 0.55;
             transition: all 0.3s ease;
         }
 
         .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item .b2b-container-purchase-content-tab-item-img.selected::after {
             border: 1.5px solid #26333A;
-            transform: scale(1.1)
+        }
+
+        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item .b2b-container-purchase-content-tab-item-img.selected {
+            border: 1.5px solid #26333A;
         }
 
         .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item .b2b-container-purchase-content-tab-item-img.selected img {
             transform: scale(1.1)
         }
 
-        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item .b2b-container-purchase-content-tab-item-img:hover img {
-            transform: scale(1.1)
+        .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item .b2b-container-purchase-content-tab-item-img img:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
         }
 
         .b2b-container-purchase-box .b2b-container-purchase-content .b2b-container-purchase-content-tab .b2b-container-purchase-content-tab-item .b2b-container-purchase-content-tab-item-img:hover::after {
             border: 1.5px solid #26333A;
-            transform: scale(1.1)
         }
 
         @media screen and (max-width: 768px) {
@@ -238,10 +370,35 @@
         }
     </style>
     <div class="container">
-        <div class="banner-pc">
-            <img class="lazyload"
-                src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/B2B-20250113-banner-pc.png"
-                alt="">
+        <div class="copy-success-box" style="display: none">
+            successfully copied!
+        </div>
+        <div class="B2B-banner-container">
+            <div class="banner-pc">
+                <img class="lazyload"
+                    src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/B2B-20250117-banner-pc.png"
+                    alt="">
+                <div class="B2B-about-box">
+                    <div class="B2B-about-box-title">POVISON B2B PROGRAM</div>
+                    <div class="B2B-about-box-bigtitle">Become Our Partner</div>
+                    <div class="B2B-about-box-content">
+                        <span>Connect with partnership team </span>
+                        <div class="email-copy-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33"
+                                fill="none">
+                                <rect x="4.66602" y="6.87207" width="23.8223" height="19.2559" rx="3.25"
+                                    stroke="#26333A" stroke-width="1.5" />
+                                <path d="M9.09314 12.9261L16.5808 18.712L24.2382 12.9261" stroke="#26333A"
+                                    stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                            <span>Email</span>
+                        </div>
+                    </div>
+                    <a class="B2B-about-box-button" href="#bottom">
+                        Become A Partner
+                    </a>
+                </div>
+            </div>
         </div>
         <div class="banner-m">
             <img class="lazyload"
@@ -251,18 +408,18 @@
         <div class="b2b-container-about-box">
             <div class="b2b-container-about-box-text">
                 <div class="b2b-container-about-box-text-title">About FlexiSpot B2B Program</div>
-                <div class="b2b-container-about-box-text-desc">FlexiSpot, with facilities established globally across
-                    the USA, Europe, and Asia, has become a trusted brand for ergonomic furniture solutions. We
-                    collaborate with businesses worldwide to enhance living spaces with quality, comfort, and design
-                    innovation.</div>
-                <div class="b2b-container-about-box-text-desc">Contract Program: FlexiSpot focuses on delivering
-                    top-tier, ergonomic furniture tailored to meet the needs of businesses, institutions, and
-                    organizations. Our contract-grade products, crafted with durability and style in mind, come with
-                    exclusive service options to seamlessly integrate into various living environments.</div>
-                <div class="b2b-container-about-box-text-desc">Distribution Program: FlexiSpot supports our partners
-                    with competitive pricing, ready-to-ship inventory, and a reliable delivery network to meet orders of
-                    any scale. We also offer batch customization directly from our global facilities to accommodate your
-                    specific needs, ensuring high-quality and efficient fulfillment for large orders.</div>
+                <div class="b2b-container-about-box-text-subtitle">Join the FlexiSpot Wholesale Program</div>
+                <div class="b2b-container-about-box-text-desc">
+                    Whether you're launching a new venture or expanding your business, our wholesale program is tailored
+                    to strengthen your supply chain and fuel your growth.
+                </div>
+                <div class="b2b-container-about-box-text-subtitle">About FlexiSpot</div>
+                <div class="b2b-container-about-box-text-desc">
+                    FlexiSpot, a subsidiary of a publicly traded company, leads the industry in integrating technology
+                    with furniture to create smart, flexible, and innovative solutions. Guided by our vision of 
+                    “<span>New Working, New Living</span>,” we deliver products that harmonize comfort and functionality, redefining
+                    dynamic lifestyles and workspaces.
+                </div>
             </div>
             <div class="b2b-container-about-box-img">
                 <img class="lazyload"
@@ -357,8 +514,37 @@
                 </div>
             </div>
         </div>
+        <div class="aa" id="bottom"> zhes</div>
     </div>
     <script>
+        const copy_svg = document.querySelector(".email-copy-box")
+
+        copy_svg.addEventListener("click", function () {
+            // 后续需要修改！！！！
+            var code = ("sales@flexispot.com").trim()
+
+            // 创建临时文本输入框
+            var tempInput = document.createElement("input")
+            tempInput.value = code
+            document.body.appendChild(tempInput)
+            tempInput.select()
+            document.execCommand("copy")
+            document.body.removeChild(tempInput)
+
+            // 显示复制成功的提示
+            var successMessage = document.querySelector(
+                ".copy-success-box"
+            )
+            successMessage.style.display = "block"
+
+            console.log(successMessage, "this");
+
+
+            // 1秒后隐藏提示信息
+            setTimeout(function () {
+                successMessage.style.display = "none"
+            }, 1000)
+        })
         const big_img = document.querySelector(".b2b-container-purchase-content-show-img img")
         const tabs = document.querySelectorAll(".b2b-container-purchase-content-tab-item-img")
 

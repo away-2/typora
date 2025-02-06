@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+<head>
+    <style>
+        .static-contact-module-body * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style-type: none;
+            text-decoration: none;
+        }
+
+        .ant-modal-content,
+        .ant-drawer-content {
+            background: #fdfcf5;
+        }
+
+        .static-contact-module-body .static-contact-module .paddingLeft {
+            padding-left: 10px;
+        }
+
+        .static-contact-module-body .static-contact-module .verifyIocn {
+            display: flex;
+        }
+
+        .static-contact-module-body .static-contact-module .verifyIocn .verifyImg {
+            margin-left: 10px;
+            max-width: 100px;
+            max-height: 45px;
+            opacity: 1;
+            vertical-align: middle;
+            border-style: none;
+            cursor: pointer;
+        }
+
+        .static-contact-module-body .static-contact-module .contactjp {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 91px 0 12px;
+        }
+
+        .static-contact-module-body .static-contact-module .contactjp-content {
+            padding-left: 47px;
+        }
+
+        /* left */
+        .static-contact-module-body .static-contact-module .contactjp-content-title {
+            margin: 15px 0 28px;
+            color: #26333a;
+            font-family: "Zen-Kaku-Gothic-New-Medium";
+            font-size: 52px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .static-contact-module-body .static-contact-module .contactjp-content-item {
+            max-width: 396px;
+            color: #26333a;
+            font-family: "NotoSansJP-Regular";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            margin-bottom: 26px;
+        }
+
+        /* right */
+        .static-contact-module-body .static-contact-module .contactjp-arrow {
+            transition: all 0.3s;
+            display: none;
+            float: right;
+            margin-top: 4px;
+        }
+
+        .static-contact-module-body .static-contact-module .contactjp-main {
+            width: 578px;
+        }
+
+        .static-contact-module-body .static-contact-module .contactjp-form small {
+            display: none;
+            color: rgb(213, 0, 0);
+            font-family: "NotoSansJP-Regular";
+            margin-top: -20px;
+            margin-bottom: 15px;
+        }
+
+        .static-contact-module-body .static-contact-module .contactjp-form small.c_mb {
+            margin-top: 0;
+            margin-bottom: -5px;
+        }
+
+        .static-contact-module-body .static-contact-module .contactjp-form .contact-input,
+        .static-contact-module-body .static-contact-module .contactjp-form #classification {
+            margin-bottom: 20px;
+            width: 100%;
+            height: 37px;
+            border-radius: 4px;
+            border: 1px solid rgba(38, 51, 58, 0.5);
+            background: #ede9e4;
+            outline: none;
+            color: #26333a;
+            font-family: "NotoSansJP-Regular";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+        }
+
+        .static-contact-module-body .static-contact-module .contactjp-form #classification {
+            appearance: none;
+        }
+
+        .static-contact-module-body .static-contact-module .contactjp-form .contact-message {
+            height: 142px;
+            padding-top: 8px;
+            margin-bottom: 15px;
+            resize: none;
+        }
+
+        .static-contact-module-body .static-contact-module .contactjp-form .contact-input::placeholder {
+            color: rgba(38, 51, 58, 0.5);
+            font-family: "NotoSansJP-Regular";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+        }
+
+        .static-contact-module-body .static-contact-module .contactjp-form #classification {
+            padding-right: 0;
+            color: rgba(38, 51, 58, 0.5);
+            font-family: "NotoSansJP-Regular";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            cursor: pointer;
+        }
+
+        .static-contact-module-body .static-contact-module .contactjp-form .contact-input:focus,
+        .static-contact-module-body .static-contact-module .contactjp-form #classification:focus,
+        .static-contact-module-body .static-contact-module .contactjp-form .contact-message:focus {
+            border: 1px solid rgba(38, 51, 58, 0.5);
+            background: #fdfcf5;
+        }
+
+        .static-contact-module-body .static-contact-module .contactjp-form .select-box {
+            position: relative;
+        }
+
+        .static-contact-module-body .static-contact-module .contactjp-form .select-box .contactjp-arrow {
+            position: absolute;
+            display: inline-block;
+            top: 8px;
+            right: 10px;
+        }
+
+        .static-contact-module-body .static-contact-module .contactjp-form .suggestion-box {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .static-contact-module-body .static-contact-module .contactjp-form .suggestion-box .suggestion-item {
+            padding: 8px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .static-contact-module-body .static-contact-module .contactjp-form .suggestion-box .suggestion-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        .static-contact-module-body .static-contact-module .contactjp-form .suggestion-box .suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-top: none;
+            max-height: 150px;
+            overflow-y: auto;
+            z-index: 1000;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .static-contact-module-body .static-contact-module .contact-shortdet {
+            margin-top: 4px;
+            margin-bottom: 20px;
+            color: rgba(38, 51, 58, 0.8);
+            font-family: "NotoSansJP-Regular";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+        }
+
+        .static-contact-module-body .static-contact-module .contact-shortdet .contact-shortdet-icon {
+            width: 18px;
+            height: 18px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            color: #aa1010;
+            font-family: "NotoSansJP-Medium";
+            font-size: 14px;
+            font-style: normal;
+            line-height: 130%;
+            border-radius: 50%;
+            border: 1px solid #aa1010;
+        }
+
+        .static-contact-module-body .static-contact-module .contact-submit {
+            margin-top: 20px;
+            padding: 13.136px 24.083px;
+            color: #fdfcf5;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-feature-settings: "ss02" on;
+            font-family: "NotoSansJP-Medium";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 16px;
+            letter-spacing: 0.8px;
+            background-color: #26333a;
+            border-radius: 21.893px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .static-contact-module-body .static-contact-module .contact-submit:hover {
+            background-color: #004df2;
+        }
+
+        .static-contact-module-body .static-contact-module #newPicViewsBox {
+            height: 102px;
+        }
+
+        .static-contact-module-body .static-contact-module #newPicViewsBox #add_input {
+            display: flex;
+            width: max-content;
+        }
+
+        .static-contact-module-body .static-contact-module .img-item {
+            width: 102px;
+            height: 102px;
+            margin-right: 5px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+            color: #dddddd;
+            border: 1px solid #dddddd;
+            float: left;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .static-contact-module-body .static-contact-module .item-add {
+            cursor: pointer;
+        }
+
+        .static-contact-module-body .static-contact-module .item-delete {
+            opacity: 0;
+            position: absolute;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: red;
+            border-radius: 2px;
+            color: white;
+            transition: all 0.3s;
+            right: 8px;
+            top: -15px;
+            width: 15px;
+            height: 15px;
+            line-height: 0.7;
+            text-align: center;
+        }
+
+        .static-contact-module-body .static-contact-module .img-item:hover .item-delete {
+            top: 8px;
+            opacity: 1;
+        }
+
+        .static-contact-module-body .static-contact-module #newUpContactImages,
+        .static-contact-module-body .contactjp-bg-pad {
+            display: none;
+        }
+
+        .static-contact-module-body .static-contact-module .contactjp .contactjp-success {
+            margin: 220px auto 220px 32%;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .static-contact-module-body .static-contact-module .contactjp .contactjp-success .contactjp-success-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 168px;
+            height: 168px;
+            filter: drop-shadow(0px 4px 10px rgba(38, 51, 58, 0.15));
+            background: #fff;
+            border-radius: 50%;
+        }
+
+        .static-contact-module-body .static-contact-module .contactjp .contactjp-success .contactjp-success-text {
+            margin: 20px 0;
+            color: #26333a;
+            text-align: center;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: "NotoSansJP-Regular";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: 0.7px;
+        }
+
+        .static-contact-module-body .static-contact-module .contactjp .contactjp-success .contactjp-success-back {
+            color: #004df2;
+            text-align: center;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: "NotoSansJP-Regular";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: 0.7px;
+            text-decoration-line: underline;
+        }
+
+        @media screen and (max-width: 1440px) {
+            .static-contact-module-body .static-contact-module .contactjp {
+                padding: 0;
+                justify-content: center;
+            }
+
+            .static-contact-module-body .static-contact-module .contactjp .contactjp-detail {
+                display: none;
+            }
+
+            .static-contact-module-body .static-contact-module .contactjp-close {
+                right: 20px;
+            }
+
+            .static-contact-module-body .contactjp-bg-pad {
+                display: block;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+
+            .static-contact-module-body .static-contact-module .contactjp .contactjp-success {
+                margin: 220px auto;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .static-contact-module-body {
+                z-index: 9;
+            }
+
+            .static-contact-module-body .static-contact-module {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                transform: none;
+                border-radius: 0;
+                border-top: 1px solid rgba(38, 51, 58, 0.1);
+            }
+
+            .static-contact-module-body .static-contact-module .contactjp {
+                padding: 58px 26px 48px;
+                min-height: 100vh;
+            }
+
+            .static-contact-module-body .static-contact-module .contactjp-close {
+                top: 24px;
+                right: 20px;
+            }
+
+            .static-contact-module-body .static-contact-module .contactjp-close svg {
+                width: 24px;
+                height: 24px;
+            }
+
+            .static-contact-module-body .static-contact-module .contactjp-form .contact-input,
+            .static-contact-module-body .static-contact-module .contactjp-form #classification {
+                height: 34px;
+                font-size: 14px;
+            }
+
+            .static-contact-module-body .static-contact-module .contactjp-form .select-box .contactjp-arrow {
+                top: 5px;
+            }
+
+            .static-contact-module-body .static-contact-module .contact-shortdet {
+                margin-top: 7px;
+                font-size: 12px;
+            }
+
+            .static-contact-module-body .static-contact-module .contactjp-form .contact-message {
+                height: 100px;
+            }
+
+            .static-contact-module-body .static-contact-module .verifyIocn .verifyImg {
+                max-width: 86px;
+            }
+
+            .static-contact-module-body .contactjp-bg-pad {
+                display: none;
+            }
+
+            .static-contact-module-body .static-contact-module .contactjp .contactjp-success {
+                margin: 100px auto auto auto;
+                padding: 0 26px;
+            }
+
+            .static-contact-module-body .static-contact-module .contactjp .contactjp-success .contactjp-success-icon {
+                width: 111px;
+                height: 111px;
+            }
+
+            .static-contact-module-body .static-contact-module .contactjp .contactjp-success .contactjp-success-icon svg {
+                width: 57px;
+                height: 57px;
+            }
+
+            .static-contact-module-body .static-contact-module .contactjp .contactjp-success .contactjp-success-text {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="static-contact-module-body">
+        <div class="static-contact-module">
+            <div class="contactjp">
+                <div class="contactjp-detail">
+                    <div class="contactjp-content">
+                        <p class="contactjp-content-title">お問い合わせ</p>
+                        <p class="contactjp-content-item">
+                            内容によっては、お返事にお時間をいただく場合やお返事を差し上げられない場合がございます。あらかじめご了承ください。
+                        </p>
+                    </div>
+                    <img class="lazyload"
+                        data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/static-faq-img-2.png"
+                        alt="" />
+                </div>
+                <div class="contactjp-main">
+                    <div class="contactjp-form">
+                        <form id="contact-form">
+                            <input name="lastname" type="hidden" value="00" />
+                            <input name="country" type="hidden" value="JP" />
+                            <input name="questionCategory" type="hidden" value="websiteIssues=>Other failures" />
+                            <input name="form_key" type="hidden" value="WS8KU1fu7CS4miuL" />
+                            <input name="firstname" id="name" class="contact-input input-text paddingLeft" type="text"
+                                placeholder="* 名前" />
+                            <small>名前を入力してください</small>
+                            <div class="select-box">
+                                <select name="classification" id="classification" class="paddingLeft">
+                                    <option value="" style="display: none" selected>
+                                        * 分類
+                                    </option>
+                                    <option value="商品仕様">商品仕様</option>
+                                    <option value="キャンセル・変更">キャンセル・変更</option>
+                                    <option value="不具合">不具合</option>
+                                    <option value="その他">その他</option>
+                                </select>
+                                <small>分類を選択してください</small>
+                                <svg class="contactjp-arrow" width="10" height="16" viewBox="0 0 10 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.16724 1L8.16504 8.00076L1.16724 15" stroke="#A3A3A3"
+                                        stroke-width="1.5" />
+                                </svg>
+                            </div>
+                            <div class="suggestion-box">
+                                <input name="userEmail" id="email" class="contact-input input-text paddingLeft"
+                                    type="email" placeholder="* メール" style="margin-bottom: 0" />
+                                <div id="suggestions" class="suggestions" style="display: none"></div>
+                            </div>
+                            <small class="c_mb">メールを入力してください</small>
+
+                            <p class="contact-shortdet">
+                                <span class="contact-shortdet-icon">!</span>
+                                <span>
+                                    アドレスが間違えましたら、返信できずおそれがございますので、ご注意くださいませ</span>
+                            </p>
+                            <input name="contactqusorder" class="contact-input paddingLeft" type="text"
+                                placeholder="注文番号" style="margin-bottom: 0" />
+                            <p class="contact-shortdet">
+                                <span class="contact-shortdet-icon">!</span>
+                                <span>
+                                    ご注文に関する場合、必ず注文番号をご記入くださいませ</span>
+                            </p>
+                            <input name="subject" id="subject" class="contact-input input-text paddingLeft" type="text"
+                                placeholder="* 件名" />
+                            <small>件名を入力してください</small>
+                            <textarea name="message" id="comment"
+                                class="contact-input contact-message input-text paddingLeft"
+                                placeholder="* メッセージ"></textarea>
+                            <small>メッセージを入力してください</small>
+                            <!-- 验证图片 -->
+                            <div class="verifyIocn">
+                                <input name="captcha" id="captcha" class="contact-input input-text paddingLeft"
+                                    type="text" maxlength="4" />
+                                <img class="verifyImg" src="" alt="" />
+                            </div>
+                            <small class="captchaVerify">画像の文字と数字を入力してください。
+                            </small>
+                            <!-- 新图片上传 -->
+                            <div class="new-img-items">
+                                <input type="file" name="images" id="newUpContactImages"
+                                    accept="image/gif, image/jpeg, image/png, image/jpg" />
+                                <div id="newPicViewsBox"></div>
+                            </div>
+
+                            <div class="clear" style="clear: both"></div>
+                            <button type="button" title="&#x9001;&#x4FE1;" class="action submit primary contact-submit">
+                                <span>送信</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="contactjp-success">
+                    <div class="contactjp-success-icon">
+                        <svg width="86" height="86" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.4636 42.9348L32.2988 60.7701L71.5363 21.5326" stroke="#004DF2"
+                                stroke-width="5.35056" />
+                        </svg>
+                    </div>
+                    <div class="contactjp-success-text">
+                        この度、お問い合わせいただきまして、ありがとうございます。<br />営業時間外のお問い合わせは翌営業日以降の受付とさせていただきます。
+                    </div>
+                    <a href="/support" class="contactjp-success-back">ホームページに戻る</a>
+                </div>
+            </div>
+
+            <div class="contactjp-bg-pad">
+                <img class="lazyload"
+                    data-src="https://s3.springbeetle.asia/asia/trantor/attachments/JP/static-faq-img-3.png" alt="" />
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function loadScript(url, callback) {
+        document.getElementById("") && document.getElementById("").remove()
+        var script = document.createElement("script")
+        script.type = "text/javascript"
+        script.async = "async"
+        script.src = url
+        script.id = ""
+        var head = document.head || document.getElementsByTagName("head")[0]
+        head.appendChild(script)
+        if (script.readyState) {
+            script.onreadystatechange = function () {
+                if (
+                    script.readyState == "complete" ||
+                    script.readyState == "loaded"
+                ) {
+                    script.onreadystatechange = null
+                    callback()
+                }
+            }
+        } else {
+            script.onload = function () {
+                callback()
+            }
+        }
+    }
+
+    loadScript(
+        "https://s3.springbeetle.asia/asia/trantor/attachments/JP/jquery-3.6.0.min.js",
+        function () {
+            const contactjp_form = document.getElementById("contact-form")
+
+            const contactqusname = document.getElementsByName("firstname")[0],
+                contactqusemail = document.getElementsByName("userEmail")[0],
+                contactqussub = document.getElementsByName("subject")[0],
+                contactqusdetail = document.getElementsByName("message")[0],
+                classification = document.getElementsByName("classification")[0],
+                contactqusorder = document.getElementsByName("contactqusorder")[0],
+                contactcaptcha = document.querySelector(
+                    ".static-contact-module-body #captcha"
+                ),
+                captchaVerify = document.querySelector(
+                    ".static-contact-module-body .captchaVerify"
+                ),
+                selectarr = document.querySelector(
+                    ".static-contact-module-body .contactjp-arrow"
+                ),
+                contactdetail = document.querySelector(
+                    ".static-contact-module-body .contactjp-detail"
+                ),
+                contactmain = document.querySelector(
+                    ".static-contact-module-body .contactjp-main"
+                ),
+                selectType = document.querySelector(
+                    ".static-contact-module-body .contactjp-form #classification"
+                ),
+                selectarrow = document.querySelector(
+                    ".static-contact-module-body .contactjp-form .select-box .contactjp-arrow"
+                ),
+                contactjp_success = document.querySelector(
+                    ".static-contact-module-body .contactjp .contactjp-success"
+                )
+
+            let inputarr = [
+                contactqusname,
+                contactqusemail,
+                contactqusorder,
+                contactqussub,
+                contactqusdetail,
+                contactcaptcha,
+                selectType,
+            ]
+            let [
+                thisname,
+                thisemail,
+                thissub,
+                thisdetail,
+                thisclassification,
+                thiscaptcha,
+            ] = [null, null, null, null, null, null]
+
+            inputarr.forEach((element) => {
+                element.addEventListener("focus", function () {
+                    element.style.background = "#fdfcf5"
+                })
+                element.addEventListener("blur", function () {
+                    if (element.value !== "") return
+                    element.style.background = "#ede9e4"
+                })
+                element.addEventListener("change", function () {
+                    if (element.value !== "") {
+                        element.style.background = "#fdfcf5"
+                    } else {
+                        element.style.background = "#ede9e4"
+                    }
+                })
+            })
+
+            selectType.addEventListener("focus", () => {
+                selectarrow.style.transform = "rotate(90deg)"
+            })
+            selectType.addEventListener("change", () => {
+                selectType.blur()
+            })
+            selectType.addEventListener("blur", () => {
+                selectarrow.style.transform = "rotate(0)"
+            })
+
+            const regEmail =
+                /^[A-Za-z\d]+([-_.!#$%^&*+=~`/?[{}<>,][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,5}$/
+            // 调接口获取验证图片=====
+            var token = ""
+            $(".verifyImg").click(function (e) {
+                e.stopPropagation()
+                e.preventDefault()
+                $.ajax({
+                    type: "GET",
+                    url: "/api/user/web/get-captcha",
+                    async: false,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function (msg) {
+                        if (msg.success == true) {
+                            token = msg.result.token
+                            $(".verifyImg").attr("src", msg.result.imageUrl)
+                        } else {
+                            console.log("error")
+                        }
+                    },
+                })
+            })
+            getVerifyIcon()
+            function getVerifyIcon() {
+                $.ajax({
+                    type: "GET",
+                    url: "/api/user/web/get-captcha",
+                    async: false,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function (msg) {
+                        if (msg.success == true) {
+                            token = msg.result.token
+                            $(".verifyImg").attr("src", msg.result.imageUrl)
+                        } else {
+                            console.log("error")
+                        }
+                    },
+                })
+            }
+
+            // 图片上传==============
+            var file_list = []
+            var new_all_picW = "100px"
+            var new_all_picH = "100px"
+            var newfile = []
+            var newdefaultAdd = `
+      <div id="add_input" onclick="javascript:document.getElementById('newUpContactImages').click()">
+        <svg class="item-add" width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0.393668" y="0.228629" width="100.63" height="100.63" rx="3.77137" fill="#F6F4F1" stroke="#26333A" stroke-width="0.457258"/>
+          <path d="M32 50.1311H70.0874M51.0437 31.0874L51.0437 69.1748" stroke="#26333A" stroke-opacity="0.1" stroke-width="6.14313" stroke-linecap="round"/>
+        </svg>
+      </div>`
+            var newPicViewsBox = document.getElementById("newPicViewsBox")
+            newrenderImg()
+            // input发生改变
+            $("#newUpContactImages").on("change", function () {
+                onc()
+            })
+            // 调图片上传接口
+            function onc() {
+                var itemAdd = document.getElementById("add_input")
+                var files = document.getElementById("newUpContactImages").files
+                var files_ejz = document.getElementById("newUpContactImages").files[0]
+                if (!files_ejz) {
+                    return
+                }
+                itemAdd.innerHTML = '<span style="font-size:25px">Loading...</span>'
+                postData("/api/herd/files/upload", {
+                    file: files_ejz,
+                }).then((res) => {
+                    res = JSON.parse(res)
+                    if (res[Object.keys(res)[0]]) {
+                        file_list.push(res[Object.keys(res)[0]])
+                        newrenderImg()
+                    } else {
+                        alert(res.msg)
+                    }
+                })
+            }
+            // 定义上传图片方法
+            function postData(url, data) {
+                return new Promise((resolve, reject) => {
+                    var formData = new FormData()
+                    for (let key in data) {
+                        formData.append(key, data[key])
+                    }
+                    var xhr = new XMLHttpRequest()
+                    xhr.open("post", url)
+                    xhr.send(formData)
+
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState == 4 && xhr.status == 200) {
+                            resolve(xhr.response)
+                        } else if (xhr.status == 500) {
+                            reject("fail")
+                        }
+                    }
+                })
+            }
+            // 上传的图片展示
+            function newrenderImg() {
+                newPicViewsBox.innerHTML = ""
+                for (let i = 0; i < file_list.length; i++) {
+                    newPicViewsBox.innerHTML +=
+                        "<div class='img-item'><img style='float:left;display:block;min-width:" +
+                        new_all_picW +
+                        ";min-height: " +
+                        new_all_picH +
+                        "' src='" +
+                        file_list[i] +
+                        "' id='img" +
+                        i +
+                        "'  /><div id='itemdeleteIocn" +
+                        i +
+                        "' class='item-delete'>×</div></div>"
+
+                    $("#newPicViewsBox")
+                        .off("click", "#itemdeleteIocn0")
+                        .on("click", "#itemdeleteIocn0", function () {
+                            file_list.splice(0, 1)
+                            newrenderImg()
+                        })
+                    $("#newPicViewsBox")
+                        .off("click", "#itemdeleteIocn1")
+                        .on("click", "#itemdeleteIocn1", function () {
+                            file_list.splice(1, 1)
+                            newrenderImg()
+                        })
+                    $("#newPicViewsBox")
+                        .off("click", "#itemdeleteIocn2")
+                        .on("click", "#itemdeleteIocn2", function () {
+                            file_list.splice(2, 1)
+                            newrenderImg()
+                        })
+                }
+                if (file_list.length >= 3) {
+                    console.log("最多三张图片")
+                } else {
+                    newPicViewsBox.innerHTML += newdefaultAdd
+                }
+            }
+
+            // 点击送信==============
+            $(".contact-submit").click(function () {
+                if (contactqusname.value) {
+                    contactqusname.style.border = "1px solid rgba(38, 51, 58, 0.5)"
+                    contactqusname.nextElementSibling.style.display = "none"
+                    thisname = 1
+                } else {
+                    contactqusname.style.border = "1px solid rgb(213, 0, 0)"
+                    contactqusname.nextElementSibling.style.display = "block"
+                    return false
+                }
+                if (classification.value) {
+                    classification.style.border = "1px solid rgba(38, 51, 58, 0.5)"
+                    classification.nextElementSibling.style.display = "none"
+                    thisclassification = 1
+                } else {
+                    classification.style.border = "1px solid rgb(213, 0, 0)"
+                    classification.nextElementSibling.style.display = "block"
+                    return false
+                }
+                if (regEmail.test(contactqusemail.value)) {
+                    contactqusemail.style.border = "1px solid rgba(38, 51, 58, 0.5)"
+                    contactqusemail.nextElementSibling.style.display = "none"
+                    thisemail = 1
+                } else {
+                    contactqusemail.style.border = "1px solid rgb(213, 0, 0)"
+                    contactqusemail.nextElementSibling.style.display = "block"
+                    return false
+                }
+                if (contactqussub.value) {
+                    contactqussub.style.border = "1px solid rgba(38, 51, 58, 0.5)"
+                    contactqussub.nextElementSibling.style.display = "none"
+                    thissub = 1
+                } else {
+                    contactqussub.style.border = "1px solid rgb(213, 0, 0)"
+                    contactqussub.nextElementSibling.style.display = "block"
+                    return false
+                }
+                if (contactqusdetail.value) {
+                    contactqusdetail.style.border = "1px solid rgba(38, 51, 58, 0.5)"
+                    contactqusdetail.nextElementSibling.style.display = "none"
+                    thisdetail = 1
+                } else {
+                    contactqusdetail.style.border = "1px solid rgb(213, 0, 0)"
+                    contactqusdetail.nextElementSibling.style.display = "block"
+                    return false
+                }
+                // 图片验证码
+                if (contactcaptcha.value.length == 4) {
+                    contactcaptcha.style.border = "1px solid rgba(38, 51, 58, 0.5)"
+                    captchaVerify.style.display = "none"
+                    thiscaptcha = 1
+                } else {
+                    contactcaptcha.style.border = "1px solid rgb(213, 0, 0)"
+                    captchaVerify.style.display = "block"
+                    return false
+                }
+                if (
+                    thisname &&
+                    thisemail &&
+                    thissub &&
+                    thisdetail &&
+                    thisclassification &&
+                    thiscaptcha
+                ) {
+                    let data = [
+                        {
+                            country: "JP",
+                            site: "JP",
+                            origin: "JP",
+                            questionCategory: `【${classification.value}】コンタクトフォーム`,
+                            form_key: "WS8KU1fu7CS4miuL",
+                            firstname: contactqusname.value,
+                            lastname: " ",
+                            classification: classification.value,
+                            email: contactqusemail.value,
+                            orderNo: contactqusorder.value,
+                            subject: contactqussub.value,
+                            message: contactqusdetail.value,
+                            captcha: contactcaptcha.value,
+                            token: token,
+                            images: file_list,
+                            subscribe: false,
+                        },
+                    ]
+
+                    $.ajax({
+                        type: "POST",
+                        url: "/api/trantor/flow/flexispot_misc_ContactUsByEmailFlow",
+                        data: JSON.stringify(data),
+                        async: false,
+                        cache: false,
+                        crossDomain: true,
+                        contentType: false,
+                        processData: false,
+                        dataType: "json",
+                        contentType: "application/json; charset=UTF-8",
+                        success: function (msg) {
+                            // 成功
+                            if (msg.code == 200) {
+                                contactdetail.style.display = "none"
+                                contactmain.style.display = "none"
+                                contactjp_success.style.display = "flex"
+                                contactjp_form.reset()
+                                file_list = []
+                                newPicViewsBox.innerHTML = newdefaultAdd
+                                inputarr.forEach((item) => {
+                                    item.style.background = "#ede9e4"
+                                })
+
+                                const jp_faq_width =
+                                    window.innerWidth || document.body.clientWidth
+                                let jp_faq_timer = setTimeout(() => {
+                                    contactdetail.style.display = "block"
+                                    contactmain.style.display = "block"
+                                    contactjp_success.style.display = "none"
+                                    window.location.href = "/newsupport"
+                                }, 5000)
+
+                                let jp_faq_timer2 = setInterval(() => {
+                                    if (jp_faq_width <= 768) {
+                                        if (!$(".ant-drawer-wrapper-body")[0]) {
+                                            clearTimeout(jp_faq_timer)
+                                        }
+                                    } else {
+                                        if (!$(".ant-modal-body")[0]) {
+                                            clearTimeout(jp_faq_timer)
+                                        }
+                                    }
+                                }, 100)
+
+                                setTimeout(() => {
+                                    clearInterval(jp_faq_timer2)
+                                }, 6000)
+                                // 失败
+                            } else if (msg.code === 500) {
+                                if (msg.errorCode == "CUSTOM") {
+                                    alert(msg.msg)
+                                }
+                            }
+                        },
+                        error: function (res) {
+                            if (res.responseJSON.code == 500) {
+                                alert(res.responseJSON.msg)
+                            }
+                            if (res.responseJSON.errorCode == "CUSTOM") {
+                                alert(res.responseJSON.msg)
+                            }
+                        },
+                    })
+                }
+            })
+        }
+    )
+</script>
+<script>
+    const emailInput = document.getElementById("email")
+    const suggestionsBox = document.getElementById("suggestions")
+
+    const emailSuffixes = [
+        "@gmail.com",
+        "@icloud.com",
+        "@yahoo.co.jp",
+        "@outlook.jp",
+        "@outlook.com",
+        "@docomo.ne.jp",
+        "@ezweb.ne.jp",
+        "@hotmail.co.jp",
+        "@hotmail.com",
+        "@i.softbank.jp",
+        "@nifty.com",
+        "@softbank.ne.jp",
+        "@live.jp",
+        "@mac.com",
+    ]
+
+    emailInput.addEventListener("input", () => {
+        const value = emailInput.value
+        const atIndex = value.indexOf("@")
+
+        if (atIndex !== -1) {
+            const enteredDomain = value.slice(atIndex + 1)
+            const filteredSuffixes = emailSuffixes.filter((suffix) =>
+                suffix.startsWith(`@${enteredDomain}`)
+            )
+
+            const suggestions = filteredSuffixes.map(
+                (suffix) => value.split("@")[0] + suffix
+            )
+
+            renderSuggestions(suggestions)
+        } else {
+            suggestionsBox.style.display = "none"
+        }
+    })
+
+    function renderSuggestions(suggestions) {
+        if (suggestions.length > 0) {
+            suggestionsBox.innerHTML = suggestions
+                .map(
+                    (suggestion) => `<div class="suggestion-item">${suggestion}</div>`
+                )
+                .join("")
+            suggestionsBox.style.display = "block"
+
+            document.querySelectorAll(".suggestion-item").forEach((item) => {
+                item.addEventListener("click", () => {
+                    emailInput.value = item.textContent
+                    suggestionsBox.style.display = "none"
+                })
+            })
+        } else {
+            suggestionsBox.style.display = "none"
+        }
+    }
+</script>
+
+</html>

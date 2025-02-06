@@ -235,4 +235,59 @@
     selectedOption = value;
     console.log("Selected Option:", selectedOption);
   });
+  // let selectedAddress = null;
+  // let selectedOption = null;
+  // const initSelect = (selectClass, arrowClass, data, callback) => {
+  //     const selectBox = document.querySelector(selectClass)
+  //     const trigger = selectBox.querySelector(".custom-select-trigger")
+  //     const options = selectBox.querySelector(".custom-options")
+  //     const arrow = document.querySelector(arrowClass)
+
+  //     options.innerHTML = data.map(item => `<div class="custom-option" data-value="${item}">${item}</div>`).join("")
+
+  //     let isShow = false;
+
+  //     // 点击箭头
+  //     arrow.addEventListener("click", (e) => {
+  //         e.stopPropagation()
+  //         isShow = !isShow
+  //         options.classList.toggle("active", isShow)
+  //         arrow.style.transform = isShow ? "rotate(180deg)" : "rotate(0deg)"
+  //     })
+
+  //     // 点击选择框
+  //     selectBox.addEventListener("click", () => {
+  //         isShow = true
+  //         options.classList.add("active")
+  //         arrow.style.transform = "rotate(180deg)"
+  //     })
+
+  //     // 点击选项
+  //     options.addEventListener("click", (e) => {
+  //         e.stopPropagation()
+  //         if (e.target.classList.contains("custom-option")) {
+  //             trigger.textContent = e.target.textContent
+  //             options.classList.remove("active")
+  //             arrow.style.transform = "rotate(0deg)"
+  //             isShow = false
+  //             callback(e.target.textContent)
+  //         }
+  //     });
+
+  //     document.addEventListener("click", (e) => {
+  //         if (!e.target.closest(selectClass)) {
+  //             options.classList.remove("active")
+  //             arrow.style.transform = "rotate(0deg)"
+  //         }
+  //     });
+  // };
+
+  // // 初始化两个 Select
+  // initSelect(".select-one", ".arrow-one", address_data, (value) => {
+  //     selectedAddress = value
+  // });
+
+  // initSelect(".select-two", ".arrow-two", ["Option 1", "Option 2", "Option 3"], (value) => {
+  //     selectedOption = value
+  // });
 </script>

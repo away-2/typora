@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .B2B-container-iframe-box {
+            margin: 100px auto;
+            max-width: 1384px;
+        }
+
+        .B2B-container-iframe-box .B2B-container-iframe-box-title {
+            color: #26333A;
+            text-align: center;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-feature-settings: 'ss01' on, 'ss04' on, 'ss18' on, 'liga' off;
+            font-family: "SupremeLLSub-Bold";
+            font-size: 38px;
+            font-style: normal;
+            font-weight: 710;
+            line-height: 120%;
+        }
+
+        .B2B-container-iframe-box .B2B-container-iframe-box-content {
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        .B2B-container-iframe-box .B2B-container-iframe-box-content iframe {
+            width: 920px;
+            height: 470px;
+        }
+
+        .B2B-container-iframe-box .B2B-container-iframe-box-content .B2B-container-iframe-box-text {
+            max-width: 412px;
+            margin: 0 28px;
+        }
+
+        .B2B-container-iframe-box .B2B-container-iframe-box-content .B2B-container-iframe-box-text .B2B-container-iframe-box-text-title {
+            color: #151C20;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-feature-settings: 'ss02' on;
+            font-family: "Moderat-Bold";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 140%;
+        }
+
+        .B2B-container-iframe-box .B2B-container-iframe-box-content .B2B-container-iframe-box-text .B2B-container-iframe-box-text-desc {
+            color: rgba(38, 51, 58, 0.80);
+            font-variant-numeric: lining-nums proportional-nums;
+            font-feature-settings: 'ss02' on;
+            font-family: "Moderat-Regular";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            margin-top: 14px;
+        }
+
+        .B2B-container-map-box {
+            width: 100%;
+            background: #043E1B;
+            padding: 60px 268px;
+            display: flex;
+            gap: 99px;
+            align-items: center;
+        }
+
+        .B2B-container-map-box .B2B-container-map-box-text {
+            max-width: 450px;
+        }
+
+        .B2B-container-map-box .B2B-container-map-box-text .B2B-container-map-box-text-title {
+            color: #FDFCF5;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-feature-settings: 'ss02' on;
+            font-family: "SupremeLLSub-Bold";
+            font-size: 38px;
+            font-style: normal;
+            font-weight: 710;
+            line-height: 120%;
+        }
+
+        .B2B-container-map-box .B2B-container-map-box-text .B2B-container-map-box-text-desc {
+            color: #FDFCF5;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-feature-settings: 'ss02' on;
+            font-family: "Moderat-Regular";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            margin-top: 32px;
+        }
+
+        .B2B-container-map-box .B2B-container-map-box-text .B2B-container-map-box-text-desc span {
+            color: #FFBE15;
+            font-family: "Moderat-Bold";
+            font-weight: 700;
+        }
+    </style>
+    <!-- module_6 style start -->
+    <style>
+        .scroller {
+            width: 100%
+        }
+
+        .scroller__inner {
+            display: flex;
+            gap: 15px;
+            padding-block: 15px;
+            flex-wrap: wrap;
+            width: max-content;
+        }
+
+        .scroller[data-animated='true'] {
+            overflow: hidden;
+            /* mask: linear-gradient(90deg, transparent, blue 20%, blue 80%, transparent); */
+        }
+
+        .scroller[data-animated='true'] .scroller__inner {
+            flex-wrap: nowrap;
+            animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, normal) linear infinite;
+        }
+
+        .scroller[animation-direction='right'] {
+            --_animation-direction: reverse;
+        }
+
+        .scroller[animation-direction='left'] {
+            --_animation-direction: normal;
+        }
+
+        .scroller[animation-duration='fast'] {
+            --_animation-duration: 10s;
+        }
+
+        .scroller[animation-duration='slow'] {
+            --_animation-duration: 40s;
+        }
+
+        @keyframes scroll {
+            to {
+                transform: translateX(calc(-50% - 20px));
+            }
+        }
+
+        .about-us-infinite-scroll {
+            width: 100%;
+            margin-bottom: 100px;
+
+        }
+
+        .about-us-background-color-white {
+            background: #FBF9F9;
+        }
+
+        .about-us-background-color-purple {
+            background: #EEF0F5;
+        }
+
+        .about-us-background-color-green {
+            background: #F2F5F1;
+        }
+
+        .about-us-infinite-scroll .about-us-infinite-scroll-title {
+            color: #26333A;
+            text-align: center;
+            font-family: "SupremeLLSub-Bold" !important;
+            font-size: 38px;
+            font-style: normal;
+            font-weight: 710;
+            line-height: 120%;
+            margin: 100px 0 20px;
+        }
+
+        .about-us-infinite-scroll .about-us-infinite-scroll-desc {
+            color: rgba(38, 51, 58, 0.80);
+            text-align: center;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-feature-settings: 'ss02' on, 'liga' off;
+            font-family: "Moderat-Regular";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            margin-bottom: 60px;
+            max-width: 1384px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .about-us-infinite-scroll .scroller .scroller-box {
+            display: flex;
+            gap: 40px;
+        }
+
+        .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item {
+            padding: 24px;
+            display: flex;
+            gap: 24px;
+            border-radius: 12px;
+        }
+
+        .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-img {
+            width: 160px;
+            height: auto;
+        }
+
+        .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-img img {
+            width: 100%;
+        }
+
+        .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-text .scroller-box-item-text-title {
+            color: #26333A;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: "Moderat-Bold" !important;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+        }
+
+        .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-text .scroller-box-item-text-desc {
+            color: rgba(38, 51, 58, 0.80);
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: "Moderat-Regular" !important;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+        @media screen and (max-width: 1440px) {
+            .about-us-infinite-scroll {
+                margin-bottom: 80px;
+            }
+
+            .about-us-infinite-scroll .about-us-infinite-scroll-title {
+                font-size: 42px;
+                margin: 80px 0 20px;
+            }
+
+            .about-us-infinite-scroll .about-us-infinite-scroll-title {
+                font-size: 18px;
+                margin-bottom: 40px;
+                max-width: 1000px;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box {
+                display: flex;
+                gap: 40px;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item {
+                padding: 24px;
+                display: flex;
+                gap: 24px;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-img {
+                width: 160px;
+                height: auto;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-img img {
+                width: 100%;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-text .scroller-box-item-text-title {
+                font-size: 20px;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-text .scroller-box-item-text-desc {
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            .about-us-infinite-scroll .about-us-infinite-scroll-title {
+                font-size: 30px;
+                margin: 80px 0 20px;
+            }
+
+            .about-us-infinite-scroll .about-us-infinite-scroll-title {
+                font-size: 16px;
+                margin-bottom: 40px;
+                max-width: 768px;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box {
+                display: flex;
+                gap: 28px;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item {
+                padding: 18px;
+                display: flex;
+                gap: 18px;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-img {
+                width: 114px;
+                height: auto;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-img img {
+                width: 100%;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-text .scroller-box-item-text-title {
+                font-size: 16px;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-text .scroller-box-item-text-desc {
+                font-size: 12px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .about-us-infinite-scroll {
+                margin-bottom: 60px;
+            }
+
+            .about-us-infinite-scroll .about-us-infinite-scroll-title {
+                font-size: 28px;
+                margin: 60px 20px 20px;
+            }
+
+            .about-us-infinite-scroll .about-us-infinite-scroll-title {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box {
+                display: flex;
+                gap: 10px;
+            }
+
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-img {
+                width: 110px;
+                height: auto;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-img img {
+                width: 100%;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-text .scroller-box-item-text-title {
+                font-size: 16px;
+            }
+
+            .about-us-infinite-scroll .scroller .scroller-box .scroller-box-item .scroller-box-item-text .scroller-box-item-text-desc {
+                font-size: 12px;
+            }
+        }
+    </style>
+    <!-- module_6 style end -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="B2B-container-iframe-box">
+            <div class="B2B-container-iframe-box-title">Why Partner with FlexiSpot?</div>
+            <div class="B2B-container-iframe-box-content">
+                <iframe title="YouTube video player" src="https://www.youtube.com/embed/4ZkmF2O9rnc?si=cSXW2jvIe3w_vWzj"
+                    width="620" height="620" frameborder="0" allowfullscreen class="description-page-iframe"></iframe>
+                <div class="B2B-container-iframe-box-text">
+                    <div class="B2B-container-iframe-box-text-title">
+                        Strong Manufacturing and Sourcing Capabilities
+                    </div>
+                    <div class="B2B-container-iframe-box-text-desc">
+                        With five state-of-the-art factories in China and Vietnam, combined with a global sourcing team
+                        of over 500 experts, we provide a stable supply chain, competitive pricing, and exceptional
+                        quality to empower your business.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="B2B-container-map-box">
+            <div class="B2B-container-map-box-text">
+                <div class="B2B-container-map-box-text-title">Reliable Inventory and Logistics</div>
+                <div class="B2B-container-map-box-text-desc">
+                    <span>Extensive Inventory: </span>
+                    Over 10 strategically located warehouses across the U.S. ensure
+                    fast and efficient order fulfillment to meet your business needs.
+                </div>
+                <div class="B2B-container-map-box-text-desc">
+                    <span>Flexible Delivery Options: </span>
+                    Choose from local shipping or pickup services to minimize last-mile costs and ensure timely,
+                    cost-effective deliveries.
+                </div>
+                <div class="B2B-container-map-box-text-desc">
+                    <span>Premium White-Glove Service: </span>
+                    In partnership with a nationwide installation team, we provide end-to-end support to ensure your
+                    customers enjoy a seamless and worry-free experience.
+                </div>
+            </div>
+            <div class="B2B-container-map-box-img">
+                <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/B2B-20250117-map.png"
+                    alt="">
+            </div>
+        </div>
+        <!-- module 6 -->
+        <div class="about-us-infinite-scroll">
+            <div class="about-us-infinite-scroll-title">Strong Brand Recognition</div>
+            <div class="about-us-infinite-scroll-desc">FlexiSpot is featured in leading media outlets and collaborates
+                with top YouTube influencers to boost visibility and enhance customer trust. With a global presence in
+                over 30 countries and nearly 12 million satisfied customers, FlexiSpot is a name you can rely on.</div>
+            <div class="scroller" data-animated="true" animation-direction="right" animation-duration="fast">
+                <div class="scroller-box scroller__inner">
+                    <div class="scroller-box-item about-us-background-color-white">
+                        <div class="scroller-box-item-img">
+                            <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-scroll-logo1.png"
+                                alt="">
+                        </div>
+                        <div class="scroller-box-item-text">
+                            <div class="scroller-box-item-text-title">E7 Pro Standing Desk</div>
+                            <div class="scroller-box-item-text-desc">Top Pick of</div>
+                            <div class="scroller-box-item-text-desc">Best Standing Desk in 2024</div>
+                        </div>
+                    </div>
+                    <div class="scroller-box-item about-us-background-color-purple">
+                        <div class="scroller-box-item-img">
+                            <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-scroll-logo2.png"
+                                alt="">
+                        </div>
+                        <div class="scroller-box-item-text">
+                            <div class="scroller-box-item-text-title">C7 Ergonomic Chair</div>
+                            <div class="scroller-box-item-text-desc">Best for Home Offices in</div>
+                            <div class="scroller-box-item-text-desc">Best Office Chair of 2024</div>
+                        </div>
+                    </div>
+                    <div class="scroller-box-item about-us-background-color-green">
+                        <div class="scroller-box-item-img">
+                            <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-scroll-logo3.png"
+                                alt="">
+                        </div>
+                        <div class="scroller-box-item-text">
+                            <div class="scroller-box-item-text-title">XL6 Lift Recliner</div>
+                            <div class="scroller-box-item-text-desc">Best for Senior in</div>
+                            <div class="scroller-box-item-text-desc">Best Recliner Chairs for Ultimate Comfort</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroller" data-animated="true" animation-direction="right" animation-duration="fast">
+                <div class="scroller-box scroller__inner">
+                    <div class="scroller-box-item about-us-background-color-green">
+                        <div class="scroller-box-item-img">
+                            <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-scroll-logo4.png"
+                                alt="">
+                        </div>
+                        <div class="scroller-box-item-text">
+                            <div class="scroller-box-item-text-title">E7 Pro Standing Desk</div>
+                            <div class="scroller-box-item-text-desc">Best Heavy Duty of</div>
+                            <div class="scroller-box-item-text-desc">Best Standing Desk in 2024</div>
+                        </div>
+                    </div>
+                    <div class="scroller-box-item about-us-background-color-white">
+                        <div class="scroller-box-item-img">
+                            <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-scroll-logo5.png"
+                                alt="">
+                        </div>
+                        <div class="scroller-box-item-text">
+                            <div class="scroller-box-item-text-title">C7 Ergonomic Chair</div>
+                            <div class="scroller-box-item-text-desc">Best Office Chair in 2024</div>
+                        </div>
+                    </div>
+                    <div class="scroller-box-item about-us-background-color-purple">
+                        <div class="scroller-box-item-img">
+                            <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/about-us-20241224-scroll-logo6.png"
+                                alt="">
+                        </div>
+                        <div class="scroller-box-item-text">
+                            <div class="scroller-box-item-text-title">E7L Standing Desk</div>
+                            <div class="scroller-box-item-text-desc">Best L-Shape Desk of</div>
+                            <div class="scroller-box-item-text-desc">Best Gaming Desk 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // module_6 js start
+    const scrollers = document.querySelectorAll(".scroller");
+
+    addAnimation();
+
+    function addAnimation() {
+        scrollers.forEach((scroller) => {
+            if (scroller.getAttribute("data-animated")) {
+                const scrollerInner = scroller.querySelector(".scroller__inner");
+                const scrollerContent = Array.from(scrollerInner.children);
+                scrollerContent.forEach((item) => {
+                    // 拿到每个节点
+                    const cloneNode = item.cloneNode(true);
+                    // 把节点添加进去
+                    scrollerInner.appendChild(cloneNode);
+                });
+                // 鼠标移至元素节点时动画停止
+                scrollerInner.addEventListener("mouseenter", () => {
+                    scrollerInner.style.animationPlayState = "paused";
+                });
+                // 鼠标移出元素节点时动画开始
+                scrollerInner.addEventListener("mouseleave", () => {
+                    scrollerInner.style.animationPlayState = "running";
+                });
+            }
+        });
+    }
+    // module_6 js end
+</script>
+
+</html>
