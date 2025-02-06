@@ -25,9 +25,14 @@
         .label_case {
             display: flex;
             flex-direction: column;
-            margin-left: 32px;
+            margin: 0 32px;
             flex: 1;
             position: relative;
+            padding: 12px 0;
+        }
+
+        .p18 {
+            padding: 18px 0;
         }
 
         .label_class {
@@ -41,7 +46,7 @@
             letter-spacing: 0.8px;
         }
 
-        .label_class::after {
+        /* .label_class::after {
             content: "*";
             color: #004df2;
             font-weight: 800;
@@ -49,7 +54,7 @@
 
         .no_required::after {
             display: none;
-        }
+        } */
 
         .ipt_wrong {
             color: #ef2e13;
@@ -80,6 +85,14 @@
         }
 
         .textarea_class {
+            border: 1px solid #a3a3a3;
+            border-radius: 4px;
+            background-color: #fdfcf5;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        .input_class {
             border: 1px solid #a3a3a3;
             border-radius: 4px;
             background-color: #fdfcf5;
@@ -202,16 +215,25 @@
 
         .label_custom {
             display: flex;
-            align-items: center;
+            align-items: stretch;
             border: 1px solid #a3a3a3;
             border-bottom: none;
         }
 
+        .label_custom:last-of-type {
+            border-bottom: 1px solid #a3a3a3 !important;
+        }
+
         .label_custom .label_prefix {
             width: 356px;
-            padding: 47.5px 32.533px 55.5px 13.467px;
+            display: flex;
+            align-items: center;
             border-right: 1px solid #a3a3a3;
             background: #FEE9B2;
+
+        }
+
+        .label_custom .label_prefix .prefix_title {
             color: #26333A;
             font-family: "NotoSansJP-Medium";
             font-size: 18px;
@@ -219,9 +241,10 @@
             font-weight: 700;
             line-height: 130%;
             letter-spacing: 0.9px;
+            margin-left: 14px;
         }
 
-        .label_custom .label_prefix span {
+        .label_custom .label_prefix .prefix_title span {
             color: #004df2;
         }
 
@@ -301,14 +324,111 @@
             }
         }
     </style>
+    <style>
+         #newPicViewsBox {
+            height: 102px;
+        }
+
+        #newPicViewsBox #add_input {
+            display: flex;
+            width: max-content;
+        }
+
+        .img-item {
+            width: 102px;
+            height: 102px;
+            margin-right: 5px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+            color: #dddddd;
+            border: 1px solid #dddddd;
+            float: left;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .item-add {
+            cursor: pointer;
+        }
+
+        .item-delete {
+            opacity: 0;
+            position: absolute;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: red;
+            border-radius: 2px;
+            color: white;
+            transition: all 0.3s;
+            right: 8px;
+            top: -15px;
+            width: 15px;
+            height: 15px;
+            line-height: 0.7;
+            text-align: center;
+        }
+
+        .img-item:hover .item-delete {
+            top: 8px;
+            opacity: 1;
+        }
+
+        #newUpContactImages,
+        .static-contact-module-body .contactjp-bg-pad {
+            display: none;
+        }
+    </style>
     <div class="email_container">
         <!-- form module -->
         <div class="form_case" id="form-case">
             <div class="form_container">
                 <form action="" id="form">
                     <div class="label_custom">
-                        <div class="label_prefix"><span>※</span> 性別</div>
+                        <div class="label_prefix">
+                            <div class="prefix_title">
+                                <span>※</span> ご氏名
+                            </div>
+                        </div>
                         <div class="label_case" id="Q1">
+                            <label class="label_class">プレゼント抽選に当選された場合の宛名になります。</label>
+                            <input id="otherSuggestions" class="input_class"></input>
+                            <div class="ipt_wrong">不得为空</div>
+                        </div>
+                    </div>
+                    <div class="label_custom">
+                        <div class="label_prefix">
+                            <div class="prefix_title">
+                                <span>※</span> あなたのニックネーム
+                            </div>
+                        </div>
+                        <div class="label_case" id="Q2">
+                            <label class="label_class">当選された場合、サイト上での当選者発表の名前として使用いたします。</label>
+                            <input id="otherSuggestions" class="input_class"></input>
+                            <div class="ipt_wrong">不得为空</div>
+                        </div>
+                    </div>
+                    <div class="label_custom">
+                        <div class="label_prefix">
+                            <div class="prefix_title">
+                                <span>※</span> ご住所
+                            </div>
+                        </div>
+                        <div class="label_case" id="Q3">
+                            <label class="label_class no_required">プレゼント抽選に当選された場合の発送先となります。</label>
+                            <textarea id="otherSuggestions" class="textarea_class" rows="3"></textarea>
+                            <!-- <div class="ipt_wrong">この質問は必須です</div> -->
+                        </div>
+                    </div>
+                    <div class="label_custom">
+                        <div class="label_prefix">
+                            <div class="prefix_title">
+                                <span>※</span> 性別
+                            </div>
+                        </div>
+                        <div class="label_case p18" id="Q1">
                             <label class="radio_box">
                                 <input type="radio" name="sex" value="女性" checked />
                                 <span class="custom-radio"></span>
@@ -323,8 +443,12 @@
                         </div>
                     </div>
                     <div class="label_custom">
-                        <div class="label_prefix"><span>※</span> ご年齢</div>
-                        <div class="label_case" id="Q2">
+                        <div class="label_prefix">
+                            <div class="prefix_title">
+                                <span>※</span> ご年齢
+                            </div>
+                        </div>
+                        <div class="label_case p18" id="Q2">
                             <label class="radio_box">
                                 <input type="radio" name="age" value="10歳未満" checked />
                                 <span class="custom-radio"></span>
@@ -359,10 +483,66 @@
                         </div>
                     </div>
                     <div class="label_custom">
-                        <div class="label_prefix"><span>※</span> FlexiSpotを何で知りましたか？</div>
-                        <div class="label_case" id="Q3">
+                        <div class="label_prefix">
+                            <div class="prefix_title">
+                                <span>※</span> ご氏名
+                            </div>
+                        </div>
+                        <div class="label_case" id="Q1">
+                            <label class="label_class">プレゼント抽選に当選された場合の宛名になります。</label>
+                            <input id="otherSuggestions" class="input_class"></input>
+                            <div class="ipt_wrong">不得为空</div>
+                        </div>
+                    </div>
+                    <div class="label_custom">
+                        <div class="label_prefix">
+                            <div class="prefix_title">
+                                <span>※</span> あなたのニックネーム
+                            </div>
+                        </div>
+                        <div class="label_case" id="Q2">
+                            <label class="label_class">当選された場合、サイト上での当選者発表の名前として使用いたします。</label>
+                            <input id="otherSuggestions" class="input_class"></input>
+                            <div class="ipt_wrong">不得为空</div>
+                        </div>
+                    </div>
+                    <div class="label_custom">
+                        <div class="label_prefix">
+                            <div class="prefix_title">
+                                <span>※</span> あなたのニックネーム
+                            </div>
+                        </div>
+                        <div class="label_case" id="Q2">
+                            <label class="label_class">当選された場合、サイト上での当選者発表の名前として使用いたします。</label>
+                            <input id="otherSuggestions" class="input_class"></input>
+                            <div class="ipt_wrong">不得为空</div>
+                        </div>
+                    </div>
+                    <div class="label_custom">
+                        <div class="label_prefix">
+                            <div class="prefix_title">
+                                <span>※</span> FlexiSpotを何で知りましたか？
+                            </div>
+                        </div>
+                        <div class="label_case">
+                            <!-- 图片上传 -->
+                            <div class="new-img-items">
+                                <label class="label_class">ファイル形式はJPEG（.jpeg／.jpg）、PNG、画像ファイル容量は5MB/枚以下でお送りください</label>
+                                <input type="file" name="images" id="newUpContactImages"
+                                    accept="image/gif, image/jpeg, image/png, image/jpg" />
+                                <div id="newPicViewsBox"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="label_custom">
+                        <div class="label_prefix">
+                            <div class="prefix_title">
+                                <span>※</span> FlexiSpotを何で知りましたか？
+                            </div>
+                        </div>
+                        <div class="label_case p18" id="Q3">
                             <label class="radio_box">
-                                <input type="radio" name="familyComposition" value="インターネット上の広告" />
+                                <input type="radio" name="familyComposition" value="インターネット上の広告" checked />
                                 <span class="custom-radio"></span>
                                 <span class="custom-label">インターネット上の広告</span>
                             </label>
@@ -393,99 +573,18 @@
                             </label>
                         </div>
                     </div>
-
-                    <div class="label_case" id="Q4">
-                        <label class="label_class">Q4.お住まいの部屋の面積を教えてください。</label>
-                        <label class="radio_box">
-                            <input type="radio" name="roomSize" value="20平方メートル未満" />
-                            <span class="custom-radio"></span>
-                            <span class="custom-label">20平方メートル未満</span>
-                        </label>
-                        <label class="radio_box">
-                            <input type="radio" name="roomSize" value="20平方メートル～40平方メートル未満" />
-                            <span class="custom-radio"></span>
-                            <span class="custom-label">20平方メートル～40平方メートル未満</span>
-                        </label>
-                        <label class="radio_box">
-                            <input type="radio" name="roomSize" value="40平方メートル～60平方メートル未満" />
-                            <span class="custom-radio"></span>
-                            <span class="custom-label">40平方メートル～60平方メートル未満</span>
-                        </label>
-                        <label class="radio_box">
-                            <input type="radio" name="roomSize" value="60平方メートル～80平方メートル未満" />
-                            <span class="custom-radio"></span>
-                            <span class="custom-label">60平方メートル～80平方メートル未満</span>
-                        </label>
-                        <label class="radio_box">
-                            <input type="radio" name="roomSize" value="80平方メートル～100平方メートル未満" />
-                            <span class="custom-radio"></span>
-                            <span class="custom-label">80平方メートル～100平方メートル未満</span>
-                        </label>
-                        <label class="radio_box">
-                            <input type="radio" name="roomSize" value="100平方メートル～120平方メートル未満" />
-                            <span class="custom-radio"></span>
-                            <span class="custom-label">100平方メートル～120平方メートル未満</span>
-                        </label>
-                        <label class="radio_box">
-                            <input type="radio" name="roomSize" value="120平方メートル～140平方メートル未満" />
-                            <span class="custom-radio"></span>
-                            <span class="custom-label">120平方メートル～140平方メートル未満</span>
-                        </label>
-                        <label class="radio_box">
-                            <input type="radio" name="roomSize" value="わからない・答えたくない" />
-                            <span class="custom-radio"></span>
-                            <span class="custom-label">わからない・答えたくない</span>
-                        </label>
-                        <div class="ipt_wrong">この質問は必須です</div>
+                    <div class="label_custom">
+                        <div class="label_prefix">
+                            <div class="prefix_title">
+                                <span>※</span> ご住所
+                            </div>
+                        </div>
+                        <div class="label_case" id="Q3">
+                            <label class="label_class">プレゼント抽選に当選された場合の発送先となります。</label>
+                            <textarea id="otherSuggestions" class="textarea_class" rows="3"></textarea>
+                            <!-- <div class="ipt_wrong">この質問は必須です</div> -->
+                        </div>
                     </div>
-
-                    <div class="label_case" id="Q5">
-                        <label class="label_class">Q5.年収層を教えてください。</label>
-                        <label class="radio_box">
-                            <input type="radio" name="revenue" value="200万円未満" />
-                            <span class="custom-radio"></span>
-                            <span class="custom-label">200万円未満</span>
-                        </label>
-                        <label class="radio_box">
-                            <input type="radio" name="revenue" value="200万円～400万円" />
-                            <span class="custom-radio"></span>
-                            <span class="custom-label">200万円～400万円</span>
-                        </label>
-                        <label class="radio_box">
-                            <input type="radio" name="revenue" value="400万円～600万円" />
-                            <span class="custom-radio"></span>
-                            <span class="custom-label">400万円～600万円</span>
-                        </label>
-                        <label class="radio_box">
-                            <input type="radio" name="revenue" value="600万円～800万円" />
-                            <span class="custom-radio"></span>
-                            <span class="custom-label">600万円～800万円</span>
-                        </label>
-                        <label class="radio_box">
-                            <input type="radio" name="revenue" value="800万円～1000万円" />
-                            <span class="custom-radio"></span>
-                            <span class="custom-label">800万円～1000万円</span>
-                        </label>
-                        <label class="radio_box">
-                            <input type="radio" name="revenue" value="1000万円以上" />
-                            <span class="custom-radio"></span>
-                            <span class="custom-label">1000万円以上</span>
-                        </label>
-                        <label class="radio_box">
-                            <input type="radio" name="revenue" value="わからない・答えたくない" />
-                            <span class="custom-radio"></span>
-                            <span class="custom-label">わからない・答えたくない</span>
-                        </label>
-                        <div class="ipt_wrong">この質問は必須です</div>
-                    </div>
-
-
-                    <div class="label_case" id="Q12">
-                        <label class="label_class no_required">Q12.弊社のリクライニングソファに追加のコメントや意見があればお聞かせください。</label>
-                        <textarea id="otherSuggestions" class="textarea_class" rows="3"></textarea>
-                        <!-- <div class="ipt_wrong">この質問は必須です</div> -->
-                    </div>
-
                     <button class="email_submit_btn" id="submit">送 信</button>
                 </form>
             </div>
@@ -519,6 +618,109 @@
             </div>
         </div>
     </div>
+    <script>
+        var file_list = []
+            var new_all_picW = "100px"
+            var new_all_picH = "100px"
+            var newfile = []
+            var newdefaultAdd = `
+      <div id="add_input" onclick="javascript:document.getElementById('newUpContactImages').click()">
+        <svg class="item-add" width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0.393668" y="0.228629" width="100.63" height="100.63" rx="3.77137" fill="#F6F4F1" stroke="#26333A" stroke-width="0.457258"/>
+          <path d="M32 50.1311H70.0874M51.0437 31.0874L51.0437 69.1748" stroke="#26333A" stroke-opacity="0.1" stroke-width="6.14313" stroke-linecap="round"/>
+        </svg>
+      </div>`
+            var newPicViewsBox = document.getElementById("newPicViewsBox")
+            newrenderImg()
+            // input发生改变
+            $("#newUpContactImages").on("change", function () {
+                onc()
+            })
+            // 调图片上传接口
+            function onc() {
+                var itemAdd = document.getElementById("add_input")
+                var files = document.getElementById("newUpContactImages").files
+                var files_ejz = document.getElementById("newUpContactImages").files[0]
+                if (!files_ejz) {
+                    return
+                }
+                itemAdd.innerHTML = '<span style="font-size:25px">Loading...</span>'
+                postData("/api/herd/files/upload", {
+                    file: files_ejz,
+                }).then((res) => {
+                    res = JSON.parse(res)
+                    if (res[Object.keys(res)[0]]) {
+                        file_list.push(res[Object.keys(res)[0]])
+                        newrenderImg()
+                    } else {
+                        alert(res.msg)
+                    }
+                })
+            }
+            // 定义上传图片方法
+            function postData(url, data) {
+                return new Promise((resolve, reject) => {
+                    var formData = new FormData()
+                    for (let key in data) {
+                        formData.append(key, data[key])
+                    }
+                    var xhr = new XMLHttpRequest()
+                    xhr.open("post", url)
+                    xhr.send(formData)
+
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState == 4 && xhr.status == 200) {
+                            resolve(xhr.response)
+                        } else if (xhr.status == 500) {
+                            reject("fail")
+                        }
+                    }
+                })
+            }
+            // 上传的图片展示
+            function newrenderImg() {
+                newPicViewsBox.innerHTML = ""
+                for (let i = 0; i < file_list.length; i++) {
+                    newPicViewsBox.innerHTML +=
+                        "<div class='img-item'><img style='float:left;display:block;min-width:" +
+                        new_all_picW +
+                        ";min-height: " +
+                        new_all_picH +
+                        "' src='" +
+                        file_list[i] +
+                        "' id='img" +
+                        i +
+                        "'  /><div id='itemdeleteIocn" +
+                        i +
+                        "' class='item-delete'>×</div></div>"
+
+                    $("#newPicViewsBox")
+                        .off("click", "#itemdeleteIocn0")
+                        .on("click", "#itemdeleteIocn0", function () {
+                            file_list.splice(0, 1)
+                            newrenderImg()
+                        })
+                    $("#newPicViewsBox")
+                        .off("click", "#itemdeleteIocn1")
+                        .on("click", "#itemdeleteIocn1", function () {
+                            file_list.splice(1, 1)
+                            newrenderImg()
+                        })
+                    $("#newPicViewsBox")
+                        .off("click", "#itemdeleteIocn2")
+                        .on("click", "#itemdeleteIocn2", function () {
+                            file_list.splice(2, 1)
+                            newrenderImg()
+                        })
+                }
+                if (file_list.length >= 3) {
+                    console.log("最多三张图片")
+                } else {
+                    newPicViewsBox.innerHTML += newdefaultAdd
+                }
+            }
+
+    </script>
 
     <script>
         function loadScript(url, callback) {
