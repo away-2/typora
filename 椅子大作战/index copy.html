@@ -1136,7 +1136,6 @@
                     var itemAdd = document.getElementById("add_input")
                     var files = document.getElementById("newUpContactImages").files
                     var files_ejz = document.getElementById("newUpContactImages").files[0]
-                    console.log(files[0], "图片");
                     if (!files_ejz) {
                         return
                     }
@@ -1144,6 +1143,8 @@
                     postData("/api/trantor/file-storage/getUploadPreSignedUrl", {
                         file: files_ejz,
                     }).then((res) => {
+                        console.log(res, "res");
+
                         res = JSON.parse(res)
                         if (res[Object.keys(res)[0]]) {
                             file_list.push(res[Object.keys(res)[0]])
@@ -1160,8 +1161,8 @@
                         for (let key in data) {
                             formData.append(key, data[key])
                         }
-                        console.log(formData, "formData");
-
+                        console.log(formData,"formData");
+                        
                         var xhr = new XMLHttpRequest()
                         xhr.open("post", url)
                         xhr.send(formData)
