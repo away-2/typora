@@ -1068,7 +1068,7 @@
                 </div>
                 <a href="https://x.com/FlexiSpot_JP" target="_blank"
                     class="trade_in_container_recruit_button_black">ハッシュタグをつけて投稿する</a>
-                <a href="" target="_blank" class="trade_in_container_recruit_button_white">応募フォームはこちら</a>
+                <div class="trade_in_container_recruit_button_white">応募フォームはこちら</div>
             </div>
             <div class="trade_in_container_rule">
                 <div class="trade_in_container_rule_title">応募要項</div>
@@ -1156,13 +1156,12 @@
 <script>
     let isTourist = JSON.parse(localStorage.getItem("user-storage-data")).data.isTourist
 
-    const button = document.querySelector(".trade_in_container_rule_button")
-    button.addEventListener("click", () => {
-        if (isTourist) {
-            window.location.href = "/login"
-        } else {
-            window.location.href = "/chaitBattle-form"
-        }
+    const button = document.querySelectorAll(".trade_in_container_rule_button, .trade_in_container_recruit_button_white")
+
+    button.forEach(btn => {
+        btn.addEventListener("click", () => {
+            window.location.href = isTourist ? "/login" : "/chairBattle-form"
+        })
     })
 
 </script>
