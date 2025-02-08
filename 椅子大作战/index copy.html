@@ -337,6 +337,7 @@
             justify-content: center;
             align-items: center;
             margin: 14px 0;
+            position: relative;
         }
 
         .label_custom .form_select_box .custom-checkbox {
@@ -847,12 +848,13 @@
                         </div>
                     </div>
                     <div class="label_custom">
-                        <div style="width: 100%;">
+                        <div style="width: 100%;position: relative;">
                             <div class="form_info">「個人情報の取り扱いについて」</div>
                             <div class="form_select_box">
-                                <input type="checkbox" id="agree" name="agree" />
+                                <input type="checkbox" id="Agree" name="agree" />
                                 <label for="agree" class="custom-checkbox">に同意する </label>
                             </div>
+                            <div class="ipt_wrong">この質問は必須です</div>
                             <div class="form_guarantee">※「個人情報の取り扱いについて」をお読み頂き、同意出来る場合のみチェックを入れて下さい</div>
                         </div>
                     </div>
@@ -887,11 +889,6 @@
         </div>
     </div>
 
-
-    <script>
-
-    </script>
-
     <script>
         function loadScript(url, callback) {
             document.getElementById("") && document.getElementById("").remove()
@@ -921,7 +918,10 @@
             }
         }
 
-
+        // let isTourist = JSON.parse(localStorage.getItem("user-storage-data")).data.isTourist
+        // if (isTourist) {
+        //     window.location.href = "/login"
+        // } else {
         // 表单相关 js start
         function getRadioValue(name) {
             const radios = document.querySelectorAll("input[name=" + name + "]")
@@ -934,12 +934,24 @@
             return selectedValue
         }
 
+        function getCheckValue(name) {
+            const checks = document.querySelectorAll("input[name=" + name + "]")
+            let selectedValue = []
+            checks.forEach((check) => {
+                if (check.checked) {
+                    selectedValue.push(check.value)
+                }
+            })
+            return selectedValue
+        }
+
         const Name = document.getElementById("Name")
         const NickName = document.getElementById("NickName")
         const Address = document.getElementById("Address")
         const Email = document.getElementById("Email")
         const Phone = document.getElementById("Phone")
         const ContributionLink = document.getElementById("ContributionLink")
+        const Agree = document.getElementById("Agree")
         const emailReg =
             /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
 
@@ -1006,6 +1018,9 @@
             checkValue(ContributionLink)
         }
 
+
+
+
         loadScript(
             "https://s3.springbeetle.asia/asia/trantor/attachments/JP/jquery-3.6.0.min.js",
             function () {
@@ -1024,6 +1039,15 @@
                         const age = getRadioValue("age")
                         const isRecycle = getRadioValue("isRecycle") ? true : false
                         const source = getRadioValue("source")
+                        const isAgree = getCheckValue("agree")
+
+                        if (isAgree.length == 0) {
+                            Agree.parentElement.nextElementSibling.style.display = "block"
+                            Agree.parentElement.nextElementSibling.style.left = "50%"
+                            Agree.parentElement.nextElementSibling.style.transform = "translate(-50%, -50%)"
+                            Agree.parentElement.nextElementSibling.style.bottom = "50px"
+                            Agree.parentElement.style.marginBottom = "30px"
+                        }
 
                         if (emailReg.test(Email.value)) {
                             Email.nextElementSibling.style.display = "none"
@@ -1065,13 +1089,13 @@
                                     phone: $("#Phone").val(),
                                     contributionLink: $("#ContributionLink").val(),
                                     recall: $("#Recall").val(),
+                                    imageUrl: imageUrlString,
                                     source,
                                     sex,
                                     age,
                                     ifToRecycleChairs: Boolean(isRecycle),
                                 },
                             ]
-                            console.log(data, "data");
 
 
                             $.ajax({
@@ -1086,7 +1110,7 @@
                                 success: function (msg) {
                                     // 成功
                                     if (msg.code === 200) {
-                                        window.location.href = "/contact/success"
+                                        // window.location.href = "/contact/success"
 
                                     }
                                 },
@@ -1115,6 +1139,7 @@
 
                 // 图片上传 js start
                 var file_list = []
+                var imageUrlString = ""
                 var new_all_picW = "100px"
                 var new_all_picH = "100px"
                 var newfile = []
@@ -1131,6 +1156,8 @@
                 $("#newUpContactImages").on("change", function () {
                     onc()
                 })
+
+                let imageUrl;
                 // 调图片上传接口
                 function onc() {
                     var itemAdd = document.getElementById("add_input")
@@ -1140,14 +1167,13 @@
                         return
                     }
                     itemAdd.innerHTML = '<span style="font-size:25px">Loading...</span>'
-                    postData("/api/trantor/file-storage/getUploadPreSignedUrl", {
+                    postData("/api/herd/files/upload", {
                         file: files_ejz,
                     }).then((res) => {
-                        console.log(res, "res");
-
                         res = JSON.parse(res)
                         if (res[Object.keys(res)[0]]) {
                             file_list.push(res[Object.keys(res)[0]])
+                            updateImageUrlString();
                             newrenderImg()
                         } else {
                             alert(res.msg)
@@ -1161,8 +1187,7 @@
                         for (let key in data) {
                             formData.append(key, data[key])
                         }
-                        console.log(formData,"formData");
-                        
+
                         var xhr = new XMLHttpRequest()
                         xhr.open("post", url)
                         xhr.send(formData)
@@ -1176,51 +1201,44 @@
                         }
                     })
                 }
+
+                function updateImageUrlString() {
+                    imageUrlString = file_list.join(",")
+                }
+
                 // 上传的图片展示
                 function newrenderImg() {
                     newPicViewsBox.innerHTML = ""
-                    for (let i = 0; i < file_list.length; i++) {
-                        newPicViewsBox.innerHTML +=
-                            "<div class='img-item'><img style='float:left;display:block;min-width:" +
-                            new_all_picW +
-                            ";min-height: " +
-                            new_all_picH +
-                            "' src='" +
-                            file_list[i] +
-                            "' id='img" +
-                            i +
-                            "'  /><div id='itemdeleteIocn" +
-                            i +
-                            "' class='item-delete'>×</div></div>"
 
-                        $("#newPicViewsBox")
-                            .off("click", "#itemdeleteIocn0")
-                            .on("click", "#itemdeleteIocn0", function () {
-                                file_list.splice(0, 1)
-                                newrenderImg()
-                            })
-                        $("#newPicViewsBox")
-                            .off("click", "#itemdeleteIocn1")
-                            .on("click", "#itemdeleteIocn1", function () {
-                                file_list.splice(1, 1)
-                                newrenderImg()
-                            })
-                        $("#newPicViewsBox")
-                            .off("click", "#itemdeleteIocn2")
-                            .on("click", "#itemdeleteIocn2", function () {
-                                file_list.splice(2, 1)
-                                newrenderImg()
-                            })
+                    for (let i = 0; i < file_list.length; i++) {
+                        newPicViewsBox.innerHTML += `
+                            <div class='img-item'>
+                                <img 
+                                style='float:left;
+                                display:block;
+                                min-width:${new_all_picW};
+                                min-height:${new_all_picH}' 
+                                src='${file_list[i]}' 
+                                id='img${i}' />
+                                <div class='item-delete' data-index="${i}">×</div>
+                            </div>`
                     }
-                    if (file_list.length >= 3) {
-                        console.log("最多三张图片")
-                    } else {
+
+                    if (file_list.length < 3) {
                         newPicViewsBox.innerHTML += newdefaultAdd
                     }
+
+                    // 删除页面图片
+                    $(".item-delete").off("click").on("click", function () {
+                        var index = $(this).attr("data-index")
+                        file_list.splice(index, 1)
+                        updateImageUrlString() // 更新存储的url字符串
+                        newrenderImg()
+                    })
                 }
 
                 // 图片上传 js end
             })
-
+        // }
     </script>
 </div>
