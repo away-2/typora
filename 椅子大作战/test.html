@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100%;
+        }
+
+        .top-content {
+            width: 100%;
+            height: 2000px;
+            background: red;
+        }
+
+        .button {
+            width: 100px;
+            height: 50px;
+            background: blue;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+        }
+
+        /* 蒙层样式 */
+        .sucess-tip-box {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw; 
+            height: 100vh; 
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 5;
+        }
+
+        /* 提示框样式 */
+        .sucess-tip {
+            width: 700px;
+            height: 276px;
+            border-radius: 12px;
+            background: #FDFCF5;
+            position: absolute; 
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 12px;
+        }
+
+        .sucess-tip-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .sucess-tip-text {
+            color: #26333A;
+            text-align: center;
+            font-family: "NotoSansJP-Medium" !important;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%;
+            text-align: center;
+            margin-bottom: 75px;
+        }
+
+        .sucess-tip-close {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+        }
+
+        .sucess-tip .sucess-tip-content .sucess-tip-button {
+            display: flex;
+            gap: 8px;
+        }
+
+        .sucess-tip .sucess-tip-content .sucess-tip-button .button {
+            width: 175px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 40px;
+            background: #26333A;
+            color: #FFF;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-feature-settings: 'ss02' on;
+            font-family: "Moderat-Bold" !important;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0.8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="top-content">123</div>
+        <div class="button" onclick="openTip()">click</div> <!-- 点击按钮时打开蒙层 -->
+        
+        <!-- 蒙层 -->
+        <div class="sucess-tip-box" id="sucess-tip-box">
+            <!-- 提示框 -->
+            <div class="sucess-tip" id="sucess-tip">
+                <svg class="sucess-tip-close" onclick="closeTip()" width="32" height="32" viewBox="0 0 32 32"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_11_20)">
+                        <circle cx="16" cy="16" r="15.25" stroke="#26333A" stroke-width="1.5"></circle>
+                        <path
+                            d="M19.9905 12.4688L16.237 16.0676M12.4835 19.6664L16.237 16.0676M16.237 16.0676L12.4907 12.3213L19.8446 19.6752"
+                            stroke="#26333A" stroke-width="1.5"></path>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_11_20">
+                            <rect width="32" height="32" fill="white"></rect>
+                        </clipPath>
+                    </defs>
+                </svg>
+                <div class="sucess-tip-content">
+                    <div class="sucess-tip-text">
+                        応募完了！
+                    </div>
+                    <div class="sucess-tip-button">
+                        <div class="button back_btn">返回</div>
+                        <div class="button check_btn">查看券</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 显示蒙层和提示框，并禁用页面滚动
+        function openTip() {
+            document.getElementById('sucess-tip-box').style.display = 'block';
+            document.body.style.overflow = 'hidden'; // 禁止滚动
+        }
+
+        // 关闭蒙层和提示框，并恢复页面滚动
+        function closeTip() {
+            document.getElementById('sucess-tip-box').style.display = 'none';
+            document.body.style.overflow = ''; // 恢复默认滚动
+        }
+    </script>
+</body>
+
+</html>

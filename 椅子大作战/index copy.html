@@ -20,6 +20,7 @@
         .email_container {
             max-width: 1384px;
             margin: 60px auto 40px;
+            position: relative;
         }
 
         .label_case {
@@ -218,17 +219,29 @@
             display: none;
         }
 
+        /* 蒙层样式 */
+        .sucess-tip-box {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 5;
+        }
+
+        /* 提示框样式 */
         .sucess-tip {
             width: 700px;
             height: 276px;
             border-radius: 12px;
             background: #FDFCF5;
-            position: fixed;
+            position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
             border-radius: 12px;
-            display: none;
         }
 
         .sucess-tip-content {
@@ -271,6 +284,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            text-decoration: none;
             border-radius: 40px;
             background: #26333A;
             color: #FFF;
@@ -774,8 +788,8 @@
                                 <input type="file" name="images" id="newUpContactImages"
                                     accept="image/gif, image/jpeg, image/png, image/jpg" />
                                 <div id="newPicViewsBox"></div>
-                                <div class="ipt_wrong">不得为空</div>
                             </div>
+                            <div class="ipt_wrong" id="image_ipt">不得为空</div>
                         </div>
                     </div>
                     <div class="label_custom">
@@ -851,10 +865,10 @@
                         <div style="width: 100%;position: relative;">
                             <div class="form_info">「個人情報の取り扱いについて」</div>
                             <div class="form_select_box">
-                                <input type="checkbox" id="Agree" name="agree" />
+                                <input type="checkbox" id="Agree" name="agree" value="agree" />
                                 <label for="agree" class="custom-checkbox">に同意する </label>
                             </div>
-                            <div class="ipt_wrong">この質問は必須です</div>
+                            <div class="ipt_wrong" id="agree_ipt">この質問は必須です</div>
                             <div class="form_guarantee">※「個人情報の取り扱いについて」をお読み頂き、同意出来る場合のみチェックを入れて下さい</div>
                         </div>
                     </div>
@@ -862,28 +876,30 @@
                 </form>
             </div>
         </div>
-        <div class="sucess-tip" id="sucess-tip">
-            <svg class="sucess-tip-close" onclick="closeTip()" width="32" height="32" viewBox="0 0 32 32" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_11_20)">
-                    <circle cx="16" cy="16" r="15.25" stroke="#26333A" stroke-width="1.5"></circle>
-                    <path
-                        d="M19.9905 12.4688L16.237 16.0676M12.4835 19.6664L16.237 16.0676M16.237 16.0676L12.4907 12.3213L19.8446 19.6752"
-                        stroke="#26333A" stroke-width="1.5"></path>
-                </g>
-                <defs>
-                    <clipPath id="clip0_11_20">
-                        <rect width="32" height="32" fill="white"></rect>
-                    </clipPath>
-                </defs>
-            </svg>
-            <div class="sucess-tip-content">
-                <div class="sucess-tip-text">
-                    応募完了！
-                </div>
-                <div class="sucess-tip-button">
-                    <div class="button back_btn">返回</div>
-                    <div class="button check_btn">查看券</div>
+        <div class="sucess-tip-box" id="sucess-tip-box">
+            <div class="sucess-tip" id="sucess-tip">
+                <svg class="sucess-tip-close" onclick="closeTip()" width="32" height="32" viewBox="0 0 32 32"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_11_20)">
+                        <circle cx="16" cy="16" r="15.25" stroke="#26333A" stroke-width="1.5"></circle>
+                        <path
+                            d="M19.9905 12.4688L16.237 16.0676M12.4835 19.6664L16.237 16.0676M16.237 16.0676L12.4907 12.3213L19.8446 19.6752"
+                            stroke="#26333A" stroke-width="1.5"></path>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_11_20">
+                            <rect width="32" height="32" fill="white"></rect>
+                        </clipPath>
+                    </defs>
+                </svg>
+                <div class="sucess-tip-content">
+                    <div class="sucess-tip-text">
+                        応募完了！
+                    </div>
+                    <div class="sucess-tip-button">
+                        <div class="button" onclick="closeTip()">返回</div>
+                        <a href="/buyer/my-coupons" class="button">查看券</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1018,8 +1034,73 @@
             checkValue(ContributionLink)
         }
 
+        const checkValueOther = (id, val) => {
+            const ele = document.getElementById(id)
+            if (val.length === 0) {
+                ele.parentElement.nextElementSibling.style.display = "block"
+                ele.parentElement.nextElementSibling.style.left = "50%"
+                ele.parentElement.nextElementSibling.style.transform = "translate(-50%, -50%)"
+                ele.parentElement.nextElementSibling.style.bottom = "50px"
+                ele.parentElement.style.marginBottom = "30px"
+            } else {
+                ele.parentElement.nextElementSibling.style.display = "none"
+                ele.parentElement.style.marginBottom = "14px"
 
+            }
+        }
 
+        const isAgree = getCheckValue("isAgree")
+        function labelShow(id, name, type, other_id) {
+            const ele = document.getElementById(id)
+            ele.onchange = function () {
+                if (type === "check") {
+                    const val = getCheckValue(name)
+                    checkValueOther(id, val)
+
+                    if (val.includes(other) && other_id) {
+                        const other_ipt = document.getElementById(other_id)
+                        if (other_ipt) {
+                            other_ipt.style.display = "block"
+                        }
+                        const ohter_value = other_ipt.value
+                        // checkValueOther(id, ohter_value)
+                    } else {
+                        const other_ipt = document.getElementById(other_id)
+                        if (other_ipt) {
+                            other_ipt.style.display = "none"
+                        }
+                    }
+                }
+                if (type === "other") {
+                    const other_ipt = document.getElementById(other_id)
+                    other_ipt.style.display = "none"
+                    ele.parentElement.style.marginBottom = "0px"
+                }
+            }
+        }
+        labelShow("Agree", "agree", "check", "agree_ipt")
+        labelShow("newUpContactImages", "images", "other", "image_ipt")
+
+        function openTip() {
+            document.getElementById('sucess-tip-box').style.display = 'block';
+            document.body.style.overflow = 'hidden'; // 禁止滚动
+        }
+
+        function closeTip() {
+            document.getElementById('sucess-tip-box').style.display = 'none';
+            document.body.style.overflow = ''; // 恢复
+        }
+
+        function labelShowOther(ele, val) {
+            if (!val) {
+                ele.parentElement.nextElementSibling.style.display = "block"
+                ele.parentElement.style.marginBottom = "20px"
+                ele.parentElement.nextElementSibling.style.bottom = "5px"
+            } else {
+                ele.parentElement.nextElementSibling.style.display = "none"
+                ele.parentElement.style.marginBottom = "0px"
+            }
+        }
 
         loadScript(
             "https://s3.springbeetle.asia/asia/trantor/attachments/JP/jquery-3.6.0.min.js",
@@ -1040,14 +1121,9 @@
                         const isRecycle = getRadioValue("isRecycle") ? true : false
                         const source = getRadioValue("source")
                         const isAgree = getCheckValue("agree")
+                        checkValueOther("Agree", isAgree)
 
-                        if (isAgree.length == 0) {
-                            Agree.parentElement.nextElementSibling.style.display = "block"
-                            Agree.parentElement.nextElementSibling.style.left = "50%"
-                            Agree.parentElement.nextElementSibling.style.transform = "translate(-50%, -50%)"
-                            Agree.parentElement.nextElementSibling.style.bottom = "50px"
-                            Agree.parentElement.style.marginBottom = "30px"
-                        }
+                        labelShowOther(newPicViewsBox, imageUrlString)
 
                         if (emailReg.test(Email.value)) {
                             Email.nextElementSibling.style.display = "none"
@@ -1111,7 +1187,7 @@
                                     // 成功
                                     if (msg.code === 200) {
                                         // window.location.href = "/contact/success"
-
+                                        openTip()
                                     }
                                 },
                                 error: function (res) {
