@@ -20,6 +20,7 @@
         .email_container {
             max-width: 1384px;
             margin: 60px auto 40px;
+            position: relative;
         }
 
         .label_case {
@@ -44,6 +45,7 @@
             font-weight: 400;
             line-height: 24px;
             letter-spacing: 0.8px;
+            display: block;
         }
 
         /* .label_class::after {
@@ -57,19 +59,22 @@
         } */
 
         .ipt_wrong {
-            color: #ef2e13;
-            font-family: Noto Sans JP;
-            font-size: 16px;
-            letter-spacing: 0.05em;
+            color: #EF2D12;
+            font-family: "NotoSansJP-Regular";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            letter-spacing: 0.7px;
             display: none;
             position: absolute;
             left: 0;
-            bottom: -25px;
+            bottom: -15px;
         }
 
         .email_submit_btn {
             cursor: pointer;
-            width: 522px;
+            width: 460px;
             height: 52px;
             border-radius: 40px;
             display: flex;
@@ -77,19 +82,20 @@
             align-items: center;
             color: #fff;
             background-color: #26333a;
-            font-family: Moderat;
+            font-family: "Moderat-Bold" !important;
             font-weight: 700;
             font-size: 16px;
-            line-height: 16px;
-            margin: 120px auto 200px auto;
+            line-height: 100%;
+            margin: 50px auto 100px;
         }
 
         .textarea_class {
             border: 1px solid #a3a3a3;
             border-radius: 4px;
             background-color: #fdfcf5;
+            height: 180px;
             padding: 10px;
-            font-size: 20px;
+            font-size: 18px;
         }
 
         .input_class {
@@ -97,7 +103,7 @@
             border-radius: 4px;
             background-color: #fdfcf5;
             padding: 10px;
-            font-size: 20px;
+            font-size: 18px;
         }
 
         .ipt_class {
@@ -168,18 +174,75 @@
             color: #26333a;
         }
 
-        .sucess-tip {
-            width: 670px;
-            height: 359px;
-            border-radius: 12px;
-            background: #fff;
+        /*** 复选框 */
+        .check_box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .check_box label {
+            font-size: 20px;
+            font-family: Noto Sans JP;
+            letter-spacing: 0.05em;
+            color: #26333a;
+        }
+
+        .check_box:last-of-type {
+            margin-bottom: 0;
+        }
+
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin-top: 2px;
+            margin-right: 8px;
+            position: relative;
+        }
+
+        input[type="checkbox"]::after {
+            cursor: pointer;
+            background: #fdfcf5;
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 18px;
+            height: 18px;
+            border: 1px solid #a3a3a3;
+            border-radius: 2px;
+            box-sizing: border-box;
+            border-radius: 2px;
+        }
+
+        input[type="checkbox"]:checked::after {
+            display: none;
+        }
+
+        /* 蒙层样式 */
+        .sucess-tip-box {
             position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 5;
+        }
+
+        /* 提示框样式 */
+        .sucess-tip {
+            width: 700px;
+            height: 276px;
+            border-radius: 12px;
+            background: #FDFCF5;
+            position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
             border-radius: 12px;
-            box-shadow: 0px 4px 40px 0px #0000001a;
-            display: none;
         }
 
         .sucess-tip-content {
@@ -193,13 +256,15 @@
         }
 
         .sucess-tip-text {
-            font-family: Noto Sans JP;
-            font-size: 18px;
-            font-weight: 700;
-            line-height: 26px;
-            letter-spacing: 0.05em;
+            color: #26333A;
             text-align: center;
-            color: #35b37e;
+            font-family: "NotoSansJP-Medium" !important;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%;
+            text-align: center;
+            margin-bottom: 75px;
         }
 
         .sucess-tip-close {
@@ -209,8 +274,29 @@
             cursor: pointer;
         }
 
-        .sucess-tip-icon {
-            margin-bottom: 35px;
+        .sucess-tip .sucess-tip-content .sucess-tip-button {
+            display: flex;
+            gap: 8px;
+        }
+
+        .sucess-tip .sucess-tip-content .sucess-tip-button .button {
+            width: 175px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            border-radius: 40px;
+            background: #26333A;
+            color: #FFF;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-feature-settings: 'ss02' on;
+            font-family: "Moderat-Bold" !important;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0.8px;
         }
 
         .label_custom {
@@ -242,96 +328,67 @@
             line-height: 130%;
             letter-spacing: 0.9px;
             margin-left: 14px;
+            max-width: 310px;
         }
 
         .label_custom .label_prefix .prefix_title span {
             color: #004df2;
         }
 
-        @media screen and (max-width: 1440px) {
-            .email_container {
-                max-width: 890px;
-            }
+        .label_custom .form_info {
+            color: #004DF2;
+            text-align: center;
+            font-family: "NotoSansJP-Regular" !important;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            letter-spacing: 0.8px;
+            margin-top: 35px;
         }
 
-        @media screen and (max-width: 1024px) {
-            .email_container {
-                max-width: 686px;
-            }
-
-            .label_class {
-                font-size: 20px;
-                line-height: 28px;
-            }
-
-            .custom-label {
-                font-size: 16px;
-                line-height: 19.2px;
-            }
-
-            .ipt_class {
-                height: 43px;
-                font-size: 16px;
-                line-height: 19.2px;
-            }
-
-            .email_submit_btn {
-                width: 380px;
-                height: 52px;
-                margin-top: 77px;
-            }
+        .label_custom .form_select_box {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 14px 0;
+            position: relative;
         }
 
-        @media screen and (max-width: 768px) {
-            .email_container {
-                width: 85%;
-            }
-
-            .label_class {
-                font-size: 18px;
-                line-height: 22px;
-            }
-
-            .custom-label {
-                font-size: 16px;
-                line-height: 19.2px;
-            }
-
-            .ipt_class {
-                height: 43px;
-                font-size: 16px;
-                line-height: 19.2px;
-            }
-
-            .email_submit_btn {
-                width: 100%;
-                height: 40px;
-                margin-top: 50px;
-            }
-
-            .sucess-tip {
-                width: 85%;
-                height: 250px;
-            }
-
-            .sucess-tip-text {
-                font-size: 16px;
-            }
-
-            .sucess-tip-icon {
-                width: 80px;
-                height: 80px;
-            }
+        .label_custom .form_select_box .custom-checkbox {
+            color: #26333A;
+            font-family: "NotoSansJP-Regular" !important;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            letter-spacing: 0.8px;
         }
-    </style>
-    <style>
+
+        .label_custom .form_guarantee {
+            color: rgba(38, 51, 58, 0.80);
+            font-family: "NotoSansJP-Regular" !important;
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            letter-spacing: 0.8px;
+            margin-bottom: 35px;
+        }
+
+        /* 图片上传相关样式 */
         #newPicViewsBox {
-            height: 102px;
+            /* height: 102px; */
+            /* margin-top: 6px; */
+            display: inline-block;
         }
 
         #newPicViewsBox #add_input {
             display: flex;
             width: max-content;
+            padding-top: 6px;
         }
 
         .img-item {
@@ -348,6 +405,7 @@
             float: left;
             position: relative;
             overflow: hidden;
+            margin-top: 6px;
         }
 
         .item-add {
@@ -379,7 +437,216 @@
         #newUpContactImages {
             display: none;
         }
+
+
+        @media screen and (max-width: 1440px) {
+            .email_container {
+                max-width: 1000px;
+            }
+
+            .label_custom .label_prefix {
+                width: 240px;
+
+            }
+
+            .email_submit_btn {
+                margin: 40px auto 80px;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            .email_container {
+                max-width: 768px;
+            }
+
+            .label_custom .label_prefix {
+                width: 220px;
+
+            }
+
+            .label_custom .label_prefix .prefix_title {
+                font-size: 14px;
+                letter-spacing: 0.7px;
+                margin: 0 10px;
+            }
+
+            .label_class {
+                font-size: 14px;
+            }
+
+            .label_case {
+                margin: 0 14px;
+            }
+
+            .custom-label {
+                font-size: 16px;
+            }
+
+            .ipt_class {
+                height: 43px;
+                font-size: 16px;
+            }
+
+            .textarea_class {
+                height: 180px;
+                padding: 10px;
+                font-size: 16px;
+            }
+
+            .input_class {
+                padding: 10px;
+                font-size: 16px;
+            }
+
+            .email_submit_btn {
+                margin: 40px auto 60px;
+            }
+
+            .label_custom .form_info {
+                font-size: 14px;
+                letter-spacing: 0.7px;
+                margin-top: 38px;
+            }
+
+            .label_custom .form_select_box .custom-checkbox {
+                font-size: 14px;
+                letter-spacing: 0.7px;
+            }
+
+            .label_custom .form_guarantee {
+                font-size: 14px;
+                letter-spacing: 0.7px;
+                margin-bottom: 38px;
+            }
+
+            input[type="checkbox"] {
+                width: 16px;
+                height: 16px;
+            }
+
+            input[type="checkbox"]::after {
+                width: 16px;
+                height: 16px;
+            }
+
+        }
+
+        @media screen and (max-width: 768px) {
+            .email_container {
+                max-width: 100%;
+                margin: 0 20px;
+            }
+
+            .label_custom .label_prefix {
+                width: 72px;
+
+            }
+
+            .label_custom .label_prefix .prefix_title {
+                font-size: 12px;
+                letter-spacing: 0.6px;
+                margin: 0 6px;
+            }
+
+            .label_class {
+                font-size: 12px;
+            }
+
+            .custom-label {
+                font-size: 12px;
+            }
+
+            .ipt_class {
+                height: 43px;
+                font-size: 12px;
+            }
+
+            .ipt_wrong {
+                font-size: 12px;
+            }
+
+            .email_submit_btn {
+                width: 335px;
+                height: 42px;
+                font-size: 14px;
+            }
+
+            .sucess-tip {
+                width: 330px;
+                height: 280px;
+            }
+
+            .sucess-tip-content {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 15px;
+            }
+
+            .sucess-tip-text {
+                font-size: 16px;
+                margin-bottom: 45px;
+            }
+
+            .sucess-tip-close {
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                cursor: pointer;
+            }
+
+            .sucess-tip .sucess-tip-content .sucess-tip-button {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            /* 自定义的radio按钮 */
+            .custom-radio {
+                width: 18px;
+                height: 18px;
+            }
+
+            /* 选中状态的样式 */
+            input[type="radio"]:checked+.custom-radio::after {
+                width: 18px;
+                height: 18px;
+            }
+
+            .textarea_class {
+                height: 180px;
+                padding: 10px;
+                font-size: 12px;
+            }
+
+            .input_class {
+                padding: 10px;
+                font-size: 12px;
+            }
+
+            .label_custom .form_info {
+                font-size: 12px;
+                letter-spacing: 0.6px;
+                margin-top: 24px;
+            }
+
+            .label_custom .form_select_box .custom-checkbox {
+                font-size: 12px;
+                letter-spacing: 0.6px;
+            }
+
+            .label_custom .form_guarantee {
+                font-size: 12px;
+                letter-spacing: 0.6px;
+                margin: 0 auto 24px;
+                max-width: 250px;
+            }
+        }
     </style>
+
     <div class="email_container">
         <!-- form module -->
         <div class="form_case" id="form-case">
@@ -393,7 +660,7 @@
                         </div>
                         <div class="label_case" id="Q1">
                             <label class="label_class">プレゼント抽選に当選された場合の宛名になります。</label>
-                            <input id="Name" class="input_class"></input>
+                            <input id="Name" class="input_class" maxlength="80"></input>
                             <div class="ipt_wrong">不得为空</div>
                         </div>
                     </div>
@@ -405,7 +672,7 @@
                         </div>
                         <div class="label_case" id="Q2">
                             <label class="label_class">当選された場合、サイト上での当選者発表の名前として使用いたします。</label>
-                            <input id="NickName" class="input_class"></input>
+                            <input id="NickName" class="input_class" maxlength="80"></input>
                             <div class="ipt_wrong">不得为空</div>
                         </div>
                     </div>
@@ -417,7 +684,7 @@
                         </div>
                         <div class="label_case" id="Q3">
                             <label class="label_class">プレゼント抽選に当選された場合の発送先となります。</label>
-                            <textarea id="otherSuggestions" class="textarea_class" rows="3"></textarea>
+                            <textarea id="Address" class="textarea_class" rows="4" maxlength="300"></textarea>
                             <div class="ipt_wrong">不得为空</div>
                         </div>
                     </div>
@@ -487,7 +754,7 @@
                         </div>
                         <div class="label_case" id="Q6">
                             <label class="label_class">半角英数文字で入力お願いします。</label>
-                            <input id="otherSuggestions" class="input_class"></input>
+                            <input id="Email" class="input_class" maxlength="80"></input>
                             <div class="ipt_wrong">不得为空</div>
                         </div>
                     </div>
@@ -499,7 +766,7 @@
                         </div>
                         <div class="label_case" id="Q7">
                             <label class="label_class">半角数字で入力お願いします。</label>
-                            <input id="otherSuggestions" class="input_class"></input>
+                            <input id="Phone" class="input_class"></input>
                             <div class="ipt_wrong">不得为空</div>
                         </div>
                     </div>
@@ -511,7 +778,7 @@
                         </div>
                         <div class="label_case" id="Q8">
                             <!-- <label class="label_class">当選された場合、サイト上での当選者発表の名前として使用いたします。</label> -->
-                            <input id="otherSuggestions" class="input_class"></input>
+                            <input id="ContributionLink" class="input_class"></input>
                             <div class="ipt_wrong">不得为空</div>
                         </div>
                     </div>
@@ -528,8 +795,8 @@
                                 <input type="file" name="images" id="newUpContactImages"
                                     accept="image/gif, image/jpeg, image/png, image/jpg" />
                                 <div id="newPicViewsBox"></div>
-                                <div class="ipt_wrong">不得为空</div>
                             </div>
+                            <div class="ipt_wrong" id="image_ipt">不得为空</div>
                         </div>
                     </div>
                     <div class="label_custom">
@@ -540,12 +807,12 @@
                         </div>
                         <div class="label_case p18" id="Q10">
                             <label class="radio_box">
-                                <input type="radio" name="isRecycle" value="必要" checked />
+                                <input type="radio" name="isRecycle" value="true" checked />
                                 <span class="custom-radio"></span>
                                 <span class="custom-label">必要</span>
                             </label>
                             <label class="radio_box">
-                                <input type="radio" name="isRecycle" value="不要" />
+                                <input type="radio" name="isRecycle" value="" />
                                 <span class="custom-radio"></span>
                                 <span class="custom-label">不要</span>
                             </label>
@@ -598,150 +865,54 @@
                         </div>
                         <div class="label_case" id="Q12">
                             <label class="label_class">チェア・椅子に関しての思い出エピソード等を教えてください。</label>
-                            <textarea id="otherSuggestions" class="textarea_class" rows="4"></textarea>
+                            <textarea id="Recall" class="textarea_class" rows="4" maxlength="300"></textarea>
                         </div>
                     </div>
-                    <button class="email_submit_btn" id="submit">送 信</button>
+                    <div class="label_custom">
+                        <div style="width: 100%;position: relative;">
+                            <div class="form_info">「個人情報の取り扱いについて」</div>
+                            <div class="form_select_box">
+                                <input type="checkbox" id="Agree" name="agree" value="agree" />
+                                <label for="agree" class="custom-checkbox">に同意する </label>
+                            </div>
+                            <div class="ipt_wrong" id="agree_ipt">この質問は必須です</div>
+                            <div class="form_guarantee">※「個人情報の取り扱いについて」をお読み頂き、同意出来る場合のみチェックを入れて下さい</div>
+                        </div>
+                    </div>
+                    <button class="email_submit_btn" id="submit">内容を確認する</button>
                 </form>
             </div>
         </div>
-    </div>
-
-    <div class="sucess-tip" id="sucess-tip">
-        <svg class="sucess-tip-close" onclick="closeTip()" width="32" height="32" viewBox="0 0 32 32" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_11_20)">
-                <circle cx="16" cy="16" r="15.25" stroke="#26333A" stroke-width="1.5"></circle>
-                <path
-                    d="M19.9905 12.4688L16.237 16.0676M12.4835 19.6664L16.237 16.0676M16.237 16.0676L12.4907 12.3213L19.8446 19.6752"
-                    stroke="#26333A" stroke-width="1.5"></path>
-            </g>
-            <defs>
-                <clipPath id="clip0_11_20">
-                    <rect width="32" height="32" fill="white"></rect>
-                </clipPath>
-            </defs>
-        </svg>
-        <div class="sucess-tip-content">
-            <svg class="sucess-tip-icon" width="136" height="136" viewBox="0 0 136 136" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M67.9998 0C30.4428 0 0 30.445 0 67.9999C0 105.555 30.4428 136 67.9998 136C105.555 136 136 105.555 136 67.9999C136 30.445 105.555 0 67.9998 0ZM105.19 51.8467L60.8613 96.1739C59.8254 97.212 58.1431 97.212 57.107 96.1739L30.8103 69.8771C29.7744 68.8412 29.7744 67.1589 30.8103 66.1219L39.0757 57.8576C40.1116 56.8206 41.7939 56.8206 42.8299 57.8576L58.9844 74.0098L93.1701 39.8261C94.206 38.7891 95.8884 38.7891 96.9245 39.8261L105.19 48.0904C106.228 49.1274 106.228 50.8097 105.19 51.8467Z"
-                    fill="#35B37E"></path>
-            </svg>
-            <div class="sucess-tip-text">
-                アンケートにご協力いただきありがとうございました。
+        <div class="sucess-tip-box" id="sucess-tip-box">
+            <div class="sucess-tip" id="sucess-tip">
+                <svg class="sucess-tip-close" onclick="closeTip()" width="32" height="32" viewBox="0 0 32 32"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_11_20)">
+                        <circle cx="16" cy="16" r="15.25" stroke="#26333A" stroke-width="1.5"></circle>
+                        <path
+                            d="M19.9905 12.4688L16.237 16.0676M12.4835 19.6664L16.237 16.0676M16.237 16.0676L12.4907 12.3213L19.8446 19.6752"
+                            stroke="#26333A" stroke-width="1.5"></path>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_11_20">
+                            <rect width="32" height="32" fill="white"></rect>
+                        </clipPath>
+                    </defs>
+                </svg>
+                <div class="sucess-tip-content">
+                    <div class="sucess-tip-text">
+                        応募完了！
+                    </div>
+                    <div class="sucess-tip-button">
+                        <div class="button" onclick="closeTip()">返回</div>
+                        <a href="/buyer/my-coupons" class="button">查看券</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
     <script>
-        var file_list = []
-        var new_all_picW = "100px"
-        var new_all_picH = "100px"
-        var newfile = []
-        var newdefaultAdd = `
-      <div id="add_input" onclick="javascript:document.getElementById('newUpContactImages').click()">
-        <svg class="item-add" width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="0.393668" y="0.228629" width="100.63" height="100.63" rx="3.77137" fill="#F6F4F1" stroke="#26333A" stroke-width="0.457258"/>
-          <path d="M32 50.1311H70.0874M51.0437 31.0874L51.0437 69.1748" stroke="#26333A" stroke-opacity="0.1" stroke-width="6.14313" stroke-linecap="round"/>
-        </svg>
-      </div>`
-        var newPicViewsBox = document.getElementById("newPicViewsBox")
-        newrenderImg()
-        // input发生改变
-        $("#newUpContactImages").on("change", function () {
-            onc()
-        })
-        // 调图片上传接口
-        function onc() {
-            var itemAdd = document.getElementById("add_input")
-            var files = document.getElementById("newUpContactImages").files
-            var files_ejz = document.getElementById("newUpContactImages").files[0]
-            console.log(files[0], "图片");
-            if (!files_ejz) {
-                return
-            }
-            itemAdd.innerHTML = '<span style="font-size:25px">Loading...</span>'
-            postData("/api/trantor/file-storage/getUploadPreSignedUrl", {
-                file: files_ejz,
-            }).then((res) => {
-                res = JSON.parse(res)
-                if (res[Object.keys(res)[0]]) {
-                    file_list.push(res[Object.keys(res)[0]])
-                    newrenderImg()
-                } else {
-                    alert(res.msg)
-                }
-            })
-        }
-        // 定义上传图片方法
-        function postData(url, data) {
-            return new Promise((resolve, reject) => {
-                var formData = new FormData()
-                for (let key in data) {
-                    formData.append(key, data[key])
-                }
-                console.log(formData, "formData");
-
-                var xhr = new XMLHttpRequest()
-                xhr.open("post", url)
-                xhr.send(formData)
-
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState == 4 && xhr.status == 200) {
-                        resolve(xhr.response)
-                    } else if (xhr.status == 500) {
-                        reject("fail")
-                    }
-                }
-            })
-        }
-        // 上传的图片展示
-        function newrenderImg() {
-            newPicViewsBox.innerHTML = ""
-            for (let i = 0; i < file_list.length; i++) {
-                newPicViewsBox.innerHTML +=
-                    "<div class='img-item'><img style='float:left;display:block;min-width:" +
-                    new_all_picW +
-                    ";min-height: " +
-                    new_all_picH +
-                    "' src='" +
-                    file_list[i] +
-                    "' id='img" +
-                    i +
-                    "'  /><div id='itemdeleteIocn" +
-                    i +
-                    "' class='item-delete'>×</div></div>"
-
-                $("#newPicViewsBox")
-                    .off("click", "#itemdeleteIocn0")
-                    .on("click", "#itemdeleteIocn0", function () {
-                        file_list.splice(0, 1)
-                        newrenderImg()
-                    })
-                $("#newPicViewsBox")
-                    .off("click", "#itemdeleteIocn1")
-                    .on("click", "#itemdeleteIocn1", function () {
-                        file_list.splice(1, 1)
-                        newrenderImg()
-                    })
-                $("#newPicViewsBox")
-                    .off("click", "#itemdeleteIocn2")
-                    .on("click", "#itemdeleteIocn2", function () {
-                        file_list.splice(2, 1)
-                        newrenderImg()
-                    })
-            }
-            if (file_list.length >= 3) {
-                console.log("最多三张图片")
-            } else {
-                newPicViewsBox.innerHTML += newdefaultAdd
-            }
-        }
-
-    </script>
-
- <script>
         function loadScript(url, callback) {
             document.getElementById("") && document.getElementById("").remove()
             var script = document.createElement("script")
@@ -770,32 +941,11 @@
             }
         }
 
-        const url = window.location.href
-        const urlObj = new URL(url)
-        const params = new URLSearchParams(urlObj.search)
-        const email = params.get("email")
-        const orderNo = params.get("orderNo")
-
-        const checkValue = (id, val) => {
-            const ele = document.getElementById(id)
-            if (val === undefined || val?.length === 0 || val === "") {
-                ele.lastElementChild.style.display = "block"
-            } else {
-                ele.lastElementChild.style.display = "none"
-            }
-        }
-
-        const checkValueOther = (id, val) => {
-            const ele = document.getElementById(id)
-            if (val === "") {
-                ele.lastElementChild.style.display = "block"
-                ele.lastElementChild.style.left = "20px"
-            } else {
-                ele.lastElementChild.style.display = "none"
-                ele.lastElementChild.style.left = "0px"
-            }
-        }
-
+        // let isTourist = JSON.parse(localStorage.getItem("user-storage-data")).data.isTourist
+        // if (isTourist) {
+        //     window.location.href = "/login"
+        // } else {
+        // 表单相关 js start
         function getRadioValue(name) {
             const radios = document.querySelectorAll("input[name=" + name + "]")
             let selectedValue
@@ -818,226 +968,361 @@
             return selectedValue
         }
 
-        function getTextAreaValue(id) {
-            const ele = document.getElementById(id)
-            return ele.value
+        const Name = document.getElementById("Name")
+        const NickName = document.getElementById("NickName")
+        const Address = document.getElementById("Address")
+        const Email = document.getElementById("Email")
+        const Phone = document.getElementById("Phone")
+        const ContributionLink = document.getElementById("ContributionLink")
+        const Agree = document.getElementById("Agree")
+        const emailReg =
+            /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
+
+        const phoneReg = /^\d{10,11}$/
+
+
+        let [thisName, thisNickName, thisAddress, thisEmail, thisPhone, thisContributionLink] =
+            [null, null, null, null, null, null]
+
+        const checkValue = (ele) => {
+            if (ele.value.trim() === "") {
+                ele.nextElementSibling.style.display = "block"
+                ele.parentElement.style.marginBottom =
+                    window.innerWidth > 768 ? "25px" : "20px"
+                return false
+            } else {
+                ele.nextElementSibling.style.display = "none"
+                ele.parentElement.style.marginBottom = "0px"
+                // window.innerWidth > 768 ? "0px" : "0px"
+                return true
+            }
+        }
+        Name.onblur = function () {
+            checkValue(Name)
+        }
+        NickName.onblur = function () {
+            checkValue(NickName)
+        }
+        Address.onblur = function () {
+            checkValue(Address)
+        }
+        Email.onblur = function () {
+            checkValue(Email)
+            if (emailReg.test(this.value)) {
+                this.nextElementSibling.style.display = "none"
+                this.parentElement.style.marginBottom = "0px"
+                // window.innerWidth > 768 ? "20px" : "12px"
+                thisEmail = true
+            } else {
+                this.nextElementSibling.style.display = "block"
+                this.parentElement.style.marginBottom =
+                    window.innerWidth > 768 ? "25px" : "20px"
+                thisEmail = false
+            }
         }
 
+        Phone.onblur = function () {
+            checkValue(Phone)
+            if (phoneReg.test(this.value)) {
+                this.nextElementSibling.style.display = "none"
+                this.parentElement.style.marginBottom = "0px"
+                // window.innerWidth > 768 ? "20px" : "12px"
+                thisPhone = true
+            } else {
+                this.nextElementSibling.style.display = "block"
+                // this.nextElementSibling.innerText = "请进口正确格式"
+                this.parentElement.style.marginBottom =
+                    window.innerWidth > 768 ? "25px" : "20px"
+                thisPhone = false
+            }
+        }
+
+        ContributionLink.onblur = function () {
+            checkValue(ContributionLink)
+        }
+
+        const checkValueOther = (id, val) => {
+            const ele = document.getElementById(id)
+            if (val.length === 0) {
+                ele.parentElement.nextElementSibling.style.display = "block"
+                ele.parentElement.nextElementSibling.style.left = "50%"
+                ele.parentElement.nextElementSibling.style.transform = "translate(-50%, -50%)"
+                ele.parentElement.nextElementSibling.style.bottom = window.innerWidth > 768 ? "50px" : "66px"
+                ele.parentElement.style.marginBottom = window.innerWidth > 768 ? "30px" : "25px"
+            } else {
+                ele.parentElement.nextElementSibling.style.display = "none"
+                ele.parentElement.style.marginBottom = "14px"
+
+            }
+        }
+
+        const isAgree = getCheckValue("isAgree")
         function labelShow(id, name, type, other_id) {
             const ele = document.getElementById(id)
             ele.onchange = function () {
-                if (type === "radio") {
-                    const val = getRadioValue(name)
-                    checkValue(id, val)
-
-                    if (val === other_id) {
-                        const ohter_ipt = document.getElementById(other_id)
-                        if (ohter_ipt) {
-                            ohter_ipt.style.display = "block"
-                        }
-                        // checkValueOther(id, ohter_ipt.value)
-                    } else {
-                        const ohter_ipt = document.getElementById(other_id)
-                        if (ohter_ipt) {
-                            ohter_ipt.style.display = "none"
-                        }
-                    }
-                }
                 if (type === "check") {
                     const val = getCheckValue(name)
-                    checkValue(id, val)
+                    checkValueOther(id, val)
 
                     if (val.includes(other) && other_id) {
-                        const ohter_ipt = document.getElementById(other_id)
-                        if (ohter_ipt) {
-                            ohter_ipt.style.display = "block"
+                        const other_ipt = document.getElementById(other_id)
+                        if (other_ipt) {
+                            other_ipt.style.display = "block"
                         }
-                        const ohter_value = ohter_ipt.value
+                        const ohter_value = other_ipt.value
                         // checkValueOther(id, ohter_value)
                     } else {
-                        const ohter_ipt = document.getElementById(other_id)
-                        if (ohter_ipt) {
-                            ohter_ipt.style.display = "none"
+                        const other_ipt = document.getElementById(other_id)
+                        if (other_ipt) {
+                            other_ipt.style.display = "none"
                         }
                     }
                 }
-            }
-
-            if (other_id) {
-                const ohter_ipt = document.getElementById(other_id)
-                ohter_ipt.onblur = function () {
-                    if (ohter_ipt.value && ohter_ipt.value !== "") {
-                    } else {
-                        checkValueOther(id, ohter_ipt.value)
-                    }
+                if (type === "other") {
+                    const other_ipt = document.getElementById(other_id)
+                    other_ipt.style.display = "none"
+                    ele.parentElement.style.marginBottom = "0px"
                 }
             }
         }
+        labelShow("Agree", "agree", "check", "agree_ipt")
+        labelShow("newUpContactImages", "images", "other", "image_ipt")
 
-        labelShow("Q1", "sex", "radio")
-        labelShow("Q2", "age", "radio")
-        labelShow("Q3", "familyComposition", "radio", "q3_ohter")
-
-        labelShow("Q4", "roomSize", "radio")
-        labelShow("Q5", "revenue", "radio")
-        labelShow("Q6", "occupation", "radio")
-        labelShow("Q7", "hobbies", "check", "q7_ohter")
-        labelShow("Q8", "reasonForPurchase", "check", "q8_ohter")
-        labelShow("Q9", "considerations", "check", "q9_ohter")
-        labelShow("Q10", "sourcesOfInformation", "check", "q10_ohter")
-        labelShow("Q11", "chairInformationSources", "check", "q11_ohter")
-
-        function closeTip() {
-            document.getElementById("sucess-tip").style.display = "none"
+        function labelShowOther(ele, val) {
+            if (!val) {
+                ele.parentElement.nextElementSibling.style.display = "block"
+                ele.parentElement.style.marginBottom = "20px"
+                ele.parentElement.nextElementSibling.style.bottom = "5px"
+            } else {
+                ele.parentElement.nextElementSibling.style.display = "none"
+                ele.parentElement.style.marginBottom = "0px"
+            }
         }
 
-        const other = "その他（具体的に記入）"
+        function openTip() {
+            document.getElementById('sucess-tip-box').style.display = 'block';
+            document.body.style.overflow = 'hidden'; // 禁止滚动
+        }
 
+        function closeTip() {
+            document.getElementById('sucess-tip-box').style.display = 'none';
+            document.body.style.overflow = ''; // 恢复
+        }
         loadScript(
-            "https://staticprod.site.flexispot.com/dev/trantor/attachments/jquery-3.6.0.min.js",
+            "https://s3.springbeetle.asia/asia/trantor/attachments/JP/jquery-3.6.0.min.js",
             function () {
                 document
                     .getElementById("submit")
                     .addEventListener("click", function (e) {
                         e.preventDefault()
+                        thisName = checkValue(Name)
+                        thisNickName = checkValue(NickName)
+                        thisAddress = checkValue(Address)
+                        thisEmail = checkValue(Email)
+                        thisPhone = checkValue(Phone)
+                        thisContributionLink = checkValue(ContributionLink)
 
                         const sex = getRadioValue("sex")
-                        checkValue("Q1", sex)
                         const age = getRadioValue("age")
-                        checkValue("Q2", age)
+                        const isRecycle = getRadioValue("isRecycle") ? true : false
+                        const source = getRadioValue("source")
+                        const isAgree = getCheckValue("agree")
+                        checkValueOther("Agree", isAgree)
 
-                        const familyComposition = getRadioValue("familyComposition")
-                        checkValue("Q3", familyComposition)
-                        const q3_ohter = document.getElementById("q3_ohter").value
-                        if (familyComposition === "q3_ohter") {
-                            checkValueOther("Q3", q3_ohter)
+                        labelShowOther(newPicViewsBox, imageUrlString)
+
+                        if (emailReg.test(Email.value)) {
+                            Email.nextElementSibling.style.display = "none"
+                            Email.parentElement.style.marginBottom =
+                                window.innerWidth > 768 ? "20px" : "12px"
+                            // thisEmail = true
+                        } else {
+                            Email.nextElementSibling.style.display = "block"
+                            Email.parentElement.style.marginBottom =
+                                window.innerWidth > 768 ? "25px" : "20px"
+                            // thisEmail = false
                         }
 
-                        const roomSize = getRadioValue("roomSize")
-                        checkValue("Q4", roomSize)
-                        const revenue = getRadioValue("revenue")
-                        checkValue("Q5", revenue)
-                        const occupation = getRadioValue("occupation")
-                        checkValue("Q6", occupation)
-
-                        const hobbies = getCheckValue("hobbies")
-                        checkValue("Q7", hobbies)
-                        const q7_ohter = document.getElementById("q7_ohter").value
-                        if (hobbies.includes(other)) {
-                            checkValueOther("Q7", q7_ohter)
+                        if (phoneReg.test(Phone.value)) {
+                            Phone.nextElementSibling.style.display = "none"
+                            Phone.parentElement.style.marginBottom =
+                                window.innerWidth > 768 ? "20px" : "12px"
+                        } else {
+                            Phone.nextElementSibling.style.display = "block"
+                            Phone.parentElement.style.marginBottom =
+                                window.innerWidth > 768 ? "25px" : "20px"
                         }
 
-                        const reasonForPurchase = getCheckValue("reasonForPurchase")
-                        checkValue("Q8", reasonForPurchase)
-                        const q8_ohter = document.getElementById("q8_ohter").value
-                        if (reasonForPurchase.includes(other)) {
-                            checkValueOther("Q8", q8_ohter)
-                        }
+                        if (
+                            thisName &&
+                            thisNickName &&
+                            thisAddress &&
+                            thisEmail &&
+                            thisPhone &&
+                            thisContributionLink &&
+                            imageUrlString &&
+                            isAgree.length > 0
+                        ) {
+                            let data = [
+                                {
+                                    site: `JP`,
+                                    name: $("#Name").val(),
+                                    nickName: $("#NickName").val(),
+                                    address: $("#Address").val(),
+                                    email: $("#Email").val(),
+                                    phone: $("#Phone").val(),
+                                    contributionLink: $("#ContributionLink").val(),
+                                    recall: $("#Recall").val(),
+                                    imageUrl: imageUrlString,
+                                    source,
+                                    sex,
+                                    age,
+                                    ifToRecycleChairs: Boolean(isRecycle),
+                                },
+                            ]
 
-                        const considerations = getCheckValue("considerations")
-                        checkValue("Q9", considerations)
-                        const q9_ohter = document.getElementById("q9_ohter").value
-                        if (considerations.includes(other)) {
-                            checkValueOther("Q9", q9_ohter)
-                        }
 
-                        const sourcesOfInformation = getCheckValue("sourcesOfInformation")
-                        checkValue("Q10", sourcesOfInformation)
-                        const q10_ohter = document.getElementById("q10_ohter").value
-                        if (sourcesOfInformation.includes(other)) {
-                            checkValueOther("Q10", q10_ohter)
-                        }
-
-                        const chairInformationSources = getCheckValue(
-                            "chairInformationSources"
-                        )
-                        checkValue("Q11", chairInformationSources)
-                        const q11_ohter = document.getElementById("q11_ohter").value
-                        if (chairInformationSources.includes(other)) {
-                            checkValueOther("Q11", q11_ohter)
-                        }
-
-                        const otherSuggestions = getTextAreaValue("otherSuggestions")
-
-                        //必填校验提示
-                        const ipt_wrong = document.querySelectorAll(".ipt_wrong")
-                        for (let i = 0; i < ipt_wrong.length; i++) {
-                            if (ipt_wrong[i].style.display === "block") {
-                                ipt_wrong[i].scrollIntoView({
-                                    block: "center",
-                                    behavior: "smooth",
-                                })
-                                return
+                            $.ajax({
+                                type: "POST",
+                                url: "/api/trantor/func/flexispot_misc_CreateChairFightFunc",
+                                data: JSON.stringify(data),
+                                async: false,
+                                cache: false,
+                                processData: false,
+                                dataType: "json",
+                                contentType: "application/json; charset=UTF-8",
+                                success: function (msg) {
+                                    // 成功
+                                    if (msg.code === 200) {
+                                        // window.location.href = "/contact/success"
+                                        openTip()
+                                    }
+                                },
+                                error: function (res) {
+                                    if (res.responseJSON.code == 500) {
+                                        console.log(res.responseJSON.msg);
+                                        if (res.responseJSON.msg == "user has reached upper limit, can not send")
+                                            alert("フォームは既に提出済みですので重複しないでください")
+                                    }
+                                },
+                            })
+                        } else {
+                            const ipt_wrong = document.querySelectorAll(".ipt_wrong")
+                            for (let i = 0; i < ipt_wrong.length; i++) {
+                                if (ipt_wrong[i].style.display === "block") {
+                                    ipt_wrong[i].scrollIntoView({
+                                        block: "center",
+                                        behavior: "smooth",
+                                    })
+                                    return
+                                }
                             }
                         }
-
-                        let data = [
-                            {
-                                site: `JP`,
-                                email: email,
-                                orderNo: orderNo,
-                                sex: sex,
-                                age: age,
-                                familyComposition:
-                                    familyComposition === "q3_ohter"
-                                        ? q3_ohter
-                                        : familyComposition,
-                                roomSize: roomSize,
-                                revenue: revenue,
-                                occupation: occupation,
-                                hobbies: hobbies.includes(other)
-                                    ? hobbies.join("|").replace(other, q7_ohter)
-                                    : hobbies.join("|"),
-                                reasonForPurchase: reasonForPurchase.includes(other)
-                                    ? reasonForPurchase.join("|").replace(other, q8_ohter)
-                                    : reasonForPurchase.join("|"),
-                                considerations: considerations.includes(other)
-                                    ? considerations.join("|").replace(other, q9_ohter)
-                                    : considerations.join("|"),
-                                sourcesOfInformation: sourcesOfInformation.includes(other)
-                                    ? sourcesOfInformation.join("|").replace(other, q10_ohter)
-                                    : sourcesOfInformation.join("|"),
-                                chairInformationSources: chairInformationSources.includes(other)
-                                    ? chairInformationSources.join("|").replace(other, q11_ohter)
-                                    : chairInformationSources.join("|"),
-                                otherSuggestions: otherSuggestions,
-                            },
-                        ]
-                        document.getElementById("sucess-tip").style.display = "block"
-
-                        console.log(123, data);
-                        // return;
-                        //     $.ajax({
-                        //         type: "POST",
-                        //         url: "/api/trantor/flow/flexispot_misc_QuestionnairesGatherFlow",
-                        //         data: JSON.stringify(data),
-                        //         async: false,
-                        //         cache: false,
-                        //         processData: false,
-                        //         dataType: "json",
-                        //         contentType: "application/json; charset=UTF-8",
-                        //         success: function (res) {
-                        //             console.log(res)
-                        //             // 成功
-                        //             if (res.code === 200) {
-                        //                 // alert('success')
-                        //                 document.getElementById("sucess-tip").style.display = "block"
-                        //             }
-                        //         },
-                        //         error: function (res) {
-                        //             console.log(res)
-                        //             if (res.responseJSON.code == 500) {
-                        //                 if (
-                        //                     res.responseJSON.msg ==
-                        //                     "The questionnaire has been submitted"
-                        //                 ) {
-                        //                     alert("再送信しないでください")
-                        //                 }
-                        //             }
-                        //         },
-                        //     })
                     })
-            }
-        )
+                // 表单相关 js end
+
+                // 图片上传 js start
+                var file_list = []
+                var imageUrlString = ""
+                var new_all_picW = "100px"
+                var new_all_picH = "100px"
+                var newfile = []
+                var newdefaultAdd = `
+      <div id="add_input" onclick="javascript:document.getElementById('newUpContactImages').click()">
+        <svg class="item-add" width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0.393668" y="0.228629" width="100.63" height="100.63" rx="3.77137" fill="#F6F4F1" stroke="#26333A" stroke-width="0.457258"/>
+          <path d="M32 50.1311H70.0874M51.0437 31.0874L51.0437 69.1748" stroke="#26333A" stroke-opacity="0.1" stroke-width="6.14313" stroke-linecap="round"/>
+        </svg>
+      </div>`
+                var newPicViewsBox = document.getElementById("newPicViewsBox")
+                newrenderImg()
+                // input发生改变
+                $("#newUpContactImages").on("change", function () {
+                    onc()
+                })
+
+                let imageUrl;
+                // 调图片上传接口
+                function onc() {
+                    var itemAdd = document.getElementById("add_input")
+                    var files = document.getElementById("newUpContactImages").files
+                    var files_ejz = document.getElementById("newUpContactImages").files[0]
+                    if (!files_ejz) {
+                        return
+                    }
+                    itemAdd.innerHTML = '<span style="font-size:25px">Loading...</span>'
+                    postData("/api/herd/files/upload", {
+                        file: files_ejz,
+                    }).then((res) => {
+                        res = JSON.parse(res)
+                        if (res[Object.keys(res)[0]]) {
+                            file_list.push(res[Object.keys(res)[0]])
+                            updateImageUrlString();
+                            newrenderImg()
+                        } else {
+                            alert(res.msg)
+                        }
+                    })
+                }
+                // 定义上传图片方法
+                function postData(url, data) {
+                    return new Promise((resolve, reject) => {
+                        var formData = new FormData()
+                        for (let key in data) {
+                            formData.append(key, data[key])
+                        }
+
+                        var xhr = new XMLHttpRequest()
+                        xhr.open("post", url)
+                        xhr.send(formData)
+
+                        xhr.onreadystatechange = function () {
+                            if (xhr.readyState == 4 && xhr.status == 200) {
+                                resolve(xhr.response)
+                            } else if (xhr.status == 500) {
+                                reject("fail")
+                            }
+                        }
+                    })
+                }
+
+                function updateImageUrlString() {
+                    imageUrlString = file_list.join(",")
+                }
+
+                // 上传的图片展示
+                function newrenderImg() {
+                    newPicViewsBox.innerHTML = ""
+
+                    for (let i = 0; i < file_list.length; i++) {
+                        newPicViewsBox.innerHTML += `
+                            <div class='img-item'>
+                                <img 
+                                style='float:left;
+                                display:block;
+                                min-width:${new_all_picW};
+                                min-height:${new_all_picH}' 
+                                src='${file_list[i]}' 
+                                id='img${i}' />
+                                <div class='item-delete' data-index="${i}">×</div>
+                            </div>`
+                    }
+
+                    if (file_list.length < 3) {
+                        newPicViewsBox.innerHTML += newdefaultAdd
+                    }
+
+                    // 删除页面图片
+                    $(".item-delete").off("click").on("click", function () {
+                        var index = $(this).attr("data-index")
+                        file_list.splice(index, 1)
+                        updateImageUrlString() // 更新存储的url字符串
+                        newrenderImg()
+                    })
+                }
+
+                // 图片上传 js end
+            })
+        // }
     </script>
 </div>

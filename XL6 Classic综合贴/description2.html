@@ -1,0 +1,1113 @@
+      
+<div>
+  <style xml="space">
+    .ant-collapse-content > .ant-collapse-content-box {
+      padding: 0;
+    }
+    .description-page-container-max-width {
+      width: 1340px;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+
+    .description-page-container-bg-gray {
+      background: #f6f4f1;
+    }
+
+    .description-page-container-bg-black {
+      background: #282828;
+    }
+
+    .description-page-container-bg-green {
+      background: #043e1b;
+    }
+
+    .banner ~ .banner {
+      margin-top: 30px;
+    }
+
+    .banner-m ~ .banner-m {
+      margin-top: 30px;
+    }
+
+    .banner ~ .banner-bottom {
+      margin: 0;
+    }
+
+    .comp-item-spu
+      .item-spu-detail-pane
+      .detail-pane-detail-content
+      .banner-m
+      img {
+      width: 100%;
+      display: none;
+    }
+
+    .detail-pane-detail-content img {
+      border-radius: 12px;
+    }
+
+    .description-page-container-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border-radius: 12px;
+      margin-top: 80px;
+    }
+
+    .description-page-container-item-flex {
+      display: flex;
+      grid-column-gap: 5px;
+    }
+    .description-page-container-item-flex.flex-wrap {
+      flex-wrap: wrap;
+    }
+    .description-page-container-item-flex-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .comp-item-spu
+      .item-spu-detail-pane
+      .detail-pane-detail-content
+      .description-page-container-item-flex-content-text {
+      font-family: "Moderat-Bold" !important;
+      color: #26333a;
+      text-align: center;
+      text-overflow: ellipsis;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 24px;
+      margin: 24px 0 12px;
+    }
+    .comp-item-spu
+      .item-spu-detail-pane
+      .description-page-container-item-flex
+      img {
+      flex: 1;
+      height: auto;
+    }
+    .comp-item-spu .item-spu-detail-pane .banner img,
+    .comp-item-spu .item-spu-detail-pane .banner-m img {
+      width: 100%;
+      height: auto;
+    }
+
+    .description-page-container-item-text-box {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: baseline;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      padding: 30px 85px 30px 110px;
+    }
+    .description-page-container-item-text-left {
+      padding: 0 72px 0 40px;
+    }
+    .description-page-container-item-text-right {
+      padding: 0 40px 0 72px;
+    }
+
+    .description-page-container-box {
+      padding: 0 96px;
+    }
+    .description-page-container-item-img {
+      width: 50%;
+    }
+    .description-page-container-item-text {
+      width: 50%;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: baseline;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .comp-item-spu
+      .item-spu-detail-pane
+      .detail-pane-detail-content
+      .description-page-container-item-text-smalltitle {
+      font-family: "Moderat-Bold" !important;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 14px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #26333a;
+      position: relative;
+    }
+
+    .comp-item-spu
+      .item-spu-detail-pane
+      .detail-pane-detail-content
+      .description-page-container-item-text-title {
+      max-width: 500px;
+      font-family: "SupremeLLSub-Black" !important;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 52px;
+      line-height: 60px;
+      font-feature-settings: "pnum" on, "lnum" on, "ss01" on, "ss04" on,
+        "liga" off;
+      color: #26333a;
+      margin: 24px 0;
+    }
+
+    .comp-item-spu
+      .item-spu-detail-pane
+      .detail-pane-detail-content
+      .description-page-container-item-text-subtitle {
+      max-width: 500px;
+      font-family: "Moderat-Regular" !important;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      font-feature-settings: "pnum" on, "lnum" on, "ss02" on;
+      color: #26333a;
+      margin-top: 16px;
+    }
+    .comp-item-spu
+      .item-spu-detail-pane
+      .detail-pane-detail-content
+      .description-page-container-item-text-subtitle
+      strong {
+      font-weight: 700;
+      font-family: "Moderat-Bold" !important;
+    }
+
+    .description-page-container-item-text-subtitle-icon {
+      font-family: "NotoSansJP" !important;
+      font-style: normal;
+      font-weight: 702;
+      font-size: 16px;
+      line-height: 16px;
+      color: #004df2;
+      margin-top: 16px;
+    }
+
+    .comp-item-spu
+      .item-spu-detail-pane
+      .detail-pane-detail-content
+      .description-page-container-item-text-subtitle-small {
+      font-family: "Moderat-Regular" !important;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #26333a;
+      margin-top: 10px;
+      min-width: 100%;
+    }
+
+    .comp-item-spu
+      .item-spu-detail-pane
+      .detail-pane-detail-content
+      .description-page-container-item-text-white {
+      color: #ede9e4;
+    }
+
+    .description-page-container-item-box {
+      width: 50%;
+      padding-bottom: 30px;
+      border-bottom: 1.5px solid #d2d1d1;
+    }
+
+    .description-page-container-item-line {
+      border-bottom: 1px solid rgba(237, 233, 228, 0.5);
+      padding-bottom: 16px;
+    }
+    .description-page-container-item-line-o {
+      border-bottom: 1px solid rgba(237, 233, 228, 0.2);
+      padding-bottom: 16px;
+    }
+    .description-page-container-item-line-g {
+      border-bottom: 1px solid #ede9e4;
+      padding-bottom: 16px;
+    }
+    .description-page-container-item-img-padding {
+      padding: 30px 25px;
+    }
+
+    .home-active-l {
+      display: block;
+    }
+
+    .home-active-m {
+      display: none;
+    }
+
+    .description-page-container-item-text-subtitle-content-box {
+      max-width: 1002px;
+      margin: 0 auto;
+    }
+    .comp-item-spu
+      .item-spu-detail-pane
+      .detail-pane-detail-content
+      .description-page-container-item-text-subtitle-content {
+      color: #26333a;
+      font-feature-settings: "liga" off;
+      font-family: "Moderat-Regular" !important;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: center;
+    }
+    .comp-item-spu
+      .item-spu-detail-pane
+      .detail-pane-detail-content
+      .description-page-container-item-text-subtitle-content
+      strong {
+      font-family: "Moderat-Bold" !important;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .comp-item-spu
+      .item-spu-detail-pane
+      .detail-pane-detail-content
+      .description-page-container-item-title {
+      width: 100%;
+      margin: 66px 0;
+      color: #26333a;
+      text-align: center;
+      font-feature-settings: "liga" off;
+      font-family: "SupremeLLSub-Black" !important;
+      font-size: 52px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 36px;
+    }
+
+    .comp-item-spu
+      .item-spu-detail-pane
+      .detail-pane-detail-content
+      .description-page-container-item-flex-content-tip {
+      max-width: 374px;
+      margin-top: 12px;
+      font-family: "Moderat-Regular" !important;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: rgba(38, 51, 58, 0.8);
+    }
+    .description-page-container-box-four {
+      padding: 0;
+    }
+    .comp-item-spu
+      .item-spu-detail-pane
+      .description-page-container-item-flex
+      img {
+      max-width: 340px;
+      flex: none;
+    }
+    .description-page-container-item-flex {
+      justify-content: center;
+      grid-column-gap: 8px;
+    }
+
+    .pr {
+      padding-right: 100px;
+    }
+    .pl {
+      padding-left: 100px;
+    }
+    .comp-item-spu
+      .item-spu-detail-pane
+      .detail-pane-detail-content
+      .description-page-container-item-text-subtitle {
+      position: relative;
+    }
+    .comp-item-spu
+      .item-spu-detail-pane
+      .detail-pane-detail-content
+      .description-page-container-item-text-subtitle
+      .text-blue {
+      position: absolute;
+      top: 0;
+      left: -35px;
+      font-family: "Moderat-Regular" !important;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #004df2;
+    }
+    .comp-item-spu
+      .item-spu-detail-pane
+      .detail-pane-detail-content
+      .description-page-container-item
+      .description-page-container-item-context {
+      font-family: "Moderat-Regular" !important;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 28px;
+      color: #26333a;
+      padding-left: 74px;
+    }
+    .comp-item-spu
+      .item-spu-detail-pane
+      .detail-pane-detail-content
+      .description-page-container-item-flex {
+      display: flex;
+      grid-column-gap: 32px;
+      grid-template-columns: auto auto auto auto;
+    }
+
+    .comp-item-spu
+      .item-spu-detail-pane
+      .detail-pane-detail-content
+      .description-page-container-item-flex
+      img {
+      max-width: 100%;
+      width: 440px;
+      height: auto;
+    }
+
+    .description-page-container-item .description-page-container-item-bigtitle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      margin-top: 30px;
+      margin-bottom: -40px;
+    }
+    .description-page-container-item
+      .description-page-container-item-bigtitle
+      .description-page-container-item-bigtitle-tip {
+      font-family: "Moderat-Bold" !important;
+      color: #26333a;
+      text-align: center;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 14px;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .description-page-container-item
+      .description-page-container-item-bigtitle
+      .description-page-container-item-bigtitle-text {
+      font-family: "SupremeLLSub-Black" !important;
+      color: #26333a;
+      text-align: center;
+      font-variant-numeric: lining-nums proportional-nums;
+      font-feature-settings: "ss04" on, "ss01" on, "liga" off;
+      font-size: 52px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 44px;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 1420px) {
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item-text-subtitle {
+        font-size: 15px;
+        line-height: 20px;
+        margin-top: 20px;
+      }
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item-text-title {
+        font-size: 46px;
+        line-height: 50px;
+        margin-top: 20px;
+      }
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item-text-bigtitle {
+        font-size: 60px;
+      }
+
+      .description-page-container-item-flex {
+        margin: 0 auto;
+      }
+    }
+    @media (max-width: 1280px) {
+      .ant-collapse-content > .ant-collapse-content-box {
+        padding: 0 20px;
+      }
+      .description-page-container-item-text-left {
+        padding: 10px 70px 10px 40px;
+      }
+      .description-page-container-item-text-right {
+        padding: 10px 40px 10px 70px;
+      }
+      .description-page-container-item-text-box {
+        padding: 30px 70px 30px 90px;
+      }
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item-text-title {
+        font-size: 42px;
+        line-height: 46px;
+      }
+      .description-page-container-item-img-padding {
+        width: 50%;
+      }
+    }
+    @media (max-width: 1024px) {
+      .description-page-container-item-flex.flex-wrap
+        .description-page-container-item-flex-content {
+        width: 320px;
+      }
+      .comp-item-spu
+        .item-spu-detail-pane
+        .description-page-container-item-flex
+        img {
+        max-width: 320px;
+        width: 320px;
+      }
+      .description-page-container-item:has(
+          .description-page-container-item-flex
+        ) {
+        overflow: auto;
+      }
+      .description-page-container-item::-webkit-scrollbar {
+        height: 5px;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
+      .description-page-container-item::-webkit-scrollbar-thumb {
+        height: 5px;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
+      .description-page-container-item-i {
+        width: 50%;
+      }
+      .description-page-container-item-text-box {
+        padding: 30px 50px 30px 50px;
+      }
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item-text-title {
+        font-size: 36px;
+        line-height: 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .home-active-l {
+        display: none !important;
+      }
+
+      .home-active-m {
+        display: block !important;
+      }
+
+      .description-page-container-margin60 {
+        margin-top: 20px;
+      }
+
+      .ant-collapse-content > .ant-collapse-content-box {
+        padding: 0;
+      }
+
+      .description-page-container .banner img {
+        width: 100%;
+        display: none;
+      }
+
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .banner-m
+        img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .description-page-container {
+        width: 100%;
+        padding: 0;
+      }
+
+      .description-page-container-item-text-right,
+      .description-page-container-item-text-left {
+        padding: 0 40px;
+      }
+
+      .description-page-container-item-text {
+        margin-bottom: 22px;
+      }
+
+      .description-page-container-item {
+        flex-direction: column;
+        margin-top: 30px;
+      }
+      .description-page-container-item-flex {
+        flex-direction: column;
+        gap: 30px;
+      }
+      .description-page-container-item:has(
+          .description-page-container-item-flex
+        ) {
+        overflow: auto;
+      }
+      .comp-item-spu
+        .item-spu-detail-pane
+        .description-page-container-item-flex
+        img {
+        max-width: 100%;
+        width: 100%;
+      }
+      .description-page-container-item-flex-content-text {
+        font-size: 18px;
+        line-height: 24px;
+      }
+      .description-page-container-item-text-box {
+        padding: 0px 0px;
+      }
+
+      .description-page-container-item-text-box-m {
+        margin-top: 40px;
+      }
+
+      .description-page-container-item-reverse {
+        flex-direction: column-reverse;
+      }
+      .description-page-container-item-text-box img {
+        margin-top: 33px;
+      }
+      .description-page-container-item-text-box:has(
+          .description-page-container-item-text-title
+        ) {
+        padding: 0 36px;
+      }
+      .description-page-container-item:has(
+          .description-page-container-item-text-box
+        ) {
+        align-items: flex-start;
+      }
+
+      .description-page-container-bg-gray,
+      .description-page-container-bg-green {
+        border-radius: 12px;
+      }
+
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item-text-smalltitle {
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 0.7px;
+      }
+
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item-text-subtitle-small {
+        font-size: 14px;
+        line-height: 22px;
+      }
+      .description-page-container-bg-green
+        .description-page-container-item-text-subtitle-small:last-child {
+        padding-bottom: 33px;
+      }
+      .description-page-container-item-line-m {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ede9e4;
+      }
+      .description-page-container-item-i {
+        width: 100%;
+        margin-top: 30px;
+      }
+      .description-page-container-item-i img {
+        width: 100%;
+      }
+      .description-page-container-item-img,
+      .description-page-container-item-text {
+        width: 100%;
+      }
+      .description-page-container-item-line-o {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+      .description-page-container-item-text-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .description-page-container-pad-m {
+        padding: 0 20px;
+      }
+      .description-page-container-item
+        .description-page-container-item-bigtitle
+        .description-page-container-item-bigtitle-tip {
+        max-width: 260px;
+        text-align: left;
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 0.7px;
+      }
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item-text-subtitle-content {
+        max-width: 273px;
+        margin: auto;
+        text-align: left;
+      }
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item-title {
+        margin: 25px 0;
+        font-size: 20px;
+        line-height: 13.785px;
+      }
+      .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content table {
+        -webkit-border-horizontal-spacing: 8px;
+        -webkit-border-vertical-spacing: 8px;
+      }
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item-flex-content-tip {
+        margin: 0;
+      }
+      .description-page-container-item-flex-content {
+        margin-bottom: 0;
+      }
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item-flex {
+        overflow: auto;
+      }
+      .pr {
+        padding: 20px 35px 0 35px;
+      }
+      .pl {
+        padding: 20px 35px 0;
+      }
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item-text-title {
+        margin: 12px 0;
+        font-size: 24px;
+        line-height: normal;
+      }
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item-text-subtitle {
+        margin-top: 12px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item-text-subtitle
+        strong {
+        font-size: 16px;
+        margin-bottom: 4px;
+      }
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item-text-subtitle
+        span
+        strong {
+        font-size: 14px;
+      }
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item-text-subtitle
+        .text-blue {
+        left: -24px;
+      }
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item
+        .description-page-container-item-context {
+        padding-left: 32px;
+        padding-right: 12px;
+      }
+      .comp-item-spu
+        .item-spu-detail-pane
+        .detail-pane-detail-content
+        .description-page-container-item-flex-content-text {
+        padding: 0;
+        font-size: 20px;
+        line-height: 24px;
+      }
+      .description-page-container-item
+        .description-page-container-item-bigtitle
+        .description-page-container-item-bigtitle-text {
+        margin-top: 12px;
+        font-size: 24px;
+        line-height: normal;
+      }
+      .mb0 {
+        margin-bottom: 0;
+      }
+      .description-page-container-item
+        .description-page-container-item-bigtitle
+        .description-page-container-item-bigtitle-text.text-align-left {
+        max-width: 260px;
+        text-align: left;
+      }
+      .description-page-container-item
+        .description-page-container-item-bigtitle {
+        margin: 0;
+        padding: 0 35px;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</div>
+<div>
+  <div id="description" class="description-page">
+    <div class="description-page-container">
+      <!-- module-1 -->
+      <div class="banner">
+        <img
+          class="lazyload"
+          data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/XL6-20240716-pc.jpg"
+        />
+      </div>
+      <div class="banner-m">
+        <img
+          class="lazyload"
+          src="https://staticprod.site.flexispot.com/flexispot/catalog/product/placeholder/default/p.jpg"
+          data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/XL6-20240716-app.jpg"
+        />
+      </div>
+      <!-- module-2 -->
+      <div class="description-page-container-item">
+        <div class="description-page-container-item-bigtitle">
+          <div class="description-page-container-item-bigtitle-tip">
+            DUAL MOTORS AND INFINITE POSITION
+          </div>
+          <div
+            class="description-page-container-item-bigtitle-text text-align-left"
+          >
+            Independent control of backrest and footrest
+          </div>
+        </div>
+      </div>
+      <div
+        class="description-page-container-box description-page-container-box-four mb0"
+      >
+        <div class="description-page-container-item mb0">
+          <div class="description-page-container-item-flex">
+            <div class="description-page-container-item-flex-content">
+              <img
+                class="lazyload"
+                data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/XL6-20240716-img1.jpg"
+              />
+              <div>
+                <div class="description-page-container-item-flex-content-text">
+                  Lift Position
+                </div>
+                <div class="description-page-container-item-flex-content-tip">
+                  Go from sitting to standing gracefully, providing an assistive
+                  feature
+                </div>
+              </div>
+            </div>
+            <div class="description-page-container-item-flex-content">
+              <img
+                class="lazyload"
+                data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/XL6-20240716-img2.jpg"
+              />
+              <div>
+                <div class="description-page-container-item-flex-content-text">
+                  Lay Flat
+                </div>
+                <div class="description-page-container-item-flex-content-tip">
+                  Designed to offer you the perfect space for a rejuvenating nap
+                </div>
+              </div>
+            </div>
+            <div class="description-page-container-item-flex-content">
+              <img
+                class="lazyload"
+                data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/XL6-20240716-img3.jpg"
+              />
+              <div>
+                <div class="description-page-container-item-flex-content-text">
+                  Entertaining Position
+                </div>
+                <div class="description-page-container-item-flex-content-tip">
+                  For immersive TV time, find your sweet spot with ease
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- module-3 -->
+      <div
+        class="description-page-container-item description-page-container-item-reverse description-page-container-bg-gray"
+      >
+        <div class="description-page-container-item-img">
+          <img
+            class="lazyload"
+            data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/XL6-Cloud-20240617-img4.jpg"
+          />
+        </div>
+        <div
+          class="description-page-container-item-text description-page-container-item-text-right pr"
+        >
+          <div class="description-page-container-item-text-smalltitle">
+            ONE REMOTE CONTROLLER FOR HEATING & MASSAGE
+          </div>
+          <div class="description-page-container-item-text-title">
+            A Spa-Like Experience at Home
+          </div>
+
+          <div class="description-page-container-item-text-subtitle">
+            <strong>Soothing Massage:</strong> <br />
+            <span
+              style="
+                color: rgba(38, 51, 58, 0.8);
+                font-family: 'Moderat-Regular' !important;
+              "
+              >Enjoy a spa-like treatment with<strong
+                >8 vibrating massage nodes</strong
+              >
+              , which are thoughtfully placed to target key pressure points.
+              Choose from <strong>3 massage modes</strong> and adjust across
+              <strong>3 massage intensity levels</strong> for a soothing
+              experience.</span
+            >
+          </div>
+          <div class="description-page-container-item-text-subtitle">
+            <strong>Personalized Heating:</strong> <br />
+            <span
+              style="
+                color: rgba(38, 51, 58, 0.8);
+                font-family: 'Moderat-Regular' !important;
+              "
+              >Enjoy the warmth and melt your stress away with
+              <strong>heating function</strong> .</span
+            >
+          </div>
+        </div>
+      </div>
+      <!-- module-4 -->
+      <div class="description-page-container-item">
+        <div class="description-page-container-item-bigtitle">
+          <div class="description-page-container-item-bigtitle-tip">
+            CUSTOMIZED COMFORT FOR EVERYONE
+          </div>
+          <div
+            class="description-page-container-item-bigtitle-text text-align-left"
+          >
+            A Recliner Sofa That Fits You Perfectly
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="description-page-container-box description-page-container-box-four mb0"
+      >
+        <div class="description-page-container-item mb0">
+          <div class="description-page-container-item-flex flex-wrap">
+            <div class="description-page-container-item-flex-content">
+              <img
+                class="lazyload"
+                data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/xl6-cloud-25.2inch-seat-width.jpg"
+              />
+              <div>
+                <div class="description-page-container-item-flex-content-text">
+                  Ultimate Wide Recliner
+                </div>
+                <div class="description-page-container-item-flex-content-tip">
+                  Spacious recliner for larger frames, with expansive seating
+                  and plush cushioning. Unique design allows for easy
+                  cross-legged sitting. Tailored for larger body sizes, offering
+                  luxurious and indulgent comfort.
+                </div>
+              </div>
+            </div>
+
+            <div class="description-page-container-item-flex-content">
+              <img
+                class="lazyload"
+                data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/XL6-Cloud-20240617-img6.jpg"
+              />
+              <div>
+                <div class="description-page-container-item-flex-content-text">
+                  Extended Footrest
+                </div>
+                <div class="description-page-container-item-flex-content-tip">
+                  It offers ample leg support, catering to different heights and
+                  ensuring an immersive and comfortable experience for everyone.
+                </div>
+              </div>
+            </div>
+            <div class="description-page-container-item-flex-content">
+              <img
+                class="lazyload"
+                data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/XL6-Cloud-20240617-img7.jpg"
+              />
+              <div>
+                <div class="description-page-container-item-flex-content-text">
+                  Lumbar Support From Every Angle
+                </div>
+                <div class="description-page-container-item-flex-content-tip">
+                  Our generously padded lumbar area offers consistent support to
+                  ensure optimal comfort regardless of your posture.
+                </div>
+              </div>
+            </div>
+            <div class="description-page-container-item-flex-content">
+              <img
+                class="lazyload"
+                data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/XL6-Cloud-20240617-img8.jpg"
+              />
+              <div>
+                <div class="description-page-container-item-flex-content-text">
+                  Convenient Side Pockets
+                </div>
+                <div class="description-page-container-item-flex-content-tip">
+                  Experience added convenience with the thoughtful inclusion of
+                  side pockets on our sofa.
+                </div>
+              </div>
+            </div>
+            <div class="description-page-container-item-flex-content">
+              <img
+                class="lazyload"
+                data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/XL6-Cloud-20240617-img9.jpg"
+              />
+              <div>
+                <div class="description-page-container-item-flex-content-text">
+                  Cozy and Plush
+                </div>
+                <div class="description-page-container-item-flex-content-tip">
+                  Customize the seating arrangement with the included seats to
+                  perfectly suit your living area. This Recliner offers
+                  exceptional comfort with its Chenille fabric, lavishly padded
+                  backrest and armrests, and a seat cushion filled with pocket
+                  coil springs and premium foam.
+                </div>
+              </div>
+            </div>
+            <div class="description-page-container-item-flex-content">
+              <img
+                class="lazyload"
+                data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/XL6-Cloud-20240617-img10.jpg"
+              />
+              <div>
+                <div class="description-page-container-item-flex-content-text">
+                  Padded Headrest
+                </div>
+                <div class="description-page-container-item-flex-content-tip">
+                  The plush headrest provides ample support to your head for
+                  maximum comfort.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- module-5 -->
+      <div
+        class="description-page-container-item description-page-container-bg-gray"
+      >
+        <div
+          class="description-page-container-item-text description-page-container-item-text-left pl"
+        >
+          <div class="description-page-container-item-text-smalltitle">
+            EASY ASSEMBLY
+          </div>
+          <div class="description-page-container-item-text-title">
+            Seamless Setup for Instant Comfort
+          </div>
+          <div class="description-page-container-item-text-subtitle">
+            Experience hassle-free assembly with our user-friendly design,
+            ensuring that you can enjoy the comfort of your FlexiSpot recliner
+            in no time.
+          </div>
+        </div>
+        <div class="description-page-container-item-img">
+          <img
+            class="lazyload"
+            data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/XL6-20240716-img4.jpg"
+          />
+        </div>
+      </div>
+      <!-- module-6 -->
+      <div
+        class="description-page-container-item description-page-container-item-reverse"
+      >
+        <div class="description-page-container-item-img">
+          <img
+            class="lazyload"
+            data-src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/XL6-Cloud-20240617-img12.jpg"
+          />
+        </div>
+        <div
+          class="description-page-container-item-text description-page-container-item-text-right pr"
+        >
+          <div class="description-page-container-item-text-smalltitle">
+            MOTOR PIONEER
+          </div>
+          <div class="description-page-container-item-text-title">
+            OKIN Motor-driven Bliss
+          </div>
+          <div class="description-page-container-item-text-subtitle">
+            Experience ultimate comfort with our recliner equipped with the
+            high-quality OKIN motor imported from Germany. Enjoy smooth and
+            silent operations for a seamless lounging experience.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    

@@ -1,0 +1,1958 @@
+<div class="detail-pane-detail-content">
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/swiper@8.4.7_swiper-bundle.min.css">
+    <link rel="stylesheet"
+        href="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/swiper@8.4.7-min-us.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        iframe {
+            border: none;
+        }
+
+        /* .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content * {
+      font-family: none !important;
+    } */
+        button {
+            background-color: transparent;
+            font-family: "Supreme LL" !important;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 21.6px;
+            border-radius: 34px;
+            color: rgba(38, 51, 58, 0.5);
+            border: none;
+            padding: 10px 18px;
+            cursor: pointer;
+        }
+
+        button.active {
+            color: rgba(253, 252, 245, 1);
+            background: rgba(4, 62, 27, 1);
+        }
+
+        button.activeText {
+            color: rgba(4, 62, 27, 1);
+        }
+
+        .swiper-button-disabled {
+            display: none;
+        }
+
+        .swiper-button-next:after,
+        .swiper-rtl .swiper-button-prev:after {
+            display: none;
+        }
+
+        .swiper-button-prev:after,
+        .swiper-rtl .swiper-button-next:after {
+            display: none;
+        }
+
+        .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content {
+            overflow: hidden;
+        }
+
+        .specBox {
+            max-width: 1384px;
+            /* height: 2994px; */
+            margin: 70px auto;
+        }
+
+        .specBox .specBoxTop {
+            margin-bottom: 60px;
+        }
+
+        .specBox .specBoxTop .specBoxButtonBox {
+            width: 100%;
+            /* height: 42px; */
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        .specBox .specBoxTop .specBoxButtonBox button {
+            min-width: 95px;
+            margin-right: 40px;
+        }
+
+        .specBox .specBoxTop .specBoxContentBox {
+            width: 100%;
+            /* height: 524px; */
+            display: flex;
+        }
+
+        .specBox .specBoxTop .specBoxContentBox .specBoxContentImg {
+            width: 700px;
+            /* height: 492px; */
+            margin-right: 100px;
+        }
+
+        .specBox .specBoxTop .specBoxContentBox .specBoxContentImg img {
+            width: 100%;
+            /* height: 100%; */
+        }
+
+        .specBox .specBoxTop .specBoxContentBox .specBoxContentText {
+            width: 584px;
+            /* height: 524px; */
+        }
+
+        .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextTop {
+            width: 584px;
+            height: 96px;
+            margin-bottom: 26px;
+        }
+
+        .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextTop .specBoxContentTextTopTitle {
+            margin-bottom: 12px;
+        }
+
+        .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextTop .specBoxContentTextTopTitle p {
+            font-family: "Supreme LL" !important;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 24px;
+            color: rgba(38, 51, 58, 1);
+        }
+
+        .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextTop .specBoxContentTextTopText p {
+            font-family: "Moderat" !important;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20.48px;
+            color: rgba(38, 51, 58, 1);
+        }
+
+        .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextCenter {
+            max-width: 584px;
+            /* height: 352px; */
+            margin-bottom: 30px;
+        }
+
+        .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextCenter .specBoxContentTextCenterLine {
+            max-width: 584px;
+            /* height: 44px; */
+            padding: 12px 0px 12px 0px;
+            border-bottom: 1px solid rgba(38, 51, 58, 0.1);
+            display: flex;
+            font-family: "SupremeLLSub-Black" !important;
+            font-size: 16px;
+            font-weight: 900;
+            line-height: 20.48px;
+        }
+
+        .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextCenter .specBoxContentTextCenterLine strong {
+            font-family: "SupremeLLSub-Black" !important;
+            font-size: 16px;
+            font-weight: 900;
+            line-height: 20.48px;
+            color: #26333a;
+        }
+
+        .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextCenter .specBoxContentTextCenterLine .specBoxContentTextCenterLineText {
+            width: 292px;
+            /* height: 20px; */
+        }
+
+        .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextCenter .specBoxContentTextCenterLine .specBoxContentTextCenterLineText p {
+            font-family: "Moderat-Regular" !important;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20.48px;
+        }
+
+        .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextBottom a {
+            font-family: "Moderat-Regular" !important;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20.48px;
+            color: rgba(0, 77, 242, 1);
+            text-decoration: underline;
+            margin-right: 20px;
+        }
+
+        .specBox .specBoxCenter {
+            position: relative;
+            width: 100%;
+            /* height: 615px; */
+            margin-bottom: 70px;
+        }
+
+        .specBox .specBoxCenter .swiper {
+            width: 100%;
+            height: 88px;
+            border-bottom: 1px solid rgba(38, 51, 58, 0.1);
+            margin-bottom: 24px;
+        }
+
+        .specBox .specBoxCenter .swiper .swiper-wrapper {
+            display: flex;
+            width: 100%;
+            height: 88px;
+            /* margin-left: 100px; */
+            /* overflow-x: hidden; */
+        }
+
+        .specBox .specBoxCenter .swiper .swiper-wrapper .swiper-slide {
+            display: flex;
+            align-items: center;
+            width: auto;
+            margin-right: 34px;
+        }
+
+        .specBox .specBoxCenter .swiper .swiper-wrapper .swiper-slide button {
+            font-family: "Supreme LL" !important;
+        }
+
+        .specBox .specBoxCenter .gradient-divider-left {
+            position: absolute;
+            /* 设置绝对定位 */
+            top: 0;
+            left: 0px;
+            width: 88px;
+            height: 88px;
+            background: linear-gradient(90deg,
+                    /* 从右到左 */
+                    #fdfcf5 25.84%,
+                    rgba(253, 252, 245, 0) 100%);
+            z-index: 9;
+        }
+
+        .specBox .specBoxCenter .gradient-divider-left img {
+            position: absolute;
+            top: 32px;
+            left: -10px;
+            width: 88px;
+            height: 64px;
+            transform: rotate(180deg);
+        }
+
+        .specBox .specBoxCenter .gradient-divider-right {
+            position: absolute;
+            /* 设置绝对定位 */
+            top: 0;
+            right: 0px;
+            width: 88px;
+            height: 88px;
+            background: linear-gradient(270deg,
+                    #fdfcf5 25.84%,
+                    rgba(253, 252, 245, 0) 100%);
+            z-index: 9;
+        }
+
+        .specBox .specBoxCenter .gradient-divider-right img {
+            position: absolute;
+            /* 设置绝对定位 */
+            top: 32px;
+            right: -10px;
+            width: 88px;
+            height: 64px;
+        }
+
+        .specBox .specBoxCenter .specBox-center-second-buttonBox {
+            height: 26px;
+            width: 100%;
+            margin-bottom: 60px;
+            /* padding-left: 80px; */
+        }
+
+        .specBox .specBoxCenter .specBox-center-second-buttonBox button.active {
+            color: rgba(4, 62, 27, 1);
+        }
+
+        .specBox .specBoxCenter .specBox-center-second-buttonBox button {
+            font-family: "Supreme LL" !important;
+        }
+
+        .specBox .specBoxCenter .specBox-center-secondBox-content {
+            width: 100%;
+            height: 416px;
+            display: flex;
+        }
+
+        .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-left {
+            width: 700px;
+            height: 384px;
+            /* padding: 92px 61px 92.2px 42px; */
+        }
+
+        .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-left img {
+            /* height: 100%; */
+            width: 100%;
+        }
+
+        .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right {
+            margin-left: 100px;
+            width: 584px;
+            height: 416px;
+        }
+
+        .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right .specBox-center-secondBox-content-rightTitle p {
+            font-family: "Supreme LL" !important;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 24px;
+            color: rgba(38, 51, 58, 1);
+        }
+
+        .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right .specBox-center-secondBox-content-rightText {
+            margin: 12px auto 26px;
+        }
+
+        .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right .specBox-center-secondBox-content-rightText p {
+            font-family: "Moderat" !important;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20.48px;
+            color: rgba(38, 51, 58, 1);
+        }
+
+        .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right .specBox-center-secondBox-content-right-line {
+            width: 584px;
+            /* height: 44px; */
+            padding: 12px 0px;
+            display: flex;
+            /* border-bottom: 1px solid rgba(38, 51, 58, 0.1);
+      display: flex; */
+        }
+
+        /* .specBox
+      .specBoxCenter
+      .specBox-center-secondBox-content
+      .specBox-center-secondBox-content-right
+      .specBox-center-secondBox-content-right-lineText {
+      font-family: "Moderat";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20.48px;
+      width: 292px;
+    } */
+        .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right .specBox-center-secondBox-content-right-lineText p {
+            display: block;
+            font-family: "Moderat" !important;
+            height: 44px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20.48px;
+            width: 292px;
+            border-bottom: 1px solid rgba(38, 51, 58, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        /* .specBox
+      .specBoxCenter
+      .specBox-center-secondBox-content
+      .specBox-center-secondBox-content-right
+      .specBox-center-secondBox-content-right-lineTextTwo {
+      font-family: "Moderat";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20.48px;
+      width: 292px;
+    } */
+        .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right .specBox-center-secondBox-content-right-lineTextTwo p {
+            display: block;
+            font-family: "Moderat" !important;
+            height: 44px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20.48px;
+            width: 292px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgba(38, 51, 58, 0.1);
+        }
+
+        .specBox .specBoxCenter .swiper .specBoxCenterButtonBox .specBoxCenterButton {
+            white-space: nowrap;
+            /* margin-right: 34px; */
+        }
+
+        .specBox .specBoxBottom {
+            width: 100%;
+            height: 486px;
+            margin-bottom: 70px;
+        }
+
+        .specBox .specBoxBottom .specBoxBottomButtonBox {
+            display: flex;
+            width: 100%;
+            height: 42px;
+            margin-bottom: 60px;
+        }
+
+        .specBox .specBoxBottom .specBoxBottomButtonBox .specBoxBottomButton {
+            margin-right: 34px;
+        }
+
+        .specBox .specBoxBottom .specBoxBottomButtonBox .specBoxBottomButton button {
+            font-family: "Supreme LL" !important;
+        }
+
+        .specBox .specBoxBottom .specBoxBottomContent {
+            width: 100%;
+            height: 384px;
+            display: flex;
+        }
+
+        .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentImg {
+            width: 700px;
+            height: 384px;
+            margin-right: 100px;
+        }
+
+        .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentImg img {
+            width: 100%;
+            /* height: 100%; */
+        }
+
+        .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText {
+            width: 584px;
+            height: 76px;
+        }
+
+        .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText .specBoxBottomContentTextTitle {
+            margin-bottom: 12px;
+        }
+
+        .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText .specBoxBottomContentTextTitle p {
+            font-family: "Supreme LL" !important;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 24px;
+            color: rgba(38, 51, 58, 1);
+        }
+
+        .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText .specBoxBottomContentTextParagraph {
+            margin-bottom: 26px;
+        }
+
+        .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText .specBoxBottomContentTextParagraph p {
+            font-family: "Moderat" !important;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20.48px;
+            color: rgba(38, 51, 58, 1);
+        }
+
+        .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText .specBoxBottomContentCenter {
+            width: 584px;
+            height: 176px;
+        }
+
+        .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText .specBoxBottomContentCenter .specBoxBottomContentCenterLine {
+            display: flex;
+            max-width: 584px;
+            /* height: 44px; */
+            padding: 12px 0px;
+            border-bottom: 1px solid rgba(38, 51, 58, 0.1);
+        }
+
+        .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText .specBoxBottomContentCenter .specBoxBottomContentCenterLine p {
+            font-family: "Moderat" !important;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20.48px;
+        }
+
+        .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText .specBoxBottomContentCenter .specBoxBottomContentCenterLine .specBoxBottomContentCenterLineText {
+            width: 292px;
+            /* height: 20px; */
+        }
+
+        .specBox .specBoxFooter {
+            width: 100%;
+            height: 917px;
+            margin-bottom: 70px;
+        }
+
+        .specBox .specBoxFooter .specBoxFooterButtonBox {
+            display: flex;
+            width: 100%;
+            height: 42px;
+            margin-bottom: 60px;
+        }
+
+        .specBox .specBoxFooter .specBoxFooterButtonBox .specBoxFooterButton {
+            margin-right: 34px;
+        }
+
+        .specBox .specBoxFooter .specBoxFooterButtonBox .specBoxFooterButton button {
+            font-family: "Supreme LL" !important;
+        }
+
+        .specBox .specBoxFooter .specBoxFooterframe {
+            width: 100%;
+            height: 775px;
+        }
+
+        .specBox .specBoxFooter .specBoxFooterframe iframe {
+            height: 100%;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 1440px) {
+            .specBox {
+                max-width: 1000px;
+            }
+
+            .specBox .specBoxTop {
+                margin-bottom: 70px;
+            }
+
+            .specBox .specBoxTop .specBoxContentBox .specBoxContentImg {
+                width: 497px;
+                /* height: 350px; */
+                margin-right: 22px;
+            }
+
+            .specBox .specBoxTop .specBoxContentBox .specBoxContentText {
+                width: 481px;
+                /* height: 524px; */
+            }
+
+            /* .specBox .specBoxCenter {
+        height: 593px;
+      } */
+            .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-left {
+                width: 497px;
+                height: 272px;
+            }
+
+            .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right {
+                margin-left: 22px;
+                width: 481px;
+                height: 416px;
+            }
+
+            .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextTop {
+                max-width: 481px;
+            }
+
+            .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right .specBox-center-secondBox-content-right-line {
+                max-width: 481px;
+            }
+
+            .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right .specBox-center-secondBox-content-right-lineText p {
+                width: 240.5px;
+            }
+
+            .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right .specBox-center-secondBox-content-right-lineTextTwo p {
+                width: 240.5px;
+            }
+
+            .specBox .specBoxBottom {
+                height: 430px;
+                margin-bottom: 70px;
+            }
+
+            .specBox .specBoxBottom .specBoxBottomContent {
+                height: 328px;
+                display: flex;
+            }
+
+            .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentImg {
+                max-width: 497px;
+                max-height: 272px;
+                margin-right: 22px;
+            }
+
+            .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText {
+                max-width: 481px;
+                /* height: 76px; */
+            }
+
+            .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText .specBoxBottomContentCenter {
+                width: 481px;
+            }
+
+            .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText .specBoxBottomContentCenter .specBoxBottomContentCenterLine .specBoxBottomContentCenterLineText {
+                width: 240.5px;
+            }
+
+            .specBox .specBoxFooter {
+                height: 701px;
+            }
+
+            .specBox .specBoxFooter .specBoxFooterframe {
+                width: 100%;
+                height: 559px;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            button {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 16.8px;
+                text-align: left;
+            }
+
+            .specBox {
+                max-width: 768px;
+            }
+
+            .specBox .specBoxTop {
+                margin-bottom: 50px;
+            }
+
+            .specBox .specBoxTop .specBoxContentBox .specBoxContentImg {
+                width: 393px;
+                /* height: 276px; */
+                margin-right: 10px;
+            }
+
+            .specBox .specBoxTop .specBoxContentBox .specBoxContentText {
+                max-width: 365px;
+                /* height: 503px; */
+            }
+
+            /* .specBox .specBoxCenter {
+        height: 510px;
+      } */
+            .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-left {
+                width: 393px;
+                height: 215px;
+            }
+
+            .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right {
+                margin-left: 10px;
+                width: 365px;
+                height: 307px;
+            }
+
+            .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextTop {
+                max-width: 365px;
+                /* height: 96px; */
+                margin-bottom: 20px;
+            }
+
+            .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right .specBox-center-secondBox-content-right-line {
+                max-width: 365px;
+                /* display: flex;
+        justify-content: space-between; */
+            }
+
+            .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right .specBox-center-secondBox-content-right-lineText p {
+                width: 182.5px;
+            }
+
+            .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right .specBox-center-secondBox-content-right-lineTextTwo p {
+                width: 182.5px;
+            }
+
+            .specBox .specBoxBottom {
+                height: 430px;
+                margin-bottom: 50px;
+            }
+
+            .specBox .specBoxBottom .specBoxBottomContent {
+                height: 307px;
+                display: flex;
+            }
+
+            .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentImg {
+                width: 393px;
+                height: 215px;
+                margin-right: 10px;
+            }
+
+            .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText {
+                width: 365px;
+                height: 67px;
+            }
+
+            .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText .specBoxBottomContentCenter {
+                width: 365px;
+            }
+
+            .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText .specBoxBottomContentCenter .specBoxBottomContentCenterLine .specBoxBottomContentCenterLineText {
+                width: 182.5px;
+            }
+
+            .specBox .specBoxFooter {
+                height: 544px;
+            }
+
+            .specBox .specBoxFooter .specBoxFooterframe {
+                width: 100%;
+                height: 467px;
+            }
+
+            .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextCenter {
+                max-width: 365px;
+                margin-bottom: 30px;
+            }
+
+            .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextCenter .specBoxContentTextCenterLine {
+                max-width: 365px;
+                /* height: 44px; */
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextCenter .specBoxContentTextCenterLine .specBoxContentTextCenterLineText {
+                width: 50%;
+                /* height: 20px; */
+            }
+
+            .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextCenter .specBoxContentTextCenterLine .specBoxContentTextCenterLineText p {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20.48px;
+            }
+
+            .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextTop .specBoxContentTextTopTitle p {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 19.2px;
+            }
+
+            .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextTop .specBoxContentTextTopText p {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 17.92px;
+            }
+
+            .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right .specBox-center-secondBox-content-rightTitle p {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 19.2px;
+            }
+
+            .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right .specBox-center-secondBox-content-rightText p {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 17.92px;
+            }
+
+            .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right .specBox-center-secondBox-content-right-lineText p {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 17.92px;
+            }
+
+            .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText .specBoxBottomContentTextTitle p {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 19.2px;
+            }
+
+            .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText .specBoxBottomContentTextParagraph p {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 17.92px;
+            }
+
+            .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText .specBoxBottomContentCenter .specBoxBottomContentCenterLine p {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 16.64px;
+            }
+
+            .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right .specBox-center-secondBox-content-right-lineTextTwo p {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 17.92px;
+            }
+
+            .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextBottom p {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 17.92px;
+            }
+
+            .specBox .specBoxTop .specBoxButtonBox {
+                width: 100%;
+                /* height: 37px; */
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .specBox .specBoxTop .specBoxButtonBox button {
+                text-align: center;
+                min-width: 70px;
+                margin-right: 24px;
+            }
+
+            .specBox {
+                max-width: 335px;
+                /* height: 2994px; */
+                margin: 32px auto;
+            }
+
+            .specBox .specBoxTop {
+                margin-bottom: 30px;
+                display: flex;
+                flex-direction: column;
+                max-height: none;
+            }
+
+            .specBox .specBoxTop .specBoxButtonBox {
+                width: 100%;
+                height: 35px;
+                display: flex;
+                margin-bottom: 30px;
+            }
+
+            .specBox .specBoxTop .specBoxButtonBox .specBoxButton {
+                max-width: none;
+                height: 36px;
+                font-size: 13px;
+                line-height: 15.6px;
+                text-align: center;
+            }
+
+            .specBox .specBoxTop .specBoxContentBox {
+                width: 100%;
+                /* height: 768.27px; */
+                display: flex;
+                flex-direction: column;
+            }
+
+            .specBox .specBoxTop .specBoxContentBox .specBoxContentImg {
+                width: 335px;
+                /* height: 235.27px; */
+            }
+
+            .specBox .specBoxTop .specBoxContentBox .specBoxContentText {
+                margin: 30px auto;
+                width: 335px;
+                /* height: 459px; */
+            }
+
+            .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextTop {
+                width: 335px;
+                height: 103px;
+                margin-bottom: 20px;
+            }
+
+            .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextTop .specBoxContentTextTopTitle {
+                margin-bottom: 12px;
+            }
+
+            .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextTop .specBoxContentTextTopTitle p {
+                font-size: 16px;
+                line-height: 19.2px;
+            }
+
+            .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextTop .specBoxContentTextTopText p {
+                font-size: 14px;
+                line-height: 17.92px;
+            }
+
+            .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextCenter {
+                width: 335px;
+                /* height: 336px; */
+                margin-bottom: 26px;
+            }
+
+            .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextCenter .specBoxContentTextCenterLine {
+                width: 335px;
+                /* height: 42px; */
+            }
+
+            .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextCenter .specBoxContentTextCenterLine .specBoxContentTextCenterLineText {
+                width: 167px;
+                /* height: 18px; */
+                font-size: 14px;
+                line-height: 17.92px;
+            }
+
+            .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextBottom a {
+                font-family: "Moderat";
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 17.92px;
+                color: rgba(0, 77, 242, 1);
+                text-decoration: underline;
+            }
+
+            .specBox .specBoxCenter {
+                position: relative;
+                width: 100%;
+                /* height: 704px; */
+                margin-bottom: 70px;
+            }
+
+            .specBox .specBoxCenter .swiper {
+                width: 100%;
+                height: 48px;
+                margin-bottom: 12px;
+            }
+
+            .specBox .specBoxCenter .swiper .swiper-wrapper {
+                display: flex;
+                /* width: 100%; */
+                height: 36px;
+                margin-left: 0px;
+                /* overflow-x: hidden; */
+            }
+
+            .specBox .specBoxCenter .swiper .swiper-wrapper .swiper-slide button {
+                font-size: 13px;
+                font-weight: 500;
+                line-height: 15.6px;
+                text-align: center;
+            }
+
+            .specBox .specBoxCenter .gradient-divider-left {
+                display: none;
+            }
+
+            .specBox .specBoxCenter .gradient-divider-right {
+                display: none;
+            }
+
+            .specBox .specBoxCenter .specBox-center-second-buttonBox {
+                width: 100%;
+                margin-bottom: 30px;
+                padding-left: 0;
+                display: flex;
+                height: 24px;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                /* 隐藏滚动条 */
+                -webkit-overflow-scrolling: touch;
+                /* 在 iOS 设备上启用滚动 */
+                scrollbar-width: none;
+                /* Firefox */
+                -ms-overflow-style: none;
+                /* IE/Edge */
+            }
+
+            .specBox .specBoxCenter .specBox-center-second-buttonBox::-webkit-scrollbar {
+                display: none;
+                /* Chrome/Safari/Opera */
+            }
+
+            .specBox .specBoxCenter .specBox-center-second-buttonBox button {
+                display: block;
+                padding: 0px;
+                font-family: "Moderat";
+                font-size: 13px;
+                font-weight: 500;
+                line-height: 16.64px;
+                height: 24px;
+                white-space: nowrap;
+                margin-right: 18px;
+            }
+
+            .specBox .specBoxCenter .specBox-center-secondBox-content {
+                width: 100%;
+                height: 552px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-left {
+                width: 335px;
+                height: 183px;
+            }
+
+            .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right {
+                margin-left: 0px;
+                width: 335px;
+                height: 383px;
+            }
+
+            .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right .specBox-center-secondBox-content-rightTitle p {
+                font-family: "Supreme LL";
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 19.2px;
+            }
+
+            .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right .specBox-center-secondBox-content-rightText {
+                margin: 12px auto 20px;
+            }
+
+            .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right .specBox-center-secondBox-content-rightText p {
+                font-family: "Moderat";
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 17.92px;
+            }
+
+            .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right .specBox-center-secondBox-content-right-line {
+                width: 335px;
+                /* height: 44px; */
+                padding: 12px 0px;
+                display: flex;
+                /* border-bottom: 1px solid rgba(38, 51, 58, 0.1);
+      display: flex; */
+            }
+
+            .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right .specBox-center-secondBox-content-right-lineText p {
+                font-family: "Moderat";
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 17.92px;
+                width: 162.5px;
+                border-bottom: 1px solid rgba(38, 51, 58, 0.1);
+                display: flex;
+                align-items: center;
+            }
+
+            .specBox .specBoxCenter .specBox-center-secondBox-content .specBox-center-secondBox-content-right .specBox-center-secondBox-content-right-lineTextTwo p {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 17.92px;
+                width: 162.5px;
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid rgba(38, 51, 58, 0.1);
+            }
+
+            .specBox .specBoxBottom {
+                width: 100%;
+                height: 524px;
+                margin-bottom: 70px;
+                margin-top: 70px;
+            }
+
+            .specBox .specBoxBottom .specBoxBottomButtonBox {
+                display: flex;
+                width: 100%;
+                height: 36px;
+                margin-bottom: 10px;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                /* 隐藏滚动条 */
+                scrollbar-width: none;
+                /* Firefox */
+                -ms-overflow-style: none;
+                /* IE/Edge */
+            }
+
+            .specBox .specBoxBottom .specBoxBottomButtonBox::-webkit-scrollbar {
+                display: none;
+                /* Chrome/Safari/Opera */
+            }
+
+            .specBox .specBoxBottom .specBoxBottomButtonBox .specBoxBottomButton {
+                margin-right: 34px;
+            }
+
+            .specBox .specBoxBottom .specBoxBottomButtonBox .specBoxBottomButton button {
+                font-size: 13px;
+                font-weight: 500;
+                line-height: 15.6px;
+                white-space: nowrap;
+            }
+
+            .specBox .specBoxBottom .specBoxBottomContent {
+                width: 100%;
+                height: 494px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentImg {
+                width: 335px;
+                height: 183px;
+                margin-right: 0px;
+            }
+
+            .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText {
+                width: 100%;
+                height: 85px;
+            }
+
+            .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText .specBoxBottomContentTextTitle {
+                margin-bottom: 12px;
+            }
+
+            .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText .specBoxBottomContentTextTitle p {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 19.2px;
+                color: rgba(38, 51, 58, 1);
+            }
+
+            .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText .specBoxBottomContentTextParagraph {
+                margin-bottom: 26px;
+            }
+
+            .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText .specBoxBottomContentTextParagraph p {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 17.92px;
+                color: rgba(38, 51, 58, 1);
+            }
+
+            .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText .specBoxBottomContentCenter {
+                width: 335px;
+                height: 176px;
+            }
+
+            .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText .specBoxBottomContentCenter .specBoxBottomContentCenterLine {
+                display: flex;
+                width: 335px;
+                height: 40px;
+                padding: 12px 0px;
+                border-bottom: 1px solid rgba(38, 51, 58, 0.1);
+            }
+
+            .specBox .specBoxBottom .specBoxBottomContent .specBoxBottomContentText .specBoxBottomContentCenter .specBoxBottomContentCenterLine p {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 27.92px;
+            }
+
+            .specBox .specBoxFooter {
+                width: 100%;
+                height: 319px;
+                margin-bottom: 57px;
+            }
+
+            .specBox .specBoxFooter .specBoxFooterButtonBox {
+                display: flex;
+                width: 100%;
+                height: 36px;
+                margin-bottom: 30px;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                /* 隐藏滚动条 */
+                scrollbar-width: none;
+                /* Firefox */
+                -ms-overflow-style: none;
+                /* IE/Edge */
+            }
+
+            .specBox .specBoxFooter .specBoxBottomButtonBox::-webkit-scrollbar {
+                display: none;
+                /* Chrome/Safari/Opera */
+            }
+
+            .specBox .specBoxFooter .specBoxFooterButtonBox .specBoxFooterButton {
+                margin-right: 10px;
+            }
+
+            .specBox .specBoxFooter .specBoxFooterButtonBox .specBoxFooterButton button {
+                font-size: 13px;
+                font-weight: 500;
+                line-height: 15.6px;
+                white-space: nowrap;
+            }
+
+            .specBox .specBoxFooter .specBoxFooterframe {
+                width: 100%;
+                height: 187px;
+            }
+
+            .specBox .specBoxTop .specBoxContentBox .specBoxContentText .specBoxContentTextCenter .specBoxContentTextCenterLine .specBoxContentTextCenterLineText p {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 17.92px;
+            }
+        }
+    </style>
+
+    <!-- <div class="buttonBox">
+      <button id="C7Button" class="active">C7</button>
+      <button id="C7MAXButton" class="">C7 Max</button>
+      <button id="C7PROMAXButton" class="">C7 Pro Max</button>
+    </div> -->
+
+    <div class="specBox Newpage" id="C7Page" style="display: block;">
+        <div class="specBox">
+            <div class="specBoxTop">
+                <!-- <div class="specBoxButtonBox">
+            <button class="active">C7</button>
+          </div> -->
+                <div class="specBoxContentBox">
+                    <div class="specBoxContentImg">
+                        <img
+                            src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7-20240607-img2.png">
+                        <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7-1.png">
+                    </div>
+                    <div class="specBoxContentText">
+                        <div class="specBoxContentTextCenter">
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Seat Material</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Foam&amp;Mesh</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Max Weight Capacity</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>300lbs</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <p style="margin: auto"><strong>Dimensions</strong></p>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Seat Depth</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>17"-20"</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Seat Width</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>21"</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Seat Height Adjustment Range</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>18.31"-21.65"</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Headrest Adjustment</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>2.36", 45°</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Recommended Height</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>5'10"-6'10"</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Armrest</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>3D</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Back Recline Position</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>93°-128°</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <p style="margin: auto"><strong>Function</strong></p>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Lumbar Support</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Adjustable Self-adaptive Dynamic</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Forward Seat Tilt</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>√</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Adjustable Seat Depth</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>√</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Footrest</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Optional（x/√）</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <p style="margin: auto">
+                                    <strong>Shipping dimensions &amp; weight</strong>
+                                </p>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Product Weight</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>55.0LBS</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Shipping Weight</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>56.0LBS</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Package Dimension</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>30.31" x 25.59" x 17.72"</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Warranty</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>10 years</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="specBoxContentTextBottom">
+                            <a href="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7-foam-FT_Manual.pdf"
+                                target="_blank">C7 MANUAL</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="specBox">
+            <div class="specBoxTop">
+                <div class="specBoxButtonBox">
+                    <button class="active">Installation Guide for C7</button>
+                </div>
+                <!-- <div class="specBoxButtonBox"></div> -->
+                <video controls="" width="100%" style="cursor: pointer; padding: 0 20px">
+                    <source src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7-video-2.mp4"
+                        type="video/webm">
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <div class="specBox Newpage" id="C7LITEPage" style="display: none">
+        <div class="specBox">
+            <div class="specBoxTop">
+                <!-- <div class="specBoxButtonBox">
+            <button class="active">C7lite</button>
+          </div> -->
+                <div class="specBoxContentBox">
+                    <div class="specBoxContentImg">
+                        <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7-LITE.png">
+                        <img src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7-LITE-1.png">
+                    </div>
+                    <div class="specBoxContentText">
+                        <div class="specBoxContentTextCenter">
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Seat Material</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Foam&amp;Mesh</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Max Weight Capacity</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>290lbs</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <p style="margin: auto"><strong>Dimensions</strong></p>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Depth</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>18.8"-19.5"</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Width</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>20"</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Seat Height Adjustment Range</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>16.34"-17.32"</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Headrest Adjustment</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>2.36", 60°</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Recommended Height</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>5'5"-6'2"</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Armrest</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>3D</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Back Recline Position</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>93°-128°</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <p style="margin: auto"><strong>Function</strong></p>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Lumbar Support</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Up &amp; Down, Adjustable Self-adaptive Dynamic</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Forward Seat Tilt</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>X</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Adjustable Seat Depth</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>√</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Footrest</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>√</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <p style="margin: auto">
+                                    <strong>Shipping Dimensions &amp; Weight</strong>
+                                </p>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Product Weight</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>45.1LBS（Mesh）/ 47.3LBS（Foam）</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Shipping Weight</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>46.0 LBS （Mesh）/ 48.0LBS（Foam）</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Package Dimension</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>
+                                        23.23" x 14.96" x 20.47"（Mesh）<br>
+                                        23.23" x 12.80" x 20.47"（Foam）
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Warranty</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>3 years</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="Newpage" id="C7MAXPage" style="display: none;">
+        <div class="specBox">
+            <div class="specBoxTop">
+                <!-- <div class="specBoxButtonBox">
+            <button class="active">C7 M</button>
+          </div> -->
+                <div class="specBoxContentBox">
+                    <div class="specBoxContentImg">
+                        <img
+                            src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/zwj-C7-M-20240717001.png">
+                        <img
+                            src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/zwj-C7-M-20240717002.png">
+                    </div>
+                    <div class="specBoxContentText">
+                        <div class="specBoxContentTextCenter">
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Seat Material</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Foam Cushion with 0.2'' Latex Layer</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Max Weight Capacity</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>300lbs</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <p style="margin: auto"><strong>Dimensions</strong></p>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Seat Depth</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>15.7"-17.3"</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Seat Width</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>20"</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Seat Height Adjustment Range</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>18.5"-20.9"</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Headrest Adjustment</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>2.36",135°</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Recommended Height</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>5'7"-6'9"</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Armrest</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>5D</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Back Recline Position</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>93°-135°</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <p style="margin: auto"><strong>Function</strong></p>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Lumbar Support</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Adjustable Self-adaptive Dynamic</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Forward Seat Tilt</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>X</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Adjustable Seat Depth</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>√</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Footrest</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Optional（X/√）</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <p style="margin: auto">
+                                    <strong>Shipping dimensions &amp; weight</strong>
+                                </p>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Product Weight</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>55LBS</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Shipping Weight</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>56LBS</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Package Dimension</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>29.92"x16.53"x25.59"</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Warranty</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>5 years</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="specBoxContentTextBottom">
+                            <a href="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7MAX-foam_Manual.pdf"
+                                target="_blank">C7 Max MANUAL</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="specBox">
+            <div class="specBoxTop">
+                <div class="specBoxButtonBox">
+                    <button class="active">Installation Guide for C7M</button>
+                </div>
+                <!-- <div class="specBoxButtonBox"></div> -->
+                <video controls="" width="100%" style="cursor: pointer; padding: 0 10px">
+                    <source
+                        src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/Installation Guide for C7M-20240724001.mp4"
+                        type="video/webm">
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <div class="Newpage" id="C7PROMAXPage" style="display: none">
+        <div class="specBox">
+            <div class="specBoxTop">
+                <!-- <div class="specBoxButtonBox">
+            <button class="active">C7 Pro Max</button>
+          </div> -->
+                <div class="specBoxContentBox">
+                    <div class="specBoxContentImg">
+                        <img
+                            src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7pro-spec-20240904001.png">
+                        <img
+                            src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7pro-spec-20240904002.png">
+                    </div>
+                    <div class="specBoxContentText">
+                        <div class="specBoxContentTextCenter">
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Seat Material</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Mesh</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Max Weight Capacity</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>330lbs</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <p style="margin: auto"><strong>Dimensions</strong></p>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Seat Depth</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>16.5"-18.5"</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Seat Width</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>18.9"</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Seat Height Adjustment Range</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>16.96"-19.88"</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Headrest Adjustment</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>4.72",25°</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Recommended Height</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>5'9"-6'11"</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Armrest</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>5D</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Back Recline Position</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>93°-135°</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <p style="margin: auto"><strong>Function</strong></p>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Lumbar Support</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Adjustable Self-adaptive Dynamic</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Forward Seat Tilt</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>X</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Adjustable Seat Depth</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>√</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Footrest</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>√</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <p style="margin: auto">
+                                    <strong>Shipping dimensions &amp; weight</strong>
+                                </p>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Product Weight</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>62.5LBS</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Shipping Weight</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>63LBS</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Package Dimension</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>31.5"x20.47"x25.98"</p>
+                                </div>
+                            </div>
+                            <div class="specBoxContentTextCenterLine">
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>Warranty</p>
+                                </div>
+                                <div class="specBoxContentTextCenterLineText">
+                                    <p>5 years</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="specBoxContentTextBottom">
+                            <a href="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7PROMAX_Manual.pdf"
+                                target="_blank">C7 Pro Max MANUAL</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="specBox">
+            <div class="specBoxTop">
+                <div class="specBoxButtonBox">
+                    <button class="active">Installation Guide for C7 Pro Max</button>
+                </div>
+                <!-- <div class="specBoxButtonBox"></div> -->
+                <video controls="" width="100%" style="cursor: pointer; padding: 0 10px">
+                    <source
+                        src="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/C7Promax-20240920.mp4"
+                        type="video/webm">
+                </video>
+            </div>
+        </div>
+    </div>
+    <script>
+        const pages = {
+            C7Page: document.getElementById("C7Page"),
+            C7MAXPage: document.getElementById("C7MAXPage"),
+            C7PROMAXPage: document.getElementById("C7PROMAXPage"),
+            C7LitePage: document.getElementById("C7LITEPage"),
+        }
+
+        // 页面切换函数
+        function showPage(pageElement) {
+            const allPages = document.querySelectorAll(".Newpage")
+
+            // 隐藏所有页面
+            allPages.forEach((page) => {
+                page.style.display = "none"
+            })
+
+            // 显示目标页面
+            pageElement.style.display = "block"
+        }
+        function changeSpec() {
+            console.log("changeSpec", window.changeDescriptionData)
+            if (window.changeDescriptionData === "C7 Max") {
+                showPage(pages.C7MAXPage)
+            } else if (window.changeDescriptionData === "C7 Pro Max") {
+                showPage(pages.C7PROMAXPage)
+            } else if (window.changeDescriptionData === "C7") {
+                showPage(pages.C7Page)
+            } else if (window.changeDescriptionData === "C7 Lite") {
+                showPage(pages.C7LitePage)
+            }
+        }
+        changeSpec()
+        //       function watchChangeDescriptionDataSpec() {
+        //         let value = window.changeDescriptionData // 初始值
+        //         console.log("spec", value)
+        //         // 定义 getter 和 setter 来监听变化
+        //         Object.defineProperty(window, "changeDescriptionData", {
+        //           get() {
+        //             return value // 返回当前值
+        //           },
+        //           set(newValue) {
+        //             if (newValue === "C7 Max") {
+        // // 如果值为 "C7 Max"，显示 C7Max 页面
+        //             } else if (newValue === "C7") {
+        //               showPage(pages.C7Page) // 如果值为 "C7"，显示 C7 页面
+        //             } else if (newValue === "C7 Pro Max") {
+        //               showPage(pages.C7PROMAXPage) // 如果值为 "C7 Pro Max"，显示 C7 Pro Max 页面
+        //             }
+        //             value = newValue // 更新值
+        //           },
+        //           configurable: true, // 允许重新定义属性
+        //         })
+        //       }
+
+        //       // 调用方法开始监听
+        //       watchChangeDescriptionDataSpec()
+    </script>
+
+
+
+</div>
