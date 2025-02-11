@@ -1160,7 +1160,8 @@
 
     button.forEach(btn => {
         btn.addEventListener("click", () => {
-            window.location.href = isTourist ? "/login" : "/chairBattle-form"
+            const url = isTourist ? "/login?target=https://mall.dev.flexispot.jp/chairBattle-form" : "/chairBattle-form"
+            window.open(url, '_blank')
         })
     })
 

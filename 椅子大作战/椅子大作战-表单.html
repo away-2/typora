@@ -1,0 +1,1543 @@
+<div>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+    <style>
+        .chair_form_container {
+            width: 100%;
+        }
+
+        .chair_form_container .chair_form_title {
+            color: #26333A;
+            text-align: center;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-feature-settings: 'ss01' on, 'ss04' on, 'liga' off;
+            font-family: "Zen-Kaku-Gothic-New-Black" !important;
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 120%;
+            max-width: 1000px;
+            margin: 100px auto 62px;
+        }
+
+        .chair_form_container .chair_form_subtitle {
+            color: #26333A;
+            font-family: "NotoSansJP-Regular" !important;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            letter-spacing: 0.8px;
+            max-width: 1384px;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 1440px) {
+            .chair_form_container .chair_form_title {
+                font-size: 64px;
+                max-width: 700px;
+                margin: 80px auto 52px;
+            }
+
+            .chair_form_container .chair_form_subtitle {
+                max-width: 1000px;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            .chair_form_container .chair_form_title {
+                font-size: 40px;
+                max-width: 700px;
+                margin: 64px auto 44px;
+            }
+
+            .chair_form_container .chair_form_subtitle {
+                font-size: 14px;
+                letter-spacing: 0.7px;
+                max-width: 768px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .chair_form_container .chair_form_title {
+                max-width: 100%;
+                margin: 12px 27.5px 16px;
+            }
+
+            .chair_form_container .chair_form_subtitle {
+                max-width: 100%;
+                margin: 0 20px;
+            }
+        }
+    </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* scroll-behavior: smooth;
+            scroll-padding-top: 104px;
+            scroll-snap-align: center; */
+        }
+
+        body {
+            background: #fdfcf5;
+        }
+
+        .email_container {
+            max-width: 1384px;
+            margin: 60px auto 40px;
+            position: relative;
+        }
+
+        .label_case {
+            display: flex;
+            flex-direction: column;
+            margin: 0 32px;
+            flex: 1;
+            position: relative;
+            padding: 12px 0;
+        }
+
+        .p18 {
+            padding: 18px 0;
+        }
+
+        .label_class {
+            margin-bottom: 8px;
+            color: #26333A;
+            font-family: "NotoSansJP-Regular" !important;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0.8px;
+            display: block;
+        }
+
+        /* .label_class::after {
+            content: "*";
+            color: #004df2;
+            font-weight: 800;
+        }
+
+        .no_required::after {
+            display: none;
+        } */
+
+        .ipt_wrong {
+            color: #EF2D12;
+            font-family: "NotoSansJP-Regular";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            letter-spacing: 0.7px;
+            display: none;
+            position: absolute;
+            left: 0;
+            bottom: -15px;
+        }
+
+        .email_submit_btn {
+            cursor: pointer;
+            width: 460px;
+            height: 52px;
+            border-radius: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            background-color: #26333a;
+            font-family: "Moderat-Bold" !important;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 100%;
+            margin: 50px auto 100px;
+        }
+
+        .textarea_class {
+            border: 1px solid #a3a3a3;
+            border-radius: 4px;
+            background-color: #fdfcf5;
+            height: 180px;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        .input_class {
+            border: 1px solid #a3a3a3;
+            border-radius: 4px;
+            background-color: #fdfcf5;
+            padding: 10px;
+            font-size: 18px;
+            width: 100%;
+        }
+
+        .ipt_class {
+            margin-left: 23px;
+            padding-left: 10px;
+            height: 48px;
+            border: 1px solid #26333a80;
+            border-radius: 4px;
+            background-color: #fdfcf5;
+            font-size: 20px;
+            margin-top: 8px;
+            color: #26333a;
+            display: none;
+        }
+
+        /***  单选框  */
+        .radio_box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .radio_box:last-of-type {
+            margin-bottom: 0;
+        }
+
+        /* 隐藏默认的radio按钮 */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* 自定义的radio按钮 */
+        .custom-radio {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            border: 1px solid #a3a3a3;
+            /* 边框颜色 */
+            border-radius: 50%;
+            position: relative;
+            cursor: pointer;
+            margin-top: 2px;
+        }
+
+        /* 选中状态的样式 */
+        input[type="radio"]:checked+.custom-radio::after {
+            content: "";
+            width: 24px;
+            height: 24px;
+            background-color: #004df2;
+            background: url("https://s3.springbeetle.eu/dev-de-s3-flexispot/trantor/attachments/USFM/hook.png") no-repeat center center;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* 自定义的label */
+        .custom-label {
+            cursor: pointer;
+            margin-left: 8px;
+            font-size: 16px;
+            font-weight: 400;
+            font-family: "NotoSansJP-Regular" !important;
+            letter-spacing: 0.8px;
+            line-height: 130%;
+            color: #26333a;
+        }
+
+        /*** 复选框 */
+        .check_box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .check_box label {
+            font-size: 20px;
+            font-family: Noto Sans JP;
+            letter-spacing: 0.05em;
+            color: #26333a;
+        }
+
+        .check_box:last-of-type {
+            margin-bottom: 0;
+        }
+
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin-top: 2px;
+            margin-right: 8px;
+            position: relative;
+        }
+
+        input[type="checkbox"]::after {
+            cursor: pointer;
+            background: #fdfcf5;
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 18px;
+            height: 18px;
+            border: 1px solid #a3a3a3;
+            border-radius: 2px;
+            box-sizing: border-box;
+            border-radius: 2px;
+        }
+
+        input[type="checkbox"]:checked::after {
+            display: none;
+        }
+
+        /* 蒙层样式 */
+        .sucess-tip-box {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 5;
+        }
+
+        /* 提示框样式 */
+        .sucess-tip {
+            width: 700px;
+            height: 276px;
+            border-radius: 12px;
+            background: #FDFCF5;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 12px;
+        }
+
+        .sucess-tip-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .sucess-tip-text {
+            color: #26333A;
+            text-align: center;
+            font-family: "NotoSansJP-Medium" !important;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%;
+            text-align: center;
+            margin-bottom: 75px;
+        }
+
+        .sucess-tip-close {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+        }
+
+        .sucess-tip .sucess-tip-content .sucess-tip-button {
+            display: flex;
+            gap: 8px;
+        }
+
+        .sucess-tip .sucess-tip-content .sucess-tip-button .button {
+            width: 175px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            border-radius: 40px;
+            background: #26333A;
+            color: #FFF;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-feature-settings: 'ss02' on;
+            font-family: "Moderat-Bold" !important;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0.8px;
+        }
+
+        .label_custom {
+            display: flex;
+            align-items: stretch;
+            border: 1px solid #a3a3a3;
+            border-bottom: none;
+        }
+
+        .label_custom:last-of-type {
+            border-bottom: 1px solid #a3a3a3 !important;
+        }
+
+        .label_custom .label_prefix {
+            width: 356px;
+            display: flex;
+            align-items: center;
+            border-right: 1px solid #a3a3a3;
+            background: #FEE9B2;
+
+        }
+
+        .label_custom .label_prefix .prefix_title {
+            color: #26333A;
+            font-family: "NotoSansJP-Medium";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%;
+            letter-spacing: 0.9px;
+            margin-left: 14px;
+            max-width: 310px;
+        }
+
+        .label_custom .label_prefix .prefix_title span {
+            color: #004df2;
+        }
+
+        .label_custom .form_info {
+            color: #004DF2;
+            text-align: center;
+            font-family: "NotoSansJP-Regular" !important;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            letter-spacing: 0.8px;
+            margin-top: 35px;
+        }
+
+        .label_custom .form_select_box {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 14px 0;
+            position: relative;
+        }
+
+        .label_custom .form_select_box .custom-checkbox {
+            color: #26333A;
+            font-family: "NotoSansJP-Regular" !important;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            letter-spacing: 0.8px;
+        }
+
+        .label_custom .form_guarantee {
+            color: rgba(38, 51, 58, 0.80);
+            font-family: "NotoSansJP-Regular" !important;
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            letter-spacing: 0.8px;
+            margin-bottom: 35px;
+        }
+
+        /* 图片上传相关样式 */
+        #newPicViewsBox {
+            /* height: 102px; */
+            /* margin-top: 6px; */
+            display: inline-block;
+        }
+
+        #newPicViewsBox #add_input {
+            display: flex;
+            width: max-content;
+            padding-top: 6px;
+        }
+
+        .img-item {
+            width: 102px;
+            height: 102px;
+            margin-right: 5px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+            color: #dddddd;
+            border: 1px solid #dddddd;
+            float: left;
+            position: relative;
+            overflow: hidden;
+            margin-top: 6px;
+        }
+
+        .item-add {
+            cursor: pointer;
+        }
+
+        .item-delete {
+            opacity: 0;
+            position: absolute;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: red;
+            border-radius: 2px;
+            color: white;
+            transition: all 0.3s;
+            right: 8px;
+            top: -15px;
+            width: 15px;
+            height: 15px;
+            line-height: 0.7;
+            text-align: center;
+        }
+
+        .img-item:hover .item-delete {
+            top: 8px;
+            opacity: 1;
+        }
+
+        .suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-top: none;
+            max-height: 150px;
+            overflow-y: auto;
+            z-index: 1000;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .suggestion-box {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .suggestion-item {
+            padding: 8px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .suggestion-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        #newUpContactImages {
+            display: none;
+        }
+
+        .text_m {
+            display: none;
+        }
+
+        @media screen and (max-width: 1440px) {
+            .email_container {
+                max-width: 1000px;
+            }
+
+            .label_custom .label_prefix {
+                width: 240px;
+
+            }
+
+            .email_submit_btn {
+                margin: 40px auto 80px;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            .email_container {
+                max-width: 768px;
+            }
+
+            .label_custom .label_prefix {
+                width: 220px;
+
+            }
+
+            .label_custom .label_prefix .prefix_title {
+                font-size: 14px;
+                letter-spacing: 0.7px;
+                margin: 0 10px;
+            }
+
+            .label_class {
+                font-size: 14px;
+            }
+
+            .label_case {
+                margin: 0 14px;
+            }
+
+            .custom-label {
+                font-size: 16px;
+            }
+
+            .ipt_class {
+                height: 43px;
+                font-size: 16px;
+            }
+
+            .textarea_class {
+                height: 180px;
+                padding: 10px;
+                font-size: 16px;
+            }
+
+            .input_class {
+                padding: 10px;
+                font-size: 16px;
+            }
+
+            .email_submit_btn {
+                margin: 40px auto 60px;
+            }
+
+            .label_custom .form_info {
+                font-size: 14px;
+                letter-spacing: 0.7px;
+                margin-top: 38px;
+            }
+
+            .label_custom .form_select_box .custom-checkbox {
+                font-size: 14px;
+                letter-spacing: 0.7px;
+            }
+
+            .label_custom .form_guarantee {
+                font-size: 14px;
+                letter-spacing: 0.7px;
+                margin-bottom: 38px;
+            }
+
+            input[type="checkbox"] {
+                width: 16px;
+                height: 16px;
+            }
+
+            input[type="checkbox"]::after {
+                width: 16px;
+                height: 16px;
+            }
+
+        }
+
+        @media screen and (max-width: 768px) {
+            .email_container {
+                max-width: 100%;
+                margin: 0 20px;
+            }
+
+            .label_custom .label_prefix {
+                width: 72px;
+
+            }
+
+            .label_custom .label_prefix .prefix_title {
+                font-size: 12px;
+                letter-spacing: 0.6px;
+                margin: 0 6px;
+            }
+
+            .label_class {
+                font-size: 12px;
+            }
+
+            .custom-label {
+                font-size: 12px;
+            }
+
+            .ipt_class {
+                height: 43px;
+                font-size: 12px;
+            }
+
+            .ipt_wrong {
+                font-size: 12px;
+            }
+
+            .email_submit_btn {
+                width: 335px;
+                height: 42px;
+                font-size: 14px;
+            }
+
+            .sucess-tip {
+                width: 330px;
+                height: 280px;
+            }
+
+            .sucess-tip-content {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 15px;
+            }
+
+            .sucess-tip-text {
+                font-size: 16px;
+                margin-bottom: 45px;
+            }
+
+            .sucess-tip-close {
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                cursor: pointer;
+            }
+
+            .sucess-tip .sucess-tip-content .sucess-tip-button {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            /* 自定义的radio按钮 */
+            .custom-radio {
+                width: 18px;
+                height: 18px;
+            }
+
+            /* 选中状态的样式 */
+            input[type="radio"]:checked+.custom-radio::after {
+                width: 18px;
+                height: 18px;
+            }
+
+            .textarea_class {
+                height: 180px;
+                padding: 10px;
+                font-size: 12px;
+            }
+
+            .input_class {
+                padding: 10px;
+                font-size: 12px;
+            }
+
+            .label_custom .form_info {
+                font-size: 12px;
+                letter-spacing: 0.6px;
+                margin-top: 24px;
+            }
+
+            .label_custom .form_select_box .custom-checkbox {
+                font-size: 12px;
+                letter-spacing: 0.6px;
+            }
+
+            .label_custom .form_guarantee {
+                font-size: 12px;
+                letter-spacing: 0.6px;
+                margin: 0 auto 24px;
+                max-width: 250px;
+            }
+
+            .text_pc {
+                display: none;
+            }
+
+            .text_m {
+                display: block;
+            }
+
+            #newPicViewsBox {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    </style>
+    <div>
+        <div class="chair_form_container">
+            <div class="chair_form_title">FlexiSpot新生活応援企画-チェアの交換大作戦応募フォーム</div>
+            <div class="chair_form_subtitle">
+                ◆お手数ですが、下記フォームにてご応募ください。<br />
+                ◆「チェア・椅子」をテーマにした写真を自由に作成し投稿してください。チェア・椅子の思い出やエピソード等も一緒に添えていただければ幸いです。<br /><br />
+                ◆プレゼント当選者の発表：2025年4月3日（木）。公式Ｘと特設サイト上でおこなうものとします。<br />
+                ◆お名前、ご住所、ご連絡先等は、プレゼント発送の際にご利用させていただきます。正しいご連絡先が入力されていない場合、届かない場合もございますのでご注意ください。<br />
+                ◆プレゼント抽選結果についてのご質問にはお答えできませんので予めご了承ください。<br /><br />
+                応募締切：2025年3月16日（日）23:59まで
+            </div>
+            <!-- 表单 -->
+            <div class="email_container">
+                <!-- form module -->
+                <div class="form_case" id="form-case">
+                    <div class="form_container">
+                        <form action="" id="form">
+                            <div class="label_custom">
+                                <div class="label_prefix">
+                                    <div class="prefix_title">
+                                        <span>※</span> ご氏名
+                                    </div>
+                                </div>
+                                <div class="label_case" id="Q1">
+                                    <label class="label_class">プレゼント抽選に当選された場合の宛名になります。</label>
+                                    <input id="Name" class="input_class" maxlength="50"></input>
+                                    <div class="ipt_wrong">不得为空</div>
+                                </div>
+                            </div>
+                            <div class="label_custom">
+                                <div class="label_prefix">
+                                    <div class="prefix_title">
+                                        <span>※</span> あなたのニックネーム
+                                    </div>
+                                </div>
+                                <div class="label_case" id="Q2">
+                                    <label class="label_class">当選された場合、サイト上での当選者発表の名前として使用いたします。</label>
+                                    <input id="NickName" class="input_class" maxlength="50"></input>
+                                    <div class="ipt_wrong">不得为空</div>
+                                </div>
+                            </div>
+                            <div class="label_custom">
+                                <div class="label_prefix">
+                                    <div class="prefix_title">
+                                        <span>※</span> ご住所
+                                    </div>
+                                </div>
+                                <div class="label_case" id="Q3">
+                                    <label class="label_class">プレゼント抽選に当選された場合の発送先となります。</label>
+                                    <textarea id="Address" class="textarea_class" rows="4" maxlength="500"></textarea>
+                                    <div class="ipt_wrong">不得为空</div>
+                                </div>
+                            </div>
+                            <div class="label_custom">
+                                <div class="label_prefix">
+                                    <div class="prefix_title">
+                                        <span>※</span> 性別
+                                    </div>
+                                </div>
+                                <div class="label_case p18" id="Q4">
+                                    <label class="radio_box">
+                                        <input type="radio" name="sex" value="女性" checked />
+                                        <span class="custom-radio"></span>
+                                        <span class="custom-label">女性</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="sex" value="男性" />
+                                        <span class="custom-radio"></span>
+                                        <span class="custom-label">男性</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="label_custom">
+                                <div class="label_prefix">
+                                    <div class="prefix_title">
+                                        <span>※</span> ご年齢
+                                    </div>
+                                </div>
+                                <div class="label_case p18" id="Q5">
+                                    <label class="radio_box">
+                                        <input type="radio" name="age" value="10歳未満" checked />
+                                        <span class="custom-radio"></span>
+                                        <span class="custom-label">10歳未満</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="age" value="10代" />
+                                        <span class="custom-radio"></span>
+                                        <span class="custom-label">10代</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="age" value="20代" />
+                                        <span class="custom-radio"></span>
+                                        <span class="custom-label">20代</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="age" value="30代" />
+                                        <span class="custom-radio"></span>
+                                        <span class="custom-label">30代</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="age" value="40代" />
+                                        <span class="custom-radio"></span>
+                                        <span class="custom-label">40代</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="age" value="50代以上" />
+                                        <span class="custom-radio"></span>
+                                        <span class="custom-label">50代以上</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="label_custom">
+                                <div class="label_prefix">
+                                    <div class="prefix_title">
+                                        <span>※</span> ご連絡のとれるメールアドレス
+                                    </div>
+                                </div>
+                                <div class="label_case" id="Q6">
+                                    <label class="label_class">半角英数文字で入力お願いします。</label>
+                                    <!-- <div class="suggestion-box"> -->
+                                    <input id="Email" class="input_class" maxlength="500"></input>
+                                    <!-- <div id="suggestions" class="suggestions" style="display: none"></div>
+                                    </div> -->
+                                    <div class="ipt_wrong">不得为空</div>
+                                </div>
+                            </div>
+                            <div class="label_custom">
+                                <div class="label_prefix">
+                                    <div class="prefix_title">
+                                        <span>※</span> ご連絡のとれる電話番号
+                                    </div>
+                                </div>
+                                <div class="label_case" id="Q7">
+                                    <label class="label_class">半角数字で入力お願いします。</label>
+                                    <input id="Phone" class="input_class" maxlength="50"></input>
+                                    <div class="ipt_wrong">不得为空</div>
+                                </div>
+                            </div>
+                            <div class="label_custom">
+                                <div class="label_prefix">
+                                    <div class="prefix_title">
+                                        <span>※</span> Xで投稿したリンク
+                                    </div>
+                                </div>
+                                <div class="label_case" id="Q8">
+                                    <!-- <label class="label_class">当選された場合、サイト上での当選者発表の名前として使用いたします。</label> -->
+                                    <input id="ContributionLink" class="input_class" maxlength="500"></input>
+                                    <div class="ipt_wrong">不得为空</div>
+                                </div>
+                            </div>
+                            <div class="label_custom">
+                                <div class="label_prefix">
+                                    <div class="prefix_title">
+                                        <span>※</span> 投稿した椅子の画像をアップロードする
+                                    </div>
+                                </div>
+                                <div class="label_case" id="Q9">
+                                    <!-- 图片上传 -->
+                                    <div class="new-img-items">
+                                        <label
+                                            class="label_class">ファイル形式はJPEG（.jpeg／.jpg）、PNG、画像ファイル容量は5MB/枚以下でお送りください</label>
+                                        <input type="file" name="images" id="newUpContactImages"
+                                            accept="image/gif, image/jpeg, image/png, image/jpg" />
+                                        <div id="newPicViewsBox"></div>
+                                    </div>
+                                    <div class="ipt_wrong" id="image_ipt">不得为空</div>
+                                </div>
+                            </div>
+                            <div class="label_custom">
+                                <div class="label_prefix">
+                                    <div class="prefix_title">
+                                        <span>※</span> 不要となるチェアの回収は必要ですか？
+                                    </div>
+                                </div>
+                                <div class="label_case p18" id="Q10">
+                                    <label class="radio_box">
+                                        <input type="radio" name="isRecycle" value="true" checked />
+                                        <span class="custom-radio"></span>
+                                        <span class="custom-label">必要</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="isRecycle" value="" />
+                                        <span class="custom-radio"></span>
+                                        <span class="custom-label">不要</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="label_custom">
+                                <div class="label_prefix">
+                                    <div class="prefix_title text_pc">
+                                        <span>※</span> FlexiSpotを何で知りましたか？
+                                    </div>
+                                    <div class="prefix_title text_m">
+                                        <span>※</span> Flexi-Spotを何で知りましたか？
+                                    </div>
+                                </div>
+                                <div class="label_case p18" id="Q11">
+                                    <label class="radio_box">
+                                        <input type="radio" name="source" value="インターネット上の広告" checked />
+                                        <span class="custom-radio"></span>
+                                        <span class="custom-label">インターネット上の広告</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="source" value="ネット検索していたらたどり着いた" />
+                                        <span class="custom-radio"></span>
+                                        <span class="custom-label">ネット検索していたらたどり着いた</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="source" value="友人・知人からの口コミ" />
+                                        <span class="custom-radio"></span>
+                                        <span class="custom-label">友人・知人からの口コミ</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="source" value="店頭にて" />
+                                        <span class="custom-radio"></span>
+                                        <span class="custom-label">店頭にて</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="source" value="XなどSNS経由で" />
+                                        <span class="custom-radio"></span>
+                                        <span class="custom-label">XなどSNS経由で</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="source" value="その他" />
+                                        <span class="custom-radio"></span>
+                                        <span class="custom-label">その他</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="label_custom">
+                                <div class="label_prefix">
+                                    <div class="prefix_title">
+                                        <span>※</span> チェア・椅子との思い出やエピソード
+                                    </div>
+                                </div>
+                                <div class="label_case" id="Q12">
+                                    <label class="label_class">チェア・椅子に関しての思い出エピソード等を教えてください。</label>
+                                    <textarea id="Recall" class="textarea_class" rows="4" maxlength="500"></textarea>
+                                    <div class="ipt_wrong">不得为空</div>
+                                </div>
+                            </div>
+                            <div class="label_custom">
+                                <div style="width: 100%;position: relative;">
+                                    <div class="form_info">「個人情報の取り扱いについて」</div>
+                                    <div class="form_select_box">
+                                        <input type="checkbox" id="Agree" name="agree" value="agree" />
+                                        <label for="agree" class="custom-checkbox">に同意する </label>
+                                    </div>
+                                    <div class="ipt_wrong" id="agree_ipt">この質問は必須です</div>
+                                    <div class="form_guarantee">※「個人情報の取り扱いについて」をお読み頂き、同意出来る場合のみチェックを入れて下さい</div>
+                                </div>
+                            </div>
+                            <button class="email_submit_btn" id="submit">内容を確認する</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="sucess-tip-box" id="sucess-tip-box">
+                    <div class="sucess-tip" id="sucess-tip">
+                        <svg class="sucess-tip-close" onclick="closeTip()" width="32" height="32" viewBox="0 0 32 32"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_11_20)">
+                                <circle cx="16" cy="16" r="15.25" stroke="#26333A" stroke-width="1.5"></circle>
+                                <path
+                                    d="M19.9905 12.4688L16.237 16.0676M12.4835 19.6664L16.237 16.0676M16.237 16.0676L12.4907 12.3213L19.8446 19.6752"
+                                    stroke="#26333A" stroke-width="1.5"></path>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_11_20">
+                                    <rect width="32" height="32" fill="white"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <div class="sucess-tip-content">
+                            <div class="sucess-tip-text">
+                                応募完了！
+                            </div>
+                            <div class="sucess-tip-button">
+                                <div class="button" onclick="closeTip()">返回</div>
+                                <a href="/buyer/my-coupons" class="button">查看券</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function loadScript(url, callback) {
+            document.getElementById("") && document.getElementById("").remove()
+            var script = document.createElement("script")
+            script.type = "text/javascript"
+            script.async = "async"
+            script.src = url
+            script.id = ""
+            var head = document.head || document.getElementsByTagName("head")[0]
+            head.appendChild(script)
+            if (script.readyState) {
+                //IE
+                script.onreadystatechange = function () {
+                    if (
+                        script.readyState == "complete" ||
+                        script.readyState == "loaded"
+                    ) {
+                        script.onreadystatechange = null
+                        callback()
+                    }
+                }
+            } else {
+                //非IE
+                script.onload = function () {
+                    callback()
+                }
+            }
+        }
+
+        let isTourist = JSON.parse(localStorage.getItem("user-storage-data")).data.isTourist
+        if (isTourist) {
+            const url = "/login?target=https://mall.dev.flexispot.jp/chairBattle-form"
+            window.open(url, '_blank')
+        } else {
+            // 表单相关 js start
+            function getRadioValue(name) {
+                const radios = document.querySelectorAll("input[name=" + name + "]")
+                let selectedValue
+                radios.forEach((radio) => {
+                    if (radio.checked) {
+                        selectedValue = radio.value
+                    }
+                })
+                return selectedValue
+            }
+
+            function getCheckValue(name) {
+                const checks = document.querySelectorAll("input[name=" + name + "]")
+                let selectedValue = []
+                checks.forEach((check) => {
+                    if (check.checked) {
+                        selectedValue.push(check.value)
+                    }
+                })
+                return selectedValue
+            }
+
+            const Name = document.getElementById("Name")
+            const NickName = document.getElementById("NickName")
+            const Address = document.getElementById("Address")
+            const Email = document.getElementById("Email")
+            const Phone = document.getElementById("Phone")
+            const ContributionLink = document.getElementById("ContributionLink")
+            const Agree = document.getElementById("Agree")
+            const Recall = document.getElementById("Recall")
+            const emailReg =
+                /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
+
+            const phoneReg = /^\d{10,11}$/
+
+
+            let [thisName, thisNickName, thisAddress, thisEmail, thisPhone, thisContributionLink, thisRecall] =
+                [null, null, null, null, null, null, null]
+
+            const checkValue = (ele) => {
+                if (ele.value.trim() === "") {
+                    ele.nextElementSibling.style.display = "block"
+                    // ele.nextElementSibling.innerText = "不得为空"
+                    // getBoundingClientRect() // 触发重排，页面重新渲染
+                    ele.parentElement.style.marginBottom =
+                        window.innerWidth > 768 ? "25px" : "20px"
+                    return false
+                } else {
+                    ele.nextElementSibling.style.display = "none"
+                    ele.parentElement.style.marginBottom = "0px"
+                    // window.innerWidth > 768 ? "0px" : "0px"
+                    return true
+                }
+            }
+            Name.onblur = function () {
+                checkValue(Name)
+            }
+            NickName.onblur = function () {
+                checkValue(NickName)
+            }
+            Address.onblur = function () {
+                checkValue(Address)
+            }
+            Email.onblur = function () {
+                checkValue(Email)
+                if (emailReg.test(this.value)) {
+                    this.nextElementSibling.style.display = "none"
+                    this.parentElement.style.marginBottom = "0px"
+                    // window.innerWidth > 768 ? "20px" : "12px"
+                    thisEmail = true
+                } else {
+                    this.nextElementSibling.style.display = "block"
+                    // this.nextElementSibling.innerText = "请进口正确格式"
+                    this.parentElement.style.marginBottom =
+                        window.innerWidth > 768 ? "25px" : "20px"
+                    thisEmail = false
+                }
+            }
+
+            Phone.onblur = function () {
+                checkValue(Phone)
+                if (phoneReg.test(this.value)) {
+                    this.nextElementSibling.style.display = "none"
+                    this.parentElement.style.marginBottom = "0px"
+                    // window.innerWidth > 768 ? "20px" : "12px"
+                    thisPhone = true
+                } else {
+                    this.nextElementSibling.style.display = "block"
+                    // this.nextElementSibling.innerText = "请进口正确格式"
+                    this.parentElement.style.marginBottom =
+                        window.innerWidth > 768 ? "25px" : "20px"
+                    thisPhone = false
+                }
+            }
+
+            ContributionLink.onblur = function () {
+                checkValue(ContributionLink)
+            }
+
+            Recall.onblur = function () {
+                checkValue(Recall)
+            }
+
+            const checkValueOther = (id, val) => {
+                const ele = document.getElementById(id)
+                if (val.length === 0) {
+                    ele.parentElement.nextElementSibling.style.display = "block"
+                    ele.parentElement.nextElementSibling.style.left = "50%"
+                    ele.parentElement.nextElementSibling.style.transform = "translate(-50%, -50%)"
+                    ele.parentElement.nextElementSibling.style.bottom = window.innerWidth > 768 ? "50px" : "66px"
+                    ele.parentElement.style.marginBottom = window.innerWidth > 768 ? "30px" : "25px"
+                } else {
+                    ele.parentElement.nextElementSibling.style.display = "none"
+                    ele.parentElement.style.marginBottom = "14px"
+
+                }
+            }
+
+            const isAgree = getCheckValue("isAgree")
+            function labelShow(id, name, type, other_id) {
+                const ele = document.getElementById(id)
+                ele.onchange = function () {
+                    if (type === "check") {
+                        const val = getCheckValue(name)
+                        checkValueOther(id, val)
+
+                        if (val.includes(other) && other_id) {
+                            const other_ipt = document.getElementById(other_id)
+                            if (other_ipt) {
+                                other_ipt.style.display = "block"
+                            }
+                            const ohter_value = other_ipt.value
+                            // checkValueOther(id, ohter_value)
+                        } else {
+                            const other_ipt = document.getElementById(other_id)
+                            if (other_ipt) {
+                                other_ipt.style.display = "none"
+                            }
+                        }
+                    }
+                    if (type === "other") {
+                        const other_ipt = document.getElementById(other_id)
+                        other_ipt.style.display = "none"
+                        ele.parentElement.style.marginBottom = "0px"
+                    }
+                }
+            }
+            labelShow("Agree", "agree", "check", "agree_ipt")
+            labelShow("newUpContactImages", "images", "other", "image_ipt")
+
+            function labelShowOther(ele, val) {
+                if (!val) {
+                    ele.parentElement.nextElementSibling.style.display = "block"
+                    ele.parentElement.style.marginBottom = "20px"
+                    ele.parentElement.nextElementSibling.style.bottom = "5px"
+                    if (window.innerWidth < 768) {
+                        ele.parentElement.nextElementSibling.style.left = "50%"
+                        ele.parentElement.nextElementSibling.style.transform = "translate(-50%, -50%)"
+                    }
+                } else {
+                    ele.parentElement.nextElementSibling.style.display = "none"
+                    ele.parentElement.style.marginBottom = "0px"
+                }
+            }
+
+            function openTip(type) {
+                document.getElementById('sucess-tip-box').style.display = 'block';
+                document.body.style.overflow = 'hidden'; // 禁止滚动
+                document.querySelector('.sucess-tip-text').innerText = type === "success" ? "応募完了！" : "二重提出はご遠慮願います。";
+            }
+
+            function closeTip() {
+                document.getElementById('sucess-tip-box').style.display = 'none';
+                document.body.style.overflow = ''; // 恢复
+            }
+            loadScript(
+                "https://s3.springbeetle.asia/asia/trantor/attachments/JP/jquery-3.6.0.min.js",
+                function () {
+                    document
+                        .getElementById("submit")
+                        .addEventListener("click", function (e) {
+                            e.preventDefault()
+                            thisName = checkValue(Name)
+                            thisNickName = checkValue(NickName)
+                            thisAddress = checkValue(Address)
+                            thisEmail = checkValue(Email)
+                            thisPhone = checkValue(Phone)
+                            thisContributionLink = checkValue(ContributionLink)
+                            thisRecall = checkValue(Recall)
+
+                            const sex = getRadioValue("sex")
+                            const age = getRadioValue("age")
+                            const isRecycle = getRadioValue("isRecycle") ? true : false
+                            const source = getRadioValue("source")
+                            const isAgree = getCheckValue("agree")
+                            checkValueOther("Agree", isAgree)
+
+                            labelShowOther(newPicViewsBox, imageUrlString)
+
+                            if (emailReg.test(Email.value)) {
+                                Email.nextElementSibling.style.display = "none"
+                                Email.parentElement.style.marginBottom =
+                                    window.innerWidth > 768 ? "20px" : "12px"
+                                // thisEmail = true
+                            } else {
+                                Email.nextElementSibling.style.display = "block"
+                                Email.parentElement.style.marginBottom =
+                                    window.innerWidth > 768 ? "25px" : "20px"
+                                // thisEmail = false
+                            }
+
+                            if (phoneReg.test(Phone.value)) {
+                                Phone.nextElementSibling.style.display = "none"
+                                Phone.parentElement.style.marginBottom =
+                                    window.innerWidth > 768 ? "20px" : "12px"
+                            } else {
+                                Phone.nextElementSibling.style.display = "block"
+                                Phone.parentElement.style.marginBottom =
+                                    window.innerWidth > 768 ? "25px" : "20px"
+                            }
+
+                            if (
+                                thisName &&
+                                thisNickName &&
+                                thisAddress &&
+                                thisEmail &&
+                                thisPhone &&
+                                thisContributionLink &&
+                                thisRecall &&
+                                imageUrlString &&
+                                isAgree.length > 0
+                            ) {
+                                let data = [
+                                    {
+                                        site: `JP`,
+                                        name: $("#Name").val(),
+                                        nickName: $("#NickName").val(),
+                                        address: $("#Address").val(),
+                                        email: $("#Email").val(),
+                                        phone: $("#Phone").val(),
+                                        contributionLink: $("#ContributionLink").val(),
+                                        recall: $("#Recall").val(),
+                                        imageUrl: imageUrlString,
+                                        source,
+                                        sex,
+                                        age,
+                                        ifToRecycleChairs: Boolean(isRecycle),
+                                    },
+                                ]
+
+                                console.log(data, "???");
+
+                                $.ajax({
+                                    type: "POST",
+                                    url: "/api/trantor/func/flexispot_misc_CreateChairFightFunc",
+                                    data: JSON.stringify(data),
+                                    async: false,
+                                    cache: false,
+                                    processData: false,
+                                    dataType: "json",
+                                    contentType: "application/json; charset=UTF-8",
+                                    success: function (msg) {
+                                        // 成功
+                                        if (msg.code === 200) {
+                                            // window.location.href = "/contact/success"
+                                            openTip("success")
+                                        }
+                                    },
+                                    error: function (res) {
+                                        if (res.responseJSON.code == 500) {
+                                            console.log(res.responseJSON.msg);
+                                            if (res.responseJSON.msg == "user has reached upper limit, can not send")
+                                                // alert("フォームは既に提出済みですので重複しないでください")
+                                                openTip("fail")
+                                        }
+                                    },
+                                })
+                            } else {
+                                const ipt_wrong = document.querySelectorAll(".ipt_wrong")
+                                for (let i = 0; i < ipt_wrong.length; i++) {
+                                    if (ipt_wrong[i].style.display === "block") {
+                                        ipt_wrong[i].scrollIntoView({
+                                            block: "center",
+                                            behavior: "smooth",
+                                        })
+                                        return
+                                    }
+                                }
+                            }
+                        })
+                    // 表单相关 js end
+
+                    // 图片上传 js start
+                    var file_list = []
+                    var imageUrlString = ""
+                    var new_all_picW = "100px"
+                    var new_all_picH = "100px"
+                    var newfile = []
+                    var newdefaultAdd = `
+      <div id="add_input" onclick="javascript:document.getElementById('newUpContactImages').click()">
+        <svg class="item-add" width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0.393668" y="0.228629" width="100.63" height="100.63" rx="3.77137" fill="#F6F4F1" stroke="#26333A" stroke-width="0.457258"/>
+          <path d="M32 50.1311H70.0874M51.0437 31.0874L51.0437 69.1748" stroke="#26333A" stroke-opacity="0.1" stroke-width="6.14313" stroke-linecap="round"/>
+        </svg>
+      </div>`
+                    var newPicViewsBox = document.getElementById("newPicViewsBox")
+                    newrenderImg()
+                    // input发生改变
+                    $("#newUpContactImages").on("change", function () {
+                        onc()
+                    })
+
+                    let imageUrl;
+                    // 调图片上传接口
+                    function onc() {
+                        var itemAdd = document.getElementById("add_input")
+                        var files = document.getElementById("newUpContactImages").files
+                        var files_ejz = document.getElementById("newUpContactImages").files[0]
+                        if (!files_ejz) {
+                            return
+                        }
+                        itemAdd.innerHTML = '<span style="font-size:25px">Loading...</span>'
+                        postData("/api/herd/files/upload", {
+                            file: files_ejz,
+                        }).then((res) => {
+                            res = JSON.parse(res)
+                            if (res[Object.keys(res)[0]]) {
+                                file_list.push(res[Object.keys(res)[0]])
+                                updateImageUrlString();
+                                newrenderImg()
+                            } else {
+                                alert(res.msg)
+                            }
+                        })
+                    }
+                    // 定义上传图片方法
+                    function postData(url, data) {
+                        return new Promise((resolve, reject) => {
+                            var formData = new FormData()
+                            for (let key in data) {
+                                formData.append(key, data[key])
+                            }
+
+                            var xhr = new XMLHttpRequest()
+                            xhr.open("post", url)
+                            xhr.send(formData)
+
+                            xhr.onreadystatechange = function () {
+                                if (xhr.readyState == 4 && xhr.status == 200) {
+                                    resolve(xhr.response)
+                                } else if (xhr.status == 500) {
+                                    reject("fail")
+                                }
+                            }
+                        })
+                    }
+
+                    function updateImageUrlString() {
+                        imageUrlString = file_list.join(",")
+                    }
+
+                    // 上传的图片展示
+                    function newrenderImg() {
+                        newPicViewsBox.innerHTML = ""
+
+                        for (let i = 0; i < file_list.length; i++) {
+                            newPicViewsBox.innerHTML += `
+                            <div class='img-item'>
+                                <img 
+                                style='float:left;
+                                display:block;
+                                min-width:${new_all_picW};
+                                min-height:${new_all_picH}' 
+                                src='${file_list[i]}' 
+                                id='img${i}' />
+                                <div class='item-delete' data-index="${i}">×</div>
+                            </div>`
+                        }
+
+                        if (file_list.length < 1) {
+                            newPicViewsBox.innerHTML += newdefaultAdd
+                        }
+
+                        // 删除页面图片
+                        $(".item-delete").off("click").on("click", function () {
+                            var index = $(this).attr("data-index")
+                            file_list.splice(index, 1)
+                            updateImageUrlString() // 更新存储的url字符串
+                            newrenderImg()
+                        })
+                    }
+
+                    // 图片上传 js end
+                })
+        }
+    </script>
+    <!-- <script>
+        const emailInput = document.getElementById("Email")
+        const suggestionsBox = document.getElementById("suggestions")
+
+        const emailSuffixes = [
+            "@gmail.com",
+            "@icloud.com",
+            "@yahoo.co.jp",
+            "@outlook.jp",
+            "@outlook.com",
+            "@docomo.ne.jp",
+            "@ezweb.ne.jp",
+            "@hotmail.co.jp",
+            "@hotmail.com",
+            "@i.softbank.jp",
+            "@nifty.com",
+            "@softbank.ne.jp",
+            "@live.jp",
+            "@mac.com",
+        ]
+
+        emailInput.addEventListener("input", () => {
+            const value = emailInput.value
+            const atIndex = value.indexOf("@")
+
+            if (atIndex !== -1) {
+                const enteredDomain = value.slice(atIndex + 1)
+                const filteredSuffixes = emailSuffixes.filter((suffix) =>
+                    suffix.startsWith(`@${enteredDomain}`)
+                )
+
+                const suggestions = filteredSuffixes.map(
+                    (suffix) => value.split("@")[0] + suffix
+                )
+
+                renderSuggestions(suggestions)
+            } else {
+                suggestionsBox.style.display = "none"
+            }
+        })
+
+        function renderSuggestions(suggestions) {
+            if (suggestions.length > 0) {
+                suggestionsBox.innerHTML = suggestions
+                    .map(
+                        (suggestion) => `<div class="suggestion-item">${suggestion}</div>`
+                    )
+                    .join("")
+                suggestionsBox.style.display = "block"
+
+                document.querySelectorAll(".suggestion-item").forEach((item) => {
+                    item.addEventListener("click", () => {
+                        emailInput.value = item.textContent
+                        suggestionsBox.style.display = "none"
+                    })
+                })
+            } else {
+                suggestionsBox.style.display = "none"
+            }
+        }
+    </script> -->
+</div>

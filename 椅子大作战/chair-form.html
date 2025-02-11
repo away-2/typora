@@ -172,6 +172,7 @@
             background-color: #fdfcf5;
             padding: 10px;
             font-size: 18px;
+            width: 100%;
         }
 
         .ipt_class {
@@ -502,7 +503,35 @@
             opacity: 1;
         }
 
-        .new-img-items {}
+        .suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-top: none;
+            max-height: 150px;
+            overflow-y: auto;
+            z-index: 1000;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .suggestion-box {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .suggestion-item {
+            padding: 8px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .suggestion-item:hover {
+            background-color: #f0f0f0;
+        }
 
         #newUpContactImages {
             display: none;
@@ -851,7 +880,10 @@
                                 </div>
                                 <div class="label_case" id="Q6">
                                     <label class="label_class">半角英数文字で入力お願いします。</label>
+                                    <!-- <div class="suggestion-box"> -->
                                     <input id="Email" class="input_class" maxlength="80"></input>
+                                    <!-- <div id="suggestions" class="suggestions" style="display: none"></div>
+                                    </div> -->
                                     <div class="ipt_wrong">不得为空</div>
                                 </div>
                             </div>
@@ -967,6 +999,7 @@
                                 <div class="label_case" id="Q12">
                                     <label class="label_class">チェア・椅子に関しての思い出エピソード等を教えてください。</label>
                                     <textarea id="Recall" class="textarea_class" rows="4" maxlength="300"></textarea>
+                                    <div class="ipt_wrong">不得为空</div>
                                 </div>
                             </div>
                             <div class="label_custom">
@@ -1047,6 +1080,7 @@
         let isTourist = JSON.parse(localStorage.getItem("user-storage-data")).data.isTourist
         if (isTourist) {
             window.location.href = "/login"
+            // window.location.target = "_blank"
         } else {
             // 表单相关 js start
             function getRadioValue(name) {
@@ -1078,18 +1112,21 @@
             const Phone = document.getElementById("Phone")
             const ContributionLink = document.getElementById("ContributionLink")
             const Agree = document.getElementById("Agree")
+            const Recall = document.getElementById("Recall")
             const emailReg =
                 /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
 
             const phoneReg = /^\d{10,11}$/
 
 
-            let [thisName, thisNickName, thisAddress, thisEmail, thisPhone, thisContributionLink] =
-                [null, null, null, null, null, null]
+            let [thisName, thisNickName, thisAddress, thisEmail, thisPhone, thisContributionLink, thisRecall] =
+                [null, null, null, null, null, null, null]
 
             const checkValue = (ele) => {
                 if (ele.value.trim() === "") {
                     ele.nextElementSibling.style.display = "block"
+                    // ele.nextElementSibling.innerText = "不得为空"
+                    // getBoundingClientRect() // 触发重排，页面重新渲染
                     ele.parentElement.style.marginBottom =
                         window.innerWidth > 768 ? "25px" : "20px"
                     return false
@@ -1118,6 +1155,7 @@
                     thisEmail = true
                 } else {
                     this.nextElementSibling.style.display = "block"
+                    // this.nextElementSibling.innerText = "请进口正确格式"
                     this.parentElement.style.marginBottom =
                         window.innerWidth > 768 ? "25px" : "20px"
                     thisEmail = false
@@ -1142,6 +1180,10 @@
 
             ContributionLink.onblur = function () {
                 checkValue(ContributionLink)
+            }
+
+            Recall.onblur = function () {
+                checkValue(Recall)
             }
 
             const checkValueOther = (id, val) => {
@@ -1229,6 +1271,7 @@
                             thisEmail = checkValue(Email)
                             thisPhone = checkValue(Phone)
                             thisContributionLink = checkValue(ContributionLink)
+                            thisRecall = checkValue(Recall)
 
                             const sex = getRadioValue("sex")
                             const age = getRadioValue("age")
@@ -1268,6 +1311,7 @@
                                 thisEmail &&
                                 thisPhone &&
                                 thisContributionLink &&
+                                thisRecall &&
                                 imageUrlString &&
                                 isAgree.length > 0
                             ) {
@@ -1434,4 +1478,65 @@
                 })
         }
     </script>
+    <!-- <script>
+        const emailInput = document.getElementById("Email")
+        const suggestionsBox = document.getElementById("suggestions")
+
+        const emailSuffixes = [
+            "@gmail.com",
+            "@icloud.com",
+            "@yahoo.co.jp",
+            "@outlook.jp",
+            "@outlook.com",
+            "@docomo.ne.jp",
+            "@ezweb.ne.jp",
+            "@hotmail.co.jp",
+            "@hotmail.com",
+            "@i.softbank.jp",
+            "@nifty.com",
+            "@softbank.ne.jp",
+            "@live.jp",
+            "@mac.com",
+        ]
+
+        emailInput.addEventListener("input", () => {
+            const value = emailInput.value
+            const atIndex = value.indexOf("@")
+
+            if (atIndex !== -1) {
+                const enteredDomain = value.slice(atIndex + 1)
+                const filteredSuffixes = emailSuffixes.filter((suffix) =>
+                    suffix.startsWith(`@${enteredDomain}`)
+                )
+
+                const suggestions = filteredSuffixes.map(
+                    (suffix) => value.split("@")[0] + suffix
+                )
+
+                renderSuggestions(suggestions)
+            } else {
+                suggestionsBox.style.display = "none"
+            }
+        })
+
+        function renderSuggestions(suggestions) {
+            if (suggestions.length > 0) {
+                suggestionsBox.innerHTML = suggestions
+                    .map(
+                        (suggestion) => `<div class="suggestion-item">${suggestion}</div>`
+                    )
+                    .join("")
+                suggestionsBox.style.display = "block"
+
+                document.querySelectorAll(".suggestion-item").forEach((item) => {
+                    item.addEventListener("click", () => {
+                        emailInput.value = item.textContent
+                        suggestionsBox.style.display = "none"
+                    })
+                })
+            } else {
+                suggestionsBox.style.display = "none"
+            }
+        }
+    </script> -->
 </div>
