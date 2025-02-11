@@ -546,7 +546,13 @@
                 showPage(pages.ExtraLarge)
             }
         }
-        changeSpec()
+        const observer = new MutationObserver(() => {
+            changeSpec();
+        });
+
+        // 监听 `window` 对象的属性变化
+        observer.observe(document.documentElement, { attributes: true, subtree: true });
+
     </script>
 
 

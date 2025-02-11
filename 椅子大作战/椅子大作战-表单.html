@@ -1079,8 +1079,7 @@
 
         let isTourist = JSON.parse(localStorage.getItem("user-storage-data")).data.isTourist
         if (isTourist) {
-            const url = "/login?target=https://mall.dev.flexispot.jp/chairBattle-form"
-            window.open(url, '_blank')
+            window.location.href = "/login?target=https://mall.dev.flexispot.jp/chairBattle-form"
         } else {
             // 表单相关 js start
             function getRadioValue(name) {
@@ -1125,10 +1124,10 @@
             const checkValue = (ele) => {
                 if (ele.value.trim() === "") {
                     ele.nextElementSibling.style.display = "block"
-                    // ele.nextElementSibling.innerText = "不得为空"
-                    // getBoundingClientRect() // 触发重排，页面重新渲染
+                    ele.nextElementSibling.innerText = "不得为空"
                     ele.parentElement.style.marginBottom =
                         window.innerWidth > 768 ? "25px" : "20px"
+                    // getBoundingClientRect() // 触发重排，页面重新渲染
                     return false
                 } else {
                     ele.nextElementSibling.style.display = "none"
@@ -1147,7 +1146,9 @@
                 checkValue(Address)
             }
             Email.onblur = function () {
-                checkValue(Email)
+                if (!checkValue(this)) {
+                    return;
+                }
                 if (emailReg.test(this.value)) {
                     this.nextElementSibling.style.display = "none"
                     this.parentElement.style.marginBottom = "0px"
@@ -1155,7 +1156,7 @@
                     thisEmail = true
                 } else {
                     this.nextElementSibling.style.display = "block"
-                    // this.nextElementSibling.innerText = "请进口正确格式"
+                    this.nextElementSibling.innerText = "请进口正确格式"
                     this.parentElement.style.marginBottom =
                         window.innerWidth > 768 ? "25px" : "20px"
                     thisEmail = false
@@ -1163,7 +1164,9 @@
             }
 
             Phone.onblur = function () {
-                checkValue(Phone)
+                if (!checkValue(this)) {
+                    return;
+                }
                 if (phoneReg.test(this.value)) {
                     this.nextElementSibling.style.display = "none"
                     this.parentElement.style.marginBottom = "0px"
@@ -1171,7 +1174,7 @@
                     thisPhone = true
                 } else {
                     this.nextElementSibling.style.display = "block"
-                    // this.nextElementSibling.innerText = "请进口正确格式"
+                    this.nextElementSibling.innerText = "请进口正确格式"
                     this.parentElement.style.marginBottom =
                         window.innerWidth > 768 ? "25px" : "20px"
                     thisPhone = false
@@ -1332,8 +1335,6 @@
                                         ifToRecycleChairs: Boolean(isRecycle),
                                     },
                                 ]
-
-                                console.log(data, "???");
 
                                 $.ajax({
                                     type: "POST",

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab 切换示例</title>
+    <style>
+        .tab_box, .header_box {
+            display: flex;
+            gap: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .tab_item, .header_item {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .content_box {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        .desc_item, .spec_item {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        .selected {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tab_box">
+        <div class="tab_item selected">one</div>
+        <div class="tab_item">two</div>
+        <div class="tab_item">three</div>
+        <div class="tab_item">four</div>
+        <div class="tab_item">five</div>
+    </div>
+
+    <div class="header_box">
+        <div class="header_item selected" data-target="desc">desc</div>
+        <div class="header_item" data-target="spec">spec</div>
+        <div class="header_item" data-target="review">review</div>
+    </div>
+
+    <div class="content_box">
+        <div class="desc_box">
+            <div class="desc_item active">desc_1</div>
+            <div class="desc_item">desc_2</div>
+            <div class="desc_item">desc_3</div>
+            <div class="desc_item">desc_4</div>
+            <div class="desc_item">desc_5</div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let currentType = "desc"; // 默认显示 desc_box
+            let currentIndex = 0; // 默认选中第一个 tab_item
+
+            const tabItems = document.querySelectorAll(".tab_item");
+            const headerItems = document.querySelectorAll(".header_item");
+            const contentBox = document.querySelector(".content_box");
+
+            // 处理 tab 切换 desc_item 和 spec_item
+            function updateTabContent() {
+                const allItems = document.querySelectorAll(`.${currentType}_item`);
+                allItems.forEach((item, index) => {
+                    item.classList.toggle("active", index === currentIndex);
+                });
+            }
+
+            // 绑定 tab 切换事件
+            tabItems.forEach((tab, index) => {
+                tab.addEventListener("click", () => {
+                    tabItems.forEach(item => item.classList.remove("selected"));
+                    tab.classList.add("selected");
+                    currentIndex = index;
+                    updateTabContent();
+                });
+            });
+
+            // 绑定 header 切换事件
+            headerItems.forEach(header => {
+                header.addEventListener("click", () => {
+                    const target = header.dataset.target;
+
+                    if (target === currentType) return;
+
+                    headerItems.forEach(item => item.classList.remove("selected"));
+                    header.classList.add("selected");
+
+                    currentType = target;
+                    contentBox.innerHTML = ""; // 清空 content_box
+
+                    if (currentType === "desc") {
+                        contentBox.innerHTML = `
+                            <div class="desc_box">
+                                <div class="desc_item active">desc_1</div>
+                                <div class="desc_item">desc_2</div>
+                                <div class="desc_item">desc_3</div>
+                                <div class="desc_item">desc_4</div>
+                                <div class="desc_item">desc_5</div>
+                            </div>
+                        `;
+                    } else if (currentType === "spec") {
+                        contentBox.innerHTML = `
+                            <div class="spec_box">
+                                <div class="spec_item active">spec_1</div>
+                                <div class="spec_item">spec_2</div>
+                                <div class="spec_item">spec_3</div>
+                                <div class="spec_item">spec_4</div>
+                                <div class="spec_item">spec_5</div>
+                            </div>
+                        `;
+                    }
+                    updateTabContent();
+                });
+            });
+
+            // 初始化
+            updateTabContent();
+        });
+    </script>
+
+</body>
+</html>
