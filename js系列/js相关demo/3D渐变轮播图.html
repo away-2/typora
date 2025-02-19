@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .carousel-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .prev,
+    .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .prev svg,
+    .next svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .prev {
+        left: 0;
+
+    }
+
+    .next {
+        right: 0;
+
+    }
+
+    .carousel-list {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        perspective: 1000px;
+        /* margin: 0 auto; */
+    }
+
+    .carousel-item {
+        position: absolute;
+        height: 250px;
+        width: 250px;
+        user-select: none;
+        transition: all 0.5s ease-in-out;
+        left: 50%;
+        top: 0;
+        margin-left: -200px;
+    }
+
+    .bullets {
+        background: red;
+        border-radius: 50px;
+        width: 100px;
+        height: 10px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .bullet {
+        width: 10px;
+        height: 10px;
+        background: #fff;
+        border: 1px solid #fff;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    .bullet.active {
+        background: green;
+    }
+</style>
+
+<body>
+    <div class="carousel-container">
+        <div class="carousel-list">
+            <img class="carousel-item"
+                src="https://pics0.baidu.com/feed/d6ca7bcb0a46f21f70ff3707fcc77b6d0e33ae8f.jpeg?token=cdbe84ed61d1ebfc7b3bb4a38fd8d9c4"
+                alt="">
+            <img class="carousel-item"
+                src="https://pics0.baidu.com/feed/d6ca7bcb0a46f21f70ff3707fcc77b6d0e33ae8f.jpeg?token=cdbe84ed61d1ebfc7b3bb4a38fd8d9c4"
+                alt="">
+            <img class="carousel-item"
+                src="https://pics0.baidu.com/feed/d6ca7bcb0a46f21f70ff3707fcc77b6d0e33ae8f.jpeg?token=cdbe84ed61d1ebfc7b3bb4a38fd8d9c4"
+                alt="">
+            <img class="carousel-item"
+                src="https://pics0.baidu.com/feed/d6ca7bcb0a46f21f70ff3707fcc77b6d0e33ae8f.jpeg?token=cdbe84ed61d1ebfc7b3bb4a38fd8d9c4"
+                alt="">
+            <img class="carousel-item"
+                src="https://pics0.baidu.com/feed/d6ca7bcb0a46f21f70ff3707fcc77b6d0e33ae8f.jpeg?token=cdbe84ed61d1ebfc7b3bb4a38fd8d9c4"
+                alt="">
+            <img class="carousel-item"
+                src="https://pics0.baidu.com/feed/d6ca7bcb0a46f21f70ff3707fcc77b6d0e33ae8f.jpeg?token=cdbe84ed61d1ebfc7b3bb4a38fd8d9c4"
+                alt="">
+            <img class="carousel-item"
+                src="https://pics0.baidu.com/feed/d6ca7bcb0a46f21f70ff3707fcc77b6d0e33ae8f.jpeg?token=cdbe84ed61d1ebfc7b3bb4a38fd8d9c4"
+                alt="">
+        </div>
+    </div>
+    <div class="prev">
+        <svg t="1739972889023" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="3461" width="200" height="200">
+            <path
+                d="M783.36 1003.52c30.72-30.72 30.72-76.8 0-107.52L404.48 512l378.88-378.88c30.72-30.72 30.72-76.8 0-107.52-30.72-30.72-76.8-30.72-107.52 0L240.64 455.68c-30.72 30.72-30.72 76.8 0 107.52l435.2 435.2c30.72 30.72 76.8 30.72 107.52 5.12z"
+                fill="#CCCCCC" p-id="3462"></path>
+        </svg>
+    </div>
+    <div class="next">
+        <svg t="1739972918882" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="3608" width="200" height="200">
+            <path
+                d="M240.64 20.48c-30.72 30.72-30.72 81.92 0 112.64l378.88 378.88-378.88 378.88c-30.72 30.72-30.72 76.8 0 107.52s76.8 30.72 107.52 0l435.2-435.2c30.72-30.72 30.72-76.8 0-107.52L348.16 20.48c-30.72-25.6-76.8-25.6-107.52 0z"
+                fill="#CCCCCC" p-id="3609"></path>
+        </svg>
+    </div>
+    <div class="bullets"></div>
+</body>
+<script>
+    const prev = document.querySelector('.prev');
+    const next = document.querySelector('.next');
+    const items = document.querySelectorAll('.carousel-item');
+    const bullets = document.querySelector('.bullets');
+
+    let index = 0;  // 当前显示的是第几张图片
+
+    // 根据当前的index，设置正确的布局
+    function layout() {
+        const offsetStep = 80;  // 每个item之间的偏移量
+        const scaleStep = 0.6;  // 每个item之间的缩放比例
+        const opacityStep = 0.6;  // 每个item之间的透明度
+        for (let i = 0; i < items.length; i++) {
+            const item = items[i];
+            const dis = i - index;   // 下标距离
+            let xoffset = dis * offsetStep;  // x轴偏移量
+            const sign = Math.sign(dis);  // 符号 1 or -1
+            let rotateY = 0;
+            if (i !== index) {
+                xoffset = xoffset + 100 * sign;
+                // rotateY = 10 * -sign;
+            }
+            const scale = scaleStep ** (Math.abs(dis));  // 缩放比例
+            item.style.transform = `translateX(${xoffset}px) scale(${scale}) rotateY(${rotateY}deg)`;
+            const zIndex = items.length - Math.abs(dis);  // 层级
+            item.style.zIndex = zIndex;
+            const opacity = opacityStep ** (Math.abs(dis));  // 透明度
+            item.style.opacity = opacity;
+        }
+    }
+    layout();
+
+    // 自动轮播
+    // setInterval(() => {
+    //     index++;
+    //     if (index > items.length - 1) index = items.length - 1;
+    //     layout();
+    // }, 3000);
+
+    // 默认展示中间的图片
+    index = Math.floor(items.length / 2);
+    layout();
+
+    prev.onclick = function () {
+        index--;
+        if (index < 0) index = 0;
+        layout();
+        // 点击图片时同步更新小圆点
+        Array.from(bullets.children).forEach((bullet, bulletIndex) => {
+            if (bulletIndex === index) {
+                bullet.classList.add('active');
+            } else {
+                bullet.classList.remove('active');
+            }
+        });
+    }
+
+    next.onclick = function () {
+        index++;
+        if (index > items.length - 1) index = items.length - 1;
+        layout();
+        // 点击图片时同步更新小圆点
+        Array.from(bullets.children).forEach((bullet, bulletIndex) => {
+            if (bulletIndex === index) {
+                bullet.classList.add('active');
+            } else {
+                bullet.classList.remove('active');
+            }
+        });
+    }
+
+    items.forEach((item, i) => {
+        item.onclick = () => {
+            index = i;
+            layout();
+            // 点击图片时同步更新小圆点
+            Array.from(bullets.children).forEach((bullet, bulletIndex) => {
+                if (bulletIndex === index) {
+                    bullet.classList.add('active');
+                } else {
+                    bullet.classList.remove('active');
+                }
+            });
+        }
+
+    })
+
+    // 生成小圆点 根据图片数量生成小圆点
+    for (let i = 0; i < items.length; i++) {
+        const bullet = document.createElement('div');
+        bullet.classList.add('bullet');
+        bullet.dataset.index = i;
+        bullets.appendChild(bullet);
+    }
+
+    // 默认中间小圆点添加active类
+    bullets.children[Math.floor(bullets.children.length / 2)].classList.add('active');
+    //点击小圆点切换相应的图片，并且小圆点添加active类，其他小圆点移除active类
+    Array.from(bullets.children).forEach((bullet, i) => {
+        bullet.onclick = () => {
+            index = i;
+            layout();
+            bullet.classList.add('active');
+            Array.from(bullets.children).forEach((bullet, i) => {
+                if (i !== index) {
+                    bullet.classList.remove('active');
+                }
+            });
+        }
+    });
+
+    // [...bullets.children].forEach((bullet, i) => {
+    //     bullet.onclick = () => {
+    //         index = i;
+    //         layout();
+    //         bullet.classList.add('active');
+    //         [...bullets.children].forEach((bullet, i) => {
+    //             if (i !== index) {
+    //                 bullet.classList.remove('active');
+    //             }
+    //         });
+    //     }
+    // });
+
+
+
+</script>
+
+</html>
