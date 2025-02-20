@@ -7,10 +7,10 @@
     <title>Document</title>
 </head>
 <style>
-    .carousel-container {
-        width: 100%;
-        height: 100%;
-        position: relative;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 
     .prev,
@@ -38,6 +38,13 @@
 
     }
 
+    .carousel-container {
+        width: 80%;
+        height: 300px;
+        position: relative;
+        margin: 0 auto;
+    }
+
     .carousel-list {
         width: 100%;
         height: 100%;
@@ -54,7 +61,7 @@
         transition: all 0.5s ease-in-out;
         left: 50%;
         top: 0;
-        margin-left: -200px;
+        margin-left: -135px;
     }
 
     .bullets {
@@ -111,24 +118,25 @@
                 src="https://pics0.baidu.com/feed/d6ca7bcb0a46f21f70ff3707fcc77b6d0e33ae8f.jpeg?token=cdbe84ed61d1ebfc7b3bb4a38fd8d9c4"
                 alt="">
         </div>
+        <div class="prev">
+            <svg t="1739972889023" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                p-id="3461" width="200" height="200">
+                <path
+                    d="M783.36 1003.52c30.72-30.72 30.72-76.8 0-107.52L404.48 512l378.88-378.88c30.72-30.72 30.72-76.8 0-107.52-30.72-30.72-76.8-30.72-107.52 0L240.64 455.68c-30.72 30.72-30.72 76.8 0 107.52l435.2 435.2c30.72 30.72 76.8 30.72 107.52 5.12z"
+                    fill="#CCCCCC" p-id="3462"></path>
+            </svg>
+        </div>
+        <div class="next">
+            <svg t="1739972918882" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                p-id="3608" width="200" height="200">
+                <path
+                    d="M240.64 20.48c-30.72 30.72-30.72 81.92 0 112.64l378.88 378.88-378.88 378.88c-30.72 30.72-30.72 76.8 0 107.52s76.8 30.72 107.52 0l435.2-435.2c30.72-30.72 30.72-76.8 0-107.52L348.16 20.48c-30.72-25.6-76.8-25.6-107.52 0z"
+                    fill="#CCCCCC" p-id="3609"></path>
+            </svg>
+        </div>
+        <div class="bullets"></div>
     </div>
-    <div class="prev">
-        <svg t="1739972889023" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
-            p-id="3461" width="200" height="200">
-            <path
-                d="M783.36 1003.52c30.72-30.72 30.72-76.8 0-107.52L404.48 512l378.88-378.88c30.72-30.72 30.72-76.8 0-107.52-30.72-30.72-76.8-30.72-107.52 0L240.64 455.68c-30.72 30.72-30.72 76.8 0 107.52l435.2 435.2c30.72 30.72 76.8 30.72 107.52 5.12z"
-                fill="#CCCCCC" p-id="3462"></path>
-        </svg>
-    </div>
-    <div class="next">
-        <svg t="1739972918882" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
-            p-id="3608" width="200" height="200">
-            <path
-                d="M240.64 20.48c-30.72 30.72-30.72 81.92 0 112.64l378.88 378.88-378.88 378.88c-30.72 30.72-30.72 76.8 0 107.52s76.8 30.72 107.52 0l435.2-435.2c30.72-30.72 30.72-76.8 0-107.52L348.16 20.48c-30.72-25.6-76.8-25.6-107.52 0z"
-                fill="#CCCCCC" p-id="3609"></path>
-        </svg>
-    </div>
-    <div class="bullets"></div>
+
 </body>
 <script>
     const prev = document.querySelector('.prev');

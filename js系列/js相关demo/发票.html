@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>領収書</title>
+    <style>
+        body {
+            font-family: "MS Gothic", "Yu Gothic", sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .logo {
+            text-align: center;
+            color: #0066FF;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 24px;
+            margin: 20px 0;
+            letter-spacing: 1em;
+            padding-left: 1em;
+        }
+
+        .customer-info {
+            margin: 20px 0;
+        }
+
+        .message {
+            margin: 20px 0;
+            line-height: 1.8;
+        }
+
+        .company-info {
+            float: right;
+            text-align: left;
+            margin-top: -100px;
+        }
+
+        .stamp {
+            color: red;
+            border: 2px solid red;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            float: right;
+            margin-top: 20px;
+        }
+
+        .total-amount {
+            margin: 30px 0;
+            border-bottom: 1px solid #000;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+
+        .amount {
+            text-align: right;
+        }
+
+        .remarks {
+            margin-top: 20px;
+        }
+
+        .remarks th {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px;
+        }
+
+        .remarks td {
+            padding: 10px;
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">FlexiSpot</div>
+    
+    <h1 class="title">領収書</h1>
+
+    <div class="customer-info">
+        山家みど 様
+    </div>
+
+    <div class="message">
+        このたびはお買い上げいただきまして、<br>
+        誠にありがとうございました。<br>
+        お客様の領収書を送付いたしますので、<br>
+        ご確認いただきますよう、お願いいたします。
+    </div>
+
+    <div class="company-info">
+        注文日： 2024年8月11日<br>
+        領収書発行日：<br><br>
+        Flexispot Japan 株式会社<br>
+        〒354-0045<br>
+        埼玉県入間郡三芳町上富2056<br>
+        TEL：050-5865-4050<br>
+        登録番号：T6013301039403
+        <img src="https://pics0.baidu.com/feed/d6ca7bcb0a46f21f70ff3707fcc77b6d0e33ae8f.jpeg?token=cdbe84ed61d1ebfc7b3bb4a38fd8d9c4" class="stamp"></img>
+    </div>
+
+    <div class="total-amount">
+        合計金額：　　¥66,572
+    </div>
+
+    <table>
+        <tr>
+            <th>製品</th>
+            <th>数量</th>
+            <th>単価</th>
+            <th>金額</th>
+        </tr>
+        <tr>
+            <td>電動昇降式デスク 脚フレーム E7 Pro（ホワイト）</td>
+            <td>1</td>
+            <td class="amount">49,840</td>
+            <td class="amount">49,840</td>
+        </tr>
+        <tr>
+            <td>長方形天板、120x60x2.5cm(メープル)</td>
+            <td>1</td>
+            <td class="amount">10,680</td>
+            <td class="amount">10,680</td>
+        </tr>
+        <tr>
+            <td colspan="3">10%対象</td>
+            <td class="amount">60,520</td>
+        </tr>
+        <tr>
+            <td colspan="3">消費税（10%）</td>
+            <td class="amount">6,052</td>
+        </tr>
+        <tr>
+            <td colspan="3">合計</td>
+            <td class="amount">66,572</td>
+        </tr>
+    </table>
+
+    <table class="remarks">
+        <tr>
+            <th>備考</th>
+        </tr>
+        <tr>
+            <td>注文番号：#2220224</td>
+        </tr>
+    </table>
+</body>
+</html>
