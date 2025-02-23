@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style type="text/css">
+        * {
+            font-family: Roboto-Regular;
+        }
+
+        .container {
+            width: 535px;
+            margin: 0 auto;
+            padding: 27px 30px 52px;
+        }
+
+        .header {
+            width: 100%;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #26333A;
+        }
+
+        .summary-title {
+            color: #26333A;
+            font-family: Arial;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            letter-spacing: -0.6px;
+        }
+
+        .summary-text {
+            color: #26333A;
+            font-family: Arial;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            letter-spacing: -0.6px;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .baseInfo-item {
+            display: flex;
+            /* align-items: center; */
+        }
+
+        .item-title {
+            color: #26333A;
+            font-family: Arial;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%;
+        }
+
+        .item-value {
+            color: #26333A;
+            font-family: Arial;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+        }
+
+        .total-item {
+            width: 100%;
+            display: flex;
+            border-bottom: 1px solid #26333A;
+        }
+
+        .total-item-title {
+            color: #26333A;
+            font-family: Arial;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%;
+        }
+
+        .total-item-value {
+            color: #26333A;
+            font-family: Arial;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%;
+            margin-left: 62px;
+        }
+
+        table tbody {
+            border: 1px solid #cbced0;
+            border-top: none;
+        }
+
+        table thead tr {
+            border-right: 1px solid #26333A;
+            border-left: 1px solid #26333A;
+        }
+
+        table thead tr th {
+            background: #26333A;
+            color: #FDFCF5;
+            font-family: Arial;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%;
+            letter-spacing: 0.6px;
+            padding: 9.4px 0 6.6px;
+            border-right: 1px solid #FAF6F2;
+        }
+
+        table tbody tr td {
+            color: #26333A;
+            font-family: Arial;
+            height: 22px;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            letter-spacing: 0.6px;
+            text-align: center;
+            background: #fff;
+            border-right: 1px solid #cbced0;
+        }
+
+        table tbody tr:nth-child(2n) td {
+            background: #e3e5e6;
+        }
+
+        table tbody:nth-child(2n) {
+            border-bottom: none;
+        }
+
+        table tbody:nth-child(2n-1) tr td {
+            border-right: none;
+        }
+
+        .header-item {
+            width: 534px;
+            height: 30px;
+            flex-shrink: 0;
+            background: #26333A;
+            color: #FDFCF5;
+            font-family: Arial;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px;
+            letter-spacing: 0.6px;
+            text-align: center;
+        }
+
+        .body-item {
+            width: 525px;
+            height: 22px;
+            color: #26333A;
+            font-family: Arial;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 22px;
+            letter-spacing: 0.6px;
+            padding-left: 8px;
+            background: #e3e5e6;
+            border-left: 1px solid #cbced0;
+            border-right: 1px solid #cbced0;
+        }
+
+        .body-item:last-child {
+            border-bottom: 1px solid #cbced0;
+        }
+
+        .body-item:nth-child(2n-1) {
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img style="width: 111px;height: 23.257px; margin: 0 auto;display: flex;justify-content: center;"
+                src='data:image/png;base64,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'></img>
+            <div style="color:#26333A;
+        font-family: Arial;
+        font-size: 27px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+        text-align: center;
+        margin-top: 43.74px;
+        ">
+                領&nbsp;&nbsp;収&nbsp;&nbsp;書</div>
+        </div>
+        <div style="width: 50%;float: left; ">
+            <div style="margin-top: 37px;">
+                <div class="summary-title" style="margin-left: 113px;display: flex;align-items: center;">
+                    <span>山室 みど</span>
+                    <span style="margin-left: 95px;text-align: right;font-size: 12px;font-weight: 700;">様</span>
+                </div>
+                <div class="summary-text" style="margin-top: 21px;line-height: 16.5px;">
+                    このたびはお買い上げいただきまして、<br />
+                    誠にありがとうございました。
+                </div>
+                <div class="summary-text" style="margin-top: 7px;">
+                    お客様の領収書を送付いたしますので、
+
+                </div>
+                <div class="summary-text" style="margin-top: 10px;">
+                    ご確認いただきますよう、お願いいたします。
+                </div>
+            </div>
+        </div>
+        <div style="width: 50%; display: table-cell;font-size: 12px; color: #26333A;padding-left: 40px;">
+            <div>
+                <!-- 日期 -->
+                <div class="baseInfo-item" style="margin-top: 37px;">
+                    <p class="item-title">注&nbsp;&nbsp;&nbsp;文&nbsp;&nbsp;&nbsp;日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;：</p>
+                    <p class="item-value" style="margin-left: 20px;" th:text="${orderDate}">2024年8月11日</p>
+                </div>
+                <!-- 订单号 -->
+                <div class="baseInfo-item" style="margin-top: 11px;">
+                    <p class="item-title">領収書発行日：</p>
+                    <p class="item-value" style="margin-left: 20px;" th:text="${orderNo}">1234567890</p>
+                </div>
+                <!-- 公司信息 -->
+                <div class="baseInfo-item" style="margin-top: 19px;">
+                    <p class="item-value">Flexispot Japan 株式会社</p>
+                </div>
+                <div class="baseInfo-item" style="margin-top: 3px;">
+                    <p class="item-value">〒354-0045</p>
+                </div>
+                <div class="baseInfo-item" style="margin-top: 3px;">
+                    <p class="item-value">埼玉県入間郡三芳町上富2056</p>
+                </div>
+                <div class="baseInfo-item" style="margin-top: 2px;">
+                    <p class="item-value">TEL：050-5865-4050</p>
+                </div>
+                <div class="baseInfo-item" style="margin-top: 2px;">
+                    <p class="item-value">登録番号：T6013301039403</p>
+                </div>
+            </div>
+            <div style="float: right;margin-top: -85px;margin-right: -15px;">
+                <img style="width:65px;height:auto;font-size:0;display:block;"
+                    src="https://staticprod.site.flexispot.com/dev/trantor/attachments/jp-footer-img-seal.png"></img>
+            </div>
+        </div>
+        <div class="table" style="margin-top: 77px;">
+            <div class="total-item">
+                <p class="total-item-title">合計金額：</p>
+                <p class="total-item-value"
+                    th:text="${currency + #numbers.formatDecimal(totalAmt,1,'COMMA',0,'COMMA')}">¥66,572</p>
+            </div>
+            <table style="width: 100%;border-collapse: collapse;margin-top: 24px;">
+                <thead>
+                    <tr>
+                        <th style="width: 316px;">製品</th>
+                        <th style="width: 70px;">数量</th>
+                        <th style="width: 70px;">単価</th>
+                        <th style="width: 80px;border-right: none;">金額</th>
+                    </tr>
+                </thead>
+                <tbody th:each="line : ${invoceLinelist}">
+                    <tr>
+                        <td style="width: 316px;text-align: left;padding-left: 16px;" th:text="${line.itemame}">
+                            電動昇降式デスク·脚フレーム E7 Pro (ホワイト)</td>
+                        <td style="width: 70px;color: #004DF2;" th:text="${line.skuname}">1</td>
+                        <td style="width: 70px;color: #004DF2;"
+                            th:text="${currency + #numbers.formatDecimal(line.sigleSkuAmt,1,'COMMA',0,'COMMA')}">49,840
+                        </td>
+                        <td style="width: 80px;border-right: none;color: #004DF2;"
+                            th:text="${currency + #numbers.formatDecimal(line.totalAmt,1,'COMMA',0,'COMMA')}">49,840
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 316px;text-align: left;padding-left: 16px;" th:text="${line.itemame}">
+                            長方形天板、120x60x2.5cm(メ-プル)</td>
+                        <td style="width: 70px;color: #004DF2;" th:text="${line.skuname}">1</td>
+                        <td style="width: 70px;color: #004DF2;"
+                            th:text="${currency + #numbers.formatDecimal(line.sigleSkuAmt,1,'COMMA',0,'COMMA')}">10，680
+                        </td>
+                        <td style="width: 80px;border-right: none;color: #004DF2;"
+                            th:text="${currency + #numbers.formatDecimal(line.totalAmt,1,'COMMA',0,'COMMA')}">10，680
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="2" style="text-align: left;padding-left: 21px;font-weight: 700;">10％対象</td>
+                        <td style="color: #004DF2;"
+                            th:text="${currency + #numbers.formatDecimal(grandTotalExclVat,1,'COMMA',0,'COMMA')}">60,520
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="2" style="text-align: left;padding-left: 21px;font-weight: 700;">消費税（10％）</td>
+                        <td style="color: #004DF2;"
+                            th:text="${currency + #numbers.formatDecimal(totalTaxMoney,1,'COMMA',0,'COMMA')}">6,052</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="2" style="text-align: left;padding-left: 21px;font-weight: 700;">合計</td>
+                        <td style="color: #004DF2;"
+                            th:text="${currency + #numbers.formatDecimal(totalMoney,1,'COMMA',0,'COMMA')}">66,572</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="margin-top: 41px;">
+            <div class="header-item">備考</div>
+            <div class="body-item">注文番号：#2220224</div>
+            <div class="body-item"></div>
+            <div class="body-item"></div>
+        </div>
+    </div>
+</body>
+
+</html>
