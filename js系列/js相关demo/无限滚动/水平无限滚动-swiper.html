@@ -1,11 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .ab-product-swiper {
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .ab-product-swiper .ab-product-slide {
+            display: flex;
+            gap: 80px;
+            align-items: center;
+            animation: ab-move-swiper var(--ab-product-scroll-timeout) linear infinite;
+            animation-delay: calc(var(--ab-product-scroll-timeout) * -1);
+        }
+
+        .ab-product-swiper .ab-product-slide:nth-child(2) {
+            animation: ab-move-swiper-2 var(--ab-product-scroll-timeout) linear infinite;
+            animation-delay: calc(var(--ab-product-scroll-timeout) / -2);
+        }
+
+        .ab-product-swiper .ab-product-slide img {
+            max-width: none !important;
+        }
+
+        @keyframes ab-move-swiper {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes ab-move-swiper-2 {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-200%);
+            }
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="ab-product-swiper" style="--ab-product-scroll-timeout: 60s">
+        <div class="ab-product-slide">
+            <img src="https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/UK/XR6-20250401-img4-1.png" alt="img" />
+            <img src="https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/UK/XR6-20250401-img4-2.png" alt="img" />
+            <img src="https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/UK/XR6-20250401-img4-3.png" alt="img" />
+            <img src="https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/UK/XR6-20250401-img4-4.png" alt="img" />
+        </div>
+        <div class="ab-product-slide">
+            <img src="https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/UK/XR6-20250401-img4-1.png" alt="img" />
+            <img src="https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/UK/XR6-20250401-img4-2.png" alt="img" />
+            <img src="https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/UK/XR6-20250401-img4-3.png" alt="img" />
+            <img src="https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/UK/XR6-20250401-img4-4.png" alt="img" />
+        </div>
+    </div>
 </body>
+<script>
+    ab_product_slide_img = document.querySelectorAll(
+        ".ab-product-swiper .ab-product-slide img"
+    )
+    let ab_width = window.innerWidth
+    function setProductImgWidth() {
+        if (ab_width <= 848) {
+            ab_product_slide_img.forEach(item => {
+                item.addEventListener("load", () => {
+                    item.style.width = item.naturalWidth * 0.41 + "px"
+                })
+                item.style.width = item.naturalWidth * 0.41 + "px"
+            })
+        } else if (ab_width <= 1080) {
+            ab_product_slide_img.forEach(item => {
+                item.addEventListener("load", () => {
+                    item.style.width = item.naturalWidth * 0.44 + "px"
+                })
+                item.style.width = item.naturalWidth * 0.44 + "px"
+            })
+        } else if (ab_width <= 1600) {
+            ab_product_slide_img.forEach(item => {
+                item.addEventListener("load", () => {
+                    item.style.width = item.naturalWidth * 0.73 + "px"
+                })
+                item.style.width = item.naturalWidth * 0.73 + "px"
+            })
+        } else {
+            ab_product_slide_img.forEach(item => {
+                item.addEventListener("load", () => {
+                    item.style.width = item.naturalWidth + "px"
+                })
+                item.style.width = item.naturalWidth + "px"
+            })
+        }
+    }
+
+    window.addEventListener("resize", () => {
+        ab_width = window.innerWidth
+        setProductImgWidth()
+        // animation_map_point()
+    })
+    setProductImgWidth()
+</script>
+
 </html>
