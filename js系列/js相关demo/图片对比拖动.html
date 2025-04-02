@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片对比滑块</title>
+    <style>
+        * {
+            user-select: none;
+            box-sizing: border-box;
+        }
+
+        .description-page-container-item-resize {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .description-page-container-item-resize-content {
+            position: relative;
+            width: 100%;
+            /* 宽度自适应屏幕 */
+            max-width: 500px;
+            /* 你可以调整最大宽度 */
+            height: auto;
+            aspect-ratio: 500 / 332;
+            /* 保持图片比例 */
+            overflow: hidden;
+        }
+
+        .description-page-container-item-resize-content img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .img1 {
+            clip-path: inset(0 50% 0 0);
+            z-index: 2;
+        }
+
+        .img2 {
+            z-index: 1;
+        }
+
+        .bar {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 28px;
+            background-color: transparent;
+            cursor: ew-resize;
+            z-index: 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translateX(-50%);
+        }
+
+        .bar img {
+            width: 100%;
+            height: 100%;
+            /* 关键，让bar内的img高度自适应 */
+            object-fit: contain;
+        }
+
+        @media screen and (max-width: 848px) {
+            .description-page-container-item-resize {
+                max-width: 100%;
+                flex-direction: column;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="description-page-container-item-resize">
+            <div class="description-page-container-item-resize-content">
+                <div class="img-container">
+                    <img class="lazyload img1"
+                        src="https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/UK/desk-20250401-swiper1-1.png"
+                        alt="">
+                    <img class="lazyload img2"
+                        src="https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/UK/desk-20250401-swiper1-2.png"
+                        alt="">
+                </div>
+                <div class="bar">
+                    <img class="lazyload"
+                        src="https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/UK/desk-20250401-swiper-bar.png"
+                        alt="">
+                </div>
+            </div>
+
+            <div class="description-page-container-item-resize-content">
+                <div class="img-container">
+                    <img class="lazyload img1"
+                        src="https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/UK/desk-20250401-swiper2-1.png"
+                        alt="">
+                    <img class="lazyload img2"
+                        src="https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/UK/desk-20250401-swiper2-2.png"
+                        alt="">
+                </div>
+                <div class="bar">
+                    <img class="lazyload"
+                        src="https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/UK/desk-20250401-swiper-bar.png"
+                        alt="">
+                </div>
+            </div>
+
+            <div class="description-page-container-item-resize-content">
+                <div class="img-container">
+                    <img class="lazyload img1"
+                        src="https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/UK/desk-20250401-swiper3-1.png"
+                        alt="">
+                    <img class="lazyload img2"
+                        src="https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/UK/desk-20250401-swiper3-2.png"
+                        alt="">
+                </div>
+                <div class="bar">
+                    <img class="lazyload"
+                        src="https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/UK/desk-20250401-swiper-bar.png"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.description-page-container-item-resize-content').forEach(container => {
+            let bar = container.querySelector('.bar');
+            let img1 = container.querySelector('.img1');
+            let isDragging = false;
+
+            function setInitialPosition() {
+                let initialPercent = 50;
+                img1.style.clipPath = `inset(0 ${100 - initialPercent}% 0 0)`;
+                bar.style.left = `${initialPercent}%`;
+            }
+            setInitialPosition();
+
+            function startDrag(event) {
+                isDragging = true;
+                document.body.style.cursor = "ew-resize";
+                event.preventDefault(); // 防止触摸滚动
+            }
+
+            function moveDrag(event) {
+                if (!isDragging) return;
+
+                let clientX = event.touches ? event.touches[0].clientX : event.clientX; // 适配触摸和鼠标
+                let rect = container.getBoundingClientRect();
+                let x = clientX - rect.left;
+                let percent = Math.max(14 / rect.width * 100, Math.min(x / rect.width * 100, 100 - (14 / rect.width * 100)));
+
+                img1.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+                bar.style.left = `${percent}%`;
+            }
+
+            function endDrag() {
+                isDragging = false;
+                document.body.style.cursor = "default";
+            }
+
+            // 绑定事件：鼠标和触摸
+            bar.addEventListener('mousedown', startDrag);
+            bar.addEventListener('touchstart', startDrag, { passive: false });
+
+            document.addEventListener('mousemove', moveDrag);
+            document.addEventListener('touchmove', moveDrag, { passive: false });
+
+            document.addEventListener('mouseup', endDrag);
+            document.addEventListener('touchend', endDrag);
+        });
+        function adjustBarHeight() {
+            document.querySelectorAll('.description-page-container-item-resize-content').forEach(container => {
+                let barImg = container.querySelector('.bar img');
+                let img1 = container.querySelector('.img1');
+
+                if (barImg && img1) {
+                    barImg.style.height = `${img1.clientHeight}px`; // 让bar img 高度跟 img1 一样
+                }
+            });
+        }
+
+        // 窗口大小变化时调整
+        window.addEventListener('resize', adjustBarHeight);
+        window.addEventListener('load', adjustBarHeight);
+
+    </script>
+</body>
+
+</html>
