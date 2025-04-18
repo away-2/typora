@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>瀑布流 + 懒加载</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: #f5f5f5;
+        }
+
+        .masonry {
+            column-count: 4;
+            column-gap: 16px;
+            padding: 20px;
+        }
+
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 16px;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .masonry-item img {
+            width: 100%;
+            display: block;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .masonry-item img.loaded {
+            opacity: 1;
+        }
+
+        /* 响应式 */
+        @media (max-width: 1024px) {
+            .masonry {
+                column-count: 3;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .masonry {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .masonry {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="masonry" id="masonry">
+        <!-- 图片会动态添加进来 -->
+    </div>
+
+    <script>
+        const container = document.getElementById('masonry');
+
+        // 随机生成多个图片元素
+        function loadImages(count = 20) {
+            for (let i = 0; i < count; i++) {
+                const item = document.createElement('div');
+                item.className = 'masonry-item';
+
+                const img = document.createElement('img');
+                // 先设置占位图
+                img.setAttribute('data-src', `https://picsum.photos/300/${200 + Math.floor(Math.random() * 200)}?random=${Date.now() + i}`);
+                img.alt = 'lazy image';
+                item.appendChild(img);
+                container.appendChild(item);
+                observer.observe(img);
+            }
+        }
+
+        // 懒加载：观察图片是否进入视口
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    const src = img.getAttribute('data-src');
+                    if (src) {
+                        img.src = src;
+                        img.onload = () => img.classList.add('loaded');
+                        img.removeAttribute('data-src');
+                    }
+                    observer.unobserve(img);
+                }
+            });
+        }, {
+            rootMargin: '100px',
+            threshold: 0.1
+        });
+
+        // 首次加载
+        loadImages();
+
+        // 滚动到底部时加载更多
+        window.addEventListener('scroll', () => {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+                loadImages();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
