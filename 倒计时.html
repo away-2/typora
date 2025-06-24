@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet"
+        href="https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/swiper@8.4.7_swiper-bundle.min.css" />
+    <style>
+        .ab-brand {
+            padding: 64px 0 59px;
+            background: #ede8df;
+        }
+
+        .ab-brand .ab-brand-flex {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .ab-brand .ab-brand-flex .ab-brand-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 480px;
+            height: 276px;
+            padding: 60px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .ab-brand .ab-brand-flex .ab-brand-item .ab-brand-item-title {
+            color: #000;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: "TAMIL-MN";
+            font-size: 44px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+        }
+
+        .ab-brand .ab-brand-flex .ab-brand-item .ab-brand-item-desc {
+            max-width: 360px;
+            margin-top: 24px;
+            color: #67696a;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: Poppins-Regular;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+        }
+
+        .ab-brand .ab-brand-flex .ab-brand-item .ab-brand-item-desc span {
+            color: #000;
+            font-family: Poppins-Medium;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    </style>
+    <style>
+        .swiper-support-container {
+            width: 100%;
+            position: relative;
+        }
+
+        .support-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1000px;
+            gap: 40px;
+        }
+
+        .support-content-img {
+            width: 50%;
+            flex-shrink: 0;
+        }
+
+        .support-content-img img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .support-content-img video {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .support-content-text {
+            flex: 1;
+        }
+
+        .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .support-content-text-title {
+            color: #000;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: "Poppins-Medium" !important;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .support-content-text-subtitle {
+            color: #000;
+            font-family: "Poppins-Regular" !important;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 16px;
+        }
+
+        .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .support-content-text-subtitle strong {
+            font-family: "Poppins-SemiBold" !important;
+            font-weight: 400;
+        }
+
+        .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .support-content-text-subtitle ul {
+            padding-left: 20px;
+        }
+
+        #support-swiper {
+            padding-right: 14%;
+        }
+
+        #support-swiper .swiper-wrapper {
+            display: flex !important;
+            gap: 100px !important;
+        }
+
+        #support-swiper .swiper-wrapper .swiper-slide {
+            width: max-content !important;
+        }
+
+        .swiper-support-container .support-prev,
+        .swiper-support-container .support-next {
+            position: absolute;
+            display: flex;
+            width: 40px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 2px;
+            border: 1px solid #e6e6e6;
+            background: #fff;
+        }
+
+        .swiper-support-container .support-prev {
+            left: -25px;
+        }
+
+        .swiper-support-container .support-next {
+            right: -25px;
+        }
+
+        .swiper-support-container .support-prev:hover,
+        .swiper-support-container .support-next:hover {
+            background-color: #000;
+            border-color: #000;
+        }
+
+        .swiper-support-container .support-prev.swiper-button-disabled,
+        .swiper-support-container .support-next.swiper-button-disabled {
+            display: none;
+        }
+
+        .swiper-support-container .support-prev:hover svg path,
+        .swiper-support-container .support-next:hover svg path {
+            stroke: #fff;
+        }
+
+        .swiper-support-container .support-prev::after,
+        .swiper-support-container .support-next::after {
+            display: none;
+        }
+
+        .swiper-product-container {
+            width: 100%;
+            margin-top: 100px;
+        }
+
+        .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .swiper-product-title {
+            color: #000;
+            text-align: center;
+            font-family: "Poppins-Medium" !important;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .swiper-product-btn {
+            width: max-content;
+            border-radius: 50px;
+            background: #000;
+            display: flex;
+            padding: 10px 40px;
+            justify-content: center;
+            align-items: center;
+            color: #FFF;
+            text-align: center;
+            font-family: "Poppins-SemiBold" !important;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin: 40px auto 0;
+        }
+
+        .swiper-product-flex {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 40px auto 0;
+        }
+
+        .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .swiper-product-item-title {
+            color: #000;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-feature-settings: 'ss04' on;
+            font-family: "Poppins-Medium" !important;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            text-align: center;
+        }
+
+        .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .swiper-product-count {
+            font-size: 48px;
+        }
+
+        .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .swiper-product-item-desc {
+            color: #67696A;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: "Poppins-Regular" !important;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-align: center;
+        }
+
+        .product-prev,
+        .product-next {
+            position: absolute;
+            top: auto;
+            bottom: -40px;
+            display: flex;
+            width: 40px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 2px;
+            border: 1px solid #e6e6e6;
+            background: #fff;
+        }
+
+        .product-prev {
+            left: -40px;
+        }
+
+        .product-next {
+            right: -40px;
+        }
+
+        .product-prev:hover,
+        .product-next:hover {
+            background-color: #000;
+            border-color: #000;
+        }
+
+        .product-prev:hover svg path,
+        .product-next:hover svg path {
+            stroke: #fff;
+        }
+
+        .product-prev::after,
+        .product-next::after {
+            display: none;
+        }
+
+        .swiper-product-ctx {
+            width: max-content;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .swiper-content {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            gap: 250px;
+            margin-top: 10px;
+        }
+
+        .swiper-content img {
+            width: 680px;
+            height: auto;
+        }
+
+        .new_module {
+            display: flex;
+            gap: 60px;
+        }
+
+        .new_module_img {
+            width: 720px;
+        }
+
+        .new_module_img .swiper {
+            width: 100%;
+            position: relative;
+        }
+
+        .new_module_img .swiper img {
+            border-radius: 0;
+        }
+
+        .new_module_img .swiper .swiper-pagination-new {
+            position: absolute;
+            bottom: 16px;
+        }
+
+        .new_module_img .swiper .swiper-pagination-new .swiper-pagination-bullet {
+            opacity: 1;
+            width: 60px;
+            height: 4px;
+            background: #FFF;
+            border-radius: 0;
+        }
+
+        .new_module_img .swiper .swiper-pagination-new .swiper-pagination-bullet.swiper-pagination-bullet-active {
+            background: #000;
+        }
+
+        .new_module_text {
+            flex: 1;
+        }
+
+        .new_module_tab {
+            display: flex;
+            gap: 16px;
+        }
+
+        .new_module_tab svg {
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+
+        .new_module_tab svg.active circle {
+            fill: #000;
+        }
+
+        .new_module_tab svg.active ellipse,
+        .new_module_tab svg.active path {
+            stroke: #fff;
+        }
+
+        .new_module_tab svg:hover circle {
+            fill: #000;
+        }
+
+        .new_module_tab svg:hover ellipse,
+        .new_module_tab svg:hover path {
+            stroke: #fff;
+        }
+
+        .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .new_module_title {
+            color: #000;
+            font-family: "Poppins-Medium" !important;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            margin-top: 60px;
+        }
+
+        .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .new_module_desc {
+            color: #67696A;
+            font-feature-settings: 'liga' off;
+            font-family: "Poppins-Regular" !important;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 4px;
+        }
+
+        .new_module_item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-top: 30px;
+        }
+
+        .new_module_item.first-child {
+            margin-top: 60px;
+        }
+
+        .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .new_module_item_text {
+            color: #000;
+            font-family: "Poppins-Medium" !important;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            width: 82px;
+        }
+
+        .new_module_itme_img {
+            display: flex;
+            gap: 4px;
+        }
+
+        .new_module_itme_img svg {
+            flex-shrink: 0;
+            width: 18px;
+            height: 18px;
+        }
+
+        @media screen and (max-width: 1600px) {
+            .support-content {
+                max-width: 720px;
+                gap: 32px;
+            }
+
+            .support-content-img {
+                width: 328px;
+            }
+
+            .support-content-text {
+                flex: 1;
+            }
+
+            .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .support-content-text-title {
+                font-size: 20px;
+            }
+
+            .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .support-content-text-subtitle {
+                font-size: 14px;
+                margin-top: 16px;
+            }
+
+            #support-swiper .swiper-wrapper {
+                gap: 80px !important;
+            }
+
+        }
+
+        @media screen and (max-width: 1080px) {
+            .support-content {
+                max-width: 600px;
+                gap: 32px;
+            }
+
+            .support-content-img {
+                width: 250px;
+            }
+
+            .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .support-content-text-title {
+                font-size: 16px;
+            }
+
+            .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .support-content-text-subtitle {
+                font-size: 12px;
+                margin-top: 16px;
+            }
+
+            #support-swiper {
+                padding-right: 20%;
+            }
+
+            #support-swiper .swiper-wrapper {
+                gap: 80px !important;
+            }
+
+        }
+
+        @media screen and (max-width: 848px) {
+            .support-content {
+                max-width: 100%;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .support-content-img {
+                width: 100%;
+            }
+
+            .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .support-content-text-subtitle {
+                margin-top: 4px;
+            }
+
+            #support-swiper {
+                padding-right: 0;
+            }
+
+            #support-swiper .swiper-wrapper {
+                flex-direction: column !important;
+                gap: 24px !important;
+            }
+
+            #support-swiper .swiper-wrapper .swiper-slide {
+                width: 100% !important;
+            }
+
+            .swiper-support-container .support-prev,
+            .swiper-support-container .support-next {
+                display: none;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- module 1 -->
+    <div class="swiper-support-container">
+        <div class="swiper-button-prev support-prev">
+            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.8714 15L7.03807 10.3846L12.8714 5" stroke="black" stroke-width="1.25"
+                    stroke-linecap="square" />
+            </svg>
+        </div>
+        <div class="swiper" id="support-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="support-content">
+                        <div class="support-content-img">
+                            <img class="lazyload" width="500" height="500"
+                                data-src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img1-1.png"
+                                alt="">
+                        </div>
+                        <div class="support-content-text">
+                            <div class="support-content-text-title">
+                                Built for Balanced Loads
+                            </div>
+                            <div class="support-content-text-subtitle">
+                                With double the support points and a lower center of gravity, the four-leg design
+                                delivers outstanding stability. Designed to handle
+                                <strong>uneven weight distribution</strong>, the four-leg structure maintains stability
+                                whether you're setting up a <strong>heavy computer</strong> or decorating one side with
+                                <strong>plants or peripherals</strong>. The weight is
+                                <strong>evenly distributed</strong>, keeping the entire structure
+                                <strong>balanced and steady</strong>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="support-content">
+                        <div class="support-content-img">
+                            <img class="lazyload" width="500" height="500"
+                                data-src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img1-2.png"
+                                alt="">
+                        </div>
+                        <div class="support-content-text">
+                            <div class="support-content-text-title">
+                                Real Substance, Real Stability
+                            </div>
+                            <div class="support-content-text-subtitle">
+                                <strong>Heavier desk legs</strong> — especially with
+                                <strong>weighted bases</strong> and a
+                                <strong>reinforced bottom beam</strong>
+                                — minimize wobble from typing, movement, or accidental bumps.<br /><br />
+                                At <strong>45% heavier</strong> than standard two-leg desks, it provides a truly
+                                <strong>grounded, secure feel</strong> that easily supports
+                                <strong>demanding setups</strong>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="support-content">
+                        <div class="support-content-img">
+                            <video muted autoplay loop palysinline width="500" height="500"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img1-3.mp4"></video>
+                        </div>
+                        <div class="support-content-text">
+                            <div class="support-content-text-title">
+                                Stability in Every Scenario
+                            </div>
+                            <div class="support-content-text-subtitle">
+                                <ul>
+                                    <li>
+                                        Static Use: Zero wobble during typing, writing, or deep focus tasks.
+                                    </li>
+                                    <li>
+                                        During Adjustment: Smooth transitions with minimal sway, even when the desk is
+                                        fully loaded.
+                                    </li>
+                                    <li>
+                                        At Full Height: Remains stable and balanced, even at maximum height and speed.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next support-next">
+            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.12866 5L13.962 9.61539L8.12866 15" stroke="black" stroke-width="1.25"
+                    stroke-linecap="square" />
+            </svg>
+        </div>
+    </div>
+    <!-- module 3 -->
+    <div class="swiper-product-container">
+        <div class="swiper-product-title">For those who demand precision, power, and perfection</div>
+        <div class="swiper-product-btn">E7 Plus</div>
+        <div class="swiper-product-ctx">
+
+            <div class="swiper-button-prev product-prev">
+                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.8714 15L7.03807 10.3846L12.8714 5" stroke="black" stroke-width="1.25"
+                        stroke-linecap="square" />
+                </svg>
+            </div>
+            <div class="swiper-product-flex">
+                <div class="swiper-product-item">
+                    <div class="swiper-product-item-title">
+                        <span class="swiper-product-count ab-brand-count">200</span> Kg
+                    </div>
+                    <div class="swiper-product-item-desc">when your gear collection keeps expanding</div>
+                </div>
+                <div class="swiper-product-item">
+                    <div class="swiper-product-item-title">
+                        <span class="swiper-product-count">Upgraded</span>
+                        <span class="swiper-product-count ab-brand-count">2</span> motors
+                    </div>
+                    <div class="swiper-product-item-desc">quieter, stronger, and built for demanding daily use</div>
+                </div>
+                <div class="swiper-product-item">
+                    <div class="swiper-product-item-title">
+                        <span class="swiper-product-count ab-brand-count">30,000</span> lift cycles
+                    </div>
+                    <div class="swiper-product-item-desc">when your gear collection keeps expanding</div>
+                </div>
+                <div class="swiper-product-item">
+                    <div class="swiper-product-item-title">
+                        <span class="swiper-product-count ab-brand-count">10</span> yrs warranty
+                    </div>
+                    <div class="swiper-product-item-desc">A ten-year promise. Your most reliable office partner.</div>
+                </div>
+            </div>
+            <div class="swiper-button-next product-next">
+                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.12866 5L13.962 9.61539L8.12866 15" stroke="black" stroke-width="1.25"
+                        stroke-linecap="square" />
+                </svg>
+            </div>
+        </div>
+        <div class="swiper-content">
+            <img class="lazyload product-swiper-item" width="680" height="480"
+                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img3-1.png"
+                alt="">
+            <img class="lazyload product-swiper-item" width="680" height="480"
+                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img3-2.png"
+                alt="">
+            <img class="lazyload product-swiper-item" width="680" height="480"
+                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img3-3.png"
+                alt="">
+        </div>
+    </div>
+
+    <!-- module 7 -->
+    <div class="new_module">
+        <div class="new_module_img">
+            <div class="swiper" id="new-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class="lazyload" width="720" height="500"
+                            src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img7-1.png"
+                            alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="lazyload" width="720" height="500"
+                            src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img7-2.png"
+                            alt="">
+                    </div>
+                </div>
+                <div class="swiper-pagination swiper-pagination-new"></div>
+            </div>
+        </div>
+        <div class="new_module_text">
+            <div class="new_module_tab">
+                <svg class="active" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"
+                    fill="none">
+                    <circle cx="40" cy="40" r="40" fill="#F5F5F5" />
+                    <path
+                        d="M26 34.5H23C19.134 34.5 16 37.634 16 41.5V61H21.5V44C21.5 41.7909 23.2909 40 25.5 40H55C57.2091 40 59 41.7909 59 44V61H64V41.5C64 37.634 60.866 34.5 57 34.5H54M26 34.5V24.5H30V28M26 34.5H30M30 34.5V28M30 34.5H38.5M30 28H34.5M34.5 28V34M34.5 28V26.5H38.5V34.5M38.5 34.5H54M54 34.5V24C54 22.3431 52.6569 21 51 21V21M51 21H43C43.1667 19.6667 44.2 17 47 17C49.8 17 50.8333 19.6667 51 21Z"
+                        stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                    <circle cx="40" cy="40" r="40" fill="#F5F5F5" />
+                    <path
+                        d="M18.4737 35.036C18.9496 35.2352 19.4719 35.3452 20.0197 35.3452C22.2398 35.3452 24.0395 33.5389 24.0395 31.3108C24.0395 29.0826 22.2398 27.2764 20.0197 27.2764C17.7997 27.2764 16 29.0826 16 31.3108C16 32.9891 17.021 34.428 18.4737 35.036ZM18.4737 35.036L17.2368 50.3967H24.9671L29.9144 58.0001M21.4112 35.1901L24.0395 40.621H28.2138"
+                        stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M60.5263 35.036C60.0504 35.2352 59.5281 35.3452 58.9803 35.3452C56.7602 35.3452 54.9605 33.5389 54.9605 31.3108C54.9605 29.0826 56.7602 27.2764 58.9803 27.2764C61.2003 27.2764 63 29.0826 63 31.3108C63 32.9891 61.979 34.428 60.5263 35.036ZM60.5263 35.036L61.7632 50.3967H54.0329L49.0856 58.0001M57.5888 35.1901L54.9605 40.621H50.7862"
+                        stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M22.8025 44.0332H56.661" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path
+                        d="M36.0985 39.224H31.9242C31.9757 36.9481 33.5321 32.3965 39.3452 32.3965C45.1584 32.3965 47.0239 36.9481 47.2301 39.224H42.4373"
+                        stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <ellipse cx="39.3455" cy="27.1206" rx="5.10196" ry="5.12062" stroke="black" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                    <circle cx="40" cy="40" r="40" fill="#F5F5F5" />
+                    <path
+                        d="M44.5714 36.6438C44.5714 35.8819 44.9714 34.501 46.5714 34.501C48.1714 34.501 48.5714 35.8819 48.5714 36.6438"
+                        stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M48.5713 36.6438C48.5713 35.8819 48.9713 34.501 50.5713 34.501C52.1713 34.501 52.5713 35.8819 52.5713 36.6438"
+                        stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M52.5713 36.6438C52.5713 35.8819 52.9713 34.501 54.5713 34.501C56.1713 34.501 56.5713 35.8819 56.5713 36.6438"
+                        stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M44.7142 24.9297V32.644H55.9999V24.9297M48.5713 22.7513C49.0941 22.6829 49.6648 22.644 50.2856 22.644C50.9064 22.644 51.4771 22.6829 51.9999 22.7513M48.5713 22.7513C45.8221 23.1114 44.4 24.2895 43.9999 24.9297H56.5713C56.1712 24.2895 54.7491 23.1114 51.9999 22.7513M48.5713 22.7513C48.6665 22.4775 49.1427 21.9297 50.2856 21.9297C51.4284 21.9297 51.9046 22.4775 51.9999 22.7513"
+                        stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M42.0001 27.787C42.0001 27.2155 42.2859 26.3584 43.4287 26.3584C44.5716 26.3584 44.7144 27.5013 44.7144 27.787"
+                        stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M58.7144 27.787C58.7143 27.2155 58.4286 26.3584 57.2858 26.3584C56.1429 26.3584 56.0001 27.5013 56.0001 27.787"
+                        stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M31.2857 36.6434H62V44.5005M31.2857 36.6434V44.5005M31.2857 36.6434H27M31.2857 59.7862H18V36.6434H27M31.2857 59.7862H62V44.5005M31.2857 59.7862V44.5005M31.2857 44.5005H62M43.2857 41.0719H49.4286M27 36.6434C27 34.5481 27 29.4719 27 25.9291C27 19.5006 35.4286 19.2148 35.4286 25.9291"
+                        stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                    <circle cx="40" cy="40" r="40" fill="#F5F5F5" />
+                    <path
+                        d="M17 62V34.7424M64 62V34.7424M17 24.1017V19H64V24.1017M17 24.1017H64M17 24.1017V29.4949M64 24.1017V29.4949M64 29.4949H17M64 29.4949V34.7424M17 29.4949V34.7424M17 34.7424H64M28.7129 59.0847V61.417H22.7823V59.0847M28.7129 59.0847H52.4353M28.7129 59.0847H22.7823M52.4353 59.0847V61.417H58.3659V59.0847M52.4353 59.0847H58.3659M23.6973 49.9017L29.8991 41.0102H51.5457L57.4891 49.9017M23.6973 49.9017L22.7823 51.2136V59.0847M23.6973 49.9017H30.8991M57.4891 49.9017L58.3659 51.2136V59.0847M57.4891 49.9017H50.5457M30.8991 49.9017L35 51H46L50.5457 49.9017M30.8991 49.9017H50.5457"
+                        stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+            <div class="new_module_title">
+                Dining Room
+            </div>
+            <div class="new_module_desc">
+                It can even double as a second kitchen island — perfect for casual meals, food prep, or family
+                gatherings.
+            </div>
+            <div class="new_module_item first-child">
+                <div class="new_module_item_text">E2Q</div>
+                <div class="new_module_item_img">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <g clip-path="url(#clip0_3445_20568)">
+                            <path
+                                d="M9 0.916016L11.427 6.51294L17.5 7.09163L12.927 11.1294L14.2533 17.084L9 13.9825L3.74671 17.084L5.073 11.1294L0.5 7.09163L6.57298 6.51294L9 0.916016Z"
+                                fill="black" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_3445_20568">
+                                <rect width="18" height="18" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <g clip-path="url(#clip0_3445_20568)">
+                            <path
+                                d="M9 0.916016L11.427 6.51294L17.5 7.09163L12.927 11.1294L14.2533 17.084L9 13.9825L3.74671 17.084L5.073 11.1294L0.5 7.09163L6.57298 6.51294L9 0.916016Z"
+                                fill="black" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_3445_20568">
+                                <rect width="18" height="18" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <g clip-path="url(#clip0_3445_20568)">
+                            <path
+                                d="M9 0.916016L11.427 6.51294L17.5 7.09163L12.927 11.1294L14.2533 17.084L9 13.9825L3.74671 17.084L5.073 11.1294L0.5 7.09163L6.57298 6.51294L9 0.916016Z"
+                                fill="black" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_3445_20568">
+                                <rect width="18" height="18" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <g clip-path="url(#clip0_3445_20568)">
+                            <path
+                                d="M9 0.916016L11.427 6.51294L17.5 7.09163L12.927 11.1294L14.2533 17.084L9 13.9825L3.74671 17.084L5.073 11.1294L0.5 7.09163L6.57298 6.51294L9 0.916016Z"
+                                fill="black" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_3445_20568">
+                                <rect width="18" height="18" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <g clip-path="url(#clip0_3445_20572)">
+                            <path
+                                d="M10.9688 6.71191L11.0859 6.98242L11.3799 7.01074L16.3037 7.47949L12.5957 10.7549L12.375 10.9502L12.4385 11.2383L13.5146 16.0664L9.25391 13.5518L9 13.4023L8.74609 13.5518L4.48438 16.0664L5.56152 11.2383L5.625 10.9502L5.4043 10.7549L1.69531 7.47949L6.62012 7.01074L6.91406 6.98242L7.03125 6.71191L9 2.17285L10.9688 6.71191Z"
+                                stroke="black" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_3445_20572">
+                                <rect width="18" height="18" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+            <div class="new_module_item">
+                <div class="new_module_item_text">E7 Plus</div>
+                <div class="new_module_item_img">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <g clip-path="url(#clip0_3445_20568)">
+                            <path
+                                d="M9 0.916016L11.427 6.51294L17.5 7.09163L12.927 11.1294L14.2533 17.084L9 13.9825L3.74671 17.084L5.073 11.1294L0.5 7.09163L6.57298 6.51294L9 0.916016Z"
+                                fill="black" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_3445_20568">
+                                <rect width="18" height="18" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <g clip-path="url(#clip0_3445_20568)">
+                            <path
+                                d="M9 0.916016L11.427 6.51294L17.5 7.09163L12.927 11.1294L14.2533 17.084L9 13.9825L3.74671 17.084L5.073 11.1294L0.5 7.09163L6.57298 6.51294L9 0.916016Z"
+                                fill="black" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_3445_20568">
+                                <rect width="18" height="18" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <g clip-path="url(#clip0_3445_20568)">
+                            <path
+                                d="M9 0.916016L11.427 6.51294L17.5 7.09163L12.927 11.1294L14.2533 17.084L9 13.9825L3.74671 17.084L5.073 11.1294L0.5 7.09163L6.57298 6.51294L9 0.916016Z"
+                                fill="black" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_3445_20568">
+                                <rect width="18" height="18" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <g clip-path="url(#clip0_3445_20568)">
+                            <path
+                                d="M9 0.916016L11.427 6.51294L17.5 7.09163L12.927 11.1294L14.2533 17.084L9 13.9825L3.74671 17.084L5.073 11.1294L0.5 7.09163L6.57298 6.51294L9 0.916016Z"
+                                fill="black" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_3445_20568">
+                                <rect width="18" height="18" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <g clip-path="url(#clip0_3445_20637)">
+                            <path
+                                d="M9 0.916016L11.427 6.51294L17.5 7.09163L12.927 11.1294L14.2533 17.084L9 13.9825L3.74671 17.084L5.073 11.1294L0.5 7.09163L6.57298 6.51294L9 0.916016Z"
+                                fill="black" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_3445_20637">
+                                <rect width="18" height="18" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+            <div class="new_module_item">
+                <div class="new_module_item_text">E7Q</div>
+                <div class="new_module_item_img">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <g clip-path="url(#clip0_3445_20568)">
+                            <path
+                                d="M9 0.916016L11.427 6.51294L17.5 7.09163L12.927 11.1294L14.2533 17.084L9 13.9825L3.74671 17.084L5.073 11.1294L0.5 7.09163L6.57298 6.51294L9 0.916016Z"
+                                fill="black" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_3445_20568">
+                                <rect width="18" height="18" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <g clip-path="url(#clip0_3445_20568)">
+                            <path
+                                d="M9 0.916016L11.427 6.51294L17.5 7.09163L12.927 11.1294L14.2533 17.084L9 13.9825L3.74671 17.084L5.073 11.1294L0.5 7.09163L6.57298 6.51294L9 0.916016Z"
+                                fill="black" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_3445_20568">
+                                <rect width="18" height="18" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <g clip-path="url(#clip0_3445_20568)">
+                            <path
+                                d="M9 0.916016L11.427 6.51294L17.5 7.09163L12.927 11.1294L14.2533 17.084L9 13.9825L3.74671 17.084L5.073 11.1294L0.5 7.09163L6.57298 6.51294L9 0.916016Z"
+                                fill="black" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_3445_20568">
+                                <rect width="18" height="18" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <g clip-path="url(#clip0_3445_20568)">
+                            <path
+                                d="M9 0.916016L11.427 6.51294L17.5 7.09163L12.927 11.1294L14.2533 17.084L9 13.9825L3.74671 17.084L5.073 11.1294L0.5 7.09163L6.57298 6.51294L9 0.916016Z"
+                                fill="black" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_3445_20568">
+                                <rect width="18" height="18" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <g clip-path="url(#clip0_3445_20572)">
+                            <path
+                                d="M10.9688 6.71191L11.0859 6.98242L11.3799 7.01074L16.3037 7.47949L12.5957 10.7549L12.375 10.9502L12.4385 11.2383L13.5146 16.0664L9.25391 13.5518L9 13.4023L8.74609 13.5518L4.48438 16.0664L5.56152 11.2383L5.625 10.9502L5.4043 10.7549L1.69531 7.47949L6.62012 7.01074L6.91406 6.98242L7.03125 6.71191L9 2.17285L10.9688 6.71191Z"
+                                stroke="black" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_3445_20572">
+                                <rect width="18" height="18" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+    function loadScript(url, callback) {
+        document.getElementById("") && document.getElementById("").remove()
+        var script = document.createElement("script")
+        script.type = "text/javascript"
+        script.async = "async"
+        script.src = url
+        script.id = ""
+        var head = document.head || document.getElementsByTagName("head")[0]
+        head.appendChild(script)
+        if (script.readyState) {
+            script.onreadystatechange = function () {
+                if (script.readyState == "complete" || script.readyState == "loaded") {
+                    script.onreadystatechange = null
+                    callback()
+                }
+            }
+        } else {
+            script.onload = function () {
+                callback()
+            }
+        }
+    }
+
+    loadScript(
+        "https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/swiper@8.4.7_swiper-bundle.min.js",
+        function () {
+            new Swiper("#support-swiper", {
+                slidesPerView: "auto",
+                navigation: {
+                    nextEl: ".support-next",
+                    prevEl: ".support-prev",
+                },
+                breakpoints: {
+                    849: {
+                        slidesPerView: "auto",
+                    },
+                    0: {
+                        slidesPerView: 3,
+                    },
+                },
+            })
+
+            var swiper_data = [
+                {
+                    imgUrl: "https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img3-1.png",
+                    title: " For those who need just the essentials",
+                    name: "E2Q",
+                    weight: "150",
+                    weight_text: "enough for your everyday office setup",
+                    motors: "2",
+                    motors_text: "perfect balance of power and finesse",
+                    liftCycles: "20,000",
+                    warranty: "5",
+                    warranty_text: "Not forever, but hey — it's a solid five.",
+                },
+                {
+                    imgUrl: "https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img3-2.png",
+                    title: "For those who demand precision, power, and perfection",
+                    name: "E7 Plus",
+                    weight: "200",
+                    weight_text: "when your gear collection keeps expanding",
+                    motors: "2",
+                    motors_text: "quieter, stronger, and built for demanding daily use",
+                    liftCycles: "30,000",
+                    warranty: "10",
+                    warranty_text: "A ten-year promise. Your most reliable office partner.",
+                },
+                {
+                    imgUrl: "https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img3-3.png",
+                    title: "For those who demand nothing but the best",
+                    name: "E7Q",
+                    weight: "300",
+                    weight_text: "the workshop master's dream setup",
+                    motors: "4",
+                    motors_text: "like having a F1 pit crew for your desk",
+                    liftCycles: "30,000",
+                    warranty: "10",
+                    warranty_text: "A ten-year promise. Your most reliable office partner.",
+                },
+            ]
+
+            const next_btn = document.querySelector(".product-next");
+            const prev_btn = document.querySelector(".product-prev");
+            const swiper_items = document.querySelectorAll(".product-swiper-item");
+            const swiper_item_width = swiper_items[0].offsetWidth;
+
+            let index = 1;
+            const total = swiper_items.length;
+
+            next_btn.addEventListener("click", () => {
+                for (let i = 0; i < total; i++) {
+                    swiper_items[i].style.transform = `translateX(${100 * (i - index)}%)`;
+                }
+            });
+
+            prev_btn.addEventListener("click", () => {
+                for (let i = 0; i < total; i++) {
+                    swiper_items[i].style.transform = `translateX(${100 * (i - (index - 2))}%)`;
+                }
+            });
+
+
+
+
+            function initCount() {
+                const el = document.getElementsByClassName("ab-brand-count")
+                let interMap = new Map()
+                Array.prototype.forEach.call(el, item => {
+                    new IntersectionObserver(([entry]) => {
+                        if (interMap.has(item)) return
+                        if (entry.isIntersecting) {
+                            interMap.set(item, 0)
+                            const value = Number(item.innerHTML.replace(",", ""))
+                            item.innerHTML = interMap.get(item)
+                            let timer = setInterval(() => {
+                                if (interMap.get(item) >= value) {
+                                    clearTimeout(timer)
+                                    return
+                                }
+                                interMap.set(item, Number(value / 100 + Number(interMap.get(item))).toFixed(2))
+                                item.innerHTML = Number(interMap.get(item))
+                                    .toFixed(0)
+                                    .toString()
+                                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                            }, 20)
+                        }
+                    }).observe(document.querySelector(".swiper-product-container"))
+                })
+            }
+            initCount()
+
+            // module 7
+            new Swiper("#new-swiper", {
+                autoplay: true,
+                loop: true,
+                slidesPerView: "1",
+                pagination: {
+                    el: ".swiper-pagination-new",
+                    clickable: true,
+                },
+            })
+
+
+            let module_data = [
+                {
+                    imgUrl: [
+                        "https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img7-1.png",
+                        "https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img7-1.png"
+                    ],
+                    title: `Home Office`,
+                    desc: `Perfect for your home workspace — ideal for daily tasks, video calls, and dual-monitor setups. It also easily supports equipment like 3D printers or creative tools.`,
+                    E2Q: [4, 1],
+                    E7Plus: [5, 0],
+                    E7Q: [4, 1],
+                },
+                {
+                    imgUrl: [
+                        "https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img8-1.png",
+                        "https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img8-1.png"
+                    ],
+                    title: `Meeting Room`,
+                    desc: `Well-suited for professional spaces — the 180×80 cm tabletop comfortably accommodates 6 to 8 people for team meetings or collaborative sessions.`,
+                    E2Q: [4, 1],
+                    E7Plus: [5, 0],
+                    E7Q: [5, 0],
+                },
+                {
+                    imgUrl: [
+                        "https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img9-1.png",
+                        "https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img9-1.png"
+                    ],
+                    title: `Dining Room`,
+                    desc: `It can even double as a second kitchen island — perfect for casual meals, food prep, or family gatherings.`,
+                    E2Q: [4, 1],
+                    E7Plus: [5, 0],
+                    E7Q: [4, 1],
+                },
+                {
+                    imgUrl: [
+                        "https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img10-1.png",
+                        "https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img10-1.png"
+                    ],
+                    title: `Garage or Workshop`,
+                    desc: `Sturdy enough to serve as your tool station — use it as a height-adjustable workbench for repairs, crafting, or DIY projects.`,
+                    E2Q: [3, 2],
+                    E7Plus: [4, 1],
+                    E7Q: [5, 0],
+                },
+            ]
+
+            let star_black = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <g clip-path="url(#clip0_3445_20181)">
+                                        <path d="M9 0.916016L11.427 6.51294L17.5 7.09163L12.927 11.1294L14.2533 17.084L9 13.9825L3.74671 17.084L5.073 11.1294L0.5 7.09163L6.57298 6.51294L9 0.916016Z" fill="black"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_3445_20181">
+                                        <rect width="18" height="18" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>`
+            let star_white = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <g clip-path="url(#clip0_3445_20185)">
+                                        <path d="M10.9688 6.71191L11.0859 6.98242L11.3799 7.01074L16.3037 7.47949L12.5957 10.7549L12.375 10.9502L12.4385 11.2383L13.5146 16.0664L9.25391 13.5518L9 13.4023L8.74609 13.5518L4.48438 16.0664L5.56152 11.2383L5.625 10.9502L5.4043 10.7549L1.69531 7.47949L6.62012 7.01074L6.91406 6.98242L7.03125 6.71191L9 2.17285L10.9688 6.71191Z" stroke="black"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_3445_20185">
+                                        <rect width="18" height="18" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>`
+        
+        function updataDom() {
+            
+        }
+
+        }
+    )
+
+
+</script>
+
+</html>
