@@ -1,0 +1,30 @@
+<style>
+    .container {
+      width: 300px;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+    }
+    .isHover {
+      /* 默认隐藏换行符 */
+      display: none;
+    }
+
+    .container:hover .isHover {
+       /* 悬停时显示换行符 */
+      display: inline-block;
+    }
+  </style>
+    <div class="container">
+    Yes. Each of our standard rugs 
+    <br class="isHover" />
+    comes with a non-slip foam pad 
+    <br class="isHover" />
+    included. FlexiSpot Washable 
+    <br class="isHover" />
+    rugs must be used with a
+    <br class="isHover" />
+    FlexiSpot rug pad only and
+    <br class="isHover" />
+     cannot be used with other rug pads.
+  </div>
