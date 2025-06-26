@@ -10,60 +10,6 @@
     <link rel="stylesheet"
         href="https://s3.springbeetle.eu/prod-eu-s3/trantor/attachments/IT/swiper@8.4.7_swiper-bundle.min.css" />
     <style>
-        .ab-brand {
-            padding: 64px 0 59px;
-            background: #ede8df;
-        }
-
-        .ab-brand .ab-brand-flex {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 40px;
-            margin-top: 40px;
-        }
-
-        .ab-brand .ab-brand-flex .ab-brand-item {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 480px;
-            height: 276px;
-            padding: 60px;
-            border-radius: 20px;
-            background: rgba(255, 255, 255, 0.5);
-        }
-
-        .ab-brand .ab-brand-flex .ab-brand-item .ab-brand-item-title {
-            color: #000;
-            font-variant-numeric: lining-nums proportional-nums;
-            font-family: "TAMIL-MN";
-            font-size: 44px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 120%;
-        }
-
-        .ab-brand .ab-brand-flex .ab-brand-item .ab-brand-item-desc {
-            max-width: 360px;
-            margin-top: 24px;
-            color: #67696a;
-            font-variant-numeric: lining-nums tabular-nums;
-            font-family: Poppins-Regular;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 120%;
-        }
-
-        .ab-brand .ab-brand-flex .ab-brand-item .ab-brand-item-desc span {
-            color: #000;
-            font-family: Poppins-Medium;
-            font-size: 20px;
-            font-weight: 500;
-        }
-    </style>
-    <style>
         .swiper-support-container {
             width: 100%;
             position: relative;
@@ -120,11 +66,20 @@
 
         .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .support-content-text-subtitle strong {
             font-family: "Poppins-SemiBold" !important;
-            font-weight: 400;
+            font-weight: 600;
         }
 
         .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .support-content-text-subtitle ul {
             padding-left: 20px;
+        }
+
+        .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .support-content-text-subtitle ul li {
+            font-family: "Poppins-Regular" !important;
+        }
+
+        .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .support-content-text-subtitle ul li strong {
+            font-family: "Poppins-SemiBold" !important;
+            font-weight: 600;
         }
 
         #support-swiper {
@@ -191,7 +146,7 @@
             color: #000;
             text-align: center;
             font-family: "Poppins-Medium" !important;
-            font-size: 32px;
+            font-size: 28px;
             font-style: normal;
             font-weight: 500;
             line-height: normal;
@@ -202,17 +157,17 @@
             border-radius: 50px;
             background: #000;
             display: flex;
-            padding: 10px 40px;
+            padding: 8px 40px;
             justify-content: center;
             align-items: center;
             color: #FFF;
             text-align: center;
             font-family: "Poppins-SemiBold" !important;
-            font-size: 40px;
+            font-size: 32px;
             font-style: normal;
             font-weight: 600;
             line-height: normal;
-            margin: 40px auto 0;
+            margin: 24px auto 0;
         }
 
         .swiper-product-flex {
@@ -220,7 +175,7 @@
             grid-template-columns: repeat(2, 1fr);
             justify-content: center;
             gap: 40px;
-            max-width: 1100px;
+            width: 1100px;
             margin: 40px auto 0;
         }
 
@@ -303,6 +258,7 @@
             justify-content: center;
             gap: 250px;
             margin-top: 10px;
+            transition: all 0.4s ease;
         }
 
         .swiper-content img {
@@ -457,6 +413,61 @@
                 gap: 80px !important;
             }
 
+            .new_module {
+                display: flex;
+                gap: 40px;
+            }
+
+            .new_module_img {
+                width: 480px;
+            }
+
+
+            .new_module_tab {
+                display: flex;
+                gap: 16px;
+            }
+
+            .new_module_tab svg {
+                width: 64px;
+                height: 64px;
+            }
+
+            .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .new_module_title {
+                font-size: 20px;
+                margin-top: 32px;
+            }
+
+            .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .new_module_desc {
+                font-size: 14px;
+                margin-top: 4px;
+            }
+
+            .new_module_item {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                margin-top: 8px;
+            }
+
+            .new_module_item.first-child {
+                margin-top: 24px;
+            }
+
+            .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .new_module_item_text {
+                font-size: 16px;
+                width: 55px;
+            }
+
+            .new_module_itme_img {
+                display: flex;
+                gap: 4px;
+            }
+
+            .new_module_itme_img svg {
+                width: 18px;
+                height: 18px;
+            }
         }
 
         @media screen and (max-width: 1080px) {
@@ -486,6 +497,62 @@
                 gap: 80px !important;
             }
 
+            .new_module {
+                display: flex;
+                align-items: center;
+                gap: 24px;
+            }
+
+            .new_module_img {
+                width: 360px;
+            }
+
+
+            .new_module_tab {
+                display: flex;
+                gap: 16px;
+            }
+
+            .new_module_tab svg {
+                width: 48px;
+                height: 48px;
+            }
+
+            .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .new_module_title {
+                font-size: 16px;
+                margin-top: 20px;
+            }
+
+            .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .new_module_desc {
+                font-size: 12px;
+                margin-top: 4px;
+            }
+
+            .new_module_item {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                margin-top: 6px;
+            }
+
+            .new_module_item.first-child {
+                margin-top: 12px;
+            }
+
+            .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .new_module_item_text {
+                font-size: 12px;
+                width: 42px;
+            }
+
+            .new_module_itme_img {
+                display: flex;
+                gap: 4px;
+            }
+
+            .new_module_itme_img svg {
+                width: 14px;
+                height: 14px;
+            }
         }
 
         @media screen and (max-width: 848px) {
@@ -523,6 +590,27 @@
                 display: none;
             }
 
+            .new_module {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 24px;
+            }
+
+            .new_module_img {
+                width: 100%;
+            }
+
+            .new_module_item {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                margin-top: 6px;
+            }
+
+            .new_module_item.first-child {
+                margin-top: 20px;
+            }
         }
     </style>
 </head>
@@ -597,14 +685,17 @@
                             <div class="support-content-text-subtitle">
                                 <ul>
                                     <li>
-                                        Static Use: Zero wobble during typing, writing, or deep focus tasks.
+                                        <strong>Static Use:</strong> Zero wobble during typing, writing, or deep focus
+                                        tasks.
                                     </li>
                                     <li>
-                                        During Adjustment: Smooth transitions with minimal sway, even when the desk is
+                                        <strong>During Adjustment:</strong> Smooth transitions with minimal sway, even
+                                        when the desk is
                                         fully loaded.
                                     </li>
                                     <li>
-                                        At Full Height: Remains stable and balanced, even at maximum height and speed.
+                                        <strong>At Full Height:</strong> Remains stable and balanced, even at maximum
+                                        height and speed.
                                     </li>
                                 </ul>
                             </div>
@@ -625,7 +716,6 @@
         <div class="swiper-product-title">For those who demand precision, power, and perfection</div>
         <div class="swiper-product-btn">E7 Plus</div>
         <div class="swiper-product-ctx">
-
             <div class="swiper-button-prev product-prev">
                 <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12.8714 15L7.03807 10.3846L12.8714 5" stroke="black" stroke-width="1.25"
@@ -684,16 +774,16 @@
         <div class="new_module_img">
             <div class="swiper" id="new-swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img class="lazyload" width="720" height="500"
+                    <!-- <div class="swiper-slide">
+                        <img  width="720" height="500"
                             src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img7-1.png"
                             alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img class="lazyload" width="720" height="500"
+                        <img  width="720" height="500"
                             src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img7-2.png"
                             alt="">
-                    </div>
+                    </div> -->
                 </div>
                 <div class="swiper-pagination swiper-pagination-new"></div>
             </div>
@@ -958,7 +1048,7 @@
             </div>
         </div>
     </div>
-    </div>
+
 </body>
 <script>
     function loadScript(url, callback) {
@@ -1003,7 +1093,7 @@
                 },
             })
 
-            var swiper_data = [
+            let swiperData = [
                 {
                     imgUrl: "https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img3-1.png",
                     title: " For those who need just the essentials",
@@ -1027,6 +1117,7 @@
                     liftCycles: "30,000",
                     warranty: "10",
                     warranty_text: "A ten-year promise. Your most reliable office partner.",
+                    isUpgraded: true,
                 },
                 {
                     imgUrl: "https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img3-3.png",
@@ -1042,26 +1133,60 @@
                 },
             ]
 
-            const next_btn = document.querySelector(".product-next");
-            const prev_btn = document.querySelector(".product-prev");
-            const swiper_items = document.querySelectorAll(".product-swiper-item");
-            const swiper_item_width = swiper_items[0].offsetWidth;
 
-            let index = 1;
-            const total = swiper_items.length;
+            let currentIndex = 1;
+            const content = document.querySelector(".swiper-content");
+            const titleEl = document.querySelector(".swiper-product-title");
+            const nameEl = document.querySelector(".swiper-product-btn");
+            const items = document.querySelectorAll(".swiper-product-item");
 
-            next_btn.addEventListener("click", () => {
-                for (let i = 0; i < total; i++) {
-                    swiper_items[i].style.transform = `translateX(${100 * (i - index)}%)`;
-                }
+            function updateDisplay(index) {
+                const len = swiperData.length;
+                const prev = (index - 1 + len) % len;
+                const next = (index + 1) % len;
+
+                content.innerHTML = `
+                        <img class="product-swiper-item" src="${swiperData[prev].imgUrl}" />
+                        <img class="product-swiper-item active" src="${swiperData[index].imgUrl}" />
+                        <img class="product-swiper-item" src="${swiperData[next].imgUrl}" />
+                    `;
+
+                const data = swiperData[index];
+                titleEl.innerText = data.title;
+                nameEl.innerText = data.name;
+
+                items[0].querySelector(".swiper-product-count").innerText = data.weight;
+                items[0].querySelector(".swiper-product-item-desc").innerText = data.weight_text;
+
+                const motorCounts = items[1].querySelectorAll(".swiper-product-count");
+                data.isUpgraded ? motorCounts[0].innerText = "Upgraded" : motorCounts[0].innerText = "";
+                motorCounts[1].innerText = data.motors;
+                items[1].querySelector(".swiper-product-item-desc").innerText = data.motors_text;
+
+                items[2].querySelector(".swiper-product-count").innerText = data.liftCycles;
+                items[2].querySelector(".swiper-product-item-desc").innerText = data.weight_text;
+
+                items[3].querySelector(".swiper-product-count").innerText = data.warranty;
+                items[3].querySelector(".swiper-product-item-desc").innerText = data.warranty_text;
+            }
+
+            updateDisplay(currentIndex);
+
+            // Button events
+            const nextBtn = document.querySelector(".product-next");
+            const prevBtn = document.querySelector(".product-prev");
+
+            nextBtn.addEventListener("click", () => {
+                currentIndex = (currentIndex + 1) % swiperData.length;
+                updateDisplay(currentIndex);
+                initCount()
             });
 
-            prev_btn.addEventListener("click", () => {
-                for (let i = 0; i < total; i++) {
-                    swiper_items[i].style.transform = `translateX(${100 * (i - (index - 2))}%)`;
-                }
+            prevBtn.addEventListener("click", () => {
+                currentIndex = (currentIndex - 1 + swiperData.length) % swiperData.length;
+                updateDisplay(currentIndex);
+                initCount()
             });
-
 
 
 
@@ -1093,22 +1218,22 @@
             initCount()
 
             // module 7
-            new Swiper("#new-swiper", {
-                autoplay: true,
-                loop: true,
-                slidesPerView: "1",
-                pagination: {
-                    el: ".swiper-pagination-new",
-                    clickable: true,
-                },
-            })
+            // const swiperInstance = new Swiper("#new-swiper", {
+            //     autoplay: true,
+            //     loop: true,
+            //     slidesPerView: "1",
+            //     pagination: {
+            //         el: ".swiper-pagination-new",
+            //         clickable: true,
+            //     },
+            // })
 
 
             let module_data = [
                 {
                     imgUrl: [
                         "https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img7-1.png",
-                        "https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img7-1.png"
+                        "https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img7-2.png"
                     ],
                     title: `Home Office`,
                     desc: `Perfect for your home workspace — ideal for daily tasks, video calls, and dual-monitor setups. It also easily supports equipment like 3D printers or creative tools.`,
@@ -1119,7 +1244,7 @@
                 {
                     imgUrl: [
                         "https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img8-1.png",
-                        "https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img8-1.png"
+                        "https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img8-2.png"
                     ],
                     title: `Meeting Room`,
                     desc: `Well-suited for professional spaces — the 180×80 cm tabletop comfortably accommodates 6 to 8 people for team meetings or collaborative sessions.`,
@@ -1130,7 +1255,7 @@
                 {
                     imgUrl: [
                         "https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img9-1.png",
-                        "https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img9-1.png"
+                        "https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img9-2.png"
                     ],
                     title: `Dining Room`,
                     desc: `It can even double as a second kitchen island — perfect for casual meals, food prep, or family gatherings.`,
@@ -1141,7 +1266,7 @@
                 {
                     imgUrl: [
                         "https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img10-1.png",
-                        "https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img10-1.png"
+                        "https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/standing-desk-20250624-img10-2.png"
                     ],
                     title: `Garage or Workshop`,
                     desc: `Sturdy enough to serve as your tool station — use it as a height-adjustable workbench for repairs, crafting, or DIY projects.`,
@@ -1151,30 +1276,174 @@
                 },
             ]
 
-            let star_black = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                    <g clip-path="url(#clip0_3445_20181)">
-                                        <path d="M9 0.916016L11.427 6.51294L17.5 7.09163L12.927 11.1294L14.2533 17.084L9 13.9825L3.74671 17.084L5.073 11.1294L0.5 7.09163L6.57298 6.51294L9 0.916016Z" fill="black"/>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_3445_20181">
-                                        <rect width="18" height="18" fill="white"/>
-                                        </clipPath>
-                                    </defs>
-                                </svg>`
-            let star_white = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                    <g clip-path="url(#clip0_3445_20185)">
-                                        <path d="M10.9688 6.71191L11.0859 6.98242L11.3799 7.01074L16.3037 7.47949L12.5957 10.7549L12.375 10.9502L12.4385 11.2383L13.5146 16.0664L9.25391 13.5518L9 13.4023L8.74609 13.5518L4.48438 16.0664L5.56152 11.2383L5.625 10.9502L5.4043 10.7549L1.69531 7.47949L6.62012 7.01074L6.91406 6.98242L7.03125 6.71191L9 2.17285L10.9688 6.71191Z" stroke="black"/>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_3445_20185">
-                                        <rect width="18" height="18" fill="white"/>
-                                        </clipPath>
-                                    </defs>
-                                </svg>`
-        
-        function updataDom() {
-            
-        }
+
+            // 模拟你的 swiper 实例变量
+
+            // DOM 元素引用
+            const title = document.querySelector('.new_module_title');
+            const descEl = document.querySelector('.new_module_desc');
+            const e2qContainer = document.querySelectorAll('.new_module_item_img')[0];
+            const e7plusContainer = document.querySelectorAll('.new_module_item_img')[1];
+            const e7qContainer = document.querySelectorAll('.new_module_item_img')[2];
+            const tabs = document.querySelectorAll('.new_module_tab svg');
+
+            // 黑白星星 SVG
+            const star_black = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 0.916L11.427 6.513L17.5 7.092L12.927 11.129L14.253 17.084L9 13.983L3.747 17.084L5.073 11.129L0.5 7.092L6.573 6.513L9 0.916Z" fill="black"/></svg>`;
+            const star_white = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M10.969 6.712L11.086 6.982L11.38 7.011L16.304 7.479L12.596 10.755L12.375 10.95L12.439 11.238L13.515 16.066L9.254 13.552L9 13.402L8.746 13.552L4.484 16.066L5.562 11.238L5.625 10.95L5.404 10.755L1.695 7.479L6.62 7.011L6.914 6.982L7.031 6.712L9 2.173L10.969 6.712Z" stroke="black"/></svg>`;
+            let swiperInstance;
+            // 初始化 Swiper 实例
+            function initSwiper() {
+                swiperInstance = new Swiper('#new-swiper', {
+                    loop: true,
+                    autoplay: {
+                        delay: 3000,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination-new',
+                        clickable: true,
+                    },
+                });
+            }
+
+            // 渲染星星
+            function renderStars(container, [solid, hollow]) {
+                container.innerHTML = '';
+                for (let i = 0; i < solid; i++) container.innerHTML += star_black;
+                for (let i = 0; i < hollow; i++) container.innerHTML += star_white;
+            }
+
+            // 切换内容函数
+            function switchContent(index) {
+                const data = module_data[index];
+
+                const swiperWrapper = document.querySelector('#new-swiper .swiper-wrapper');
+
+                swiperWrapper.innerHTML = '';
+
+                data.imgUrl.forEach((url) => {
+                    const slide = document.createElement('div');
+                    slide.className = 'swiper-slide';
+                    slide.innerHTML = `<img src="${url}" width="720" height="500" />`;
+                    swiperWrapper.appendChild(slide);
+                });
+
+                if (swiperInstance) swiperInstance.destroy(true, true);
+                initSwiper();
+
+                title.textContent = data.title;
+                descEl.textContent = data.desc;
+                renderStars(e2qContainer, data.E2Q);
+                renderStars(e7plusContainer, data.E7Plus);
+                renderStars(e7qContainer, data.E7Q);
+
+                // 设置 tab active 状态
+                tabs.forEach((tab, i) => {
+                    tab.classList.toggle('active', i === index);
+                });
+            }
+
+            // 绑定 tab 点击事件
+            tabs.forEach((tab, i) => {
+                tab.addEventListener('click', () => {
+                    switchContent(i);
+                });
+            });
+
+            // 初始化显示第一个
+            switchContent(0);
+
+            // let star_black = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            //                         <g clip-path="url(#clip0_3445_20181)">
+            //                             <path d="M9 0.916016L11.427 6.51294L17.5 7.09163L12.927 11.1294L14.2533 17.084L9 13.9825L3.74671 17.084L5.073 11.1294L0.5 7.09163L6.57298 6.51294L9 0.916016Z" fill="black"/>
+            //                         </g>
+            //                         <defs>
+            //                             <clipPath id="clip0_3445_20181">
+            //                             <rect width="18" height="18" fill="white"/>
+            //                             </clipPath>
+            //                         </defs>
+            //                     </svg>`
+            // let star_white = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            //                         <g clip-path="url(#clip0_3445_20185)">
+            //                             <path d="M10.9688 6.71191L11.0859 6.98242L11.3799 7.01074L16.3037 7.47949L12.5957 10.7549L12.375 10.9502L12.4385 11.2383L13.5146 16.0664L9.25391 13.5518L9 13.4023L8.74609 13.5518L4.48438 16.0664L5.56152 11.2383L5.625 10.9502L5.4043 10.7549L1.69531 7.47949L6.62012 7.01074L6.91406 6.98242L7.03125 6.71191L9 2.17285L10.9688 6.71191Z" stroke="black"/>
+            //                         </g>
+            //                         <defs>
+            //                             <clipPath id="clip0_3445_20185">
+            //                             <rect width="18" height="18" fill="white"/>
+            //                             </clipPath>
+            //                         </defs>
+            //                     </svg>`
+
+            // const tabs = document.querySelectorAll('.new_module_tab svg')
+            // const swiperWrapper = document.querySelector('#new-swiper .swiper-wrapper')
+            // const title = document.querySelector('.new_module_title')
+            // const descEl = document.querySelector('.new_module_desc')
+
+            // // 底部3组星星元素
+            // const e2qContainer = document.querySelector('.new_module_item.first-child .new_module_item_img')
+            // const e7plusContainer = document.querySelectorAll('.new_module_item')[1].querySelector('.new_module_item_img')
+            // const e7qContainer = document.querySelectorAll('.new_module_item')[2].querySelector('.new_module_item_img')
+
+            // // 渲染星星函数，根据[黑星数, 白星数]渲染星星
+            // function renderStars(container, arr) {
+            //     container.innerHTML = ''
+            //     for (let i = 0; i < arr[0]; i++) container.innerHTML += star_black
+            //     for (let i = 0; i < arr[1]; i++) container.innerHTML += star_white
+            // }
+
+            // // 切换内容函数
+            // function switchContent(index) {
+            //     const data = module_data[index]
+
+            //     const swiperWrapper = document.querySelector('#new-swiper .swiper-wrapper');
+
+            //     // ✅ 清空旧 slide
+            //     swiperWrapper.innerHTML = '';
+
+            //     // ✅ 重新生成每个 slide 对应 imgUrl 中的每一项
+            //     data.imgUrl.forEach((url) => {
+            //         const slide = document.createElement('div');
+            //         slide.className = 'swiper-slide';
+            //         slide.innerHTML = `<img src="${url}" width="720" height="500" />`;
+            //         swiperWrapper.appendChild(slide);
+            //     });
+
+            //     // ✅ 销毁并重新初始化 Swiper（loop 模式必须重新创建）
+            //     swiperInstance.destroy(true, true);
+            //     swiperInstance = new Swiper('#new-swiper', {
+            //         loop: true,
+            //         autoplay: true,
+            //         pagination: {
+            //             el: '.swiper-pagination-new',
+            //             clickable: true,
+            //         },
+            //     });
+
+            //     // 更新标题和描述
+            //     title.textContent = data.title
+            //     descEl.textContent = data.desc
+
+            //     // 更新底部星星
+            //     renderStars(e2qContainer, data.E2Q)
+            //     renderStars(e7plusContainer, data.E7Plus)
+            //     renderStars(e7qContainer, data.E7Q)
+
+            //     // tab选中状态
+            //     document.querySelectorAll('.new_module_tab svg').forEach((tab, i) => {
+            //         tab.classList.toggle('active', i === index);
+            //     });
+            // }
+
+            // // 绑定点击事件
+            // tabs.forEach((tab, i) => {
+            //     tab.addEventListener('click', () => {
+            //         // tabs.forEach(t => t.classList.remove('active'));
+            //         // tab.classList.add('active');
+            //         switchContent(i)
+            //     })
+            // })
+
+            // // 初始化默认第一个
+            // switchContent(0)
 
         }
     )
