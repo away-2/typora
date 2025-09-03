@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+    <link rel="stylesheet" type="text/css"
+        href="https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/swiper@8.4.7-min-us.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            scroll-margin-top: 100px;
+        }
+
+        .static-container {
+            width: 100%;
+        }
+
+        .static-banner {
+            position: relative;
+        }
+
+        .banner {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .banner-m {
+            display: none;
+        }
+
+        .static-banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1000px;
+        }
+
+        .static-banner-text .static-banner-text-title {
+            color: #FFF;
+            text-align: center;
+            font-family: "SupremeLLSub-Bold";
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 710;
+            line-height: normal;
+            text-transform: capitalize;
+        }
+
+        .static-banner-text .static-banner-text-desc {
+            color: #FFF;
+            text-align: center;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: "Moderat-Medium";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%;
+            margin-top: 17px;
+        }
+
+        .static-banner-text .static-banner-text-btn {
+            border-radius: 4px;
+            background: #000;
+            width: max-content;
+            display: flex;
+            padding: 5px 16px;
+            justify-content: center;
+            align-items: center;
+            color: #FFF;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: "Poppins-Regular";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 22px;
+            margin: 50px auto 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .static-banner-text .static-banner-text-btn:hover {
+            background: #004DF2;
+        }
+
+        .static-content {
+            width: 1520px;
+            margin: 0 auto;
+        }
+
+        .static-story {
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 48px;
+        }
+
+        .static-story .static-story-title {
+            color: #000;
+            text-align: center;
+            font-feature-settings: 'liga' off;
+            font-family: "SupremeLLSub-Bold";
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 710;
+            line-height: 120%;
+            margin-top: 48px;
+        }
+
+        .static-story .static-story-desc {
+            color: #67696A;
+            text-align: center;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-feature-settings: 'ss03' on, 'ss04' on, 'liga' off;
+            font-family: "Moderat-Regular";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            max-width: 1000px;
+            margin: 24px auto 0;
+        }
+
+        .swiper-story-content {
+            position: relative;
+            margin-top: 40px;
+            width: 100%;
+        }
+
+        .static-story-item {
+            position: relative;
+        }
+
+        .static-story-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.00) 100%);
+            z-index: 1;
+        }
+
+        .static-story-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px 0 0 4px;
+
+        }
+
+        .static-story-item .static-story-text {
+            position: absolute;
+            top: 64px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            z-index: 2;
+        }
+
+        .static-story-item .static-story-text svg {
+            width: 38.16px;
+            height: 24.32px;
+        }
+
+        .static-story-item .static-story-text .static-story-text-title {
+            color: #FFF;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-feature-settings: 'ss03' on, 'ss04' on, 'liga' off;
+            font-family: "Moderat-Regular";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+        }
+
+        .static-story-item .static-story-text .static-story-text-author {
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px dashed rgba(255, 255, 255, 0.1);
+        }
+
+        .static-story-item .static-story-text .static-story-text-author .static-story-text-author-strong {
+            color: #FFF;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-feature-settings: 'ss03' on, 'ss04' on, 'liga' off;
+            font-family: "Moderat-Medium";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%;
+        }
+
+        .static-story-item .static-story-text .static-story-text-author .static-story-text-author-normal {
+            color: rgba(255, 255, 255, 0.50);
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: "Moderat-Regular";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+            margin-top: 6px;
+        }
+
+        .static-view {
+            width: 100%;
+            margin: 64px 0 48px;
+        }
+
+        .static-view-tab {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .static-view-tab .static-view-tab-item {
+            width: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .static-view-tab .static-view-tab-item .static-view-tab-img {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 80px;
+            background: #F5F5F5;
+            color: #000;
+            text-align: center;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: "Poppins-Medium";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .static-view-tab .static-view-tab-item .static-view-tab-img.active {
+            border-radius: 80px;
+            border: 2px solid #004DF2;
+            background: #F5F5F5;
+            box-shadow: 0 0 0 4px #FFF inset;
+        }
+
+        .static-view-tab .static-view-tab-item .static-view-tab-img:hover {
+            border-radius: 80px;
+            border: 2px solid #004DF2;
+            background: #F5F5F5;
+            box-shadow: 0 0 0 4px #FFF inset;
+        }
+
+        .static-view-tab .static-view-tab-item .static-view-tab-text {
+            color: #000;
+            text-align: center;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-feature-settings: 'liga' off;
+            font-family: "Moderat-Regular";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+        }
+
+        .static-view .static-view-content {
+            width: 100%;
+            margin-top: 24px;
+        }
+
+        .static-view .static-view-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        /* .static-view .static-view-content .static-view-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        } */
+
+        .static-view .static-view-content .static-view-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        /* .static-view .static-view-content .static-view-grid img:nth-child(1) {
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+            aspect-ratio: 1005 / 753;
+        }
+
+        .static-view .static-view-content .static-view-grid img:nth-child(2) {
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+        }
+
+        .static-view .static-view-content .static-view-grid img:nth-child(3) {
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+        } */
+
+        /* .static-view .static-view-content .static-view-grid img.view-modal-img1:nth-child(n + 7) {
+            display: none;
+        }
+
+        .static-view .static-view-content .static-view-grid img.view-modal-img2:nth-child(n + 7) {
+            display: none;
+        }
+
+        .static-view .static-view-content .static-view-grid img.view-modal-img4:nth-child(n + 7) {
+            display: none;
+        } */
+
+        .static-view .static-view-content .static-view-more {
+            display: flex;
+            padding: 5px 16px;
+            justify-content: center;
+            align-items: center;
+            width: max-content;
+            border-radius: 4px;
+            background: #000;
+            color: #FFF;
+            font-variant-numeric: lining-nums tabular-nums;
+            font-family: "Moderat-Medium";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 22px;
+            margin: 24px auto 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .static-view .static-view-content .static-view-more:hover {
+            background: #004DF2;
+        }
+
+        .view-shadow {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.50);
+            z-index: 10000;
+        }
+
+        .view-modal {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+        }
+
+        .view-modal-content {
+            margin: 0 auto;
+            width: 1000px;
+        }
+
+        .view-modal-close {
+            position: absolute;
+            top: -5%;
+            right: 10%;
+            cursor: pointer;
+            width: 48px;
+            height: 48px;
+            z-index: 2;
+        }
+
+        #swiper-modal img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1000 / 666;
+            object-fit: cover;
+        }
+
+        @media screen and (max-width: 1600px) {
+            .static-banner-text {
+                width: 900px;
+            }
+
+            .static-banner-text .static-banner-text-title {
+                font-size: 35px;
+            }
+
+            .static-banner-text .static-banner-text-desc {
+                font-size: 16px;
+            }
+
+            .static-banner-text .static-banner-text-btn {
+                margin: 32px auto 0;
+            }
+
+            .static-content {
+                width: 1000px;
+            }
+
+            .static-story .static-story-title {
+                font-size: 32px;
+                margin-top: 48px;
+            }
+
+            .static-story .static-story-desc {
+                font-size: 16px;
+                max-width: 900px;
+                margin: 24px auto 0;
+            }
+
+            .swiper-story-content {
+                margin-top: 40px;
+            }
+
+            .static-story-item .static-story-text {
+                top: 52px;
+                width: 500px;
+            }
+
+            .view-modal-content {
+                margin: 0 auto;
+                width: 800px;
+            }
+
+        }
+
+        @media screen and (max-width: 1080px) {
+            .static-banner-text {
+                width: 768px;
+            }
+
+            .static-banner-text .static-banner-text-title {
+                font-size: 28px;
+            }
+
+            .static-banner-text .static-banner-text-desc {
+                font-size: 14px;
+            }
+
+            .static-banner-text .static-banner-text-btn {
+                margin: 20px auto 0;
+            }
+
+            .static-content {
+                width: 768px;
+            }
+
+            .static-story .static-story-title {
+                font-size: 28px;
+                margin-top: 40px;
+            }
+
+            .static-story .static-story-desc {
+                font-size: 14px;
+                max-width: 500px;
+                margin: 24px auto 0;
+            }
+
+            .swiper-story-content {
+                margin-top: 40px;
+            }
+
+            .static-story-item .static-story-text {
+                top: 52px;
+                width: 400px;
+            }
+
+            .static-story-item .static-story-text .static-story-text-title {
+                font-size: 18px;
+            }
+
+            .static-story-item .static-story-text .static-story-text-author {
+                margin-top: 20px;
+                padding-top: 20px;
+            }
+
+            .static-story-item .static-story-text .static-story-text-author .static-story-text-author-strong {
+                font-size: 14px;
+            }
+
+            .static-story-item .static-story-text .static-story-text-author .static-story-text-author-normal {
+                font-size: 12px;
+                margin-top: 4px;
+            }
+
+            .view-modal-content {
+                margin: 0 auto;
+                width: 600px;
+            }
+
+        }
+
+        @media screen and (max-width: 848px) {
+            .banner {
+                display: none;
+            }
+
+            .banner-m {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+            .static-banner-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 343px;
+            }
+
+            .static-banner-text .static-banner-text-title {
+                font-size: 24px;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .static-banner-text .static-banner-text-desc {
+                font-size: 14px;
+                font-weight: 400;
+                font-family: "Moderat-Regular";
+                margin-top: 17px;
+            }
+
+            .static-banner-text .static-banner-text-btn {
+                margin: 17px auto 0;
+            }
+
+            .static-content {
+                width: 100%;
+                padding: 0 16px;
+            }
+
+            .static-story .static-story-title {
+                font-size: 24px;
+                text-align: left;
+                margin-top: 16px;
+            }
+
+            .static-story .static-story-desc {
+                font-size: 14px;
+                text-align: left;
+                max-width: 100%;
+                margin: 16px auto 0;
+            }
+
+            .swiper-story-content {
+                margin-top: 32px;
+            }
+
+            .static-story-item {
+                width: 280px;
+                padding: 12px;
+                padding-top: 24px;
+                border-radius: 4px;
+                background: #F5F5F5;
+            }
+
+            .static-story-item::after {
+                display: none;
+            }
+
+            .static-story-item .static-story-text {
+                position: relative;
+                top: auto;
+                width: auto;
+            }
+
+            .static-story-item .static-story-text svg {
+                position: absolute;
+                top: -75%;
+            }
+
+            .static-story-item .static-story-text svg path {
+                fill: #c9c9c9;
+            }
+
+            .static-story-item .static-story-text .static-story-text-title {
+                font-size: 14px;
+                margin-top: 12px;
+                height: 98px;
+                color: #000;
+            }
+
+            .static-story-item .static-story-text .static-story-text-author {
+                margin-top: 12px;
+                padding-top: 12px;
+                border-top: 1px dashed #E6E6E6;
+            }
+
+            .static-story-item .static-story-text .static-story-text-author .static-story-text-author-strong {
+                font-size: 14px;
+                color: #000;
+            }
+
+            .static-story-item .static-story-text .static-story-text-author .static-story-text-author-normal {
+                font-size: 12px;
+                margin-top: 6px;
+                color: #8B8C8B;
+            }
+
+            .static-view {
+                width: 100%;
+                margin: 32px 0 16px;
+            }
+
+            .static-view-tab {
+                display: flex;
+                justify-content: flex-start;
+                gap: 16px;
+                overflow-x: auto;
+            }
+
+            .static-view-tab .static-view-tab-item {
+                width: 80px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .static-view-tab .static-view-tab-item .static-view-tab-img {
+                width: 48px;
+                height: 48px;
+                font-size: 12px;
+            }
+
+            .static-view-tab .static-view-tab-item .static-view-tab-img.active {
+                border: 1.5px solid #004DF2;
+            }
+
+            .static-view-tab .static-view-tab-item .static-view-tab-img:hover {
+                border: 1.5px solid #004DF2;
+            }
+
+            .static-view-tab .static-view-tab-item .static-view-tab-text {
+                font-size: 12px;
+            }
+
+            .static-view .static-view-content {
+                width: 100%;
+                margin-top: 16px;
+            }
+
+            .static-view .static-view-content .static-view-grid {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 16px;
+            }
+
+            .static-view .static-view-content .static-view-grid img:nth-child(1) {
+                grid-column: auto;
+                grid-row: auto;
+            }
+
+            .static-view .static-view-content .static-view-grid img:nth-child(2) {
+                grid-column: auto;
+                grid-row: auto;
+            }
+
+            .static-view .static-view-content .static-view-grid img:nth-child(3) {
+                grid-column: auto;
+                grid-row: auto;
+            }
+
+            .static-view .static-view-content .static-view-grid img.view-modal-img1:nth-child(n + 7) {
+                display: none;
+            }
+
+            .static-view .static-view-content .static-view-more {
+                width: 343px;
+                margin: 16px auto 0;
+            }
+
+            .view-shadow {
+                display: none !important;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.50);
+                z-index: 10000;
+            }
+
+            .view-modal {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                transform: translate(-50%, -50%);
+                box-sizing: border-box;
+            }
+
+            .view-modal-content {
+                margin: 0 auto;
+                width: 300px;
+            }
+
+            .view-modal-close {
+                position: absolute;
+                top: -5%;
+                right: 10%;
+                cursor: pointer;
+                width: 48px;
+                height: 48px;
+                z-index: 2;
+            }
+
+
+        }
+    </style>
+    <!-- swiper -->
+    <style>
+        .swiper-story-content {
+            position: relative;
+        }
+
+        .swiper-button-pre,
+        .swiper-button-next {
+            position: absolute;
+            width: 40px !important;
+            height: 40px !important;
+            border-radius: 2px;
+            border: 1px solid #E6E6E6;
+            background: #FFF !important;
+            opacity: 1 !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3;
+            cursor: pointer;
+        }
+
+        .swiper-button-pre:hover,
+        .swiper-button-next:hover {
+            opacity: 0.8;
+            box-shadow: 0 2px 8px rgba(79, 70, 229, 0.3);
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            content: '';
+        }
+
+        .swiper-story-pre {
+            top: 45%;
+            left: 16px;
+        }
+
+        .swiper-story-next {
+            top: 45%;
+            right: 16px;
+
+        }
+
+        .swiper-story-pre,
+        .swiper-story-next {
+            opacity: 0 !important;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        /* 悬停 swiper 时显示按钮 */
+        .swiper-story-content:hover .swiper-story-next,
+        .swiper-story-content:hover .swiper-story-pre {
+            opacity: 1 !important;
+            pointer-events: auto;
+        }
+
+
+        .swiper-button-pre.swiper-button-disabled,
+        .swiper-button-next.swiper-button-disabled {
+            background: rgba(255, 255, 255, 0.60) !important;
+            cursor: not-allowed;
+        }
+
+        .swiper-modal-pre {
+            top: 45%;
+            left: 10%;
+        }
+
+        .swiper-modal-next {
+            top: 45%;
+            right: 10%;
+
+        }
+
+        @media screen and (max-width: 848px) {
+
+            .swiper-story-pre,
+            .swiper-story-next {
+                display: none;
+            }
+
+            #swiper-story .swiper-slide {
+                width: max-content !important;
+            }
+        }
+    </style>
+    <style>
+        .static-view-content {
+            width: 100%;
+        }
+
+        .static-view-grid {
+            width: 100%;
+            height: 1000px;
+            overflow: hidden;
+            position: relative;
+            column-count: 3;
+            column-gap: 24px;
+        }
+
+        .view-modal-img1 {
+            break-inside: avoid;
+            margin-bottom: 24px;
+            background: #fff;
+        }
+
+        /* .masonry-item img {
+            width: 100%;
+            display: block;
+            border-radius: 12px;
+        }
+
+        .masonry-item {
+            width: 100%;
+            display: block;
+            border-radius: 12px;
+        } */
+
+        .masonry-mask {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 145px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .comp-item-spu .item-spu-detail-pane .detail-pane-detail-content .masonry-mask-btn:hover {
+            opacity: 0.8;
+        }
+
+        .masonry-mask-btn svg {
+            margin-right: 10px;
+        }
+
+        @media screen and (max-width: 1600px) {
+            .masonry-container {
+                height: 800px;
+            }
+        }
+
+        @media screen and (max-width: 1080px) {
+            .masonry-container {
+                height: 700px;
+            }
+
+            .masonry {
+                column-count: 3;
+            }
+        }
+
+        @media screen and (max-width: 848px) {
+            .masonry-container {
+                height: 450px;
+            }
+
+            .masonry {
+                column-count: 2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="static-container">
+        <!-- banner -->
+        <div class="static-banner">
+            <img class="lazyload banner" width="1920" height="300"
+                data-src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250811-banner-pc.png"
+                alt="">
+            <img class="lazyload banner-m"
+                data-src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250811-banner-m.png"
+                alt="">
+            <div class="static-banner-text">
+                <div class="static-banner-text-title">Inspiration Begins with Real Spaces</div>
+                <div class="static-banner-text-desc">
+                    We'd love to show you how our customers style their homes and workspaces with our products - and
+                    maybe spark a few ideas for yours along the way
+                </div>
+                <!-- <div class="static-banner-text-btn">Contact Our Team</div> -->
+            </div>
+        </div>
+        <div class="static-content">
+            <!-- module 2 -->
+            <div class="static-view">
+                <div class="static-view-tab">
+                    <div class="static-view-tab-item">
+                        <div class="static-view-tab-img active">
+                            All
+                        </div>
+                        <div class="static-view-tab-text">
+                            View All
+                        </div>
+                    </div>
+                    <div class="static-view-tab-item">
+                        <div class="static-view-tab-img">
+                            <img class="lazyload" width="64" height="64"
+                                data-src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250811-tab-img1.png"
+                                alt="">
+                        </div>
+                        <div class="static-view-tab-text">
+                            Workspaces
+                        </div>
+                    </div>
+                    <div class="static-view-tab-item">
+                        <div class="static-view-tab-img">
+                            <img class="lazyload" width="64" height="64"
+                                data-src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250811-tab-img2.png"
+                                alt="">
+                        </div>
+                        <div class="static-view-tab-text">
+                            Meeting & Collaboration
+                        </div>
+                    </div>
+                </div>
+                <div class="static-view-content">
+                    <div style="position: relative;">
+                        <div class="static-view-grid">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-1.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-2.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-3.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-4.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-5.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-6.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-7.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-8.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-9.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-10.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-11.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-12.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-13.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-14.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-15.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-16.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-17.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-18.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-19.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-20.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-21.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-22.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-23.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-24.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-25.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-26.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-27.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-28.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-29.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-30.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-31.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-32.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-33.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-34.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-35.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-36.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-37.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-38.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-39.png"
+                                alt="">
+                            <img class="lazyload view-modal-img1"
+                                src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/waterfull-20250902-module1-img1-40.png"
+                                alt="">
+
+                        </div>
+                        <div class="masonry-mask"></div>
+                    </div>
+                    <div class="static-view-more static-view-more1">
+                        View More
+                    </div>
+                </div>
+                <div class="static-view-content" style="display: none;">
+                    <div class="static-view-grid static-view-grid1">
+                        <img class="lazyload view-modal-img2" width="1005" height="753"
+                            src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250821-modal-img1.jpg"
+                            alt="">
+                        <img class="lazyload view-modal-img2" width="490" height="365"
+                            src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250821-modal-img2.jpg"
+                            alt="">
+                        <img class="lazyload view-modal-img2" width="490" height="365"
+                            src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250821-modal-img3.jpg"
+                            alt="">
+                        <img class="lazyload view-modal-img2" width="490" height="365"
+                            src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250821-modal-img4.jpg"
+                            alt="">
+                        <img class="lazyload view-modal-img2" width="490" height="365"
+                            src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250821-modal-img5.jpg"
+                            alt="">
+                        <img class="lazyload view-modal-img2" width="490" height="365"
+                            src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250821-modal-img6.jpg"
+                            alt="">
+                        <img class="lazyload view-modal-img2" width="490" height="365"
+                            src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250821-modal-img7.jpg"
+                            alt="">
+                        <img class="lazyload view-modal-img2" width="490" height="365"
+                            src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250821-modal-img8.jpg"
+                            alt="">
+                        <img class="lazyload view-modal-img2" width="490" height="365"
+                            src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250821-modal-img9.jpg"
+                            alt="">
+                        <img class="lazyload view-modal-img2" width="490" height="365"
+                            src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250821-modal-img10.jpg"
+                            alt="">
+                        <img class="lazyload view-modal-img2" width="490" height="365"
+                            src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250821-modal-img11.jpg"
+                            alt="">
+                        <img class="lazyload view-modal-img2" width="490" height="365"
+                            src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250821-modal-img12.jpg"
+                            alt="">
+                        <img class="lazyload view-modal-img2" width="490" height="365"
+                            src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250821-modal-img13.jpg"
+                            alt="">
+                        <img class="lazyload view-modal-img2" width="490" height="365"
+                            src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250821-modal-img14.jpg"
+                            alt="">
+                        <img class="lazyload view-modal-img2" width="490" height="365"
+                            src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250821-modal-img15.jpg"
+                            alt="">
+                        <img class="lazyload view-modal-img2" width="490" height="365"
+                            src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250821-modal-img16.jpg"
+                            alt="">
+                        <img class="lazyload view-modal-img2" width="490" height="365"
+                            src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250821-modal-img17.jpg"
+                            alt="">
+                        <img class="lazyload view-modal-img2" width="490" height="365"
+                            src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250821-modal-img18.jpg"
+                            alt="">
+                        <img class="lazyload view-modal-img2" width="490" height="365"
+                            src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250828-modal-img1.jpg"
+                            alt="">
+                        <img class="lazyload view-modal-img2" width="490" height="365"
+                            src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250828-modal-img2.jpg"
+                            alt="">
+                    </div>
+                    <div class="static-view-more static-view-more2">
+                        View More
+                    </div>
+                </div>
+                <div class="static-view-content" style="display: none;">
+                    <div class="static-view-grid">
+                        <img class="lazyload view-modal-img3" width="1005" height="753"
+                            src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250820-modal-img9.jpg"
+                            alt="">
+                        <img class="lazyload view-modal-img3" width="490" height="365"
+                            src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250820-modal-img10.jpg"
+                            alt="">
+                        <img class="lazyload view-modal-img3" width="490" height="365"
+                            src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250820-modal-img11.jpg"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- modal -->
+            <div class="view-shadow">
+                <div class="view-modal">
+                    <div class="view-modal-content">
+                        <div class="view-modal-close">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
+                                fill="none">
+                                <path
+                                    d="M15.7558 13.2442L24.2107 21.6991L32.486 13.4238L34.6073 15.5451L26.332 23.8205L34.7869 32.2754L32.6656 34.3967L24.2107 25.9418L15.5762 34.5762L13.4549 32.4549L22.0893 23.8205L13.6344 15.3656L15.7558 13.2442Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                        <div class="swiper-button-pre swiper-modal-pre">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
+                                fill="none">
+                                <path d="M12.873 5.5L7.03967 10.1154L12.873 15.5" stroke="black" stroke-width="1.25"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div class="swiper" id="swiper-modal">
+                            <div class="swiper-wrapper"></div>
+                        </div>
+                        <div class="swiper-button-next swiper-modal-next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
+                                fill="none">
+                                <path d="M8.12695 5.5L13.9603 10.1154L8.12695 15.5" stroke="black" stroke-width="1.25"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- module 1 -->
+            <div class="static-story">
+                <div class="static-story-title">Their Stories Could Be Yours</div>
+                <div class="static-story-desc">
+                    From bustling offices in New York to collaborative hubs in California, businesses across the U.S.
+                    have
+                    transformed their spaces with our solutions - creating environments where teams feel productive,
+                    comfortable and inspired.
+                </div>
+                <div class="swiper-story-content">
+                    <div class="swiper-story-pre swiper-button-pre">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                            <path d="M12.873 5.5L7.03967 10.1154L12.873 15.5" stroke="black" stroke-width="1.25"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="swiper" id="swiper-story">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="static-story-item">
+                                    <img width="1520" height="500"
+                                        src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250811-swiper-img1.png"
+                                        alt="">
+                                    <div class="static-story-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="39" height="25"
+                                            viewBox="0 0 39 25" fill="none">
+                                            <path
+                                                d="M13.12 24.32L0 24.32L9.2 0L18.72 0L13.12 24.32ZM32.56 24.32H19.44L28.64 0L38.16 0L32.56 24.32Z"
+                                                fill="white" fill-opacity="0.5" />
+                                        </svg>
+                                        <div class="static-story-text-title">
+                                            Our conference rooms used to feel cramped, but with the new layout, meetings
+                                            flow more naturally, and clients always comment on how inviting the space
+                                            feels.
+                                        </div>
+                                        <div class="static-story-text-author">
+                                            <div class="static-story-text-author-strong">Laura</div>
+                                            <div class="static-story-text-author-normal">
+                                                Operations Manager · Denver, CO
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="static-story-item">
+                                    <img width="1520" height="500"
+                                        src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250811-swiper-img2.png"
+                                        alt="">
+                                    <div class="static-story-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="39" height="25"
+                                            viewBox="0 0 39 25" fill="none">
+                                            <path
+                                                d="M13.12 24.32L0 24.32L9.2 0L18.72 0L13.12 24.32ZM32.56 24.32H19.44L28.64 0L38.16 0L32.56 24.32Z"
+                                                fill="white" fill-opacity="0.5" />
+                                        </svg>
+                                        <div class="static-story-text-title">
+                                            The new workstations completely changed our open office dynamic. There’s
+                                            more room to collaborate, yet everyone still has their own focus zone.
+                                        </div>
+                                        <div class="static-story-text-author">
+                                            <div class="static-story-text-author-strong">Mark</div>
+                                            <div class="static-story-text-author-normal">
+                                                Creative Director · New York, NY
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="static-story-item">
+                                    <img width="1520" height="500"
+                                        src="https://s3.springbeetle.eu/dev-de-s3-flexispot/commodity/item/static-20250811-swiper-img3.png"
+                                        alt="">
+                                    <div class="static-story-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="39" height="25"
+                                            viewBox="0 0 39 25" fill="none">
+                                            <path
+                                                d="M13.12 24.32L0 24.32L9.2 0L18.72 0L13.12 24.32ZM32.56 24.32H19.44L28.64 0L38.16 0L32.56 24.32Z"
+                                                fill="white" fill-opacity="0.5" />
+                                        </svg>
+                                        <div class="static-story-text-title">
+                                            We wanted a reception area that reflects our brand’s professionalism while
+                                            keeping it warm and approachable — this setup does exactly that.
+                                        </div>
+                                        <div class="static-story-text-author">
+                                            <div class="static-story-text-author-strong">Rachel</div>
+                                            <div class="static-story-text-author-normal">
+                                                Office Administrator · San Diego, CA
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-story-next swiper-button-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                            <path d="M8.12695 5.5L13.9603 10.1154L8.12695 15.5" stroke="black" stroke-width="1.25"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- form -->
+        <div class="form-container" id="form-container">
+
+        </div>
+    </div>
+</body>
+<script>
+    function loadScript(url, callback) {
+        document.getElementById("") && document.getElementById("").remove()
+        var script = document.createElement("script")
+        script.type = "text/javascript"
+        script.async = "async"
+        script.src = url
+        script.id = ""
+        var head = document.head || document.getElementsByTagName("head")[0]
+        head.appendChild(script)
+        if (script.readyState) {
+            script.onreadystatechange = function () {
+                if (script.readyState == "complete" || script.readyState == "loaded") {
+                    script.onreadystatechange = null
+                    callback()
+                }
+            }
+        } else {
+            script.onload = function () {
+                callback()
+            }
+        }
+    }
+
+    loadScript(
+        "https://s3.springbeetle.com/prod-us2-bucket/trantor/attachments/US/swiper@8.4.7-min-us.js",
+        function () {
+            // module_1_js
+            new Swiper("#swiper-story", {
+                slidesPerView: 1,
+                allowTouchMove: true,
+                navigation: {
+                    nextEl: ".swiper-story-next",
+                    prevEl: ".swiper-story-pre",
+                },
+                breakpoints: {
+                    849: {
+                        slidesPerView: 1,
+                    },
+                    0: {
+                        slidesPerView: "auto",
+                        spaceBetween: 16,
+                    },
+                },
+            })
+
+            // module_banner_js
+            document.querySelector(".static-banner-text-btn").addEventListener("click", function () {
+                document.getElementById("form-container").scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                })
+            })
+
+
+            // module_2_js
+            const view_buttons = document.querySelectorAll(".static-view-tab .static-view-tab-item .static-view-tab-img");
+            const view_pages = document.querySelectorAll(".static-view .static-view-content");
+            const view_activeClass = "active";
+            const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+            view_buttons.forEach((button, index) => {
+                button.addEventListener("click", () => {
+                    view_buttons.forEach((btn) => btn.classList.remove(view_activeClass));
+                    view_pages.forEach((page) => (page.style.display = "none"));
+
+                    button.classList.add(view_activeClass);
+                    view_pages[index].style.display = "block";
+                    if (screenWidth > 848) {
+                        createModalData(index);
+                    }
+                });
+            });
+
+            const swiperModal = document.querySelector("#swiper-modal .swiper-wrapper")
+            let swiperInstance = null;
+
+            function createModalData(index) {
+                swiperModal.innerHTML = "";
+
+                let current_modal_data = document.querySelectorAll(
+                    `.static-view-content .view-modal-img${index + 1}`
+                );
+
+                let srcArray = Array.from(current_modal_data).map(img => img.src);
+
+                srcArray.forEach(item => {
+                    swiperModal.innerHTML += `
+                                <div class="swiper-slide">
+                                    <img width="1000" height="750" src="${item}" alt="">
+                                </div>
+                            `;
+                });
+
+                current_modal_data.forEach((trigger, i) => {
+                    trigger.addEventListener("click", () => {
+                        modal.style.display = "block";
+                        window.addEventListener('wheel', wheelHandle, { passive: false });
+
+                        if (swiperInstance) {
+                            swiperInstance.destroy(true, true);
+                        }
+
+                        // 初始化
+                        swiperInstance = new Swiper("#swiper-modal", {
+                            slidesPerView: 1,
+                            allowTouchMove: true,
+                            initialSlide: i,
+                            navigation: {
+                                nextEl: ".swiper-modal-next",
+                                prevEl: ".swiper-modal-pre",
+                            }
+                        });
+                    });
+                });
+            }
+
+            if (screenWidth > 848) {
+                createModalData(0);
+            }
+
+            const modal = document.querySelector(".view-shadow")
+            const closeBtn = document.querySelector(".view-modal-close")
+            const modalContent = modal.querySelector(".view-modal-content")
+            const swiper_btn = document.querySelectorAll(".swiper-modal-pre, .swiper-modal-next")
+
+            function wheelHandle(e) {
+                e.preventDefault()
+            }
+
+            closeBtn.addEventListener("click", closeModal)
+
+            // 点击遮罩关闭弹窗
+            // modal.addEventListener("click", (e) => {
+            //     if (!modalContent.contains(e.target)) {
+            //         closeModal()
+            //     }
+            // })
+            // modal.addEventListener("click", (e) => {
+            //     const isInButton = Array.from(swiper_btn).some(btn => btn.contains(e.target));
+
+            //     if (!modalContent.contains(e.target) && !isInButton) {
+            //         closeModal();
+            //     }
+            // });
+
+
+            // 关闭弹窗
+            function closeModal() {
+                modal.style.display = "none"
+                // document.body.style.overflow = "visible"
+                window.removeEventListener('wheel', wheelHandle)
+            }
+
+            function setupViewMore(btnSelector, contentSelector) {
+                const btn = document.querySelector(btnSelector);
+                const contents = document.querySelectorAll(contentSelector);
+                let isShow = false;
+                if (!btn) return;
+
+                btn.addEventListener("click", () => {
+                    contents.style.height = "auto";
+                    isShow = !isShow;
+                    btn.innerHTML = isShow ? "View Less" : "View More";
+                });
+            }
+
+            setupViewMore(
+                ".static-view .static-view-content .static-view-more1",
+                ".static-view-grid1"
+            );
+
+            setupViewMore(
+                ".static-view .static-view-content .static-view-more2"
+            );
+            setupViewMore(
+                ".static-view .static-view-content .static-view-more4"
+            );
+
+        })
+</script>
+
+</html>
