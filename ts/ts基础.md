@@ -91,7 +91,7 @@ console.log(typeof str1)  // object
 
 ### 四、常用类型
 
-#### any
+#### 1. `any`
 
 `any`的含义是：任意类型，一旦将变量类型限制为`any`，那就意味着放弃了对该变量的类型检查。
 
@@ -114,7 +114,7 @@ b = false
 
 注意点：`any`类型的变量，可以赋值给任意类型的变量
 
-#### unknown
+#### 2. `unknown`
 
 - `unknown`可以理解为一个类型安全的`any`，适用于：不确定数据的具体类型
 
@@ -179,7 +179,7 @@ b = false
 
   
 
-#### never
+#### 3. `never`
 
 `never`的含义是：任何值都不是，简而言之就是不能有值，`undefined`、`null`、`''`、`0` 都不行！
 
@@ -224,7 +224,7 @@ b = false
 
   
 
-#### void
+#### 4. `void`
 
 - `void`通常用于函数返回值声明，含义：【函数不返回任何值，或者说返回值为空，调用者也不应该依赖其返回值进行任何操作】
 
@@ -299,7 +299,190 @@ b = false
 
     II. 从语义上讲：函数调用者不应关心函数返回的值，也不应该依赖返回值进行任何操作！即使返回了`undefined`值。
 
-#### object
+#### 5. `object`
 
-#### tuple
+关于`object`和`Object`，直接说结论：实际开发中用的相对较少，因为范围太大了。
+
+##### `object`(小写)
+
+`object`的含义是：所有**非原始类型**，可存储：对象、函数、数组等，由于限制的范围**比较宽泛**，在实际开发中使用的**相对较少**。
+
+```javascript
+let a: object    // a的值可以是任何【非原始类型】，包括：对象、函数、数组等
+
+// 以下代码，是将【非原始类型】赋给a，所以均符合要求
+a = {}
+a = {name: 'hello'}
+a = [1, 3, 5]
+a = function(){}
+a = new String('123')
+class Person {}
+a = new Person()
+
+// 以下代码，是将【原始类型】赋给a，有警告
+a = 1    // 警告：不能将类型“number”分配给类型“object”
+a = true    // 警告：不能将类型“boolean”分配给类型“object”
+a = 'hello'    // 警告：不能将类型“string”分配给类型“object”
+a = null   // 警告：不能将类型“null”分配给类型“object”
+a = undefined    // 警告：不能将类型“undefined”分配给类型“object”
+```
+
+
+
+##### `Object`（大写）
+
+1. 官方描述：所有可以调用`Object`方法的类型。
+
+2. 简单记忆：除了`undefined`和`null`的任何值。
+
+3. 由于限制的范围实在太大了！所以实际开发中使用频率极低。
+
+```javascript
+let b: Object  // b的值必须是Object的实例对象（除去undefined和null的任何值）
+// 以下代码，是将【非原始类型】赋给a，所以均符合要求
+b = {}
+b = {name: 'hello'}
+b = [1, 3, 5]
+b = function(){}
+b = new String('123')
+class Person {}
+b = new Person()
+b = 1    
+b = true    
+b = 'hello'  
+
+ // 以下代码，是将【原始类型】赋给b，有警告 
+b = null   // 警告：不能将类型“null”分配给类型“object”
+b = undefined    // 警告：不能将类型“undefined”分配给类型“object”
+```
+
+##### 声明对象类型
+
+1. 实际开发中，限制一般对象，通常使用以下形式
+
+   ```javascript
+   // 限制person1对象必须有name属性，age为可选属性
+   let person1: { name: string, age?: number}
+   
+   // 含义同上，也能用分号做分隔
+   let person2: { name: string; age?: number}
+   
+   // 含义同上，也能用换行做分隔
+   let person3: {
+       name: string
+       age?: number
+   }
+   
+   // 如下赋值均可
+   person1 = {name: 'hello', age: 18}
+   person2 = {name: 'hello'}
+   person3 = {name: 'hello'}
+   
+   // 如下赋值不合法，因为person3的类型限制中，没有对gender属性的说明
+   person3 = {name: 'hello', gender: 'man'}  // 警告：对象字面量只能指定已知属性，并且“gender”不在类型“{ name: string; age?: number | undefined; }”中
+   ```
+
+​          2. 索引签名： 允许定义对象可以具有任意数量的属性，这些属性的键和类型是可变的，常用于：描述类型不确定的属性，（具有动 态属性的对象）。
+
+```javascript
+// 限制person对象必须有name属性，可选age属性但值必须是数字，同时可以有任意数量、任意类型的属性
+let person: {
+  name: string;
+  age?: number;
+  [key: string]: any; // 索引签名，完全可以不用key这个单词，换成其他都行
+};
+
+// 赋值合法
+person = {
+  name: "hello",
+  age: 18,
+  gender: "man",
+};
+```
+
+##### 声明函数类型
+
+```javascript
+let count: (a: number, b: number) => number
+
+count = function (x, y) {
+    return x + y
+}
+```
+
+备注： 
+
+`TypeScript`中的`=>` 在函数式声明时表示函数类型，描述其参数类型和返回类型。
+
+`JavaScript` 中的`=>` 是一种定义函数的语法，是具体的函数实现。
+
+函数类型声明还可以使用：接口、自定义类型等方式，详见下文。
+
+##### 声明数组类型
+
+```javascript
+let arr1: string[]
+let arr2: Array<string>
+
+arr1 = ['a', 'b', 'c']
+arr2 = ['a', 'b']
+```
+
+备注： 上诉代码中的`Array<string>` 属于泛型，详见下文。
+
+#### 6. `tuple`
+
+元组`(Tuple)`是一种特殊的**数组类型**，可以存储固定数量的元素，并且每个元素的类型是已知的且可以不同。元组用于精确描述一组值的类型，`?` 表示可选元素。
+
+```javascript
+// 第一个元素必须是 string 类型，第二个元素必须是 number 类型
+let arr1: [string,number]
+// 第一个元素必须是 number 类型，第二个元素是可选的，如果存在，必须是 boolean 类型
+let arr2: [number,boolean?]
+// 第一个元素必须是 number 类型，后面的元素可以是任意数量的 string 类型
+let arr3: [number,...string[]]
+
+// 可赋值
+arr1 = ['hello', 123]
+arr2 = [100, false]
+arr2 = [200]
+arr3 = [100, 'hello', 'world']
+arr3 = [100]
+
+// 不可赋值
+arr1 = ['123', 123, false]  // 报警：不能将类型“[string, number, boolean]”分配给类型“[string, number]”
+```
+
+#### 7.  `enum`
+
+枚举(`enum`)可以定义**一组命名常量**，它能增强代码**可读性**，也让代码**更好维护**。
+
+如下代码的功能是：根据`walk`时传入的不同参数，执行不同的逻辑，存在的问题是调用`walk`时传参没有任何提示，编码者很容易写错字符串内容；并且用于判断逻辑的`up`,`down`, `left`, `right`是**连续且相关 一组值**，那此时就特别适合使用**枚举**（`enum`）。
+
+```javascript
+function walk(str: string) {
+  if (str === "up") {
+    console.log("上");
+  } else if (str === "down") {
+    console.log("下");
+  } else if (str === "left") {
+    console.log("左");
+  } else if (str === "right") {
+    console.log("右");
+  } else {
+    console.log('error');   
+  }
+}
+
+walk('up')
+walk('down')
+walk('left')
+walk('right')
+```
+
+##### 数字枚举
+
+
+
+
 
