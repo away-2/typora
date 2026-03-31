@@ -482,7 +482,292 @@ walk('right')
 
 ##### 数字枚举
 
+数字枚举一种最常见的枚举类型，其成员的值会**自动递增**，且数字枚举还具备**反向映射**的特点，在下面代码的打印中，不难发现：可以通过**值**来获取对应的枚举**成员名称**。
 
+```javascript
+// 定义一个描述【上下左右】方向的枚举Direction
+enum Direction {
+  Up,
+  Down,
+  Left,
+  Right,
+}
+
+console.log(Direction); // 打印Direction会看到如下内容
+/*
+  {
+    0: 'Up',
+    1: 'Down',
+    2: 'Left',
+    3: 'Right',
+    Up: 0,
+    Down: 1,
+    Left: 2,
+    Right: 3
+  }
+*/
+
+// 反向映射
+console.log(Direction.Up);   // 0
+console.log(Direction[0]);   // 'up'
+
+// 此行代码报错，枚举中的属性是只读的
+Direction.Up = 'shang'
+```
+
+也可以指定枚举成员的初始值，其后的成员值会自动递增。
+
+```javascript
+enum Direction {
+  Up = 6,
+  Down,
+  Left,
+  Right,
+}
+
+console.log(Direction.Up);   // 6
+console.log(Direction.Down);   // 7
+```
+
+使用数字枚举完成刚才`walk`函数中的逻辑，此时我们发现：代码更加直观易读，而且类型安全，同时也更易维护。
+
+```javascript
+enum Direction {
+  Up,
+  Down,
+  Left,
+  Right,
+}
+
+function walk(str: Direction) {
+  if (str === Direction.Up) {
+    console.log("上");
+  } else if (str === Direction.Down) {
+    console.log("下");
+  } else if (str === Direction.Left) {
+    console.log("左");
+  } else if (str === Direction.Right) {
+    console.log("右");
+  } else {
+    console.log("error");
+  }
+}
+
+walk(Direction.Up)  // 上
+```
+
+##### 字符串枚举
+
+枚举成员的值是字符串
+
+```javascript
+enum Direction {
+  Up = 'up',
+  Down = 'down',
+  Left = 'left',
+  Right = 'right'
+}
+
+let dir: Direction = Direction.Up;
+console.log(dir);  // 'up'
+```
+
+##### 常量枚举
+
+官方描述：常量枚举是一种特殊枚举类型，它使用`const` 关键字定义，在编译时会被**内联**，**避免**生成一些**额外**的代码。
+
+何为**编译时内联**？
+
+所谓“内联”其实就是`TypeScript` 在编译时，会将枚举**成员引用**替换为它们的**实际值**，而不是生成额外的枚举对象。这可以减少生成的`JavaScript` 代码量，并提高运行时性能。
+
+使用普通枚举的`TypeScript` 代码如下：
+
+```javascript
+enum Direction {
+  Up,
+  Down,
+  Left,
+  Right,
+}
+
+let x = Direction.Up;
+```
+
+编译后生成的`JavaScript` 代码量较大：
+
+```javascript
+"use strict";
+var Direction;
+(function (Direction) {
+  Direction[Direction["Up"] = 0] = "up";
+  Direction[Direction["Down"] = 1] = "down";
+  Direction[Direction["Left"] = 2] = "left";
+  Direction[Direction["Right"] = 3] = "right";
+})(Direction || (Direction = {}));
+
+let x = Direction.Up;
+```
+
+
+
+使用常量枚举的`TypeScript` 代码如下：
+
+```javascript
+const enum Direction {
+  Up,
+  Down,
+  Left,
+  Right,
+}
+
+let x = Direction.Up;
+```
+
+编译后生成的`JavaScript` 代码量较小：
+
+```javascript
+"use strict";
+let x = 0 /* Direction.Up */;
+```
+
+
+
+#### 8. `type`
+
+`type`可以为任意类型创建别名，让代码更简洁、可读性更强，同时能更方便地进行类型复用和扩展。
+
+##### 基本用法
+
+类型别名使用`type` 关键字定义，`type` 后跟类型名称，例如下面代码中`num` 是类型别名。
+
+```javascript
+type num = number;
+
+let price: num
+price = 100
+```
+
+##### 联合类型
+
+联合类型是一种高级类型，它表示一个值可以是几种不同类型之一。
+
+```javascript
+type Status = number | string
+type Gender = '男' | '女'
+
+function printStatus(status: Status) {
+  console.log(status);
+}
+
+function printGender(str: Gender) {
+  console.log(str);
+}
+
+printStatus(404)
+printStatus('man')
+
+printGender('男')
+printGender('女')
+```
+
+##### 交叉类型
+
+交叉类型（`Intersection Types`）允许将多个类型合并为一个类型。合并后的类型将拥有所有被合并类型的成员。交叉类型通常用于对象类型。
+
+```javascript
+// 面积
+type Arae = {
+  height: number;
+  wight: number;
+}
+
+// 地址
+type Address = {
+  num: number;
+  cell: number;
+  room: string;
+}
+
+type House = Arae & Address;
+
+const house: House = {
+  height: 180,
+  wight: 99,
+  num: 1,
+  cell: 3,
+  room: '202'
+}
+```
+
+
+
+#### 9. 一个特殊情况
+
+先来观察如下两段代码：
+
+##### 代码段1（正常）
+
+在函数定义时，限制函数返回值为`void`，那么函数的返回值就必须是空。
+
+```javascript
+function demo(): void {
+  // 返回undefined合法
+  return undefined
+
+  // 以下返回均不合法
+  return 100
+  return false
+  return null
+  return []
+}
+
+demo()
+```
+
+##### 代码段2（特殊）
+
+使用**类型声明**限制函数返回值为`void` 时，`TypeScript` 并不会严格要求函数返回空。
+
+```javascript
+type logFunc = () => void;
+
+const f1: logFunc = () => {
+  return 200; // 允许返回非空值
+};
+
+const f2: logFunc = () => 200; // 允许返回非空值
+
+const f3: logFunc = function () {
+  return 200; // 允许返回非空值
+};
+```
+
+```javascript
+let printData: () => void;
+
+printData = () => {
+  return 100;  // 允许返回非空值
+}
+
+printData = () => 200;  // 允许返回非空值
+
+printData = function () {
+  return 300;  // 允许返回非空值
+}
+```
+
+##### 为什么会这样？
+
+是为了确保如下代码成立，我们知道`Array.prototype.push` 的返回一个数字，而`Array.prototype.forEach` 方法期望其回调的返回类型是`void`
+
+```javascript
+const src =[1, 2, 3]
+const dst = [0]
+
+src.forEach((el) => dst.push(el))
+```
+
+官方文档的说明： [Assignability of Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html#assignability-of-functions)
 
 
 
